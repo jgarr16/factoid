@@ -33,7 +33,10 @@
   } catch (e) {} })();
 </script>
 <script>
-(function () {
+// This runs from <head>, so it MUST wait for the DOM: querying '.card' /
+// '.filters button' during head parsing returns empty lists and the click
+// handlers never attach (the tabs and the search box silently do nothing).
+document.addEventListener('DOMContentLoaded', function () {
   var q = document.getElementById('q');
   var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
   var btns = Array.prototype.slice.call(document.querySelectorAll('.filters button'));
@@ -62,7 +65,7 @@
   });
   if (q) q.addEventListener('input', apply);
   apply();
-})();
+});
 </script>
 </head>
 <body>
@@ -475,7 +478,7 @@
 </article><footer class="site">
 Tick a 📌 checkbox in the local copy to get an Apple Reminder — that affordance is local-only.
 · <a href="tidbits.md">raw markdown</a> · <a href="https://github.com/jgarr16/factoid">repo</a><br>
-Built 2026-09-19 17:23.
+Built 2026-09-19 17:24.
 </footer>
 </div>
 </body>
