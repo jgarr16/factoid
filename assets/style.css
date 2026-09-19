@@ -1,4 +1,4 @@
-/* newsletters site — mirrors the briefings conventions (system fonts, no CDN) */
+/* factoid site — mirrors the briefings conventions (system fonts, no CDN) */
 :root {
   --font-scale: 1.0;
   --bg: #f6f6f4; --fg: #1a1a18; --muted: #5c5c56; --border: #d9d9d4;

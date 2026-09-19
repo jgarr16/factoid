@@ -1,13 +1,10 @@
-# Newsletter interest log
+# Factoid
 
-Newest first. Each entry keeps the section substance and links from the newsletter itself.
+Memorable ideas, excerpts and takeaways — from newsletters, books, seminars and other sources.
+
+Newest first. Each entry keeps the section substance and links from the source.
 
 ## Latest
 
-_Nothing logged yet — first entries land after you check topics on a scan list._
-
-## How this works
-
-1. New Frontier / Roundup (and other watched newsletters) → you get a **broad checkbox list**
-2. You mark what grabbed you
-3. Those items are appended here with excerpt + in-newsletter links
+_See the live log at https://factoid.garrigai.com/ — this file is kept for reference only;
+the published homepage is generated as `index.html`._
