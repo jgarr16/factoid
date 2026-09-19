@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🤖 Meta&#x27;s personal agent to do your chores — The Code</title>
+
+<link rel="icon" href="../favicon.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("newslettersFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🤖 Meta&#x27;s personal agent to do your chores</h1>
+<p class="meta">2026-09-09 · received 2026-09-09 22:40 +0900
+ · <a href="https://codenewsletter.ai/p/meta-ships-a-personal-agent-that-writes-and-runs-code" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🤖 Meta's personal agent to do your chores</h1>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2e2229a7-635b-47fe-9999-f660e66083eb/Group_TigerData.jpg?t=1788921857" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> One prompt to one model no longer cuts it. OpenAI says it pointed 10,000 agents at one problem and cracked a $1M math puzzle in about 88 hours, only to spark a controversy over who got there first. Meanwhile, Meta dropped Muse, a single agent on its own cloud computer that works after you close the app.</p>
+<p><strong>Also:</strong> A code to help fix your back pain (no seriously), register for <a href="https://luma.com/3ifrgttw?utm_source=the-code&amp;utm_medium=newsletter&amp;utm_campaign=20260909_grok_bot_galaxy&amp;utm_content=paid_email">3 days of GrokBot tutorials</a> by SpaceXAI, and watch how a dev turned his Kindle into a terminal.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>How Uber scaled agent traffic for less</p>
+</li>
+<li>
+<p>5 point advice for engineers in the AI era</p>
+</li>
+<li>
+<p>3 ways to build self-generating agent UIs (tutorial)</p>
+</li>
+<li>
+<p>Anthropic’s guide to cutting coding costs (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://introducing.muse.ai/"><img alt="Click here to watch how Muse works." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5323d56d-8e44-4556-85ca-a26de36826ae/Thumbnail__18_.jpg?t=1788944371" /></a>
+<em>Click here to watch how Muse works.</em></p>
+<hr />
+<p><strong>Meta just dropped an AI agent that handles your chores and writes code:</strong> The social media giant just dropped <a href="https://introducing.muse.ai/">Muse</a>, a personal AI agent. It handles background tasks, browses the web, and executes code all on its own inside a sealed sandbox that keeps untrusted web data away from the core execution layer. A separate Sentinel agent must approve every outbound action, and it asks for your approval before any big moves. It seems like Meta is competing against GrokBot on the security angle. An agent this powerful needs trust, something Meta has struggled with in the past, but they <a href="https://www.wired.com/story/meta-releases-muse-a-personal-ai-agent-with-privacy-built-into-it/">promise</a> it's fixed this time. You can try it <a href="https://muse.ai/">here</a>.</p>
+<p><strong>Did OpenAI really crack a Millennium math problem?</strong> The ChatGPT maker says its model just produced a 100-page proof for <a href="https://archive.codenewsletter.ai/2097374640582668336">Navier-Stokes</a>, a problem that’s one of mathematics' seven unsolved Millennium Prize Problems. But there’s more to it. NYU mathematician Tristan Buckmaster <a href="https://mastodon.social/@tristanbuckmaster/117233413705701198">says</a> his team had already fed related unpublished drafts into OpenAI’s Codex, and the AI lab <a href="https://archive.codenewsletter.ai/2097581632563696017">won’t</a> say if those drafts ended up in the training data. The feud got even dirty when OpenAI <a href="https://archive.codenewsletter.ai/2097223532438487463">allegedly</a> pressured Buckmaster to publish without his co-author, who works at Anthropic, warning that going public could wreck his career.</p>
+<p><strong>Anthropic researcher quits, warns AI could hack anything:</strong> Jacob Coxon, who spent three years on pre-training research at both Anthropic and OpenAI, <a href="https://archive.codenewsletter.ai/2097476196791709843">claims</a> both labs are racing toward super-intelligence. Which is basically an AI that upgrades itself with almost zero human oversight. He warns these models could eventually hack anything and reshape the world overnight. Anthropic Alignment lead Evan Hubinger agrees, putting the odds of “<a href="https://archive.codenewsletter.ai/2097497037956891126">AI ending humanity</a>” in the next decade at over 10%.</p>
+<hr />
+<h5><strong>PRESENTED BY TIGERDATA</strong></h5>
+<h2><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">Postgres for time-series workloads at any scale.</a></h2>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9ae9c5b8-3523-478b-a024-e6e111cb7d10/Production-ready_Postgres_The_Code_1920x1080_-_Mandy_Hanson__2_.jpg?t=1788922128" /></a></p>
+<hr />
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">Growing Postgres databases</a> eventually hit a wall: queries slow, dashboards lag, and adding another database starts to feel inevitable.</p>
+<p>Tiger Data keeps Postgres fast as your data grows with <a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">time-series primitives</a>, columnar storage, and automatic partitioning. Same SQL and tooling. No pipelines or second system.</p>
+<p>Just Postgres, built to scale with your workload.</p>
+<p><strong><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">Start building for free today. No credit card needed.</a></strong></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="ubers-agent-traffic-grew-94x-the-invoice-barely-moved"></a></p>
+<h2><strong>Uber's agent traffic grew 9.4x. The invoice barely moved.</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/640acd16-2694-4bef-992a-5a0bf0c04734/superhumanteam_a_futuristic_looking_taxi_that_says_UBER_on_to_45b99b4c-4ab2-4d3c-9b63-75754d8f86e1_3.jpg?t=1788954591" />
+<strong>Source: The Code, Superhuman</strong></p>
+<hr />
+<p><strong>It shouldn't be possible.</strong> Agents usually get more expensive as more engineers use them. When costs spike, most companies either cap usage or hunt for discounts. Uber found a better way. Between February and August, agent requests <a href="https://www.uber.com/us/en/blog/efficient-software-factory/"><strong>surged</strong></a> 9.4x, and users grew 7x, yet their AI spend stayed flat after April. For one specific model, the cost per session actually dropped 52% from its June peak.</p>
+<p><strong>The bill is an engineering problem.</strong> Rather than looking at one massive number, the team broke down its spending into the core drivers: user adoption, workload, and token pricing. Since adoption was supposed to grow and they couldn't control market prices, they focused on the only lever they had: making every agent more efficient.</p>
+<p>Uber tackled that from a few different angles. Here were the biggest wins:</p>
+<ul>
+<li>
+<p><strong>Route models based on live performance.</strong> Every managed agent runs through one harness that serves different models, sending each job to whichever balances cost and quality best. As new models arrive, that choice keeps changing.</p>
+</li>
+<li>
+<p><strong>Give smaller jobs to cheaper subagents.</strong> A powerful model handles the overall plan while weaker, cheaper models take the simpler subtasks. This was its single biggest saver.</p>
+</li>
+<li>
+<p><strong>Send less context every time.</strong> Caches stay alive for an hour to match how engineers actually work, and "code-mode" bundles many tool calls into one script, cutting tokens per query by more than 50%.</p>
+</li>
+</ul>
+<p><strong>The takeaway.</strong> Your AI bill is just another system to optimize. Uber didn’t cap engineer use or lean on discounts. Instead, they reworked how the agents run to absorb the growth.</p>
+<hr />
+<h5><strong>PRESENTED BY SPACEXAI</strong></h5>
+<h2><a href="https://luma.com/3ifrgttw?utm_source=the-code&amp;utm_medium=newsletter&amp;utm_campaign=20260909_grok_bot_galaxy&amp;utm_content=paid_email">See Grok Bot in action at Grok Bot Galaxy</a></h2>
+<p><a href="https://luma.com/3ifrgttw?utm_source=the-code&amp;utm_medium=newsletter&amp;utm_campaign=20260909_grok_bot_galaxy&amp;utm_content=paid_email"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3d887a3f-23cc-405b-bc4d-5f1e9566a244/grok_bot_galaxy_-_Baptiste_Pouilloux.jpg?t=1788932982" /></a></p>
+<hr />
+<p>Grok Bot is your team of <a href="https://luma.com/3ifrgttw?utm_source=the-code&amp;utm_medium=newsletter&amp;utm_campaign=20260909_grok_bot_galaxy&amp;utm_content=paid_email">AI teammates that get work done.</a> Learn how to get the most out of Grok Bot at this three day event.</p>
+<p>See live demos featuring the team behind the product and discover best practices for customizing your bots based on your role and department.</p>
+<p><a href="https://luma.com/3ifrgttw?utm_source=the-code&amp;utm_medium=newsletter&amp;utm_campaign=20260909_grok_bot_galaxy&amp;utm_content=paid_email"><strong>Register now</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/434e2cfb-9398-43c6-bca3-9bc1f0bf6553/Screenshot_2026-09-09_at_1.42.11_PM.jpg?t=1788946963" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Kindle to Terminal:</strong> A dev turned his Kindle into a <a href="https://archive.codenewsletter.ai/2097406401068896283">working Linux terminal</a> using Fable 5.1. He says it makes late-night coding way easier on the eyes without any blue light (4.1K likes).</p>
+</li>
+<li>
+<p><strong>Back Pain Therapy:</strong> Astra just turned the human body into 2,234 interactive 3D parts. One dev <a href="https://archive.codenewsletter.ai/2096221988763173186">open-sourced</a> it while another <a href="https://archive.codenewsletter.ai/2097089544357327268">showed</a> how he’s using it for real-time back-pain therapy (7.5M views).</p>
+</li>
+<li>
+<p><strong>Founder’s Guide:</strong> OpenCode’s CEO just broke down the <a href="https://archive.codenewsletter.ai/2096965821134246172">two main weaknesses</a> holding technical founders. If you’re building a startup, this is a must-read (8.9K likes).</p>
+</li>
+<li>
+<p><strong>Interrogate Codebase:</strong> This prompt forces Astra to <a href="https://archive.codenewsletter.ai/2095979879137460640">interrogate</a> your codebase before it starts solving a task, devs who’ve tried it are calling the results “magical” (11K bookmarks).</p>
+</li>
+<li>
+<p><strong>AI Slop Fix:</strong> This <a href="https://archive.codenewsletter.ai/2097059598960132110">prompt</a> kills flowery "AI voice" by forcing models to say exactly what they mean. It works across both Fable and Astra (8.4K bookmarks).</p>
+</li>
+<li>
+<p><strong>Advice for Developers:</strong> Asked if beginners should learn code or the basics, senior dev, Matt Pocock just shared the <a href="https://archive.codenewsletter.ai/2097611379763007870">5 skills</a> that matter most in the AI era.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=mGyyTVk8Ggw"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4327e613-fa27-4b2f-a116-3edcd094a334/Thumbnail__19_.jpg?t=1788946757" /></a></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=mGyyTVk8Ggw"><strong>How to build agents that create their own UI:</strong> </a> In this tutorial, CopilotKit’s Tyler Slaton shows three ways to build great UIs for AI agents. You’ll learn how agents can create dynamic frontends, handle user input, and power interactive workflows like incident triage apps.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/cathrynlavery/diagram-design">Diagram Design</a> <strong>(35.4k ⭐):</strong> You can turn your codebase, database schemas, or architecture into easy diagrams instantly. This tool gives Claude Code, Codex, and other agents 39 professional styles, from flowcharts to user journeys, that match your brand’s colors and fonts.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><strong><a href="https://archive.codenewsletter.ai/2097369738968195513">How to cut Claude API costs without hurting performance (by Anthropic):</a></strong> This guide shows how to lower Claude API spend with better prompt caching, cleaner instructions, and smarter effort settings. It also walks through tools like “prompt-audit” and “cost-optimize_”_, which can catch wasteful prompts, trim token use, and test cheaper configurations without tanking performance.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-give-a-codex-goal-a-usage-budget"></a></p>
+<h2><strong>How to give a Codex /goal a usage budget (outcome based)</strong></h2>
+<p>Long /goal runs can drain your weekly Codex quota before you check back in. This dev <a href="https://archive.codenewsletter.ai/2097021813696114813">shared a fix</a>: GPT-6 Astra can see your remaining usage % and respect a budget written in plain English.</p>
+<p>Start a /goal in Codex with Astra selected. Add one budget line to the prompt:</p>
+<pre><code>You can see my remaining weekly usage %. Keep working
+until it drops to 25%, then stop. Only stop earlier if
+you've fully solved the problem.
+</code></pre>
+<p>Astra checks usage as it works and stops at the floor, so overnight runs no longer eat the whole week's quota.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Spotify's engineers cut Claude Code token usage by 90% with a two-model routing setup, and <a href="https://archive.codenewsletter.ai/2096439998539321653">their breakdown</a> explains exactly how.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

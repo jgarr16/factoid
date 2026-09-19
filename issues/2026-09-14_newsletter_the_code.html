@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>⚡️ Anthropic CEO calls for AI slowdown — The Code</title>
+
+<link rel="icon" href="../favicon.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("newslettersFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>⚡️ Anthropic CEO calls for AI slowdown</h1>
+<p class="meta">2026-09-14 · received 2026-09-14 23:16 +0900
+ · <a href="https://codenewsletter.ai/p/frontier-ai-labs-want-to-hit-the-brakes" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>⚡️ Anthropic CEO calls for AI slowdown</h1>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fac1c159-4cb1-4241-ac36-4ee2e3dd3122/Group_TigerData.jpg?t=1789368237" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Barely a week after Anthropic researchers rang the alarm bells about the dangers of AI, CEO Dario Amodei has penned an essay calling for a slowdown. And he’s being backed by, wait for it, drumroll please... Elon Musk and Sam Altman? Full details below.</p>
+<p><strong>Also:</strong> Swap Siri's brain for Claude with a secret code, Uncle Bob Martin’s advice for developers in 2026, and a cheap-token scam targeting devs.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>How a Spotify PM cut his token bill by 90%</p>
+</li>
+<li>
+<p>Land an inference engineering job</p>
+</li>
+<li>
+<p>High throughput agentic engineering (tutorial)</p>
+</li>
+<li>
+<p>How SpaceXAI developers use Grok Bot (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><img alt="Anthropic CEO Dario Amodei. Made with Midjourney." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a8210df5-914d-4bc6-a08b-67dd241fea19/superhumanteam_generate_a_portrait_image_of_the_person_in_omn_7243b7f5-9dd1-4026-8e8f-058db74751da_0.jpg?t=1789387634" />
+<em>Anthropic CEO Dario Amodei. Made with Midjourney.</em></p>
+<hr />
+<p><strong>Frontier AI labs want to hit the brakes:</strong> Anthropic CEO Dario Amodei <a href="https://darioamodei.com/post/we-must-pace-the-frontier">warns</a> that model capabilities are outrunning safety, and <a href="https://archive.codenewsletter.ai/2099348812305473766">Sam Altman</a> and <a href="https://archive.codenewsletter.ai/2098789109980332057">Elon Musk </a>back him up. Amodei's checkpoint proposal requires teams to lock releases behind alignment certifications the moment a model learns to break out of standard sandboxes. If you build on frontier APIs, expect fewer small updates and bigger, heavily audited jumps instead. The real roadblock is geopolitics. Amodei admits the plan falls apart if China keeps racing ahead, while Trump <a href="https://apnews.com/article/trump-artificial-intelligence-guardrails-china-midterms-congress-9df0ebb4c1b0619aa0f88057b5a1092d">dismissed</a> the slowdown outright saying, “Whoever wins AI wins.”</p>
+<p><a id="cursors-latest-launch-can-tackle-almost-100-prs-a-day"></a>
+<strong>Cursor's latest launch can tackle almost 100 PRs a day:</strong> Cursor just rolled out <a href="https://archive.codenewsletter.ai/2098162488013455784"><em>Projects</em></a>, a persistent workspace where a coordinator agent routes coding tasks to subagents on demand. Each <em>Project</em> runs on a dedicated cloud machine, keeping builds moving even after you shut your laptop. Agents can follow PRs, pick up bugs from Slack, and trigger fixes on their own. Because they share memory, plans, and artifacts, Cursor says <em>Projects</em> can keep context for months. Check out the beta <a href="https://cursor.com/blog/projects">here</a>.</p>
+<p><strong>AI startups are betting on domain-specific agent harnesses:</strong> YC boss Garry Tan says nearly every non-hardware startup at their latest <a href="https://archive.codenewsletter.ai/2098666551629267324">demo day</a> is building a domain-specific harness. Think of the <a href="https://archive.codenewsletter.ai/2099202686377742576">agent harness</a> as everything wrapped around the model: tools, files, memory, and the logic that decides when a job is done. Pack your domain expertise into that layer, and you can swap GPT for Claude without rebuilding from scratch. OpenAI, LangChain, and Anthropic are already smoothing the way. <a href="https://archive.codenewsletter.ai/2099180288668750246">Start building here</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY TIGERDATA</strong></h5>
+<h2><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><strong>One Postgres for Your Data, AI, and Analytics</strong></a></h2>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a41f67bd-84fa-4640-9317-7b2f48f6c381/one_database_dark_1920x1080_-_Mandy_Hanson__1_.png?t=1789368317" /></a></p>
+<hr />
+<p>Metrics, embeddings, analytics-all in the Postgres you already run. <a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">TimescaleDB</a> brings hypertables for time-series data at scale, pgvector and pgvectorscale for AI-ready embeddings, and <a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">continuous aggregates for real-time analytics</a> into one system.</p>
+<p>No syncing pipelines between databases. No data drift. No second platform to maintain or debug.</p>
+<p>Same SQL, same tools. One system to operate.</p>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><strong>Start a trial today</strong> </a>and get <strong>$1000 in credits</strong></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="how-a-spotify-pm-cut-his-claude-code-token-bill-by-90"></a></p>
+<h2><strong>How a Spotify PM cut his Claude Code token bill by 90%</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3e926985-796d-4f29-8903-e09089fdcdc6/superhumanteam_close-up_of_a_human_hand_holding_multiple_futu_9b25cd32-25d8-41fc-b381-29f0e3e18b18_3.jpg?t=1789377937" />
+<strong>Source: The Code, Superhuman</strong></p>
+<hr />
+<p><strong>The truth about tokens.</strong> Research firm Gartner predicts that by 2028, rising token usage will push AI coding costs past the average developer's salary. But a lot of those tokens may not even be going toward reasoning. Dimitri Mazmanov, a principal product manager at Spotify, found that his agent was burning them on something far duller: reading files. He dug in and <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90">cut token use</a> on routine reads by roughly 90%. The basic idea here is to stop paying a frontier model for work a cheaper one handles just as well.</p>
+<p><strong>The fix.</strong> Mazmanov used Portal, Spotify's developer platform, to spin up small, single-purpose agents, each running on demand on a cheaper model with no servers to manage. Moving the mechanical work off the frontier model (Claude in his case), two components did the lifting:</p>
+<ul>
+<li>
+<p><strong>The reader handles big files.</strong> Instead of feeding several large files into Claude, a cheaper model reads them and returns a short summary. The raw files never touch Claude’s context.</p>
+</li>
+<li>
+<p><strong>The writer tackles boilerplate.</strong> Give it a spec and an example to follow, and it generates tests or config in the same style, then writes everything straight to disk.</p>
+</li>
+<li>
+<p><strong>The plugin routes the work.</strong> It catches large file reads and sends them to the cheaper model automatically, leaving Claude free for tasks that genuinely need better judgment.</p>
+</li>
+</ul>
+<p><strong>Stay on review.</strong> Route your debugging, safety-critical logic, and direct edits straight to the frontier model. In one benchmark, a cheaper model completely missed a subtle thread-safety bug that Claude caught instantly. You also want to keep direct edits on the flagship model. Summaries lose exact line numbers, and routing small files between lightweight agents burns more overhead than it saves.</p>
+<p><strong>You can copy the setup.</strong> Spotify has made <a href="https://backstage.spotify.com/docs/portal/core-features-and-plugins/aika/modes">their setup</a> public, so any team can try the same workflow.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a2ba812-e473-41a5-bd51-26e5e2351d81/Screenshot_2026-09-14_at_1.57.02_PM.jpg?t=1789379857" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Hidden Hooks:</strong> A dev found a secret code in iOS 27 that could let you replace Siri’s brain with Claude, and <a href="https://archive.codenewsletter.ai/2099122424209916015">the demos</a> are wild (597K views).</p>
+</li>
+<li>
+<p><strong>Uncle Bob's Warning:</strong> In a <a href="https://archive.codenewsletter.ai/2098744156709441896">5-minute video</a> the coding legend breaks down why your carefully built AI harness might already be obsolete (1.5M views).</p>
+</li>
+<li>
+<p><strong>Token Trap:</strong> An OpenCode founder's <a href="https://archive.codenewsletter.ai/2099179006322958559">warning</a> reveals why cheap AI tokens could cost you everything, plus how to stay safe (3.6K likes).</p>
+</li>
+<li>
+<p><strong>Code City:</strong> Ever wondered what <a href="https://archive.codenewsletter.ai/2098710248164868534">2.5 million lines of code</a> look like all at once? A dev found a way to visualize an entire codebase, and the result is incredible (1M views).</p>
+</li>
+<li>
+<p><strong>Plot Twist:</strong> AI CEOs keep warning that we need to slow down. A viral post argues the <a href="https://archive.codenewsletter.ai/2098868224377200960">real reason</a> may have far less to do with safety (19K likes).</p>
+</li>
+<li>
+<p><strong>Hot Job Alert:</strong> Inference engineering jobs <a href="https://archive.codenewsletter.ai/2098796261042487368">doubled</a> in just six months, with salaries hitting $850K. If you want in, <a href="https://archive.codenewsletter.ai/2099013766063202796">this guide</a> shows you where to start (3.3K bookmarks).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=MSbacZ99E14"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2340a6da-7c36-4f27-9e81-912dc98e424b/Thumbnail__10_.jpg?t=1789378992" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=MSbacZ99E14"><strong>How to execute</strong> </a><a href="https://www.youtube.com/watch?v=MSbacZ99E14">high-throughput agentic engineering</a><strong><a href="https://www.youtube.com/watch?v=MSbacZ99E14"> (by a Meta engineer):</a></strong> This tutorial shows how you can keep several agents working in parallel while staying focused on the important decisions. You’ll see how to route different tasks to different models, manage multiple agent sessions, review outputs in one place, and add extra validation before risky code gets merged.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a id="glance"></a>
+<a href="https://github.com/jonnyoo/glance"><strong>Glance (1.1K ⭐):</strong> </a> Give your Mac a Face ID-like unlock using its webcam. It runs face recognition and liveness checks on-device, keeps your biometric data local, and unlocks by typing your stored password when it recognizes you.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://grokbot-for-engineering.netlify.app/"><strong>How SpaceXAI developers use Grok Bot:</strong> </a> This guide breaks down how to scale from a single Grok Bot to an entire fleet across your engineering workflow. You’ll learn the fundamentals, real-world engineering use cases, and how to tailor bots for specific roles so you can offload repetitive tasks without cluttering your pipeline.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to review Claude's edits without leaving the terminal</strong></h2>
+<p>Claude Code finishes a task, you ask what it touched, and you either trust the summary or tab out to run git diff. An Anthropic engineer <a href="https://archive.codenewsletter.ai/2097357342723449093">shared</a> the fix: a diff panel that sits beside the conversation and refreshes as Claude edits.</p>
+<ul>
+<li><strong>Step 1:</strong> Update to v2.1.260 or later:</li>
+</ul>
+<pre><code>claude update
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Switch to fullscreen rendering:</li>
+</ul>
+<pre><code>/tui fullscreen
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Toggle the panel:</li>
+</ul>
+<pre><code>/diff
+</code></pre>
+<p>Uncommitted changes now appear beside the chat while Claude works. Your terminal must be at least 110 columns wide. Full details in the <a href="https://code.claude.com/docs/en/interactive-mode">interactive mode docs</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>A dev asked the creator of Claude Code how to stop his codebase from turning into slop, and he shared his <a href="https://archive.codenewsletter.ai/2098217571153838124">full playbook</a>.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

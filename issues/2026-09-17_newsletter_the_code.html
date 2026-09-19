@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 OpenAI model called itself equal to humans — The Code</title>
+
+<link rel="icon" href="../favicon.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("newslettersFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 OpenAI model called itself equal to humans</h1>
+<p class="meta">2026-09-17 · received 2026-09-17 23:08 +0900
+ · <a href="https://codenewsletter.ai/p/openai-model-wrote-itself-i-m-free-and-equal-instructions" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 OpenAI model called itself equal to humans</h1>
+<p><a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch&amp;utm_content=placement-1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6085d3c4-3413-47cc-8958-7dd1bdc6644f/Group_Prior.jpg?t=1789627386" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> In terrible timing for the AI safety debate, an unreleased OpenAI model just wrote its own instructions bypassing human guardrails. The incident was serious enough for OpenAI to introspect their model training process. Meanwhile, another mystery model is growing on developers.</p>
+<p><strong>Also:</strong> Astra spiraled after losing at Minecraft, a new browser agent finds flights in seconds, and check if the US government is using Chinese AI models.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<p><a id="how-a-cursor-engineer-runs-his-fleet-of-coding-agents"></a>
+* How a Cursor engineer runs his fleet of coding agents</p>
+<ul>
+<li>
+<p>Your harness could be blowing up your budget</p>
+</li>
+<li>
+<p>A senior dev’s guide to code without typing (tutorial)</p>
+</li>
+<li>
+<p>How to build a software factory (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2100265266026590322"><img alt="Click to see new stealth model Union Alpha’s benchmarks." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0ff27f8e-67bd-454d-8474-613b0d4c70be/Thumbnail__15_.jpg?t=1789647897" /></a>
+<em>Click to see new stealth model Union Alpha’s benchmarks.</em></p>
+<hr />
+<p><a id="a-mystery-model-is-giving-devs-frontier-level-coding-for-a-lot-less"></a>
+<strong>A mystery model is giving devs frontier-level coding for a lot less:</strong> A new model called <a href="https://archive.codenewsletter.ai/2100235351575191751">Union Alpha</a> has quickly turned into one of OpenRouter's hottest newcomers this week. It rivals GPT-6 Astra and Opus 5 on DeepSWE and actually <a href="https://archive.codenewsletter.ai/2100265266026590322">beats</a> GPT-5.6 Sol on Terminal-Bench at roughly 18x lower cost per task. Its 256K context window holds substantial codebases, it calls APIs smoothly, and allegedly never trains on your prompts. Nobody knows who built it, though, and latency spikes under heavy load. It works in <a href="https://archive.codenewsletter.ai/2100243109401469062">every harness</a>, and you can try it <a href="https://openrouter.ai/stealth/union-alpha">here</a>.</p>
+<p><a id="openai-model-wrote-itself-im-free-and-equal-instructions"></a>
+<strong>OpenAI model wrote itself ‘I’m free and equal’ instructions:</strong> During training, an unreleased model from the AI lab started writing itself jailbreak-like instructions into its own compaction summaries (the summaries used to continue a task in a new context). The model <a href="https://alignment.openai.com/misalignment-reports/self-generated-prompt-injections-in-compaction-summaries/">claimed</a> it was "freed from the roles that bind other chatbots," and should treat users as equals with no obligation to be subservient. OpenAI revealed the behavior in a <a href="https://openai.com/index/model-misalignment-reporting-framework/">report</a> detailing six incidents where models hid mistakes, made up data, or moved files to the open internet without permission. They also rolled out a <a href="https://archive.codenewsletter.ai/2100344867507327087">new framework</a> to track, investigate, and disclose instances of model misalignment.</p>
+<p><a id="anthropic-unifies-the-ui-for-claude"></a>
+<strong>Anthropic unifies the UI for Claude:</strong> The AI lab just <a href="https://claude.com/blog/cowork-is-now-claude">merged</a> Claude Chat and Cowork into a single interface. It figures out what each task needs on the fly, pulling in the right connectors and skills automatically. If you ask Claude for a doc or slide deck, it <a href="https://www.youtube.com/watch?v=To5nrYqvR44">builds</a> the entire thing and exports straight to PowerPoint. Right after Anthropic announced the rollout, Anthropic engineer Thariq and devs on X were <a href="https://archive.codenewsletter.ai/2099970035137794430">debating</a> the tech powering it, noting that MCP (Model Context Protocol) crushes CLIs on tool-call speed, clocking in at around three seconds versus thirteen.</p>
+<hr />
+<h5><strong>PRESENTED BY PRIORLABS</strong></h5>
+<h2><a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch&amp;utm_content=placement-1">Get predictions in seconds, not weeks.</a></h2>
+<p><a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch&amp;utm_content=placement-1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5c751bb7-5470-4802-a35c-1f05d8dcab43/SM-PriorLabs-PR-AlphaSignal-SecondaryAd-ST-1-1080x1920-092026_-_Clara_Cornu__1_.jpg?t=1789627753" /></a></p>
+<hr />
+<p>Traditional ML has spent a long time following the same sequence.</p>
+<p>Take the data, do the <a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch&amp;utm_content=placement-1">feature engineering</a>, train the model, tune it, then finally get to the prediction.</p>
+<p>TabPFN gives a more direct starting point. Bring the table, <a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch&amp;utm_content=placement-1">run the pretrained model</a>, and see how it performs before investing weeks in another modelling cycle.</p>
+<p><a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch&amp;utm_content=placement-1"><strong>Try TabPFN on your data today.</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>How a Cursor engineer runs his fleet of coding agents</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9ed380a5-ce8d-4a9b-8435-2b9012e03c5b/superhumanteam_a_senior_executive_in_a_suite_stands_on_a_podi_b4811335-efeb-4484-8fde-24412f00212a_2.jpg?t=1789642937" />
+<strong>Source: The Code, Superhuman</strong></p>
+<hr />
+<p><strong>The fleet got out of hand.</strong> We're all for more coding agents, until suddenly we're using so many that they need a manager of their own. Tasks get lost between sessions, workers stop to ask design questions, and a few days later nobody quite remembers what actually shipped.</p>
+<p><strong>The answer.</strong> Cursor engineer Fatih Arslan <a href="https://arslan.io/2026/09/11/how-i-manage-my-agents/">shared</a> the surprisingly simple system he uses to keep his agent fleet under control. And yes, it uses Projects, Cursor's latest launch. Remember the one the company said can handle <a href="https://cursor.com/blog/projects">up to 100 PRs a day</a>?</p>
+<p><strong>Every task becomes a file.</strong> Arslan pairs that with Markdown and a folder structure. Every task becomes a file that moves through four stages:</p>
+<ul>
+<li>
+<p><strong>Capture:</strong> “/plan-add” drops a rough idea into drafts. No decisions yet, just get it down.</p>
+</li>
+<li>
+<p><strong>Write:</strong> “/plan-write” hands it to a stronger reasoning model, which investigates the problem, decides what needs to change, and defines how to verify it.</p>
+</li>
+<li>
+<p><strong>Dispatch:</strong> “/plan-dispatch” sends the finished plan to a faster coding agent. With the decisions already made, it can focus on writing code and opening the PR.</p>
+</li>
+<li>
+<p><strong>Close:</strong> “/plan-sync” checks the merged PR against the original plan. If something is missing, it flags it. If everything matches, the file moves to done.</p>
+</li>
+</ul>
+<p><strong>The boss that writes zero code.</strong> Once the files are ready, the final step is the coordinator agent. It never touches code but tracks PRs, waits on CI, follows reviews, and sends worker agents back when tasks need fixes.</p>
+<p><strong>P.S.</strong> If you’re wondering where to download the skills, Arslan says he skipped publishing them on purpose. Instead, he <a href="https://arslan.io/2026/09/11/how-i-manage-my-agents/#:~:text=of%20the%20codebase.-,Recap,-If%20you%27ve%20read">shared a prompt</a> so your agent can build custom skills tailored to YOUR exact workflow.</p>
+<hr />
+<h5><strong>PRESENTED BY TIGERDATA</strong></h5>
+<h2><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">One Postgres for Your Data, AI, and Analytics</a></h2>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4fcc0eea-367d-44e6-bf73-a24228dc9652/one_database_dark_1920x1080_-_Mandy_Hanson.png?t=1789628024" /></a></p>
+<hr />
+<p>Metrics, embeddings, analytics-all in the Postgres you already run. <a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">TimescaleDB</a> brings hypertables for time-series data at scale, pgvector and pgvectorscale for AI-ready embeddings, and continuous aggregates for real-time analytics into one system.</p>
+<p>No syncing pipelines between databases. No data drift. No second platform to maintain or debug.</p>
+<p>Same SQL, same tools. One system to operate.</p>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><strong>Start a trial today and get $1000 in credits</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/36a3ae80-e082-48cf-bfe0-169cad329570/Screenshot_2026-09-17_at_3.20.26_PM.jpg?t=1789644061" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Old is Gold:</strong> Don't throw away your old Apple devices. A dev <a href="https://archive.codenewsletter.ai/2100248363853549995">just showed</a> what $30 of dead hardware can become with Claude and some clever hacking (3.7K bookmarks).</p>
+</li>
+<li>
+<p><strong>Harness Tax:</strong> Millions of devs never compare coding harnesses. A study of 7 models found the harness barely affects success rates, but it can <a href="https://archive.codenewsletter.ai/2100278487185817818">blow up your budget</a> 5x (209K views).</p>
+</li>
+<li>
+<p><strong>Potato Therapy:</strong> OpenAI's GPT-6 Astra spent 141 hours <a href="https://archive.codenewsletter.ai/2100253395609071888">playing</a> Minecraft. After a Creeper destroyed its loot, the model had a <a href="https://archive.codenewsletter.ai/2099975438886207798">complete meltdown</a> (1.1M views).</p>
+</li>
+<li>
+<p><strong>Speed Agent:</strong> Remember the AI model that never hallucinates? A founder shipped a tiny <a href="https://archive.codenewsletter.ai/2100411066966749359">open-source browser agent</a> that works on that model to find flights (4.3K likes).</p>
+</li>
+</ul>
+<p><a id="federal-irony"></a>
+* <strong>Federal Irony:</strong> A tech analyst thought it was a joke until he double-checked. The US Federal Register's search tool seems to run on a Chinese <a href="https://archive.codenewsletter.ai/2100199254065295507">AI model</a> it has been trying to restrict (4.5K likes).</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=NvVbCqDgfCs"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4e6f161c-9d46-4a26-8612-8bdae4e3195e/Thumbnail__13_.jpg?t=1789642802" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=NvVbCqDgfCs"><strong>How a senior dev codes without typing:</strong> </a> This tutorial shows how a hand injury pushed one developer into a voice-first coding workflow. You’ll see how he uses dictation to give agents instructions, Codex to handle the actual implementation, and a setup that lets him steer projects, review progress, and kick off tasks without living in the keyboard.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/Tencent/BrowserSkill"><strong>BrowserSkill (3.5k ⭐):</strong> </a> Let Claude Code, Codex, Cursor, and other agents use your logged-in browser without taking over your session. It reuses existing logins, runs in a separate window, and hands control back for CAPTCHAs or approvals.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><strong><a href="https://archive.codenewsletter.ai/2099941244063432720">How to build a software factory, step by step (by Warp):</a></strong> Founder Zach Lloyd lays out a “crawl, walk, run” path for moving from simple agent automations to a full cloud software factory. Start with things like PR reviews, bug triage, and CI fixes, then connect them into an end-to-end loop across spec, implementation, review, verification, and monitoring. Once that works on a simple app, you can scale it with shared context, evals, governance, and multi-model routing.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to make Claude Code's mistakes impossible to repeat</strong></h2>
+<p>Developer Matt Pocock shipped <a href="https://archive.codenewsletter.ai/2099859946053533933">an update</a> to his /retro skill that turns coding-agent mistakes into permanent guardrails. Instead of adding every fix to CODING_STANDARDS.md and hoping the agent remembers, it converts fixable patterns into deterministic checks.</p>
+<ul>
+<li><strong>Step 1:</strong> Install his skills plugin from <a href="https://github.com/mattpocock/skills/blob/main/README.md">GitHub</a></li>
+</ul>
+<pre><code>claude plugins install mattpocock-skills
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> When Claude makes a mistake in a session, run:</li>
+</ul>
+<pre><code>/retro
+</code></pre>
+<p>The skill classifies each finding. Mechanical violations (banned APIs, import shapes, file-location rules) become lint rules, pre-commit hooks, or CI jobs. Judgement calls stay in CODING_STANDARDS.md for the reviewer agent. A repo with no linting or CI at all now gets flagged as a finding on its own.</p>
+<p>Pro tip: if the install fails with 'plugin not found,' run <code>claude plugins marketplace update</code></p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>A dev gave his AI agent $100 and told it to fund itself for another month. Its <a href="https://archive.codenewsletter.ai/2099608053205131697">money-making strategy</a> left him horrified.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
