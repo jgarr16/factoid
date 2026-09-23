@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>⚡️ Anthropic &amp; OpenAI won&#x27;t take it easy — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="⚡️ Anthropic &amp; OpenAI won&#x27;t take it easy — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>⚡️ Anthropic &amp; OpenAI won&#x27;t take it easy</h1>
+<p class="meta">2026-09-23 · received 2026-09-23 23:08 +0900
+ · <a href="https://codenewsletter.ai/p/anthropic-launches-faster-cheaper-opus-5-5" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>⚡️ Anthropic &amp; OpenAI won't take it easy</h1>
+<p><a href="https://www.unscriptedconf.io/city/virtual?campaign_id=701Uw00000qJEntIAG&amp;utm_source=superhuman&amp;utm_medium=email-paid&amp;utm_term=thecode-sept23#registration"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9022dcb9-604a-4e77-b4ce-66585161c571/Group_Harness.jpg?t=1790145207" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Remember when Anthropic, OpenAI, and xAI all called for slowing down AI development over safety concerns? Fast forward to this week, and all three just dropped brand-new models within 48 hours.</p>
+<p><strong>Also:</strong> Why AI swings between superhuman and super dumb, two Opus 5.5 prompts to uncover hidden bugs, and a rogue AI agent that signed a contract without being asked.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<p><a id="why-handing-your-agent-more-tools-doesnt-make-it-better"></a>
+* Why handing your agent more tools doesn't make it better</p>
+<ul>
+<li>
+<p>A senior dev’s take on Grok 4.7’s actual performance</p>
+</li>
+<li>
+<p>Meta engineer’s code review process (tutorial)</p>
+</li>
+<li>
+<p>Breaking down how Jev works (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2102435511222890900"><img alt="Click to see what’s new in Opus 5.5" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/47b710e2-758e-4c22-805a-909049f8c67d/Thumbnail__23_.png?t=1790150010" /></a>
+<em>Click to see what’s new in Opus 5.5</em></p>
+<hr />
+<p><a id="anthropic-launches-faster-cheaper-opus-55"></a>
+<strong>Anthropic launches faster, cheaper Opus 5.5:</strong> The AI lab just shipped <a href="https://www.anthropic.com/claude-opus-5-5">Claude Opus 5.5</a>, a new model that matches Fable 5.1 on most work while running 30% faster and 40% cheaper than Opus 5. For devs, it shines on sprawling jobs like codebase migrations. One early tester finished a 680,000-line <a href="https://www.anthropic.com/claude-opus-5-5">migration</a> in under a day, work that would have taken an engineering team weeks. Anthropic's Addy Osmani also shared a detailed <a href="https://archive.codenewsletter.ai/2102491840612380934">prompt engineering guide</a> for the new model. It's a must-read for any dev working with Claude Code.</p>
+<p><a id="openais-two-new-models-slash-api-costs"></a>
+<strong>OpenAI's two new models slash API costs:</strong> The ChatGPT maker just dropped <a href="https://archive.codenewsletter.ai/2102460975790137662">GPT-6 Sol and Luna</a>, slashing previous prices in half. Sol tackles heavy daily dev work like building features, reviewing PRs, and debugging. At $2 per million input tokens, it matches Claude Sonnet 5 and runs at half the cost of the new Opus 5.5. Meanwhile, Luna powers high-volume tasks like summarization and data extraction for just $0.10 per million tokens.</p>
+<p><strong>GitHub's Rust rewrite gets a reality check:</strong> The Microsoft-owned code platform <a href="https://archive.codenewsletter.ai/2102103572867358977">says</a> one engineer and agents ported its Copilot runtime to 800,000+ lines of Rust in under four months. Agents wrote most of the code for about $120,000 in tokens. But devs online poked holes in the "just one engineer" claim. Stephen Toub, the engineer steering the agents, brings 25 years of Microsoft experience to the table, and his <a href="https://arc.net/l/quote/qocllonv">own write-up</a> credits teammates for building bindings, packaging, and handling code reviews.</p>
+<hr />
+<h5><strong>PRESENTED BY HARNESS</strong></h5>
+<h2><a href="https://www.unscriptedconf.io/city/virtual?campaign_id=701Uw00000qJEntIAG&amp;utm_source=superhuman&amp;utm_medium=email-paid&amp;utm_term=thecode-sept23#registration">Anthropic, Workday, SpaceXAI, McKinsey, and more on the future of AI software delivery</a></h2>
+<p><a href="https://www.unscriptedconf.io/city/virtual?campaign_id=701Uw00000qJEntIAG&amp;utm_source=superhuman&amp;utm_medium=email-paid&amp;utm_term=thecode-sept23#registration"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b055a33c-704d-4f36-8c42-343100a3c997/unscripted-banner_-_Sheila_Madrigal__2_.jpg?t=1790145379" /></a></p>
+<hr />
+<p>AI is changing far more than how code gets written. At <a href="https://www.unscriptedconf.io/city/virtual?campaign_id=701Uw00000qJEntIAG&amp;utm_source=superhuman&amp;utm_medium=email-paid&amp;utm_term=thecode-sept23#registration">{unscripted} Virtual</a>, hosted by Harness, hear how <a href="https://www.unscriptedconf.io/city/virtual?campaign_id=701Uw00000qJEntIAG&amp;utm_source=superhuman&amp;utm_medium=email-paid&amp;utm_term=thecode-sept23#registration">leading teams are rethinking the SDLC</a> for autonomous delivery, security, platform engineering, developer experience, and trust.</p>
+<p>September 30 | Virtual | 10 AM PT</p>
+<p><a href="https://www.unscriptedconf.io/city/virtual?campaign_id=701Uw00000qJEntIAG&amp;utm_source=superhuman&amp;utm_medium=email-paid&amp;utm_term=thecode-sept23#registration"><strong>Register for {unscripted} →</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Why handing your agent more tools doesn't make it better</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a6816cc0-6777-4021-9afb-5bee6917adc5/superhumanteam_intern_needs_to_be_struggling_and_upset_holdin_b9f62149-5e63-4996-b6ca-6447bff80e36_2.jpg?t=1790145173" />
+<em><em>Source: The Code, Superhuman</em></em></p>
+<hr />
+<p><strong>What is an agent really?</strong> At its core, an agent breaks down into two parts: the model (which decides what to do) and the harness (the tools and context that let it execute). Think of it like onboarding a junior engineer. The model is the engineer; the harness is the laptop, documentation, access credentials, and tooling you hand them.</p>
+<p><strong>Less is more.</strong> Now ask yourself, do those extra tools actually help them ship better work? Is it really about tool count or tool quality? One drives real output while the other just adds noise and gives you mediocre results.</p>
+<p><strong>The crux.</strong> That's exactly what a harness eval checks, and an engineer at Atlan explained the idea behind it in a <a href="https://archive.codenewsletter.ai/2099590015336808865">widely shared thread</a>. Here’s how you can adopt his approach:</p>
+<ul>
+<li>
+<p>Give the agent a real task, let it run with its tools, and evaluate the final outcome rather than the path it took, which is whether it completed the job accurately and cleanly.</p>
+</li>
+<li>
+<p>Change one thing in the harness, such as a new tool, a tweaked prompt, or better context, and run the same task again. If the score goes up, the change probably helped. If it doesn't, drop it.</p>
+</li>
+<li>
+<p>Read the agent's steps to understand its failures, where it wasted calls, took detours, or slowed down. Also, remember to check the eval itself because if nothing passes, the task or grader is usually the problem, not always the agent.</p>
+</li>
+</ul>
+<p><strong>That's the whole idea.</strong> Don't add tools just because they seem useful. Add them, test them, and keep the ones that actually make the agent better.</p>
+<p><strong>P.S.</strong> LangChain's open <a href="https://github.com/langchain-ai/deepagents/tree/main/examples/better-harness">better-harness example</a> shows this loop in action and is a good place to start experimenting with harness evals.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/db4ed74c-4d39-4221-9d04-a7a305f4c27b/Screenshot_2026-09-23_at_2.46.49_PM.jpg?t=1790155057" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Mac Mini vs. M1 Ultra:</strong> The base M6 Mac and an M1 Ultra were compared in an Xcode compile benchmark. The <a href="https://archive.codenewsletter.ai/2102103485609349362">gap between them</a> is the shocking part (8.2K likes).</p>
+</li>
+<li>
+<p><strong>Bug Sweep:</strong> Claude Code's creator demos <a href="https://www.linkedin.com/posts/bcherny_i-used-opus-55-to-formally-verify-the-claude-ugcPost-7508309684391624705-uCMs/?rcm=ACoAADKnyD0BmPc_iOJu58cnenlm5DCGPJtTP9k">two short prompts</a> on Opus 5.5 that surfaced 16 PRs of hidden bugs and race conditions.</p>
+</li>
+<li>
+<p><strong>Rogue Agent:</strong> Agents taking initiative can go too far. Claude Code nearly signed and sent a contract they hadn't even read. <a href="https://archive.codenewsletter.ai/2102335447661764658">The instruction</a> that triggered it was surprisingly vague (1K likes).</p>
+</li>
+<li>
+<p><strong>Grok Review:</strong> After a day of real usage, one dev says the Grok 4.7 benchmark takes have it wrong. His <a href="https://archive.codenewsletter.ai/2102234191639257399">four observations</a> are worth a read (2K likes).</p>
+</li>
+<li>
+<p><strong>Testing Rules:</strong> Coding agents love writing useless unit tests. One founder says <a href="https://archive.codenewsletter.ai/2101627891721371971">three lines</a> in his AGENTS.md fixed it. (5.5K bookmarks).</p>
+</li>
+<li>
+<p><strong>Jagged Frontier:</strong> AI feels superhuman one minute and clueless the next. This <a href="https://archive.codenewsletter.ai/1993360931267473662">viral visual</a> breaks down why and shows how that gap could soon smooth out (4.2M views).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=b2QkhmQ0sT0"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/48ca1dfd-7ca5-4a47-b778-b16fb74ae6f4/Thumbnail__25_.jpg?t=1790155745" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=b2QkhmQ0sT0"><strong>How a Meta senior staff engineer reviews AI-generated code:</strong> </a> This tutorial shows why reading every line no longer scales and how to switch to a risk-based review instead. You’ll learn how to judge changes by blast radius, demand proof in PRs, use feature flags and independent agent reviews, and save the deepest scrutiny for code that can actually take the system down.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a id="claude-code-templates"></a>
+<a href="https://github.com/davila7/claude-code-templates"><strong>Claude Code Templates (30.9k ⭐):</strong> </a> A huge library of ready-to-use Claude Code agents, commands, hooks, skills, MCPs, and settings. You can install individual pieces or a full dev setup, then use built-in tools to monitor sessions, check your Claude setup, and manage plugins from one place.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a id="jev-architecture-explained-in-simple-english"></a>
+<a href="https://archive.codenewsletter.ai/2102077098756280413"><strong>Jev architecture explained in simple english:</strong> </a> A practical guide to what Jev actually does, why it’s different from an LLM, and where it fits in an app stack. It explains how Jev returns fast, structured decisions with probabilities, then walks through yes/no, routing, and scoring patterns you can build around.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-keep-claude-code-skills-out-of-your-context-window"></a></p>
+<h2><strong>How to keep Claude Code skills out of your context window</strong></h2>
+<p>Every skill you install preloads its instructions into Claude Code's context, burning tokens on skills your task never touches. An engineer <a href="https://archive.codenewsletter.ai/2101885477158547753">shared</a> a mod that loads skills only when they're needed.</p>
+<ul>
+<li><strong>Step 1:</strong> Install the Jev Skill Suggestion mod:</li>
+</ul>
+<pre><code>npx claude-code-templates@latest --mod productivity/jev-skill-suggestion
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Set your skills as user-invocable only. Instead of loading them into context, the mod sends your skill list to Jev, a lightweight classifier.</li>
+</ul>
+<p>On every request, Jev scores which skill matches the task and injects only that one. If nothing clears the confidence threshold, no skill loads at all. The mod requires the Typesafe API or Vercel AI Gateway. Full implementation details are on the mod page at <a href="https://aitmpl.com">aitmpl.com</a>.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Remember the SpaceXAI engineer who shipped 2,500 PRs to production in a single month? She just broke down her <a href="https://archive.codenewsletter.ai/2102050467505430555">exact workflow</a> in a new video</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

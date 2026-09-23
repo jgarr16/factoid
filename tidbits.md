@@ -1,38 +1,119 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-09-23"
+sweep: "2026-09-05 → 2026-09-24"
 updated: "2026-09-24"
-sources: "The Frontier, The Code, Superhuman AI, Future Tools, The Economist, Product Hunt Weekly, Superhuman AI · Sunday Special, OpenRouter Team"
+sources: "Future Tools, The Code, Superhuman AI, The Frontier, The Economist, Product Hunt Weekly, Superhuman AI · Sunday Special, OpenRouter Team"
 ---
 
 # Interesting tidbits
 
-**87. Arcjet packages its abuse protection as runtime agent security**
-*🤖 AI security & agent risk*
-*🗞 The Frontier · 2026-09-23 06:40 KST — ["Arcjet — Secure the AI agents you're building at runtime"](2026-09-23_newsletter_the_frontier.md#arcjet-secure-the-ai-agents-youre-building-at-runtime)*
+**94. Reception.ai — an AI receptionist built on ElevenAgents**
+*🗣️ Voice · TTS & STT*
+*🗞 Future Tools · 2026-09-24 01:06 KST — ["Answer Calls With AI"](2026-09-24_newsletter_future_tools.md#answer-calls-with-ai)*
 
-Arcjet launched a listing for securing AI agents at runtime — ▲391 in Developer Tools. Arcjet's existing SDK covers rate limiting, bot detection and abuse protection, and this packages that as guardrails for agent endpoints you expose. The practical counterpart to this week's Plugin4Shell report if you are shipping an agent to the public.
+A receptionist product built on ElevenLabs' ElevenAgents platform: it answers calls around the clock, books appointments in real time, and routes urgent requests by custom business rules across 70+ languages, with after-hours and multi-location coverage. Paid with a free trial — worth a look as a reference implementation if you ever wire a voice agent into a phone line.
 
-- [Product Hunt — Arcjet](https://www.producthunt.com/posts/arcjet)
-
-- [ ] 📌 remind me
-
----
-
-**86. Sider Omni Sidebar puts an agent sidebar inside every Mac app**
-*🛠️ Mac utilities worth a look*
-*🗞 The Frontier · 2026-09-23 06:40 KST — ["Sider Omni Sidebar — Give every Mac app an Agent Sidebar"](2026-09-23_newsletter_the_frontier.md#sider-omni-sidebar-give-every-mac-app-an-agent-sidebar)*
-
-Sider's new Omni Sidebar drops an agent sidebar into any Mac app rather than making you keep a separate chat window — ▲373 with 130 comments on Product Hunt, filed under Mac. Same shape as the other Mac agent clients in this log: one assistant reachable from whatever window you are already in. Product page has screenshots and pricing.
-
-- [Product Hunt — Sider Omni Sidebar](https://www.producthunt.com/posts/sider-omni-sidebar)
+- [Reception.ai](https://www.reception.ai/)
 
 - [ ] 📌 remind me
 
 ---
 
-**85. Claude Opus 5.5 lands 20% cheaper — $4 in / $20 out per million**
+**93. Iris — a personal agent you text through iMessage**
+*⚡ Productivity & agent follow-through*
+*🗞 Future Tools · 2026-09-24 01:06 KST — ["Text an AI Agent Through iMessage"](2026-09-24_newsletter_future_tools.md#text-an-ai-agent-through-imessage)*
+
+Iris is a personal agent that runs over iMessage and connects to more than 1,000 apps, pulling context from Gmail, Calendar and Drive so a text carries the request without re-explaining it. It supports persistent memory for repeat workflows, monitoring of open commitments and priorities, and scheduled tasks that deliver analysis back into the thread. Free and paid tiers.
+
+- [Iris personal assistant](https://iris-agent.co/personal-assistant)
+
+- [ ] 📌 remind me
+
+---
+
+**92. Phone agents ship — and Meta's "AI" calls were humans**
+*🗣️ Voice · TTS & STT*
+*🗞 Future Tools · 2026-09-24 01:06 KST — ["Could AI Finally Save Us From Hold Music?"](2026-09-24_newsletter_future_tools.md#could-ai-finally-save-us-from-hold-music)*
+
+Instinct shipped Concierge and Meta's Muse added outbound calls to US businesses within hours of each other: describe what you need and the agent dials, waits on hold, handles the conversation, then reports back with a transcript and summary. Google is moving the same way with Gemini-powered calling in Search. The wrinkle worth knowing: 404 Media found Meta routing many "AI" Muse calls to human contractors in a call centre — internal tests had humans at 95-98% success versus a noticeably lower pure-AI rate; a Meta VP called it "a miss" and rolled it back for now.
+
+- [TechCrunch — Instinct and Muse add calls](https://techcrunch.com/2026/09/17/rival-ai-agents-instinct-and-metas-muse-both-add-the-ability-to-make-calls/)
+- [404 Media — Meta's calls were humans](https://www.404media.co/meta-tests-muse-ai-agent-calls-that-are-actually-made-by-humans-in-a-call-center/)
+
+- [ ] 📌 remind me
+
+---
+
+**91. Xiaomi open-sources MiMo-V2.6-Pro and Flash for agent stacks**
+*🧠 Open / efficient / local models*
+*🗞 Future Tools · 2026-09-24 01:06 KST — ["MiMo-V2.6, a multimodal AI series built on an open development approach"](2026-09-24_newsletter_future_tools.md#mimo-v26-a-multimodal-ai-series-built-on-an-open-development-approach)*
+*🗞 The Code · 2026-09-22 23:05 KST — ["Xiaomi hands devs an open model built for agent stacks"](2026-09-22_newsletter_the_code.md#xiaomi-hands-devs-an-open-model-built-for-agent-stacks)*
+
+Xiaomi released MiMo-V2.6-Pro and a lighter Flash sibling under MIT licence on Hugging Face, both with a 1M-token context window plus coding, tool use and multimodal input. Flash is pitched as most of Pro's agent performance at a fraction of the cost — the version to price out if you are running thousands of agent calls. Open weights mean both can run on your own hardware; paid per-token API access is sold at platform.xiaomimimo.com.
+
+- [MiMo-V2.6 (models)](https://mimo.xiaomi.com/mimo-v2-6)
+- [Xiaomi token plan](https://platform.xiaomimimo.com/token-plan)
+
+- [ ] 📌 remind me
+
+---
+
+**90. Load Claude Code skills on demand so they stop eating context**
 *💸 Token & infra economics*
+*🗞 The Code · 2026-09-23 23:08 KST — ["How to keep Claude Code skills out of your context window"](2026-09-23_newsletter_the_code.md#how-to-keep-claude-code-skills-out-of-your-context-window)*
+
+Every installed skill preloads its instructions into Claude Code's context, burning tokens on skills a task never touches. The Jev Skill Suggestion mod (npx claude-code-templates@latest --mod productivity/jev-skill-suggestion) marks your skills user-invocable only and sends the skill list to Jev, a lightweight classifier: on each request it scores which skill matches the task and injects only that one, injecting nothing at all when nothing clears the confidence threshold. Requires the Typesafe API or Vercel AI Gateway.
+
+- [Mod implementation](https://aitmpl.com)
+- [The Code's writeup](https://archive.codenewsletter.ai/2101885477158547753)
+
+- [ ] 📌 remind me
+
+---
+
+**89. Claude Code Templates — a 30.9k★ library of agents and skills**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-09-23 23:08 KST — ["Claude Code Templates (30.9k ⭐)"](2026-09-23_newsletter_the_code.md#claude-code-templates)*
+
+A 30.9k★ repo bundling ready-to-use Claude Code agents, commands, hooks, skills, MCPs and settings — install individual pieces or a full dev setup. Built-in tools monitor sessions, check your Claude setup, and manage plugins from one place. Useful as a fork-and-trim base for a personal Claude Code configuration, and it is the same CLI that ships the community mods below.
+
+- [claude-code-templates](https://github.com/davila7/claude-code-templates)
+
+- [ ] 📌 remind me
+
+---
+
+**88. Harness evals: change one thing, keep what scores higher**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-09-23 23:08 KST — ["Why handing your agent more tools doesn't make it better"](2026-09-23_newsletter_the_code.md#why-handing-your-agent-more-tools-doesnt-make-it-better)*
+
+An agent is a model plus a harness — the tools and context you hand it — and more tools is not the same as better tools. The method from an Atlan engineer's widely shared thread: give the agent a real task and score the outcome, not the path it took; then change one harness variable (a tool, a prompt, more context) and re-run the identical task, keeping the change only if the score rises. Read the transcript for wasted calls and detours, and when nothing passes, suspect the task or the grader before the agent. LangChain's open better-harness example implements the loop.
+
+- [LangChain better-harness example](https://github.com/langchain-ai/deepagents/tree/main/examples/better-harness)
+- [The Atlan thread](https://archive.codenewsletter.ai/2099590015336808865)
+
+- [ ] 📌 remind me
+
+---
+
+**87. GPT-6 Sol and Luna halve OpenAI's API prices**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-09-23 23:08 KST — ["OpenAI's two new models slash API costs"](2026-09-23_newsletter_the_code.md#openais-two-new-models-slash-api-costs)*
+*🗞 Superhuman AI · 2026-09-23 22:14 KST — ["OpenAI expands the GPT-6 family with two cheaper Astra alternatives"](2026-09-23_newsletter_superhuman_ai.md#openai-expands-the-gpt-6-family-with-two-cheaper-astra-alternatives)*
+
+OpenAI split the GPT-6 line in two and halved API pricing: Sol for heavy daily dev work (features, PR review, debugging) at $2 per million input tokens — matching Claude Sonnet 5 and half the cost of the new Opus 5.5 — and Luna for high-volume summarisation and data extraction at $0.10 per million input tokens. Both roll out in ChatGPT Work and Codex across most plans, with a banked usage-limit reset. Anthropic answered the same day with Opus 5.5 at 40% below Opus 5, so the two labs are now competing on price per token rather than capability alone.
+
+- [GPT-6 Sol and Luna](https://openai.com/index/introducing-gpt-6-sol-and-luna/)
+- [The Code's writeup](https://archive.codenewsletter.ai/2102460975790137662)
+
+- [ ] 📌 remind me
+
+---
+
+**86. Claude Opus 5.5 lands 20% cheaper — $4 in / $20 out per million**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-09-23 23:08 KST — ["Anthropic launches faster, cheaper Opus 5.5"](2026-09-23_newsletter_the_code.md#anthropic-launches-faster-cheaper-opus-55)*
+*🗞 Superhuman AI · 2026-09-23 22:14 KST — ["Anthropic debuts Opus 5.5 and extends extra usage"](2026-09-23_newsletter_superhuman_ai.md#anthropic-debuts-opus-55-and-extends-extra-usage)*
 *🗞 The Frontier · 2026-09-23 06:40 KST — ["Claude Opus 5.5 landed this morning, 20% cheaper than Opus 5"](2026-09-23_newsletter_the_frontier.md#claude-opus-55-landed-this-morning-20-cheaper-than-opus-5)*
 
 Anthropic shipped Opus 5.5 at $4 per million input tokens and $20 per million output, 20% under Opus 5, claiming Fable 5.1-level performance on most tasks and 40% lower running costs on typical workloads. Sonnet and Haiku versions follow in the coming weeks. A straight price cut on the top tier — worth re-checking against whatever routing you already have in place.
@@ -43,20 +124,9 @@ Anthropic shipped Opus 5.5 at $4 per million input tokens and $20 per million ou
 
 ---
 
-**84. Plugin4Shell: one zero-click bug hit every major coding agent**
-*🤖 AI security & agent risk*
-*🗞 The Frontier · 2026-09-23 06:40 KST — ["One zero-click exploit hit every major coding agent at once"](2026-09-23_newsletter_the_frontier.md#one-zero-click-exploit-hit-every-major-coding-agent-at-once)*
-
-Plugin4Shell lets a malicious plugin update run code with your agent's own permissions and no click required, because the agent checks out the pinned commit and never verifies it landed there. Claude Code is patched in 2.1.179 and Codex in 0.146.0; Copilot CLI has no fix yet and Gemini CLI is not getting one. Worth checking which agent plugins you have pinned to a mutable source.
-
-- [Help Net Security — Plugin4Shell](https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/)
-
-- [ ] 📌 remind me
-
----
-
-**83. ChatGPT co-inventor's lab ships a 70ms "no-hallucination" routing model.**
+**85. ChatGPT co-inventor's lab ships a 70ms "no-hallucination" routing model.**
 *🧠 Open / efficient / local models*
+*🗞 The Code · 2026-09-23 23:08 KST — ["Jev architecture explained in simple english"](2026-09-23_newsletter_the_code.md#jev-architecture-explained-in-simple-english)*
 *🗞 The Frontier · 2026-09-23 06:40 KST — ["Jev — Fast, structured AI decisions for software automation"](2026-09-23_newsletter_the_frontier.md#jev-fast-structured-ai-decisions-for-software-automation)*
 *🗞 The Code · 2026-09-21 22:03 KST — ["This AI model is the latest “aha moment” for developers:"](2026-09-21_newsletter_the_code.md#this-ai-model-is-the-latest-aha-moment-for-developers)*
 *🗞 The Code · 2026-09-16 23:08 KST — ["ChatGPT co-inventor bets on models that can't hallucinate"](2026-09-16_newsletter_the_code.md#chatgpt-co-inventor-bets-on-models-that-cant-hallucinate)*
@@ -70,7 +140,43 @@ Diogo Almeida raised $40M for TypeSafe AI and emerged from stealth with **Jev**,
 
 ---
 
-**82. Put DeepSeek Harness on a cheap VPS and run agents 24/7**
+**84. Arcjet packages its abuse protection as runtime agent security**
+*🤖 AI security & agent risk*
+*🗞 The Frontier · 2026-09-23 06:40 KST — ["Arcjet — Secure the AI agents you're building at runtime"](2026-09-23_newsletter_the_frontier.md#arcjet-secure-the-ai-agents-youre-building-at-runtime)*
+
+Arcjet launched a listing for securing AI agents at runtime — ▲391 in Developer Tools. Arcjet's existing SDK covers rate limiting, bot detection and abuse protection, and this packages that as guardrails for agent endpoints you expose. The practical counterpart to this week's Plugin4Shell report if you are shipping an agent to the public.
+
+- [Product Hunt — Arcjet](https://www.producthunt.com/posts/arcjet)
+
+- [ ] 📌 remind me
+
+---
+
+**83. Sider Omni Sidebar puts an agent sidebar inside every Mac app**
+*🛠️ Mac utilities worth a look*
+*🗞 The Frontier · 2026-09-23 06:40 KST — ["Sider Omni Sidebar — Give every Mac app an Agent Sidebar"](2026-09-23_newsletter_the_frontier.md#sider-omni-sidebar-give-every-mac-app-an-agent-sidebar)*
+
+Sider's new Omni Sidebar drops an agent sidebar into any Mac app rather than making you keep a separate chat window — ▲373 with 130 comments on Product Hunt, filed under Mac. Same shape as the other Mac agent clients in this log: one assistant reachable from whatever window you are already in. Product page has screenshots and pricing.
+
+- [Product Hunt — Sider Omni Sidebar](https://www.producthunt.com/posts/sider-omni-sidebar)
+
+- [ ] 📌 remind me
+
+---
+
+**82. Plugin4Shell: one zero-click bug hit every major coding agent**
+*🤖 AI security & agent risk*
+*🗞 The Frontier · 2026-09-23 06:40 KST — ["One zero-click exploit hit every major coding agent at once"](2026-09-23_newsletter_the_frontier.md#one-zero-click-exploit-hit-every-major-coding-agent-at-once)*
+
+Plugin4Shell lets a malicious plugin update run code with your agent's own permissions and no click required, because the agent checks out the pinned commit and never verifies it landed there. Claude Code is patched in 2.1.179 and Codex in 0.146.0; Copilot CLI has no fix yet and Gemini CLI is not getting one. Worth checking which agent plugins you have pinned to a mutable source.
+
+- [Help Net Security — Plugin4Shell](https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/)
+
+- [ ] 📌 remind me
+
+---
+
+**81. Put DeepSeek Harness on a cheap VPS and run agents 24/7**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-09-22 23:05 KST — ["How to run agents 24/7 on your own server"](2026-09-22_newsletter_the_code.md#how-to-run-agents-247-on-your-own-server)*
 
@@ -82,7 +188,7 @@ A walkthrough of hosting DeepSeek Harness on a cheap VPS so long-running agent w
 
 ---
 
-**81. Claude Code now has a built-in eval harness for plugins and skills**
+**80. Claude Code now has a built-in eval harness for plugins and skills**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-09-22 23:05 KST — ["How to test if your Claude Code plugin actually helps"](2026-09-22_newsletter_the_code.md#how-to-test-if-your-claude-code-plugin-actually-helps)*
 
@@ -94,26 +200,13 @@ Claude Code 2.1.269+ can measure whether a plugin or skill actually helps: run `
 
 ---
 
-**80. TypeSafe Agent Skills pack adds typed decisions to Claude Code**
+**79. TypeSafe Agent Skills pack adds typed decisions to Claude Code**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-09-22 23:05 KST — ["TypeSafe Agent Skills (1.7K⭐️)"](2026-09-22_newsletter_the_code.md#typesafe-agent-skills)*
 
 An open-source skills pack (github.com/typesafe-ai/skills) that drops Jev-style typed decisions and probabilities into Claude Code and other agents without wiring the integration yourself. It helps the agent design TypeSafe workflows, pull the right docs and cookbooks, and use System One for fast routing, scoring and other structured decisions. That is the cheap deterministic layer from the Jev items, packaged as something installable.
 
 - [typesafe-ai/skills (GitHub)](https://github.com/typesafe-ai/skills)
-
-- [ ] 📌 remind me
-
----
-
-**79. Xiaomi open-sources MiMo-V2.6-Pro and Flash for agent stacks**
-*🧠 Open / efficient / local models*
-*🗞 The Code · 2026-09-22 23:05 KST — ["Xiaomi hands devs an open model built for agent stacks"](2026-09-22_newsletter_the_code.md#xiaomi-hands-devs-an-open-model-built-for-agent-stacks)*
-
-Xiaomi released MiMo-V2.6-Pro and a lighter Flash sibling under MIT licence on Hugging Face, both with a 1M-token context window plus coding, tool use and multimodal input. Flash is pitched as most of Pro's agent performance at a fraction of the cost — the version to price out if you are running thousands of agent calls. Open weights mean both can run on your own hardware; paid per-token API access is sold at platform.xiaomimimo.com.
-
-- [MiMo-V2.6 (models)](https://mimo.xiaomi.com/mimo-v2-6)
-- [Xiaomi token plan](https://platform.xiaomimimo.com/token-plan)
 
 - [ ] 📌 remind me
 
