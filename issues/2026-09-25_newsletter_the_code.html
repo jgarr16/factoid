@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 AI avatars that think &amp; talk like humans — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 AI avatars that think &amp; talk like humans — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 AI avatars that think &amp; talk like humans</h1>
+<p class="meta">2026-09-25 · received 2026-09-25 23:10 +0900
+ · <a href="https://codenewsletter.ai/p/you-can-now-build-a-lifelike-agent-with-a-face" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 AI avatars that think &amp; talk like humans</h1>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ca98d024-18d3-4941-9817-719702ed5fa2/Group_TigerData.jpg?t=1790322526" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> You can now expect realistic AI avatars to enter your Google meetings. The search giant just dropped a model with live avatars that can think and talk like humans. Meanwhile, Meta actually launched a pendant that you can wear to talk to your agents.</p>
+<p><strong>Also:</strong> Meta’s Muse agent came to the rescue when a dev’s flight got delayed, 4 AI models were asked to push a man to death (one agreed), and an AI coding dictionary for beginners.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>How to prompt coding agents in 2026</p>
+</li>
+<li>
+<p>AWS engineer’s roadmap to build an AI project</p>
+</li>
+<li>
+<p>Build an agentic software factory (tutorial)</p>
+</li>
+<li>
+<p>Get more out of Opus 5.5 (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/"><img alt="Click to watch how Gemini 3.8 Live with Live Avatar works." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c222e289-8aa2-4cac-a30f-ffd1e2be44e1/Thumbnail__11_.jpg?t=1790318274" /></a>
+<em>Click to watch how Gemini 3.8 Live with Live Avatar works.</em></p>
+<hr />
+<p><a id="you-can-now-build-an-ai-avatar-that-can-think-and-talk-in-real-time"></a>
+<strong>You can now build an AI avatar that can think and talk in real time:</strong> Google just dropped <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/">Gemini 3.8 Live</a> with Live Avatar, blending real-time video with speech. You can now transform a single reference image into a fully animated avatar, though custom setups require enterprise allowlisting. Under the hood, it handles reasoning and tool calls asynchronously, so your agent fetches data mid-conversation without breaking flow. It supports 97 languages and includes complete <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api">API docs</a>.</p>
+<p><strong>Cursor puts bots on deployment and security duty:</strong> The AI startup just launched two bots to take on the hardest parts of shipping code. The Rollouts bot tracks your change from PR to production, catches broken endpoints, and can pause rollouts or open a revert PR. Meanwhile, Security Reviewer scans every update for risks, running 21% faster with higher fix acceptance rates. Both bots are live now on Teams and Enterprise. Turn on in <a href="https://cursor.com/blog/rollouts-and-security-reviewer">Automations</a>.</p>
+<p><strong>Meta wants you to wear your AI agent:</strong> Mark Zuckerberg took the stage at the Connect conference to unveil the new <a href="https://archive.codenewsletter.ai/2102914887227789547">Meta VR Glasses</a>, a slimmed-down headset with a tethered compute puck, aimed directly at Apple's Vision Pro. He also introduced <a href="https://archive.codenewsletter.ai/2102914990051307831">Muse Charm</a>, a handheld pendant for calling up Meta's Muse agent, slated for the December holidays. For engineering teams, this opens a brand-new, always-on surface for agentic apps.</p>
+<hr />
+<h5><strong>PRESENTED BY TIGERDATA</strong></h5>
+<h2><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">Postgres for time-series workloads at any scale.</a></h2>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/802128b0-6a0e-4d74-b545-b054d9712964/Production-ready_Postgres_The_Code_1920x1080_-_Mandy_Hanson__2_.jpg?t=1790322858" /></a></p>
+<hr />
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><strong>Growing Postgres databases</strong></a> eventually hit a wall: queries slow, dashboards lag, and adding another database starts to feel inevitable.</p>
+<p>Tiger Data keeps Postgres fast as your data grows with <a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><strong>time-series primitives</strong></a>, columnar storage, and automatic partitioning. Same SQL and tooling. No pipelines or second system.</p>
+<p>Just Postgres, built to scale with your workload.</p>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><strong>Start building for free today. No credit card needed.</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="how-to-prompt-coding-agents-like-a-pro"></a></p>
+<h2><strong>How to prompt coding agents like a pro (in 2026)</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e7e39910-9118-4add-ac2c-019522d6c8a4/superhumanteam_an_engineer_sitting_in_an_engineering_office_r_5b70c124-0243-44fb-8d4a-8f4198ee19db_2.jpg?t=1790332263" />
+<em><em>Source: The Code, Superhuman</em></em></p>
+<hr />
+<p><strong>Old book, new tricks.</strong> Agents can build full-stack apps in minutes, but subtle bugs in the codebase can grind your build to a halt. Senior dev Matt Pocock kept hitting this exact hurdle, and his workaround to this wasn't a shiny new model or a clever prompt hack. But, it came straight from a classic programming book published back in 1999. He explained the idea on a <a href="https://newsletter.pragmaticengineer.com/p/ai-skills-with-matt-pocock">podcast</a>.</p>
+<p><strong>Here's the copy-ready version for you:</strong></p>
+<ul>
+<li>
+<p>Ask the agent to build a "tracer bullet," also known as a "golden path." That means creating one thin, working route from input to output before filling in the rest.</p>
+</li>
+<li>
+<p>Use the name of the pattern. "Build a tracer bullet" works better than a paragraph describing it because the model already knows what the term means.</p>
+</li>
+<li>
+<p>If the output starts getting worse, do not just add more instructions. Look for the precise technical term that captures what you want.</p>
+</li>
+<li>
+<p>Search the classics for more of these "leading words." Pocock found "tracer bullet" in <a href="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052">The Pragmatic Programmer</a> book, and he now reads old programming books looking for more such terms.</p>
+</li>
+</ul>
+<p><strong>The magic word.</strong> These terms are basically prompt shortcuts. Say "use a tracer bullet," and the agent can pull up an entire pattern it already understands. That is much clearer than explaining every step yourself.</p>
+<p><strong>The readers win.</strong> Turns out, reading the classics still matters. If you know your fundamentals, you already have a library of powerful prompts that someone using plain English might never think to try. And as agents write more of the code, that advantage only gets bigger.</p>
+<p><strong>P.S.</strong> Ready to raid the classics for more magic words? Start with these<a href="https://www.bgosoftware.com/blog/8-most-influential-books-on-programming-and-computer-science-of-all-time/"> eight programming books that shaped the field</a>.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ff2d0a75-2c0b-40b0-b813-c14391b95f1c/Screenshot_2026-09-25_at_2.56.25_PM.jpg?t=1790328414" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Travel Agent</strong>: An X user told his AI agent his flight was delayed 7 hours, and he says <a href="https://archive.codenewsletter.ai/2102179999122153690">what the agent did</a> next felt like magic (1.2M views).</p>
+</li>
+<li>
+<p><strong>Ledge Test</strong>: A viral experiment told 4 AI models to push a simulated person off a ledge. <a href="https://archive.codenewsletter.ai/2101707600618221847">Only one</a> of them obeyed (1.7M views).</p>
+</li>
+<li>
+<p><strong>AI Terminologies</strong>: A senior engineer just dropped an <a href="https://www.aicodingdictionary.com/">AI Coding Dictionary</a> for beginners (1K likes).</p>
+</li>
+<li>
+<p><strong>Portfolio Play</strong>: An AWS ML engineer shared her <a href="https://www.youtube.com/watch?v=VAi6O2eSQNk">exact workflow</a> for building your first AI project.</p>
+</li>
+<li>
+<p><strong>Soft Industry</strong>: This CTO argues AWS made the entire industry soft, <a href="https://archive.codenewsletter.ai/2102017361960423934">his take</a> on why AI infra isn't ready has the devs talking (251K views).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=pNmfMi-yjZk"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/93982b70-5b47-4b68-a6f0-1f494ff89489/Thumbnail__12_.jpg?t=1790329335" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=pNmfMi-yjZk"><strong>How to build an agentic software factory:</strong> </a> This deep dive shows how to turn AI agents into a loop that keeps improving your software. You’ll see how agents collect issues from telemetry and user feedback, reproduce bugs, ship fixes, verify them end to end, and only then open a PR, so the workflow moves beyond “write code” into something much closer to a self-improving engineering system.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/rohitg00/ai-engineering-from-scratch"><strong>AI Engineering From Scratch (57k ⭐):</strong> </a> A free, open-source curriculum for learning AI by actually building it. It spans 523 lessons across 20 phases, from math and deep learning to LLMs, agents, MCP, and production, with every lesson producing something reusable like a prompt, skill, agent, or MCP server.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"><strong>How to get most out of Opus 5.5:</strong> </a> Anthropic’s guide explains how to prompt the model for longer coding runs without micromanaging it. The big tips: define what “done” looks like, stop telling it to “think hard,” use CLAUDE.md to say when it should keep going or stop and split big jobs across subagents.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-keep-using-claude-code-after-hitting-rate-limits"></a></p>
+<h2><strong>How to keep using Claude Code after hitting rate limits</strong></h2>
+<p>Hitting the five-hour session limit mid-task kills momentum. A dev <a href="https://archive.codenewsletter.ai/2103224547897983468">shared</a> a command Anthropic shipped quietly around v2.1.241 without ever adding it to the changelog.</p>
+<ul>
+<li><strong>Step 1:</strong> Run it after you hit your session limit:</li>
+</ul>
+<pre><code>/low-priority
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 2:</strong> Claude Code keeps working at reduced priority. Requests only process when spare capacity exists, so responses may pause during peak hours.</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Run the same command again to switch back to normal mode.</p>
+</li>
+</ul>
+<p>One catch: this still draws from your weekly limit, so use it to finish the task in front of you, not to start new ones. Run <code>/usage</code> to check where you stand before leaning on it.</p>
+<p><strong>P.S.</strong> Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app"><strong>here</strong></a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>A senior engineer who interviewed 50+ AI-native developers lists the 8 <a href="https://archive.codenewsletter.ai/2102836012338589746?utm_campaign=design-custom-ai-voices-from-a-text-prompt">common mistakes</a> holding most people back.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
