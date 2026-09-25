@@ -1,1 +1,7 @@
 .DS_Store
+
+# working sources — never published (the filtered copy is tidbits-web.md)
+tidbits.md
+newsletters/
+.backups/
+*.tmp
