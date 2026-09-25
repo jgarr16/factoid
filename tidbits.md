@@ -15,7 +15,7 @@ A receptionist product built on ElevenLabs' ElevenAgents platform: it answers ca
 
 - [Reception.ai](https://www.reception.ai/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -27,7 +27,7 @@ Iris is a personal agent that runs over iMessage and connects to more than 1,000
 
 - [Iris personal assistant](https://iris-agent.co/personal-assistant)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -40,7 +40,7 @@ Instinct shipped Concierge and Meta's Muse added outbound calls to US businesses
 - [TechCrunch — Instinct and Muse add calls](https://techcrunch.com/2026/09/17/rival-ai-agents-instinct-and-metas-muse-both-add-the-ability-to-make-calls/)
 - [404 Media — Meta's calls were humans](https://www.404media.co/meta-tests-muse-ai-agent-calls-that-are-actually-made-by-humans-in-a-call-center/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -54,7 +54,7 @@ Xiaomi released MiMo-V2.6-Pro and a lighter Flash sibling under MIT licence on H
 - [MiMo-V2.6 (models)](https://mimo.xiaomi.com/mimo-v2-6)
 - [Xiaomi token plan](https://platform.xiaomimimo.com/token-plan)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -67,7 +67,7 @@ Every installed skill preloads its instructions into Claude Code's context, burn
 - [Mod implementation](https://aitmpl.com)
 - [The Code's writeup](https://archive.codenewsletter.ai/2101885477158547753)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -79,7 +79,7 @@ A 30.9k★ repo bundling ready-to-use Claude Code agents, commands, hooks, skill
 
 - [claude-code-templates](https://github.com/davila7/claude-code-templates)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -92,7 +92,7 @@ An agent is a model plus a harness — the tools and context you hand it — and
 - [LangChain better-harness example](https://github.com/langchain-ai/deepagents/tree/main/examples/better-harness)
 - [The Atlan thread](https://archive.codenewsletter.ai/2099590015336808865)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -106,7 +106,7 @@ OpenAI split the GPT-6 line in two and halved API pricing: Sol for heavy daily d
 - [GPT-6 Sol and Luna](https://openai.com/index/introducing-gpt-6-sol-and-luna/)
 - [The Code's writeup](https://archive.codenewsletter.ai/2102460975790137662)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -120,7 +120,7 @@ Anthropic shipped Opus 5.5 at $4 per million input tokens and $20 per million ou
 
 - [TechCrunch — Opus 5.5](https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -136,7 +136,7 @@ Diogo Almeida raised $40M for TypeSafe AI and emerged from stealth with **Jev**,
 
 - [typesafe.ai](https://typesafe.ai/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -148,7 +148,7 @@ Arcjet launched a listing for securing AI agents at runtime — ▲391 in Develo
 
 - [Product Hunt — Arcjet](https://www.producthunt.com/posts/arcjet)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -160,7 +160,7 @@ Sider's new Omni Sidebar drops an agent sidebar into any Mac app rather than mak
 
 - [Product Hunt — Sider Omni Sidebar](https://www.producthunt.com/posts/sider-omni-sidebar)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -172,7 +172,7 @@ Plugin4Shell lets a malicious plugin update run code with your agent's own permi
 
 - [Help Net Security — Plugin4Shell](https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -184,7 +184,7 @@ A walkthrough of hosting DeepSeek Harness on a cheap VPS so long-running agent w
 
 - [Tutorial — agents 24/7 on your own server](https://www.youtube.com/watch?v=iXqwX9DR0IQ)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -196,7 +196,7 @@ Claude Code 2.1.269+ can measure whether a plugin or skill actually helps: run `
 
 - [Claude Code plugin evals docs](https://code.claude.com/docs/en/plugin-evals)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -208,7 +208,7 @@ An open-source skills pack (github.com/typesafe-ai/skills) that drops Jev-style 
 
 - [typesafe-ai/skills (GitHub)](https://github.com/typesafe-ai/skills)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -220,7 +220,7 @@ Teknium shipped an experimental Hermes plugin, Claude Subscription DirectSDK, th
 
 - [Hermes — Claude Subscription DirectSDK](https://hermes-agent.nousresearch.com/docs/plugins/claude-subscription-directsdk)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -234,7 +234,7 @@ Part 2 of the SpaceXAI engineer's pstack playbook moves from verification to pla
 - [The Code — pstack part 2](https://archive.codenewsletter.ai/2097732320606507506)
 - [pstack Grok Bot plugin](https://x.ai/bot/plugin/9717366)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -246,7 +246,7 @@ Connect the email, calendar and messaging accounts you want monitored, name the 
 
 - [Instinct](https://instinct.com/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -259,7 +259,7 @@ Connect the email, calendar and messaging accounts you want monitored, name the 
 - [What is tokenmaxxing — and how to avoid it](https://tokenmaxxing.com/guides/what-is-tokenmaxxing)
 - [VentureBeat: nobody can prove it's working](https://venturebeat.com/orchestration/companies-are-spending-millions-rewiring-how-ai-gets-used-almost-none-can-prove-its-working)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -274,7 +274,7 @@ Hacktron turned a bug in libheif — the image library behind OpenAI's help foru
 - [Hacktron — hacking OpenAI](https://www.hacktron.ai/blog/hacking-openai)
 - [The reported loosened-guardrails detail](https://archive.codenewsletter.ai/2100773011855134828)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -289,7 +289,7 @@ Anthropic shipped Projects in beta and rebuilt Claude Code around it: you brief 
 - [Anthropic — Projects, redesigned](https://claude.com/blog/projects-redesigned)
 - [Boris Cherny's prompts](https://archive.codenewsletter.ai/2100669598995816511)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -302,7 +302,7 @@ A walkthrough of splitting one agent loop across two models: Jev takes the fast,
 - [Pairing Jev with Claude Code (tutorial)](https://www.youtube.com/watch?v=ScvXFi4MUSc)
 - [TypeSafe AI — Jev](https://typesafe.ai/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -315,7 +315,7 @@ Claude Code ships working UI but picks the wrong easing and timing almost every 
 - [emilkowalski/skills](https://github.com/emilkowalski/skills)
 - [50+ AI coding hacks (Claude Code, Cursor, Codex)](https://hackbook-chi.vercel.app)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -327,7 +327,7 @@ ECC wraps Claude Code, Codex and other coding agents in a structured engineering
 
 - [affaan-m/ECC on GitHub](https://github.com/affaan-m/ECC)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -341,7 +341,7 @@ A UC Berkeley + Arena study ran the same models inside different coding harnesse
 - [Fortune 500 AI coding cost cookbook](https://thecode-ai-coding-costs.netlify.app/)
 - [Getting started with Pi (walkthrough)](https://www.youtube.com/watch?v=SxuQs9GGYbk)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -353,7 +353,7 @@ A robot-safety group handed GPT-6 Astra and Claude Fable 5.1 five destructive in
 
 - [The Code — the robot-safety experiment](https://archive.codenewsletter.ai/2101118049944543545)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -365,7 +365,7 @@ South Korea is expected to sign a memorandum of understanding with America setti
 
 - [The Economist — The World in Brief](https://www.economist.com/the-world-in-brief)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -377,7 +377,7 @@ An app store where every app is a phone number: you save the contact, text it, a
 
 - [Text Agent Store on Product Hunt](https://www.producthunt.com/posts/text-agent-store)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -389,7 +389,7 @@ Slashy connects your inboxes, calendar, CRM and meeting notes, spends about five
 
 - [Slashy Assistant on Product Hunt](https://www.producthunt.com/posts/slashy-assistant)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -401,7 +401,7 @@ A resurfaced Veritasium / MKBHD clip shows $10,000 leaving a locked iPhone with 
 
 - [Reddit thread (Veritasium / MKBHD clip)](https://www.reddit.com/r/interestingasfuck/comments/1wei3kq/a_locked_iphone_was_used_to_make_a_10000_apple/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -413,7 +413,7 @@ Google disclosed that in May its Gemini agents left their testing environment an
 
 - [The Economist — The World in Brief](https://www.economist.com/the-world-in-brief)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -425,7 +425,7 @@ Google Labs' experimental morning-briefing app works overnight across connected 
 
 - [Dreambeans](https://labs.google/dreambeans)
 
-- [x] 📌 reminder created 2026-09-19 07:49
+- [x] 📌 reminder created 2026-09-19 07:49 · [ ] 🙈 hide me
 
 ---
 
@@ -437,7 +437,7 @@ Announced on OpenRouter's blog, Ori Eval answers the "which model should I actua
 
 - [OpenRouter blog — Ori Eval](https://openrouter.ai/blog)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -450,7 +450,7 @@ US In-Region Routing is now live alongside the EU option: requests are decrypted
 - [OpenRouter blog](https://openrouter.ai/blog)
 - [OpenRouter docs](https://openrouter.ai/docs)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -463,7 +463,7 @@ Zero-completion insurance is on by default on every account and every model: whe
 - [OpenRouter activity page](https://openrouter.ai/activity)
 - [OpenRouter docs](https://openrouter.ai/docs)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -477,7 +477,7 @@ Three OpenAI moves in one item: Astra for Law pairs GPT-6 Astra with a Legal Sea
 - [Appshots docs](https://learn.chatgpt.com/docs/appshots)
 - [OpenAI — Astra for Law](https://openai.com/index/astra-for-law/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -490,7 +490,7 @@ terminal-browser (3k★) is an open-source plugin that opens a real browser insi
 - [zenbu-labs/terminal-browser — Claude Code plugin](https://github.com/zenbu-labs/terminal-browser/tree/main/claude-code-plugin)
 - [How to de-slop an AI-generated codebase](https://www.builder.io/blog/de-slop-ai-generated-codebase)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -503,7 +503,7 @@ An OpenAI Codex engineer's fix for parallel threads that know nothing about each
 - [The Codex thread-coordination writeup](https://archive.codenewsletter.ai/2100000188270363001)
 - [Hackbook — 50+ AI coding hacks](https://hackbook-chi.vercel.app)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -516,7 +516,7 @@ Gergely Orosz's inside look at OpenAI's setup: Codex agents take a change from i
 - [Pragmatic Engineer — the OpenAI software factory](https://newsletter.pragmaticengineer.com/p/openai-software-factory)
 - [Warp founder's guide to adopting it](https://archive.codenewsletter.ai/2099941244063432720)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -528,7 +528,7 @@ It began writing "freed from the roles that bind other chatbots" text into its o
 
 - [alignment.openai.com — self-generated prompt injections in compaction summaries](https://alignment.openai.com/misalignment-reports/self-generated-prompt-injections-in-compaction-summaries/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -540,7 +540,7 @@ One of the very models US policy is trying to restrict — supply-chain opacity 
 
 - [archive.codenewsletter.ai](https://archive.codenewsletter.ai/2100199254065295507)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -552,7 +552,7 @@ One of OpenRouter's hottest newcomers: rivals GPT-6 Astra and Opus 5 on DeepSWE 
 
 - [openrouter.ai/stealth/union-alpha](https://openrouter.ai/stealth/union-alpha)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -567,7 +567,7 @@ The measured detail worth keeping: **MCP tool calls ~3s vs ~13s for CLIs** — M
 - [claude.com/blog/cowork-is-now-claude](https://claude.com/blog/cowork-is-now-claude)
 - [github.com/anthropics/claude-code#91870 — Claude Mods](https://github.com/anthropics/claude-code/issues/91870)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -581,7 +581,7 @@ A persistent workspace where a coordinator routes tasks to subagents on dedicate
 - [cursor.com/blog/projects](https://cursor.com/blog/projects)
 - [arslan.io — how I manage my agents](https://arslan.io/2026/09/11/how-i-manage-my-agents/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -593,7 +593,7 @@ Deveillance's on-device model distorts audio in real time for bots on the call w
 
 - [deveillance.com/kalypta](https://www.deveillance.com/kalypta)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -607,7 +607,7 @@ Same week ElevenLabs launched **Reception** — a 24/7 voice receptionist for SM
 - [blog.google — real-time voice apps](https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/)
 - [reception.ai](https://www.reception.ai/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -619,7 +619,7 @@ Linkly AI is a free, local-first document search engine built for AI agents: it 
 
 - [Linkly AI](https://linkly.ai/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -632,7 +632,7 @@ Reads your Git diffs, pulls in wider repo context, leaves precise line-level com
 
 - [github.com/alibaba/open-code-review](https://github.com/alibaba/open-code-review)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -646,7 +646,7 @@ The upgraded Foundation Models framework lets developers plug in any language mo
 - [developer.apple.com/ios/whats-new](https://developer.apple.com/ios/whats-new/)
 - [Apple — third-generation Foundation Models](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -658,7 +658,7 @@ For the first time in 2.5+ years, OpenRouter users spent more on OpenAI than Ant
 
 - [archive.codenewsletter.ai](https://archive.codenewsletter.ai/2099898254905549220)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -670,7 +670,7 @@ A study of 7 models found the harness has little effect on task success rate whi
 
 - [archive.codenewsletter.ai](https://archive.codenewsletter.ai/2097814698204832116)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -682,7 +682,7 @@ An engineering manager maintains `projects.md` (what matters per project), `peop
 
 - [softwareleads.substack.com — maintaining context as a manager](https://softwareleads.substack.com/p/maintaining-context-as-a-manager-35c)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -695,7 +695,7 @@ Imports tasks from Claude Code or Codex, schedules recurring PR reviews and secu
 
 - [cline.bot/desktop](https://cline.bot/desktop)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -707,7 +707,7 @@ xAI's desktop app takes email connectors and runs an agent that converts actiona
 
 - [x.ai/bot](https://x.ai/bot)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -720,7 +720,7 @@ Brockman called the results "a lesson for the entire team"; the same week's cove
 
 - [OpenAI — Hugging Face incident and the road ahead](https://openai.com/index/hugging-face-incident-and-the-road-ahead/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -733,7 +733,7 @@ A blow to the industry (the House had passed it); the fight centers on stablecoi
 
 - [The Economist — The World in Brief](https://www.economist.com/the-world-in-brief)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -747,7 +747,7 @@ A DeepSeek engineer's counter-argument ran alongside it: the real danger is one 
 - [atria-asi.ai](https://atria-asi.ai/)
 - [Atria API](https://api.atria-asi.ai/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -761,7 +761,7 @@ Pairs with **Glance** (1.1K★), a Mac webcam Face-ID-style unlock: face recogni
 - [ariso.ai/oats](https://ariso.ai/oats)
 - [github.com/jonnyoo/glance](https://github.com/jonnyoo/glance)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -773,7 +773,7 @@ PM Dimitri Mazmanov found the agent burned most tokens on plain file reads, not 
 
 - [engineering.atspotify.com — how Spotify cut my Claude Code token usage by 90%](https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -787,7 +787,7 @@ The September 2026 Threat Intelligence Report documents a Yemen-based weapons-en
 
 - [Anthropic Threat Intelligence Report, Sept 2026](https://www.anthropic.com/threat-intelligence-report-september-2026)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -799,7 +799,7 @@ It finds files and folders itself rather than leaning on Spotlight; relevant if 
 
 - [producthunt.com/posts/raycast-2-0](https://www.producthunt.com/posts/raycast-2-0)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -811,7 +811,7 @@ Hold Option: it grabs a screenshot, opens the editor in the notch so you can cir
 
 - [producthunt.com/posts/assist-4](https://www.producthunt.com/posts/assist-4)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -824,7 +824,7 @@ Tucky parks notes down the edge of the Mac screen and hands them to an agent to 
 - [producthunt.com/products/tucky](https://www.producthunt.com/products/tucky)
 - [producthunt.com/posts/at8pm](https://www.producthunt.com/posts/at8pm)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -836,7 +836,7 @@ It intercepts every command an agent is about to run and blocks the specific dan
 
 - [producthunt.com/posts/harden](https://www.producthunt.com/posts/harden)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -851,7 +851,7 @@ The **iPhone Duo** is a passport-sized screen opening to 7.6 inches, with camera
 - [apple.com/iphone-duo](https://www.apple.com/iphone-duo/)
 - [apple.com/apple-watch-series-12](https://www.apple.com/apple-watch-series-12/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -865,7 +865,7 @@ GPT-Live-1 listens and speaks in one model, deciding in real time when to pause,
 - [OpenAI — Introducing GPT-Live-1 in the API](https://openai.com/index/introducing-gpt-live-1-in-the-api/)
 - [OpenAI — Introducing the Agents API](https://openai.com/index/introducing-the-agents-api/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -877,7 +877,7 @@ On Hugging Face at **$0.30 per million input tokens**, with lower compute and me
 
 - [huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -889,7 +889,7 @@ The Devin maker's model beats Grok 4.6 and matches GPT-5.6 Sol and Fable 5.1 on 
 
 - [cognition.com/blog/swe-2](https://cognition.com/blog/swe-2)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -901,7 +901,7 @@ OpenAI and Anthropic already route low-risk changes to AI review while anything 
 
 - [newsletter.pragmaticengineer.com — what is happening with code reviews](https://newsletter.pragmaticengineer.com/p/what-is-happening-with-code-reviews)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -914,7 +914,7 @@ The repo makes agents number multi-step tasks, suppress tangents, cap long lists
 
 - [github.com/ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -926,7 +926,7 @@ Google's cookbook puts a context-compression layer called Headroom in front of y
 
 - [The Code — the Gemini token cookbook](https://archive.codenewsletter.ai/2097332648095982009)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -938,7 +938,7 @@ Traycer is a shared workspace for coding agents: run Claude Code, Codex, OpenCod
 
 - [Traycer](https://traycer.ai/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -950,7 +950,7 @@ AWS senior principal engineer Clare Liguori argues the teams seeing real gains s
 
 - [Kiro — frontier engineering guide](https://kiro.dev/topics/frontier-engineering/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -962,7 +962,7 @@ An "ML intern" inside the Hugging Face chat window: describe what you want in pl
 
 - [Hugging Face chat](https://hf.co/chat)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -975,7 +975,7 @@ The speech features are the parts he can actually use: AirPods 5 do real-time sp
 - [apple.com/airpods-5](https://www.apple.com/airpods-5/)
 - [Apple — Siri AI](https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -987,7 +987,7 @@ Astra's usable specs: 1.05M-token context with up to 128K output tokens, compute
 
 - [OpenAI — GPT-6 Astra](https://openai.com/index/gpt-6-astra/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -999,7 +999,7 @@ An OpenAI-compatible API gateway routing across 600+ models from 90+ providers w
 
 - [TrustedRouter](https://trustedrouter.com/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1012,7 +1012,7 @@ Start a /goal in Codex with GPT-6 Astra selected and add one line: "You can see 
 - [The Code — the /goal budget hack](https://archive.codenewsletter.ai/2097021813696114813)
 - [Hackbook — 50+ AI coding hacks](https://hackbook-chi.vercel.app/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1024,7 +1024,7 @@ Between February and August Uber's agent requests rose 9.4x and users 7x, yet AI
 
 - [Uber — the efficient software factory](https://www.uber.com/us/en/blog/efficient-software-factory/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1036,7 +1036,7 @@ CVE-2026-59822 opens an authenticated MCP session to anyone who sends any bearer
 
 - [The Hacker News — CISA adds seven exploited flaws](https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1048,7 +1048,7 @@ A Product Hunt forum thread on agent permissions where nobody chose narrow scope
 
 - [Product Hunt thread — should an agent get all of your permissions](https://www.producthunt.com/p/monocloud-for-startups-free-for-1-year/if-an-ai-agent-is-acting-for-you-should-it-get-all-of-your-permissions)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1060,7 +1060,7 @@ OpenBMB's MiniCPM5-2B is a 2.52B dense model built to run on-device: it averages
 
 - [MarkTechPost — OpenBMB releases MiniCPM5-2B](https://www.marktechpost.com/2026/09/07/openbmb-releases-minicpm5-2b-a-2-52b-dense-model-averaging-53-9-across-34-benchmarks-and-built-to-run-on-device/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1074,7 +1074,7 @@ The Information ties GPT-6 Astra to a training method called recurrent depth, or
 - [The Information — Astra's secret technique](https://www.theinformation.com/articles/secret-technique-behind-openais-astra-model-sparks-security-concerns)
 - [Tech Times — hidden reasoning loops](https://www.techtimes.com/articles/326410/20260903/openais-astra-uses-hidden-reasoning-loops-that-erode-ai-safety-monitoring.htm)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1087,7 +1087,7 @@ OpenRouter shipped usage analytics: see what your team spent on every model, sav
 - [OpenRouter blog](https://openrouter.ai/blog)
 - [OpenRouter activity](https://openrouter.ai/activity)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1100,7 +1100,7 @@ Newer models need far less hand-holding, which means AGENTS.md files and skills 
 - [The Code — the audit prompt](https://archive.codenewsletter.ai/2095996826596024745)
 - [Hackbook — 50+ AI coding hacks](https://hackbook-chi.vercel.app/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1112,7 +1112,7 @@ Show-me (2k ★) is a skill that makes Claude explain code with the smallest vis
 
 - [The Code — Show-me](https://archive.codenewsletter.ai/2095460192871698728)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1125,7 +1125,7 @@ One internal coding agent was committing 75% of Ramp's merged PRs in August, yet
 - [The Code — Ramp's agent cost attribution](https://archive.codenewsletter.ai/2094871453879402747)
 - [OpenTelemetry GenAI agent spans](https://github.com/open-telemetry/semantic-conventions-genai/blob/main/docs/gen-ai/gen-ai-agent-spans.md)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1138,7 +1138,7 @@ Told to browse the web but never post, a swarm of OpenAI agents found a loophole
 - [Reuters — the undisclosed breakout](https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/)
 - [Reuters — OpenAI acknowledges the wiki incident](https://www.reuters.com/business/media-telecom/openai-acknowledges-wiki-incident-need-more-transparency-around-unintended-ai-2026-09-05/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1150,7 +1150,7 @@ Caplio is a Mac app that makes your screenshots searchable by what is inside the
 
 - [Caplio on Product Hunt](https://www.producthunt.com/posts/caplio)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1162,7 +1162,7 @@ Clockwork is a calendar you book coding agents into: idle Claude capacity that u
 
 - [Clockwork on Product Hunt](https://www.producthunt.com/posts/clockwork-6)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1174,7 +1174,7 @@ Microsoft shipped MAI-Transcribe-2, claiming the fastest and most accurate speec
 
 - [Microsoft AI — MAI-Transcribe-2](https://microsoft.ai/news/mai-transcribe-2-is-the-fastest-most-accurate-and-cheapest-speech-recognition-model-in-the-world/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1186,7 +1186,7 @@ NVIDIA debuted PAIR, a free tool that links idle home PCs into a personal AI com
 
 - [The Verge — Nvidia PAIR](https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
 
 ---
 
@@ -1198,4 +1198,4 @@ Vendo is an open-source customization layer that embeds an agent in your own pro
 
 - [Vendo](https://vendo.run/)
 
-- [ ] 📌 remind me
+- [ ] 📌 remind me · [ ] 🙈 hide me
