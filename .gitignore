@@ -1,7 +1,6 @@
 .DS_Store
 
-# working sources — never published (the published copy is factoid-web.md)
-factoid.md
+# working sources — never published (the log is published as-is)
 newsletters/
 .backups/
 *.tmp
