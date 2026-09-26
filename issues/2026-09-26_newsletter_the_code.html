@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🤖 A developer&#x27;s guide to start using Jev — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🤖 A developer&#x27;s guide to start using Jev — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🤖 A developer&#x27;s guide to start using Jev</h1>
+<p class="meta">2026-09-26 · received 2026-09-26 22:07 +0900
+ · <a href="https://codenewsletter.ai/p/the-ultimate-guide-to-building-with-jev" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><p><a id="a-developers-guide-to-start-using-jev"></a></p>
+<h1>🤖 A developer's guide to start using Jev</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/012fde48-8bb7-43a6-ab80-728863ad4b19/Add_a_heading__4_.jpg?t=1789481261" /></p>
+<hr />
+<p><strong>Welcome back.</strong> A new model called Jev is taking over developer feeds this week, and the hype is completely justified. It’s built for the critical decisions our software makes all day. Which LLM should handle a specific task? Is this PR safe to auto-merge, or does it need human review? Jev answers questions like these in milliseconds.</p>
+<p>Top engineers across Silicon Valley are already putting it to work, and understanding how to leverage it right now gives you an incredible edge.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Learn how to set up Jev inside Claude Code</p>
+</li>
+<li>
+<p>Workflow #1: Compact Claude Code sessions without losing context</p>
+</li>
+<li>
+<p>Workflow #2: How to make browser agents fast enough to actually use</p>
+</li>
+<li>
+<p>5 fun weekend projects to make with Jev</p>
+</li>
+</ul>
+<hr />
+<h5><strong>DEEP DIVE</strong></h5>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c1b4beed-97dd-4a0f-ae10-8791be236615/CleanShot_2026-09-25_at_3.58.34_PM_2x.jpg?t=1790332174" /></p>
+<hr />
+<p><strong>What it is:</strong> Jev is the first AI model released by TypeSafe, the lab that Diogo Almeida started after co‑inventing ChatGPT. This model cannot write text or code like usual LLMs but it can do something way more important for engineering teams.</p>
+<p>When you ask it a question such as “Is this PR too big to review?” it returns a probability of yes. The model basically makes boring, repetitive software decisions up to 200 times faster and 400 times <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">cheaper</a> than a frontier LLM.</p>
+<p><strong>How it works:</strong> You give Jev items, such as a diff or a support ticket, and you ask one question with a fixed set of answers: yes or no, one of several options, or a score on a scale. Jev returns a probability for each answer. Jev never writes a sentence, so it answers in under half a second, allowing you to ask ten questions in a single call.</p>
+<p><strong>Let's set it up:</strong> You can call Jev from Typesafe’s Playground, via a raw HTTPS request, the Python SDK, the JavaScript SDK, or a skill that teaches your coding agent how to use it. We will go ahead with the skill:</p>
+<ul>
+<li><strong>Step 1:</strong> Create a key at <a href="https://console.typesafe.ai/keys">console.typesafe.ai</a>. There’s no waitlist. So, export the key in your shell, and the skill will read it from there:</li>
+</ul>
+<pre><code>export TYPESAFE_API_KEY=&quot;paste-your-key-here&quot;
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Install TypeSafe's <a href="https://docs.typesafe.ai/introduction/quickstart#vibe-it-the-agent-skill">skill</a> and start Claude Code:</li>
+</ul>
+<pre><code>claude plugin marketplace add typesafe-ai/skills
+claude plugin install typesafe@typesafe-ai
+</code></pre>
+<p>If you use Codex or another agent, run “npx skills add typesafe-ai/skills --skill typesafe-ai” instead.</p>
+<ul>
+<li><strong>Step 3:</strong> Paste this as your first prompt to check that everything is connected:</li>
+</ul>
+<pre><code>Let's build a simple CLI that uses the TypeSafe API to evaluate a set of supplied documents on multiple dimensions. Use the TypeSafe skill to understand how to use the TypeSafe API and how to structure the system. Ask me questions about what kinds of documents I want to evaluate and on what dimensions.
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 4:</strong> Claude Code will ask what kinds of documents you want to evaluate and what to judge them on. Pick something your team already reviews by hand, like PRs, incident reports, or support tickets, and answer the questions.</p>
+</li>
+<li>
+<p>It then builds a CLI that runs each document through Jev and scores it on every dimension you chose.</p>
+</li>
+</ul>
+<p>Now that your Claude Code can talk to Jev, let’s dive into two ways your engineering team can put it to work this week:</p>
+<hr />
+<h3><strong>Your opinion matters!</strong></h3>
+<p>This is our second <strong>Saturday Special</strong>. It’s a quick 5 min email designed to show how to use the latest and relevant AI tools to code faster. Let us know what you think of this email in the poll at the bottom of this email (or by replying to this email).</p>
+<p>We’re writing this email just for you, so your feedback will shape what we write next!</p>
+<hr />
+<h5><strong>WORKFLOW #1: CONTEXT COMPACTION</strong></h5>
+<p><a id="how-to-compact-claude-code-sessions-without-losing-context"></a></p>
+<h2><strong>How to compact Claude Code sessions without losing context</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2100694549362553153"><img alt="Source: X/tamarajtran" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/57bb3e38-68d9-4788-a886-b683be591fe6/Thumbnail__2_.jpg?t=1790161870" /></a>
+<em>Source: X/tamarajtran</em></p>
+<hr />
+<p><strong>The problem:</strong> For productive developers, managing context across coding sessions is the most frustrating part of the job. You spend four hours getting Claude Code to understand your codebase.</p>
+<p>Then the context window fills up, you run “/compact” command, and the model forgets the one rule you told it to follow. You end up re-explaining the context and spend the next hour clawing your way back to where you started.</p>
+<p><strong>The solution:</strong> Tamara Tran, a former Apple engineer, open‑sourced a <a href="https://github.com/tamaratran/fast-jev-compaction">GitHub repo</a> that asks Jev which tool calls and results still matter. Jev scores each call in a single request. The system drops the stale calls and leaves everything else unchanged, so it rewrites nothing and loses nothing.</p>
+<p>One dev ran the tool on a session of nearly <a href="https://archive.codenewsletter.ai/2100739055923425589">1M tokens</a> and reduced the token count to 86K in about a second.</p>
+<p><strong>Here’s how you can implement it:</strong></p>
+<ul>
+<li><strong>Step 1:</strong> Make sure you're on Claude Code 2.1.274 or later, and export your TypeSafe key in your shell:</li>
+</ul>
+<pre><code>export TYPESAFE_API_KEY=&quot;paste-your-key-here&quot;
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 2:</strong> You then need to install the repo in Claude Code as a plugin.</p>
+</li>
+<li>
+<p>You will also need to enable “function hooks” in your Claude Code. You can do it by adding this command to “~/.claude/settings.json”:</p>
+</li>
+</ul>
+<pre><code>{ &quot;env&quot;: { &quot;CLAUDE_CODE_ENABLE_FUNCTION_HOOKS&quot;: &quot;1&quot; } }
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Install the <a href="https://github.com/tamaratran/fast-jev-compaction">fast-jev-compaction</a> plugin. When it asks for options, press Enter through all of them so it reads your key from the environment.</li>
+</ul>
+<pre><code>claude plugin marketplace add \
+tamaratran/fast-jev-compaction
+claude plugin install \
+fast-jev-compaction@fast-jev-compaction
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 4:</strong> Restart Claude Code or run /reload-plugins.</p>
+</li>
+<li>
+<p><strong>Step 5:</strong> Open a long session you want to compact, and run /compact.</p>
+</li>
+<li>
+<p><strong>Step 6:</strong> A message appears that says “kept N/M messages, no summary,” indicating that Jev pruned the history instead of summarizing it.</p>
+</li>
+<li>
+<p>If the message says “fallback to built-in summary,” the session was too short for Jev to find anything worth dropping, so run the command again in a longer session.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>WORKFLOW #2: BROWSER AGENTS</strong></h5>
+<p><a id="how-to-make-browser-agents-fast-enough-to-actually-use"></a></p>
+<h2><strong>How to make browser agents fast enough to actually use</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2100411066966749359"><img alt="Source: X/gregpr07" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ac2aea3e-9540-4e11-b58f-bd8eaa0be3f8/Thumbnail__6_.jpg?t=1790335198" /></a>
+<em>Source: X/gregpr07</em></p>
+<hr />
+<p><strong>The problem:</strong> Browser agents are too slow to be worth it. At each step, the agent captures a screenshot of the page, sends it to an LLM, waits for the LLM to reason, and then clicks once. A task that takes you 20 seconds takes the agent two minutes, and you pay for every screenshot. So, you end up doing the work yourself.</p>
+<p><strong>The solution:</strong> This developer built a <a href="https://archive.codenewsletter.ai/2100411066966749359">browser agent</a> that delegates clicking to Jev. On every step, the page turns into a numbered list of clickable items, and Jev selects the action and element in a single request. A small LLM activates only when typing is required. It does not capture any screenshots.</p>
+<p>In a test, it found a Zürich-to-London flight on Google Flights in 7.1 seconds for $0.0039, with the video running at 1x speed.</p>
+<p><strong>Here's how you can implement it:</strong></p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> You need three things: Chrome, a Python tool called <a href="https://docs.astral.sh/uv/">uv</a> that installs and runs the project, and an <a href="https://openrouter.ai/">OpenRouter</a> account.</p>
+</li>
+<li>
+<p>OpenRouter provides the small model that the agent uses to type text when Jev decides typing is needed. Download the project and install it.</p>
+</li>
+</ul>
+<pre><code>git clone https://github.com/browser-use/jev-ultrafast.git
+cd jev-ultrafast
+uv sync
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 2:</strong> The project reads its keys from .env file. The repo includes a template for it named .env.example.</p>
+</li>
+<li>
+<p>Copy the template, then open the new .env file and fill in two lines: your TypeSafe key as TYPESAFE_API_KEY and your OpenRouter key as TEXT_MODEL_API_KEY. The project is set up so this file never gets committed to git.</p>
+</li>
+</ul>
+<pre><code>cp .env.example .env
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 3:</strong> Use “uv” to start the agent. This also starts a local control panel, so open “http://127.0.0.1:8766” in a browser tab. Chrome will ask to allow remote debugging. Say yes.</p>
+</li>
+<li>
+<p>The agent uses your real Chrome profile, including your logged-in sessions, so only point it at tasks you'd trust it with.</p>
+</li>
+</ul>
+<pre><code>uv run jev
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 4:</strong> On the control panel, click<strong> Start demo</strong>, then<strong> Choose next</strong>. Each click shows you the numbered elements on the page, the probability for each action, and the one Jev picked.</p>
+</li>
+<li>
+<p>When you've seen enough, click <strong>Run automatically</strong> and watch the whole flight search finish.</p>
+</li>
+</ul>
+<p>If Chrome doesn't connect, run “uv run browser-harness --doctor” and follow what it says.</p>
+<hr />
+<h5><strong>MORE IDEAS TO TRY</strong></h5>
+<ul>
+<li>
+<p>Start with 500+ use cases other devs are already running (<a href="https://thecode-jev-use-cases.netlify.app/">link</a>).</p>
+</li>
+<li>
+<p>Run a browser agent where Jev picks every click and a small LLM only wakes up to type (<a href="https://github.com/browser-use/jev-ultrafast">link</a>).</p>
+</li>
+<li>
+<p>Drive a desktop app for under a cent by giving Jev a short menu of what's clickable on screen (<a href="https://archive.codenewsletter.ai/2100649543079502213">link</a>).</p>
+</li>
+<li>
+<p>Match a morning's headlines to a dozen brands in under half a minute, for pennies (<a href="https://archive.codenewsletter.ai/2100951347080421409">link</a>).</p>
+</li>
+<li>
+<p>Page on-call from a log stream with one yes-or-no question per line and a threshold you tune (<a href="https://dev.to/reachjalil/how-we-tuned-typesafe-jev-for-log-triage-without-alert-storms-1ei0">link</a>).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>STARTING POINT</strong></h5>
+<p><strong>How to start this weekend.</strong> We ran the first two workflows ourselves before sending this. Choose one and run it for real. You’ll know it works when “/compact” command keeps the rule you told Claude Code never to break, or when a browser agent finishes a flight search before you type the airports.</p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
