@@ -1,11 +1,52 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-09-26"
+sweep: "2026-09-05 → 2026-09-28"
 updated: "2026-09-28"
-sources: "The Code, The Frontier, Superhuman AI, The Economist, Future Tools, Product Hunt Weekly, Superhuman AI · Sunday Special, OpenRouter Team"
+sources: "Product Hunt Weekly, Superhuman AI · Sunday Special, The Code, The Frontier, Superhuman AI, The Economist, Future Tools, OpenRouter Team"
 ---
 
 # Interesting tidbits
+
+**109. Teen V1 — cheap TTS across 23 languages, built by two teenagers**
+*🗣️ Voice · TTS & STT*
+*🗞 Product Hunt Weekly · 2026-09-28 02:58 KST — ["A text-to-speech model that works across 23 languages and is very cheap"](newsletters/2026-09-28_newsletter_product_hunt_weekly.md#a-text-to-speech-model-that-works-across-23-languages-and-is-very-chea)*
+
+Teen V1 is a text-to-speech model covering 23 languages that launched this week, and the pitch in the round-up is the price — it is built by two teenage developers. As a drop-in voice layer for read-aloud, dictation or a small voice agent it is worth pricing against whatever TTS you use now; the round-up quotes no rate, so check the product page before wiring it in.
+
+- [Teen V1 on Product Hunt](https://www.producthunt.com/products/teen-v1)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**108. Sai and Solid give agents their own computers, accounts and budgets**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Product Hunt Weekly · 2026-09-28 02:58 KST — ["Sai — The autonomous computer fleet at your command"](newsletters/2026-09-28_newsletter_product_hunt_weekly.md#sai-the-autonomous-computer-fleet-at-your-command)*
+*🗞 Product Hunt Weekly · 2026-09-28 02:58 KST — ["Solid — Agents with their own computers, accounts, and budgets."](newsletters/2026-09-28_newsletter_product_hunt_weekly.md#solid-agents-with-their-own-computers-accounts-and-budgets)*
+
+Two of the week's top Product Hunt cards are the same pattern: give the agent its own machine instead of a sandbox inside yours. Sai (▲421) runs a fleet of cloud computers that read the screen and click and type like a person would — badly-designed internal portals included; Solid (▲461) hands each agent its own computer, its own accounts and a spending budget, and reaches your tools through APIs or by logging in as you would. Worth reading as a shape to copy for unattended work — and as a reminder that "logs in like a person" is exactly the credential surface to fence off before letting one near your accounts.
+
+- [Sai on Product Hunt](https://www.producthunt.com/posts/sai-5)
+- [Solid on Product Hunt](https://www.producthunt.com/posts/solid-9)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**107. Nuwa Pen digitizes handwriting on any paper, then transcribes it**
+*🛠️ Mac utilities worth a look*
+*🗞 Superhuman AI · Sunday Special · 2026-09-28 01:12 KST — ["Nuwa Pen"](newsletters/2026-09-28_newsletter_superhuman_ai_sunday_special.md#nuwa-pen)*
+
+Nuwa Pen is a smart pen with a triple-camera rig and on-board AI that digitizes whatever you write on ordinary paper in real time, then transcribes and organizes the notes in its app. The useful angle is the missing link in a paper-to-Markdown pipeline: nothing to scan, nothing to retype, and the text lands where you can pull it into your own notes. It was one of four gadgets in the Sunday Special's round-up.
+
+- [Nuwa Pen](https://nuwapen.com/en-us/products/nuwa-pen)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **106. jev-ultrafast — a screenshot-free browser agent that clicks in 7 seconds**
 *🏗️ Agent plumbing & production stacks*
