@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚀 OpenAI&#x27;s treat for all developers — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚀 OpenAI&#x27;s treat for all developers — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚀 OpenAI&#x27;s treat for all developers</h1>
+<p class="meta">2026-09-30 · received 2026-09-30 23:08 +0900
+ · <a href="https://codenewsletter.ai/p/openai-s-treat-for-all-developers" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚀 OpenAI's treat for all developers</h1>
+<p><a href="https://conscium.com/validate-ai-agent-behaviour-before-deployment-verifyax-free-trial"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f2ba2ff3-fab3-4208-aa1f-4206227f3d35/Group_Prior__2_.jpg?t=1790707710" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> OpenAI clearly wants to dominate personal AI agents after moves by SpaceXAI and Meta. In a viral interview moment, OpenAI's own CFO accidentally <a href="https://archive.codenewsletter.ai/2105101751477207377">named</a> Meta's Muse instead of their own brand-new agent, Dots. Meanwhile, Anthropic highlights the cyber risks behind open-weight models.</p>
+<p><strong>Also:</strong> A therapeutic game where you can nuke any webpage, a quick fix to stop Codex from thrashing your SSD limit, and an essential checklist for anyone shipping iOS or Android apps.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Recap of OpenAI’s DevDay</p>
+</li>
+<li>
+<p>Cursor lets you visualize your codebase</p>
+</li>
+<li>
+<p>A Google dev’s agentic coding workflow (tutorial)</p>
+</li>
+<li>
+<p>Anthropic’s guide to choosing effort levels in Claude Code (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2104984504133918973"><img alt="Click here to watch how OpenAI’s Dots work." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6fdbcb12-3b00-487c-be40-1ce89fed7ebe/Thumbnail__20_.jpg?t=1790760760" /></a>
+<em>Click here to watch how OpenAI’s Dots work.</em></p>
+<hr />
+<p><strong>OpenAI has a treat for all developers:</strong> The ChatGPT maker just wrapped its biggest event yet, offering 20 major announcements for developers. The main highlights of the events were <a href="https://archive.codenewsletter.ai/2104984504133918973">always-on agent Dots</a> that takes on GrokBot and Muse along with the Decisions API that is meant to work like the new Jev model. There’s a lot to catch up on, and we broke down the biggest launches in the <em>Insight</em> section below.</p>
+<p><a id="anthropic-highlights-how-open-weight-models-could-be-a-cyber-threat"></a>
+<strong>Anthropic highlights how open-weight models could be a cyber threat:</strong> The AI lab <a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities">tested</a> Chinese GLM-5.3 and found that it can build working cyber-attacks almost as well as Claude Mythos Preview. Keep in mind, Mythos is the frontier model that Anthropic locked down over safety risks as compared to the open-source Chinese model that anyone can use right now. In testing, it dug up zero-day browser bugs and pulled local files straight off a target machine. If you ship code, it’s time to check your defenses, as attackers could already have this in their toolkit. <a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities">See the findings</a>.</p>
+<p><a id="elevenlabs-cuts-speech-latency-to-150ms"></a>
+<strong>ElevenLabs cuts speech latency to 150ms:</strong> The voice AI lab shipped <a href="https://archive.codenewsletter.ai/2104572127617994917">Eleven v4</a> and <a href="https://elevenlabs.io/v4">v4 Turbo</a>, its fastest speech models yet. Turbo hits a median 150 ms time-to-first-speech, making the awkward pause virtually vanish for callers. It starts streaming audio back before your LLM even finishes generating the sentence, built for real-time agent loops. You get support for 90+ languages alongside Professional Voice Clones, accessible via REST, WebSockets, or the Python and TypeScript SDKs. Find more details on the API <a href="https://elevenlabs.io/docs/api-reference/introduction">here</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY CONSCIUM</strong></h5>
+<h2><a href="https://conscium.com/validate-ai-agent-behaviour-before-deployment-verifyax-free-trial">3 Steps to Reduce the Time It Takes to Build and Ship Your Agent.</a></h2>
+<p><a href="https://conscium.com/validate-ai-agent-behaviour-before-deployment-verifyax-free-trial"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8ea77f08-63b8-4190-8c30-6ee9dc2e2c3d/The_Code__Primary_Ad_Option_2__1_.jpg?t=1790708622" /></a></p>
+<hr />
+<p>What happens when your <a href="https://conscium.com/validate-ai-agent-behaviour-before-deployment-verifyax-free-trial">AI agent goes off script</a>?</p>
+<p>Your AI agent passes its tests. Then a real user does something you didn't expect.</p>
+<p><a href="https://conscium.com/validate-ai-agent-behaviour-before-deployment-verifyax-free-trial">Three steps with VerifyAX fix that:</a></p>
+<ol>
+<li>
+<p>Simulate real users, edge cases and messy inputs.</p>
+</li>
+<li>
+<p>See exactly where your agent breaks.</p>
+</li>
+<li>
+<p>Get recommended fixes in minutes.</p>
+</li>
+</ol>
+<p>Connect your agent and see how it holds up under pressure.</p>
+<p><a href="https://conscium.com/validate-ai-agent-behaviour-before-deployment-verifyax-free-trial"><strong>Test your first agent with VerifyAX</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="everything-openai-announced-at-devday-2026"></a></p>
+<h2><strong>Everything OpenAI announced at DevDay 2026</strong></h2>
+<p><a href="https://openai.com/live/"><img alt="Click here to watch OpenAI’s DevDay announcements." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/adaad397-a8aa-4198-af37-a11fb6073c72/Thumbnail__18_.jpg?t=1790754504" /></a>
+<em>Click here to watch OpenAI’s DevDay announcements.</em></p>
+<hr />
+<p>OpenAI dropped a massive stack of updates at DevDay, and we spent the hours after tearing through the livestream, tracking dev reactions on X, and reading/rereading the docs. Here are the big releases actually worth your build time:</p>
+<p><a id="gpt-61-sol"></a>
+* <a href="https://openai.com/index/introducing-gpt-6-1-sol/">GPT-6.1 Sol</a>: Easily the biggest announcement of the event. OpenAI is delivering near-Astra intelligence at one-fifth the standard token price ($2 in / $10 out per million), with cached input at just $0.10 per million which is half of GPT-6 Sol's cached rate.</p>
+<ul>
+<li>
+<p><a href="https://archive.codenewsletter.ai/2104997619152130278">Codex Cloud</a>: Your agent can finally keep coding around the clock in the background. Reusable cloud environments keep your repositories, dependencies, and settings ready to go. When you need to check progress or change direction, you can manage the entire workflow right from your phone.</p>
+</li>
+<li>
+<p><a href="https://openai.com/index/introducing-dots/">Dots</a>, <a href="https://chatgpt.com/features/space/">Space</a>: Quite possibly the one we’re most excited to try. Dots are always-on AI agents that take on ongoing responsibilities, while Space keeps team knowledge shared. Hopefully, that means fewer rounds of “let me explain this again.”</p>
+</li>
+<li>
+<p><a href="https://learn.chatgpt.com/docs/codex/cli">Codex CLI</a>, <a href="https://learn.chatgpt.com/docs/code-review?surface=app">Code Review</a>, <a href="https://learn.chatgpt.com/docs/security/setup">Security Cloud</a>: Managing your agents gets a lot easier with new voice controls and a dedicated /agents dashboard. Plus, cloud reviews and security scans can now track down bugs and spin up fixes while you step away.</p>
+</li>
+<li>
+<p><a href="https://developers.openai.com/api/docs/guides/ultrafast-mode">Ultrafast</a>: OpenAI’s new $500/month <a href="https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers">Pro 500 plan</a> includes Ultrafast which lets Codex and Work generate up to 300 tokens per second, or 8x faster. So you spend way less time watching your agent type.</p>
+</li>
+<li>
+<p><a href="https://archive.codenewsletter.ai/2105003318917697873">Decisions API</a>: Well, Jev is already facing serious competition. OpenAI's Luna-powered API selects from options you define, leaning on text or image context to help you make calls fast. Think request routing or deciding your agent's next move. It is in limited preview right now.</p>
+</li>
+<li>
+<p><a href="https://openai.com/index/introducing-the-agents-api/">Agents API</a>, <a href="https://aws.amazon.com/bedrock/managed-agents-openai/">Bedrock Managed Agents</a>: If you’re building an agent that needs to use other software, you can now add computer use, with orchestration and context handling managed for you. There’s an AWS option, too.</p>
+</li>
+<li>
+<p><a href="https://help.openai.com/en/articles/20001498-how-banked-codex-resets-work">Banked reset</a>: Think of it as a one-time reset for your Codex limits that you can stash away until you really need it. Simon Willison noted that OpenAI rolled this out globally during DevDay, so check your dashboard to see if you qualify and when it expires.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2104845001821954181"><img alt="Click here to watch the meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0655d17b-fa9b-4cbc-8108-5ab3a5bca555/Thumbnail__21_.jpg?t=1790761792" /></a>
+<em>Click here to watch the meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Break it Down:</strong> See how a query runs through SQLite's codebase in this <a href="https://archive.codenewsletter.ai/2104391577091407965">7-minute explainer</a> built entirely with Opus 5.5. Every open-source repo needs one (1.2K bookmarks).</p>
+</li>
+<li>
+<p><strong>URL Wrecker:</strong> A viral game lets you point a stickman at any website and <a href="https://archive.codenewsletter.ai/2104579137575018827">destroy it</a> with flamethrowers, grenades, and pure chaos. Devs are loving it (5M views).</p>
+</li>
+<li>
+<p><strong>Silent Killer:</strong> Did you know Codex is constantly writing diagnostic logs and eating up your disk space? Run this <a href="https://archive.codenewsletter.ai/2069020259097735231">single command</a> to kill it (1.1M views).</p>
+</li>
+<li>
+<p><strong>Bot Squad:</strong> SpaceXAI’s lead designer and engineer behind Grok Bot revealed <a href="https://www.youtube.com/watch?v=xZ5TEaleUdg">the 14 bots</a> running their work and life. One books trips, another ships code before review.</p>
+</li>
+<li>
+<p><strong>Cursor Charts:</strong> Cursor now builds charts and diagrams right inside the chat. <a href="https://archive.codenewsletter.ai/2105012114200887434">One new command</a> does the whole thing, and it's already live (2.8K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=tSF6eZW8ZMU&amp;t=1s"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8a6aedd0-8fae-4c25-b6cf-24ffeb5d2242/Thumbnail__19_.jpg?t=1790760720" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=tSF6eZW8ZMU&amp;t=1s"><strong>The ideal agentic coding workflow (by a Google engineer):</strong> </a> This tutorial walks through the full setup, from giving agents the right memory and context to planning before they code, running multiple agents in parallel with Git worktrees, and reviewing AI-generated code based on risk. You’ll learn how to turn one-off prompts into repeatable loops that can research, build, test, fix, and review with less babysitting.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a id="give-your-ai-agent-control-of-a-real-iphone-from-your-mac"></a>
+<a href="https://www.tapkit.ai/"><strong>TapKit:</strong> </a> Give your AI agent control of a real iPhone from your Mac. It can see the screen, tap, swipe, type, open apps, handle 2FA, use iCloud, and even make purchases through apps, turning the phone into another computer your agent can operate.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://archive.codenewsletter.ai/2103576349499855160"><strong>Choosing the right effort level in Claude Code (by Anthropic):</strong> </a> This guide shows when spending more compute actually helps. Use low for quick sketches and easy edits, medium for everyday engineering, high when testing and edge cases matter, and max for hard autonomous work.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-speed-up-claude-code-with-six-lines-in-claudemd"></a></p>
+<h2><strong>How to speed up Claude Code with six lines in CLAUDE.md</strong></h2>
+<p>Claude Code pads sessions with features, tests, and refactors nobody asked for, then reports done without checking its work. A dev shared six CLAUDE.md lines that pair Sonnet 5.5 with Jev, TypeSafe's decision model, and posted a side-by-side timer showing a 4x speedup.</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Install the Jev integration. It requires a TypeSafe API key and Node 20+</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> Paste the <a href="https://archive.codenewsletter.ai/2104688418659987802">full prompt</a> into your project's CLAUDE.md.</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Restart Claude Code.</p>
+</li>
+</ul>
+<p>Jev now picks each session's model and effort, and Claude stops before adding work you didn't request. Rules 5 and 6 improve sessions even without Jev connected.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>An ex-Meta engineer shared <a href="https://www.youtube.com/watch?v=6gOvvOXaARA">her method</a> for becoming an AI engineer in 2026, no degree required, covering skills, projects, and proof.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
