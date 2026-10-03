@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🔥 How to get the most out of Opus 5.5 — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🔥 How to get the most out of Opus 5.5 — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🔥 How to get the most out of Opus 5.5</h1>
+<p class="meta">2026-10-03 · received 2026-10-03 22:09 +0900
+ · <a href="https://codenewsletter.ai/p/how-to-get-the-most-out-of-claude-opus-5-5" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🔥 How to get the most out of Opus 5.5</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/012fde48-8bb7-43a6-ab80-728863ad4b19/Add_a_heading__4_.jpg?t=1789481261" /></p>
+<hr />
+<p><strong>Welcome back.</strong> Almost every developer felt frustrated with Anthropic's Opus 5 at some point, but Anthropic returned with something much better.</p>
+<p>Last week, Anthropic dropped Opus 5.5, and it quickly replaced Fable 5.1 as the daily driver for many engineers. Throughout the week, developers shared what the model accomplishes during autonomous runs, including bug hunts, video renders, and four-hour builds.</p>
+<p>In today's issue, we cover three Opus 5.5 workflows for engineering teams that you can use at work right away. These workflows completely blew our minds.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>What makes Claude Opus 5.5 so good</p>
+</li>
+<li>
+<p>Workflow #1: How to make a motion graphics video</p>
+</li>
+<li>
+<p>Workflow #2: How to track progress of your agents</p>
+</li>
+<li>
+<p>Workflow #3: How to find the bugs that bypass code review</p>
+</li>
+</ul>
+<hr />
+<h5><strong>DEEP DIVE</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2102435511222890900"><img alt="Click here to see Claude Opus 5.5 in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cd3a8d7b-ab9f-4883-82bd-3c9f902420e3/Thumbnail__7_.jpg?t=1790684823" /></a>
+<em>Click here to see Claude Opus 5.5 in action.</em></p>
+<hr />
+<p><strong>What’s different?</strong> If you use Claude Code, you already have Opus 5.5. The question is whether it's worth switching to, and the popular opinion says yes.</p>
+<p>Token costs were the biggest issue with Opus 5. Every extra paragraph it generated ate into your budget. Opus 5.5 changes that completely: on Terminal Bench 4, it scores <a href="https://www.anthropic.com/claude-opus-5-5#:~:text=Agentic%20coding%3A%20CursorBench-,Terminal%2DBench%204.0,-Accuracy%20vs%20Cost">higher</a> at medium effort than Fable 5.1 does at max effort, and a run costs $2.94 instead of $20. That makes it well worth checking out.</p>
+<p>Let’s dive into 3 workflows you should absolutely try out:</p>
+<hr />
+<h3><strong>Your opinion matters!</strong></h3>
+<p>This is our third <strong>Saturday Special</strong>. It’s a quick 5 min email designed to show how to use the latest and most relevant AI tools to code faster. Let us know what you think of this email in the poll at the bottom of this email (or by replying to this email).</p>
+<p>We’re writing this email just for you, so your feedback will shape what we write next!</p>
+<hr />
+<h5><strong>WORKFLOW #1: VIDEO FROM CODE</strong></h5>
+<p><a id="how-to-make-a-motion-graphics-video-using-opus-55"></a></p>
+<h2><strong>How to make a motion graphics video using Opus 5.5</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2103495232637882858"><img alt="Click here to watch what Opus 5.5 is capable of." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d5bfb055-8608-4055-865d-937c7899bbed/Thumbnail__9_.jpg?t=1790741905" /></a>
+<em>Click here to watch what Opus 5.5 is capable of.</em></p>
+<hr />
+<p>Opus 5.5 is not a dedicated video model, but it can write code that renders high-quality motion graphics. Throughout the week, developers used it to produce launch videos, product reels, and demo clips, cutting out the need for an expensive agency or motion designer.</p>
+<p>The catch is that a one-line prompt only gives you a generic clip. What makes the great ones stand out is the setup around the model.</p>
+<p>After breaking down the 9 viral videos from launch week, one dev published a full <a href="https://archive.codenewsletter.ai/2104216919033192746">breakdown</a> of the entire workflow.</p>
+<p><strong>Here's how you can implement it:</strong></p>
+<ul>
+<li><strong>Step 1:</strong> Install ffmpeg, the tool used to combine screenshots into a video.</li>
+</ul>
+<pre><code>brew install ffmpeg
+</code></pre>
+<ul>
+<li>Next, open Claude Code with Opus 5.5 on extra-high effort in an empty folder and create a "CLAUDE.md" file with this prompt:</li>
+</ul>
+<pre><code>Every animation is a single window.seek(t) function
+that paints the exact frame for time t. No timers,
+no setInterval. Render with Playwright, one
+screenshot per frame at 60 fps, and stitch with
+ffmpeg to final.mp4. Install Playwright if missing.
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 2:</strong> Give it a reference to work from. Take a screenshot of a frame from a video you like and save it as "refs/frame.png". Drop your product screenshots and logo into an "assets/" folder.</p>
+</li>
+<li>
+<p>Then specify what Claude should borrow from the reference and what it should ignore. For example:</p>
+</li>
+</ul>
+<pre><code>Use refs/frame.png as the visual reference. Take
+the palette, type, and pacing. Don't copy the
+subject. Product screenshots and logo are in
+assets/.
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Describe the video as a series of moments rather than with adjectives. The most popular prompts from launch week were state-by-state breakdowns detailing what appears on screen each second and what changes between them. Add this as a follow-up prompt:</li>
+</ul>
+<pre><code>Make a 15-second launch video for [product].
+0s logo, 2s tagline, 4s the main screen, 8s one
+feature in action, 12s pricing or CTA, 15s logo
+again so it loops. One element morphs between
+states, never a hard cut.
+</code></pre>
+<ul>
+<li><strong>Step 4:</strong> Render it, then have it review its own frames. A "final.mp4" file will show up in the folder after every run.</li>
+</ul>
+<pre><code>Render final.mp4. Then look at one still per
+second, name the three worst problems, fix them,
+and re-render. Repeat until the first three
+seconds look finished.
+</code></pre>
+<ul>
+<li><strong>Step 5:</strong> You can go one step ahead with this prompt:</li>
+</ul>
+<pre><code>Replace every easing curve with a closed-form
+spring, tiny overshoot on UI, none on type.
+Synthesize a 120 BPM track and put every scene
+change on a downbeat. Export 16:9 and 9:16 from
+the same seek(t).
+</code></pre>
+<hr />
+<h5><strong>WORKFLOW #2: LONG-RUN VISIBILITY</strong></h5>
+<p><a id="how-to-track-the-progress-of-your-agents"></a></p>
+<h2><strong>How to track the progress of your agents</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2103946635831050740"><img alt="Source: X.com/Voxyzai" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/300eea84-8cb1-43d1-b46d-144023b33c69/HTK4N0SWAAAa8mx.jpg?t=1790741892" /></a>
+<em>Source: X.com/Voxyz_ai</em></p>
+<hr />
+<p>Keeping track of long-run coding sessions is tough. You quickly lose sight of progress, blockers, and pending decisions unless you constantly interrupt the session.</p>
+<p>A live dashboard solves this by showing task status, blockers, items waiting on your input, and what the agent will do by default if you don't respond. That way, the agent keeps building and you only step in when necessary.</p>
+<p>One dev set this up as a subagent that <strong><a href="https://archive.codenewsletter.ai/2103946635831050740">generates</a></strong> an HTML dashboard before starting a long run and updates after every step.</p>
+<p><strong>Here's how you can implement it:</strong></p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Open Claude Code on Opus 5.5 in the project you want to run. You're going to create a subagent called “dashboard-builder”, which lives in “~/.claude/agents” in your home folder, so it works in every project after this.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> To create it, copy the setup prompt from <a href="https://archive.codenewsletter.ai/2103946635831050740">the post</a> and paste it into Claude Code. The model will show you the files it's about to create before writing anything. Read them and type "yes."</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Start any task that takes more than five steps. Within about two minutes, a “.dashboard/index.html” file will appear in your project. Open it up to see your task list with status labels that refresh every 10 seconds.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>WORKFLOW #3: DEBUGGING</strong></h5>
+<p><a id="how-to-find-the-bugs-that-bypass-code-review"></a></p>
+<h2><strong>How to find the bugs that bypass code review</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2102543349102338309"><img alt="Source: X.com/bcherny" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ca9363a8-caf5-40ac-8588-5ab810eac0f3/Thumbnail__10_.jpg?t=1790708180" /></a>
+<em>Source: X.com/bcherny</em></p>
+<hr />
+<p>Your code can pass every single test and still break the moment two things happen at once. Unit tests run sequentially, so they never catch it. Code reviewers read through line by line, so they miss it too. And just like that, the bug slips straight into production.</p>
+<p>The creator of Claude Code, Boris Cherny, shared a fix to <a href="https://archive.codenewsletter.ai/2102543349102338309">solve this</a> with just a few short prompts. With the fix, he was able to generate 16 PRs fixing 24 bugs.</p>
+<p><strong>Here's how you can implement it:</strong></p>
+<ul>
+<li><strong>Step 1:</strong> Install Lean 4 using elan, its version manager, by running the two commands from the official <a href="https://lean-lang.org/install/manual">setup guide</a>. Select option 1 when prompted by the installer. Opus handles the rest of the Lean work from there.</li>
+</ul>
+<pre><code>curl https://elan.lean-lang.org/elan-init.sh -sSf | sh
+source $HOME/.elan/env
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Open Claude Code with Opus 5.5 in your repo and specify the part you want checked. Cherny’s prompt was just a single line, and the model generated the entire plan on its own. The prompt:</li>
+</ul>
+<pre><code>Use Lean to verify the [retry loop / session / · queue] state machine in [path/to/module].
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Once it reports back, ask for the counter-examples and have it prove each one is real before fixing anything. A counter-example is a sequence of events the model found that breaks a rule, but it is only a real bug once it reproduces in your code.</li>
+</ul>
+<pre><code>For every counter-example you found, write a test
+that reproduces it in the real code. Skip any that
+don't reproduce. Fix the ones that do, one PR per
+fix, and reference the Lean theorem in each PR.
+</code></pre>
+<hr />
+<h5><strong>FUN WEEKEND PROJECTS TO TRY</strong></h5>
+<ul>
+<li>
+<p>Audit your old prompts for lines that now slow Opus 5.5 down (<a href="https://archive.codenewsletter.ai/2102799218154881486">link</a>).</p>
+</li>
+<li>
+<p>Turn your GitHub issues into a virtual office where each agent has a desk (<a href="https://archive.codenewsletter.ai/2103653857377292720">link</a>).</p>
+</li>
+<li>
+<p>Give Opus a whole system to build instead of one file (<a href="https://archive.codenewsletter.ai/2104301990985498783"><strong>link</strong></a>).</p>
+</li>
+<li>
+<p>Design UI before the feature ships with parallel subagents (<a href="https://archive.codenewsletter.ai/2103977414711767244">link</a>).</p>
+</li>
+<li>
+<p>Run a team of agents on a hard algorithm problem (<a href="https://archive.codenewsletter.ai/2102470503328010349">link</a>).</p>
+</li>
+</ul>
+<p><strong>P.S.</strong> Anthropic’s official guide to getting the most out of Opus 5.5 (<a href="https://claude.dev/blog/getting-the-most-out-of-opus-5-5/">link</a>).</p>
+<hr />
+<h5><strong>STARTING POINT</strong></h5>
+<p><strong>How to start this weekend.</strong> Start with Workflow #2. Within ten minutes, you’ll have a working dashboard that maps out your tasks and key questions. After that, pick your next move: Workflow #1 gives you a ready-to-post video, while Workflow #3 catches real bugs by running formal verification. They’re all great weekend experiments.</p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
