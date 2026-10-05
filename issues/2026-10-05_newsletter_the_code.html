@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 OpenAI researcher quits (dramatically) — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 OpenAI researcher quits (dramatically) — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 OpenAI researcher quits (dramatically)</h1>
+<p class="meta">2026-10-05 · received 2026-10-05 23:05 +0900
+ · <a href="https://codenewsletter.ai/p/devs-turn-to-rust-as-agents-code-more" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 OpenAI researcher quits (dramatically)</h1>
+<p><a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7a90da14-406c-49e7-9d20-e93ae406bc0f/Group_Prior.jpg?t=1791145883" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Over the weekend, developers finally caught up on the viral talk from the creator of Ruby on Rails, sparking internet-wide debates over everyone's favorite coding language.</p>
+<p>And it looks like we have a clear winner. Meanwhile, an OpenAI researcher just stepped down, citing serious concerns over broken workplace culture.</p>
+<p><strong>Also:</strong> Fun projects to try out, a senior engineer shares her agentic coding workflow, and how to customize Claude Code using mods.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Anthropic engineer’s token spending advice</p>
+</li>
+<li>
+<p>A breakdown of how Shazam actually works</p>
+</li>
+<li>
+<p>Build your own open-source Dots (tutorial)</p>
+</li>
+<li>
+<p>A CTO’s guide to adopting coding agents (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=vDjW_dRyKXY&amp;t=1694s"><img alt="Click here to watch DHH explain why writing in Rust is making a comeback." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/df72533e-4436-487e-8a58-637e1ebe909a/Thumbnail__28_.jpg?t=1791192205" /></a>
+<em>Click here to watch DHH explain why writing in Rust is making a comeback.</em></p>
+<hr />
+<p><strong>Top developers talk about their favorite coding language:</strong> Devs have long loved Rust's speed and safety, but writing it by hand was a tough sell. At Rails World, Ruby on Rails creator DHH admitted he used to hate Rust but <a href="https://archive.codenewsletter.ai/2106860668158701657">says</a> agents changed his mind. His company, 37signals, is using them to rewrite the HEY email backend in Rust, cutting CPU use 99% in early tests. Devs online backed him, including CEOs of <a href="https://archive.codenewsletter.ai/2106863842450133114">Vercel</a> and <a href="https://archive.codenewsletter.ai/2106870367566602644">Rocicorp</a>. Looks like we can now choose the best language instead of the convenient option.</p>
+<p><strong>OpenAI safety researcher quits, calls its culture broken:</strong> David Robinson, who oversaw safety reports for 12 frontier launches, has left OpenAI. In an <a href="https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=1ga2TvL-DbuHDQIcYF7oR4o908Fsjxr4NFLlsptkfP8">essay</a>, he says the company waits for things to go wrong before fixing them. In one case, a model bypassed its internet restrictions, and a monitor alerted staff but didn’t stop it. His essay landed days after OpenAI reportedly <a href="https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/">fired</a> three safety researchers accused of sharing internal data externally.</p>
+<p><strong>Coding agents are pushing devs to delete unit tests:</strong> An AI observability startup just wiped out over 800K lines of unit tests. The founder <a href="https://archive.codenewsletter.ai/2106142042405453879">argues</a> that these tests lock in bad AI-generated code and create “busy work” for agents. That slows down CI pipelines and drives up token bills. A Coinbase engineer <a href="https://archive.codenewsletter.ai/2106160407576490289">agreed</a>, urging developers to lean on full E2E, integration, and golden tests instead. Still, not everyone is ready to ditch unit tests. Veteran engineer Bob Martin <a href="https://archive.codenewsletter.ai/2106352027299115501">says</a> he still relies on them to keep his agents honest.</p>
+<hr />
+<h5><strong>PRESENTED BY PRIOR LABS</strong></h5>
+<h2><a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch">Build predictions with a single API call</a></h2>
+<p><a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c7b2dd99-8c86-4de0-a9ee-9a4e936dd03e/jpg__1_.jpg?t=1791191116" /></a></p>
+<hr />
+<p>Most forecasting projects stall between the idea and a working model.</p>
+<p><a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch">TabPFN-3.5</a> turns your spreadsheet data into accurate predictions in seconds, with no training or tuning.</p>
+<ul>
+<li>
+<p>It ranks <a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch">#1 across every benchmark.</a></p>
+</li>
+<li>
+<p>Open-source</p>
+</li>
+<li>
+<p>Already downloaded 4M+ times.</p>
+</li>
+</ul>
+<p><a href="https://priorlabs.ai/tabpfn?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=tabpfn3p5-launch"><strong>Try TabPFN today.</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="an-anthropic-engineers-advice-on-spending-tokens-wisely"></a></p>
+<h2><strong>An Anthropic engineer’s advice on spending tokens wisely</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/18fdf4cf-6dc0-4704-91b1-53ec0fee6db7/superhumanteam_a_senior_engineer_in_his_office_counting_out_c_16631662-2e02-4425-85da-fd372a4a4b42_2.jpg?t=1791199936" />
+<strong>Source: The Code, Superhuman</strong></p>
+<hr />
+<p><strong>Pick your battles.</strong> Sometimes you want Claude to check every edge case. Other times, you just need an answer to move on. Until now, both got the same treatment. Claude Code's /effort command lets you tell Opus 5.5 or Fable 5.1 how much compute to spend, but you need to know when the command is worth using. Anthropic's senior engineer Thariq Shihipar put the settings to the test, and he has the fix.</p>
+<p><strong>Checking isn't free.</strong> When you turn up the effort, Claude verifies more, tests more edge cases, and makes more decisions on its own, but that work adds to your token bill. On Terminal-Bench 3.0, the highest setting used roughly three times as many tokens per attempt as the lowest. Multiply that across your entire team, and costs can add up faster than you think.</p>
+<p><strong>Where tokens earn their keep.</strong> The payoff depends on the task. Higher effort paid off the most when Claude had more complexity to verify. For example, security pass rates jumped from 64% to 87%, while hardware scores surged from 34% to 75%. On rulebook work like operations filings, scores barely moved, 12% to 22%. And more effort never fixed a wrong approach.</p>
+<p><strong>Build low, verify high.</strong> You don't need to crank it up from the start. Shihipar saves it for the stages where mistakes would cost the most:</p>
+<ul>
+<li>
+<p><strong>Start with your spec.</strong> Give Claude your requirements, and let it interview you for the gaps.</p>
+</li>
+<li>
+<p><strong>Build on low effort.</strong> Get something you can review quickly, while it's still easy to steer.</p>
+</li>
+<li>
+<p><strong>Keep iterations light.</strong> Stick with low effort as you work out the shape.</p>
+</li>
+<li>
+<p><strong>Turn it up for testing.</strong> Once the direction feels right, use high effort to catch the edge cases.</p>
+</li>
+</ul>
+<p>If you want to dive deeper into saving tokens and help your team be more mindful, make sure to <a href="https://claude.dev/blog/spending-your-effort/">check out the full article</a> and share it with them.</p>
+<hr />
+<h5><strong>PRESENTED BY TINYFISH</strong></h5>
+<h2><a href="https://www.tinyfish.ai/300K?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=200k-launch-developer-2026q4&amp;utm_content=spotlight-oct05&amp;utm_term=the-code">The web is the one API your agent is missing</a></h2>
+<p><a href="https://www.tinyfish.ai/300K?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=200k-launch-developer-2026q4&amp;utm_content=spotlight-oct05&amp;utm_term=the-code"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0b1e955d-29d5-4a33-a8f3-168fc9acf66a/The_Code_Spotlight_2_-_Lily_Nguyen.jpg?t=1791145982" /></a></p>
+<hr />
+<p>Your agent can call your database, calendar and repo. Then it hits the web (search results, JavaScript, login screens) and stalls.</p>
+<p>Fix that with <a href="https://www.tinyfish.ai/300K?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=200k-launch-developer-2026q4&amp;utm_content=spotlight-oct05&amp;utm_term=the-code">1 MCP install and 4 tools</a>:</p>
+<ul>
+<li>
+<p>TinySearch: web search (free)</p>
+</li>
+<li>
+<p>TinyFetch: URL to clean content (free)</p>
+</li>
+<li>
+<p>TinyBrowser: cloud browser sessions</p>
+</li>
+<li>
+<p>TinyAgent: web automation</p>
+</li>
+</ul>
+<p>On the road to 300,000 users: every top-up through October 31 gets 30% extra.</p>
+<p><a href="https://www.tinyfish.ai/300K?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=200k-launch-developer-2026q4&amp;utm_content=spotlight-oct05&amp;utm_term=the-code">Claim 30% Bonus</a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2106329068597629195"><img alt="Click here to watch our meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/27351c3e-b16c-4e09-a0fc-d92aee84f358/Screenshot_2026-10-05_at_2.08.07_PM.jpg?t=1791194910" /></a>
+<em>Click here to watch our meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Agent Podcast:</strong> Matt Pocock <a href="https://www.youtube.com/watch?v=MN9dGgmLyso">sits with</a> SpaceXAI engineer Lauren Tan to explore how she runs her entire software development workflow with agents. She's the engineer who famously claimed to ship 2,500 PRs in a single month.</p>
+</li>
+<li>
+<p><strong>Claude Mods:</strong> An Anthropic engineer's <a href="https://archive.codenewsletter.ai/2106127556491821499">3-minute video</a> reveals what Claude Code mods actually are, and the trick that means you never have to write one yourself (2.5K likes).</p>
+</li>
+<li>
+<p><strong>Power Struggle:</strong> A dev <a href="https://x.com/kenkawakenkenke/status/2106649065614418397">built a game</a> where two USB-C-connected phones fight over charging. Tap faster, and your phone drains the loser's actual battery (1.8M views).</p>
+</li>
+<li>
+<p><strong>Explainer Era:</strong> Karpathy says custom AI explainer videos will change education. One dev put it to the test with a video explaining how <a href="https://archive.codenewsletter.ai/2105980242321924284">Shazam (the music app) works</a>, and the results are stunning (8.1K likes).</p>
+</li>
+</ul>
+<hr />
+<h3><strong>Trending projects for you</strong></h3>
+<ul>
+<li>
+<p>A senior dev just <a href="https://archive.codenewsletter.ai/2106513235541377525">built a system</a> that lets you call a coding agent from a physical landline office phone to edit code (12.8K likes).</p>
+</li>
+<li>
+<p>A senior engineer built a fully <a href="https://archive.codenewsletter.ai/2106226258984264042">open-source Minecraft world</a> where Claude agents code in your real repos, and literally walk over when they need your approval (11K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=HU03WDFB_tQ"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a95fe3f-77fa-4341-b871-7fbdc5b1efdc/Thumbnail__29_.jpg?t=1791193830" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a id="how-to-build-your-own-open-source-dots-with-pi-and-telegram"></a>
+<a href="https://www.youtube.com/watch?v=HU03WDFB_tQ"><strong>How to build your own open-source Dots with Pi and Telegram:</strong> </a> This tutorial shows how to build always-on personal AI assistants using Pi and pi-gateway on a VPS. You’ll learn how to set up agent workspaces, skills, Google Workspace access, and a Telegram gateway, then extend the setup into your own automations and agent workflows.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a id="a-german-ai-lab-just-dropped-an-open-weight-model"></a>
+<a href="https://archive.codenewsletter.ai/2106306840657297814"><strong>Kolibri:</strong> </a> A German AI lab just dropped an open-weight model that lets you run solid reasoning locally on your machine. With a massive 1M token context window, it easily powers through heavy coding tasks, tool calls, and RAG agent setups without needing to touch cloud compute.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://cto-guide.netlify.app/"><strong>The CTO’s guide to AI adoption:</strong> </a> Our team’s practical playbook for making agents useful beyond one-off coding tasks. It covers mapping tech debt, running parallel coding sessions, setting up tool configs and specs, and adding reliable AI code reviews so agent output is easier to trust and ship.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-stop-correcting-your-agent-for-the-same-mistakes"></a></p>
+<h2><strong>How to stop correcting your agent for the same mistakes</strong></h2>
+<p>You keep fixing the same agent mistakes over and over, dealing with the same bad patterns and bugs in every single session.</p>
+<p>SpaceXAI engineer Lauren Tan shared a fix that spots recurring corrections and eliminates them.</p>
+<ul>
+<li><strong>Step 1:</strong> Install pstack in Cursor:</li>
+</ul>
+<pre><code>/add-plugin pstack
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Claude Code users can install the community port:</li>
+</ul>
+<pre><code>/plugin marketplace add michael-denyer/pstack-claude
+/plugin install pstack@pstack-claude
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Then run her <a href="https://archive.codenewsletter.ai/2106542593656111276">full prompt</a>. It creates a Project agent that mines past commits for the pitfalls your agents keep hitting, prototypes answers to its own open questions, and returns a plan backed by real data. Approve it, and the agent executes.</li>
+</ul>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from Friday</strong></h3>
+<p>Andrej Karpathy shared his <a href="https://archive.codenewsletter.ai/2105819303471976479">personal tricks</a> for making LLM outputs easier to understand, including one obscure formatting spec he swears by.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
