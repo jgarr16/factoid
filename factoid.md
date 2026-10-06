@@ -1,11 +1,92 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-05"
-updated: "2026-10-06"
+sweep: "2026-09-05 → 2026-10-06"
+updated: "2026-10-07"
 sources: "The Code, Product Hunt Weekly, Superhuman AI, Future Tools, OpenRouter Team, The Economist, The Frontier, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**154. claude-code-setup plugin tells your project which hooks and MCP it needs**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-06 23:04 KST — ["How to let Claude Code configure itself"](newsletters/2026-10-06_newsletter_the_code.md#how-to-let-claude-code-configure-itself)*
+
+An Anthropic marketplace plugin (Claude Code 2.x) scans your repo and recommends which hooks, skills, MCP servers and subagents the project actually needs, then walks through configuring each one; it is read-only, so nothing in the repo is touched. Install from inside the project with /plugin install claude-code-setup@claude-plugins-official and ask it to analyze the codebase.
+
+- [The Code's write-up](https://x.com/romandevz/status/2104969172895621433)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**153. gdp-ts catches missing authorization at compile time**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-10-06 23:04 KST — ["This new TypeScript library by Vercel catches authorization mistakes at compile time"](newsletters/2026-10-06_newsletter_the_code.md#this-new-typescript-library-by-vercel-catches-authorization-mistakes-a)*
+
+Vercel's new gdp-ts library refuses to run sensitive functions unless the caller can prove the user has the permission, so authorization mistakes fail at compile time instead of shipping — aimed squarely at humans and coding agents accidentally writing access-control bugs. It ships with an agent skill that applies the pattern across an existing codebase.
+
+- [gdp-ts (GitHub)](https://github.com/rauchg/gdp-ts)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**152. Pocket GPU: open-source tool runs a 27B model on an iPhone**
+*🧠 Open / efficient / local models*
+*🗞 The Code · 2026-10-06 23:04 KST — ["Pocket GPU:"](newsletters/2026-10-06_newsletter_the_code.md#pocket-gpu)*
+
+An open-source tool turns a spare iPhone into local inference hardware, running a 27B model about 40% faster over USB-C — the developer's answer to Apple's unified-memory pricing. Worth a look if you want on-device inference without buying a Mac Studio or a local-model appliance.
+
+- [The tool (X post)](https://x.com/mylifcc/status/2106732529797775362)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**151. Google Docs edits Markdown natively, no convert-and-paste step**
+*⚡ Productivity & agent follow-through*
+*🗞 The Code · 2026-10-06 23:04 KST — ["Google lets you edit Markdown files without converting them"](newsletters/2026-10-06_newsletter_the_code.md#google-lets-you-edit-markdown-files-without-converting-them)*
+
+Google Docs now opens, edits, comments on and previews .md files in place across Drive and Docs, with Docs' real-time co-editing, for all Workspace customers and personal accounts. It removes the conversion step for markdown that agents generate or read — one former CTO called it the most overdue win for coding agents this year.
+
+- [Workspace update](https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html)
+- [The Code's item](https://archive.codenewsletter.ai/2107195115441946850)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**150. Cursor SDK adds run.steer() and read-only vs destructive tool tags**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-06 23:04 KST — ["Cursor now lets you take full control of background coding agents"](newsletters/2026-10-06_newsletter_the_code.md#cursor-now-lets-you-take-full-control-of-background-coding-agents)*
+
+Cursor's SDK update adds run.steer() so you can slip notes into a running agent mid-turn instead of killing and restarting it, pushes busy subagents to the background to keep working and report back to the main agent, and lets you tag custom tools as read-only or destructive so the model can tell a quick lookup apart from a delete.
+
+- [Cursor SDK changelog](https://cursor.com/docs/sdk/changelog)
+- [The Code's write-up](https://archive.codenewsletter.ai/2107141004482793827)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**149. Warp's software factory: agents review agents, PR cost $80 → $30**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-06 23:04 KST — ["How engineers at Warp run software factories"](newsletters/2026-10-06_newsletter_the_code.md#how-engineers-at-warp-run-software-factories)*
+
+Warp's Ben Holmes documented the pipeline every change follows: a Slack thread or Linear issue hits an agent for triage, a spec subagent drafts a plan a human approves, an implementation agent writes the code, a verification subagent runs it end to end, and a review agent goes back and forth with the builder before a human ships it. Production monitoring then files the next ticket, closing the loop — Warp says it cut internal cost per PR from $80 to $30. Starter templates are open source and early access to Warp Factories is open.
+
+- [Inside Warp's software factory](https://archive.codenewsletter.ai/2106510336413012463)
+- [warp-factory-examples (GitHub)](https://github.com/warpdotdev/warp-factory-examples)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **148. Build your own always-on Dots with Pi, pi-gateway and Telegram**
 *🏗️ Agent plumbing & production stacks*
