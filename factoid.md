@@ -1,11 +1,158 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-06"
+sweep: "2026-09-05 → 2026-10-08"
 updated: "2026-10-08"
-sources: "The Code, Product Hunt Weekly, Superhuman AI, Future Tools, OpenRouter Team, The Economist, The Frontier, Superhuman AI · Sunday Special"
+sources: "Future Tools, The Code, The Frontier, Product Hunt Weekly, Superhuman AI, OpenRouter Team, The Economist, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**165. Zide puts code, PRs, CI and an agent in one desktop workspace**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Future Tools · 2026-10-08 01:07 KST — ["Unify Your Developer Workspace"](newsletters/2026-10-08_newsletter_future_tools.md#unify-your-developer-workspace)*
+
+Zide is a native desktop app that brings code, Git, issues, pull requests, CI and terminals into a single workspace, with a built-in assistant that works against the whole repository and proposes changes as reviewable diffs. Bring your own model keys or use the included credits; free and paid tiers.
+
+- [Zide](https://zide.dev/?ref=futuretools.io)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**164. OpenAI's Decisions API opens to public beta for in-app routing**
+*⚙️ LLM tooling & SDKs*
+*🗞 Future Tools · 2026-10-08 01:07 KST — ["OpenAI launches Decisions API in public beta, enabling real-time routing decisions inside apps"](newsletters/2026-10-08_newsletter_future_tools.md#openai-launches-decisions-api-in-public-beta-enabling-real-time-routin)*
+
+OpenAI's Decisions API is now in public beta: you define the options and it picks one using text or image context in real time, so routing and classification happen inside your app instead of a chat call. It is the Luna-powered Decisions API that showed up at DevDay in limited preview, now broadly callable — a direct competitor to the cheap decision models (Clef, Perplexity Decisions, Jev) already in this log.
+
+- [OpenAI Devs announcement](https://x.com/OpenAIDevs/status/2107573382229188645)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**163. Notely AI turns your notes into tasks and calendar entries**
+*⚡ Productivity & agent follow-through*
+*🗞 Future Tools · 2026-10-08 01:07 KST — ["Turn Notes Into Tasks"](newsletters/2026-10-08_newsletter_future_tools.md#turn-notes-into-tasks)*
+
+Notely AI keeps notes, tasks, automations and calendar in one workspace: you write notes naturally, then ask the assistant to surface the open action items, turn them into tasks and schedule them to Google Calendar — with an approval step before anything changes. Free.
+
+- [Notely AI](https://notely.brainix.co/?ref=futuretools.io)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**162. VMPal — an Apple-silicon VM that hands agents MCP access**
+*🛠️ Mac utilities worth a look*
+*🗞 The Code · 2026-10-07 23:08 KST — ["VMPal: A virtual machine built specifically for Apple silicon and AI agents"](newsletters/2026-10-07_newsletter_the_code.md#vmpal-a-virtual-machine-built-specifically-for-apple-silicon-and-ai-ag)*
+
+VMPal is a virtual machine built for Apple silicon that runs macOS, Windows and Linux with GPU acceleration and ships MCP support, so agents can work either on your Mac or inside the VM. Useful if you want agent work that touches untrusted code or files isolated in a guest instead of on the host.
+
+- [VMPal](https://vmpal.com/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**161. One prompt and three subagents to shrink a bloated AGENTS.md**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-07 23:08 KST — ["How to shrink a bloated AGENTS.md"](newsletters/2026-10-07_newsletter_the_code.md#how-to-shrink-a-bloated-agentsmd)*
+
+Every line of AGENTS.md loads into context on every turn and most files are full of no-ops the agent ignores. A senior dev's fix: install his open-source skills pack (npx skills add mattpocock/skills, which includes /writing-for-agents), then run a prompt that has three subagents each restructure the file more radically — remove no-ops, use progressive disclosure, move instructions into CODING_STANDARDS.md — and land them as one PR you review and keep the best of.
+
+- [The prompt and skills pack](https://archive.codenewsletter.ai/2107433940638457866)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**160. Osmani: agents review every PR, humans review the risky ones**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-07 23:08 KST — ["Anthropic engineer says, “Nobody reads the code anymore, and nothing is checking it either”"](newsletters/2026-10-07_newsletter_the_code.md#anthropic-engineer-says-nobody-reads-the-code-anymore-and-nothing-is-c)*
+
+Anthropic engineer Addy Osmani's new essay argues teams dropped diff review without putting verification in its place. At Anthropic an automated reviewer runs on nearly every PR, engineers mark fewer than 1% of its findings incorrect, and substantive review coverage rose from 16% to 54%. His workflow: have multiple agents find, verify and rank bugs on every PR; give low-risk changes a light human pass after a clean automated run; keep an owner and thorough human review on core and sensitive code; keep the checks independent of whatever wrote the code; and have a person approve every merge.
+
+- [The code nobody reads (essay)](https://addyo.substack.com/p/the-code-nobody-reads)
+- [Anthropic code-review docs](https://code.claude.com/docs/en/code-review)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**159. Mistral Large 4 previews as a 1T-parameter open-weight model**
+*🧠 Open / efficient / local models*
+*🗞 The Code · 2026-10-07 23:08 KST — ["Mistral's best AI model yet takes on DeepSeek and Qwen"](newsletters/2026-10-07_newsletter_the_code.md#mistrals-best-ai-model-yet-takes-on-deepseek-and-qwen)*
+*🗞 The Frontier · 2026-10-07 09:46 KST — ["Mistral previewed Large 4, a trillion-parameter model it has nicknamed Le Chonk"](newsletters/2026-10-07_newsletter_the_frontier.md#mistral-previewed-large-4-a-trillion-parameter-model-it-has-nicknamed-)*
+
+Mistral previewed Large 4 (nicknamed Le Chonk): a 1.05T-parameter open-weight model with 49B parameters active per token, a 1M-token context window and native multimodality, trained end to end on 3,800 Grace Blackwell GPUs in Mistral's own European data centres. Mistral claims it beats DeepSeek V4 Pro and Qwen3.8-Max at agentic coding and trails only Claude Opus 5 in a blind code-quality test; a preview API is callable now and the self-hosting weights land at the end of October.
+
+- [Mistral Large 4 announcement](https://mistral.ai/news/mistral-large-4/)
+- [Model docs](https://docs.mistral.ai/models/mistral-large-4-0)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**158. EmbeddingGemma 2 — a 740M open model for offline RAG embeddings**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-07 23:08 KST — ["Google unveils two major updates for your tech stack"](newsletters/2026-10-07_newsletter_the_code.md#google-unveils-two-major-updates-for-your-tech-stack)*
+
+Google's EmbeddingGemma 2 is a 740M-parameter open model that turns text, code, images, audio and video into embeddings locally, so search and RAG pipelines can run offline and internal documents never leave the machine. Google shipped a developer guide for wiring it into knowledge-based tools, and the weights are downloadable.
+
+- [EmbeddingGemma 2 (Google blog)](https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/)
+- [Developer guide](https://developers.googleblog.com/en/embeddinggemma-2-the-developer-guide/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**157. AUDR — an open standard for tracking agent run costs**
+*💸 Token & infra economics*
+*🗞 The Frontier · 2026-10-07 09:46 KST — ["AUDR by Chargebee — Open standard for tracking agent run costs"](newsletters/2026-10-07_newsletter_the_frontier.md#audr-by-chargebee-open-standard-for-tracking-agent-run-costs)*
+
+AUDR, from Chargebee, is an open standard for logging and attributing what an agent run actually costs — a common format instead of per-tool guesswork, so spend can be tracked per run, agent or user. Open source, ▲293 on Product Hunt.
+
+- [AUDR by Chargebee](https://www.producthunt.com/posts/audr-by-chargebee)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**156. OpenBot — a free, local, open-source Grok Bot alternative**
+*🔒 Privacy & local tooling*
+*🗞 The Frontier · 2026-10-07 09:46 KST — ["OpenBot — Grok Bot alternative: free, local, open-source, multiplayer"](newsletters/2026-10-07_newsletter_the_frontier.md#openbot-grok-bot-alternative-free-local-open-source-multiplayer)*
+
+OpenBot is a free, local, open-source take on the Grok Bot idea, and it is multiplayer — more than one person (or agent) can share one instance. Because it runs locally, whatever it reads out of your mail and threads stays on your machine. ▲271 on Product Hunt.
+
+- [OpenBot](https://www.producthunt.com/posts/openbot-4)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**155. Personal Agent Protocol gives agents OAuth tiers for shop logins**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Frontier · 2026-10-07 09:46 KST — ["Meta and Sierra published a standard for how your agent logs into a shop"](newsletters/2026-10-07_newsletter_the_frontier.md#meta-and-sierra-published-a-standard-for-how-your-agent-logs-into-a-sh)*
+
+Meta and Sierra published the Personal Agent Protocol, an OAuth-based standard for how an agent logs into a shop: it browses as a guest to check stock or a returns policy, and once you sign in you decide whether it gets read-only or write access. Walmart, Shopify, Stripe, Rocket, Genesys and Instinct are founding partners, a v0.1 spec is due this month, and Shopify and Stripe have also joined Visa's rival protocol.
+
+- [Personal Agent Protocol](https://thenextweb.com/news/personal-agent-protocol-sierra-meta)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **154. claude-code-setup plugin tells your project which hooks and MCP it needs**
 *⚙️ LLM tooling & SDKs*
