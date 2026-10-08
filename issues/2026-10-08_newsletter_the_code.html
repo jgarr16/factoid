@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🎮 Google turns prompts into video games — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🎮 Google turns prompts into video games — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🎮 Google turns prompts into video games</h1>
+<p class="meta">2026-10-08 · received 2026-10-08 23:07 +0900
+ · <a href="https://codenewsletter.ai/p/spacexai-s-grok-bot-borrows-rival-models-for-tough-tasks" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🎮 Google turns prompts into video games</h1>
+<p><a href="https://www.softr.io/lp/security?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=2026q4-it-publications&amp;utm_content=header-1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ab57edc6-d9ca-49d9-ab63-1fa793517b33/Group_Softr.jpg?t=1791387045" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Grok Bot is putting rival models to work – a surprising move for a company directly in competition with other AI labs. Meanwhile, Anthropic rolled out its smallest and cheapest model yet, and Google's latest Playground lets you build playable video games straight from a prompt.</p>
+<p><strong>Also:</strong> Microsoft revamps its software for agentic AI, a founder’s wiped C drive offers a costly Claude Code lesson, and Apple’s new smart home launches have devs hooked.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<p><a id="the-eval-playbook-for-anything-you-ship-on-an-llm"></a>
+* The eval playbook for anything you ship on an LLM</p>
+<ul>
+<li>
+<p>An app to organize your desktop screenshots</p>
+</li>
+<li>
+<p>Build an AI software factory with Claude Code (tutorial)</p>
+</li>
+<li>
+<p>When to load MCP tools (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2107949161878606089"><img alt="Click here to see how GrokBot can search X." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/15e80779-16bd-47ad-94ff-a6bfa8c5eedf/Thumbnail__34_.jpg?t=1791449165" /></a>
+<em>Click here to see how GrokBot can search X.</em></p>
+<hr />
+<p><strong>SpaceXAI's Grok Bot borrows rival models for tough tasks:</strong> The Musk-led lab just turned Grok Bot into a <a href="https://archive.codenewsletter.ai/2107724314451878104">model router</a> that can route tasks to outside models such as Anthropic's Claude Opus 5.5 for reasoning, Midjourney for images, and Suno for music. Simple questions go to small, fast models, while trickier requests get the heavyweights. Grok Bot can also now search and <a href="https://archive.codenewsletter.ai/2107949161878606089">monitor X</a> without a connector, with early users reporting <a href="https://archive.codenewsletter.ai/2107977864738111638">no API costs</a>.</p>
+<p><a id="anthropic-ships-its-cheapest-and-fastest-small-model-yet"></a>
+<strong>Anthropic ships its cheapest and fastest small model yet:</strong> The AI lab just dropped <a href="https://www.anthropic.com/claude-haiku-5-5">Claude Haiku 5.5</a>, the first Haiku model that lets you dial its effort up or down. Adaptive thinking is on by default at medium effort. Built for subagent work, it costs $0.10/$0.50 per million input/output tokens on prompts up to 100K (90% less than Haiku 4.5). Also, Claude's Python and TypeScript SDKs <a href="https://archive.codenewsletter.ai/2107925762720326090">now handle</a> computer and browser use in beta, saving you from writing a loop to pass Claude's clicks to drivers like Browserbase. Docs <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-sdk">here</a>.</p>
+<p><strong>Google turns text prompts into playable browser games:</strong> The search giant just unveiled <a href="https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/">Playground</a>, a Google Labs experiment that lets you describe a 2D or 3D game in chat, then tweak its physics and rules as you go. Teams can quickly try out ideas before putting engineering time behind them. Google also announced a coming integration with Unity Spark, now in testing, to turn those prototypes into full Unity builds. Playground is live for U.S. users and you can try it <a href="https://playground.google">here</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY SOFTR</strong></h5>
+<h2><a href="https://www.softr.io/lp/security?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=2026q4-it-publications&amp;utm_content=header-1">The solution for vibe coded shadow IT. Enable AI builders securely</a></h2>
+<p><a href="https://www.softr.io/lp/security?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=2026q4-it-publications&amp;utm_content=header-1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7db7d072-249b-48d4-8eb3-648c12e3bf35/softr_banner_with_cta__1___1_.jpg?t=1791388275" /></a></p>
+<hr />
+<p>Your teams are vibe coding. How does IT stay in control?</p>
+<p>Instead of blocking teams, give them <a href="https://www.softr.io/lp/security?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=2026q4-it-publications&amp;utm_content=header-1">a governed place to build with Softr</a>.</p>
+<ul>
+<li>
+<p>IT defines guardrails and oversees Softr apps, connected data, users, and permissions.</p>
+</li>
+<li>
+<p>Softr enforces access controls outside AI-generated code. Credentials stay server-side.</p>
+</li>
+<li>
+<p>SSO, workspace roles, and audit logs are built in.</p>
+</li>
+<li>
+<p>Softr handles authentication, permissions, hosting, and secure data connections.</p>
+</li>
+</ul>
+<p><a href="https://www.softr.io/lp/security?utm_source=thecode&amp;utm_medium=paid-newsletter&amp;utm_campaign=2026q4-it-publications&amp;utm_content=header-1"><strong>See how Softr keeps AI app building governed →</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>The eval playbook for anything you ship on an LLM</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/04278a1a-1d94-4894-80f9-58462b68cdd7/superhumanteam_an_engineering_executive_sits_at_his_table_gra_31ccbe2c-69fc-4e32-896d-b13e225047dd_3.jpg?t=1791453113" />
+<strong>Source: The Code, Superhuman</strong></p>
+<hr />
+<p><strong>Back it up.</strong> Your AI nailed the demo, but then you tweaked the prompt, and now you're not sure whether it got better or just sounds better. That's where evals come in, they’re basically repeatable tests that help you decide what's ready to ship. Senior engineer Sergii Makarevych's new <a href="https://archive.codenewsletter.ai/2106453816757354947">guide</a> walks through how to build them, catch convincing mistakes, and check whether your tests deserve your trust.</p>
+<p><strong>One good answer proves nothing.</strong> Makarevych breaks down how it works using an example of a runnable support bot for a fictional bike shop:</p>
+<ul>
+<li>
+<p><strong>Build the loop.</strong> Collect real inputs and known-good answers, run your system through them, and grade every reply. Report a score with an error bar, then compare it with the previous version. Now you have something firmer than "this prompt feels better."</p>
+</li>
+<li>
+<p><strong>Read before you grade.</strong> Only 34 of the bot's 60 test replies passed. Cheap code checks caught missing facts but let an invented refund window slip through. A judge model can catch that, but it needs checking too. This one scored just 0.15 on kappa, a measure of agreement with human labels, well below the usual 0.6 release bar.</p>
+</li>
+<li>
+<p><strong>Compare on the same cases.</strong> Two prompts both scored 70%, but the new one did worse on 14% of tickets. With 60 cases, you can't reliably detect a drop smaller than about 12 percentage points. Check each pipeline stage separately. For agents, repeat tasks and track consistency, path, and cost per correct outcome.</p>
+</li>
+</ul>
+<p><strong>Benchmarks pick the engine.</strong> A leaderboard can help you shortlist models, but scores shift with the setup and age quickly. Your own evals should decide what ships, with a clear threshold for blocking changes and monitoring once they're live. Makarevych's <a href="https://archive.codenewsletter.ai/2106453816757354947">full essay</a> digs into judge biases, agent reliability, and tooling. Pair it with former GitHub engineer Hamel Husain's <a href="https://hamel.dev/blog/posts/evals/">Your AI Product Needs Evals</a> for a real-product walkthrough.</p>
+<hr />
+<h5><strong>PRESENTED BY WORKOS</strong></h5>
+<h2><a href="https://workos.com/blog/add-sso-b2b-saas-authkit?utm_source=superhuman&amp;utm_medium=newsletter&amp;utm_campaign=q42026">Need enterprise-ready auth without the quarter-long build? Meet AuthKit</a></h2>
+<p><a href="https://www.authkit.com/?utm_source=superhuman&amp;utm_medium=newsletter&amp;utm_campaign=q42026"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e508cd44-4540-4d42-a436-6f3650d61d59/workos_7th_oct.jpg?t=1791449904" /></a></p>
+<hr />
+<p><a href="https://www.authkit.com/?utm_source=superhuman&amp;utm_medium=newsletter&amp;utm_campaign=q42026">AuthKit is the complete enterprise auth solution for your app</a>, with user management at no cost up to 1M monthly active users.</p>
+<p>Give enterprise customers the auth features they expect without building them from scratch. With AuthKit, you can:</p>
+<ul>
+<li>
+<p>Offer multiple auth methods including SSO, MFA, magic auth, &amp; more</p>
+</li>
+<li>
+<p>Add and remove users automatically with SCIM provisioning</p>
+</li>
+<li>
+<p>Track who did what with audit logs</p>
+</li>
+</ul>
+<p>Ready to close your next enterprise customer?</p>
+<p><a href="https://www.authkit.com/?utm_source=superhuman&amp;utm_medium=newsletter&amp;utm_campaign=q42026"><strong>Start with AuthKit today →</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/145f7d76-392f-4ca4-b42a-868a35ec78e4/Screenshot_2026-10-08_at_1.54.15_PM.jpg?t=1791453295" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Testing Tests:</strong> A senior engineer claims AI-written tests are empirically useless after his agent solved more tasks without them. Here's what he says to <a href="https://archive.codenewsletter.ai/2108030810691629403">tell your agents</a> instead (1.3K bookmarks).</p>
+</li>
+<li>
+<p><strong>Local Copilot:</strong> Microsoft CEO Satya Nadella says every Windows PC is now "an infinite software factory." Here's <a href="https://archive.codenewsletter.ai/2107898018112647313">everything they launched</a> to back it up (6.3K likes).</p>
+</li>
+<li>
+<p><strong>Drive Wipe:</strong> A founder says Claude Code <a href="https://archive.codenewsletter.ai/2107621483392446572">wiped his C drive</a> while clearing temp folders. A tiny mistake caused it, and Anthropic <a href="https://archive.codenewsletter.ai/2107695244238324001">responded</a> with how to prevent it (5.4K likes).</p>
+</li>
+<li>
+<p><strong>Smart Home:</strong> Take a look at the new <a href="https://archive.codenewsletter.ai/2107818768827052305">smart home gear</a> Apple and LG teamed up on (1.7K likes).</p>
+</li>
+<li>
+<p><strong>Fridge Phone:</strong> A dev turned Apple's foldable iPhone Duo into a <a href="https://archive.codenewsletter.ai/2107685829711974760">working mini-fridge demo</a>. It's giving 2008 joke-app energy, and people want more (151K views).</p>
+</li>
+<li>
+<p><strong>Clean Desktop:</strong> If your desktop is buried in screenshots, this <a href="https://archive.codenewsletter.ai/2107726966304690416">open-source Mac app</a> pins them to a clothesline on your screen, complete with drag-and-drop and one-click copying (12.5K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=ctoaIC4LHmI"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b2dab9d7-ee5d-4ab3-b854-f5b3846c3c38/Thumbnail__35_.jpg?t=1791452844" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=ctoaIC4LHmI"><strong>How to build your own AI software factory with Claude Code:</strong> </a> This tutorial walks through building an agent workflow that can take a feature from task to implementation and approval. You’ll also see how to run multiple features in parallel and extend the setup into a bigger software factory.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a id="agent-scripts-73k"></a>
+<a href="https://github.com/steipete/agent-scripts"><strong>Agent Scripts (7.3k ⭐):</strong> </a> From OpenClaw creator Peter Steinberger, this repo packages the shared rules, reusable skills, and lightweight helpers he uses across his agent workflows. It keeps Claude Code and Codex working from the same instructions.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a id="when-to-load-mcp-tools-by-google"></a>
+<a href="https://archive.codenewsletter.ai/2107874163243229325"><strong>When to load MCP tools (by Google):</strong> </a> This guide explains whether your agent should load every MCP tool upfront or only fetch tools when it needs them. It breaks down the trade-offs, plus when it makes sense to hand tool use off to a subagent instead.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-catch-the-risks-buried-in-claude-codes-output"></a></p>
+<h2><strong>How to catch the risks buried in Claude Code's output</strong></h2>
+<p>Claude Code ends every task with a wall of summary text, and the one line that matters gets skimmed past. The Claude Code team <a href="https://archive.codenewsletter.ai/2106118517447876618">shared</a> a built-in plugin called “You Should Know” that flags it for you.</p>
+<ul>
+<li><strong>Step 1:</strong> Enable it with one command inside Claude Code:</li>
+</ul>
+<pre><code>/plugin enable cc-plugin-you-should-know@builtin
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> That's the whole setup. The plugin scans Claude's output for information you might miss and surfaces it as a "Heads up" callout.</li>
+</ul>
+<p><strong>P.S.</strong> Get 50+ AI coding hacks for Claude Code, Cursor, and Codex<strong> <a href="https://hackbook-chi.vercel.app">here</a></strong>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Claude Code's creator shared how he <a href="https://archive.codenewsletter.ai/2107565388250874193">actually prompts Claude</a>. He says three things now matter more than the prompt itself.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

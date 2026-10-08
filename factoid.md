@@ -1,11 +1,78 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-10-08"
-updated: "2026-10-08"
-sources: "Future Tools, The Code, The Frontier, Product Hunt Weekly, Superhuman AI, OpenRouter Team, The Economist, Superhuman AI · Sunday Special"
+updated: "2026-10-09"
+sources: "The Code, Future Tools, The Frontier, Product Hunt Weekly, Superhuman AI, OpenRouter Team, The Economist, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**170. Claude Haiku 5.5: $0.10/$0.50 small model with an effort dial**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-10-08 23:07 KST — ["Anthropic ships its cheapest and fastest small model yet:"](newsletters/2026-10-08_newsletter_the_code.md#anthropic-ships-its-cheapest-and-fastest-small-model-yet)*
+
+Anthropic's Claude Haiku 5.5 is its cheapest, fastest small model and the first Haiku that lets you dial effort up or down (adaptive thinking on at medium by default). It costs $0.10/$0.50 per million input/output tokens on prompts up to 100K — about 90% less than Haiku 4.5 — and is pitched at subagent work. Claude's Python and TypeScript SDKs also now handle computer and browser use in beta, so you no longer write the loop that passes Claude's clicks to drivers like Browserbase.
+
+- [Claude Haiku 5.5](https://www.anthropic.com/claude-haiku-5-5)
+- [Browser-use SDK docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-sdk)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**169. An eval playbook for anything you ship on an LLM**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-08 23:07 KST — ["The eval playbook for anything you ship on an LLM"](newsletters/2026-10-08_newsletter_the_code.md#the-eval-playbook-for-anything-you-ship-on-an-llm)*
+
+Senior engineer Sergii Makarevych's guide covers building repeatable evals: collect real inputs with known-good answers, run the system through them, grade every reply, report a score with an error bar and compare against the previous version. Findings from his bike-shop support-bot example: only 34 of 60 test replies passed, a judge model agreed with humans at just 0.15 kappa (0.6 is the usual release bar), and two prompts both at 70% still differed on 14% of tickets — with 60 cases you cannot reliably detect a drop under ~12 points. Pair it with Hamel Husain's real-product walkthrough.
+
+- [The eval playbook (The Code)](https://archive.codenewsletter.ai/2106453816757354947)
+- [Your AI Product Needs Evals (Hamel Husain)](https://hamel.dev/blog/posts/evals/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**168. Google's cookbook: when to load MCP tools, and when to delegate**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-08 23:07 KST — ["When to load MCP tools (by Google):"](newsletters/2026-10-08_newsletter_the_code.md#when-to-load-mcp-tools-by-google)*
+
+Google's cookbook walks the trade-off between loading every MCP tool upfront and fetching tools only when the agent needs them, plus when it makes sense to hand tool use off to a subagent instead. Practical context-budget guidance for any MCP-equipped harness.
+
+- [When to load MCP tools (The Code)](https://archive.codenewsletter.ai/2107874163243229325)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**167. Claude Code's "You Should Know" plugin surfaces buried risks**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-08 23:07 KST — ["How to catch the risks buried in Claude Code's output"](newsletters/2026-10-08_newsletter_the_code.md#how-to-catch-the-risks-buried-in-claude-codes-output)*
+
+Claude Code ends every task with a wall of summary text where the one line that matters gets skimmed past; the Claude Code team's built-in plugin "You Should Know" scans that output and surfaces missed information as a "Heads up" callout. Enable it with a single command inside Claude Code — /plugin enable cc-plugin-you-should-know@builtin — and that is the whole setup.
+
+- [You Should Know plugin (The Code)](https://archive.codenewsletter.ai/2106118517447876618)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**166. Agent Scripts — shared rules and skills for Claude Code and Codex**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-08 23:07 KST — ["Agent Scripts (7.3k ⭐):"](newsletters/2026-10-08_newsletter_the_code.md#agent-scripts-73k)*
+
+Peter Steinberger (OpenClaw) published Agent Scripts (7.3k ⭐), a repo packaging the shared rules, reusable skills and lightweight helpers he runs across his own agent workflows so Claude Code and Codex work from the same instructions. Directly useful if you keep multiple coding agents pointed at one instruction set — it is the pattern plus the actual files.
+
+- [Agent Scripts (GitHub)](https://github.com/steipete/agent-scripts)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **165. Zide puts code, PRs, CI and an agent in one desktop workspace**
 *🏗️ Agent plumbing & production stacks*
