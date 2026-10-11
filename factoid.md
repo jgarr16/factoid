@@ -17,7 +17,7 @@ StarSkirmish gives each frontier model an hour to write a StarCraft bot in C++, 
 - [Kai McPheeters' post](https://x.com/kaimcpheeters/status/2106082840186147226)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -55,7 +55,7 @@ REA (33.1k ⭐) lets Claude Code, Codex, Cursor and Gemini inspect apps, website
 
 - [REA on GitHub](https://github.com/morluto/rea)
 
-- [ ] 📌 remind me
+- [x] 📌 reminder created 2026-10-11 09:16
 - [ ] 🙈 hide me
 
 ---
@@ -84,7 +84,7 @@ Anthropic's Max plans now carry $100 or $200 a month in API credits and Team pla
 - [Thariq's open-sourced new-tab page](https://archive.codenewsletter.ai/2108301668828004396)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -97,7 +97,7 @@ OpenRouter audited its own account and found over 1,000 active API keys across 8
 - [OpenRouter blog](https://openrouter.ai/blog)
 - [OpenRouter docs](https://openrouter.ai/docs)
 
-- [ ] 📌 remind me
+- [x] 📌 reminder created 2026-10-11 09:16
 - [ ] 🙈 hide me
 
 ---
@@ -110,7 +110,7 @@ OpenRouter now benchmarks model routers side by side across six suites, scoring 
 
 - [OpenRouter blog](https://openrouter.ai/blog)
 
-- [ ] 📌 remind me
+- [x] 📌 reminder created 2026-10-11 09:16
 - [ ] 🙈 hide me
 
 ---
@@ -124,7 +124,7 @@ POST an inline array of requests under one model and one endpoint shape — chat
 
 - [OpenRouter docs](https://openrouter.ai/docs)
 
-- [ ] 📌 remind me
+- [x] 📌 reminder created 2026-10-11 09:20
 - [ ] 🙈 hide me
 
 ---
@@ -139,7 +139,7 @@ Anthropic's Claude Haiku 5.5 is its cheapest, fastest small model and the first 
 - [Browser-use SDK docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-sdk)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -204,7 +204,7 @@ Zide is a native desktop app that brings code, Git, issues, pull requests, CI an
 
 - [Zide](https://zide.dev/?ref=futuretools.io)
 
-- [ ] 📌 remind me
+- [x] 📌 reminder created 2026-10-11 09:26
 - [ ] 🙈 hide me
 
 ---
@@ -218,7 +218,7 @@ OpenAI's Decisions API is now in public beta: you define the options and it pick
 - [OpenAI Devs announcement](https://x.com/OpenAIDevs/status/2107573382229188645)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -230,7 +230,7 @@ Notely AI keeps notes, tasks, automations and calendar in one workspace: you wri
 
 - [Notely AI](https://notely.brainix.co/?ref=futuretools.io)
 
-- [ ] 📌 remind me
+- [x] 📌 reminder created 2026-10-11 09:26
 - [ ] 🙈 hide me
 
 ---
@@ -243,7 +243,7 @@ VMPal is a virtual machine built for Apple silicon that runs macOS, Windows and 
 
 - [VMPal](https://vmpal.com/)
 
-- [ ] 📌 remind me
+- [x] 📌 reminder created 2026-10-11 09:26
 - [ ] 🙈 hide me
 
 ---
@@ -257,7 +257,7 @@ Every line of AGENTS.md loads into context on every turn and most files are full
 - [The prompt and skills pack](https://archive.codenewsletter.ai/2107433940638457866)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -271,7 +271,7 @@ Anthropic engineer Addy Osmani's new essay argues teams dropped diff review with
 - [Anthropic code-review docs](https://code.claude.com/docs/en/code-review)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -286,7 +286,7 @@ Mistral previewed Large 4 (nicknamed Le Chonk): a 1.05T-parameter open-weight mo
 - [Model docs](https://docs.mistral.ai/models/mistral-large-4-0)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -378,7 +378,7 @@ An open-source tool turns a spare iPhone into local inference hardware, running 
 - [The tool (X post)](https://x.com/mylifcc/status/2106732529797775362)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -391,7 +391,7 @@ Google Docs now opens, edits, comments on and previews .md files in place across
 - [Workspace update](https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html)
 - [The Code's item](https://archive.codenewsletter.ai/2107195115441946850)
 
-- [ ] 📌 remind me
+- [x] 📌 remind me
 - [ ] 🙈 hide me
 
 ---
@@ -406,7 +406,7 @@ Cursor's SDK update adds run.steer() so you can slip notes into a running agent 
 - [The Code's write-up](https://archive.codenewsletter.ai/2107141004482793827)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -420,7 +420,7 @@ Warp's Ben Holmes documented the pipeline every change follows: a Slack thread o
 - [warp-factory-examples (GitHub)](https://github.com/warpdotdev/warp-factory-examples)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
@@ -432,7 +432,7 @@ A full walkthrough for running always-on personal assistants yourself: Pi plus p
 
 - [Tutorial — open-source Dots on a VPS](https://www.youtube.com/watch?v=HU03WDFB_tQ)
 
-- [ ] 📌 remind me
+- [x] 📌 remind me
 - [ ] 🙈 hide me
 
 ---
@@ -445,7 +445,7 @@ A German AI lab released Kolibri, an open-weight model that runs solid reasoning
 
 - [The Code — Kolibri](https://archive.codenewsletter.ai/2106306840657297814)
 
-- [ ] 📌 remind me
+- [x] 📌 remind me
 - [ ] 🙈 hide me
 
 ---
@@ -488,7 +488,7 @@ VibeDefend installs into Claude Code or Cursor with one command and sits in fron
 - [VibeDefend on Product Hunt](https://www.producthunt.com/posts/vibedefend-by-cybedefend)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
