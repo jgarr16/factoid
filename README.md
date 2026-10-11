@@ -6,7 +6,9 @@ Memorable ideas, excerpts and takeaways — from newsletters, books, seminars an
 
 The log is `factoid.md` in this folder, and it **is** the published file (the site links it as "raw
 markdown"). `~/.hermes/scripts/factoid_site.py` renders `index.html` + `issues/` from it. Ticking 🙈
-on an entry removes it from the log at the next refresh — and so from the site.
+retires an entry from the log — and so from the site — within about two minutes, and ticking 📌 does
+the same once its Apple Reminder has been created. Untick a box before the next pass to keep an entry;
+retired entries are recoverable from `.backups/`.
 
 ## Contents
 
