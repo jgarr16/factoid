@@ -27,7 +27,10 @@ a:hover, a:focus { text-decoration: underline; }
   flex:1 1 12rem; min-width: 0; padding:.5rem .65rem; font: inherit; font-size:.92rem;
   color: var(--fg); background: var(--card); border:1px solid var(--border); border-radius:.5rem;
 }
-.filters { display:flex; gap:.35rem; flex-wrap:wrap; width:100%; }
+.filters { display:flex; gap:.35rem; width:100%; overflow-x:auto; flex-wrap:nowrap;
+  padding-bottom:.15rem; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+.filters::-webkit-scrollbar { display:none; }
+.filters button { flex:0 0 auto; white-space:nowrap; }
 .filters button {
   font: inherit; font-size:.78rem; padding:.28rem .55rem; border-radius:999px; cursor:pointer;
   background: var(--chip); color: var(--fg); border:1px solid var(--border);
@@ -49,6 +52,14 @@ a:hover, a:focus { text-decoration: underline; }
 .prose { margin:.25rem 0 .5rem; }
 .links { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.4rem; }
 .links a { font-size:.82rem; border:1px solid var(--border); border-radius:999px; padding:.22rem .55rem; }
+.filters-label { color: var(--muted); font-size:.7rem; text-transform:uppercase; letter-spacing:.07em; align-self:center; margin-right:.15rem; }
+.filters.cats button { font-weight:600; }
+.filters.themes { margin-top:.3rem; }
+.filters button .n { color: var(--muted); font-variant-numeric: tabular-nums; margin-left:.25rem; font-weight:400; }
+.filters button[aria-pressed=true] .n { color: rgba(255,255,255,.85); }
+.count { color: var(--muted); font-size:.78rem; margin:.45rem 0 .7rem; font-variant-numeric: tabular-nums; }
+.card .badges { display:flex; gap:.3rem; flex-wrap:wrap; margin:0 0 .4rem; }
+.card .badges span { background: var(--chip); border:1px solid var(--border); border-radius:.35rem; padding:.06rem .4rem; font-size:.7rem; font-weight:600; }
 .empty { color: var(--muted); font-size:.9rem; }
 footer.site { color: var(--muted); font-size:.75rem; margin-top:1.25rem; border-top:1px solid var(--border); padding-top:.6rem; }
 /* issue pages */

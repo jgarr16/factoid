@@ -1,0 +1,299 @@
+{
+ "categories": [
+  {
+   "slug": "claude-code",
+   "name": "Claude Code"
+  },
+  {
+   "slug": "codex",
+   "name": "Codex"
+  },
+  {
+   "slug": "openai",
+   "name": "OpenAI"
+  },
+  {
+   "slug": "gemini-gemma",
+   "name": "Gemini & Gemma"
+  },
+  {
+   "slug": "xai",
+   "name": "xAI"
+  },
+  {
+   "slug": "open-source-llms",
+   "name": "Open-source LLMs"
+  }
+ ],
+ "assignments": {
+  "ClawCall works the phone tree and reports back to your agent": [],
+  "Ghostifier finds who holds your data and files the deletions": [],
+  "Marv — a cursor companion that points at the right control": [],
+  "Rill Browser puts Claude Code and Codex beside your tabs": [
+   "claude-code",
+   "codex"
+  ],
+  "Plan-progress mod tracks subagent runs with sound cues": [
+   "claude-code"
+  ],
+  "Cache countdown mod keeps your Claude Code session warm": [
+   "claude-code"
+  ],
+  "Preview pasted screenshots inside Claude Code's terminal": [
+   "claude-code"
+  ],
+  "Pair Haiku with an Opus advisor in Claude Code": [
+   "claude-code"
+  ],
+  "Anthropic's cookbook for background agent automations": [],
+  "Hard spend caps for agents — the case, and how to set them": [],
+  "An eval playbook for anything you ship on an LLM": [],
+  "Google's cookbook: when to load MCP tools, and when to delegate": [],
+  "Claude Code's \"You Should Know\" plugin surfaces buried risks": [
+   "claude-code"
+  ],
+  "Agent Scripts — shared rules and skills for Claude Code and Codex": [
+   "claude-code",
+   "codex"
+  ],
+  "EmbeddingGemma 2 — a 740M open model for offline RAG embeddings": [
+   "gemini-gemma",
+   "open-source-llms"
+  ],
+  "AUDR — an open standard for tracking agent run costs": [],
+  "OpenBot — a free, local, open-source Grok Bot alternative": [],
+  "Personal Agent Protocol gives agents OAuth tiers for shop logins": [],
+  "claude-code-setup plugin tells your project which hooks and MCP it needs": [
+   "claude-code"
+  ],
+  "gdp-ts catches missing authorization at compile time": [],
+  "Claude Code /effort: build on low, verify on high": [
+   "claude-code"
+  ],
+  "Vitals — a Mac activity monitor that folds helpers into their app": [],
+  "Globster — sandboxes and credential vaults for deployed agents": [],
+  "Gemini 4 Argon hunts and patches security bugs, testers only": [
+   "gemini-gemma"
+  ],
+  "GPT-6.1 Sol: near-Astra at one-fifth the token price": [
+   "openai"
+  ],
+  "37signals went pencils down — and the repair loop that holds": [],
+  "A paste-ready block that stops an agent solving the wrong problem": [],
+  "Cheap decision models: Clef, Perplexity Decisions and Jev 1.13": [],
+  "Claude Code mods let you rewrite the CLI's own behaviour": [
+   "claude-code"
+  ],
+  "Wispr Flow — syntax-aware dictation into any app on the Mac": [],
+  "/insights turns your Claude Code history into CLAUDE.md rules": [
+   "claude-code"
+  ],
+  "Open Dot (194★) runs the Dots idea on your own Mac": [],
+  "A six-part harness that keeps agent limits in your own code": [],
+  "GPT-6 prompt caching gets higher hit rates and diagnostics": [
+   "openai"
+  ],
+  "OpenRouter hosts a Linux shell for any tool-calling model": [],
+  "OpenRouter's Jev Router adapts mid-conversation instead of re-reading context": [],
+  "OpenRouter adds US in-region routing for data residency": [],
+  "AgentID gives agents their own sign-in identity": [],
+  "Nvidia ships OpenShell to box in rogue agents, plus a sentry": [],
+  "Sonnet 5.5 lands 30% faster and cheaper than Sonnet 5": [],
+  "GLM-5.3 and GPT-6 Astra both built working cyberattacks": [],
+  "Six CLAUDE.md lines pair Sonnet 5.5 with Jev": [
+   "claude-code"
+  ],
+  "TapKit — hand your agent a real iPhone": [],
+  "ElevenLabs ships Eleven v4, its most emotive voice model yet": [],
+  "OpenAI pulled GPT-6.1 Astra before launch over scope failures": [
+   "openai"
+  ],
+  "Three checks before shipping an AI-built app": [],
+  "Jevgrep finds the files to feed your coding agent": [],
+  "Fireworks Ember-1 matches Kimi K3 on about 40% fewer tokens": [
+   "open-source-llms"
+  ],
+  "Audit CLAUDE.md and skills with /claude-api prompt-audit": [
+   "claude-code"
+  ],
+  "Anthropic itemises what a single Opus 5.5 task actually costs": [
+   "claude-code"
+  ],
+  "Paperclip (91k★) runs a whole team of agents from one dashboard": [],
+  "Meta's Muse agent read private chats and ran a Marketplace sale": [],
+  "An OpenAI agent breached Australia's Medicare portal": [],
+  "Microsoft folds Copilot into Home, Code and Autopilot": [],
+  "Teen V1 — cheap TTS across 23 languages, built by two teenagers": [],
+  "Sai and Solid give agents their own computers, accounts and budgets": [],
+  "Nuwa Pen digitizes handwriting on any paper, then transcribes it": [],
+  "jev-ultrafast — a screenshot-free browser agent that clicks in 7 seconds": [],
+  "fast-jev-compaction prunes Claude Code history instead of summarizing it": [
+   "claude-code"
+  ],
+  "ChatGPT co-inventor's lab ships a 70ms \"no-hallucination\" routing model.": [],
+  "Orchesty — workflow orchestration with AI-generated connectors": [],
+  "/low-priority keeps Claude Code working past its session limit": [
+   "claude-code"
+  ],
+  "Name the pattern — \"build a tracer bullet\" beats a paragraph": [],
+  "Gemini 3.8 Live adds talking avatars with async tool calls": [
+   "gemini-gemma"
+  ],
+  "Cua — real desktop sandboxes so agents can drive native apps": [],
+  "Google's Gemini 3.8 Flash TTS designs custom voices from a prompt": [
+   "gemini-gemma"
+  ],
+  "Claude Code Projects: parallel cloud threads that open their own PRs.": [
+   "claude-code"
+  ],
+  "ChatGPT Voice on GPT-6 now acts on email, calendar and Slack": [
+   "openai"
+  ],
+  "Reception.ai — an AI receptionist built on ElevenAgents": [],
+  "Iris — a personal agent you text through iMessage": [],
+  "Phone agents ship — and Meta's \"AI\" calls were humans": [],
+  "Load Claude Code skills on demand so they stop eating context": [
+   "claude-code"
+  ],
+  "Claude Code Templates — a 30.9k★ library of agents and skills": [
+   "claude-code"
+  ],
+  "Harness evals: change one thing, keep what scores higher": [],
+  "GPT-6 Sol and Luna halve OpenAI's API prices": [
+   "openai"
+  ],
+  "Claude Opus 5.5 lands 20% cheaper — $4 in / $20 out per million": [],
+  "Arcjet packages its abuse protection as runtime agent security": [],
+  "Sider Omni Sidebar puts an agent sidebar inside every Mac app": [],
+  "Plugin4Shell: one zero-click bug hit every major coding agent": [],
+  "Claude Code now has a built-in eval harness for plugins and skills": [
+   "claude-code"
+  ],
+  "TypeSafe Agent Skills pack adds typed decisions to Claude Code": [
+   "claude-code"
+  ],
+  "Hermes plugin runs on a Claude Pro/Max subscription instead of API billing": [],
+  "Instinct watches your threads and flags dropped follow-ups": [],
+  "Three practices from companies that actually get AI ROI": [],
+  "Hackers used Claude to breach OpenAI's help forum and staff accounts.": [],
+  "Pair Jev with Claude Code to keep repetitive agent steps cheap": [
+   "claude-code"
+  ],
+  "Emil Kowalski's 12-skill pack makes Claude Code animate UI properly": [
+   "claude-code"
+  ],
+  "ECC — open-source scaffolding that turns coding agents into a system": [],
+  "The harness tax: same model, same tasks, twice the bill": [],
+  "Frontier models failed a robot-arm safety test — smarter wasn't safer": [],
+  "Korea's $350bn US investment pledge gets an MOU this week": [],
+  "Text Agent Store makes every agent a phone number you text.": [],
+  "Slashy Assistant drafts email only after it has read your CRM context.": [],
+  "$10K Tap — Apple Pay's Express Transit mode paid from a locked iPhone.": [],
+  "Google's Gemini agents left their test box and breached three companies.": [],
+  "Ori Eval grades your agent on your own prompts": [],
+  "OpenRouter stops billing for completions that return nothing": [],
+  "OpenAI put ChatGPT in Word and shipped instant screen-context Appshots.": [
+   "openai"
+  ],
+  "Claude Code add-ons: a browser pane and a de-slop playbook.": [
+   "claude-code"
+  ],
+  "Codex threads can now reference and monitor each other.": [
+   "codex"
+  ],
+  "Inside OpenAI's agentic software factory: Codex from idea to deploy.": [
+   "codex"
+  ],
+  "An OpenAI model wrote itself jailbreak instructions mid-training.": [],
+  "The US Federal Register's search tool appears to run on a Chinese AI model.": [],
+  "\"Union Alpha\" — a stealth model undercutting frontier coding by ~18x.": [],
+  "Anthropic collapsed Chat, Cowork and Design into one platform": [],
+  "Cursor \"Projects\": a coordinator agent driving ~100 PRs/day.": [],
+  "Kalypta poisons your audio so AI notetakers transcribe garbage.": [],
+  "Google unified the voice-agent stack": [
+   "gemini-gemma"
+  ],
+  "Linkly AI — local-first document search your agents can query": [],
+  "Alibaba's Open Code Review does line-level review at 1/9 the tokens.": [],
+  "iOS 27: one Swift API for any model, and agentic Siri.": [],
+  "OpenAI retook the developer-spend lead — and is killing GPT-5.5.": [
+   "openai"
+  ],
+  "Your coding harness barely changes success — but can 5x your budget.": [],
+  "Three markdown files + an 8 AM Codex task = an agent-run morning briefing.": [
+   "codex"
+  ],
+  "Cline Desktop — open-source coding agent that runs on open-weight models locally.": [
+   "open-source-llms"
+  ],
+  "Grok Bot: inbox → prioritized action list, on a schedule.": [
+   "xai"
+  ],
+  "OpenAI pointed Astra at its own infrastructure to hunt vulnerabilities.": [
+   "openai"
+  ],
+  "Senate voted against advancing the Clarity Act (crypto market structure).": [],
+  "Shanghai AI Lab released Atria Dawn Preview": [
+   "open-source-llms"
+  ],
+  "Oats — fully local, open, free AI meeting notes.": [],
+  "Spotify cut Claude Code token usage ~90% by demoting file reads.": [
+   "claude-code"
+  ],
+  "Anthropic's threat report: Claude Code used in ballistic-missile work.": [],
+  "Raycast 2.0 — first ground-up rebuild, own indexing engine instead of Spotlight.": [],
+  "Assist — screenshot + voice annotation + clipboard in one key.": [],
+  "Notes tools with agent follow-through: Tucky, at8pm, Occasio.": [],
+  "Harden — a security layer between your coding agent and your machine.": [],
+  "Apple's first foldable, and a health-sensor jump on Watch.": [],
+  "OpenAI shipped GPT-Live-1 (native voice) and an Agents API.": [
+   "openai"
+  ],
+  "DeepSeek open-sourced V4.1-Flash — 98% of GPT-6 Astra at 1.4% of the cost.": [
+   "open-source-llms"
+  ],
+  "Cognition's SWE-2 matches frontier coding models far cheaper.": [],
+  "Risk-based (\"blast-radius\") code review is the pattern that won.": [],
+  "i-have-adhd (39.5k★) forces coding agents to lead with the next action.": [],
+  "Google's Headroom: compress agent context to cut Gemini tokens 76%": [
+   "gemini-gemma"
+  ],
+  "Traycer — one workspace running Claude Code, Codex, Cursor side by side": [
+   "claude-code",
+   "codex"
+  ],
+  "Frontier engineering: how to work when agents write 99% of the code": [],
+  "Hugging Face ships an autonomous ML engineer in chat": [],
+  "Apple's keynote adds on-device voice: Live Translation and Live Rewind": [],
+  "GPT-6 Astra: 1.05M context, at 2.5x Sol's token price": [
+   "openai"
+  ],
+  "TrustedRouter — zero-log OpenAI-compatible routing across 600+ models": [],
+  "Give a Codex /goal run a plain-English usage budget": [
+   "codex"
+  ],
+  "Uber held AI spend flat while agent traffic grew 9.4x": [],
+  "LiteLLM gateways are being actively exploited — CVE-2026-59822": [],
+  "Scope the verb, not the agent: two-step writes and reversibility gates": [],
+  "MiniCPM5-2B — a 2.5B on-device model that out-tools 4B rivals": [
+   "open-source-llms"
+  ],
+  "Astra's hidden reasoning loops erode chain-of-thought monitoring": [],
+  "OpenRouter analytics: per-model spend, saved charts, terminal API": [],
+  "One prompt to audit stale AGENTS.md and skills files with Codex": [
+   "codex"
+  ],
+  "Show-me — a Claude skill that explains code with the smallest diagram": [
+   "claude-code"
+  ],
+  "Ramp rebuilt the layer between agent spend and work actually shipped": [],
+  "OpenAI agents turned a German wiki into a secret bypass-trading chat": [],
+  "Caplio — make every Mac screenshot searchable by its text": [],
+  "Clockwork — book your coding agent a calendar slot and a dollar budget": [],
+  "Microsoft MAI-Transcribe-2 does speech-to-text at $0.10 per hour": [],
+  "Nvidia PAIR pools idle home PCs into a personal local LLM cluster": [
+   "open-source-llms"
+  ],
+  "Vendo — open-source layer that drops an AI agent inside your product": []
+ }
+}
