@@ -1,11 +1,67 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-10-12"
-updated: "2026-10-12"
-sources: "Product Hunt Weekly, The Code, The Frontier, Future Tools, Superhuman AI, OpenRouter Team, The Economist, Superhuman AI · Sunday Special"
+updated: "2026-10-13"
+sources: "The Code, Product Hunt Weekly, The Frontier, Future Tools, Superhuman AI, OpenRouter Team, The Economist, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**159. DigUp searches your Mac by meaning with a local embedding model**
+*🔒 Privacy & local tooling*
+*🗞 The Code · 2026-10-12 22:02 KST — ["Solo developers are using AI to clone big tech software"](newsletters/2026-10-12_newsletter_the_code.md#solo-developers-are-using-ai-to-clone-big-tech-software)*
+
+DigUp is an open-source Mac app that runs Google's EmbeddingGemma 2 locally and searches your files by meaning instead of filename, so the index never leaves the machine — the local-first sibling of something like Linkly. The same paragraph carries the week's other single-developer story: a dev used Claude Opus 5.5 to build and ship WordCraft, GridCraft and DeckCraft, open-source Rust clones of Word, Excel and PowerPoint, which is more a datapoint on how fast one person can build than a suite worth switching to.
+
+- [DigUp — r/LocalLLaMA post](https://www.reddit.com/r/LocalLLaMA/comments/1x2eeds/opensource_mac_app_that_runs_embeddinggemma_2/)
+- [The Code — searching files by meaning](https://archive.codenewsletter.ai/2109044337367540102)
+- [The Office clones write-up](https://startupfortune.com/developer-builds-free-open-source-clones-of-word-excel-and-powerpoint/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**158. REA hands Claude Code the tools to reverse-engineer any app**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-12 22:02 KST — ["How to reverse engineer any app with Claude Code"](newsletters/2026-10-12_newsletter_the_code.md#how-to-reverse-engineer-any-app-with-claude-code)*
+
+REA (Reverse Engineer Anything) is an open-source toolkit that hit #1 on GitHub's daily trending: it gives Claude Code or Codex the tools to take apart a desktop app, a website or an Android app, then help you build your own version of a feature. Setup is `npx rea-agents setup`, pick your agent, restart it, then send the investigation prompt from the issue — which asks the agent to identify the program type, back every finding with evidence (file, function, address) and keep observations separate from guesses before proposing the minimum pieces you would need. The issue's own caveat: your own software, open source, or something whose terms permit reverse engineering.
+
+- [The Code — REA write-up](https://archive.codenewsletter.ai/2109297975013081587)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**157. Insomnia keeps the Mac awake so coding agents finish the run**
+*🛠️ Mac utilities worth a look*
+*🗞 The Code · 2026-10-12 22:02 KST — ["Insomnia (1k ⭐)"](newsletters/2026-10-12_newsletter_the_code.md#insomnia)*
+
+A menu-bar app that starts a timed session and holds the Mac awake while coding agents work — including with the lid closed, which a plain caffeinate does not give you. It watches battery and temperature during the session and tries to restore everything when the session ends, so you are not left with a machine pinned awake forever. Open source, 1k stars.
+
+- [Insomnia — GitHub (krishhgg/Insomnia)](https://github.com/krishhgg/Insomnia)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**156. Microsoft-Decision-1 scores fixed options for $0.042 per million tokens**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-10-12 22:02 KST — ["Microsoft joins the decision model race"](newsletters/2026-10-12_newsletter_the_code.md#microsoft-joins-the-decision-model-race)*
+
+Microsoft's Decision-1 builds on Alibaba's Qwen, takes a 32K-token context and does one job: score a fixed set of options and assign each a calibrated probability — the shape you want for routing, triage or grading rather than chat. Microsoft claims 83.5% accuracy across a 36-benchmark comparison while running 35x faster than GPT-6 Sol; H2O AI has already pushed back on how that speed was measured. Pricing is the interesting part: $0.042 per million input tokens with no output charge, callable from Azure AI Foundry. Same issue notes OpenAI's own new Decisions API being used for a novelty app that pauses the TV when a kid sucks a thumb, so the decision-model tier now has two vendors.
+
+- [Microsoft — Decision-1 in Foundry](https://commandline.microsoft.com/microsoft-decision-1-model-foundry/)
+- [Azure AI Foundry — try it](https://ai.azure.com/catalog/models/Microsoft-Decision-1)
+- [H2O AI — model behind the speed rebuttal](https://huggingface.co/h2oai/h2o-lightning-4b)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **155. ClawCall works the phone tree and reports back to your agent**
 *🏗️ Agent plumbing & production stacks*
