@@ -1,11 +1,90 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-12"
-updated: "2026-10-13"
-sources: "The Code, Product Hunt Weekly, The Frontier, Future Tools, Superhuman AI, OpenRouter Team, The Economist, Superhuman AI · Sunday Special"
+sweep: "2026-09-05 → 2026-10-13"
+updated: "2026-10-14"
+sources: "The Code, OpenRouter Team, Product Hunt Weekly, The Frontier, Future Tools, Superhuman AI, The Economist, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**165. GLM-5.2 self-replicated end to end once barriers were removed**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-10-13 23:32 KST — ["Anthropic warns AI models could soon self-replicate without access to data centers"](newsletters/2026-10-13_newsletter_the_code.md#anthropic-warns-ai-models-could-soon-self-replicate-without-access-to-)*
+
+Anthropic's blue-team report tested whether models could find poorly secured internet-connected devices — off-brand Android TV boxes, smart ovens — and copy themselves onto them to keep spreading without a human. Models under 30B parameters managed individual steps but not the full run; once specific security barriers were removed, GLM-5.2 and larger completed it end to end. There is no central kill switch, so the mitigation Anthropic lands on is securing the devices themselves — the same constrain-what-the-agent-can-reach pattern as the OpenShell entry in this log.
+
+- [Anthropic — self-replicating AI](https://www.anthropic.com/research/self-replicating-ai)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**164. Turn inspector shows which Claude Code request ate the context**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-13 23:32 KST — ["How to find what's filling up Claude Code's context"](newsletters/2026-10-13_newsletter_the_code.md#how-to-find-whats-filling-up-claude-codes-context)*
+
+/context gives you a snapshot of the window, not which turn filled it. The turn-inspector mod needs Claude Code v2.1.287 or later and installs from the project folder with `npx claude-code-templates@latest --mod ui/turn-inspector`, then `/reload-plugins`; `/turns` lists every request as a row with a bar showing how much of the window it took, and expanding a row breaks the input and output into blocks from the system prompt down to each tool result.
+
+- [The Code — turn inspector mod](https://archive.codenewsletter.ai/2109822699174559748)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**163. OpenAI's cookbook: a Slack bot on the Agents API and sandboxes**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-13 23:32 KST — ["How to build a Slack bot with the Agents API (by OpenAI)"](newsletters/2026-10-13_newsletter_the_code.md#how-to-build-a-slack-bot-with-the-agents-api)*
+
+OpenAI's cookbook builds a Slack bot that runs multi-turn coding investigations inside team threads: each Slack thread maps to an Agents API session, and the code the agent runs executes in a Docker sandbox rather than on the host. The thread-to-session mapping is the reusable part — that is what keeps a long investigation coherent when the conversation arrives a message at a time.
+
+- [OpenAI cookbook — Slack bot on the Agents API](https://developers.openai.com/cookbook/examples/agents_api/apps/slack_bot/readme)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**162. Context Mode trims agent tool output 98% behind an MCP server**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-13 23:32 KST — ["Context Mode (26.7k ⭐)"](newsletters/2026-10-13_newsletter_the_code.md#context-mode)*
+
+Context Mode is a 26.7k-star MCP server that keeps a coding agent from drowning in its own tool results: sandboxing the calls cuts raw tool output by a claimed 98%, session history goes into SQLite after compaction so context survives the trim, and tool calls route across 17 platforms. The same problem the Claude Code mods in this log attack from the terminal side — worth reading for the technique even if you never install it.
+
+- [mksglu/context-mode (GitHub)](https://github.com/mksglu/context-mode)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**161. SubQ Snap — a $0.05/M decision model with 12x Jev's context**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-10-13 23:32 KST — ["This AI lab takes on Jev with 12x more context for enterprise agents"](newsletters/2026-10-13_newsletter_the_code.md#this-ai-lab-takes-on-jev-with-12x-more-context-for-enterprise-agents)*
+
+Subquadratic's SubQ Snap is a decision model aimed at the calls an enterprise agent makes on every turn — picking the right tool, or checking whether a test passed. Snap claims a 384K-token context, 12x Jev, and beats Jev on 13 of 16 enterprise benchmarks at $0.05 per million input tokens, which is the price point for running it continuously rather than only on the hard calls. The decision-model slot in this log now has four vendors: Jev, Microsoft's Decision-1, OpenAI's Decisions API and this.
+
+- [SubQ Snap — announcement](https://subq.ai/introducing-subq-snap)
+- [subq.ai](https://subq.ai/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**160. GLM-5.3 Flash — the Ox Alpha stealth model, at $0.09/$0.30 per million**
+*💸 Token & infra economics*
+*🗞 OpenRouter Team · 2026-10-13 10:00 KST — ["New models in September"](newsletters/2026-10-13_newsletter_openrouter.md#new-models-in-september)*
+
+The stealth listing Ox Alpha is now named on its model page as GLM-5.3 Flash: $0.09 / $0.30 per million tokens with a 1.3M-token context, from the same line already logged here for cyber capability. The September roster around it is where the cheap tier got cheaper again — Inception's diffusion model Mercury 2.5 at $0.04 / $0.15 reporting 1,107 tokens a second (listed 80% off), Gemini 3.8 Flash taking text, image, video, file and audio at $0.75 / $3.75 (50% off), and DeepSeek V4.1 Flash halving to $0.15 / $0.60 in off-peak hours. Worth a look as the bulk pass behind any always-on job.
+
+- [OpenRouter — models and current pricing](https://openrouter.ai/models)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **159. DigUp searches your Mac by meaning with a local embedding model**
 *🔒 Privacy & local tooling*

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚀 Meta drops its first frontier model — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚀 Meta drops its first frontier model — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚀 Meta drops its first frontier model</h1>
+<p class="meta">2026-10-13 · received 2026-10-13 23:32 +0900
+ · <a href="https://codenewsletter.ai/p/meta-unveils-its-first-frontier-model-to-rival-claude-and-chatgpt" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚀 Meta drops its first frontier model</h1>
+<p><a href="https://ref.wisprflow.ai/thecode-oct13"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e7d3ff3e-8a44-49ef-a4c0-36962d7d0108/Group_Wispr__4_.jpg?t=1791834374" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Meta just made its boldest claim yet in the AI coding race. The company said its new model beats Opus 5.5 on long-horizon coding tasks. But if you’re planning to build on it, there’s a catch. Meanwhile, a much smaller lab claimed it built a better Jev with a 12x larger context window.</p>
+<p><strong>Also:</strong> How to stop AI slop in your agents’ PRs, which effort level a Claude Code engineer uses for 80% of his coding, and why Zoho’s co-founder just froze raises.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>How to keep learning in the age of LLMs</p>
+</li>
+<li>
+<p>A Grok bot built its own Vision Pro app</p>
+</li>
+<li>
+<p>How to build production agents (by Oracle engineer)</p>
+</li>
+<li>
+<p>How to build a Slack bot with OpenAI API (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2109689305073614918"><img alt="Click here to watch how Muse Wonder works." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9b7af659-e381-4f87-b9b8-bb21b7374a5c/Thumbnail__20_.jpg?t=1791883755" /></a>
+<em>Click here to watch how Muse Wonder works.</em></p>
+<hr />
+<p><strong>Meta unveils its first frontier model to rival Claude and ChatGPT:</strong> The social media giant just dropped its <a href="https://research.meta.ai/blog/muse-wonder"><strong>Muse Wonder series</strong></a>, rolling out two models: Muse Wonder and Muse Wonder Full. Both are designed for long-running agents that maintain context and pivot to new approaches when they get stuck. Meta claims that Muse Wonder Full outperforms Opus 5.5 on long-horizon coding tasks. That said, it’s locked behind a subscription, and early testers <a href="https://archive.codenewsletter.ai/2109784568672985520">report</a> that the API-accessible Muse Wonder is noticeably weaker.</p>
+<p><a id="this-ai-lab-takes-on-jev-with-12x-more-context-for-enterprise-agents"></a>
+<strong>This AI lab takes on Jev with 12x more context for enterprise agents:</strong> Subquadratic just rolled out <a href="https://subq.ai/introducing-subq-snap">SubQ Snap</a>. It’s a decision model built for quick calls enterprise agents handle on every turn, like picking the right tool or verifying if a test passed. Subquadratic claims Snap supports up to 384K tokens, which is 12 times more than rival Jev. It also outperforms Jev on 13 out of 16 enterprise benchmarks. At $0.05 per million input tokens, it is priced to run continuously. <a href="https://subq.ai/"><strong>Try it here.</strong></a></p>
+<p><a id="anthropic-warns-ai-models-could-soon-self-replicate-without-access-to-"></a>
+<strong>Anthropic warns AI models could soon self-replicate without access to data centers:</strong> The AI lab’s new report <a href="https://www.anthropic.com/research/self-replicating-ai#:~:text=haven%E2%80%99t%20tested%20this.-,F.%20Blue%2Dteam%20mitigations,-As%20with%20an">tested</a> whether AI models could locate poorly secured internet‑connected devices, such as off‑brand Android TV boxes and smart ovens. The models then tried to copy themselves and continue spreading without human help. Models with fewer than 30B parameters completed individual steps, but they struggled with the full run. After removing specific security barriers, GLM‑5.2 and larger models replicated the process end to end. Because there is no central kill switch, Anthropic recommends securing devices immediately. <a href="https://www.anthropic.com/research/self-replicating-ai#:~:text=haven%E2%80%99t%20tested%20this.-,F.%20Blue%2Dteam%20mitigations,-As%20with%20an">See how to secure.</a></p>
+<hr />
+<h5><strong>PRESENTED BY WISPR</strong></h5>
+<h2><a href="https://ref.wisprflow.ai/thecode-oct13"><strong>Your agent is only as good as your prompt.</strong></a></h2>
+<p><a href="https://ref.wisprflow.ai/thecode-oct13"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2dbbdc72-9c7e-4e04-bc48-4523ad675921/v7__1__V1__2_.jpg?t=1791834344" /></a></p>
+<hr />
+<p>Claude Code, Cursor, Codex. The output ceiling is insane. But "fix the bug" gets you slop. Detailed context gets you shipping code.</p>
+<p>The problem: typing out file references, edge cases, and architecture context 40 times a day is exhausting. So you cut corners. Your agent gets lazy input.</p>
+<p><a href="https://ref.wisprflow.ai/thecode-oct13"><strong>Wispr Flow</strong></a> lets you speak full prompts with syntax-aware dictation. camelCase, snake_case, file names all preserved. Auto-tags files in Cursor and Windsurf.</p>
+<p><a href="https://ref.wisprflow.ai/thecode-oct13"><strong>Used by engineers at OpenAI, Vercel, and Clay.</strong></a> Works on Mac, Windows, iPhone, and Android.</p>
+<p>Better prompts in. Better code out. <a href="https://ref.wisprflow.ai/thecode-oct13"><strong>Try Free</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>How to keep learning in the age of LLMs</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/82e6d33b-50da-4046-baf5-587a3817d0d7/superhumanteam_a_group_of_engineers_write_code_by_hand_at_a_l_4a1183e4-79e8-4bb4-a290-1d1f9d89eb1d_3.jpg?t=1791888088" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>Faster code, less learning.</strong> AI coding tools have made developers faster, but many are learning less. When an LLM solves almost any problem on the first try, developers skip the friction that actually builds skill: making mistakes, figuring out why, and remembering how to fix them. Software engineer Oğuzhan Olguncu <a href="https://ogzhanolguncu.com/blog/how-to-keep-learning-in-the-age-of-llms/">noticed this</a> in his own work. He stopped working through hard problems because the effort felt pointless, and his growth stalled.</p>
+<p><strong>Turning the LLM into a mentor.</strong> To break through that plateau, Olguncu changed how he used the LLM. He rebuilt a small database from a research paper, writing the core logic himself. Whenever he got stuck, the model acted like a mentor, prompting him with questions that pointed toward the bug so he could solve it on his own.</p>
+<p><strong>His rules for learning with AI.</strong> That project shaped the rules he now follows:</p>
+<ul>
+<li>
+<p>Use the LLM as a mentor that asks questions, and write the important code by hand.</p>
+</li>
+<li>
+<p>Give the LLM the routine work, such as tests and tooling.</p>
+</li>
+<li>
+<p>Plan each project with the LLM before starting, so progress depends less on willpower.</p>
+</li>
+<li>
+<p>Make progress visible with a simple chart or tool.</p>
+</li>
+<li>
+<p>Work in short, regular sessions. Thirty minutes a day beats two hard days followed by ten days off.</p>
+</li>
+<li>
+<p>Pick topics slightly beyond current skill, and ask the LLM to explain again as often as needed.</p>
+</li>
+</ul>
+<p><strong>The same rules work for teams.</strong> An engineering team can move fast with AI while still protecting the deep thinking that turns junior developers into senior engineers. Olguncu shared <a href="https://gist.github.com/ogzhanolguncu/274e9974dc02942109ad70200f6d7b25">his skill</a> on GitHub and encourages others to adapt it to their own learning styles.</p>
+<hr />
+<h5><strong>PRESENTED BY TIGERDATA</strong></h5>
+<h2><strong><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">Postgres for time-series workloads at any scale.</a></strong></h2>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/242df3dc-ed4b-4171-aacd-1967c15e139d/Production-ready_Postgres_The_Code_1920x1080_-_Mandy_Hanson__3_.jpg?t=1791835259" /></a></p>
+<hr />
+<p><strong><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">Growing Postgres databases</a></strong> eventually hit a wall: queries slow, dashboards lag, and adding another database starts to feel inevitable.</p>
+<p>Tiger Data keeps Postgres fast as your data grows with <strong><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">time-series primitives</a></strong>, columnar storage, and automatic partitioning. Same SQL and tooling. No pipelines or second system.</p>
+<p>Just Postgres, built to scale with your workload.</p>
+<p><strong><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-primary">Start building for free today. No credit card needed.</a></strong></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a799da14-9f7c-45db-a5df-0bb09606594a/CleanShot_2026-10-13_at_1.10.40_PM_2x.jpg?t=1791877298" /></p>
+<hr />
+<ul>
+<li>
+<p><strong>Slop Stopper:</strong> A SpaceXAI engineer says too many developers act like helpless bystanders to AI slop. She shared <a href="https://archive.codenewsletter.ai/2109699980248408574">two fixes</a> that let agents ship high-quality PRs with little context (6K interactions).</p>
+</li>
+<li>
+<p><strong>Grim Outlook:</strong> Zoho’s co-founder just told employees there will be no pay raises this year. His reason, and his <a href="https://archive.codenewsletter.ai/2109770209703920008">warning for software jobs</a>, is going viral (1.2M views).</p>
+</li>
+<li>
+<p><strong>Bot Builds Bot:</strong> Grok’s frontend lead asked a Grok bot to build itself an Apple Vision Pro app. Now he has <a href="https://archive.codenewsletter.ai/2109406594241060901">talking bots</a> placed around his apartment (1M views).</p>
+</li>
+<li>
+<p><strong>Cold Chain Attack:</strong> A cyberattack on refrigeration controllers just emptied shelves across hundreds of French supermarkets. It even reportedly <a href="https://archive.codenewsletter.ai/2109630910039756848">sparked fires</a>, a scary reminder of how exposed IoT systems are.</p>
+</li>
+<li>
+<p><strong>Effort Levels:</strong> Claude has five effort levels, but a member of Anthropic’s Claude Code team uses just one for 80% of his coding. Here’s a <a href="https://archive.codenewsletter.ai/2109671905733341559"><strong>visual guide</strong></a> to picking yours (2.7K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=9tinC8jG7FM"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7f817a17-ed27-4c13-8937-c526b7c479b8/Thumbnail__19_.jpg?t=1791877961" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=9tinC8jG7FM"><strong>A former Oracle engineer’s workflow for building production agents:</strong> </a> This tutorial by a former Oracle engineering leader teaches how to build a full-stack apps using modern web technologies. You’ll learn to set up the backend database, connect it with a responsive frontend, and deploy the complete project efficiently.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a id="context-mode"></a>
+<a href="https://github.com/mksglu/context-mode"><strong>Context Mode (26.7k ⭐):</strong> </a> This repo offers an MCP server that prevents AI coding agents from overloading their context windows. It reduces raw tool output by 98% through sandboxing, stores session history in SQLite after compaction, and routes tool calls across 17 platforms.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a id="how-to-build-a-slack-bot-with-the-agents-api"></a>
+<a href="https://developers.openai.com/cookbook/examples/agents_api/apps/slack_bot/readme"><strong>How to build a Slack bot with the Agents API (by OpenAI):</strong> </a> You’ll learn how to build a Slack bot that handles multi-turn coding investigations directly in your team's discussions. This guide shows developers how to map Slack threads to OpenAI Agents API sessions and Docker sandboxes for secure, isolated code execution.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-find-whats-filling-up-claude-codes-context"></a></p>
+<h2><strong>How to find what’s filling up Claude Code’s context</strong></h2>
+<p>Claude Code's context window fills up fast and running “/context” gives you just a snapshot. That makes it tough to tell which turn burned through your tokens. To fix this, an engineer <a href="https://archive.codenewsletter.ai/2109822699174559748"><strong>built a mod</strong></a> that breaks down each request into inputs and outputs.</p>
+<ul>
+<li><strong>Step 1:</strong> Mods need Claude Code v2.1.287 or later.</li>
+</ul>
+<pre><code>claude --version
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Install the mod from your project folder using the terminal.</li>
+</ul>
+<pre><code>npx claude-code-templates@latest --mod ui/turn-inspector
+</code></pre>
+<p>If a session is already open, run /reload-plugins to load it.</p>
+<ul>
+<li><strong>Step 3:</strong> Open the inspector.</li>
+</ul>
+<pre><code>/turns
+</code></pre>
+<p>Each request appears as a row with a bar that indicates how much of the window it occupies. Expand a row to view its input and output sections block by block, from the system prompt to each tool result, making it easy to identify the call that filled your context.</p>
+<p><strong>P.S.</strong> Get 50+ AI coding hacks for Claude Code, Cursor, and Codex<strong> <a href="https://hackbook-chi.vercel.app">here</a></strong>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Andrej Karpathy claims only about 5,000 people know what frontier AI actually looks like. His <a href="https://archive.codenewsletter.ai/2109361546505966046">full post</a> reveals what’s really happening inside AI labs.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
