@@ -1,13 +1,133 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-13"
+sweep: "2026-09-05 → 2026-10-15"
 updated: "2026-10-15"
-sources: "The Code, OpenRouter Team, Product Hunt Weekly, The Frontier, Future Tools, Superhuman AI, The Economist, Superhuman AI · Sunday Special"
+sources: "Future Tools, The Code, The Frontier, OpenRouter Team, Product Hunt Weekly, Superhuman AI, The Economist, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**165. GLM-5.2 self-replicated end to end once barriers were removed**
+**173. Clipy records your screen so agents can read the bug**
+*🛠️ Mac utilities worth a look*
+*🗞 Future Tools · 2026-10-15 01:06 KST — ["Make Screen Recordings Agent-Readable"](newsletters/2026-10-15_newsletter_future_tools.md#make-screen-recordings-agent-readable)*
+
+Clipy is an agent-readable screen recorder for dev workflows: record a bug, UI feedback or a walkthrough once and it produces a summary, a transcript, key-moment frames and click context, then hands it to Claude Code, Cursor or Codex as a link. Browser, Mac app and Chrome extension. Paid — it removes the 'let me explain what I just saw' step between you and the agent.
+
+- [Clipy](https://clipy.online/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**172. boat rents persistent Ubuntu sandboxes that agents can own**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Future Tools · 2026-10-15 01:06 KST — ["Run Cloud Sandboxes for AI Agents"](newsletters/2026-10-15_newsletter_future_tools.md#run-cloud-sandboxes-for-ai-agents)*
+
+boat is a cloud sandbox platform for AI agents and programmatic workflows: persistent Ubuntu VMs with SSH/SCP, Docker support, a dedicated IP address, a virtual desktop and disk-level forking from snapshots. It works with Claude Code, Codex and OpenCode, and is drivable from an SDK, API or CLI. Paid — the trade is a real machine per agent job without babysitting local VMs.
+
+- [boat.dev](https://boat.dev/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**171. Gemini 4 Argon opens to every developer at $2/M input**
+*💸 Token & infra economics*
+*🗞 Future Tools · 2026-10-15 01:06 KST — ["Google opens Gemini 4 Argon to developers, targeting complex coding and cybersecurity workflows."](newsletters/2026-10-15_newsletter_future_tools.md#google-opens-gemini-4-argon-to-developers-targeting-complex-coding-and)*
+*🗞 The Code · 2026-10-14 23:32 KST — ["Google unveils its new flagship model to every developer"](newsletters/2026-10-14_newsletter_the_code.md#google-unveils-its-new-flagship-model-to-every-developer)*
+
+Gemini 4 Argon is now live for every developer through the Gemini API, AI Studio and Antigravity, with responses up to 1M tokens and introductory pricing from $2 per million input tokens. Google says Argon lifted internal agentic code submissions by over 35% while cutting rollbacks by nearly a third. It is now callable from your own harness, so the comparison that matters — Argon against your Claude Code / Codex runs at that price — can be run this week.
+
+- [Gemini 4 Argon announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**170. diff-tour turns a git diff into a guided senior-engineer walkthrough**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-14 23:32 KST — ["How to read AI-written code like a senior engineer"](newsletters/2026-10-14_newsletter_the_code.md#how-to-read-ai-written-code-like-a-senior-engineer)*
+
+Install diff-tour and run `tour` inside a repo: Claude Code (or Codex CLI / Gemini CLI) reads the branch diff with read-only access for 2-5 minutes and writes an interactive walkthrough — what the change is for, must-fix split from nice-to-have, and questions asked before answers are shown. Arrow keys move through it, `?` asks your own, and the must-fix list pastes straight back into Claude Code with an explicit wait-for-OK instruction. It targets exactly the gap between how fast an agent writes multi-file changes and how fast you can sign off.
+
+- [diff-tour on GitHub](https://github.com/init-co-jp/diff-tour)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**169. OpenQodex reviews your code with your own Claude Code login, for $0**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-14 23:32 KST — ["OpenQodex: An open source AI code reviewer"](newsletters/2026-10-14_newsletter_the_code.md#openqodex-an-open-source-ai-code-reviewer)*
+
+OpenQodex is an open-source AI code reviewer for the pre-push step: 100+ scanners plus an AI reviewer that investigates every finding using your own Claude Code or Codex login. The pitch is the same coverage as a roughly $60 per-developer review tool, for $0 — and because it rides the login you already have, there is nothing new to provision. Forkable, so it can go into a pre-push hook or CI on your own terms.
+
+- [OpenQodex on GitHub](https://github.com/openqodex/openqodex)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**168. Together Link points your existing coding harness at open models**
+*🧠 Open / efficient / local models*
+*🗞 The Frontier · 2026-10-14 06:37 KST — ["Together Link — Use open models in your harness"](newsletters/2026-10-14_newsletter_the_frontier.md#together-link-use-open-models-in-your-harness)*
+
+Together Link is a launch for using open models inside the harness you already run — the agent and workflow stay put, the model call goes to open weights instead of a frontier API (▲188 on Product Hunt, open source). The lever is per-task cost: route the cheap steps to open models and keep the frontier model for the hard ones.
+
+- [Together Link on Product Hunt](https://www.producthunt.com/posts/together-link)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**167. Ghost Core — a personal AI computer that runs entirely on-device**
+*🔒 Privacy & local tooling*
+*🗞 The Frontier · 2026-10-14 06:37 KST — ["Ghost Core — A personal AI computer that runs entirely on-device"](newsletters/2026-10-14_newsletter_the_frontier.md#ghost-core-a-personal-ai-computer-that-runs-entirely-on-device)*
+
+Ghost Core is pitched as a personal AI computer that runs entirely on-device: local models, local data, no cloud round-trip for the assistant itself (▲181 on Product Hunt, hardware category). It overlaps your existing local-Ollama setup, packaged as an appliance — the question worth asking is whether it is open enough to load your own models.
+
+- [Ghost Core on Product Hunt](https://www.producthunt.com/posts/ghost-core)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**166. Cekura Bench scores speech-to-speech models on live phone calls**
+*🗣️ Voice · TTS & STT*
+*🗞 The Frontier · 2026-10-14 06:37 KST — ["Cekura Bench — Speech-to-speech model benchmarks on live phone calls"](newsletters/2026-10-14_newsletter_the_frontier.md#cekura-bench-speech-to-speech-model-benchmarks-on-live-phone-calls)*
+
+Cekura Bench benchmarks speech-to-speech models on live phone calls rather than clean clips — which is where voice agents actually fail: latency, interruptions, turn-taking, task completion. Useful ground truth before picking a model for a phone or dictation agent instead of trusting vendor demos (▲168 on Product Hunt, listed under SaaS).
+
+- [Cekura Bench on Product Hunt](https://www.producthunt.com/posts/cekura-bench)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**165. EmbeddingGemma 2 — a 740M open model for offline RAG embeddings**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Frontier · 2026-10-14 06:37 KST — ["Google's new embedding model puts video, audio, images, code and text in one shared space."](newsletters/2026-10-14_newsletter_the_frontier.md#googles-new-embedding-model-puts-video-audio-images-code-and-text-in-o)*
+*🗞 The Code · 2026-10-07 23:08 KST — ["Google unveils two major updates for your tech stack"](newsletters/2026-10-07_newsletter_the_code.md#google-unveils-two-major-updates-for-your-tech-stack)*
+
+Google's EmbeddingGemma 2 is a 740M-parameter open model that turns text, code, images, audio and video into embeddings locally, so search and RAG pipelines can run offline and internal documents never leave the machine. Google shipped a developer guide for wiring it into knowledge-based tools, and the weights are downloadable.
+
+- [EmbeddingGemma 2 (Google blog)](https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/)
+- [Developer guide](https://developers.googleblog.com/en/embeddinggemma-2-the-developer-guide/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**164. GLM-5.2 self-replicated end to end once barriers were removed**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-10-13 23:32 KST — ["Anthropic warns AI models could soon self-replicate without access to data centers"](newsletters/2026-10-13_newsletter_the_code.md#anthropic-warns-ai-models-could-soon-self-replicate-without-access-to-)*
 
@@ -20,7 +140,7 @@ Anthropic's blue-team report tested whether models could find poorly secured int
 
 ---
 
-**164. Turn inspector shows which Claude Code request ate the context**
+**163. Turn inspector shows which Claude Code request ate the context**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-13 23:32 KST — ["How to find what's filling up Claude Code's context"](newsletters/2026-10-13_newsletter_the_code.md#how-to-find-whats-filling-up-claude-codes-context)*
 
@@ -33,7 +153,7 @@ Anthropic's blue-team report tested whether models could find poorly secured int
 
 ---
 
-**163. OpenAI's cookbook: a Slack bot on the Agents API and sandboxes**
+**162. OpenAI's cookbook: a Slack bot on the Agents API and sandboxes**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-13 23:32 KST — ["How to build a Slack bot with the Agents API (by OpenAI)"](newsletters/2026-10-13_newsletter_the_code.md#how-to-build-a-slack-bot-with-the-agents-api)*
 
@@ -46,7 +166,7 @@ OpenAI's cookbook builds a Slack bot that runs multi-turn coding investigations 
 
 ---
 
-**162. Context Mode trims agent tool output 98% behind an MCP server**
+**161. Context Mode trims agent tool output 98% behind an MCP server**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-13 23:32 KST — ["Context Mode (26.7k ⭐)"](newsletters/2026-10-13_newsletter_the_code.md#context-mode)*
 
@@ -59,7 +179,7 @@ Context Mode is a 26.7k-star MCP server that keeps a coding agent from drowning 
 
 ---
 
-**161. SubQ Snap — a $0.05/M decision model with 12x Jev's context**
+**160. SubQ Snap — a $0.05/M decision model with 12x Jev's context**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-13 23:32 KST — ["This AI lab takes on Jev with 12x more context for enterprise agents"](newsletters/2026-10-13_newsletter_the_code.md#this-ai-lab-takes-on-jev-with-12x-more-context-for-enterprise-agents)*
 
@@ -73,7 +193,7 @@ Subquadratic's SubQ Snap is a decision model aimed at the calls an enterprise ag
 
 ---
 
-**160. GLM-5.3 Flash — the Ox Alpha stealth model, at $0.09/$0.30 per million**
+**159. GLM-5.3 Flash — the Ox Alpha stealth model, at $0.09/$0.30 per million**
 *💸 Token & infra economics*
 *🗞 OpenRouter Team · 2026-10-13 10:00 KST — ["New models in September"](newsletters/2026-10-13_newsletter_openrouter.md#new-models-in-september)*
 
@@ -86,7 +206,7 @@ The stealth listing Ox Alpha is now named on its model page as GLM-5.3 Flash: $0
 
 ---
 
-**159. DigUp searches your Mac by meaning with a local embedding model**
+**158. DigUp searches your Mac by meaning with a local embedding model**
 *🔒 Privacy & local tooling*
 *🗞 The Code · 2026-10-12 22:02 KST — ["Solo developers are using AI to clone big tech software"](newsletters/2026-10-12_newsletter_the_code.md#solo-developers-are-using-ai-to-clone-big-tech-software)*
 
@@ -101,7 +221,7 @@ DigUp is an open-source Mac app that runs Google's EmbeddingGemma 2 locally and 
 
 ---
 
-**158. REA hands Claude Code the tools to reverse-engineer any app**
+**157. REA hands Claude Code the tools to reverse-engineer any app**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-12 22:02 KST — ["How to reverse engineer any app with Claude Code"](newsletters/2026-10-12_newsletter_the_code.md#how-to-reverse-engineer-any-app-with-claude-code)*
 
@@ -114,7 +234,7 @@ REA (Reverse Engineer Anything) is an open-source toolkit that hit #1 on GitHub'
 
 ---
 
-**157. Insomnia keeps the Mac awake so coding agents finish the run**
+**156. Insomnia keeps the Mac awake so coding agents finish the run**
 *🛠️ Mac utilities worth a look*
 *🗞 The Code · 2026-10-12 22:02 KST — ["Insomnia (1k ⭐)"](newsletters/2026-10-12_newsletter_the_code.md#insomnia)*
 
@@ -127,7 +247,7 @@ A menu-bar app that starts a timed session and holds the Mac awake while coding 
 
 ---
 
-**156. Microsoft-Decision-1 scores fixed options for $0.042 per million tokens**
+**155. Microsoft-Decision-1 scores fixed options for $0.042 per million tokens**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-12 22:02 KST — ["Microsoft joins the decision model race"](newsletters/2026-10-12_newsletter_the_code.md#microsoft-joins-the-decision-model-race)*
 
@@ -142,7 +262,7 @@ Microsoft's Decision-1 builds on Alibaba's Qwen, takes a 32K-token context and d
 
 ---
 
-**155. ClawCall works the phone tree and reports back to your agent**
+**154. ClawCall works the phone tree and reports back to your agent**
 *🏗️ Agent plumbing & production stacks*
 *🗞 Product Hunt Weekly · 2026-10-12 02:29 KST — ["Your AI agent's phone to dial, hold, and reports back"](newsletters/2026-10-12_newsletter_product_hunt_weekly.md#your-ai-agents-phone-to-dial-hold-and-reports-back)*
 
@@ -155,7 +275,7 @@ Ask ChatGPT to cancel your gym membership and ClawCall dials, works the phone tr
 
 ---
 
-**154. Ghostifier finds who holds your data and files the deletions**
+**153. Ghostifier finds who holds your data and files the deletions**
 *🔒 Privacy & local tooling*
 *🗞 Product Hunt Weekly · 2026-10-12 02:29 KST — ["Companies have your data. Ghostifier gets them to delete it."](newsletters/2026-10-12_newsletter_product_hunt_weekly.md#companies-have-your-data-ghostifier-gets-them-to-delete-it)*
 
@@ -169,7 +289,7 @@ Ghostifier connects to Gmail, reads the headers to enumerate every company sitti
 
 ---
 
-**153. Marv — a cursor companion that points at the right control**
+**152. Marv — a cursor companion that points at the right control**
 *🛠️ Mac utilities worth a look*
 *🗞 Product Hunt Weekly · 2026-10-12 02:29 KST — ["An AI cursor companion that shows you what to click"](newsletters/2026-10-12_newsletter_product_hunt_weekly.md#an-ai-cursor-companion-that-shows-you-what-to-click)*
 
@@ -182,7 +302,7 @@ Hold a hotkey and ask, and Marv talks back out loud while drawing on top of what
 
 ---
 
-**152. Rill Browser puts Claude Code and Codex beside your tabs**
+**151. Rill Browser puts Claude Code and Codex beside your tabs**
 *🛠️ Mac utilities worth a look*
 *🗞 Product Hunt Weekly · 2026-10-12 02:29 KST — ["Rill Browser — The browser where Claude Code and Codex work beside you"](newsletters/2026-10-12_newsletter_product_hunt_weekly.md#rill-browser-the-browser-where-claude-code-and-codex-work-beside-you)*
 
@@ -195,7 +315,7 @@ A browser built so Claude Code and Codex run alongside your tabs instead of in a
 
 ---
 
-**151. Plan-progress mod tracks subagent runs with sound cues**
+**150. Plan-progress mod tracks subagent runs with sound cues**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-10 22:06 KST — ["How to track multi-task Claude Code plans visually"](newsletters/2026-10-10_newsletter_the_code.md#how-to-track-multi-task-claude-code-plans-visually)*
 
@@ -208,7 +328,7 @@ Once you approve a long plan and Claude hands parts of it to parallel subagents,
 
 ---
 
-**150. Cache countdown mod keeps your Claude Code session warm**
+**149. Cache countdown mod keeps your Claude Code session warm**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-10 22:06 KST — ["How to prevent token waste from cache timeouts"](newsletters/2026-10-10_newsletter_the_code.md#how-to-prevent-token-waste-from-cache-timeouts)*
 
@@ -221,7 +341,7 @@ Step away from a long session and the prompt cache expires, so the next one-line
 
 ---
 
-**149. Preview pasted screenshots inside Claude Code's terminal**
+**148. Preview pasted screenshots inside Claude Code's terminal**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-10 22:06 KST — ["How to preview pasted images in Claude Code"](newsletters/2026-10-10_newsletter_the_code.md#how-to-preview-pasted-images-in-claude-code)*
 
@@ -235,7 +355,7 @@ Paste two screenshots into a terminal session and the prompt shows only [Image #
 
 ---
 
-**148. Pair Haiku with an Opus advisor in Claude Code**
+**147. Pair Haiku with an Opus advisor in Claude Code**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-09 23:07 KST — ["How to pair Haiku with an Opus advisor in Claude Code"](newsletters/2026-10-09_newsletter_the_code.md#how-to-pair-haiku-with-an-opus-advisor-in-claude-code)*
 
@@ -248,7 +368,7 @@ Run Haiku for execution and let Opus act as an advisor the session calls only wh
 
 ---
 
-**147. Anthropic's cookbook for background agent automations**
+**146. Anthropic's cookbook for background agent automations**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-09 23:07 KST — ["How to build reliable agent automations (by Anthropic)"](newsletters/2026-10-09_newsletter_the_code.md#how-to-build-reliable-agent-automations)*
 
@@ -261,7 +381,7 @@ Anthropic's guide to scheduled background agents covers the parts that decide wh
 
 ---
 
-**146. Hard spend caps for agents — the case, and how to set them**
+**145. Hard spend caps for agents — the case, and how to set them**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-09 23:07 KST — ["Coding agents can spend money faster than anyone can stop them, and what to do about it"](newsletters/2026-10-09_newsletter_the_code.md#coding-agents-can-spend-money-faster-than-anyone-can-stop-them-and-wha)*
 
@@ -275,7 +395,7 @@ Simon Willison argues every pay-per-use API should ship with a hard monthly cap 
 
 ---
 
-**145. An eval playbook for anything you ship on an LLM**
+**144. An eval playbook for anything you ship on an LLM**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-08 23:07 KST — ["The eval playbook for anything you ship on an LLM"](newsletters/2026-10-08_newsletter_the_code.md#the-eval-playbook-for-anything-you-ship-on-an-llm)*
 
@@ -289,7 +409,7 @@ Senior engineer Sergii Makarevych's guide covers building repeatable evals: coll
 
 ---
 
-**144. Google's cookbook: when to load MCP tools, and when to delegate**
+**143. Google's cookbook: when to load MCP tools, and when to delegate**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-08 23:07 KST — ["When to load MCP tools (by Google):"](newsletters/2026-10-08_newsletter_the_code.md#when-to-load-mcp-tools-by-google)*
 
@@ -302,7 +422,7 @@ Google's cookbook walks the trade-off between loading every MCP tool upfront and
 
 ---
 
-**143. Claude Code's "You Should Know" plugin surfaces buried risks**
+**142. Claude Code's "You Should Know" plugin surfaces buried risks**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-08 23:07 KST — ["How to catch the risks buried in Claude Code's output"](newsletters/2026-10-08_newsletter_the_code.md#how-to-catch-the-risks-buried-in-claude-codes-output)*
 
@@ -315,27 +435,13 @@ Claude Code ends every task with a wall of summary text where the one line that 
 
 ---
 
-**142. Agent Scripts — shared rules and skills for Claude Code and Codex**
+**141. Agent Scripts — shared rules and skills for Claude Code and Codex**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-08 23:07 KST — ["Agent Scripts (7.3k ⭐):"](newsletters/2026-10-08_newsletter_the_code.md#agent-scripts-73k)*
 
 Peter Steinberger (OpenClaw) published Agent Scripts (7.3k ⭐), a repo packaging the shared rules, reusable skills and lightweight helpers he runs across his own agent workflows so Claude Code and Codex work from the same instructions. Directly useful if you keep multiple coding agents pointed at one instruction set — it is the pattern plus the actual files.
 
 - [Agent Scripts (GitHub)](https://github.com/steipete/agent-scripts)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**141. EmbeddingGemma 2 — a 740M open model for offline RAG embeddings**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-10-07 23:08 KST — ["Google unveils two major updates for your tech stack"](newsletters/2026-10-07_newsletter_the_code.md#google-unveils-two-major-updates-for-your-tech-stack)*
-
-Google's EmbeddingGemma 2 is a 740M-parameter open model that turns text, code, images, audio and video into embeddings locally, so search and RAG pipelines can run offline and internal documents never leave the machine. Google shipped a developer guide for wiring it into knowledge-based tools, and the weights are downloadable.
-
-- [EmbeddingGemma 2 (Google blog)](https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/)
-- [Developer guide](https://developers.googleblog.com/en/embeddinggemma-2-the-developer-guide/)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me

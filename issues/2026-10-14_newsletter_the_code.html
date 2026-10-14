@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 An employee bugged OpenAI’s execs — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 An employee bugged OpenAI’s execs — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 An employee bugged OpenAI’s execs</h1>
+<p class="meta">2026-10-14 · received 2026-10-14 23:32 +0900
+ · <a href="https://codenewsletter.ai/p/google-unveils-its-new-flagship-model-to-every-developer" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 An employee bugged OpenAI’s execs</h1>
+<p><a href="https://www.wiz.io/lp/the-unified-appsec-and-cloudsec-playbook?utm_source=the-code&amp;utm_medium=paid-email&amp;utm_campaign=FY27Q3_INB_FORM_unified-appsec-and-cloudsec-playbook&amp;sfcid=701Vh00000jUbEnIAK&amp;utm_term=FY27Q3-TheCode-nl-Oct&amp;utm_content=AppSec-CloudSec-Playbook"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2d8d5e40-035c-4cca-beec-9a8656ccbe5e/Group_Wiz.jpg?t=1791913251" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> For more than seven months, Google preferred faster models over more capable ones, but that changed yesterday. The search giant just dropped a new flagship model in its Gemini family that developers are talking about. Meanwhile, OpenAI put its models on detective duty after discovering corporate espionage in its research lab.</p>
+<p><strong>Also:</strong> How this AI company ships code without a code review, the new home gadget Apple’s CEO just revealed, and why Zoho’s co-founder told staff to reinvent themselves.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Why tech companies are building “internal vibe-coding apps”</p>
+</li>
+<li>
+<p>How GPT-5.6 Sol found a Chrome flaw worth $250K</p>
+</li>
+<li>
+<p>How senior engineers build with AI (tutorial)</p>
+</li>
+<li>
+<p>How to build an anti-slop software factory (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2110038898009407584"><img alt="Click here to see Gemini 4 Argon in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a2cc721-1b9c-44fa-990b-eba101e817e8/Thumbnail__22_.jpg?t=1791962872" /></a>
+<em>Click here to see Gemini 4 Argon in action.</em></p>
+<hr />
+<p><a id="google-unveils-its-new-flagship-model-to-every-developer"></a>
+<strong>Google unveils its new flagship model to every developer:</strong> The search giant just made <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">Gemini 4 Argon</a> available worldwide through the Gemini API, AI Studio, and Antigravity. It can generate up to 1M tokens per response, easily tackling complex, multi-step work across massive codebases. Internally, Google says Argon boosted agentic code submissions by over 35% while slashing rollbacks by nearly a third. Introductory pricing starts at $2 per million input tokens. <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">Try it here.</a></p>
+<p><strong>Agent-written code forces Anthropic to replace Git:</strong> The AI lab just revealed it replaced Git with Scion, an in-house version control system built specifically for agents. Daily merges surged from around 2.5K in May to more than 30K by September, pushing Git past its limits. A seven-person team managed to migrate the entire monorepo in five months. CI checkouts now take seconds instead of minutes. The company expects other engineering teams to hit the same scaling bottleneck within a year. <a href="https://www.anthropic.com/engineering/redesigning-source-control"><strong>Read the full breakdown here.</strong></a></p>
+<p><strong>OpenAI catches an employee planting a spy device in executive meetings:</strong> The ChatGPT maker <a href="https://archive.codenewsletter.ai/2110095403198849132">alerted</a> the FBI after finding a hidden recording device plugged into a conference room TV. According to prosecutors, an employee on the product team planted it. OpenAI analyzed the bug using its own models and found it was designed to dodge detection. So far, the company says there is no sign that model weights, source code, or customer data were compromised. <a href="https://www.youtube.com/watch?v=mbJcHevkYtc">Watch the entire story.</a></p>
+<hr />
+<h5><strong>PRESENTED BY WIZ</strong></h5>
+<h2><a href="https://www.wiz.io/lp/the-unified-appsec-and-cloudsec-playbook?utm_source=the-code&amp;utm_medium=paid-email&amp;utm_campaign=FY27Q3_INB_FORM_unified-appsec-and-cloudsec-playbook&amp;sfcid=701Vh00000jUbEnIAK&amp;utm_term=FY27Q3-TheCode-nl-Oct&amp;utm_content=AppSec-CloudSec-Playbook">Run AppSec and CloudSec as One</a></h2>
+<p><a href="https://www.wiz.io/lp/the-unified-appsec-and-cloudsec-playbook?utm_source=the-code&amp;utm_medium=paid-email&amp;utm_campaign=FY27Q3_INB_FORM_unified-appsec-and-cloudsec-playbook&amp;sfcid=701Vh00000jUbEnIAK&amp;utm_term=FY27Q3-TheCode-nl-Oct&amp;utm_content=AppSec-CloudSec-Playbook"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/65581438-e057-4752-805e-3d9eba8fbb23/wiz_playbook_1920x1080.jpg?t=1791913309" /></a></p>
+<hr />
+<p><a href="https://www.wiz.io/lp/the-unified-appsec-and-cloudsec-playbook?utm_source=the-code&amp;utm_medium=paid-email&amp;utm_campaign=FY27Q3_INB_FORM_unified-appsec-and-cloudsec-playbook&amp;sfcid=701Vh00000jUbEnIAK&amp;utm_term=FY27Q3-TheCode-nl-Oct&amp;utm_content=AppSec-CloudSec-Playbook">AppSec and CloudSec</a> were never meant to work apart.</p>
+<p>AI has collapsed the time between finding a flaw and exploiting it, and siloed security tools cannot keep up. This playbook shows how a single security graph connects code to cloud so your teams <a href="https://www.wiz.io/lp/the-unified-appsec-and-cloudsec-playbook?utm_source=the-code&amp;utm_medium=paid-email&amp;utm_campaign=FY27Q3_INB_FORM_unified-appsec-and-cloudsec-playbook&amp;sfcid=701Vh00000jUbEnIAK&amp;utm_term=FY27Q3-TheCode-nl-Oct&amp;utm_content=AppSec-CloudSec-Playbook">fix the risks that matter first</a>.</p>
+<p>See how a unified approach gives defenders the complete picture and the speed to stay ahead.</p>
+<p><a href="https://www.wiz.io/lp/the-unified-appsec-and-cloudsec-playbook?utm_source=the-code&amp;utm_medium=paid-email&amp;utm_campaign=FY27Q3_INB_FORM_unified-appsec-and-cloudsec-playbook&amp;sfcid=701Vh00000jUbEnIAK&amp;utm_term=FY27Q3-TheCode-nl-Oct&amp;utm_content=AppSec-CloudSec-Playbook"><strong>Get the Playbook</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Tech companies are building “internal vibe-coding apps.” Here’s why:</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7c0072f2-d2ba-4c45-9173-1a16fdc342d8/superhumanteam_a_group_of_office_workers_in_business_casual_s_e9b9d20e-0614-405c-9838-cd3b01e2d72d_1.jpg?t=1791976036" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>A new kind of in-house tool.</strong> A growing number of tech companies are building in-house AI app builders for non-technical employees. Gergely Orosz, a former Uber engineering manager and the writer behind the popular newsletter The Pragmatic Engineer, set out to <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-new-trend-of-building-internal">understand why</a>. He visited Ramp's New York office and looked into a similar tool at Stripe, uncovering a quiet shift in who builds software at work.</p>
+<p><strong>What he saw inside.</strong> At Ramp, nearly every non-engineer uses <a href="https://ramp.com/blog/introducing-glass">Glass</a>, the company’s own take on the AI app builder Lovable. Staff build tools for their own work, then share them so colleagues can use and change them. One marketer even built a custom CRM. Glass is now so central that building a simple tool in it is part of onboarding for new hires.</p>
+<p><strong>Why not just buy one?</strong> That raises an obvious question, since tools like Lovable and Replit already exist. For Orosz, the answer mostly comes down to control. An in-house tool can safely use company data that would be risky to share with an outside vendor, and it follows the company’s own design rules. It’s also cheap: Stripe’s version, <a href="https://stripe.dev/blog/harbor-stripes-ai-assisted-prototyping-tool">Harbor</a>, took one engineer about six weeks.</p>
+<p><strong>The payoff goes beyond the tool.</strong> Building these platforms also gives engineers hands-on AI experience, a skill that is tough to hire for right now. Factor in the low cost and high adoption, and Orosz expects plenty of tech companies to follow suit. For teams considering their own rollout, <a href="https://www.superblocks.com/blog/enterprise-grade-llm-applications">this </a><a href="https://www.superblocks.com/blog/enterprise-grade-llm-applications"><strong>practical guide</strong></a> walks through how to build internal AI tools, from picking an approach to reviewing what gets built.</p>
+<hr />
+<h5><strong>PRESENTED BY MAJOR</strong></h5>
+<h2><a href="https://major.build?utm_source=superhuman&amp;utm_campaign=the_code_3">Production grade DevOps for all the team's vibecode</a></h2>
+<p><a href="https://major.build?utm_source=superhuman&amp;utm_campaign=the_code_3"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/be124005-330f-43c9-937d-0e4f572bbe00/IMG_4469.png?t=1791913724" /></a></p>
+<hr />
+<p><a href="https://major.build?utm_source=superhuman&amp;utm_campaign=the_code_3">Vibecoded apps</a> handle critical work across your company today.</p>
+<p>Most of them are run locally, haven't cleared DevOps and touch production systems in ways you can't govern.</p>
+<p>Major puts real guardrails on every build: secrets management, SSO, CI/CD.
+Set once, enforced everywhere.</p>
+<p>Your team is free to build with AI, and you keep full visibility and control over what goes live.
+<a href="https://major.build?utm_source=superhuman&amp;utm_campaign=the_code_3"><strong>Book a demo</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1412894d-1b30-4375-bd23-46e2c55c1954/CleanShot_2026-10-14_at_12.43.09_PM_2x.jpg?t=1791962090" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>No Red Lights:</strong> AmpCode’s co-founder scrapped PRs and code reviews, so his team pushes straight to main. Here's <a href="https://archive.codenewsletter.ai/2110035978685747457"><strong>the setup</strong></a> that makes it work (1.6K bookmarks).</p>
+</li>
+<li>
+<p><strong>New Gadget:</strong> Apple’s CEO just revealed a new <a href="https://archive.codenewsletter.ai/2109995948407476369"><strong>smart display</strong></a> for your home. The first look shows a sleek screen sitting on top of a speaker (7.4M views).</p>
+</li>
+<li>
+<p><strong>Smart Investment:</strong> A security startup turned $40K of AI compute into a $250K reward from Google. GPT-5.6 Sol found a Chrome flaw that could have hit an estimated <a href="https://archive.codenewsletter.ai/2110063893016096831"><strong>1 billion users</strong></a> (7K interactions).</p>
+</li>
+<li>
+<p><strong>Hidden Threat:</strong> Zoho’s co-founder says AI boosts software output just 25% to 50% today. Still, he’s told staff to reinvent themselves, citing one <a href="https://archive.codenewsletter.ai/2110118670362161348"><strong>coming shift</strong></a> in how AI code gets checked.</p>
+</li>
+<li>
+<p><strong>Game On:</strong> Someone built a homemade cockpit, wires and all, to play a sci-fi combat game. Vibe coding and 3D printing could spark an <a href="https://archive.codenewsletter.ai/2109992256329646546">arcade revival</a>, says one viral post (16K likes).</p>
+</li>
+<li>
+<p><strong>Not Dead Yet:</strong> A former senior Meta engineer debunks the “software is dead” hype. Instead, he predicts a <a href="https://archive.codenewsletter.ai/2109879371058332062"><strong>three-part future</strong></a> for software (1.6K likes).</p>
+</li>
+<li>
+<p><strong>Weak Link:</strong> One stolen employee login reportedly let hackers into <a href="https://archive.codenewsletter.ai/2110064081550082158">Meta’s private GitHub</a>. They took source code plus personal data on about 1.5K people that never should have been stored there.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=H84vfy96m_k"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/255921a8-59c7-41c5-aeb0-750ec82b39f1/Thumbnail__21_.jpg?t=1791962312" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=H84vfy96m_k"><strong>How senior engineers build with AI (full Intercom clone):</strong> </a> You’ll learn how to build a full-stack Intercom clone from scratch using AI coding tools. You will learn to manage system architecture, write product requirement documents, and build working production apps.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a id="openqodex-an-open-source-ai-code-reviewer"></a>
+<a href="https://github.com/openqodex/openqodex">OpenQodex:</a> An open source AI code reviewer. Instead of paying $60 a developer, get the same coverage for $0 with over 100 scanners and an AI reviewer that investigates every finding using your own Claude Code or Codex login before you push.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://archive.codenewsletter.ai/2109736893198016898"><strong>How to build an anti-slop software factory:</strong> </a> When AI agents write and review code at scale, small errors quickly snowball into an exponential mess of low-quality slop. To prevent this, teams need to optimize their repository setup with strict lint rules, file co-location, and strong type safety, making it nearly impossible for agents to slip bad code through.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-read-ai-written-code-like-a-senior-engineer"></a></p>
+<h2><strong>How to read AI-written code like a senior engineer</strong></h2>
+<p>Claude Code can write multi-file changes faster than you can review them, but you still have to sign off before merging. This <a href="https://github.com/init-co-jp/diff-tour">GitHub repo</a> closes that gap by using Claude Code to turn any git diff into an interactive, guided walkthrough, just like a senior engineer would read it.</p>
+<ul>
+<li><strong>Step 1:</strong> Install <a href="https://github.com/init-co-jp/diff-tour">diff-tour</a>. You need git and a signed-in Claude Code, Codex CLI, or Gemini CLI.</li>
+</ul>
+<pre><code>curl -fsSL https://raw.githubusercontent.com/init-co-jp/diff-tour/main/install.sh | sh
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 2:</strong> Run “cd your-repo” and “tour” from your project, replacing “your-repo” with your project folder. On the first run, press Enter twice to accept the default language and LLM, then press Enter again to tour your current branch.</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Move through the tour with → and ←. Claude Code takes 2 to 5 minutes to write it with read-only access, then explains what the change is for, splits must-fix from nice-to-have, and asks you questions before showing answers. Press <code>?</code> to ask your own.</p>
+</li>
+<li>
+<p><strong>Step 4:</strong> Hand the must-fix items back to Claude Code, replacing the bracketed list.</p>
+</li>
+</ul>
+<pre><code>diff-tour flagged these must-fix items: [paste list]. For each one, tell me how you plan to fix it and which files you'll touch, and wait for my OK before changing anything. After fixing, run the tests and tell me which items are fixed and which aren't.
+</code></pre>
+<p><strong>P.S.</strong> Get 50+ AI coding hacks for Claude Code, Cursor, and Codex<strong> <a href="https://hackbook-chi.vercel.app">here</a></strong>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Zoho’s co-founder just told employees there will be no pay raises this year. His reason, and his <em><a href="https://archive.codenewsletter.ai/2109770209703920008?utm_source=codenewsletter.ai&amp;utm_medium=newsletter&amp;utm_campaign=meta-unveils-its-first-frontier-model-to-rival-claude-and-chatgpt&amp;_bhlid=99e5f6af29ad57a845192a99cb729ab0d1ccee36"><strong>warning for software jobs</strong></a></em>, is going viral (1.2M views).</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>We put together a few guides on coding agents, agentic engineering, and leadership frameworks to help you level up in your career. <strong><a href="https://codenewsletter.ai/guides">Browse all our guides.</a></strong></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
