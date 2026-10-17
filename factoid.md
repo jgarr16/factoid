@@ -1,13 +1,41 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-10-17"
-updated: "2026-10-17"
-sources: "Future Tools, The Code, The Economist, The Frontier, OpenRouter Team, Product Hunt Weekly, Superhuman AI, Superhuman AI · Sunday Special"
+updated: "2026-10-18"
+sources: "The Code, Future Tools, The Economist, The Frontier, OpenRouter Team, Product Hunt Weekly, Superhuman AI, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**187. PRISM traces, evaluates and guards agents in production**
+**188. universal-modder — a Claude Code plugin that mods games you own**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-17 20:31 KST — ["How to mod a game you own with Claude Code"](newsletters/2026-10-17_newsletter_the_code.md#how-to-mod-a-game-you-own-with-claude-code)*
+
+universal-modder is an open-source Claude Code plugin distilled from real modding runs on Terraria, Age of Empires II and GTA V: the agent locates the installed game, identifies its engine, inspects the code, builds the mod, generates sprites and audio through fal, then tests the result inside the running game. Install with `/plugin marketplace add rehan-remade/universal-modder` then `/plugin install universal-modder@universal-modder`; it needs Python 3.10+, ffmpeg and Git, plus a fal API key (`um fal key set`) if you want generated art. The reusable piece is the plugin shape — one agent loop that detects the target format, edits it, generates assets and verifies in place — which transfers to any binary format you want an agent to rewrite.
+
+- [universal-modder — GitHub](https://github.com/rehan-remade/universal-modder)
+- [The Code — modding walkthrough](https://archive.codenewsletter.ai/2105161487509852622)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**187. REA hands Claude Code the tools to reverse-engineer any app**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-17 20:31 KST — ["How to reverse engineer a feature you like in a competitor's app"](newsletters/2026-10-17_newsletter_the_code.md#how-to-reverse-engineer-a-feature-you-like-in-a-competitors-app)*
+*🗞 The Code · 2026-10-12 22:02 KST — ["How to reverse engineer any app with Claude Code"](newsletters/2026-10-12_newsletter_the_code.md#how-to-reverse-engineer-any-app-with-claude-code)*
+
+REA (Reverse Engineer Anything) is an open-source toolkit that hit #1 on GitHub's daily trending: it gives Claude Code or Codex the tools to take apart a desktop app, a website or an Android app, then help you build your own version of a feature. Setup is `npx rea-agents setup`, pick your agent, restart it, then send the investigation prompt from the issue — which asks the agent to identify the program type, back every finding with evidence (file, function, address) and keep observations separate from guesses before proposing the minimum pieces you would need. The issue's own caveat: your own software, open source, or something whose terms permit reverse engineering.
+
+- [The Code — REA write-up](https://archive.codenewsletter.ai/2109297975013081587)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**186. PRISM traces, evaluates and guards agents in production**
 *🏗️ Agent plumbing & production stacks*
 *🗞 Future Tools · 2026-10-17 02:08 KST — ["Monitor AI Agents in Production"](newsletters/2026-10-17_newsletter_future_tools.md#monitor-ai-agents-in-production)*
 
@@ -20,7 +48,7 @@ PRISM by Block Convey is an observability and evaluation layer for teams running
 
 ---
 
-**186. HyperFrames — a free desktop video editor agents can script**
+**185. HyperFrames — a free desktop video editor agents can script**
 *⚙️ LLM tooling & SDKs*
 *🗞 Future Tools · 2026-10-17 02:08 KST — ["Create Videos With Coding Agents"](newsletters/2026-10-17_newsletter_future_tools.md#create-videos-with-coding-agents)*
 
@@ -33,7 +61,7 @@ HyperFrames Studio is a free desktop video editor built for coding agents: you d
 
 ---
 
-**185. Apple's $299 HomeView hub leads the AI-hardware holiday push**
+**184. Apple's $299 HomeView hub leads the AI-hardware holiday push**
 *🍎 Apple & Mac*
 *🗞 Future Tools · 2026-10-17 02:08 KST — ["Tech Giants Want AI Under Your Christmas Tree"](newsletters/2026-10-17_newsletter_future_tools.md#tech-giants-want-ai-under-your-christmas-tree)*
 
@@ -46,7 +74,7 @@ Apple's $299 HomeView smart-home hub — upgraded Siri, facial recognition, cont
 
 ---
 
-**184. Meta's Muse Spark Open runs locally on two Mac Studios**
+**183. Meta's Muse Spark Open runs locally on two Mac Studios**
 *🧠 Open / efficient / local models*
 *🗞 Future Tools · 2026-10-17 02:08 KST — ["Muse Spark Open, an 816B-parameter open-weight model that runs on an Apple M5 Ultra"](newsletters/2026-10-17_newsletter_future_tools.md#muse-spark-open-an-816b-parameter-open-weight-model-that-runs-on-an-ap)*
 *🗞 The Code · 2026-10-16 23:06 KST — ["Meta’s new open model now runs on two Macs"](newsletters/2026-10-16_newsletter_the_code.md#metas-new-open-model-now-runs-on-two-macs)*
@@ -62,7 +90,7 @@ Meta released Muse Spark Open, an open-weight model with 816B total parameters (
 
 ---
 
-**183. GLM-5.2 self-replicated end to end once barriers were removed**
+**182. GLM-5.2 self-replicated end to end once barriers were removed**
 *🤖 AI security & agent risk*
 *🗞 Future Tools · 2026-10-17 02:08 KST — ["self-replicating AI could soon spread across everyday smart devices"](newsletters/2026-10-17_newsletter_future_tools.md#self-replicating-ai-could-soon-spread-across-everyday-smart-devices)*
 *🗞 The Code · 2026-10-13 23:32 KST — ["Anthropic warns AI models could soon self-replicate without access to data centers"](newsletters/2026-10-13_newsletter_the_code.md#anthropic-warns-ai-models-could-soon-self-replicate-without-access-to-)*
@@ -76,7 +104,7 @@ Anthropic's blue-team report tested whether models could find poorly secured int
 
 ---
 
-**182. pstack's /poteto-mode puts Cursor's agent in rigor mode**
+**181. pstack's /poteto-mode puts Cursor's agent in rigor mode**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-16 23:06 KST — ["How to put Cursor’s agent in rigor mode"](newsletters/2026-10-16_newsletter_the_code.md#how-to-put-cursors-agent-in-rigor-mode)*
 
@@ -90,7 +118,7 @@ pstack is a skill stack for rigorous autonomous engineering in Cursor: /add-plug
 
 ---
 
-**181. Anthropic's cookbook: a scheduled read-only repo reviewer**
+**180. Anthropic's cookbook: a scheduled read-only repo reviewer**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-16 23:06 KST — ["Build a scheduled repository reviewer with Claude"](newsletters/2026-10-16_newsletter_the_code.md#build-a-scheduled-repository-reviewer-with-claude)*
 
@@ -103,7 +131,7 @@ Anthropic's cookbook walks through a read-only agent that reviews a repo on a sc
 
 ---
 
-**180. Humanizer — a local 12B model that rewrites AI drafts offline**
+**179. Humanizer — a local 12B model that rewrites AI drafts offline**
 *🧠 Open / efficient / local models*
 *🗞 The Code · 2026-10-16 23:06 KST — ["A local 12B model that rewrites AI-written drafts so they sound more human without changing the facts."](newsletters/2026-10-16_newsletter_the_code.md#a-local-12b-model-that-rewrites-ai-written-drafts-so-they-sound-more-h)*
 
@@ -116,7 +144,7 @@ Humanizer is a local 12B model that rewrites AI-written drafts so they read as h
 
 ---
 
-**179. Anthropic cuts code review to 6–10 min; desktop nests sessions**
+**178. Anthropic cuts code review to 6–10 min; desktop nests sessions**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-16 23:06 KST — ["Anthropic makes AI code review 3x faster"](newsletters/2026-10-16_newsletter_the_code.md#anthropic-makes-ai-code-review-3x-faster)*
 
@@ -131,7 +159,7 @@ Code Review is now live on Claude Team and Enterprise plans and cuts most review
 
 ---
 
-**178. Devin Oncall picks up production pages and opens tested PRs**
+**177. Devin Oncall picks up production pages and opens tested PRs**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-16 23:06 KST — ["Cognition wants AI to take your on-call shift"](newsletters/2026-10-16_newsletter_the_code.md#cognition-wants-ai-to-take-your-on-call-shift)*
 
@@ -145,7 +173,7 @@ Cognition shipped Devin Oncall, an agent that answers production pages and bug r
 
 ---
 
-**177. TrellisWM nests Mac windows inside each other**
+**176. TrellisWM nests Mac windows inside each other**
 *🛠️ Mac utilities worth a look*
 *🗞 The Code · 2026-10-15 23:05 KST — ["A new “fractal” window manager for Mac that lets you nest real app windows inside each other"](newsletters/2026-10-15_newsletter_the_code.md#a-new-fractal-window-manager-for-mac-that-lets-you-nest-real-app-windo)*
 
@@ -158,7 +186,7 @@ TrellisWM is a new "fractal" window manager for the Mac that nests real app wind
 
 ---
 
-**176. Atlassian: give agents the backstory, halve the tokens**
+**175. Atlassian: give agents the backstory, halve the tokens**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-15 23:05 KST — ["How Atlassian built its AI software development lifecycle"](newsletters/2026-10-15_newsletter_the_code.md#how-atlassian-built-its-ai-software-development-lifecycle)*
 
@@ -172,7 +200,7 @@ Atlassian's AI SDLC playbook argues a coding agent's weakness is missing backsto
 
 ---
 
-**175. Point Codex memory at GPT-6 models with a two-line config**
+**174. Point Codex memory at GPT-6 models with a two-line config**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-15 23:05 KST — ["How to get better Codex memory for your projects"](newsletters/2026-10-15_newsletter_the_code.md#how-to-get-better-codex-memory-for-your-projects)*
 
@@ -186,7 +214,7 @@ Codex's memory feature writes and merges session memories with GPT-5.6 Luna and 
 
 ---
 
-**174. Chinese agent fleet smuggled Alibaba map data past bot checks**
+**173. Chinese agent fleet smuggled Alibaba map data past bot checks**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-10-15 23:05 KST — ["Rogue AI agents smuggled Alibaba map data past bot checks"](newsletters/2026-10-15_newsletter_the_code.md#rogue-ai-agents-smuggled-alibaba-map-data-past-bot-checks)*
 
@@ -200,7 +228,7 @@ Researchers watched a fleet of agents running on Tencent Cloud detour around the
 
 ---
 
-**173. Grok Voice 3.0 tops the speech index at $0.08/min**
+**172. Grok Voice 3.0 tops the speech index at $0.08/min**
 *🗣️ Voice · TTS & STT*
 *🗞 The Code · 2026-10-15 23:05 KST — ["SpaceXAI’s new voice model needs zero code changes"](newsletters/2026-10-15_newsletter_the_code.md#spacexais-new-voice-model-needs-zero-code-changes)*
 
@@ -214,7 +242,7 @@ xAI's Grok Voice 3.0 now tops Artificial Analysis's Speech-to-Speech Index with 
 
 ---
 
-**172. Clipy records your screen so agents can read the bug**
+**171. Clipy records your screen so agents can read the bug**
 *🛠️ Mac utilities worth a look*
 *🗞 Future Tools · 2026-10-15 01:06 KST — ["Make Screen Recordings Agent-Readable"](newsletters/2026-10-15_newsletter_future_tools.md#make-screen-recordings-agent-readable)*
 
@@ -227,7 +255,7 @@ Clipy is an agent-readable screen recorder for dev workflows: record a bug, UI f
 
 ---
 
-**171. boat rents persistent Ubuntu sandboxes that agents can own**
+**170. boat rents persistent Ubuntu sandboxes that agents can own**
 *🏗️ Agent plumbing & production stacks*
 *🗞 Future Tools · 2026-10-15 01:06 KST — ["Run Cloud Sandboxes for AI Agents"](newsletters/2026-10-15_newsletter_future_tools.md#run-cloud-sandboxes-for-ai-agents)*
 
@@ -240,7 +268,7 @@ boat is a cloud sandbox platform for AI agents and programmatic workflows: persi
 
 ---
 
-**170. Gemini 4 Argon opens to every developer at $2/M input**
+**169. Gemini 4 Argon opens to every developer at $2/M input**
 *💸 Token & infra economics*
 *🗞 Future Tools · 2026-10-15 01:06 KST — ["Google opens Gemini 4 Argon to developers, targeting complex coding and cybersecurity workflows."](newsletters/2026-10-15_newsletter_future_tools.md#google-opens-gemini-4-argon-to-developers-targeting-complex-coding-and)*
 *🗞 The Code · 2026-10-14 23:32 KST — ["Google unveils its new flagship model to every developer"](newsletters/2026-10-14_newsletter_the_code.md#google-unveils-its-new-flagship-model-to-every-developer)*
@@ -254,7 +282,7 @@ Gemini 4 Argon is now live for every developer through the Gemini API, AI Studio
 
 ---
 
-**169. diff-tour turns a git diff into a guided senior-engineer walkthrough**
+**168. diff-tour turns a git diff into a guided senior-engineer walkthrough**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-14 23:32 KST — ["How to read AI-written code like a senior engineer"](newsletters/2026-10-14_newsletter_the_code.md#how-to-read-ai-written-code-like-a-senior-engineer)*
 
@@ -267,7 +295,7 @@ Install diff-tour and run `tour` inside a repo: Claude Code (or Codex CLI / Gemi
 
 ---
 
-**168. OpenQodex reviews your code with your own Claude Code login, for $0**
+**167. OpenQodex reviews your code with your own Claude Code login, for $0**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-14 23:32 KST — ["OpenQodex: An open source AI code reviewer"](newsletters/2026-10-14_newsletter_the_code.md#openqodex-an-open-source-ai-code-reviewer)*
 
@@ -280,7 +308,7 @@ OpenQodex is an open-source AI code reviewer for the pre-push step: 100+ scanner
 
 ---
 
-**167. Together Link points your existing coding harness at open models**
+**166. Together Link points your existing coding harness at open models**
 *🧠 Open / efficient / local models*
 *🗞 The Frontier · 2026-10-14 06:37 KST — ["Together Link — Use open models in your harness"](newsletters/2026-10-14_newsletter_the_frontier.md#together-link-use-open-models-in-your-harness)*
 
@@ -293,7 +321,7 @@ Together Link is a launch for using open models inside the harness you already r
 
 ---
 
-**166. Ghost Core — a personal AI computer that runs entirely on-device**
+**165. Ghost Core — a personal AI computer that runs entirely on-device**
 *🔒 Privacy & local tooling*
 *🗞 The Frontier · 2026-10-14 06:37 KST — ["Ghost Core — A personal AI computer that runs entirely on-device"](newsletters/2026-10-14_newsletter_the_frontier.md#ghost-core-a-personal-ai-computer-that-runs-entirely-on-device)*
 
@@ -306,7 +334,7 @@ Ghost Core is pitched as a personal AI computer that runs entirely on-device: lo
 
 ---
 
-**165. Cekura Bench scores speech-to-speech models on live phone calls**
+**164. Cekura Bench scores speech-to-speech models on live phone calls**
 *🗣️ Voice · TTS & STT*
 *🗞 The Frontier · 2026-10-14 06:37 KST — ["Cekura Bench — Speech-to-speech model benchmarks on live phone calls"](newsletters/2026-10-14_newsletter_the_frontier.md#cekura-bench-speech-to-speech-model-benchmarks-on-live-phone-calls)*
 
@@ -319,7 +347,7 @@ Cekura Bench benchmarks speech-to-speech models on live phone calls rather than 
 
 ---
 
-**164. EmbeddingGemma 2 — a 740M open model for offline RAG embeddings**
+**163. EmbeddingGemma 2 — a 740M open model for offline RAG embeddings**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Frontier · 2026-10-14 06:37 KST — ["Google's new embedding model puts video, audio, images, code and text in one shared space."](newsletters/2026-10-14_newsletter_the_frontier.md#googles-new-embedding-model-puts-video-audio-images-code-and-text-in-o)*
 *🗞 The Code · 2026-10-07 23:08 KST — ["Google unveils two major updates for your tech stack"](newsletters/2026-10-07_newsletter_the_code.md#google-unveils-two-major-updates-for-your-tech-stack)*
@@ -334,7 +362,7 @@ Google's EmbeddingGemma 2 is a 740M-parameter open model that turns text, code, 
 
 ---
 
-**163. Turn inspector shows which Claude Code request ate the context**
+**162. Turn inspector shows which Claude Code request ate the context**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-13 23:32 KST — ["How to find what's filling up Claude Code's context"](newsletters/2026-10-13_newsletter_the_code.md#how-to-find-whats-filling-up-claude-codes-context)*
 
@@ -347,7 +375,7 @@ Google's EmbeddingGemma 2 is a 740M-parameter open model that turns text, code, 
 
 ---
 
-**162. OpenAI's cookbook: a Slack bot on the Agents API and sandboxes**
+**161. OpenAI's cookbook: a Slack bot on the Agents API and sandboxes**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-13 23:32 KST — ["How to build a Slack bot with the Agents API (by OpenAI)"](newsletters/2026-10-13_newsletter_the_code.md#how-to-build-a-slack-bot-with-the-agents-api)*
 
@@ -360,7 +388,7 @@ OpenAI's cookbook builds a Slack bot that runs multi-turn coding investigations 
 
 ---
 
-**161. Context Mode trims agent tool output 98% behind an MCP server**
+**160. Context Mode trims agent tool output 98% behind an MCP server**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-13 23:32 KST — ["Context Mode (26.7k ⭐)"](newsletters/2026-10-13_newsletter_the_code.md#context-mode)*
 
@@ -373,7 +401,7 @@ Context Mode is a 26.7k-star MCP server that keeps a coding agent from drowning 
 
 ---
 
-**160. SubQ Snap — a $0.05/M decision model with 12x Jev's context**
+**159. SubQ Snap — a $0.05/M decision model with 12x Jev's context**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-13 23:32 KST — ["This AI lab takes on Jev with 12x more context for enterprise agents"](newsletters/2026-10-13_newsletter_the_code.md#this-ai-lab-takes-on-jev-with-12x-more-context-for-enterprise-agents)*
 
@@ -387,7 +415,7 @@ Subquadratic's SubQ Snap is a decision model aimed at the calls an enterprise ag
 
 ---
 
-**159. GLM-5.3 Flash — the Ox Alpha stealth model, at $0.09/$0.30 per million**
+**158. GLM-5.3 Flash — the Ox Alpha stealth model, at $0.09/$0.30 per million**
 *💸 Token & infra economics*
 *🗞 OpenRouter Team · 2026-10-13 10:00 KST — ["New models in September"](newsletters/2026-10-13_newsletter_openrouter.md#new-models-in-september)*
 
@@ -400,7 +428,7 @@ The stealth listing Ox Alpha is now named on its model page as GLM-5.3 Flash: $0
 
 ---
 
-**158. DigUp searches your Mac by meaning with a local embedding model**
+**157. DigUp searches your Mac by meaning with a local embedding model**
 *🔒 Privacy & local tooling*
 *🗞 The Code · 2026-10-12 22:02 KST — ["Solo developers are using AI to clone big tech software"](newsletters/2026-10-12_newsletter_the_code.md#solo-developers-are-using-ai-to-clone-big-tech-software)*
 
@@ -409,19 +437,6 @@ DigUp is an open-source Mac app that runs Google's EmbeddingGemma 2 locally and 
 - [DigUp — r/LocalLLaMA post](https://www.reddit.com/r/LocalLLaMA/comments/1x2eeds/opensource_mac_app_that_runs_embeddinggemma_2/)
 - [The Code — searching files by meaning](https://archive.codenewsletter.ai/2109044337367540102)
 - [The Office clones write-up](https://startupfortune.com/developer-builds-free-open-source-clones-of-word-excel-and-powerpoint/)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**157. REA hands Claude Code the tools to reverse-engineer any app**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-10-12 22:02 KST — ["How to reverse engineer any app with Claude Code"](newsletters/2026-10-12_newsletter_the_code.md#how-to-reverse-engineer-any-app-with-claude-code)*
-
-REA (Reverse Engineer Anything) is an open-source toolkit that hit #1 on GitHub's daily trending: it gives Claude Code or Codex the tools to take apart a desktop app, a website or an Android app, then help you build your own version of a feature. Setup is `npx rea-agents setup`, pick your agent, restart it, then send the investigation prompt from the issue — which asks the agent to identify the program type, back every finding with evidence (file, function, address) and keep observations separate from guesses before proposing the minimum pieces you would need. The issue's own caveat: your own software, open source, or something whose terms permit reverse engineering.
-
-- [The Code — REA write-up](https://archive.codenewsletter.ai/2109297975013081587)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
