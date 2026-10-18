@@ -1,11 +1,63 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-17"
+sweep: "2026-09-05 → 2026-10-19"
 updated: "2026-10-19"
-sources: "The Code, Future Tools, The Economist, The Frontier, OpenRouter Team, Product Hunt Weekly, Superhuman AI, Superhuman AI · Sunday Special"
+sources: "Product Hunt Weekly, The Code, Future Tools, The Economist, The Frontier, OpenRouter Team, Superhuman AI, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**192. Inferock draws down serverless inference credits for failed calls**
+*💸 Token & infra economics*
+*🗞 Product Hunt Weekly · 2026-10-19 02:28 KST — ["Inferock — Serverless inference, with credits back for failed calls."](newsletters/2026-10-19_newsletter_product_hunt_weekly.md#inferock-serverless-inference-with-credits-back-for-failed-calls)*
+
+Serverless inference endpoint (▲385) whose differentiator is refunding credits for failed calls — the failure tax that quietly inflates bills on retry-heavy agent workloads. Worth pricing against what he already routes through OpenRouter before moving anything.
+
+- [Inferock](https://www.producthunt.com/posts/inferock)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**191. Articos MCP puts simulated buyer reactions inside your agent**
+*⚙️ LLM tooling & SDKs*
+*🗞 Product Hunt Weekly · 2026-10-19 02:28 KST — ["Articos MCP — See how simulated buyers react, right in your agent"](newsletters/2026-10-19_newsletter_product_hunt_weekly.md#articos-mcp-see-how-simulated-buyers-react-right-in-your-agent)*
+
+A leaderboard launch (▲359) shipped as an MCP server rather than a separate dashboard: simulated buyers you can query from inside the agent, so copy, pricing and positioning reactions come back in the same session instead of a second research pass. Being an MCP server means it can be wired into an existing Claude Code / Codex-style harness without new plumbing.
+
+- [Articos MCP](https://www.producthunt.com/posts/articos-mcp)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**190. Hintly reads Meet captions and hands you the term you forgot**
+*⚡ Productivity & agent follow-through*
+*🗞 Product Hunt Weekly · 2026-10-19 02:28 KST — ["Real-time hints for every term you miss on Google Meet"](newsletters/2026-10-19_newsletter_product_hunt_weekly.md#real-time-hints-for-every-term-you-miss-on-google-meet)*
+
+Sits in the Meet toolbar and defines terms and acronyms as they go past, fills in the word you are groping for, checks a claim while somebody is still making it, and tracks who was mentioned and what you agreed to do. It reads the live captions Meet already produces, so no bot joins the call and nothing appears in the participant list; it is off until you switch it on.
+
+- [Hintly for Google Meet](https://www.producthunt.com/posts/hintly-for-google-meet)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**189. Takes records on the Mac and lets Claude Code do the edit**
+*🛠️ Mac utilities worth a look*
+*🗞 Product Hunt Weekly · 2026-10-19 02:28 KST — ["Record talking-head videos. Claude Code does the edit."](newsletters/2026-10-19_newsletter_product_hunt_weekly.md#record-talking-head-videos-claude-code-does-the-edit)*
+
+One button records camera and screen together, with a teleprompter beside the lens that follows your voice; every take lands in a plain folder next to its script and there is no timeline. Claude Code, on the Claude plan you already pay for, cuts the silences, ums and restarts, makes the vertical version, adds captions in your style and drafts the posts. You leave notes on the frame ("too fast here") and get a new cut back, and notes that generalise become rules it reads before the next edit — 320 notes so far, 88 rules. The maker has made every video in it since starting last month.
+
+- [Takes for Mac](https://www.producthunt.com/posts/takes-for-mac)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **188. universal-modder — a Claude Code plugin that mods games you own**
 *⚙️ LLM tooling & SDKs*
