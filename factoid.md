@@ -1,11 +1,67 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-10-19"
-updated: "2026-10-19"
-sources: "Product Hunt Weekly, The Code, Future Tools, The Economist, The Frontier, OpenRouter Team, Superhuman AI, Superhuman AI · Sunday Special"
+updated: "2026-10-20"
+sources: "The Code, Product Hunt Weekly, Future Tools, The Economist, The Frontier, OpenRouter Team, Superhuman AI, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**196. Anthropic's review stack for agent-written PRs: verify, then cap rounds**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-19 23:02 KST — ["How Claude Code handles code review (by Anthropic)"](newsletters/2026-10-19_newsletter_the_code.md#how-claude-code-handles-code-review)*
+
+Anthropic published the review stack it runs now that agents ship most of its code: make the agent verify its own work before opening the PR, run AI and security review passes in a fresh context, scale human approval by risk instead of uniformly, and cap review rounds so agents stop ping-ponging over nits. Addy Osmani's companion piece argues line-by-line review can no longer keep up with agent volume and lays out what replaces it — a copyable process, not a tool.
+
+- [Anthropic's code review playbook](https://claude.dev/blog/solving-code-review-at-anthropic/)
+- [Osmani on replacing line-by-line review](https://archive.codenewsletter.ai/2111604705340326393)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**195. Meta's three moves that make agent output verifiable before merge**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-19 23:02 KST — ["Meta's engineering team shows how to verify agent output"](newsletters/2026-10-19_newsletter_the_code.md#metas-engineering-team-shows-how-to-verify-agent-output)*
+
+Meta's team shipped Forum — a standalone Groups app at core parity with Facebook Groups — in eight weeks with one small team, and the transferable part is how it defined done: raise the finish line (automated tests plus visual checks, not compilation), run those checks inside the agent loop so it fixes itself before a human looks, and attach a test plan plus a recording of the verification run to every pull request. Trust scales with the checks — routine stress running let the agent find, reproduce and fix a memory issue on its own, roughly halving memory use and page faults. Meta's own caveat: passing tests only means something if the tests actively catch shortcuts.
+
+- [How Meta built Forum](https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/)
+- [Hooks guide: block finishing until tests pass](https://code.claude.com/docs/en/hooks-guide)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**194. DeepSeek's V4.1-Flash-1017 costs $0.30/M input, adds Search and Fetch**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-10-19 23:02 KST — ["DeepSeek’s budget coding model edges past Claude Opus 5"](newsletters/2026-10-19_newsletter_the_code.md#deepseeks-budget-coding-model-edges-past-claude-opus-5)*
+
+The new checkpoint, V4.1-Flash-1017, scores 77.0 on DeepSWE — ahead of Claude Opus 5's 74.0 in DeepSeek's own tests — while still trailing on Terminal-Bench and ProgramBench. Input is $0.30 per million tokens, or half that off-peak, and it speaks both OpenAI- and Anthropic-style endpoints, so it drops into an existing harness as a cheap bulk worker. Two new APIs ship with it: Search and Fetch let agents hit the web for $0.75 per 1,000 requests.
+
+- [Model thread](https://archive.codenewsletter.ai/2111375640717033777)
+- [DeepSeek API docs](https://api-docs.deepseek.com)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**193. OpenCode breach leaked provider keys for 1.4% of console users**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-10-19 23:02 KST — ["OpenCode attack exposes user API keys"](newsletters/2026-10-19_newsletter_the_code.md#opencode-attack-exposes-user-api-keys)*
+
+OpenCode's co-founder confirmed 48 hours of continuous attacks: intruders broke into a legacy system and took OpenAI and Anthropic provider keys that 1.4% of its console users had saved, then burned them with high-volume queries — some developers reportedly woke up to $1,700 bills. OpenAI is refunding credits and the incident is not closed. If he ever signed into OpenCode Console, the fix is rotating the provider keys now; the linked write-up walks the cleanup order.
+
+- [What to do if you used OpenCode Console](https://cellcog.ai/blog/opencode-breach-api-keys/)
+- [How the attack started](https://archive.codenewsletter.ai/2111519637049319818)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **192. Inferock draws down serverless inference credits for failed calls**
 *💸 Token & infra economics*
