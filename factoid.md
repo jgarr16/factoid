@@ -1,11 +1,25 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-19"
-updated: "2026-10-20"
-sources: "The Code, Product Hunt Weekly, Future Tools, The Economist, The Frontier, OpenRouter Team, Superhuman AI, Superhuman AI · Sunday Special"
+sweep: "2026-09-05 → 2026-10-20"
+updated: "2026-10-21"
+sources: "OpenRouter Team, The Code, Product Hunt Weekly, Future Tools, The Economist, The Frontier, Superhuman AI, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**197. GPT-4o and GPT-4.1 retire January 14, 2027 — switch model IDs now**
+*💸 Token & infra economics*
+*🗞 OpenRouter Team · 2026-10-20 09:10 KST — ["GPT-4o and GPT-4.1 models retire January 14, 2027"](newsletters/2026-10-20_newsletter_openrouter.md#gpt-4o-and-gpt-41-models-retire-january-14-2027)*
+
+OpenAI's GPT-4o, GPT-4o mini, GPT-4.1 and GPT-4.1 mini stop being served through OpenRouter on January 14, 2027, and requests to them fail from that date — including requests that use his own OpenAI API key (BYOK). The exact retiring IDs are `openai/gpt-4o` (plus the 2024-05-13, 2024-08-06 and 2024-11-20 snapshots), `openai/gpt-4o-mini` (and 2024-07-18), `openai/gpt-4.1` and `openai/gpt-4.1-mini`, so the fix is a model-ID string change wherever they appear. OpenRouter names GPT-6 Luna and GPT-5.6 Luna as the drop-in replacements — worth grepping scripts and cron configs for those IDs well before year-end.
+
+- [OpenRouter models](https://openrouter.ai/models)
+- [OpenRouter docs](https://openrouter.ai/docs)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **196. Anthropic's review stack for agent-written PRs: verify, then cap rounds**
 *🏗️ Agent plumbing & production stacks*
