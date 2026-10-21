@@ -1,11 +1,161 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-20"
+sweep: "2026-09-05 → 2026-10-22"
 updated: "2026-10-22"
-sources: "OpenRouter Team, The Code, Product Hunt Weekly, Future Tools, The Economist, The Frontier, Superhuman AI, Superhuman AI · Sunday Special"
+sources: "Future Tools, The Code, Superhuman AI, The Frontier, OpenRouter Team, Product Hunt Weekly, The Economist, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**208. ChatGPT dots: an always-on agent that works between conversations**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Future Tools · 2026-10-22 01:07 KST — ["What If Your AI Kept Working After You Logged Off?"](newsletters/2026-10-22_newsletter_future_tools.md#what-if-your-ai-kept-working-after-you-logged-off)*
+
+OpenAI's dots is a standing-responsibility agent rather than a chat: you set permissions and boundaries, then it keeps working between conversations — researching, drafting, writing and testing code on its own cloud computer and browser, using ChatGPT memory of your priorities, and surfacing finished work for review or asking when a decision needs you. It's the first-party version of the background-agent pattern this log keeps tracking, without an API yet.
+
+- [ChatGPT dots](https://chatgpt.com/features/dots/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**207. Eleven Realtime and Voxtral 3 — two drop-in voice-agent stacks**
+*🗣️ Voice · TTS & STT*
+*🗞 The Code · 2026-10-21 23:09 KST — ["ElevenLabs and Mistral drop new models for voice agents"](newsletters/2026-10-21_newsletter_the_code.md#elevenlabs-and-mistral-drop-new-models-for-voice-agents)*
+*🗞 Superhuman AI · 2026-10-21 22:19 KST — ["ElevenLabs and Krea roll out voice and image models"](newsletters/2026-10-21_newsletter_superhuman_ai.md#elevenlabs-and-krea-roll-out-voice-and-image-models)*
+
+ElevenLabs' Eleven Realtime is a speech-to-speech family you can swap into an existing voice agent by changing only the endpoint and model name from OpenAI's Realtime API — Mini for natural conversation, Max for reasoning through harder tasks. Mistral's Voxtral 3 is the tinkerer's option: a LiveKit-based SDK lets you switch the LLM, voice or language without rewriting the agent, and Mistral documents running the whole stack on your own servers.
+
+- [Eleven Realtime](https://elevenlabs.io/realtime)
+- [Voxtral 3](https://mistral.ai/news/voxtral-3/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**206. Cua Spaces gives each agent its own desktop on any machine**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-21 23:09 KST — ["Cua lets your agents run jobs across every machine"](newsletters/2026-10-21_newsletter_the_code.md#cua-lets-your-agents-run-jobs-across-every-machine)*
+
+Cua's new Spaces SDK hands every agent a desktop with its own screen and apps, and lets you choose where that desktop runs instead of locking you to the vendor's cloud — relocating a job to another machine is a one-word code change. Claude Code, Codex and OpenCode can share the same space and tool set, and the repo ships a macOS example to start from.
+
+- [Cua macOS examples](https://github.com/trycua/cua/tree/main/examples/cua-bots-macos)
+- [Spaces SDK write-up](https://archive.codenewsletter.ai/2112228154651881479)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**205. DeepSeek open-sources DeepInfer, the serving stack behind V4.1-Flash**
+*🧠 Open / efficient / local models*
+*🗞 The Code · 2026-10-21 23:09 KST — ["DeepSeek open-sources the engine behind its affordable AI"](newsletters/2026-10-21_newsletter_the_code.md#deepseek-open-sources-the-engine-behind-its-affordable-ai)*
+
+DeepSeek published DeepInfer, the inference software it runs V4.1-Flash on — host that model on supported Nvidia or Huawei chips and you get DeepSeek's own production stack for faster, cheaper serving. It is deliberately not the full internal system, so a few pieces you build yourself, but the scheduling and batching code is worth reading even if you serve a different model.
+
+- [deepseek-ai/DeepInfer](https://github.com/deepseek-ai/DeepInfer)
+- [Announcement](https://archive.codenewsletter.ai/2112476496283775135)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**204. Perplexity Computer runs fully local on an Apple Silicon Mac**
+*🔒 Privacy & local tooling*
+*🗞 Superhuman AI · 2026-10-21 22:19 KST — ["Perplexity joins Meta by bringing its models to Apple Macs"](newsletters/2026-10-21_newsletter_superhuman_ai.md#perplexity-joins-meta-by-bringing-its-models-to-apple-macs)*
+
+Perplexity Computer can now run its models on-device on Apple Silicon, so work on private files never leaves the machine (36GB of RAM required). It also runs hybrid: local models read and reason over your files while cloud models handle the heavier reasoning, and Pro users can pick per task. Same trend as Meta optimising Muse Spark Open for Mac Studio — local inference is becoming a default option rather than a demo.
+
+- [Perplexity local on Mac](https://www.perplexity.ai/hub/blog/perplexity-computer-now-runs-fully-local-on-mac)
+- [Hybrid compute](https://www.perplexity.ai/hub/products/hybrid-compute)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**203. shim-cli shows and masks exactly what your agent sends upstream**
+*🔒 Privacy & local tooling*
+*🗞 The Frontier · 2026-10-21 06:37 KST — ["shim-cli — See what your coding agent sends. Mask what you can."](newsletters/2026-10-21_newsletter_the_frontier.md#shim-cli-see-what-your-coding-agent-sends-mask-what-you-can)*
+
+shim-cli sits between your coding agent and the model API so you can read the actual request payload — file contents, credentials, whatever the harness decided to include — and mask fields before they leave the machine. Open source, and the closest thing to an egress audit for agents that otherwise send your repo to a provider on trust.
+
+- [shim-cli](https://www.producthunt.com/posts/shim-cli)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**202. Beam — a 501B agent-tuned open model with 23B active**
+*🧠 Open / efficient / local models*
+*🗞 The Frontier · 2026-10-21 06:37 KST — ["Beam — Highly efficient agentic 501B parameter open model"](newsletters/2026-10-21_newsletter_the_frontier.md#beam-highly-efficient-agentic-501b-parameter-open-model)*
+
+Beam is a 501B-parameter mixture-of-experts built specifically for agent loops: 23B active per token, 52 layers, 256 experts with 8 routed, a one-million-token context, and reasoning that survives across turns. Apache 2.0 with BF16, FP8 and NVFP4 checkpoints plus its own Rust harness — too big for a Mac Studio, but open weights you can rent or fine-tune.
+
+- [Beam on Product Hunt](https://www.producthunt.com/posts/beam-13)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**201. Five synthetic users catch launch bugs before real ones do**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-20 23:07 KST — ["How to QA your launch with 5 synthetic users"](newsletters/2026-10-20_newsletter_the_code.md#how-to-qa-your-launch-with-5-synthetic-users)*
+
+Install the Playwright MCP server, then paste a prompt that spawns five subagent personas — the impatient one, the skeptic, a mobile user on slow 3G, a non-native English speaker, and a breaker who pastes junk into every form. Each clicks from the landing page to first success, screenshots every point of confusion, and the findings merge into one ranked bug list that the agent fixes and re-verifies in the same pass.
+
+- [The prompt](https://archive.codenewsletter.ai/2111717667228770611)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**200. Anthropic's cookbook audits finished agent sessions for security holes**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-10-20 23:07 KST — ["How to review your agents for security issues (by Anthropic)"](newsletters/2026-10-20_newsletter_the_code.md#how-to-review-your-agents-for-security-issues)*
+
+The cookbook walks through auditing completed agent runs rather than live traffic: prompt injection, unauthorized hosts, leaked credentials, blocked calls retried another way, and data sent somewhere it shouldn't go. It turns the session logs into a ranked report with the exact evidence worth a human reading, which makes it a reusable post-run gate for any agent you let near the network.
+
+- [Agent security review cookbook](https://platform.claude.com/cookbook/managed-agents-cma-agent-security-review)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**199. A harness turns cheap Luna from 3/10 to 10/10 — cheaper than solo Sol**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-10-20 23:07 KST — ["Your cheap AI model just needs a harness. Here’s why"](newsletters/2026-10-20_newsletter_the_code.md#your-cheap-ai-model-just-needs-a-harness-heres-why)*
+
+Naresh Jain had Codex build the same Java backend ten times on GPT-6 Sol and ten times on cheaper GPT-6 Luna, half of each with a Specmatic behavioural harness, then scored every build against 178 hidden acceptance tests. Unaided Luna passed 3 of 10; with the harness it passed all 10 for $0.273 a run — about 33% less than unaided Sol's $0.406 — while handing Sol the same harness only pushed its bill up roughly 7x. His rule: leave tests running live as 'executable attention' for cheap models, run them once as a final gate for frontier ones.
+
+- [Are harnesses worth the cost?](https://martinfowler.com/articles/are-harnesses-worth-the-cost.html)
+- [Application brief to rerun it](https://martinfowler.com/articles/are-harnesses-worth-the-cost/application-brief.html)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**198. Cloudflare's Clairic extracts typed fields 3.2x faster than an LLM**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-20 23:07 KST — ["Cloudflare’s new model reads messy data faster than normal LLMs"](newsletters/2026-10-20_newsletter_the_code.md#cloudflares-new-model-reads-messy-data-faster-than-normal-llms)*
+
+Cloudflare previewed Clairic, an extraction model that skips text generation entirely: it pulls typed values straight out of messy input in a single forward pass and returns null when the field isn't there. Paired with its sibling Clef (pick one decision from options you define) in front of an LLM, the model receives clean fields instead of the raw document — Cloudflare measures 3.2x faster and 49% cheaper than an LLM alone. It slots into exactly the doc/email extraction stage where you only need typed values, not prose.
+
+- [Clairic announcement](https://blog.cloudflare.com/clairic-extraction-model/)
+- [Typed-value walkthrough](https://archive.codenewsletter.ai/2112279165596819627)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **197. GPT-4o and GPT-4.1 retire January 14, 2027 — switch model IDs now**
 *💸 Token & infra economics*
