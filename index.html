@@ -74,6 +74,40 @@ document.addEventListener('DOMContentLoaded', function () {
   wire(themeBtns, 'data-theme', function (v) { theme = v; });
   if (q) q.addEventListener('input', apply);
   apply();
+
+  // --- filter strips: edge fades + keyboard scroll (narrow screens only) ---
+  // On a phone the chip rows are one swipeable line each; without a cue the
+  // off-screen categories look like the end of the list (reported 2026-10-22).
+  // .can-left / .can-right drive the mask gradients in the stylesheet; from 641px
+  // the strips wrap and this code is inert (no overflow to detect).
+  Array.prototype.slice.call(document.querySelectorAll('.filters')).forEach(function (el) {
+    function upd() {
+      var max = el.scrollWidth - el.clientWidth;
+      var over = max > 2;
+      el.classList.toggle('can-left', over && el.scrollLeft > 2);
+      el.classList.toggle('can-right', over && el.scrollLeft < max - 2);
+      if (over) { if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '0'); }
+      else { el.removeAttribute('tabindex'); }
+    }
+    el.addEventListener('scroll', upd, {passive: true});
+    window.addEventListener('resize', upd);
+    // a mouse wheel over a scrollable strip scrolls it sideways, so a desktop
+    // window narrow enough to overflow still works without a trackpad
+    el.addEventListener('wheel', function (ev) {
+      if (el.scrollWidth - el.clientWidth <= 2) return;
+      if (Math.abs(ev.deltaY) <= Math.abs(ev.deltaX)) return;   // horizontal input: leave it
+      var atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 2;
+      if ((ev.deltaY > 0 && atEnd) || (ev.deltaY < 0 && el.scrollLeft <= 2)) return;
+      ev.preventDefault();
+      el.scrollLeft += ev.deltaY;
+    }, {passive: false});
+    upd();
+  });
+  window.addEventListener('load', function () {
+    Array.prototype.slice.call(document.querySelectorAll('.filters')).forEach(function (el) {
+      el.dispatchEvent(new Event('scroll'));
+    });
+  });
 });
 </script>
 </head>

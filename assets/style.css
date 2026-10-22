@@ -27,9 +27,23 @@ a:hover, a:focus { text-decoration: underline; }
   flex:1 1 12rem; min-width: 0; padding:.5rem .65rem; font: inherit; font-size:.92rem;
   color: var(--fg); background: var(--card); border:1px solid var(--border); border-radius:.5rem;
 }
+/* Filter strips. On a phone each row is ONE swipeable line (swipe is the natural
+   gesture) with an edge fade so the off-screen chips are visibly cut off; from
+   641px up they WRAP instead — the column is wide enough for two or three short
+   rows, and nothing hides behind a horizontal scroll that a mouse cannot reach. */
 .filters { display:flex; gap:.35rem; width:100%; overflow-x:auto; flex-wrap:nowrap;
-  padding-bottom:.15rem; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
-.filters::-webkit-scrollbar { display:none; }
+  padding:.05rem 0 .3rem; -webkit-overflow-scrolling:touch; scroll-behavior:smooth;
+  scrollbar-width:thin; scrollbar-color: var(--border) transparent; }
+.filters::-webkit-scrollbar { height:5px; }
+.filters::-webkit-scrollbar-thumb { background: var(--border); border-radius:3px; }
+.filters::-webkit-scrollbar-track { background: transparent; }
+.filters.can-right { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.2rem), transparent 100%);
+                     mask-image: linear-gradient(to right, #000 calc(100% - 2.2rem), transparent 100%); }
+.filters.can-left { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 2.2rem), transparent 100%);
+                    mask-image: linear-gradient(to left, #000 calc(100% - 2.2rem), transparent 100%); }
+.filters.can-left.can-right {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 2rem, #000 calc(100% - 2.2rem), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 2rem, #000 calc(100% - 2.2rem), transparent 100%); }
 .filters button { flex:0 0 auto; white-space:nowrap; }
 .filters button {
   font: inherit; font-size:.78rem; padding:.28rem .55rem; border-radius:999px; cursor:pointer;
@@ -78,4 +92,7 @@ footer.site { color: var(--muted); font-size:.75rem; margin-top:1.25rem; border-
 .list-item { display:flex; justify-content:space-between; gap:.6rem; border-bottom:1px solid var(--border); padding:.45rem 0; font-size:.9rem; }
 .list-item .stamp { color: var(--muted); white-space:nowrap; }
 /* desktop gives a little more room, still single column */
-@media (min-width: 641px) { body { font-size: 1.09rem; } .card { padding: 1rem 1.1rem; } }
+@media (min-width: 641px) { body { font-size: 1.09rem; } .card { padding: 1rem 1.1rem; }
+  /* wrap the filter chips here: all categories visible, nothing behind a scroll */
+  .filters { flex-wrap: wrap; overflow: visible; padding-bottom: 0;
+             -webkit-mask-image: none; mask-image: none; } }
