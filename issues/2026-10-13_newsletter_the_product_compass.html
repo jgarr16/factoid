@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>I Built a Product Swarm With Grok Bot — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="I Built a Product Swarm With Grok Bot — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>I Built a Product Swarm With Grok Bot</h1>
+<p class="meta">2026-10-13 · received 2026-10-13 00:38 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/grok-bot-product-swarm" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>I Built a Product Swarm With Grok Bot</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRmdyb2stYm90LXByb2R1Y3Qtc3dhcm0iLCJwIjoyMTk5MTY2OTgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTE4MTk2NzgsImV4cCI6MjEwNzM5NTY3OCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.i7mV_NzF66Uev7xS9-jqDO6oQ666qHyFx4tvs-ycC7Q?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=219916698&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIxOTkxNjY5OCwiaWF0IjoxNzkxODE5Njc4LCJleHAiOjE3OTQ0MTE2NzgsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.kDBc1gs5a2k-F8mz4bNc-B9SV5kGHo2rHflGxuUm_Jw">I Built a Product Swarm With Grok Bot</a></h1>
+<h3>Everything you need to know, and how my seven bots work together. Plus a product swarm you can import that works while you sleep.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Oct 12</p>
+<p>∙</p>
+<p>Preview</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!C2pO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fcfcfec-32a1-4970-aee1-8a1ab05a76c0_750x750.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/grok-bot-product-swarm?utm_source=email&amp;redirect=app-store-no-desktop&amp;inbox=true&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>In August, I called Grok Bot a toy. Back then, it really was, even though people were adopting it like crazy.</p>
+<p>Recently, it’s improved a lot. The biggest change is <strong>guardrails</strong>: you can now decide when a bot asks for permission and when it acts on its own.</p>
+<p>I spent the last week building a <strong>swarm of product bots</strong>, each specializing in a different area. While the product has still a few issues that could be improved, I already love those teams of autonomous, self-organizing agents.</p>
+<p>Below, I show what works right now and how you can use it. At the end, you can import my entire AI product swarm.</p>
+<p>We discuss:</p>
+<ol>
+<li>Why You Should Care (and Why Not)</li>
+<li>How Grok Bot Works
+<a id="example-my-pm-swarm"></a></li>
+<li>Example: My PM Swarm</li>
+<li>Control and Workarounds</li>
+<li>🔒 The PM Swarm Template to Download</li>
+</ol>
+<hr />
+<h2><strong>1. Why You Should Care (and Why Not)</strong></h2>
+<p>The first thing to understand is that today Grok Bot is still a compromise.
+<strong>You trade control for convenience.</strong></p>
+<p>You can build powerful multi-agent systems with Claude Code, e.g., in VS Code. But it comes with more configuration and dependencies to manage, and, frankly, working with those agents has more friction.</p>
+<p>Grok Bot gives you <strong>many more capabilities</strong> out of the box.</p>
+<p>Two things I liked the most:</p>
+<ul>
+<li><strong>Voice:</strong> you talk instead of typing. I did most of the work on my phone, with my headphones, without looking at the screen. It’s much more reliable than anything I’ve tried.</li>
+<li><strong>Self-organization:</strong> bots message other bots and spontaneously collaborate without you having to orchestrate every request.</li>
+</ul>
+<p>At the same time, despite what many claim on social media, I’d argue that Grok Bots shouldn't replace your other tools. They cost more than Claude Code, so don’t run them 50 or 100 times a day.</p>
+<p>Give them the jobs they are best at:</p>
+<ul>
+<li><strong>Grok Bots:</strong> high-impact work or work that should run without you. Ideating, working through strategy options, or getting notified about new opportunities, like a routine that monitors competitors, or reviews Slack or a Notion collection once a day.</li>
+<li><strong>Claude Code:</strong> coding and engineering with agents.</li>
+<li><strong>A standard chatbot or agent</strong> (Claude.ai, Claude Desktop): everything else.</li>
+</ul>
+<p>With that assumption, you can start with SuperGrok ($30/mo).</p>
+<hr />
+<p><strong><em>Note about the “compromise”:</em></strong></p>
+<p><em>If you're an advanced user of an IDE or the terminal, you may still prefer that interface. But I have no doubt that swarms of autonomous bots will keep improving. In mid-2025, agents weren’t reliable, while people hyped them anyway. We got reliable agents at the end of that year.</em></p>
+<p><em>Now, a few weeks after the initial hype, autonomous teams of agents already show value. My bots self-organize, take actions, check emails, and tell me about opportunities. In a few months, that might be the primary way we interact with agents. It’s the right moment to learn this.</em></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZncm9rLWJvdC1wcm9kdWN0LXN3YXJtJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzVNVGd4T1RZM09Dd2laWGh3SWpveE56azBOREV4TmpjNExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmdFdm1EVUJQakZTeFJFQUpNeDNKVHJwN0xUbWtXTG81T1RKSWFzLXZBTk0iLCJwIjoyMTk5MTY2OTgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTE4MTk2NzgsImV4cCI6MjEwNzM5NTY3OCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.RMj9KJhdoJ_JRENYIhclL7YrC3un0WHkTnPD3JUxhZo?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=219916698">Upgrade to paid</a></p>
+<hr />
+<h2><strong>2. How Grok Bot Works</strong></h2>
+<p>Each bot is an agent that works on a <strong>cloud computer with a browser</strong>. All your bots share that computer. If you allow it, they can also use your local machine.</p>
+<p>The primary way of configuring bots is talking to them. Yes. It’s really that simple. They’ll remember what matters.</p>
+<p>A bot can:</p>
+<ul>
+<li><strong>Send and read email</strong> from a shared address you claim for your bots.</li>
+<li><strong>Use your apps.</strong> Connect them once, and every bot has them.</li>
+<li><strong>Collaborate with other bots.</strong> All bots share the same skills (reusable instructions for specific tasks), apps, and computer.</li>
+</ul>
+<p><a href="https://substack.com/redirect/a86afec3-6dce-49a9-ae8a-b1eee78d9bce?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Grok Bot Connect apps: skills and apps shared by all your bots" src="https://substackcdn.com/image/fetch/$s_!3CyP!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2136b4e-0d8e-4a16-8419-60bd5e14e5ab_2630x1844.png" /></a></p>
+<p>Skills and apps (Grok Bot &gt; Connect apps)</p>
+<p>You talk to a bot in a 1:1 chat, or add several bots to a group chat:</p>
+<p><a href="https://substack.com/redirect/95bdfc02-6f6c-4825-98ce-fee6a5e3d914?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="A group chat with several product bots, Grok Bot" src="https://substackcdn.com/image/fetch/$s_!96kK!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03504d8c-5b81-4dd4-9470-ee838ccdb3d4_2302x1334.png" /></a></p>
+<p>A group chat with several product bots, Grok Bot</p>
+<p>Group chats are great for ideation and planning. Bots pick up topics and either comment or stay quiet. At the same time, there are limitations:</p>
+<ul>
+<li>In a group, bots can't ask for permission, so you can’t ask them, e.g., to send an email. Use 1:1 chats instead.</li>
+<li>In 1:1 chats, voice is a <strong>continuous conversation</strong>, not the dictate, send, wait, and read loop you may know from Claude Code or Claude Cowork. A single bot can still contact other bots, when needed.</li>
+</ul>
+<p>Grok Bot has no web interface. You need the desktop app (Windows, macOS, Linux) or the mobile app (iOS, Android). Once you sign in, they share the same context.</p>
+<h3>Who's behind Grok Bot?</h3>
+<p>Grok Bot comes from Cursor, the AI coding company, not SpaceXAI. SpaceXAI bought Cursor in August.</p>
+<h3>How does Grok Bot compare to Claude?</h3>
+<p>An overview from my research:</p>
+<p><a href="https://substack.com/redirect/f18711da-ac6f-4117-8c8c-9173a51fae24?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Grok Bot vs Claude: computer, skills, connected apps, email, interface, apps, routines, setup" src="https://substackcdn.com/image/fetch/$s_!tsbQ!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F93d13922-681b-4576-8123-b1e8e4ee9ff6_2400x2584.png" /></a></p>
+<p><em><strong>Note</strong>: Grok Bot also has an instructions field, but I left it out because it didn't work reliably in my tests (10/12/2026). Ask the bot to remember things instead.</em></p>
+<h3>A dedicated email address</h3>
+<p>You can ask any bot to claim an email address in the domain. It’s a shared account all your bots can use to <strong>receive and send messages</strong>.</p>
+<p>All you need to do is ask in the chat:</p>
+<p><a href="https://substack.com/redirect/0efe1f4f-2246-4ac3-a4b0-0849368cf387?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Asking a Grok Bot to claim an email address in the @mail.grokbot.com domain" src="https://substackcdn.com/image/fetch/$s_!E2zX!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F551684b6-80ed-4ad7-a87c-9ac4942f9389_1737x841.png" /></a></p>
+<p>All it takes to get a shared inbox for your bots</p>
+<h3>Routines in Grok Bot</h3>
+<p>Bots can repeat tasks on a schedule. Some routines react to events, like a new Slack message. The easiest way to create one is to ask a bot.</p>
+<p>You can also record a task ("Teach a task"), but in my experience, bots figure out how to do things on their own. What worked best for me:</p>
+<ul>
+<li>Ask a bot to perform a task in a chat</li>
+<li>Help it when it’s stuck</li>
+<li>Take control of its computer when needed, e.g., to sign in to a service</li>
+<li>Once it works, ask the bot to <strong>save the steps in its memory</strong>, so it can repeat them, or to <strong>create a routine</strong> that runs on a schedule.</li>
+</ul>
+<p><a href="https://substack.com/redirect/e2fae472-b77c-4ccb-8584-fe5f97f5470d?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="My Grok Bot learning how to use Amazon website" src="https://substackcdn.com/image/fetch/$s_!qiF7!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fba7f66f1-6d84-42ba-8cf0-472f7e453de6_2762x1707.png" /></a></p>
+<p>My Grok Bot learning how to use Amazon website</p>
+<hr />
+<h2><strong>3.</strong>Example: My PM Swarm</h2>
+<p>I built a swarm of seven product bots: research, strategy, marketing, design, specs, and engineering, plus a product lead.</p>
+<p>They have access to <strong>curated product skills and frameworks</strong>: the value proposition, the beachhead segment from Crossing the Chasm, growth loops, SEO, design best practices, and so on:</p>
+<p><a href="https://substack.com/redirect/9748fc1b-04c0-4f2a-91ce-a0e0fe4efdd9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="My product swarm: you talk to pm-lead, which consults six specialist bots" src="https://substackcdn.com/image/fetch/$s_!bSAU!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1a90ef40-ec49-4004-82d6-a320efb8496c_2400x2332.png" /></a></p>
+<p>💡 There’s no coder in the swarm. pm-engineer is a consultant: it checks feasibility and can review code in GitHub. Two options:</p>
+<ul>
+<li>Export the plan and build it in Claude Code or Codex, with the template from my <a href="https://substack.com/redirect/338501a2-1777-4db7-b7b9-495201a256e7?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Product Engineering series</a>.</li>
+<li>The pm-engineer has access to my SaaS template and can drive a local Claude Code session. All you need to do is ask.</li>
+</ul>
+<h3>Best practice: specialized bots that represent real roles</h3>
+<p>A minimum setup I can think of is <strong>PM, designer, and engineer</strong>. I decided to split my bots a bit more. That way, each bot focuses on one area and loads only the information it needs, so its <strong>context window stays lean</strong>.</p>
+<p>Bots collaborate and call each other when needed.</p>
+<h3>Best practice: the default point of contact</h3>
+<p>You can talk to any bot. But I prefer <strong>one point of contact</strong>, pm-lead is my default. It consults the specialists and orchestrates the work as needed.</p>
+<p>An example conversation:</p>
+<p><a href="https://substack.com/redirect/1b18c395-a4e4-4a64-a6ae-9bcd9319afce?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="pm-lead assembling a team for the task (pm-researcher, pm-strategizer), Grok Bot" src="https://substackcdn.com/image/fetch/$s_!6ZAL!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faabe4afb-30bf-40fa-bdc1-929eb80bcd7b_2376x1472.png" /></a></p>
+<p>pm-lead assembling a team for the task (pm-researcher, pm-strategizer), Grok Bot</p>
+<p>How do they know about their team mates?</p>
+<p>A bot sees its teammates’ names and the first words of their descriptions. That didn’t work reliably. That’s why my swarm also shares:</p>
+<ul>
+<li>A <strong>collaboration skill</strong> that teaches them how to work together</li>
+<li>Two files that ask as a <strong>shared memory</strong>: the product context and a decision log</li>
+</ul>
+<p>Let’s look at the example. When I asked about our value curve, the pm-lead consulted the pm-designer. It knew that because the shared skill explains who specializes in what:</p>
+<p><a href="https://substack.com/redirect/73c17775-230d-448e-9519-169a7a0422e3?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="pm-lead consulting pm-designer about the value curve, Grok Bot" src="https://substackcdn.com/image/fetch/$s_!vKA2!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F83a69b7a-ed3d-4e5b-952e-4b2b923f9e06_2489x1857.png" /></a></p>
+<p>pm-lead brings in pm-designer for the visual part</p>
+<p>Then, I got high-quality visuals pm-designer knows how to create thanks to dedicated design skills other bot’s don’t have in their memory:</p>
+<p><a href="https://substack.com/redirect/0b1f03f7-5727-452c-9a32-5072c724e2e6?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="The value proposition pm-designer created" src="https://substackcdn.com/image/fetch/$s_!JhAZ!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F24c12388-2d7b-404f-97ca-e2761460bda0_2144x1270.png" /></a></p>
+<p>The value proposition pm-designer created</p>
+<h3>What do Grok Bots do on their own?</h3>
+<p>This is the part I like most. The bots collaborate, take initiative, and get the work done.</p>
+<p>For example, every Monday, pm-researcher checks competitors' pricing pages, changelogs, and posts on X. If nothing changed, it stops. If something did, it tells me why it matters. It can also consult the other bots.</p>
+<p><a href="https://substack.com/redirect/01c53b9e-43ab-48e7-b314-d524fabac91f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="pm-researcher's weekly routines: change check first, then hand-offs" src="https://substackcdn.com/image/fetch/$s_!vW21!,w_728,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F75afac88-7e0e-433f-8375-737764dc5e43_1200x840.gif" /></a></p>
+<p>pm-researcher's weekly routines. The prompts are in the template.</p>
+<p>To create a routine, just ask in the chat.</p>
+<hr />
+<h2><strong>4. Control and Workarounds</strong></h2>
+<h3>How do you control Grok Bots?</h3>
+<p>Bots can take real actions, so it’s important to set the rules before giving them tools. For each action, you can decide when a bot asks for permission (Settings → General). My rules:</p>
+<p><a href="https://substack.com/redirect/455db914-6981-4082-bea1-88fcf1c942f8?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Ask first rules (Settings → General) in Grok Bot" src="https://substackcdn.com/image/fetch/$s_!tmy7!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1823c39f-1ba3-468c-a446-d31c92fca9d7_2379x1373.png" /></a></p>
+<p>Ask first rules (Settings → General) in Grok Bot</p>
+<p>For your convenience, here are the rules you can copy and paste (select “Ask first”):</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZncm9rLWJvdC1wcm9kdWN0LXN3YXJtJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzVNVGd4T1RZM09Dd2laWGh3SWpveE56azBOREV4TmpjNExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmdFdm1EVUJQakZTeFJFQUpNeDNKVHJwN0xUbWtXTG81T1RKSWFzLXZBTk0iLCJwIjoyMTk5MTY2OTgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTE4MTk2NzgsImV4cCI6MjEwNzM5NTY3OCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.RMj9KJhdoJ_JRENYIhclL7YrC3un0WHkTnPD3JUxhZo?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=219916698">Upgrade to paid</a></p>
+<h3>What you hear vs. what I found</h3>
+<p>There is a lot of hype and not everything works as advertised. Here's what I found, and how I work around it:</p>
+<p><a href="https://substack.com/redirect/a0b64b8d-b5c0-4961-9662-2274c79e62f1?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="What you hear vs what I found, and my workarounds" src="https://substackcdn.com/image/fetch/$s_!478X!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F440884d2-e500-478a-95c1-a98dab1e3080_2400x2458.png" /></a></p>
+<p>And here's a cheat sheet:</p>
+<p><a href="https://substack.com/redirect/e91b6128-7584-4996-a626-7d41866c81f4?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Cheat sheet: your own product swarm of Grok Bots" src="https://substackcdn.com/image/fetch/$s_!vO6-!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fac1cf067-9543-4e40-a9ca-9075be9b4384_2400x3638.png" /></a></p>
+<p>Save it: the whole setup on one page</p>
+<hr />
+<h2><strong>🔒 5. My PM Swarm Template</strong></h2>
+<p>Everything above is free. Paid subscribers also get the swarm I built: seven bots, with pm-lead as the default contact.</p>
+<p>What's unique about it:</p>
+<ul>
+<li><strong>Memories included.</strong> The bots know their roles from day one.</li>
+<li><strong>Shared workflows.</strong> They know who to ask, in what order, and who reviews whom.</li>
+<li><strong>Curated skills.</strong><a href="https://substack.com/redirect/82330dd0-0b0b-4577-99a6-18bf834eac4a?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">My PM skills</a> plus popular open-source skills, like the taste skill for design, UX, humanizing texts, or SEO best practices for marketing.</li>
+<li><strong>Optimized for tokens.</strong> Normally, every bot loads every skill. Mine load skills, even their descriptions, only when needed.</li>
+<li><strong>Three weekly routines.</strong> pm-researcher scans competitors, flags support tickets, and listens to social media.</li>
+</ul>
+<p>Plus, you will analyze how it was built.</p>
+<p>The PM Swarm Template is available for paid subscribers. Upgrade to unlock it below. There is also live workshop next Monday. The premium subscription is easily a 100x ROI: 👇...</p>
+<h2>Keep reading with a 7-day free trial</h2>
+<p>Subscribe to The Product Compass to keep reading this post and get 7 days of free access to the full post archives.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZncm9rLWJvdC1wcm9kdWN0LXN3YXJtJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzVNVGd4T1RZM09Dd2laWGh3SWpveE56azBOREV4TmpjNExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmdFdm1EVUJQakZTeFJFQUpNeDNKVHJwN0xUbWtXTG81T1RKSWFzLXZBTk0iLCJwIjoyMTk5MTY2OTgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTE4MTk2NzgsImV4cCI6MjEwNzM5NTY3OCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.RMj9KJhdoJ_JRENYIhclL7YrC3un0WHkTnPD3JUxhZo?simple=true&amp;utm_source=paywall&amp;utm_medium=email&amp;utm_content=219916698&amp;next=https://www.productcompass.pm/p/grok-bot-product-swarm&amp;coupon=34546817">Start trial</a></p>
+<h3>A subscription gets you:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>𝗔𝗰𝗰𝗲𝘀𝘀 𝗲𝘃𝗲𝗿𝘆 𝗶𝘀𝘀𝘂𝗲 → 200+ AI PM articles. Full archive. Premium Notion collection, templates, and recordings.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>𝗝𝗼𝗶𝗻 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗦𝗹𝗮𝗰𝗸 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 → A 2,000+ AI PM community to grow together + DM me.</td>
+</tr>
+<tr>
+<td></td>
+<td>𝗕𝗼𝗼𝘀𝘁 𝘆𝗼𝘂𝗿 𝗣𝗠 𝗰𝗮𝗿𝗲𝗲𝗿 → Enroll in the AI PM Learning Program ($700 value) and 4 video courses ($546 value).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=219916698&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIxOTkxNjY5OCwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3OTE4MTk2NzgsImV4cCI6MTc5NDQxMTY3OCwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.I75V6Y_InSwZpEfhticFrq0iudEjH_Ss5Mb7ITR7FSI&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=219916698&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIxOTkxNjY5OCwiaWF0IjoxNzkxODE5Njc4LCJleHAiOjE3OTQ0MTE2NzgsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.kDBc1gs5a2k-F8mz4bNc-B9SV5kGHo2rHflGxuUm_Jw&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/grok-bot-product-swarm?utm_source=substack&amp;utm_medium=email&amp;utm_campaign=email-restack-comment&amp;action=restack-comment&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIxOTkxNjY5OCwiaWF0IjoxNzkxODE5Njc4LCJleHAiOjE3OTQ0MTE2NzgsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.kDBc1gs5a2k-F8mz4bNc-B9SV5kGHo2rHflGxuUm_Jw&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qSXhPVGt4TmpZNU9Dd2lhV0YwSWpveE56a3hPREU1TmpjNExDSmxlSEFpT2pFNE1qTXpOVFUyTnpnc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAuckZpUmlOU0VwcTNieV9tVWZzREZiVThFaGhmRnBycDcxX25EZXdlNExxTSIsInAiOjIxOTkxNjY5OCwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc5MTgxOTY3OCwiZXhwIjoyMTA3Mzk1Njc4LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.P4psAvh7r9QsAuKm37QBKaN8qftU7oSvSzC90pHtGCs?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/29a8bb25-c049-4714-a60f-83f8304ba5d1?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoyMTk5MTY2OTgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTE4MTk2NzgsImV4cCI6MjEwNzM5NTY3OCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.vyGloVhA7c5adcWQF5j55_z3apgvtTb3VdPFwp-AwUc?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
