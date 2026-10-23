@@ -1,15 +1,110 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-22"
+sweep: "2026-09-05 → 2026-10-24"
 updated: "2026-10-24"
-sources: "Superhuman AI, Future Tools, The Code, The Frontier, The Product Compass, OpenRouter Team, Product Hunt Weekly, The Economist, Superhuman AI · Sunday Special"
+sources: "Future Tools, The Code, Superhuman AI, The Frontier, The Product Compass, OpenRouter Team, Product Hunt Weekly, The Economist, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**214. OpenAI shipped a Codex skill to check whether you're exposed to the PHP bugs**
+**223. OpenAI's models now sell through Google Cloud — and its spend commitments**
+*⚙️ LLM tooling & SDKs*
+*🗞 Future Tools · 2026-10-24 01:03 KST — ["OpenAI Brings Its Models to Google Cloud"](newsletters/2026-10-24_newsletter_future_tools.md#openai-brings-its-models-to-google-cloud)*
+
+OpenAI's models and Codex are coming to Google Cloud through Model Garden, purchasable on Google Cloud Marketplace, and wired into Antigravity and Gemini Agent, with general availability in the coming weeks. The practical consequence: existing Google Cloud spend commitments can cover OpenAI usage, and access control and data governance come from the cloud account rather than a separate OpenAI contract. That removes a procurement obstacle for anyone shipping on GCP — OpenAI sits alongside Gemini in the same console.
+
+- [Axios on the deal](https://www.axios.com/2026/10/21/openai-google-cloud-ai-models)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**222. Claude Haiku 5.5 lands ~75% cheaper, with Motion and live Dashboards**
+*💸 Token & infra economics*
+*🗞 Future Tools · 2026-10-24 01:03 KST — ["3 New Claude Features You Can Actually Use at Work"](newsletters/2026-10-24_newsletter_future_tools.md#3-new-claude-features-you-can-actually-use-at-work)*
+
+Anthropic's Haiku 5.5 is roughly 75% cheaper than the previous Haiku and available on every plan including Free — the obvious default for high-volume grunt work like classifying 50 reviews or tagging a corpus. Two more worth knowing: /motion turns a report into a 30-second MP4 explainer (Team and Enterprise only), and Dashboards connect Salesforce, Snowflake or another source and stay live as the data changes (all paid plans). Claude Docs, Slides and Design left beta onto every plan the same day.
+
+- [Future Tools issue](https://futuretools.beehiiv.com/p/3-claude-features-to-know)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**221. Google's guide splits agent instructions into AGENTS.md, DESIGN.md and SKILL.md**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-23 23:08 KST — ["How to structure Markdown files for better coding agents (by Google Cloud)"](newsletters/2026-10-23_newsletter_the_code.md#how-to-structure-markdown-files-for-better-coding-agents)*
+
+Google Cloud's cookbook splits agent instructions by purpose instead of one growing file: AGENTS.md for project context, DESIGN.md for UI rules, SKILL.md for repeatable workflows. The argument is that each task loads only the context it needs, so fewer tokens burn, diffs stay smaller and the agent sticks closer to how the codebase actually works. Cheap to A/B against his current CLAUDE.md/AGENTS.md layout.
+
+- [Structuring markdown for agents](https://archive.codenewsletter.ai/2113443701938884710)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**220. Claude Code's /auto-mode-setup stops auto mode blocking your own repos**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-23 23:08 KST — ["How to stop auto mode from blocking your own repos"](newsletters/2026-10-23_newsletter_the_code.md#how-to-stop-auto-mode-from-blocking-your-own-repos)*
+
+Auto mode is Claude Code's default and its classifier does not know his environment, so it blocks routine actions like pushing to another repo in the org or hitting an internal domain. Fix: run `claude update`, then `/auto-mode-setup` inside a session — Claude scans the project, recent sessions and optionally shell history, asks a few questions, and drafts trusted repos and domains into the config. `claude auto-mode config` confirms the entries took effect. Three commands, and the permission prompts interrupting agent runs stop.
+
+- [The auto-mode setup](https://archive.codenewsletter.ai/2112714932005331304)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**219. ARTEX: an open AI security tool was used to breach ConnectWise and 2,250 customers**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-10-23 23:08 KST — ["Microsoft says China-linked hackers used AI to orchestrate attacks"](newsletters/2026-10-23_newsletter_the_code.md#microsoft-says-china-linked-hackers-used-ai-to-orchestrate-attacks)*
+
+Microsoft says a China-aligned actor used ARTEX, an open-source AI security-testing tool, to break into IT vendor ConnectWise, then hijacked ConnectWise's trusted apps to attempt logins into more than 2,250 customer environments — reaching high-level access at some within three hours. Separately, US banks report finding unauthorised third-party agents inside customer accounts, mostly admitted by customers sharing their own logins, some acting beyond what was asked. Two lessons: agents inheriting a vendor's trust relationship are the new lateral-movement path, and ARTEX itself is free to test his own stack with.
+
+- [Microsoft on the ARTEX campaign](https://archive.codenewsletter.ai/2112975078266716390)
+- [Rogue agents inside bank accounts](https://archive.codenewsletter.ai/2113251043173683683)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**218. 1Password brokers agent logins so the agent never sees the password**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-23 23:08 KST — ["1Password lets agents log in without seeing your passwords"](newsletters/2026-10-23_newsletter_the_code.md#1password-lets-agents-log-in-without-seeing-your-passwords)*
+
+1Password now verifies an agent's identity with a unique digital key, sends him an approval request, and fills the credentials itself — the agent completes the task without ever holding the password. It works across Claude Duet, ChatGPT Dots and ChatGPT Work, Grok Bot, Meta's Muse and Town's assistants, which makes it the first mainstream credential broker rather than 'paste the secret into the prompt'. Waitlist access from the personal pricing page; it is the missing piece for anything he wires up that has to log in somewhere.
+
+- [1Password agent access](https://1password.com/pricing/personal)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**217. Anthropic's review stack for agent-written PRs: verify, then cap rounds**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-23 23:08 KST — ["Why the Claude Code team now measures code review in human minutes"](newsletters/2026-10-23_newsletter_the_code.md#why-the-claude-code-team-now-measures-code-review-in-human-minutes)*
+*🗞 The Code · 2026-10-19 23:02 KST — ["How Claude Code handles code review (by Anthropic)"](newsletters/2026-10-19_newsletter_the_code.md#how-claude-code-handles-code-review)*
+
+Anthropic published the review stack it runs now that agents ship most of its code: make the agent verify its own work before opening the PR, run AI and security review passes in a fresh context, scale human approval by risk instead of uniformly, and cap review rounds so agents stop ping-ponging over nits. Addy Osmani's companion piece argues line-by-line review can no longer keep up with agent volume and lays out what replaces it — a copyable process, not a tool.
+
+- [Anthropic's code review playbook](https://claude.dev/blog/solving-code-review-at-anthropic/)
+- [Osmani on replacing line-by-line review](https://archive.codenewsletter.ai/2111604705340326393)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**216. OpenAI shipped a Codex skill to check whether you're exposed to the PHP bugs**
 *🤖 AI security & agent risk*
 *🗞 Superhuman AI · 2026-10-22 22:13 KST — ["Organizations shut down websites around the world"](newsletters/2026-10-22_newsletter_superhuman_ai.md#organizations-shut-down-websites-around-the-world)*
+*🗞 The Code · 2026-10-22 22:06 KST — ["PHP bugs lead a pileup of developer security alerts"](newsletters/2026-10-22_newsletter_the_code.md#php-bugs-lead-a-pileup-of-developer-security-alerts)*
 
 Two critical PHP vulnerabilities — PHP runs roughly 70% of websites — led the NSA to recommend pulling unpatched systems offline, and sites went dark across the internet in what the industry is calling 'Black October.' The usable piece: OpenAI published a fixed-checker Codex skill at github.com/openai/php2shell-checker that inspects a codebase for exposure, alongside a coordinated-disclosure writeup. If any of his properties run PHP (WordPress, DreamHost-hosted anything), that is a fifteen-minute check instead of a guess.
 
@@ -21,8 +116,49 @@ Two critical PHP vulnerabilities — PHP runs roughly 70% of websites — led th
 
 ---
 
-**213. ChatGPT dots: an always-on agent that works between conversations**
+**215. Decision-model evals: tune the threshold instead of accepting 0.5**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-22 22:06 KST — ["How to use decision models for evals"](newsletters/2026-10-22_newsletter_the_code.md#how-to-use-decision-models-for-evals)*
+
+Hamel Husain's cookbook walks through picking a decision model — Jev, Decider, Clef, Liquid d1, OpenAI Decisions — for a classification or eval gate rather than rolling with the default 0.5 threshold. It covers dialling precision versus recall to what the eval actually needs, weighing cost against performance, and testing whether a model's confidence scores hold up at all. Directly reusable for any routing gate or eval harness he builds on top of cheap models.
+
+- [Decision models for evals](https://hamel.dev/blog/posts/decision-model-evals/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**214. Cloudflare's open security-audit skill turns a coding agent into an auditor**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-10-22 22:06 KST — ["Cloudflare Security Audit Skill (37.8k ⭐)"](newsletters/2026-10-22_newsletter_the_code.md#cloudflare-security-audit-skill)*
+
+cloudflare/security-audit-skill (37.8k stars) splits an audit across separate agents: one maps the codebase, others hunt vulnerabilities, a verification pass independently re-checks each finding, and the output is a machine-readable report. That verification step is the point — it is the difference between a list of maybe-bugs and findings that hold up. Drop it into a coding agent's skills directory and it becomes a repeatable pass over any repo he owns.
+
+- [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**213. Recursive Flint — an open-weights coding model built mostly by AI, runs locally**
+*🧠 Open / efficient / local models*
+*🗞 The Code · 2026-10-22 22:06 KST — ["Recursive’s AI-built coding model runs on your laptop"](newsletters/2026-10-22_newsletter_the_code.md#recursives-ai-built-coding-model-runs-on-your-laptop)*
+
+Recursive, a Stanford-alum-founded lab, launched Flint — a coding model it says the system helped build nearly end to end, with humans overseeing. It scores 74.2% on SWE-Bench Verified on the company's numbers and is the best sub-50B model there by its own claim. The weights are on Hugging Face, so the draw for him is unglamorous and real: coding offline, keeping source on the machine, no API bill. Fork it or run it locally before trusting the headline benchmark.
+
+- [Recursive Flint](https://recursive.com/updates/introducing-recursive-flint)
+- [Weights on Hugging Face](https://huggingface.co/RecursiveSI)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**212. ChatGPT dots: an always-on agent that works between conversations**
 *🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-22 22:06 KST — ["Anthropic’s new agent keeps working after you log off"](newsletters/2026-10-22_newsletter_the_code.md#anthropics-new-agent-keeps-working-after-you-log-off)*
 *🗞 Future Tools · 2026-10-22 01:07 KST — ["What If Your AI Kept Working After You Logged Off?"](newsletters/2026-10-22_newsletter_future_tools.md#what-if-your-ai-kept-working-after-you-logged-off)*
 
 OpenAI's dots is a standing-responsibility agent rather than a chat: you set permissions and boundaries, then it keeps working between conversations — researching, drafting, writing and testing code on its own cloud computer and browser, using ChatGPT memory of your priorities, and surfacing finished work for review or asking when a decision needs you. It's the first-party version of the background-agent pattern this log keeps tracking, without an API yet.
@@ -34,7 +170,7 @@ OpenAI's dots is a standing-responsibility agent rather than a chat: you set per
 
 ---
 
-**212. Eleven Realtime and Voxtral 3 — two drop-in voice-agent stacks**
+**211. Eleven Realtime and Voxtral 3 — two drop-in voice-agent stacks**
 *🗣️ Voice · TTS & STT*
 *🗞 The Code · 2026-10-21 23:09 KST — ["ElevenLabs and Mistral drop new models for voice agents"](newsletters/2026-10-21_newsletter_the_code.md#elevenlabs-and-mistral-drop-new-models-for-voice-agents)*
 *🗞 Superhuman AI · 2026-10-21 22:19 KST — ["ElevenLabs and Krea roll out voice and image models"](newsletters/2026-10-21_newsletter_superhuman_ai.md#elevenlabs-and-krea-roll-out-voice-and-image-models)*
@@ -49,7 +185,7 @@ ElevenLabs' Eleven Realtime is a speech-to-speech family you can swap into an ex
 
 ---
 
-**211. Cua Spaces gives each agent its own desktop on any machine**
+**210. Cua Spaces gives each agent its own desktop on any machine**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-21 23:09 KST — ["Cua lets your agents run jobs across every machine"](newsletters/2026-10-21_newsletter_the_code.md#cua-lets-your-agents-run-jobs-across-every-machine)*
 
@@ -63,7 +199,7 @@ Cua's new Spaces SDK hands every agent a desktop with its own screen and apps, a
 
 ---
 
-**210. DeepSeek open-sources DeepInfer, the serving stack behind V4.1-Flash**
+**209. DeepSeek open-sources DeepInfer, the serving stack behind V4.1-Flash**
 *🧠 Open / efficient / local models*
 *🗞 The Code · 2026-10-21 23:09 KST — ["DeepSeek open-sources the engine behind its affordable AI"](newsletters/2026-10-21_newsletter_the_code.md#deepseek-open-sources-the-engine-behind-its-affordable-ai)*
 
@@ -77,7 +213,7 @@ DeepSeek published DeepInfer, the inference software it runs V4.1-Flash on — h
 
 ---
 
-**209. Perplexity Computer runs fully local on an Apple Silicon Mac**
+**208. Perplexity Computer runs fully local on an Apple Silicon Mac**
 *🔒 Privacy & local tooling*
 *🗞 Superhuman AI · 2026-10-21 22:19 KST — ["Perplexity joins Meta by bringing its models to Apple Macs"](newsletters/2026-10-21_newsletter_superhuman_ai.md#perplexity-joins-meta-by-bringing-its-models-to-apple-macs)*
 
@@ -91,7 +227,7 @@ Perplexity Computer can now run its models on-device on Apple Silicon, so work o
 
 ---
 
-**208. shim-cli shows and masks exactly what your agent sends upstream**
+**207. shim-cli shows and masks exactly what your agent sends upstream**
 *🔒 Privacy & local tooling*
 *🗞 The Frontier · 2026-10-21 06:37 KST — ["shim-cli — See what your coding agent sends. Mask what you can."](newsletters/2026-10-21_newsletter_the_frontier.md#shim-cli-see-what-your-coding-agent-sends-mask-what-you-can)*
 
@@ -104,7 +240,7 @@ shim-cli sits between your coding agent and the model API so you can read the ac
 
 ---
 
-**207. Beam — a 501B agent-tuned open model with 23B active**
+**206. Beam — a 501B agent-tuned open model with 23B active**
 *🧠 Open / efficient / local models*
 *🗞 The Frontier · 2026-10-21 06:37 KST — ["Beam — Highly efficient agentic 501B parameter open model"](newsletters/2026-10-21_newsletter_the_frontier.md#beam-highly-efficient-agentic-501b-parameter-open-model)*
 
@@ -117,7 +253,7 @@ Beam is a 501B-parameter mixture-of-experts built specifically for agent loops: 
 
 ---
 
-**206. Claude Desktop v2's Code tab replaces VS Code — with a browser that keeps your logins**
+**205. Claude Desktop v2's Code tab replaces VS Code — with a browser that keeps your logins**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Product Compass · 2026-10-21 00:12 KST — ["Why the Code Tab: All Features Without VS Code"](newsletters/2026-10-21_newsletter_the_product_compass.md#why-the-code-tab-all-features-without-vs-code)*
 
@@ -131,7 +267,7 @@ Claude Desktop now has Chat, Cowork and Code tabs, and the Code tab is Claude Co
 
 ---
 
-**205. Five synthetic users catch launch bugs before real ones do**
+**204. Five synthetic users catch launch bugs before real ones do**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-20 23:07 KST — ["How to QA your launch with 5 synthetic users"](newsletters/2026-10-20_newsletter_the_code.md#how-to-qa-your-launch-with-5-synthetic-users)*
 
@@ -144,7 +280,7 @@ Install the Playwright MCP server, then paste a prompt that spawns five subagent
 
 ---
 
-**204. Anthropic's cookbook audits finished agent sessions for security holes**
+**203. Anthropic's cookbook audits finished agent sessions for security holes**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-10-20 23:07 KST — ["How to review your agents for security issues (by Anthropic)"](newsletters/2026-10-20_newsletter_the_code.md#how-to-review-your-agents-for-security-issues)*
 
@@ -157,7 +293,7 @@ The cookbook walks through auditing completed agent runs rather than live traffi
 
 ---
 
-**203. A harness turns cheap Luna from 3/10 to 10/10 — cheaper than solo Sol**
+**202. A harness turns cheap Luna from 3/10 to 10/10 — cheaper than solo Sol**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-20 23:07 KST — ["Your cheap AI model just needs a harness. Here’s why"](newsletters/2026-10-20_newsletter_the_code.md#your-cheap-ai-model-just-needs-a-harness-heres-why)*
 
@@ -171,7 +307,7 @@ Naresh Jain had Codex build the same Java backend ten times on GPT-6 Sol and ten
 
 ---
 
-**202. Cloudflare's Clairic extracts typed fields 3.2x faster than an LLM**
+**201. Cloudflare's Clairic extracts typed fields 3.2x faster than an LLM**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-20 23:07 KST — ["Cloudflare’s new model reads messy data faster than normal LLMs"](newsletters/2026-10-20_newsletter_the_code.md#cloudflares-new-model-reads-messy-data-faster-than-normal-llms)*
 
@@ -185,7 +321,7 @@ Cloudflare previewed Clairic, an extraction model that skips text generation ent
 
 ---
 
-**201. GPT-4o and GPT-4.1 retire January 14, 2027 — switch model IDs now**
+**200. GPT-4o and GPT-4.1 retire January 14, 2027 — switch model IDs now**
 *💸 Token & infra economics*
 *🗞 OpenRouter Team · 2026-10-20 09:10 KST — ["GPT-4o and GPT-4.1 models retire January 14, 2027"](newsletters/2026-10-20_newsletter_openrouter.md#gpt-4o-and-gpt-41-models-retire-january-14-2027)*
 
@@ -193,20 +329,6 @@ OpenAI's GPT-4o, GPT-4o mini, GPT-4.1 and GPT-4.1 mini stop being served through
 
 - [OpenRouter models](https://openrouter.ai/models)
 - [OpenRouter docs](https://openrouter.ai/docs)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**200. Anthropic's review stack for agent-written PRs: verify, then cap rounds**
-*🏗️ Agent plumbing & production stacks*
-*🗞 The Code · 2026-10-19 23:02 KST — ["How Claude Code handles code review (by Anthropic)"](newsletters/2026-10-19_newsletter_the_code.md#how-claude-code-handles-code-review)*
-
-Anthropic published the review stack it runs now that agents ship most of its code: make the agent verify its own work before opening the PR, run AI and security review passes in a fresh context, scale human approval by risk instead of uniformly, and cap review rounds so agents stop ping-ponging over nits. Addy Osmani's companion piece argues line-by-line review can no longer keep up with agent volume and lays out what replaces it — a copyable process, not a tool.
-
-- [Anthropic's code review playbook](https://claude.dev/blog/solving-code-review-at-anthropic/)
-- [Osmani on replacing line-by-line review](https://archive.codenewsletter.ai/2111604705340326393)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
