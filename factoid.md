@@ -1,6 +1,6 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-24"
+sweep: "2026-09-05 → 2026-10-23"
 updated: "2026-10-24"
 sources: "The Code, Future Tools, Superhuman AI, The Frontier, The Product Compass, OpenRouter Team, Product Hunt Weekly, The Economist, Superhuman AI · Sunday Special"
 ---
