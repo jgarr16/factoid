@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 How top teams review AI PRs — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 How top teams review AI PRs — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 How top teams review AI PRs</h1>
+<p class="meta">2026-10-24 · received 2026-10-24 21:31 +0900
+ · <a href="https://codenewsletter.ai/p/how-devs-are-reviewing-code-when-ai-writes-it" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 How top teams review AI PRs</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/012fde48-8bb7-43a6-ab80-728863ad4b19/Add_a_heading__4_.jpg?t=1789481261" /></p>
+<hr />
+<p><strong>Welcome back.</strong> Your agent can write a feature in minutes, but you still spend the entire afternoon reviewing it. Multiply that across every PR, and code review quickly becomes the biggest bottleneck of your week. The Claude Code team has now <a href="https://archive.codenewsletter.ai/2111168901723906176">solved this</a> even with Claude writing 90% of their code.</p>
+<p>Today, you’ll set up 3 workflows that catch more bugs while you read far less code.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>How the Claude Code team and Uber review code now</p>
+</li>
+<li>
+<p>Workflow #1: Prove an agent’s PR works</p>
+</li>
+<li>
+<p>Workflow #2: Catch mistakes before the PR</p>
+</li>
+<li>
+<p>Workflow #3: Save human review for risky code</p>
+</li>
+</ul>
+<hr />
+<h5><strong>DEEP DIVE</strong></h5>
+<p><a href="https://claude.dev/blog/solving-code-review-at-anthropic/"><img alt="Click here to see how the Claude Code team does code review." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/333fe045-d4d6-43fe-936c-00b6cce71204/Thumbnail__28_.jpg?t=1792647094" /></a>
+<em>Click here to see how the Claude Code team does code review.</em></p>
+<hr />
+<p><strong>What changed?</strong> The Claude Code team no longer waits for a teammate to read every line. Agents <a href="https://claude.dev/blog/solving-code-review-at-anthropic/">review</a> each PR first. Low-risk changes like docs merge without any human review. Standard changes need just one reviewer. High-risk code like billing requires two.</p>
+<p>Uber uses a <a href="https://www.uber.com/us/en/blog/ai-code-cleanup/">similar setup</a> to clean up old code. They run four agents that each check one specific detail. Any change that fails gets thrown out before an engineer ever sees it.</p>
+<p><strong>To get started,</strong> open Claude Code and run “/code-review”. It checks your current branch and lists the bugs it finds right in your chat.</p>
+<p>That’s the most basic version. Here are 3 more ways to level up your code reviews this weekend:</p>
+<hr />
+<h5><strong>WORKFLOW #1: VERIFICATION</strong></h5>
+<p><a id="how-to-know-an-agents-pr-works-without-reading-the-code"></a></p>
+<h2><strong>How to know an agent’s PR works without reading the code</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2109436202554372476"><img alt="Source: X.com/poteto" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3bdeee61-0fcf-43e9-9a9d-b472a8225652/CleanShot_2026-10-22_at_11.17.18_AM_2x.jpg?t=1792648065" /></a>
+<em>Source: X.com/poteto</em></p>
+<hr />
+<p>The agent says it’s done. The tests pass and the diff looks clean, so you merge it. Then you open the app, and the button it built doesn’t do anything, because nobody ever clicked it.</p>
+<p>A Cursor engineer, Lauren Tan, <a href="https://archive.codenewsletter.ai/2109436202554372476">says the fix</a> is to give your agent a way to check its own work the way a real user would. The agent then hands you proof, like screenshots or a video, that’s faster to review than the diff. Her Cursor plugin, pstack, builds that checker for your project.</p>
+<p>Here’s how you can implement it:</p>
+<ul>
+<li><strong>Step 1:</strong> Install pstack from Cursor’s chat:</li>
+</ul>
+<pre><code>/add-plugin pstack
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Run this in your project. It asks a few questions, then builds a skill that lets the agent open and use your app.</li>
+</ul>
+<pre><code>/create-verification-skill
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Give the agent a real task and tell it to use the new skill to prove the fix before it opens the PR:</li>
+</ul>
+<pre><code>Fix the search filter that resets when I change pages. Reproduce the bug first, then fix it, then attach screenshots from the running app. Do not open a PR until the proof is attached.
+</code></pre>
+<hr />
+<h3><strong>Your opinion matters!</strong></h3>
+<p>This is our sixth <strong>Saturday Special</strong>. It’s a quick 5 min email designed to show how to use the latest and most relevant AI tools to code faster. Let us know what you think of this email in the poll at the bottom of this email (or by replying to this email).</p>
+<p>We’re writing this email just for you, so your feedback will shape what we write next!</p>
+<hr />
+<h5><strong>WORKFLOW #2: PRE-PUSH GATE</strong></h5>
+<p><a id="how-to-catch-an-agents-mistakes-before-they-reach-a-pr"></a></p>
+<h2><strong>How to catch an agent’s mistakes before they reach a PR</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2094079445074162118"><img alt="Source: X.com/kunchenguid" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2d3d5395-3696-435e-ab05-6e6b51f2dcdc/CleanShot_2026-10-22_at_11.15.00_AM_2x.jpg?t=1792647940" /></a>
+<em>Source: X.com/kunchenguid</em></p>
+<hr />
+<p>A former Meta engineer created an <a href="https://github.com/kunchenguid/no-mistakes">open‑source tool</a> that catches issues before your agent’s code reaches a pull request. Instead of pushing directly to the origin, you push to <a href="https://archive.codenewsletter.ai/2094079445074162118">the tool</a> first.</p>
+<p>The tool runs reviews, tests, linting, and continuous integration on a disposable clone of your repository. It automatically handles minor fixes itself.</p>
+<p>Here’s how you can implement it:</p>
+<ul>
+<li><strong>Step 1:</strong> Install it on your Mac:</li>
+</ul>
+<pre><code>curl -fsSL https://raw.githubusercontent.com/
+kunchenguid/no-mistakes/main/docs/install.sh | sh
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Inside your repo, run this command:</li>
+</ul>
+<pre><code>no-mistakes init
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Commit your work, push your branch to the gate, then open the run to see what it found. When every check passes, it opens the PR for you.</li>
+</ul>
+<pre><code>git push no-mistakes
+no-mistakes
+</code></pre>
+<hr />
+<h5><strong>WORKFLOW #3: RISK TIERS</strong></h5>
+<p><a id="how-to-save-human-review-for-the-code-that-can-actually-break"></a></p>
+<h2><strong>How to save human review for the code that can actually break</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2097027173941141799"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/50c9704d-b97e-476c-860a-76204ebc957f/CleanShot_2026-10-22_at_11.09.31_AM_2x.jpg?t=1792647607" /></a></p>
+<hr />
+<p>Addy Osmani, who works on Claude Code at Anthropic, <a href="https://archive.codenewsletter.ai/2097027173941141799">sorts pull requests</a> by the damage they could cause. Agents review every pull request first. Low-risk changes skip a deep human review once the agents sign off, while sensitive code always needs its owner’s approval.</p>
+<p>You can set up the “always needs an owner” part on GitHub in just a few minutes.</p>
+<ul>
+<li><strong>Step 1:</strong> Create a CODEOWNERS file that lists your riskiest folders and who owns them. GitHub then asks those owners to review any PR that touches their folders.</li>
+</ul>
+<pre><code># .github/CODEOWNERS
+/billing/ @your-org/payments
+/auth/ @your-org/security
+/.github/ @your-org/platform
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 2:</strong> In Settings &gt; Branches, add a rule for the main branch. Turn on “Require a pull request before merging.” Then enable “Require review from Code Owners.”</p>
+</li>
+<li>
+<p>Also select “Do not allow bypassing” so that admins cannot skip the rule. After you apply these settings, pull requests cannot be merged until the owner approves them.</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Add a PR template so every author, human or agent, says how they tested the change and how to undo it:</p>
+</li>
+</ul>
+<pre><code>mkdir -p .github &amp;&amp; \
+cat &gt; .github/pull_request_template.md &lt;&lt; 'EOF'
+## Testing
+## Risk (low, medium or high)
+## How to revert
+EOF
+</code></pre>
+<hr />
+<h5><strong>FUN WEEKEND PROJECTS TO TRY</strong></h5>
+<ul>
+<li>
+<p>Have your agent write tests that prove your code never does the wrong thing, like refunding more than a customer paid (<a href="https://archive.codenewsletter.ai/2106995301802541481">link</a>).</p>
+</li>
+<li>
+<p>Add one line to your CLAUDE.md that stops your agent from writing tests that just repeat the code (<a href="https://archive.codenewsletter.ai/2093068185830347088">link</a>).</p>
+</li>
+<li>
+<p>Ask your agent to split big features into small PRs, so each one is short enough to actually review (<a href="https://archive.codenewsletter.ai/2110008226846577144">link</a>).</p>
+</li>
+<li>
+<p>Get every AI-written PR to arrive with a video demo, a risk table and a checklist of what to test before you merge (<a href="https://archive.codenewsletter.ai/2103245685688771044">link</a>).</p>
+</li>
+<li>
+<p>Use one prompt to scan your old review comments and find the mistakes your agent keeps repeating (<a href="https://archive.codenewsletter.ai/2111133080526495985">link</a>).</p>
+</li>
+</ul>
+<p><strong>P.S.</strong> Here’s the Claude Code team’s <a href="https://claude.dev/blog/solving-code-review-at-anthropic/">full guide</a> to how they review code.</p>
+<hr />
+<h5><strong>TOP TOOLS FOR CODE REVIEW</strong></h5>
+<ul>
+<li>
+<p><a href="https://coderabbit.ai"><strong>CodeRabbit:</strong> </a> An AI reviewer that leaves line-by-line comments and a summary on every pull request in GitHub or GitLab. You can teach it your team’s rules in plain English, and open-source repos pay nothing.</p>
+</li>
+<li>
+<p><a href="https://www.greptile.com/"><strong>Greptile:</strong> </a> It maps your whole codebase first, so its review agents catch bugs that reach beyond the diff. It also learns your team’s standards by reading your past PR comments, and it can send each issue straight to Claude Code, Cursor or Codex to fix.</p>
+</li>
+<li>
+<p><a href="https://github.com/The-PR-Agent/pr-agent"><strong>PR-Agent:</strong> </a> An open-source PR reviewer you run yourself, so your code stays on your own setup. Add it as a GitHub Action, then comment “/review” or “/improve” on any PR to get a review or suggested fixes.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>STARTING POINT</strong></h5>
+<p><strong>How to start this weekend.</strong> By Sunday morning, you could have “/code-review” catching bugs on your branch, an agent that attaches screenshots to its PRs, and a gate that opens clean PRs for you. Once that works, lock your riskiest folders behind a code owner so human review only goes where it counts.</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://thecode-cybersecurity.beehiiv.com/subscribe">The Code Cybersecurity</a></p>
+</li>
+<li>
+<p><a href="https://theitcode.beehiiv.com/subscribe_v1">The IT Code</a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
