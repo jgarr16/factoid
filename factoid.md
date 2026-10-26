@@ -1,13 +1,124 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-24"
-updated: "2026-10-26"
-sources: "The Code, The Batch, Future Tools, The Economist, Superhuman AI, The Frontier, The Product Compass, OpenRouter Team, Product Hunt Weekly, Superhuman AI · Sunday Special"
+sweep: "2026-09-05 → 2026-10-26"
+updated: "2026-10-27"
+sources: "The Code, Superhuman AI, Product Hunt Weekly, The Batch, Future Tools, The Economist, The Frontier, The Product Compass, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**216. pstack's verification skill makes the agent prove its PR works**
+**223. Anthropic: fold planners and routers back into the main agent loop**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-26 23:04 KST — ["How to simplify your multi-agent setup (by Anthropic)"](newsletters/2026-10-26_newsletter_the_code.md#how-to-simplify-your-multi-agent-setup)*
+
+Anthropic's cookbook argues most agent setups carry more subagents than they need: planners, routers and specialists can usually be folded back into one main loop as skills and tools, with separate subagents reserved for genuinely parallel work, a fresh context window, or an overloaded toolset. Fewer moving parts means fewer handoffs to debug and fewer places for context to be lost. Directly applicable to harness design.
+
+- [Anthropic cookbook](https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**222. HumanLayer — one console for parallel Claude Code, Codex and Pi agents**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-26 23:04 KST — ["HumanLayer (12.5k ⭐)"](newsletters/2026-10-26_newsletter_the_code.md#humanlayer)*
+
+HumanLayer (12.5k stars) runs Claude Code, Codex, OpenCode and Pi agents across your own machines and manages their tasks, sessions, plans and reviews from a single place — built for people running several coding agents in parallel without losing track of which one is on what. It is self-hostable, so it fits the local-first bias, and it is the coordination piece that is usually missing once a second agent is running.
+
+- [github.com/humanlayer/humanlayer](https://github.com/humanlayer/humanlayer)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**221. Tailscale SSH: 11 flaws let one hacked device own the tailnet**
+*🔒 Privacy & local tooling*
+*🗞 The Code · 2026-10-26 23:04 KST — ["Tailscale SSH flaws could hand hackers root access across servers"](newsletters/2026-10-26_newsletter_the_code.md#tailscale-ssh-flaws-could-hand-hackers-root-access-across-servers)*
+
+Researcher Erica Windisch published 11 flaws in Tailscale's client and the self-hosted headscale server. In her lab a single compromised device used SSH port forwarding to take full control of other machines and enrol a rogue node on the network. No patch is out yet — Tailscale says fixes are coming — so the interim advice is to audit SSH access and disable unnecessary forwarding on any tailnet he runs.
+
+- [Tailscale response thread](https://www.reddit.com/r/Tailscale/comments/1xeoj1l/recent_tailscale_vulnerability_reports/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**220. Kimi K3.1 Pro — 1M context at $2/$10, open weights by Nov 4**
+*🧠 Open / efficient / local models*
+*🗞 The Code · 2026-10-26 23:04 KST — ["Moonshot’s new open model closes in on frontier coding"](newsletters/2026-10-26_newsletter_the_code.md#moonshots-new-open-model-closes-in-on-frontier-coding)*
+*🗞 Superhuman AI · 2026-10-26 22:09 KST — ["Kimi releases an open-weight model that tops Fable and Astra"](newsletters/2026-10-26_newsletter_superhuman_ai.md#kimi-releases-an-open-weight-model-that-tops-fable-and-astra)*
+
+Moonshot's K3.1 Pro claims 65.7% on Terminal-Bench 4.0 — ahead of GPT-6 Astra, just behind Claude Opus 5.5 — with a 1M-token context at $2/$10 per million input/output tokens, plus a Highspeed variant running 2-3x faster. The company says full weights land by November 4th and that hacking-related data was stripped from training to cap offensive cyber ability. Usable through the hosted Kimi API today; the open weights are what make it worth queuing for a local harness.
+
+- [Kimi quickstart](https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart)
+- [Kimi K3.1 Pro announcement](https://www.kimi.ai/blog/kimi-k3-1-pro)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**219. Dessa — Block's full-duplex voice model runs on a MacBook Pro**
+*🗣️ Voice · TTS & STT*
+*🗞 The Code · 2026-10-26 23:04 KST — ["Block’s human-sounding voice AI runs on laptops"](newsletters/2026-10-26_newsletter_the_code.md#blocks-human-sounding-voice-ai-runs-on-laptops)*
+*🗞 Superhuman AI · 2026-10-26 22:09 KST — ["Jack Dorsey’s Block drops a voice model that runs on a MacBook"](newsletters/2026-10-26_newsletter_superhuman_ai.md#jack-dorseys-block-drops-a-voice-model-that-runs-on-a-macbook)*
+
+Block trained Dessa from scratch on recordings of human conversation instead of text, so it carries pauses, breathing, inflection, laughter and interruptions, and works directly on audio with no external LLM in the loop. It is full-duplex — listens while it speaks — and Block says it runs locally on a MacBook Pro M4 Max or better. Access is limited to safety researchers for now, but the on-device claim is the part to watch for a private voice agent.
+
+- [Dessa demos](https://block.xyz/dessa)
+- [The Code writeup](https://archive.codenewsletter.ai/2113671324400861645)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**218. Latch — block apps until you walk to an NFC key**
+*⚡ Productivity & agent follow-through*
+*🗞 Product Hunt Weekly · 2026-10-26 02:39 KST — ["The app blocker you unlock by walking to your key"](newsletters/2026-10-26_newsletter_product_hunt_weekly.md#the-app-blocker-you-unlock-by-walking-to-your-key)*
+
+Latch locks the apps you pick and unlocks them only when you physically reach its key: a cheap NFC sticker, a printed QR code, or a step count, placed somewhere inconvenient — kitchen, car, office. It is a blunt friction layer for phone doomscrolling rather than a scheduler, which is exactly the part that makes it work; the same idea could be pointed at a Mac with an NFC tag and a Shortcuts automation.
+
+- [Latch on Product Hunt](https://www.producthunt.com/posts/latch-8)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**217. 1Password opens a login platform for agents, with per-login approval**
+*🤖 AI security & agent risk*
+*🗞 Product Hunt Weekly · 2026-10-26 02:39 KST — ["1Password"](newsletters/2026-10-26_newsletter_product_hunt_weekly.md#1password)*
+
+1Password launched a platform that lets agents log into your accounts without ever receiving the credentials — the user gets a notification when an agent tries to sign in and confirms or denies it. That is the delegated-credential pattern most agent stacks hand-roll badly with stored cookies and API keys, and it sits on the vault he already uses. Worth testing as the auth layer before handing an agent real browser sessions.
+
+- [1Password on Product Hunt](https://www.producthunt.com/products/1password)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**216. Eleven Realtime and Voxtral 3 — two drop-in voice-agent stacks**
+*🗣️ Voice · TTS & STT*
+*🗞 Product Hunt Weekly · 2026-10-26 02:39 KST — ["Realtime voice agent models with 570ms to first audio"](newsletters/2026-10-26_newsletter_product_hunt_weekly.md#realtime-voice-agent-models-with-570ms-to-first-audio)*
+*🗞 The Code · 2026-10-21 23:09 KST — ["ElevenLabs and Mistral drop new models for voice agents"](newsletters/2026-10-21_newsletter_the_code.md#elevenlabs-and-mistral-drop-new-models-for-voice-agents)*
+*🗞 Superhuman AI · 2026-10-21 22:19 KST — ["ElevenLabs and Krea roll out voice and image models"](newsletters/2026-10-21_newsletter_superhuman_ai.md#elevenlabs-and-krea-roll-out-voice-and-image-models)*
+
+ElevenLabs' Eleven Realtime is a speech-to-speech family you can swap into an existing voice agent by changing only the endpoint and model name from OpenAI's Realtime API — Mini for natural conversation, Max for reasoning through harder tasks. Mistral's Voxtral 3 is the tinkerer's option: a LiveKit-based SDK lets you switch the LLM, voice or language without rewriting the agent, and Mistral documents running the whole stack on your own servers.
+
+- [Eleven Realtime](https://elevenlabs.io/realtime)
+- [Voxtral 3](https://mistral.ai/news/voxtral-3/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**215. pstack's verification skill makes the agent prove its PR works**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-24 21:31 KST — ["How to know an agent’s PR works without reading the code"](newsletters/2026-10-24_newsletter_the_code.md#how-to-know-an-agents-pr-works-without-reading-the-code)*
 
@@ -21,7 +132,7 @@ Cursor engineer Lauren Tan's fix for "tests pass but the button does nothing": g
 
 ---
 
-**215. no-mistakes — push to a gate that proves the agent's branch before a PR**
+**214. no-mistakes — push to a gate that proves the agent's branch before a PR**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-24 21:31 KST — ["How to catch an agent’s mistakes before they reach a PR"](newsletters/2026-10-24_newsletter_the_code.md#how-to-catch-an-agents-mistakes-before-they-reach-a-pr)*
 
@@ -35,7 +146,7 @@ An open-source pre-push gate from a former Meta engineer: instead of pushing to 
 
 ---
 
-**214. Risk-based ("blast-radius") code review is the pattern that won.**
+**213. Risk-based ("blast-radius") code review is the pattern that won.**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-24 21:31 KST — ["How to save human review for the code that can actually break"](newsletters/2026-10-24_newsletter_the_code.md#how-to-save-human-review-for-the-code-that-can-actually-break)*
 *🗞 The Code · 2026-09-11 23:08 KST — ["What to do when you are flooded with 100+ PRs"](newsletters/2026-09-11_newsletter_the_code.md#what-to-do-when-you-are-flooded-with-100-prs)*
@@ -49,7 +160,7 @@ OpenAI and Anthropic already route low-risk changes to AI review while anything 
 
 ---
 
-**213. ARTEX: an open AI security tool was used to breach ConnectWise and 2,250 customers**
+**212. ARTEX: an open AI security tool was used to breach ConnectWise and 2,250 customers**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-10-23 23:08 KST — ["Microsoft says China-linked hackers used AI to orchestrate attacks"](newsletters/2026-10-23_newsletter_the_code.md#microsoft-says-china-linked-hackers-used-ai-to-orchestrate-attacks)*
 
@@ -63,7 +174,7 @@ Microsoft says a China-aligned actor used ARTEX, an open-source AI security-test
 
 ---
 
-**212. Meta's Muse Spark Open runs locally on two Mac Studios**
+**211. Meta's Muse Spark Open runs locally on two Mac Studios**
 *🧠 Open / efficient / local models*
 *🗞 The Batch · 2026-10-23 22:02 KST — ["Meta Releases Wonder, Opens Spark"](newsletters/2026-10-23_newsletter_the_batch.md#meta-releases-wonder-opens-spark)*
 *🗞 Future Tools · 2026-10-17 02:08 KST — ["Muse Spark Open, an 816B-parameter open-weight model that runs on an Apple M5 Ultra"](newsletters/2026-10-17_newsletter_future_tools.md#muse-spark-open-an-816b-parameter-open-weight-model-that-runs-on-an-ap)*
@@ -80,7 +191,7 @@ Meta released Muse Spark Open, an open-weight model with 816B total parameters (
 
 ---
 
-**211. Recursive Flint — an open-weights coding model built mostly by AI, runs locally**
+**210. Recursive Flint — an open-weights coding model built mostly by AI, runs locally**
 *🧠 Open / efficient / local models*
 *🗞 The Code · 2026-10-22 22:06 KST — ["Recursive’s AI-built coding model runs on your laptop"](newsletters/2026-10-22_newsletter_the_code.md#recursives-ai-built-coding-model-runs-on-your-laptop)*
 
@@ -94,7 +205,7 @@ Recursive, a Stanford-alum-founded lab, launched Flint — a coding model it say
 
 ---
 
-**210. ChatGPT dots: an always-on agent that works between conversations**
+**209. ChatGPT dots: an always-on agent that works between conversations**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-22 22:06 KST — ["Anthropic’s new agent keeps working after you log off"](newsletters/2026-10-22_newsletter_the_code.md#anthropics-new-agent-keeps-working-after-you-log-off)*
 *🗞 Future Tools · 2026-10-22 01:07 KST — ["What If Your AI Kept Working After You Logged Off?"](newsletters/2026-10-22_newsletter_future_tools.md#what-if-your-ai-kept-working-after-you-logged-off)*
@@ -102,21 +213,6 @@ Recursive, a Stanford-alum-founded lab, launched Flint — a coding model it say
 OpenAI's dots is a standing-responsibility agent rather than a chat: you set permissions and boundaries, then it keeps working between conversations — researching, drafting, writing and testing code on its own cloud computer and browser, using ChatGPT memory of your priorities, and surfacing finished work for review or asking when a decision needs you. It's the first-party version of the background-agent pattern this log keeps tracking, without an API yet.
 
 - [ChatGPT dots](https://chatgpt.com/features/dots/)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**209. Eleven Realtime and Voxtral 3 — two drop-in voice-agent stacks**
-*🗣️ Voice · TTS & STT*
-*🗞 The Code · 2026-10-21 23:09 KST — ["ElevenLabs and Mistral drop new models for voice agents"](newsletters/2026-10-21_newsletter_the_code.md#elevenlabs-and-mistral-drop-new-models-for-voice-agents)*
-*🗞 Superhuman AI · 2026-10-21 22:19 KST — ["ElevenLabs and Krea roll out voice and image models"](newsletters/2026-10-21_newsletter_superhuman_ai.md#elevenlabs-and-krea-roll-out-voice-and-image-models)*
-
-ElevenLabs' Eleven Realtime is a speech-to-speech family you can swap into an existing voice agent by changing only the endpoint and model name from OpenAI's Realtime API — Mini for natural conversation, Max for reasoning through harder tasks. Mistral's Voxtral 3 is the tinkerer's option: a LiveKit-based SDK lets you switch the LLM, voice or language without rewriting the agent, and Mistral documents running the whole stack on your own servers.
-
-- [Eleven Realtime](https://elevenlabs.io/realtime)
-- [Voxtral 3](https://mistral.ai/news/voxtral-3/)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
