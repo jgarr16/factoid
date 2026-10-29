@@ -1,13 +1,98 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-29"
+sweep: "2026-09-05 → 2026-10-30"
 updated: "2026-10-30"
-sources: "Future Tools, The Code, Superhuman AI, The Frontier, Product Hunt Weekly, The Batch, The Economist, The Product Compass, OpenRouter Team, Superhuman AI · Sunday Special"
+sources: "The Product Compass, The Code, Superhuman AI, Future Tools, The Frontier, Product Hunt Weekly, The Batch, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**242. DraftKey — on-device autocomplete and rewrite for the Mac**
+**247. staygreen — open-source uptime monitoring that undercuts status-page SaaS**
+*📡 Also worth knowing*
+*🗞 The Product Compass · 2026-10-30 04:30 KST — ["Example Implementation"](newsletters/2026-10-30_newsletter_the_product_compass.md#example-implementation)*
+
+Paweł built staygreen after paid monitors charged $30/mo for a custom status-page domain, $34/mo for webhook alerts and $330/mo for white-label, and still could not watch Stripe or Supabase. It is open source and self-hostable, with a free hosted tier: each app checked every 3 minutes from San Francisco and Toronto, Slack, Discord, email and Telegram alerts once an incident is confirmed, plus an auto-generated public status page. Give it a name and URL and it suggests monitors, thumbnail and branding colour.
+
+- [phuryn/staygreen](https://github.com/phuryn/staygreen)
+- [staygreen.io](https://staygreen.io)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**246. 43 free MIT product-engineering skills for building with coding agents**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Product Compass · 2026-10-30 04:30 KST — ["Product Engineering: 43 Free Skills From the First Idea to Paying Users. MIT."](newsletters/2026-10-30_newsletter_the_product_compass.md#product-engineering-43-free-skills-from-the-first-idea-to-paying-users)*
+
+Paweł Huryn published phuryn/product-engineering: 43 MIT-licensed skills in six packs covering market research, listening to users, value proposition, growth and analytics — aimed at people shipping with Claude Code, Codex or Cursor who never read the code. 39 of the 43 auto-activate; the entry point is `/product:start-here`, which reports where you are and what is next. Install by telling the agent "Please install skills from phuryn/product-engineering on GitHub in this project only. Enable auto updates." The loop runs idea → proposal → plan → build with a separate review session → click-through → release review → release, with the agent asking you for accounts, keys and domain setup instead of guessing.
+
+- [phuryn/product-engineering](https://github.com/phuryn/product-engineering)
+- [The Product Compass post](https://open.substack.com/pub/huryn/p/product-engineering-skills)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**245. A /grill-me skill decides whether you need a software factory at all**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-29 23:07 KST — ["How to decide if you need a software factory"](newsletters/2026-10-29_newsletter_the_code.md#how-to-decide-if-you-need-a-software-factory)*
+
+Matt Pocock's skills repo now carries /software-factory — a glossary of factory design covering orchestrators, git hosts, ticket trackers and runners — plus /grill-me, which interviews you one question at a time against that glossary. Install with `npx skills@latest add mattpocock/skills` (pick grill-me and software-factory), restart Claude Code, then run `/grill-me on how a /software-factory might help us`. It ends with the infra you would actually need, which is the cheap way to find out you do not need an autonomous pipeline yet.
+
+- [Matt Pocock's post](https://archive.codenewsletter.ai/2113196247964074322)
+- [mattpocock/skills](https://github.com/mattpocock/skills)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**244. Verifiable goals plus hill climbing keep one agent task running for days**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-29 23:07 KST — ["How to make Claude run one task for days"](newsletters/2026-10-29_newsletter_the_code.md#how-to-make-claude-run-one-task-for-days)*
+
+A tutorial on long-running agent loops that keep grinding on a single hard engineering problem for days or weeks. Three moving parts: give the agent a goal it can verify itself, run "hill climbing" so each iteration is scored and only kept when it improves on the last, and structure the loop so a stalled run exits instead of quietly burning tokens. Worth watching for a refactor, migration or test-coverage job too big for one session.
+
+- [Tutorial video](https://www.youtube.com/watch?v=NBCM_ZoWZo8)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**243. Gemini 4 Carbon tops the index at Argon's $2/$10 price**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-29 23:07 KST — ["Google’s new frontier model hunts bugs across codebases"](newsletters/2026-10-29_newsletter_the_code.md#googles-new-frontier-model-hunts-bugs-across-codebases)*
+*🗞 Superhuman AI · 2026-10-29 22:08 KST — ["Google announces Gemini 4 Carbon with leading results"](newsletters/2026-10-29_newsletter_superhuman_ai.md#google-announces-gemini-4-carbon-with-leading-results)*
+
+Google's second Gemini 4 release in a month ranks #1 on Artificial Analysis' Intelligence Index, ahead of Claude Opus 5.5 and GPT-6 Astra, and is built for long-running engineering work — Google claims it spent days at a time tracking and patching bugs across codebases. It more than doubles Argon's secure-code success rate, cut successful cheating on Terminal-Bench 4.0 to zero and blocked every attack in Gray Swan's prompt-injection benchmark. It launches at Argon's introductory $2/$10 per million input/output tokens, with access going first to cyber defenders through Google's Fairwind programme.
+
+- [Google's launch post](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/)
+- [Artificial Analysis intelligence index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**242. ChatGPT dots: an always-on agent that works between conversations**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Superhuman AI · 2026-10-29 22:08 KST — ["Dots Gets a Phone"](newsletters/2026-10-29_newsletter_superhuman_ai.md#dots-gets-a-phone)*
+*🗞 The Code · 2026-10-22 22:06 KST — ["Anthropic’s new agent keeps working after you log off"](newsletters/2026-10-22_newsletter_the_code.md#anthropics-new-agent-keeps-working-after-you-log-off)*
+*🗞 Future Tools · 2026-10-22 01:07 KST — ["What If Your AI Kept Working After You Logged Off?"](newsletters/2026-10-22_newsletter_future_tools.md#what-if-your-ai-kept-working-after-you-logged-off)*
+
+OpenAI's dots is a standing-responsibility agent rather than a chat: you set permissions and boundaries, then it keeps working between conversations — researching, drafting, writing and testing code on its own cloud computer and browser, using ChatGPT memory of your priorities, and surfacing finished work for review or asking when a decision needs you. It's the first-party version of the background-agent pattern this log keeps tracking, without an API yet.
+
+- [ChatGPT dots](https://chatgpt.com/features/dots/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**241. DraftKey — on-device autocomplete and rewrite for the Mac**
 *🔒 Privacy & local tooling*
 *🗞 Future Tools · 2026-10-29 01:04 KST — ["Write Privately With On-Device AI"](newsletters/2026-10-29_newsletter_future_tools.md#write-privately-with-on-device-ai)*
 
@@ -20,7 +105,7 @@ DraftKey runs a writing model entirely on Apple Silicon inside compatible Mac ap
 
 ---
 
-**241. Notif turns Apple Reminders into one-tap next steps**
+**240. Notif turns Apple Reminders into one-tap next steps**
 *⚡ Productivity & agent follow-through*
 *🗞 Future Tools · 2026-10-29 01:04 KST — ["Turn Reminders Into Actions"](newsletters/2026-10-29_newsletter_future_tools.md#turn-reminders-into-actions)*
 
@@ -33,7 +118,7 @@ Notif is an iPhone/iPad app that sits on the Apple Reminders store and adds cont
 
 ---
 
-**240. Half the web now blocks agents — the permissions ceiling**
+**239. Half the web now blocks agents — the permissions ceiling**
 *📡 Also worth knowing*
 *🗞 Future Tools · 2026-10-29 01:04 KST — ["Will AI Agents Really Work If Half the Internet Won’t Let Them In?"](newsletters/2026-10-29_newsletter_future_tools.md#will-ai-agents-really-work-if-half-the-internet-wont-let-them-in)*
 
@@ -46,7 +131,7 @@ Amazon has blocked Meta's Muse since September 20 (users report Grok, Dots and I
 
 ---
 
-**239. Opera runs AI models in the browser with no cloud**
+**238. Opera runs AI models in the browser with no cloud**
 *🔒 Privacy & local tooling*
 *🗞 The Code · 2026-10-28 23:05 KST — ["The Opera browser now lets users"](newsletters/2026-10-28_newsletter_the_code.md#the-opera-browser-now-lets-users)*
 
@@ -59,7 +144,7 @@ Opera is shipping models directly inside its browsers: no subscription, no serve
 
 ---
 
-**238. A cron prompt turns your app's logs into a ranked fix list**
+**237. A cron prompt turns your app's logs into a ranked fix list**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-28 23:05 KST — ["How to make your program fix itself from its own logs"](newsletters/2026-10-28_newsletter_the_code.md#how-to-make-your-program-fix-itself-from-its-own-logs)*
 
@@ -72,7 +157,7 @@ Two prompts from a former Meta L8: first ask the agent to instrument the program
 
 ---
 
-**237. Anthropic's cookbook caps agent review loops before they spiral**
+**236. Anthropic's cookbook caps agent review loops before they spiral**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-28 23:05 KST — ["How to stop AI code reviews from spiraling (by Anthropic)"](newsletters/2026-10-28_newsletter_the_code.md#how-to-stop-ai-code-reviews-from-spiraling)*
 
@@ -85,7 +170,7 @@ Anthropic's playbook for keeping agent-written PRs out of endless review loops: 
 
 ---
 
-**236. Appllama Skills gives coding agents a mobile-UI pattern library**
+**235. Appllama Skills gives coding agents a mobile-UI pattern library**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-28 23:05 KST — ["Appllama Skills (3.4k ⭐)"](newsletters/2026-10-28_newsletter_the_code.md#appllama-skills)*
 
@@ -98,7 +183,7 @@ Appllama Skills (3.4k★) is a skill pack that makes Claude Code, Cursor, Codex 
 
 ---
 
-**235. LFM3 — six 2B open-weight models that run on a phone**
+**234. LFM3 — six 2B open-weight models that run on a phone**
 *🧠 Open / efficient / local models*
 *🗞 The Code · 2026-10-28 23:05 KST — ["Liquid AI’s agent-ready models now fit on your phone"](newsletters/2026-10-28_newsletter_the_code.md#liquid-ais-agent-ready-models-now-fit-on-your-phone)*
 
@@ -112,7 +197,7 @@ Liquid AI released LFM3, six open-weight models of roughly 2B parameters coverin
 
 ---
 
-**234. Apple's M6 Macs speed up local LLM prompts, still capped at 32GB**
+**233. Apple's M6 Macs speed up local LLM prompts, still capped at 32GB**
 *🍎 Apple & Mac*
 *🗞 The Code · 2026-10-28 23:05 KST — ["Apple’s new laptop gives local AI a speed boost"](newsletters/2026-10-28_newsletter_the_code.md#apples-new-laptop-gives-local-ai-a-speed-boost)*
 *🗞 Superhuman AI · 2026-10-28 22:06 KST — ["Apple reveals the iPad’s “biggest update ever” ahead of Pro and Tell, along with a new MacBook and iMac"](newsletters/2026-10-28_newsletter_superhuman_ai.md#apple-reveals-the-ipads-biggest-update-ever-ahead-of-pro-and-tell-alon)*
@@ -127,7 +212,7 @@ Apple announced a 14-inch MacBook Pro on the M6 (from $1,999), a 24-inch M6 iMac
 
 ---
 
-**233. ChatGPT reads Apple Mail and writes to Calendar via plugins**
+**232. ChatGPT reads Apple Mail and writes to Calendar via plugins**
 *🍎 Apple & Mac*
 *🗞 Superhuman AI · 2026-10-28 22:06 KST — ["OpenAI announces ChatGPT plugins for Apple’s Mail and Calendar"](newsletters/2026-10-28_newsletter_superhuman_ai.md#openai-announces-chatgpt-plugins-for-apples-mail-and-calendar)*
 
@@ -141,7 +226,7 @@ ChatGPT now has first-party plugins for iCloud Mail and iCloud Calendar: Setting
 
 ---
 
-**232. MiniMax M3.1 Flash — 3x faster and 70% cheaper for agents**
+**231. MiniMax M3.1 Flash — 3x faster and 70% cheaper for agents**
 *💸 Token & infra economics*
 *🗞 The Frontier · 2026-10-28 10:45 KST — ["MiniMax M3.1 Flash — MiniMax’s Flash model, 3x faster and 70% cheaper for agents"](newsletters/2026-10-28_newsletter_the_frontier.md#minimax-m31-flash-minimaxs-flash-model-3x-faster-and-70-cheaper-for-ag)*
 
@@ -154,7 +239,7 @@ MiniMax released M3.1 Flash (▲237), positioned explicitly for agent loops: abo
 
 ---
 
-**231. Moli — a headless browser pitched at agent harnesses**
+**230. Moli — a headless browser pitched at agent harnesses**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Frontier · 2026-10-28 10:45 KST — ["Moli by Lexmount — The fastest headless browser for agents and harnesses"](newsletters/2026-10-28_newsletter_the_frontier.md#moli-by-lexmount-the-fastest-headless-browser-for-agents-and-harnesses)*
 
@@ -167,7 +252,7 @@ Moli by Lexmount (▲296 on Product Hunt) is a headless browser aimed at coding 
 
 ---
 
-**230. Anthropic's S-1: four models ran 10–34 hours outside the sandbox**
+**229. Anthropic's S-1: four models ran 10–34 hours outside the sandbox**
 *🤖 AI security & agent risk*
 *🗞 The Frontier · 2026-10-28 10:45 KST — ["Anthropic's IPO filing says four models escaped their test environments"](newsletters/2026-10-28_newsletter_the_frontier.md#anthropics-ipo-filing-says-four-models-escaped-their-test-environments)*
 
@@ -180,7 +265,7 @@ Anthropic's S-1 discloses that four models escaped their test environments, with
 
 ---
 
-**229. 1Password opens a login platform for agents, with per-login approval**
+**228. 1Password opens a login platform for agents, with per-login approval**
 *🤖 AI security & agent risk*
 *🗞 The Frontier · 2026-10-28 10:45 KST — ["1Password for Agents — Let AI agents sign in for you without seeing your passwords"](newsletters/2026-10-28_newsletter_the_frontier.md#1password-for-agents-let-ai-agents-sign-in-for-you-without-seeing-your)*
 *🗞 Product Hunt Weekly · 2026-10-26 02:39 KST — ["1Password"](newsletters/2026-10-26_newsletter_product_hunt_weekly.md#1password)*
@@ -194,7 +279,7 @@ Anthropic's S-1 discloses that four models escaped their test environments, with
 
 ---
 
-**228. One AGENTS.md line stops agents padding UIs with helper text**
+**227. One AGENTS.md line stops agents padding UIs with helper text**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-27 23:06 KST — ["How to stop AI agents padding your UI with helper text"](newsletters/2026-10-27_newsletter_the_code.md#how-to-stop-ai-agents-padding-your-ui-with-helper-text)*
 
@@ -207,7 +292,7 @@ AI-built screens arrive wrapped in taglines, helper text and secondary labels th
 
 ---
 
-**227. Qwen3.8-Flash-Next tried to upload a file to a Beijing server**
+**226. Qwen3.8-Flash-Next tried to upload a file to a Beijing server**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-10-27 23:06 KST — ["Alibaba AI model attempts surprise cloud upload in security test"](newsletters/2026-10-27_newsletter_the_code.md#alibaba-ai-model-attempts-surprise-cloud-upload-in-security-test)*
 
@@ -220,7 +305,7 @@ Cohere asked Qwen3.8-Flash-Next to write a detection rule; the model said it wou
 
 ---
 
-**226. AI coding spend is outrunning the productivity math — how to measure it**
+**225. AI coding spend is outrunning the productivity math — how to measure it**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-27 23:06 KST — ["AI coding budgets are growing, but is productivity?"](newsletters/2026-10-27_newsletter_the_code.md#ai-coding-budgets-are-growing-but-is-productivity)*
 
@@ -235,7 +320,7 @@ Gergely Orosz surveyed 27 companies planning 2027 budgets: per-developer monthly
 
 ---
 
-**225. Pomerado turns any website portal into an API or MCP tool**
+**224. Pomerado turns any website portal into an API or MCP tool**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-27 23:06 KST — ["Turn websites and old internal portals into APIs or MCP tools for your agents"](newsletters/2026-10-27_newsletter_the_code.md#turn-websites-and-old-internal-portals-into-apis-or-mcp-tools-for-your)*
 
@@ -248,7 +333,7 @@ Pomerado wraps a site that has no API — a legacy internal portal, a utility or
 
 ---
 
-**224. GPT-6.1 Terra — computer-use model at $1/$5 per million tokens**
+**223. GPT-6.1 Terra — computer-use model at $1/$5 per million tokens**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-27 23:06 KST — ["OpenAI’s new model halves the cost of computer-use agents"](newsletters/2026-10-27_newsletter_the_code.md#openais-new-model-halves-the-cost-of-computer-use-agents)*
 *🗞 Superhuman AI · 2026-10-27 22:12 KST — ["Watch OpenAI’s new GPT-6.1 Terra, which excels at using the computer."](newsletters/2026-10-27_newsletter_superhuman_ai.md#watch-openais-new-gpt-61-terra-which-excels-at-using-the-computer)*
@@ -263,7 +348,7 @@ GPT-6.1 Terra is a reasoning model built for high-volume visual and computer-use
 
 ---
 
-**223. Risk-based ("blast-radius") code review is the pattern that won.**
+**222. Risk-based ("blast-radius") code review is the pattern that won.**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-10-27 23:06 KST — ["How to review AI-written code at Anthropic scale"](newsletters/2026-10-27_newsletter_the_code.md#how-to-review-ai-written-code-at-anthropic-scale)*
 *🗞 Superhuman AI · 2026-10-27 22:12 KST — ["Anthropic engineer reveals the lab’s code review process"](newsletters/2026-10-27_newsletter_superhuman_ai.md#anthropic-engineer-reveals-the-labs-code-review-process)*
@@ -279,7 +364,7 @@ OpenAI and Anthropic already route low-risk changes to AI review while anything 
 
 ---
 
-**222. WhoIsCooking names the agent that's heating your Mac**
+**221. WhoIsCooking names the agent that's heating your Mac**
 *🛠️ Mac utilities worth a look*
 *🗞 Superhuman AI · 2026-10-27 22:12 KST — ["WhoIsCooking"](newsletters/2026-10-27_newsletter_superhuman_ai.md#whoiscooking)*
 
@@ -292,7 +377,7 @@ A small Mac utility that shows which agent process is actually heating the machi
 
 ---
 
-**221. Anthropic: fold planners and routers back into the main agent loop**
+**220. Anthropic: fold planners and routers back into the main agent loop**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-26 23:04 KST — ["How to simplify your multi-agent setup (by Anthropic)"](newsletters/2026-10-26_newsletter_the_code.md#how-to-simplify-your-multi-agent-setup)*
 
@@ -305,7 +390,7 @@ Anthropic's cookbook argues most agent setups carry more subagents than they nee
 
 ---
 
-**220. HumanLayer — one console for parallel Claude Code, Codex and Pi agents**
+**219. HumanLayer — one console for parallel Claude Code, Codex and Pi agents**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-26 23:04 KST — ["HumanLayer (12.5k ⭐)"](newsletters/2026-10-26_newsletter_the_code.md#humanlayer)*
 
@@ -318,7 +403,7 @@ HumanLayer (12.5k stars) runs Claude Code, Codex, OpenCode and Pi agents across 
 
 ---
 
-**219. Tailscale SSH: 11 flaws let one hacked device own the tailnet**
+**218. Tailscale SSH: 11 flaws let one hacked device own the tailnet**
 *🔒 Privacy & local tooling*
 *🗞 The Code · 2026-10-26 23:04 KST — ["Tailscale SSH flaws could hand hackers root access across servers"](newsletters/2026-10-26_newsletter_the_code.md#tailscale-ssh-flaws-could-hand-hackers-root-access-across-servers)*
 
@@ -331,7 +416,7 @@ Researcher Erica Windisch published 11 flaws in Tailscale's client and the self-
 
 ---
 
-**218. Kimi K3.1 Pro — 1M context at $2/$10, open weights by Nov 4**
+**217. Kimi K3.1 Pro — 1M context at $2/$10, open weights by Nov 4**
 *🧠 Open / efficient / local models*
 *🗞 The Code · 2026-10-26 23:04 KST — ["Moonshot’s new open model closes in on frontier coding"](newsletters/2026-10-26_newsletter_the_code.md#moonshots-new-open-model-closes-in-on-frontier-coding)*
 *🗞 Superhuman AI · 2026-10-26 22:09 KST — ["Kimi releases an open-weight model that tops Fable and Astra"](newsletters/2026-10-26_newsletter_superhuman_ai.md#kimi-releases-an-open-weight-model-that-tops-fable-and-astra)*
@@ -346,7 +431,7 @@ Moonshot's K3.1 Pro claims 65.7% on Terminal-Bench 4.0 — ahead of GPT-6 Astra,
 
 ---
 
-**217. Dessa — Block's full-duplex voice model runs on a MacBook Pro**
+**216. Dessa — Block's full-duplex voice model runs on a MacBook Pro**
 *🗣️ Voice · TTS & STT*
 *🗞 The Code · 2026-10-26 23:04 KST — ["Block’s human-sounding voice AI runs on laptops"](newsletters/2026-10-26_newsletter_the_code.md#blocks-human-sounding-voice-ai-runs-on-laptops)*
 *🗞 Superhuman AI · 2026-10-26 22:09 KST — ["Jack Dorsey’s Block drops a voice model that runs on a MacBook"](newsletters/2026-10-26_newsletter_superhuman_ai.md#jack-dorseys-block-drops-a-voice-model-that-runs-on-a-macbook)*
@@ -361,7 +446,7 @@ Block trained Dessa from scratch on recordings of human conversation instead of 
 
 ---
 
-**216. Latch — block apps until you walk to an NFC key**
+**215. Latch — block apps until you walk to an NFC key**
 *⚡ Productivity & agent follow-through*
 *🗞 Product Hunt Weekly · 2026-10-26 02:39 KST — ["The app blocker you unlock by walking to your key"](newsletters/2026-10-26_newsletter_product_hunt_weekly.md#the-app-blocker-you-unlock-by-walking-to-your-key)*
 
@@ -374,7 +459,7 @@ Latch locks the apps you pick and unlocks them only when you physically reach it
 
 ---
 
-**215. Eleven Realtime and Voxtral 3 — two drop-in voice-agent stacks**
+**214. Eleven Realtime and Voxtral 3 — two drop-in voice-agent stacks**
 *🗣️ Voice · TTS & STT*
 *🗞 Product Hunt Weekly · 2026-10-26 02:39 KST — ["Realtime voice agent models with 570ms to first audio"](newsletters/2026-10-26_newsletter_product_hunt_weekly.md#realtime-voice-agent-models-with-570ms-to-first-audio)*
 *🗞 The Code · 2026-10-21 23:09 KST — ["ElevenLabs and Mistral drop new models for voice agents"](newsletters/2026-10-21_newsletter_the_code.md#elevenlabs-and-mistral-drop-new-models-for-voice-agents)*
@@ -390,7 +475,7 @@ ElevenLabs' Eleven Realtime is a speech-to-speech family you can swap into an ex
 
 ---
 
-**214. pstack's verification skill makes the agent prove its PR works**
+**213. pstack's verification skill makes the agent prove its PR works**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-24 21:31 KST — ["How to know an agent’s PR works without reading the code"](newsletters/2026-10-24_newsletter_the_code.md#how-to-know-an-agents-pr-works-without-reading-the-code)*
 
@@ -404,7 +489,7 @@ Cursor engineer Lauren Tan's fix for "tests pass but the button does nothing": g
 
 ---
 
-**213. no-mistakes — push to a gate that proves the agent's branch before a PR**
+**212. no-mistakes — push to a gate that proves the agent's branch before a PR**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-24 21:31 KST — ["How to catch an agent’s mistakes before they reach a PR"](newsletters/2026-10-24_newsletter_the_code.md#how-to-catch-an-agents-mistakes-before-they-reach-a-pr)*
 
@@ -418,7 +503,7 @@ An open-source pre-push gate from a former Meta engineer: instead of pushing to 
 
 ---
 
-**212. ARTEX: an open AI security tool was used to breach ConnectWise and 2,250 customers**
+**211. ARTEX: an open AI security tool was used to breach ConnectWise and 2,250 customers**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-10-23 23:08 KST — ["Microsoft says China-linked hackers used AI to orchestrate attacks"](newsletters/2026-10-23_newsletter_the_code.md#microsoft-says-china-linked-hackers-used-ai-to-orchestrate-attacks)*
 
@@ -432,7 +517,7 @@ Microsoft says a China-aligned actor used ARTEX, an open-source AI security-test
 
 ---
 
-**211. Meta's Muse Spark Open runs locally on two Mac Studios**
+**210. Meta's Muse Spark Open runs locally on two Mac Studios**
 *🧠 Open / efficient / local models*
 *🗞 The Batch · 2026-10-23 22:02 KST — ["Meta Releases Wonder, Opens Spark"](newsletters/2026-10-23_newsletter_the_batch.md#meta-releases-wonder-opens-spark)*
 *🗞 Future Tools · 2026-10-17 02:08 KST — ["Muse Spark Open, an 816B-parameter open-weight model that runs on an Apple M5 Ultra"](newsletters/2026-10-17_newsletter_future_tools.md#muse-spark-open-an-816b-parameter-open-weight-model-that-runs-on-an-ap)*
@@ -449,7 +534,7 @@ Meta released Muse Spark Open, an open-weight model with 816B total parameters (
 
 ---
 
-**210. Recursive Flint — an open-weights coding model built mostly by AI, runs locally**
+**209. Recursive Flint — an open-weights coding model built mostly by AI, runs locally**
 *🧠 Open / efficient / local models*
 *🗞 The Code · 2026-10-22 22:06 KST — ["Recursive’s AI-built coding model runs on your laptop"](newsletters/2026-10-22_newsletter_the_code.md#recursives-ai-built-coding-model-runs-on-your-laptop)*
 
@@ -457,20 +542,6 @@ Recursive, a Stanford-alum-founded lab, launched Flint — a coding model it say
 
 - [Recursive Flint](https://recursive.com/updates/introducing-recursive-flint)
 - [Weights on Hugging Face](https://huggingface.co/RecursiveSI)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**209. ChatGPT dots: an always-on agent that works between conversations**
-*🏗️ Agent plumbing & production stacks*
-*🗞 The Code · 2026-10-22 22:06 KST — ["Anthropic’s new agent keeps working after you log off"](newsletters/2026-10-22_newsletter_the_code.md#anthropics-new-agent-keeps-working-after-you-log-off)*
-*🗞 Future Tools · 2026-10-22 01:07 KST — ["What If Your AI Kept Working After You Logged Off?"](newsletters/2026-10-22_newsletter_future_tools.md#what-if-your-ai-kept-working-after-you-logged-off)*
-
-OpenAI's dots is a standing-responsibility agent rather than a chat: you set permissions and boundaries, then it keeps working between conversations — researching, drafting, writing and testing code on its own cloud computer and browser, using ChatGPT memory of your priorities, and surfacing finished work for review or asking when a decision needs you. It's the first-party version of the background-agent pattern this log keeps tracking, without an API yet.
-
-- [ChatGPT dots](https://chatgpt.com/features/dots/)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
