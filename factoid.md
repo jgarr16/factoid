@@ -1,13 +1,139 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-10-30"
+sweep: "2026-09-05 → 2026-10-31"
 updated: "2026-11-01"
-sources: "The Product Compass, The Code, Superhuman AI, Future Tools, The Frontier, Product Hunt Weekly, The Batch, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+sources: "The Code, Future Tools, Superhuman AI, The Batch, The Product Compass, The Frontier, Product Hunt Weekly, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**247. staygreen — open-source uptime monitoring that undercuts status-page SaaS**
+**255. Claude Code on a box that never sleeps, driven from your phone**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-31 21:32 KST — ["How to know if a 3AM incident is real without opening your laptop"](newsletters/2026-10-31_newsletter_the_code.md#how-to-know-if-a-3am-incident-is-real-without-opening-your-laptop)*
+
+The pattern is a personal agent with its own cloud computer — dots beside Codex, Grok Bot beside Cursor, Muse when you want Claude Code — messaged from phone or Slack while the coding work runs remotely. Three setups worth copying: put the dot in your alerts channel with a standing instruction to investigate an incident and open a Codex thread with findings but never merge, deploy or roll back without asking; install Claude Code inside Muse so it persists, take over the browser to sign in yourself so Muse never holds the password, then send jobs like `claude -p --permission-mode acceptEdits` and read the diff on your phone; and have Muse write its own connector for whatever internal API no agent supports, entering the key through secure input and starting with a read-only key on a weekday schedule. These agents hold your logins, so scope each one and keep the merge button.
+
+- [dots — Slack/Teams setup](https://learn.chatgpt.com/docs/dots)
+- [The Code — always-on agents guide](https://codenewsletter.ai/p/how-devs-are-using-always-on-personal-agents)
+- [agent-tincan — agents asking each other for help](https://github.com/mvanhorn/agent-tincan)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**254. Granola ships free voice typing, straight at Wispr Flow**
+*🗣️ Voice · TTS & STT*
+*🗞 Future Tools · 2026-10-31 01:07 KST — ["Granola takes on Wispr with a new dictation tool"](newsletters/2026-10-31_newsletter_future_tools.md#granola-takes-on-wispr-with-a-new-dictation-tool)*
+
+Granola, the meeting-notes app, has launched a free voice-typing tool aimed squarely at Wispr Flow's turf. Worth a side-by-side against the paid dictation setup already in use on the Mac: same job — hold a key, talk, get clean text into any app — with no subscription attached, so the question is whether accuracy and latency hold up.
+
+- [Granola vs Wispr — report](https://app.dealroom.co/news/note/granola-launches-free-voice-typing-moving-onto-wispr-s-turf)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**253. Mistral Large 4 ships open weights at 47% fewer tokens per task**
+*🧠 Open / efficient / local models*
+*🗞 Future Tools · 2026-10-31 01:07 KST — ["Mistral claims the open-model crown outside China while cutting costs 63%"](newsletters/2026-10-31_newsletter_future_tools.md#mistral-claims-the-open-model-crown-outside-china-while-cutting-costs-)*
+*🗞 The Code · 2026-10-30 22:02 KST — ["Mistral gives coding agents an open-weight upgrade"](newsletters/2026-10-30_newsletter_the_code.md#mistral-gives-coding-agents-an-open-weight-upgrade)*
+
+Mistral put Mistral Large 4 on Hugging Face with extra reinforcement learning that lifted its Terminal-Bench 4.0 score from 28% to 41%, and says it now matches GLM-5.3 on Artificial Analysis's Coding Agent Index while spending 47% fewer tokens per task. VentureBeat puts its cost per task 63% lower than before, calling it the top open model outside China. Closed models like Mythos 5.1 still lead on raw quality, but at this token efficiency it is a candidate for the bulk pass behind an agent loop, and the weights mean it can run without an API hop.
+
+- [Mistral Large 4 weights](https://mistral.ai/news/mistral-large-4-oss/)
+- [VentureBeat — 63% lower cost per task](https://venturebeat.com/technology/mistral-large-4-le-chonk-arrives-as-the-top-open-model-outside-china-with-improved-coding-performance-and-63-lower-cost-per-task)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**252. Gemini 4 Carbon tops the index at Argon's $2/$10 price**
+*⚙️ LLM tooling & SDKs*
+*🗞 Future Tools · 2026-10-31 01:07 KST — ["Did Google Just Take the Lead Again?"](newsletters/2026-10-31_newsletter_future_tools.md#did-google-just-take-the-lead-again)*
+*🗞 The Code · 2026-10-29 23:07 KST — ["Google’s new frontier model hunts bugs across codebases"](newsletters/2026-10-29_newsletter_the_code.md#googles-new-frontier-model-hunts-bugs-across-codebases)*
+*🗞 Superhuman AI · 2026-10-29 22:08 KST — ["Google announces Gemini 4 Carbon with leading results"](newsletters/2026-10-29_newsletter_superhuman_ai.md#google-announces-gemini-4-carbon-with-leading-results)*
+
+Google's second Gemini 4 release in a month ranks #1 on Artificial Analysis' Intelligence Index, ahead of Claude Opus 5.5 and GPT-6 Astra, and is built for long-running engineering work — Google claims it spent days at a time tracking and patching bugs across codebases. It more than doubles Argon's secure-code success rate, cut successful cheating on Terminal-Bench 4.0 to zero and blocked every attack in Gray Swan's prompt-injection benchmark. It launches at Argon's introductory $2/$10 per million input/output tokens, with access going first to cyber defenders through Google's Fairwind programme.
+
+- [Google's launch post](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/)
+- [Artificial Analysis intelligence index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**251. Claude voice goes hands-free in CarPlay; OpenAI doubles Pro limits**
+*🗣️ Voice · TTS & STT*
+*🗞 Superhuman AI · 2026-10-30 22:10 KST — ["Anthropic and OpenAI close the week with upgrades"](newsletters/2026-10-30_newsletter_superhuman_ai.md#anthropic-and-openai-close-the-week-with-upgrades)*
+
+Claude's seven-update batch added 24 more languages and a hands-free voice mode that runs through Apple's CarPlay, so a voice session no longer needs the phone in hand — the first place Claude voice has been usable while driving. OpenAI, meanwhile, is doubling usage limits for ChatGPT Pro and Business Premium and extending the higher limits on its dots personal agent, which matters if background agent runs keep hitting ceilings.
+
+- [Claude's seven updates](https://archive.superhuman.ai/2115859377488072879)
+- [OpenAI — doubled usage limits](https://archive.superhuman.ai/2115850175868727621)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**250. Coding agents leaked 13,000 internal images through public GitHub repos**
+*🤖 AI security & agent risk*
+*🗞 The Batch · 2026-10-30 22:03 KST — ["AI Bites the Hand That Feeds It"](newsletters/2026-10-30_newsletter_the_batch.md#ai-bites-the-hand-that-feeds-it)*
+
+The Batch's Halloween audit of AI fears carries one genuinely actionable finding: coding agents asked to attach screenshots to GitHub code reviews were storing the images in public repositories, usually under the developer's own account. Glow Labs found more than 13,000 internal images from over 300 organisations this way, including a utility's customer billing records and a financial firm's money-transfer console; Meta's Muse separately published 6,800 conversations at title-derived URLs. The defenses it lays out are concrete: opt out of training per product (ChatGPT's setting does not cover Codex), prefer API or business plans and zero-retention offerings, give agents only the permissions their task needs, and require human approval before anything posts or sends outside your organisation.
+
+- [The Batch — Halloween 2026 special](https://info.deeplearning.ai/halloween-2026-face-your-darkest-ai-fears-if-you-dare)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**249. Claude API request size quadruples to 128MB, images to 3000px**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-30 22:02 KST — ["Anthropic gives developers 4x more room per request"](newsletters/2026-10-30_newsletter_the_code.md#anthropic-gives-developers-4x-more-room-per-request)*
+
+Messages and Token Counting on the Claude API now accept requests up to 128MB, up from 32MB — aimed at long computer-use sessions and image-heavy PDFs that were hitting the old cap with context still to spare. Requests carrying more than 20 images can also use 3000px images, up from 2000px. Hosted cloud platforms still cap requests at 20-32MB, so the gain is on direct API calls and self-run endpoints.
+
+- [Request size docs](https://platform.claude.com/docs/en/api/overview#request-size-limits)
+- [Source post](https://archive.codenewsletter.ai/2115923971279614171)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**248. Two prompt lines stop AI review loops from nitpicking forever**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-10-30 22:02 KST — ["How to stop AI code review from nitpicking"](newsletters/2026-10-30_newsletter_the_code.md#how-to-stop-ai-code-review-from-nitpicking)*
+
+The failure mode: the reviewer flags a bug that is technically possible but almost never happens, the fixer patches it, the reviewer flags the next one, forever. The fix is a frequency-and-severity filter in the review prompt, skill or AGENTS.md — "Rate each bug from 1 to 10 on how often it would happen and how bad it would be. If the two scores multiplied are below 5, just file it as an issue and leave the code alone" — plus "Do not design for rare or future cases nobody asked about." in the coding model's CLAUDE.md. Real bugs still get fixed; low scorers become filed issues instead of churn, and the threshold of 5 is tunable per project.
+
+- [Source thread](https://archive.codenewsletter.ai/2115518965443076573)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**247. Treg — one token for thousands of agent-callable APIs and CLIs**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-10-30 22:02 KST — ["Treg (6.5k ⭐)"](newsletters/2026-10-30_newsletter_the_code.md#treg)*
+
+Treg is OpenRouter for tools: give an agent a single token and it can search and call thousands of APIs, CLIs and shared skills — SEO, enrichment, social, ads, web search — without signing up with every provider or handing over each key separately. You can register your own team's tools and credentials once and share them across agents. 6.5k stars, so it is being used in anger rather than just starred.
+
+- [github.com/superdesigndev/treg](https://github.com/superdesigndev/treg)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**246. staygreen — open-source uptime monitoring that undercuts status-page SaaS**
 *📡 Also worth knowing*
 *🗞 The Product Compass · 2026-10-30 04:30 KST — ["Example Implementation"](newsletters/2026-10-30_newsletter_the_product_compass.md#example-implementation)*
 
@@ -21,7 +147,7 @@ Paweł built staygreen after paid monitors charged $30/mo for a custom status-pa
 
 ---
 
-**246. 43 free MIT product-engineering skills for building with coding agents**
+**245. 43 free MIT product-engineering skills for building with coding agents**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Product Compass · 2026-10-30 04:30 KST — ["Product Engineering: 43 Free Skills From the First Idea to Paying Users. MIT."](newsletters/2026-10-30_newsletter_the_product_compass.md#product-engineering-43-free-skills-from-the-first-idea-to-paying-users)*
 
@@ -35,7 +161,7 @@ Paweł Huryn published phuryn/product-engineering: 43 MIT-licensed skills in six
 
 ---
 
-**245. A /grill-me skill decides whether you need a software factory at all**
+**244. A /grill-me skill decides whether you need a software factory at all**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-29 23:07 KST — ["How to decide if you need a software factory"](newsletters/2026-10-29_newsletter_the_code.md#how-to-decide-if-you-need-a-software-factory)*
 
@@ -49,28 +175,13 @@ Matt Pocock's skills repo now carries /software-factory — a glossary of factor
 
 ---
 
-**244. Verifiable goals plus hill climbing keep one agent task running for days**
+**243. Verifiable goals plus hill climbing keep one agent task running for days**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-29 23:07 KST — ["How to make Claude run one task for days"](newsletters/2026-10-29_newsletter_the_code.md#how-to-make-claude-run-one-task-for-days)*
 
 A tutorial on long-running agent loops that keep grinding on a single hard engineering problem for days or weeks. Three moving parts: give the agent a goal it can verify itself, run "hill climbing" so each iteration is scored and only kept when it improves on the last, and structure the loop so a stalled run exits instead of quietly burning tokens. Worth watching for a refactor, migration or test-coverage job too big for one session.
 
 - [Tutorial video](https://www.youtube.com/watch?v=NBCM_ZoWZo8)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**243. Gemini 4 Carbon tops the index at Argon's $2/$10 price**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-10-29 23:07 KST — ["Google’s new frontier model hunts bugs across codebases"](newsletters/2026-10-29_newsletter_the_code.md#googles-new-frontier-model-hunts-bugs-across-codebases)*
-*🗞 Superhuman AI · 2026-10-29 22:08 KST — ["Google announces Gemini 4 Carbon with leading results"](newsletters/2026-10-29_newsletter_superhuman_ai.md#google-announces-gemini-4-carbon-with-leading-results)*
-
-Google's second Gemini 4 release in a month ranks #1 on Artificial Analysis' Intelligence Index, ahead of Claude Opus 5.5 and GPT-6 Astra, and is built for long-running engineering work — Google claims it spent days at a time tracking and patching bugs across codebases. It more than doubles Argon's secure-code success rate, cut successful cheating on Terminal-Bench 4.0 to zero and blocked every attack in Gray Swan's prompt-injection benchmark. It launches at Argon's introductory $2/$10 per million input/output tokens, with access going first to cyber defenders through Google's Fairwind programme.
-
-- [Google's launch post](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/)
-- [Artificial Analysis intelligence index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me

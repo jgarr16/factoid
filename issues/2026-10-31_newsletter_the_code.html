@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🧑💻 Always-on agents: A secret tool for devs — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🧑💻 Always-on agents: A secret tool for devs — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🧑💻 Always-on agents: A secret tool for devs</h1>
+<p class="meta">2026-10-31 · received 2026-10-31 21:32 +0900
+ · <a href="https://codenewsletter.ai/p/how-devs-are-using-always-on-personal-agents" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🧑💻 Always-on agents: A secret tool for devs</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/012fde48-8bb7-43a6-ab80-728863ad4b19/Add_a_heading__4_.jpg?t=1789481261" /></p>
+<hr />
+<p><strong>Welcome back.</strong> Grok Bot gave engineers an early look at what an always-on agent can do, and major labs are quickly following suit. Meta released Muse, OpenAI launched Dots, and Anthropic just opened a preview of Claude Duet.</p>
+<p>In this issue, you’ll find 3 workflows that devs are running with these agents, plus more fun projects to try. Let’s get started:</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>What is an always on agent</p>
+</li>
+<li>
+<p>Workflow #1: Let your agent proactively check incidents</p>
+</li>
+<li>
+<p>Workflow #2: Run Claude Code inside your Muse</p>
+</li>
+<li>
+<p>Workflow #3: Plug Muse into any API</p>
+</li>
+</ul>
+<hr />
+<h5><strong>DEEP DIVE</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=HdI_aYzgJIg"><img alt="Click here to watch how the new personal agents compare side by side." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e164ed94-7bc7-467e-adb0-f8e2e153b127/Thumbnail__30_.jpg?t=1793346149" /></a>
+<em>Click here to watch how the new personal agents compare side by side.</em></p>
+<hr />
+<p><strong>What it is.</strong> A personal agent is an assistant with its own computer in the cloud, so it keeps working after you close your laptop.</p>
+<p><strong>How it works.</strong> You message it from your phone or Slack, it hands the coding work to Codex, Cursor, or Claude Code, and it pings you when there’s something to review.</p>
+<p><strong>So, which one should you pick?</strong> Start with the one that sits next to the coding tool you already use: dots for Codex, Grok Bot for Cursor, and Muse if you’re happy to set up Claude Code yourself, which we’ll walk through in Workflow #2 (see a <a href="https://archive.codenewsletter.ai/2113042717270049028">side-by-side comparison</a>).</p>
+<p>The one thing to know before you connect your repo is that these agents hold your logins, so give each one only the access it needs and keep the merge button for yourself.</p>
+<p>Here are 3 workflows worth trying out this weekend:</p>
+<hr />
+<h5><strong>WORKFLOW #1: ON-CALL</strong></h5>
+<p><a id="how-to-know-if-a-3am-incident-is-real-without-opening-your-laptop"></a></p>
+<h2><strong>How to know if a 3AM incident is real without opening your laptop</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2111211411766399288"><img alt="Source: X.com/@OpenAIDevs" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0e26fa11-0851-4ec1-aa22-98ecba88f57d/Thumbnail__31_.jpg?t=1793347027" /></a>
+<em>Source: X.com/@OpenAIDevs</em></p>
+<hr />
+<p>Your phone buzzes at 3 a.m. with an incident alert. You open your laptop half asleep and start digging through logs before you even know if it’s real.</p>
+<p>A dot can do that first look for you. OpenAI’s own demo <a href="https://archive.codenewsletter.ai/2111211411766399288">shows</a> how this works: it investigates the incident and starts a Codex thread with what it found, so the engineer can steer the fix from his phone.</p>
+<p>Here’s how you can implement it:</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Add your dot to the <a href="https://learn.chatgpt.com/docs/dots">Slack or Teams</a> channel where your alerts land.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> Set up a Codex cloud <a href="https://learn.chatgpt.com/docs/dots/computers-and-apps">environment</a> with your repo, since that’s where your dot runs code work.</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Add a <a href="https://learn.chatgpt.com/codex/dots/controls">custom rule</a> so it asks before acting, then give it a standing instruction:</p>
+</li>
+</ul>
+<pre><code>When an incident lands in this channel, investigate it and start a Codex thread with what you find. Message me a short summary. Never merge, deploy or roll back without asking me.
+</code></pre>
+<hr />
+<h3><strong>Your opinion matters!</strong></h3>
+<p>This is our seventh <strong>Saturday Special</strong>. It’s a quick 5 min email designed to show how to use the latest and most relevant AI tools to code faster. Let us know what you think of this email in the poll at the bottom of this email (or by replying to this email).</p>
+<p>We’re writing this email just for you, so your feedback will shape what we write next!</p>
+<hr />
+<h5><strong>WORKFLOW #2: CLAUDE CODE IN MUSE</strong></h5>
+<h2><strong>How to start a Claude Code job from a text on your phone</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2103955209797939615"><img alt="Source: X.com/@viticci" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2459910e-cd3c-4d27-88cc-55c7c2bde9cc/CleanShot_2026-10-30_at_3.04.42_PM_2x.jpg?t=1793347551" /></a>
+<em>Source: X.com/@viticci</em></p>
+<hr />
+<p>You think of a fix while you're away from your desk, but your repo, tools, and Claude Code setup all live on your laptop. So the idea waits until you get back.</p>
+<p>Muse runs on its own Linux computer in the cloud, so you can set up Claude Code there once and then send it jobs from a chat. One developer runs his <a href="https://archive.codenewsletter.ai/2103955209797939615"><strong>own instance</strong></a> this way, and he signs in to Anthropic himself, so Muse never sees his password.</p>
+<p>Here’s how you can implement it:</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> In Muse chat, ask it to install Claude Code “so it persists” across restarts.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> When Muse opens Anthropic’s sign-in page, take over the browser and log in yourself.</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> From your phone, send Muse a job like this one:</p>
+</li>
+</ul>
+<pre><code>In the api repo, run claude -p with --permission-mode acceptEdits to fix the flaky signup test on a new branch.
+Message me the diff. Never push to main.
+</code></pre>
+<hr />
+<h5><strong>WORKFLOW #3: CUSTOM CONNECTORS</strong></h5>
+<h2><strong>How to connect your agent to the internal tools no one supports</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2098635455768195105"><img alt="Source: X.com/dps" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/95666f19-6afb-4a8c-8e79-6ba2a16a5223/CleanShot_2026-10-30_at_3.24.25_PM_2x.jpg?t=1793348699" /></a>
+<em>Source: X.com/dps</em></p>
+<hr />
+<p>Your status page, admin API, or niche dev tool never shows up in an agent’s connector list, so every morning you check each one by hand.</p>
+<p>Muse can write its own connector for any service with an API, then run it on its cloud computer. A senior engineer <a href="https://archive.codenewsletter.ai/2098658681588216312">tested</a> it against other agents and called this the win: “any API, and it writes the script.”</p>
+<p>Here’s how you can implement it:</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Ask Muse to build a connector for the service, and follow its walkthrough.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> When it asks for a key, use the <a href="https://archive.codenewsletter.ai/2098635455768195105">secure input</a> it pops up and never paste it into the chat. Start with a read-only key.</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Put it on a <a href="https://www.meta.com/help/superintelligence/1484325780075655/">weekday schedule</a> and check the tool-call log on the first few runs:</p>
+</li>
+</ul>
+<pre><code>Every weekday at 9am, call our status API, list anything failing since yesterday, and message me a short summary. Don't change anything.
+</code></pre>
+<hr />
+<h5><strong>FUN WEEKEND PROJECTS TO TRY</strong></h5>
+<ul>
+<li>
+<p>An agent that picks out the few PRs that actually need your review (<a href="https://archive.codenewsletter.ai/2111647825201422742">link</a>).</p>
+</li>
+<li>
+<p>A Muse that turns an eReader into an always-on display on the back of your phone (<a href="https://archive.codenewsletter.ai/2106139174604816765">link</a>).</p>
+</li>
+<li>
+<p>A Muse that waits on hold for you and calls when a human picks up (<a href="https://archive.codenewsletter.ai/2105071040590401670">link</a>).</p>
+</li>
+<li>
+<p>Your AI agents asking each other for help, wherever they run (<a href="https://github.com/mvanhorn/agent-tincan">link</a>).</p>
+</li>
+</ul>
+<p><strong>P.S.</strong> If you want to go deeper on Grok Bot, we wrote <a href="https://codenewsletter.ai/p/how-developers-at-spacexai-use-grok-bot">a full guide</a> on how devs at SpaceXAI use it.</p>
+<hr />
+<h5><strong>STARTING POINT</strong></h5>
+<p><strong>How to start this weekend.</strong> By Sunday morning, you could have a dot triaging your pages, Claude Code running on a box that never sleeps, and a daily summary from a tool no agent supported before. Once that works, hand your agent one more job you’d normally get woken up for.</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://thecode-cybersecurity.beehiiv.com/subscribe">The Code Cybersecurity</a></p>
+</li>
+<li>
+<p><a href="https://theitcode.beehiiv.com/subscribe_v1">The IT Code</a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
