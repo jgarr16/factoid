@@ -1,11 +1,106 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-11-02"
-updated: "2026-11-02"
-sources: "Product Hunt Weekly, Superhuman AI, The Code, Future Tools, The Batch, The Product Compass, The Frontier, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+updated: "2026-11-03"
+sources: "Superhuman AI, The Code, Product Hunt Weekly, Future Tools, The Batch, The Product Compass, The Frontier, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**265. Turn a repetitive task into a shareable Claude Artifact app**
+*⚡ Productivity & agent follow-through*
+*🗞 Superhuman AI · 2026-11-02 23:09 KST — ["How to turn a repetitive work task into a mini internal app with Claude Opus 5.5"](newsletters/2026-11-02_newsletter_superhuman_ai.md#how-to-turn-a-repetitive-work-task-into-a-mini-internal-app-with-claud)*
+
+The recipe: enable Create and edit files / cloud code execution in Claude's Capabilities settings, then upload a real example of the repetitive job (a CSV, form, checklist or pasted brief) and ask for a reusable Artifact with input fields, a Run button, validation and export. It keeps state between sessions and can call connected apps, so a checking or reformatting loop you do by hand becomes one button you can share with someone non-technical.
+
+- [Claude Artifacts](https://claude.ai/new)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**264. Anthropic drops 5-hour limits for Ultra and watermarks older Claude models**
+*💸 Token & infra economics*
+*🗞 Superhuman AI · 2026-11-02 23:09 KST — ["Anthropic adds a watermark to older models and adjusts its plans"](newsletters/2026-11-02_newsletter_superhuman_ai.md#anthropic-adds-a-watermark-to-older-models-and-adjusts-its-plans)*
+
+Anthropic renamed its plans — Max 5x ($100/mo) is now Max, Max 20x ($200/mo) is now Ultra — and eliminated the 5-hour usage limits for verified Ultra subscribers, which changes what an all-day agent run costs in practice. It also starts watermarking text from Claude Mythos 5, Opus 4.7, Opus 4.6 and Sonnet 4.6 from Nov 3 for EU compliance, so anything shipped from those models now carries a detectable mark.
+
+- [How Claude marks AI-generated content](https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content)
+- [Plan changes](https://archive.superhuman.ai/2116220869479428500)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**263. Anthropic: stop overprompting — trim the rules written for older models**
+*⚙️ LLM tooling & SDKs*
+*🗞 Superhuman AI · 2026-11-02 23:09 KST — ["Less is More"](newsletters/2026-11-02_newsletter_superhuman_ai.md#less-is-more)*
+*🗞 The Code · 2026-11-02 23:06 KST — ["How to stop overprompting Claude (by Anthropic)"](newsletters/2026-11-02_newsletter_the_code.md#how-to-stop-overprompting-claude)*
+
+Anthropic's guide argues newer Claude models need less instruction, not more: set one clear goal plus a verifier, delete the guardrail rules you wrote for older models, decide deliberately whether subagents earn their cost, and structure long-running work with cloud sessions and Projects. Addy Osmani pushed the same point to 4K bookmarks — worth a pass over a long CLAUDE.md or system prompt to strip rules that now cost tokens and attention without changing behaviour.
+
+- [Anthropic's overprompting guide](https://archive.codenewsletter.ai/2115688494865465370)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**262. A brainstorming skill makes Claude Code critique the idea before coding**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-02 23:06 KST — ["How to make Claude Code question your idea before coding it"](newsletters/2026-11-02_newsletter_the_code.md#how-to-make-claude-code-question-your-idea-before-coding-it)*
+
+Claude Code starts writing files on a half-formed idea, so you get working code for the wrong thing. A community Brainstorming skill installs with `npx claude-code-templates@latest --skill development/brainstorming`; after a restart it activates on its own when you describe an idea, asks clarifying questions, weighs approaches and documents the design before any code is written.
+
+- [How the skill works](https://archive.codenewsletter.ai/2116718444364083536)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**261. Hex — local dictation for the Mac, pasted into any app**
+*🗣️ Voice · TTS & STT*
+*🗞 The Code · 2026-11-02 23:06 KST — ["Hex: A local voice dictation tool for Mac, Windows, and Linux"](newsletters/2026-11-02_newsletter_the_code.md#hex-a-local-voice-dictation-tool-for-mac-windows-and-linux)*
+
+Hex is a local voice dictation tool for macOS, Windows and Linux: hold Option on the Mac, talk, and the transcript is pasted into whichever app has focus. No cloud round-trip and no window to switch to — useful for dictating long prompts and briefs straight into coding agents or notes.
+
+- [Hex](https://anoma.ly/hex/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**260. Linux TCP flaw turns into root exploit; Ubuntu and RHEL still unpatched**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-11-02 23:06 KST — ["Anthropic’s AI turns a Linux bug into root access"](newsletters/2026-11-02_newsletter_the_code.md#anthropics-ai-turns-a-linux-bug-into-root-access)*
+
+Anthropic found a flaw in Linux's IPv4 TCP handling (CVE-2026-98432, CVSS 9.8) and had Claude turn it into a working exploit that needs no password and fires before the application sees the connection. It targets hosts with a multipath TCP listener, which Go servers open by default from Go 1.24. Debian, SUSE, Oracle and Amazon Linux shipped fixed kernels; Ubuntu and RHEL had not as of the issue, so check any VPS or box you expose.
+
+- [CVE-2026-98432 exploit write-up](https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf)
+- [What to do now (Hacker News)](https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html#what-to-do-now)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**259. Vercel open-sources agent-desktop so coding agents drive real apps**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-02 23:06 KST — ["Vercel lets any coding agent drive your desktop"](newsletters/2026-11-02_newsletter_the_code.md#vercel-lets-any-coding-agent-drive-your-desktop)*
+
+Vercel Labs open-sourced agent-desktop, which lets coding agents operate macOS, Windows and Linux apps by reading the accessibility tree screen readers already use instead of guessing from screenshots. It runs in the background without taking over the cursor, so you can keep working while the agent clicks, and the builders claim up to 96% fewer tokens on busy apps. Worth trying against the VM-per-agent approach if you want an agent to drive Mail, Finder or another native app on the Mac.
+
+- [agent-desktop on GitHub](https://github.com/vercel-labs/agent-desktop)
+- [The Code write-up](https://archive.codenewsletter.ai/2116323148706771302)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **258. Overmind turns live agent traces into eval sets and a git-diff patch**
 *⚙️ LLM tooling & SDKs*
