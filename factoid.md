@@ -319,7 +319,7 @@ Matt Pocock's skills repo now carries /software-factory — a glossary of factor
 - [mattpocock/skills](https://github.com/mattpocock/skills)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
