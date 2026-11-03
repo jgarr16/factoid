@@ -57,7 +57,7 @@ Claude Code starts writing files on a half-formed idea, so you get working code 
 - [How the skill works](https://archive.codenewsletter.ai/2116718444364083536)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
