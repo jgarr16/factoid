@@ -151,7 +151,7 @@ A small Mac utility that shows which agent process is actually heating the machi
 - [WhoIsCooking](https://whoiscooking.site/)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
