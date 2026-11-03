@@ -237,7 +237,7 @@ The Batch's Halloween audit of AI fears carries one genuinely actionable finding
 - [The Batch — Halloween 2026 special](https://info.deeplearning.ai/halloween-2026-face-your-darkest-ai-fears-if-you-dare)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
