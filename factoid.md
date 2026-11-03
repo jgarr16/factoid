@@ -16,7 +16,7 @@ The recipe: enable Create and edit files / cloud code execution in Claude's Capa
 - [Claude Artifacts](https://claude.ai/new)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
