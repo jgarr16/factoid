@@ -166,7 +166,7 @@ The pattern is a personal agent with its own cloud computer — dots beside Code
 - [agent-tincan — agents asking each other for help](https://github.com/mvanhorn/agent-tincan)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
