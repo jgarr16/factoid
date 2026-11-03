@@ -30,7 +30,7 @@ Anthropic renamed its plans — Max 5x ($100/mo) is now Max, Max 20x ($200/mo) i
 - [Plan changes](https://archive.superhuman.ai/2116220869479428500)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
