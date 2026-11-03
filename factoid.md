@@ -1,65 +1,11 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-11-02"
-updated: "2026-11-03"
-sources: "Superhuman AI, The Code, Product Hunt Weekly, Future Tools, The Batch, The Product Compass, The Frontier, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+updated: "2026-11-04"
+sources: "The Code, Product Hunt Weekly, Future Tools, Superhuman AI, The Product Compass, The Frontier, The Batch, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
-
-**265. Turn a repetitive task into a shareable Claude Artifact app**
-*⚡ Productivity & agent follow-through*
-*🗞 Superhuman AI · 2026-11-02 23:09 KST — ["How to turn a repetitive work task into a mini internal app with Claude Opus 5.5"](newsletters/2026-11-02_newsletter_superhuman_ai.md#how-to-turn-a-repetitive-work-task-into-a-mini-internal-app-with-claud)*
-
-The recipe: enable Create and edit files / cloud code execution in Claude's Capabilities settings, then upload a real example of the repetitive job (a CSV, form, checklist or pasted brief) and ask for a reusable Artifact with input fields, a Run button, validation and export. It keeps state between sessions and can call connected apps, so a checking or reformatting loop you do by hand becomes one button you can share with someone non-technical.
-
-- [Claude Artifacts](https://claude.ai/new)
-
-- [ ] 📌 remind me
-- [x] 🙈 hide me
-
----
-
-**264. Anthropic drops 5-hour limits for Ultra and watermarks older Claude models**
-*💸 Token & infra economics*
-*🗞 Superhuman AI · 2026-11-02 23:09 KST — ["Anthropic adds a watermark to older models and adjusts its plans"](newsletters/2026-11-02_newsletter_superhuman_ai.md#anthropic-adds-a-watermark-to-older-models-and-adjusts-its-plans)*
-
-Anthropic renamed its plans — Max 5x ($100/mo) is now Max, Max 20x ($200/mo) is now Ultra — and eliminated the 5-hour usage limits for verified Ultra subscribers, which changes what an all-day agent run costs in practice. It also starts watermarking text from Claude Mythos 5, Opus 4.7, Opus 4.6 and Sonnet 4.6 from Nov 3 for EU compliance, so anything shipped from those models now carries a detectable mark.
-
-- [How Claude marks AI-generated content](https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content)
-- [Plan changes](https://archive.superhuman.ai/2116220869479428500)
-
-- [ ] 📌 remind me
-- [x] 🙈 hide me
-
----
-
-**263. Anthropic: stop overprompting — trim the rules written for older models**
-*⚙️ LLM tooling & SDKs*
-*🗞 Superhuman AI · 2026-11-02 23:09 KST — ["Less is More"](newsletters/2026-11-02_newsletter_superhuman_ai.md#less-is-more)*
-*🗞 The Code · 2026-11-02 23:06 KST — ["How to stop overprompting Claude (by Anthropic)"](newsletters/2026-11-02_newsletter_the_code.md#how-to-stop-overprompting-claude)*
-
-Anthropic's guide argues newer Claude models need less instruction, not more: set one clear goal plus a verifier, delete the guardrail rules you wrote for older models, decide deliberately whether subagents earn their cost, and structure long-running work with cloud sessions and Projects. Addy Osmani pushed the same point to 4K bookmarks — worth a pass over a long CLAUDE.md or system prompt to strip rules that now cost tokens and attention without changing behaviour.
-
-- [Anthropic's overprompting guide](https://archive.codenewsletter.ai/2115688494865465370)
-
-- [ ] 📌 remind me
-- [x] 🙈 hide me
-
----
-
-**262. A brainstorming skill makes Claude Code critique the idea before coding**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-11-02 23:06 KST — ["How to make Claude Code question your idea before coding it"](newsletters/2026-11-02_newsletter_the_code.md#how-to-make-claude-code-question-your-idea-before-coding-it)*
-
-Claude Code starts writing files on a half-formed idea, so you get working code for the wrong thing. A community Brainstorming skill installs with `npx claude-code-templates@latest --skill development/brainstorming`; after a restart it activates on its own when you describe an idea, asks clarifying questions, weighs approaches and documents the design before any code is written.
-
-- [How the skill works](https://archive.codenewsletter.ai/2116718444364083536)
-
-- [ ] 📌 remind me
-- [x] 🙈 hide me
-
----
 
 **261. Hex — local dictation for the Mac, pasted into any app**
 *🗣️ Voice · TTS & STT*
@@ -141,35 +87,6 @@ Chopstick watches what you do on the Mac, keeps stats on app usage, spots what y
 
 ---
 
-**255. WhoIsCooking names the agent that's heating your Mac**
-*🛠️ Mac utilities worth a look*
-*🗞 Product Hunt Weekly · 2026-11-02 03:30 KST — ["A menu bar app to cool down a hot Mac"](newsletters/2026-11-02_newsletter_product_hunt_weekly.md#a-menu-bar-app-to-cool-down-a-hot-mac)*
-*🗞 Superhuman AI · 2026-10-27 22:12 KST — ["WhoIsCooking"](newsletters/2026-10-27_newsletter_superhuman_ai.md#whoiscooking)*
-
-A small Mac utility that shows which agent process is actually heating the machine, so parallel Claude Code or Codex runs can be found and throttled instead of guessed at in Activity Monitor. Pairs with the two Mac tools already in the log — Insomnia keeping the Mac awake and the plan-progress sound cues — as the missing CPU-attribution piece for multi-agent sweeps.
-
-- [WhoIsCooking](https://whoiscooking.site/)
-
-- [ ] 📌 remind me
-- [x] 🙈 hide me
-
----
-
-**254. Claude Code on a box that never sleeps, driven from your phone**
-*🏗️ Agent plumbing & production stacks*
-*🗞 The Code · 2026-10-31 21:32 KST — ["How to know if a 3AM incident is real without opening your laptop"](newsletters/2026-10-31_newsletter_the_code.md#how-to-know-if-a-3am-incident-is-real-without-opening-your-laptop)*
-
-The pattern is a personal agent with its own cloud computer — dots beside Codex, Grok Bot beside Cursor, Muse when you want Claude Code — messaged from phone or Slack while the coding work runs remotely. Three setups worth copying: put the dot in your alerts channel with a standing instruction to investigate an incident and open a Codex thread with findings but never merge, deploy or roll back without asking; install Claude Code inside Muse so it persists, take over the browser to sign in yourself so Muse never holds the password, then send jobs like `claude -p --permission-mode acceptEdits` and read the diff on your phone; and have Muse write its own connector for whatever internal API no agent supports, entering the key through secure input and starting with a read-only key on a weekday schedule. These agents hold your logins, so scope each one and keep the merge button.
-
-- [dots — Slack/Teams setup](https://learn.chatgpt.com/docs/dots)
-- [The Code — always-on agents guide](https://codenewsletter.ai/p/how-devs-are-using-always-on-personal-agents)
-- [agent-tincan — agents asking each other for help](https://github.com/mvanhorn/agent-tincan)
-
-- [ ] 📌 remind me
-- [x] 🙈 hide me
-
----
-
 **253. Granola ships free voice typing, straight at Wispr Flow**
 *🗣️ Voice · TTS & STT*
 *🗞 Future Tools · 2026-10-31 01:07 KST — ["Granola takes on Wispr with a new dictation tool"](newsletters/2026-10-31_newsletter_future_tools.md#granola-takes-on-wispr-with-a-new-dictation-tool)*
@@ -211,33 +128,6 @@ Google's second Gemini 4 release in a month ranks #1 on Artificial Analysis' Int
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
-
----
-
-**250. Claude voice goes hands-free in CarPlay; OpenAI doubles Pro limits**
-*🗣️ Voice · TTS & STT*
-*🗞 Superhuman AI · 2026-10-30 22:10 KST — ["Anthropic and OpenAI close the week with upgrades"](newsletters/2026-10-30_newsletter_superhuman_ai.md#anthropic-and-openai-close-the-week-with-upgrades)*
-
-Claude's seven-update batch added 24 more languages and a hands-free voice mode that runs through Apple's CarPlay, so a voice session no longer needs the phone in hand — the first place Claude voice has been usable while driving. OpenAI, meanwhile, is doubling usage limits for ChatGPT Pro and Business Premium and extending the higher limits on its dots personal agent, which matters if background agent runs keep hitting ceilings.
-
-- [Claude's seven updates](https://archive.superhuman.ai/2115859377488072879)
-- [OpenAI — doubled usage limits](https://archive.superhuman.ai/2115850175868727621)
-
-- [ ] 📌 remind me
-- [x] 🙈 hide me
-
----
-
-**249. Coding agents leaked 13,000 internal images through public GitHub repos**
-*🤖 AI security & agent risk*
-*🗞 The Batch · 2026-10-30 22:03 KST — ["AI Bites the Hand That Feeds It"](newsletters/2026-10-30_newsletter_the_batch.md#ai-bites-the-hand-that-feeds-it)*
-
-The Batch's Halloween audit of AI fears carries one genuinely actionable finding: coding agents asked to attach screenshots to GitHub code reviews were storing the images in public repositories, usually under the developer's own account. Glow Labs found more than 13,000 internal images from over 300 organisations this way, including a utility's customer billing records and a financial firm's money-transfer console; Meta's Muse separately published 6,800 conversations at title-derived URLs. The defenses it lays out are concrete: opt out of training per product (ChatGPT's setting does not cover Codex), prefer API or business plans and zero-retention offerings, give agents only the permissions their task needs, and require human approval before anything posts or sends outside your organisation.
-
-- [The Batch — Halloween 2026 special](https://info.deeplearning.ai/halloween-2026-face-your-darkest-ai-fears-if-you-dare)
-
-- [ ] 📌 remind me
-- [x] 🙈 hide me
 
 ---
 
@@ -306,20 +196,6 @@ Paweł Huryn published phuryn/product-engineering: 43 MIT-licensed skills in six
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
-
----
-
-**243. A /grill-me skill decides whether you need a software factory at all**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-10-29 23:07 KST — ["How to decide if you need a software factory"](newsletters/2026-10-29_newsletter_the_code.md#how-to-decide-if-you-need-a-software-factory)*
-
-Matt Pocock's skills repo now carries /software-factory — a glossary of factory design covering orchestrators, git hosts, ticket trackers and runners — plus /grill-me, which interviews you one question at a time against that glossary. Install with `npx skills@latest add mattpocock/skills` (pick grill-me and software-factory), restart Claude Code, then run `/grill-me on how a /software-factory might help us`. It ends with the infra you would actually need, which is the cheap way to find out you do not need an autonomous pipeline yet.
-
-- [Matt Pocock's post](https://archive.codenewsletter.ai/2113196247964074322)
-- [mattpocock/skills](https://github.com/mattpocock/skills)
-
-- [ ] 📌 remind me
-- [x] 🙈 hide me
 
 ---
 
