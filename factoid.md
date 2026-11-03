@@ -224,7 +224,7 @@ Claude's seven-update batch added 24 more languages and a hands-free voice mode 
 - [OpenAI — doubled usage limits](https://archive.superhuman.ai/2115850175868727621)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
