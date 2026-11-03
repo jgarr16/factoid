@@ -44,7 +44,7 @@ Anthropic's guide argues newer Claude models need less instruction, not more: se
 - [Anthropic's overprompting guide](https://archive.codenewsletter.ai/2115688494865465370)
 
 - [ ] 📌 remind me
-- [ ] 🙈 hide me
+- [x] 🙈 hide me
 
 ---
 
