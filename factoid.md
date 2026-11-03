@@ -1,13 +1,108 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-11-02"
+sweep: "2026-09-05 → 2026-11-03"
 updated: "2026-11-04"
-sources: "The Code, Product Hunt Weekly, Future Tools, Superhuman AI, The Product Compass, The Frontier, The Batch, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+sources: "The Code, Superhuman AI, Product Hunt Weekly, Future Tools, The Product Compass, The Frontier, The Batch, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**261. Hex — local dictation for the Mac, pasted into any app**
+**263. Clean Machine sorts and trashes a cluttered Mac desktop**
+*🛠️ Mac utilities worth a look*
+*🗞 The Code · 2026-11-03 23:09 KST — ["Clean Machine"](newsletters/2026-11-03_newsletter_the_code.md#clean-machine)*
+
+Clean Machine is an open-source macOS utility that tidies a cluttered desktop the way a robot vacuum does a floor — sorting files into places you define and tossing the junk. Rules-based rather than another launcher, so it fits an existing folder scheme instead of imposing one.
+
+- [The Code write-up](https://archive.codenewsletter.ai/2116910266143445486)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**262. A ticket-to-parallel-agents software factory built on Claude Code**
+*⚡ Productivity & agent follow-through*
+*🗞 The Code · 2026-11-03 23:09 KST — ["How to build your own Claude Code software factory"](newsletters/2026-11-03_newsletter_the_code.md#how-to-build-your-own-claude-code-software-factory)*
+
+A tutorial that stops the babysitting loop: a linear ticket kicks off the work, several agents build in parallel, and a human only steps in when a decision actually needs one. It combines Claude Code, T3 Code, PStacks, cloud sandboxes, playbooks and a verification step into one repeatable setup. Most useful as a blueprint he can copy into his own harness rather than a tool to install.
+
+- [Tutorial video](https://www.youtube.com/watch?v=sPpTWl3Cs14)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**261. A /perf-review slash command that names the fix, not another cache**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-03 23:09 KST — ["How to get real performance fixes from Claude Code"](newsletters/2026-11-03_newsletter_the_code.md#how-to-get-real-performance-fixes-from-claude-code)*
+
+Tell Claude Code to "make it faster" and it usually bolts on a cache. This prompt, saved as claude/commands/perf-review.md, profiles first, lists the five slowest spots, then matches each to exactly one case — cache already in use means redesign, hot loop on hash tables means flat array plus indices, many objects with few fields read means struct of arrays, serial awaits means parallelise, no match means a data-oriented rewrite. It reports current time, file and line, and expected speedup before changing anything, so he approves only the rewrites he wants.
+
+- [Full prompt](https://archive.codenewsletter.ai/2117342228767281487)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**260. NanoUI builds tiny Zig desktop apps an agent can verify headlessly**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-03 23:09 KST — ["Build tiny cross-platform desktop apps in Zig with either native GPU-drawn UI or a web frontend"](newsletters/2026-11-03_newsletter_the_code.md#build-tiny-cross-platform-desktop-apps-in-zig-with-either-native-gpu-d)*
+
+NanoUI builds small cross-platform desktop apps in Zig — macOS, Windows and Linux, single binary, either native GPU-drawn UI or a web frontend. The agent-relevant bit is built-in headless testing and screenshots, so a coding agent can build and verify an interface without opening a window. A lightweight alternative to Electron for the throwaway tools he keeps spinning up.
+
+- [justrach/nanoui](https://github.com/justrach/nanoui)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**259. Hume's one-call audio API answers questions about recordings**
+*🗣️ Voice · TTS & STT*
+*🗞 The Code · 2026-11-03 23:09 KST — ["Hume wants to replace your audio model stack"](newsletters/2026-11-03_newsletter_the_code.md#hume-wants-to-replace-your-audio-model-stack)*
+
+Hume's Audio Decision API takes plain-language questions about audio — how many people are speaking, whether a caller sounds frustrated, whether anyone laughed — and answers them in one call instead of stitching together ten specialised models. It works on live audio or hours of recordings, was trained on 10M+ human judgments, and scored 82% on Hume's own benchmark against Gemini 3.8 Flash's 78%. Waitlist only for now.
+
+- [Hume decision model](https://www.hume.ai/products/decision-model-api)
+- [The Code write-up](https://archive.codenewsletter.ai/2117285608745820372)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**258. DeepSeek lets a prompt build plugins for its open-source Harness**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-03 23:09 KST — ["DeepSeek lets you build agent plugins with a prompt"](newsletters/2026-11-03_newsletter_the_code.md#deepseek-lets-you-build-agent-plugins-with-a-prompt)*
+*🗞 Superhuman AI · 2026-11-03 21:13 KST — ["DeepSeek launches Creator Mode for building custom plugins"](newsletters/2026-11-03_newsletter_superhuman_ai.md#deepseek-launches-creator-mode-for-building-custom-plugins)*
+
+DeepSeek rolled out Creator Mode for its open-source Harness: describe the tool, skill or interface tweak you want and the agent writes the plugin for you, on an "everything is a plugin" harness design. It is preview-quality, so expect API churn, but the harness itself is the interesting part — a shell you can extend without touching its core. Seven starter prompts ship with it, covering everything from a notes app to an LLM visualiser.
+
+- [DeepSeek Harness](https://www.deepseek.com/en/harness/)
+- [Creator Mode starter prompts](https://cdn.deepseek.com/harness/dsh-creator-mode-prompt-collection-en.html)
+- [The Code write-up](https://archive.codenewsletter.ai/2117256196227019194)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**257. Beacon — open-source self-improving memory for coding agents**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Superhuman AI · 2026-11-03 21:13 KST — ["Open-source self-improving memory for AI coding agents"](newsletters/2026-11-03_newsletter_superhuman_ai.md#open-source-self-improving-memory-for-ai-coding-agents)*
+
+Beacon is an open-source memory layer for coding agents that rewrites itself as it learns, from asymptote-labs. It targets the same gap as a hand-maintained AGENTS.md or CLAUDE.md, but updates the stored context from the agent's own runs instead of waiting for him to prune it. Worth a read for the retrieval and update design even if he keeps his file-based setup.
+
+- [asymptote-labs/agent-beacon](https://github.com/asymptote-labs/agent-beacon)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**256. Hex — local dictation for the Mac, pasted into any app**
 *🗣️ Voice · TTS & STT*
 *🗞 The Code · 2026-11-02 23:06 KST — ["Hex: A local voice dictation tool for Mac, Windows, and Linux"](newsletters/2026-11-02_newsletter_the_code.md#hex-a-local-voice-dictation-tool-for-mac-windows-and-linux)*
 
@@ -20,7 +115,7 @@ Hex is a local voice dictation tool for macOS, Windows and Linux: hold Option on
 
 ---
 
-**260. Linux TCP flaw turns into root exploit; Ubuntu and RHEL still unpatched**
+**255. Linux TCP flaw turns into root exploit; Ubuntu and RHEL still unpatched**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-11-02 23:06 KST — ["Anthropic’s AI turns a Linux bug into root access"](newsletters/2026-11-02_newsletter_the_code.md#anthropics-ai-turns-a-linux-bug-into-root-access)*
 
@@ -34,7 +129,7 @@ Anthropic found a flaw in Linux's IPv4 TCP handling (CVE-2026-98432, CVSS 9.8) a
 
 ---
 
-**259. Vercel open-sources agent-desktop so coding agents drive real apps**
+**254. Vercel open-sources agent-desktop so coding agents drive real apps**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-11-02 23:06 KST — ["Vercel lets any coding agent drive your desktop"](newsletters/2026-11-02_newsletter_the_code.md#vercel-lets-any-coding-agent-drive-your-desktop)*
 
@@ -48,7 +143,7 @@ Vercel Labs open-sourced agent-desktop, which lets coding agents operate macOS, 
 
 ---
 
-**258. Overmind turns live agent traces into eval sets and a git-diff patch**
+**253. Overmind turns live agent traces into eval sets and a git-diff patch**
 *⚙️ LLM tooling & SDKs*
 *🗞 Product Hunt Weekly · 2026-11-02 03:30 KST — ["Open-source platform for continuous learning"](newsletters/2026-11-02_newsletter_product_hunt_weekly.md#open-source-platform-for-continuous-learning)*
 
@@ -61,7 +156,7 @@ Overmind is open source and works off the traffic an agent is already serving: t
 
 ---
 
-**257. Dedica scores whether agents can actually use your site — free**
+**252. Dedica scores whether agents can actually use your site — free**
 *🏗️ Agent plumbing & production stacks*
 *🗞 Product Hunt Weekly · 2026-11-02 03:30 KST — ["Check if AI agents can use your website"](newsletters/2026-11-02_newsletter_product_hunt_weekly.md#check-if-ai-agents-can-use-your-website)*
 
@@ -74,7 +169,7 @@ Hand Dedica a domain and it runs 125 checks across discovery, access, usability 
 
 ---
 
-**256. Chopstick writes Mac widgets from your own activity, then builds them**
+**251. Chopstick writes Mac widgets from your own activity, then builds them**
 *🛠️ Mac utilities worth a look*
 *🗞 Product Hunt Weekly · 2026-11-02 03:30 KST — ["Mac activity and action widgets that write themselves"](newsletters/2026-11-02_newsletter_product_hunt_weekly.md#mac-activity-and-action-widgets-that-write-themselves)*
 
@@ -87,7 +182,7 @@ Chopstick watches what you do on the Mac, keeps stats on app usage, spots what y
 
 ---
 
-**253. Granola ships free voice typing, straight at Wispr Flow**
+**250. Granola ships free voice typing, straight at Wispr Flow**
 *🗣️ Voice · TTS & STT*
 *🗞 Future Tools · 2026-10-31 01:07 KST — ["Granola takes on Wispr with a new dictation tool"](newsletters/2026-10-31_newsletter_future_tools.md#granola-takes-on-wispr-with-a-new-dictation-tool)*
 
@@ -100,7 +195,7 @@ Granola, the meeting-notes app, has launched a free voice-typing tool aimed squa
 
 ---
 
-**252. Mistral Large 4 ships open weights at 47% fewer tokens per task**
+**249. Mistral Large 4 ships open weights at 47% fewer tokens per task**
 *🧠 Open / efficient / local models*
 *🗞 Future Tools · 2026-10-31 01:07 KST — ["Mistral claims the open-model crown outside China while cutting costs 63%"](newsletters/2026-10-31_newsletter_future_tools.md#mistral-claims-the-open-model-crown-outside-china-while-cutting-costs-)*
 *🗞 The Code · 2026-10-30 22:02 KST — ["Mistral gives coding agents an open-weight upgrade"](newsletters/2026-10-30_newsletter_the_code.md#mistral-gives-coding-agents-an-open-weight-upgrade)*
@@ -115,7 +210,7 @@ Mistral put Mistral Large 4 on Hugging Face with extra reinforcement learning th
 
 ---
 
-**251. Gemini 4 Carbon tops the index at Argon's $2/$10 price**
+**248. Gemini 4 Carbon tops the index at Argon's $2/$10 price**
 *⚙️ LLM tooling & SDKs*
 *🗞 Future Tools · 2026-10-31 01:07 KST — ["Did Google Just Take the Lead Again?"](newsletters/2026-10-31_newsletter_future_tools.md#did-google-just-take-the-lead-again)*
 *🗞 The Code · 2026-10-29 23:07 KST — ["Google’s new frontier model hunts bugs across codebases"](newsletters/2026-10-29_newsletter_the_code.md#googles-new-frontier-model-hunts-bugs-across-codebases)*
@@ -131,7 +226,7 @@ Google's second Gemini 4 release in a month ranks #1 on Artificial Analysis' Int
 
 ---
 
-**248. Claude API request size quadruples to 128MB, images to 3000px**
+**247. Claude API request size quadruples to 128MB, images to 3000px**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-30 22:02 KST — ["Anthropic gives developers 4x more room per request"](newsletters/2026-10-30_newsletter_the_code.md#anthropic-gives-developers-4x-more-room-per-request)*
 
@@ -145,7 +240,7 @@ Messages and Token Counting on the Claude API now accept requests up to 128MB, u
 
 ---
 
-**247. Two prompt lines stop AI review loops from nitpicking forever**
+**246. Two prompt lines stop AI review loops from nitpicking forever**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-10-30 22:02 KST — ["How to stop AI code review from nitpicking"](newsletters/2026-10-30_newsletter_the_code.md#how-to-stop-ai-code-review-from-nitpicking)*
 
@@ -158,7 +253,7 @@ The failure mode: the reviewer flags a bug that is technically possible but almo
 
 ---
 
-**246. Treg — one token for thousands of agent-callable APIs and CLIs**
+**245. Treg — one token for thousands of agent-callable APIs and CLIs**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-10-30 22:02 KST — ["Treg (6.5k ⭐)"](newsletters/2026-10-30_newsletter_the_code.md#treg)*
 
@@ -171,7 +266,7 @@ Treg is OpenRouter for tools: give an agent a single token and it can search and
 
 ---
 
-**245. staygreen — open-source uptime monitoring that undercuts status-page SaaS**
+**244. staygreen — open-source uptime monitoring that undercuts status-page SaaS**
 *📡 Also worth knowing*
 *🗞 The Product Compass · 2026-10-30 04:30 KST — ["Example Implementation"](newsletters/2026-10-30_newsletter_the_product_compass.md#example-implementation)*
 
@@ -185,7 +280,7 @@ Paweł built staygreen after paid monitors charged $30/mo for a custom status-pa
 
 ---
 
-**244. 43 free MIT product-engineering skills for building with coding agents**
+**243. 43 free MIT product-engineering skills for building with coding agents**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Product Compass · 2026-10-30 04:30 KST — ["Product Engineering: 43 Free Skills From the First Idea to Paying Users. MIT."](newsletters/2026-10-30_newsletter_the_product_compass.md#product-engineering-43-free-skills-from-the-first-idea-to-paying-users)*
 
