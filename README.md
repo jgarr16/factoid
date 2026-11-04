@@ -18,6 +18,7 @@ retired entries are recoverable from `.backups/`.
 | `issues/` | one page per cited newsletter issue, original anchors preserved |
 | `assets/style.css` | mobile-first (≤640px single column), light/dark, system fonts, no CDN |
 | `factoid.md` | the log — published as-is; **this is the file to edit** |
+| `entries.json` | machine-readable log for the iOS app — generated, do not hand-edit |
 | `newsletters/`, `.backups/` | the raw issue sources and the log's history — **gitignored, never published** |
 | `TRAINING.md` | the interest profile that drives filtering |
 | `.nojekyll` | **required** — serves files verbatim. Without it GitHub Pages runs Jekyll and renders `index.md` instead of `index.html` |
