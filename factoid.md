@@ -1,11 +1,106 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-11-05"
-updated: "2026-11-05"
-sources: "Future Tools, Superhuman AI, The Code, The Frontier, Product Hunt Weekly, The Product Compass, The Batch, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+updated: "2026-11-06"
+sources: "The Code, Superhuman AI, The Product Compass, Future Tools, The Frontier, Product Hunt Weekly, The Batch, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**281. Apple and Goldman start rationing employee AI tokens**
+*💸 Token & infra economics*
+*🗞 Superhuman AI · 2026-11-05 23:10 KST — ["3. Apple and Goldman Sachs restrict employee AI use for different reasons"](newsletters/2026-11-05_newsletter_superhuman_ai.md#3-apple-and-goldman-sachs-restrict-employee-ai-use-for-different-reaso)*
+*🗞 The Code · 2026-11-05 23:07 KST — ["Apple cuts daily AI spending limits for its engineers"](newsletters/2026-11-05_newsletter_the_code.md#apple-cuts-daily-ai-spending-limits-for-its-engineers)*
+
+Apple reportedly cut some engineers' daily AI spending caps from $300 to $200 last month, with certain teams heading to $100 and anything more needing a senior-leadership exemption. Goldman Sachs limited AI coding tools to engineering, cutting off most traders and bankers over security — a reversal from its CIO praising vibe coding in July — and Meta and Microsoft made similar moves in October. Tokenmaxxing budgets are being rationed, so per-team measurement and waste cuts arrive before the cut-off does.
+
+- [TechCrunch — Apple trims internal AI budgets](https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/)
+- [Quartz — Goldman restricts AI coding tools](https://qz.com/goldman-sachs-restricts-ai-coding-tools-traders-bankers-110226)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**280. Grok Bot recipe publishes a team data analyst with Slack access**
+*⚡ Productivity & agent follow-through*
+*🗞 Superhuman AI · 2026-11-05 23:10 KST — ["How to build an on-demand data analyst for your team with Grok Bot"](newsletters/2026-11-05_newsletter_superhuman_ai.md#how-to-build-an-on-demand-data-analyst-for-your-team-with-grok-bot)*
+
+Recipe: create a dedicated Grok Bot, connect its data sources, files, plugins and credentials, then load company context — metric definitions, table descriptions, reporting rules, dashboard conventions. The sample prompt makes it query, sanity-check by segment and period, name the likely drivers, flag data-quality issues and return charts plus the exact metrics used. Publish to Team, or share through the Slack integration, once a few real queries check out.
+
+- [Grok Bot](https://x.ai/bot)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**279. Atmanity's Atmee v2 animates one photo into a talking avatar**
+*🗣️ Voice · TTS & STT*
+*🗞 Superhuman AI · 2026-11-05 23:10 KST — ["1. Atmanity releases a real-time video avatar model"](newsletters/2026-11-05_newsletter_superhuman_ai.md#1-atmanity-releases-a-real-time-video-avatar-model)*
+
+Atmee v2 takes a single image plus a 10-second voice clip and returns a lifelike avatar you can talk to in real time; the company claims 50x faster and 10-100x cheaper than top video models. It was built over two years by founder Chen-Ping Yu, whose earlier AR startup sold to Google in 2022, and can be invoked by pasting one link into a chatbot. A cheap option for demo videos or a voice-agent front end without a camera.
+
+- [Atmanity demo](https://archive.superhuman.ai/2118017931519078609)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**278. OpenAI's Images 2.6 adds two API models and GIF output**
+*⚙️ LLM tooling & SDKs*
+*🗞 Superhuman AI · 2026-11-05 23:10 KST — ["2. OpenAI upgrades its image model to create GIFs"](newsletters/2026-11-05_newsletter_superhuman_ai.md#2-openai-upgrades-its-image-model-to-create-gifs)*
+*🗞 The Code · 2026-11-05 23:07 KST — ["OpenAI unveils a new image model that generates 50% faster"](newsletters/2026-11-05_newsletter_the_code.md#openai-unveils-a-new-image-model-that-generates-50-faster)*
+
+Images 2.6 is live across ChatGPT, Codex and the API, generating 50% faster. Two API models: Flare for quick drafts in as fast as six seconds, Sunburst for detailed edits. Both handle SVG output and animated GIFs, and a new complexity setting controls planning depth — the GIF path is a single call to animate product shots or a mascot. Pricing and parameters are on the image-generation pricing page.
+
+- [OpenAI — introducing Images 2.6](https://openai.com/index/introducing-images-2-6/)
+- [Image API pricing](https://developers.openai.com/api/docs/pricing#image-generation)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**277. Claude Managed Agents cookbook distills past sessions into wiki memory**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-05 23:07 KST — ["Building a workflow with Claude Managed Agents"](newsletters/2026-11-05_newsletter_the_code.md#building-a-workflow-with-claude-managed-agents)*
+
+The cookbook builds a "dreaming" dynamic workflow: a background process reads transcripts from finished agent sessions, pulls out the key learnings, and distils them into a searchable wiki-style memory store. Later sessions mount that store read-only, so the agent starts from what already worked instead of re-deriving it. Portable to any harness that keeps session logs on disk.
+
+- [Claude cookbook — dreaming with a dynamic workflow](https://platform.claude.com/cookbook/managed-agents-cma-dreaming-with-a-dynamic-workflow)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**276. Claude Code update makes subagent status lines 99% cheaper**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-05 23:07 KST — ["How to stop Claude Code’s subagents from eating your usage limit"](newsletters/2026-11-05_newsletter_the_code.md#how-to-stop-claude-codes-subagents-from-eating-your-usage-limit)*
+
+Background subagents were re-reading their entire conversation every 30 seconds just to refresh a one-line status, burning usage limit for nothing. Anthropic's fix has a smaller model write the status from short notes, making each update about 99% cheaper and freeing roughly 6% more prompts within a limit. One command: check `claude --version`, then `claude update` (or `npm update -g @anthropic-ai/claude-code`) if below v2.1.316, and restart active CLI sessions.
+
+- [Anthropic's note on the fix](https://archive.codenewsletter.ai/2118064914028019978)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**275. Mini Harness: 1,200 lines of Python that beat Claude Code on Haiku**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Product Compass · 2026-11-05 20:10 KST — ["Agent Harness: How I Built My Own Claude Code, Step by Step"](newsletters/2026-11-05_newsletter_the_product_compass.md#agent-harness-how-i-built-my-own-claude-code-step-by-step)*
+
+Paweł Huryn wrote a ~1,200-line Python coding agent covering the 15 parts of a harness — reasoning loop, five file/shell tools, sessions, compaction, an AI-judge permission gate, subagents, /goal mode, skills and MCP. On Terminal-Bench 2.0 (10 tasks, 5 runs each) it averaged 9.2/10 on Claude Haiku 5.5 versus Claude Code's 8.4, top of eight harnesses with Hermes Agent at 8.4, and tied Claude Code at 8.4 on DeepSeek V4.1 Flash. The code is free on GitHub, but the post's value is 15 build prompts with a test each; running them on Haiku or V4.1 Flash costs well under $0.10.
+
+- [The Product Compass — build your own agent harness](https://open.substack.com/pub/huryn/p/build-your-own-agent-harness)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **274. Claude's API message threads cut agent latency 35%**
 *⚙️ LLM tooling & SDKs*

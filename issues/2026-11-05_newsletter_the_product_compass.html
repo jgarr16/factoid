@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Agent Harness: How I Built My Own Claude Code, Step by Step — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Agent Harness: How I Built My Own Claude Code, Step by Step — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Agent Harness: How I Built My Own Claude Code, Step by Step</h1>
+<p class="meta">2026-11-05 · received 2026-11-05 20:10 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/build-your-own-agent-harness" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><p><a id="agent-harness-how-i-built-my-own-claude-code-step-by-step"></a></p>
+<h1>Agent Harness: How I Built My Own Claude Code, Step by Step</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRmJ1aWxkLXlvdXItb3duLWFnZW50LWhhcm5lc3MiLCJwIjoyMjM1MzI1NzgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTM4NzcxODQsImV4cCI6MjEwOTQ1MzE4NCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.nYIIS2eTVA-hu4-3bVNRxTSNvkeWm-w0hl-P_b2E69s?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=223532578&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIyMzUzMjU3OCwiaWF0IjoxNzkzODc3MTg0LCJleHAiOjE3OTY0NjkxODQsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.khgAEQnkoNZGDs5ldqUMDrseLrqR-9rJe-aPn63pILs">Agent Harness: How I Built My Own Claude Code, Step by Step</a></h1>
+<h3>The 15 parts inside an agent like Claude Code, explained without code. On Terminal-Bench 2.0, my harness scored higher than Claude Code on Haiku and matched it on DeepSeek.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Nov 5</p>
+<p>∙</p>
+<p>Preview</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!C2pO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fcfcfec-32a1-4970-aee1-8a1ab05a76c0_750x750.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/build-your-own-agent-harness?utm_source=email&amp;redirect=app-store-no-desktop&amp;inbox=true&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>Everyone is discussing what a harness is. Nobody shows you how to build one. And everyone can.</p>
+<p>So, I built my own Claude Code.</p>
+<p>It's called <strong><a href="https://substack.com/redirect/6b1e2fda-fc0f-499e-a643-7d359c06fdaa?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Mini Harness</a></strong>: about 1,200 lines of Python, with a loop, tools, sessions, compaction, permissions with an AI judge, subagents, /goal mode, skills and MCP servers.</p>
+<p>Built to teach, as an experiment. Surprisingly, it became the <strong>top harness</strong> on Claude Haiku.</p>
+<p>I tested it against seven other harnesses. Same 10 tasks, five runs each, on two models:</p>
+<p><a href="https://substack.com/redirect/d206578d-3393-4f3b-8409-7b5163135683?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Terminal-Bench 2.0, Claude Haiku 5.5 at high effort, mean tasks passed of 10 over five runs: Mini Harness 9.2, Pi 8.8, mini-swe-agent 8.8, Hermes Agent 8.4, Claude Code 8.4, OpenCode 8.2, Terminus 2 8.0, Kilo Code 7.6" src="https://substackcdn.com/image/fetch/$s_!bsge!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faab4e156-e194-4bfb-b6ee-8a9e638cec28_2360x1524.png" /></a></p>
+<p>Claude Haiku 5.5: same 10 tasks, five runs per harness</p>
+<p><a href="https://substack.com/redirect/68c61fc1-d378-487f-bae5-48e7b442053c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Terminal-Bench 2.0, DeepSeek V4.1 Flash at high effort, mean tasks passed of 10 over five runs: mini-swe-agent 8.8, OpenCode 8.6, Hermes Agent 8.4, Mini Harness 8.4, Claude Code 8.4, Pi 8.2, Terminus 2 8.2, Kilo Code 8.0" src="https://substackcdn.com/image/fetch/$s_!e9q1!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F77d42bb0-bfcb-4b47-9816-2970b44695b4_2360x1562.png" /></a></p>
+<p>DeepSeek V4.1 Flash: the same tasks and harness versions</p>
+<p>The gaps are small, so I read it as "in the top group on both models", not "the best".</p>
+<p>The value isn't my harness. It's <strong>building yours</strong> on the same design, one that beat many popular harnesses, while you <strong>learn the key building blocks</strong>.</p>
+<p>Next, I share <strong>15 steps, each with a suggested prompt</strong>. In 1-2 hours (incl. pasting prompts), you'll have a custom, ready-to-use harness to <strong>learn</strong> from or <strong>show in your portfolio</strong>.</p>
+<p>In this post:</p>
+<ol>
+<li>What an Agent Harness Is</li>
+<li>The Core: Loop, Tools, Context</li>
+<li>How Mini Harness Compares</li>
+<li>Build Your Own Agent Harness</li>
+<li>Remembering: Sessions, Compaction, Memory</li>
+<li>Safety: Permissions, Judge, Search</li>
+<li>Working With You: Questions, Subagents, Goal Mode</li>
+<li>Reach: Skills, MCP, Models, Running It</li>
+<li>How It All Fits</li>
+</ol>
+<p>If you're new to Claude, see:</p>
+<ul>
+<li>Easiest: <a href="https://substack.com/redirect/1462966c-6436-48d0-812c-2b2efa34ebc9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Desktop v2.0: You Don’t Need VS Code Anymore</a></li>
+<li>With VS Code: <a href="https://substack.com/redirect/96296142-5103-410b-bc87-9fb919b452dc?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code for PMs: The Beginner's Guide</a></li>
+</ul>
+<hr />
+<h2><strong>1. What an Agent Harness Is</strong></h2>
+<p>Think of the model as a very capable colleague who can only talk. They can say "open this file" or "run the tests", but they have no hands.</p>
+<p>The harness is the hands, the notebook and the safety rules around them. Claude Code, Codex and Cursor's agent are all harnesses around a model.</p>
+<p><strong>The model decides. The harness does.</strong></p>
+<p>You can see it in the charts: on Haiku 5.5, the average went from 7.6 to 9.2 depending on the harness.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZidWlsZC15b3VyLW93bi1hZ2VudC1oYXJuZXNzJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzVNemczTnpFNE5Dd2laWGh3SWpveE56azJORFk1TVRnMExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLjR3N3h5V2t3LTZlUXpDQ29NZGl0aENyVF9SYllxamI4NFlFSEpIcjZxV2MiLCJwIjoyMjM1MzI1NzgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTM4NzcxODQsImV4cCI6MjEwOTQ1MzE4NCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.Rv1uD30rbkG5Qy9iOJQQHVP6-KmuheLkh2bM7ZDcphQ?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=223532578">Upgrade to paid</a></p>
+<hr />
+<h2><strong>2. The Core: Loop, Tools, Context</strong></h2>
+<p>Three parts make a working agent. Each step ends with a prompt: paste it into Claude Code or Codex in an empty folder, in order, and you build your own as you read.</p>
+<p>Your harness calls the model directly, so it needs an API key from Anthropic (<a href="https://substack.com/redirect/8071c687-0ab5-4e82-acb2-17c3c34c219a?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">console.anthropic.com</a>) or DeepSeek (<a href="https://substack.com/redirect/8d7ff84e-8d23-4fd5-966b-f3ac8b05e4de?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">platform.deepseek.com</a>). With Haiku 5.5 or DeepSeek V4.1 Flash, the costs of your tests will be way below $0.10. As an alternative, you can adjust the prompts and experiment with a free OpenRouter model, such as <a href="https://substack.com/redirect/68524ff9-2ee1-44ce-ab14-a9dad8ceb5b3?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Google: Gemma 4 31B (free)</a>.</p>
+<p>Each prompt below says what to build and why, and names the Claude Code conventions to follow. Claude picks the rest, writes it down and tests the result.</p>
+<h3>Step 1: Reasoning loop</h3>
+<p><strong>Why we need it:</strong> a model call is one question and one answer. Fixing a bug takes many: look at files, change one, run the tests, read the error, try again.</p>
+<p><strong>How it works:</strong> the harness sends the conversation to the model and runs the actions it asks for. On each trip, the model reasons about what it has seen and picks the next step, until a reply asks for nothing.</p>
+<p><a href="https://substack.com/redirect/7368846c-5d55-4510-b3b9-b36e79290a4f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="The loop: you ask, the model thinks and replies, the harness runs the actions it asked for and sends the results back, until it asks for nothing" src="https://substackcdn.com/image/fetch/$s_!xuSx!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fadabb158-c570-4129-b092-723cd2c50a5d_1900x912.png" /></a></p>
+<p>The reasoning loop</p>
+<p>One turn in mini's terminal. Each arrow is an action the model asked for:</p>
+<p><a href="https://substack.com/redirect/8f474672-8e78-4bfc-83df-f4beb99070f4?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="mini fixing a failing test: it finds parse_date, reads the file, edits one line, runs the tests and answers" src="https://substackcdn.com/image/fetch/$s_!Fk3E!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1ef4bbab-d275-429b-8d37-b77f31378c22_1900x1146.png" /></a></p>
+<p>One turn: four trips around the loop, then an answer</p>
+<p>The loop itself is about 50 lines. Almost everything else in a harness keeps this loop working when something breaks.</p>
+<p><strong>For PMs:</strong> We previously discussed how exactly tools are called in <a href="https://substack.com/redirect/0cd45a5d-e748-4e28-aa4c-60450225967c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">A Guide to Context Engineering for PMs</a>. I recommend you study that one, too, for more insights about what happens inside the agents.</p>
+<p><strong>Build it:</strong></p>
+<pre><code>Let's build a small coding agent in Python, a mini Claude Code. Start with the core: a loop. It sends my task to the model, runs the tools the model asks for, sends back the results, and repeats until the model stops asking. Keep the model's replies exactly as they came back.
+
+Follow Claude Code's conventions. Two modes: interactive chat by default, and headless for one task with nobody watching, started with -p &quot;task&quot;. Use my Anthropic API key, or DeepSeek's through its Anthropic-compatible endpoint; walk me through setting it up, and never print the key or save it in the project. Pick the model with --model, or /model in chat. Ctrl-C stops the current turn, not the program. Keep a design doc in the project with how to run it and every decision we make.
+
+Test it: headless, ask it to say hi in three words. Then try it without a key, and with a model that doesn't exist: each should give a clear message, not a crash.
+</code></pre>
+<p><strong>Tip:</strong> You can run all my prompts in VS Code or in <a href="https://substack.com/redirect/1462966c-6436-48d0-812c-2b2efa34ebc9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Desktop / Code tab</a>:</p>
+<p><a href="https://substack.com/redirect/413a499f-cd7a-41ed-bbbc-166f8502f910?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Building your own harness in Claude Desktop, Code tab" src="https://substackcdn.com/image/fetch/$s_!K-r-!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F063ff32e-14e8-412d-8d62-3ac18fa7e826_2120x992.png" /></a></p>
+<p>Building your own harness in Claude Desktop, Code tab</p>
+<h3>Step 2: Tools</h3>
+<p><strong>Why we need it:</strong> the loop runs actions, so the model needs a fixed menu of actions it can ask for.</p>
+<p><strong>How it works:</strong> five local tools (read, write, edit, bash, find), each a short manual the model reads and a function the harness runs. Plus web search, which runs on the provider's servers: Anthropic and DeepSeek both offer it. Later steps add three the harness handles itself: asking you, subagents and goal mode. Every action request carries an id, and every id gets an answer, even "denied":</p>
+<p><a href="https://substack.com/redirect/257e6dcf-43f3-4832-b4a8-9c97b261096c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="The model's reply holds a thinking block and two tool calls with ids. The harness's next message answers both: one ran, one was denied" src="https://substackcdn.com/image/fetch/$s_!1DtH!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c35953f-0567-43a3-a224-251cef9a0075_1900x794.png" /></a></p>
+<p>A denial is still an answer. A missing answer breaks every later request.</p>
+<p><strong>Error messages are instructions.</strong> A bare "failed" gets retried blindly. "That text appears 3 times, add more context" gets fixed on the next step:</p>
+<p><a href="https://substack.com/redirect/cc5f0653-fc81-4986-9a4c-ee56706845a1?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Two failed edits with error messages that say what to do next, then a read and a successful edit" src="https://substackcdn.com/image/fetch/$s_!NinR!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8610df97-7d52-4192-beae-572547149b6a_1900x762.png" /></a></p>
+<p>Each error tells the model what to do next</p>
+<p><strong>For PMs:</strong> the words the agent reads are part of the product. Think of it as a <strong>user experience for the agents</strong>.</p>
+<p><strong>Build it:</strong></p>
+<pre><code>Now give it hands: tools to read, write and edit files, run commands, and search the project. Also turn on the provider's built-in web search; Anthropic and DeepSeek both run it on their servers. Each tool gets a short manual the model reads and strict rules for its inputs.
+
+Edits replace exact text, and only in a file it has read. Every tool call gets an answer, even when it fails or is refused, and every error says what to try next. Propose the manuals and add the patterns to the design doc.
+
+Test it: ask it to create a script that prints hi, run it, and tell me the output. Then ask it to replace a line that isn't in the script: the error should say what to do next.
+</code></pre>
+<h3>Step 3: Context window</h3>
+<p><strong>Why we need it:</strong> models remember nothing between calls, so on every step the harness resends everything.</p>
+<p><strong>How it works:</strong> a fixed top, written once per session (instructions, your project's , tool manuals), and below it a conversation that grows with every step.</p>
+<p><a href="https://substack.com/redirect/5e7e5598-51cb-4fe3-9239-f7c74163fb28?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="The context window: a fixed top of 525 tokens of instructions, 2,068 of tool manuals and 5,588 for web search, then a conversation that only grows at the bottom" src="https://substackcdn.com/image/fetch/$s_!WUL3!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5673667b-6f13-4390-8296-83f877563727_1900x1232.png" /></a></p>
+<p>The fixed top and the growing conversation, measured on Claude Opus 5.5</p>
+<p>I measured mini's starting point with . About 8,200 tokens before you type anything, and two thirds of it is the web search tool:</p>
+<p><a href="https://substack.com/redirect/6e6a781d-538e-4dcb-8ecf-8e1f239830e9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="The /context command showing 525 tokens of system prompt, 2,068 of local tools and 5,588 of web search" src="https://substackcdn.com/image/fetch/$s_!9BwQ!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a89afcc-ee31-4d23-9b02-65a3f31b86ca_1900x618.png" /></a></p>
+<p>Real output, measured 4 Nov 2026</p>
+<p>One rule holds this window together: <strong>never edit what was already sent.</strong> Claude seals its reasoning to everything above it, and the provider caches the beginning it has already read. Edit the top, and both break:</p>
+<p><a href="https://substack.com/redirect/a0595202-b296-4ad4-b00e-73ed9d81b8eb?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Appending a message keeps the beginning identical, so the cache hits and reasoning stays valid. Editing the top changes the beginning: the cache misses and older reasoning is dropped, or the call fails" src="https://substackcdn.com/image/fetch/$s_!aEND!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5bc22a09-b0bf-457c-9ee1-f52138af6152_1900x706.png" /></a></p>
+<p>Append versus edit</p>
+<p>The reward is money: on Opus 5.5, cached tokens cost $0.20 per million instead of $4.</p>
+<p><strong>For PMs:</strong> this is why long sessions get expensive, and why an agent that rewrites its own context gets worse over time. More in <a href="https://substack.com/redirect/ace39e4a-e579-4aca-b162-1feaa40cd7e4?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code's Limits Are Generous. The Problem Is Your Setup</a>.</p>
+<p><strong>Build it:</strong></p>
+<pre><code>Next, what the model sees on every call. Write its instructions once per session: a few short rules, a line about where it runs (system, folder, date, model), and the project's AGENTS.md if there is one. Never change what was already sent; new information goes at the end. That keeps the cache working and the model's reasoning valid.
+
+Show me the tokens each call uses, and add /context to show what fills the context window. Add this rule to the design doc.
+
+Test it: put &quot;Always answer in French&quot; in AGENTS.md and ask it to say hello. Delete the file and ask again in a new session: now in English.
+</code></pre>
+<hr />
+<h2><strong>3. How Mini Harness Compares</strong></h2>
+<p>I checked each harness against its own source code and docs, counting code the same way for each. Of the small harnesses I checked, <strong>only mine</strong> covers <strong>all the common features</strong>:</p>
+<p><a href="https://substack.com/redirect/f93105ca-229a-4698-abe4-d41cd2ec3714?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Mini Harness compared with mini-swe-agent, nanocode, Pi, Codex CLI and Claude Code on code size, dependencies, tools, sessions, compaction, Claude's server compaction, permissions, subagents, goal mode, MCP and skills" src="https://substackcdn.com/image/fetch/$s_!ATVx!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa7acaf8f-e03d-48b4-8cb4-ae326c97d184_2360x2064.png" /></a></p>
+<p>How mini compares, November 2026</p>
+<hr />
+<h2><strong>4. Build Your Own Agent Harness</strong></h2>
+<p>How many PMs have their own harness in their portfolio?</p>
+<p>With the prompts above, you already have a working agent. Next, <strong>we build the full harness together</strong>, one step at a time. You'll understand why each part exists, instead of theorizing and skimming infographics.</p>
+<p><a href="https://substack.com/redirect/352b043b-d8b6-4cc9-b1b7-1c0c6a6aa62c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="How to build your own agent harness" src="https://substackcdn.com/image/fetch/$s_!ptS5!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7cf245c3-4cf2-474f-a7d2-01b99218e842_1733x907.webp" /></a></p>
+<p>The code is <a href="https://substack.com/redirect/6b1e2fda-fc0f-499e-a643-7d359c06fdaa?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">free on GitHub</a>, but a finished harness won't teach you much. The value is in building your own.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZidWlsZC15b3VyLW93bi1hZ2VudC1oYXJuZXNzJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzVNemczTnpFNE5Dd2laWGh3SWpveE56azJORFk1TVRnMExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLjR3N3h5V2t3LTZlUXpDQ29NZGl0aENyVF9SYllxamI4NFlFSEpIcjZxV2MiLCJwIjoyMjM1MzI1NzgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTM4NzcxODQsImV4cCI6MjEwOTQ1MzE4NCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.Rv1uD30rbkG5Qy9iOJQQHVP6-KmuheLkh2bM7ZDcphQ?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=223532578">Upgrade to paid</a></p>
+<p>Keep reading for:</p>
+<ul>
+<li><strong>Sessions, compaction and memory:</strong> an agent that survives a crash and a long task</li>
+<li><strong>A permission gate and an AI judge:</strong> nothing risky runs without a yes</li>
+<li><strong>Subagents and goal mode:</strong> work checked by something other than the worker</li>
+<li><strong>Skills, MCP servers and cost:</strong> what plugs in, and what it costs</li>
+<li><strong>12 more build prompts,</strong> each with a test</li>
+</ul>
+<hr />
+<h2><strong>5. Remembering: Sessions, Compaction, Memory...</strong></h2>
+<h2>Keep reading with a 7-day free trial</h2>
+<p>Subscribe to The Product Compass to keep reading this post and get 7 days of free access to the full post archives.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZidWlsZC15b3VyLW93bi1hZ2VudC1oYXJuZXNzJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzVNemczTnpFNE5Dd2laWGh3SWpveE56azJORFk1TVRnMExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLjR3N3h5V2t3LTZlUXpDQ29NZGl0aENyVF9SYllxamI4NFlFSEpIcjZxV2MiLCJwIjoyMjM1MzI1NzgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTM4NzcxODQsImV4cCI6MjEwOTQ1MzE4NCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.Rv1uD30rbkG5Qy9iOJQQHVP6-KmuheLkh2bM7ZDcphQ?simple=true&amp;utm_source=paywall&amp;utm_medium=email&amp;utm_content=223532578&amp;next=https://www.productcompass.pm/p/build-your-own-agent-harness&amp;coupon=34546817">Start trial</a></p>
+<h3>A subscription gets you:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>𝗔𝗰𝗰𝗲𝘀𝘀 𝗲𝘃𝗲𝗿𝘆 𝗶𝘀𝘀𝘂𝗲 → 200+ AI PM articles. Full archive. Premium Notion collection, templates, and recordings.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>𝗝𝗼𝗶𝗻 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗦𝗹𝗮𝗰𝗸 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 → A 2,000+ AI PM community to grow together + DM me.</td>
+</tr>
+<tr>
+<td></td>
+<td>𝗕𝗼𝗼𝘀𝘁 𝘆𝗼𝘂𝗿 𝗣𝗠 𝗰𝗮𝗿𝗲𝗲𝗿 → Enroll in the AI PM Learning Program ($700 value) and 4 video courses ($546 value).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=223532578&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIyMzUzMjU3OCwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3OTM4NzcxODQsImV4cCI6MTc5NjQ2OTE4NCwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.RxhqZKnYDoPoNpptdquVSnA_tTtlDmgkjWLK-ArZqzo&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=223532578&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIyMzUzMjU3OCwiaWF0IjoxNzkzODc3MTg0LCJleHAiOjE3OTY0NjkxODQsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.khgAEQnkoNZGDs5ldqUMDrseLrqR-9rJe-aPn63pILs&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/build-your-own-agent-harness?utm_source=substack&amp;utm_medium=email&amp;utm_campaign=email-restack-comment&amp;action=restack-comment&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIyMzUzMjU3OCwiaWF0IjoxNzkzODc3MTg0LCJleHAiOjE3OTY0NjkxODQsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.khgAEQnkoNZGDs5ldqUMDrseLrqR-9rJe-aPn63pILs&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qSXlNelV6TWpVM09Dd2lhV0YwSWpveE56a3pPRGMzTVRnMExDSmxlSEFpT2pFNE1qVTBNVE14T0RRc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAud1h6NjBLVXQyM1pSakZGN1cwa0xERFJiQkNuaENDaG5weUl5NVl2b1J1VSIsInAiOjIyMzUzMjU3OCwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc5Mzg3NzE4NCwiZXhwIjoyMTA5NDUzMTg0LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.T2ubW1MHnh6Sc4WjJktJCVoilKATskFvobjvALtnpY4?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/b24e5650-9b9f-47a6-9eaa-455d89790a06?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoyMjM1MzI1NzgsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3OTM4NzcxODQsImV4cCI6MjEwOTQ1MzE4NCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.L-PSC2ggCybmXJUlM-4r5C_8_0l2Z9w2-llc8fEKHzs?"><img alt="Start your Substack" src="https://substackcdn.com/image/fetch/$s_!FMON!,w_366,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fstart-your-substack-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>⚡ OpenAI ships GPT-Image-2.6 — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="⚡ OpenAI ships GPT-Image-2.6 — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>⚡ OpenAI ships GPT-Image-2.6</h1>
+<p class="meta">2026-11-05 · received 2026-11-05 23:07 +0900
+ · <a href="https://codenewsletter.ai/p/openai-unveils-a-new-image-model-that-generates-50-faster" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>⚡ OpenAI ships GPT-Image-2.6</h1>
+<p><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-05-primary&amp;shad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/12338aeb-cd9b-4490-b6dc-96e882caa800/Group_ZEP.jpg?t=1793718441" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Is the tokenmaxxing era already coming to an end? Apple reportedly cut some engineers' daily AI spending caps from $300 to $200, with budgets for certain teams potentially dropping to $100 soon. Meanwhile, OpenAI just dropped an image model capable of generating renders in as fast as six seconds.</p>
+<p><strong>Also:</strong> 15 projects to defend agents from cyberattacks, the full AI stack behind a 50-person company, and a senior engineer’s guide on what replaces clean code when agents read it.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>How to keep thinking critically with coding agents</p>
+</li>
+<li>
+<p>How to use agents to improve UI (tutorial)</p>
+</li>
+<li>
+<p>Stop Claude Code from draining your limits (hack)</p>
+</li>
+<li>
+<p>How to build dynamic workflows with Claude (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2118124753340756055"><img alt="Click here to watch how OpenAI’s new image model works." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1b94c6fe-a548-45b6-8491-f302120ca84d/Thumbnail__76_.jpg?t=1793863211" /></a>
+<em>Click here to watch how OpenAI’s new image model works.</em></p>
+<hr />
+<p><a id="openai-unveils-a-new-image-model-that-generates-50-faster"></a>
+<strong>OpenAI unveils a new image model that generates 50% faster:</strong> The ChatGPT maker just rolled out <a href="https://openai.com/index/introducing-images-2-6/"><strong>Images 2.6</strong></a> across ChatGPT, Codex, and its API. For developers, there are two new API models to choose from: Flare, which generates images in as fast as six seconds for quick drafts, and Sunburst, built for detailed edits. Both models support SVGs and animated GIFs, along with a new complexity setting to control planning depth. More API details <a href="https://developers.openai.com/api/docs/pricing#image-generation"><strong>here</strong></a><a href="https://developers.openai.com/api/docs/pricing#image-generation">.</a></p>
+<p><a id="apple-cuts-daily-ai-spending-limits-for-its-engineers"></a>
+<strong>Apple cuts daily AI spending limits for its engineers:</strong> The iPhone maker reportedly <a href="https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/">slashed</a> some engineers' daily AI spending caps from $300 to $200 last month, with budgets for certain teams potentially dropping to $100 soon. Anyone who needs more has to request an exemption from senior leadership. After a year of tokenmaxxing, Big Tech is rationing tokens instead. Before your own team's budget gets slashed, here is how to cut down on <a href="https://redis.io/blog/llm-token-optimization-speed-up-apps/"><strong>token waste.</strong></a></p>
+<p><strong>Cognition’s new model makes coding agents cheap and fast:</strong> The Devin maker just dropped <a href="https://cognition.com/blog/swe-2-flash"><strong>SWE-2 Flash</strong></a>, a lightweight model designed for the routine tasks coding agents handle constantly. It’s built for code reviews, workflow automation, feature development, and doc updates. According to the company, it runs three times faster than SWE-2 at one-fifth the cost and even slightly outperforms it on FrontierCode 2.0. The weights remain private for now, meaning it only runs within Devin. <a href="https://devin.ai/desktop"><strong>Try it out here.</strong></a></p>
+<hr />
+<h5><strong>PRESENTED BY ZEP</strong></h5>
+<h2><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-05-primary&amp;shad=1">Stop shipping agents that repeat mistakes.</a></h2>
+<p><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-05-primary&amp;shad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fd440059-9df2-4434-9de3-78a2b0009d23/zep-the-code-2026-11-05-1920x1080.jpg?t=1793718781" /></a></p>
+<hr />
+<p><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-05-primary&amp;shad=1">Zep Agent Skills</a> turns your agents' traces into step-by-step skills they read at runtime, over MCP or the Zep SDKs.</p>
+<ul>
+<li>
+<p><strong>More tasks done right:</strong> agents start from steps that work instead of from zero.</p>
+</li>
+<li>
+<p><strong>Fewer tokens:</strong> agents take fewer steps, and a smaller model can use a skill from a larger model's run.</p>
+</li>
+<li>
+<p><strong>Works with your agent infra:</strong> use any framework, and bring traces from Braintrust, LangSmith or the Zep SDK.</p>
+</li>
+</ul>
+<p><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-05-primary&amp;shad=1"><strong>Start building with Zep Agent Skills →</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Anthropic engineer warns coding agents erode your critical thinking. Here's how to fix it:</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/25a6b0dd-3502-4244-a875-961ae0a3bfe7/superhumanteam_a_developer_handing_their_glowing_brain_across_549ea4e1-9a3e-4353-9245-523249f3387c_2.jpg?t=1793869921" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p>Addy Osmani, who works on Claude Code at Anthropic, just sounded the alarm for software engineers: smarter AI agents are quietly dulling our critical thinking skills.</p>
+<p>Because newer models generate clean, working code with fewer obvious bugs, engineers rarely pause to double-check the logic. We used to spend time reasoning through complex problems between asking a question and building a solution. Agents now eliminate that window, removing the friction that forces us to think.</p>
+<p>Osmani <a href="https://archive.codenewsletter.ai/2117512471930167377">maps this shift</a> across three distinct stages:</p>
+<ul>
+<li>
+<p><strong>Cognitive offloading:</strong> You delegate a specific task to an agent while maintaining full ownership of the final output.</p>
+</li>
+<li>
+<p><strong>Deferral:</strong> You accept the model's output as truth rather than treating it as an unverified hypothesis.</p>
+</li>
+<li>
+<p><strong>Cognitive surrender:</strong> You adopt the code entirely as your own without reviewing it, assuming manual checks waste time.</p>
+</li>
+</ul>
+<p>This drift creates compounding comprehension debt: your repo fills with passing tests, but no engineer on the team truly understands how the architecture works.</p>
+<p>To break this cycle, Osmani recommends a few practical habits before and after running agents:</p>
+<ul>
+<li>
+<p><strong>Form a hypothesis first:</strong> Draft your own rough solution so a polished AI answer does not anchor your thinking.</p>
+</li>
+<li>
+<p><strong>Define verification upfront:</strong> Decide your success criteria before running the prompt so you do not rationalize buggy results later.</p>
+</li>
+<li>
+<p><strong>Hunt for failure modes:</strong> Ask what assumptions could break the code, then run real edge-case tests.</p>
+</li>
+<li>
+<p><strong>Inspect the raw evidence:</strong> Review the exact commands and outputs before reading the model's summary.</p>
+</li>
+<li>
+<p><strong>Challenge green checks:</strong> Ask which edge cases passing tests actually missed.</p>
+</li>
+<li>
+<p><strong>Demand explicit trade-offs:</strong> Prompt the agent to list the decisions and shortcuts it took.</p>
+</li>
+</ul>
+<p>The conclusion is simple: if you cannot explain the architecture, even with the agent's help, you have surrendered your judgment.</p>
+<hr />
+<h5><strong>PRESENTED BY TIGERDATA</strong></h5>
+<h2><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-spotlight&amp;tcad=1">Your Next Database Is the One You Already Have</a></h2>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-spotlight&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4ffbae0d-1490-43eb-938b-e4ff3ef196e7/1920x1080-atanyscale__1___1__1024_-_Sophie_Bartch.jpg?t=1793870646" /></a></p>
+<hr />
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-spotlight&amp;tcad=1">Tiger Data</a> extends Postgres with hypertables, columnar storage, and up to 95% compression, so queries stay fast as your data grows.</p>
+<p>Same SQL and tools. No second database to build or maintain.</p>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=the-code-spotlight&amp;tcad=1"><strong>Start building for free. No credit card needed.</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fb99ebc1-9264-4676-902d-c41e8b5d1a1b/image_-_2026-11-05T142124.701.jpg?t=1793868694" />
+<em>Meme of the day.</em></p>
+<hr />
+<p>🔐 <strong>Agent Armor:</strong> These <a href="https://archive.codenewsletter.ai/2117587605982527581">15 hands-on projects</a> teach you to secure AI agents from cyber attacks. A must read for all developers (1K likes).</p>
+<p>🤖 <strong>Bot Boss:</strong> One founder with 50+ employees across 12 countries now talks to AI agents more than humans. Here’s the <a href="https://archive.codenewsletter.ai/2117734977312047537">full stack running the company</a> (6K likes).</p>
+<p><strong>⌚ Always Listening:</strong> Apple’s iOS 27.3 beta lets your Watch <a href="https://archive.codenewsletter.ai/2117920770194371071">capture nearby conversations</a> and replay what you missed. It also adds an AI health coach that estimates your body’s biological age (1K likes).</p>
+<p>🔐<strong> Patch Incoming:</strong> Node.js just warned of <a href="https://archive.codenewsletter.ai/2117977473044697537">high-severity security flaws</a> hitting versions 26, 24, and 22. The details stay under wraps until fixes drop on November 11 (377K views).</p>
+<p>🧪 <strong>Readability Rethink:</strong> One developer argues agents don’t “read” code like humans do, so clean code matters less than we think. The quality that replaces it is far more <a href="https://archive.codenewsletter.ai/2117953152376799498">testable</a> (2K likes).</p>
+<p>🧾<strong> Follow the Money:</strong> Plenty of devs think AI labs <a href="https://substack.hadley.nz/p/how-much-do-tokens-really-cost">burn VC cash</a> to keep token prices low. New self-hosting math says APIs carry healthy margins, and the subsidies hide elsewhere.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=xq0eB8vxeqk"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0c900222-4dd6-4f9d-b674-52749a654daa/Untitled_design__51_.jpg?t=1793868107" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=xq0eB8vxeqk">How to use AI agents to improve UI design:</a> This tutorial teaches developers how to use AI agents and "hill climbing" techniques to iteratively improve UI design. You will learn to set up multiple LLMs to review, score, and automatically refine code, achieving high-quality design polish and token optimization without needing a dedicated designer.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/steipete/agent-scripts">Agent scripts (7.4K </a>⭐<a href="https://github.com/steipete/agent-scripts">):</a> This repo provides a collection of reusable scripts and configuration tools designed to manage, coordinate, and scale AI agent workflows. You can use it to synchronize skills across environments, automate long-running tasks using tools like tmux, manage multi-model context switching, and enforce safety and credential policies for agents.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a id="building-a-workflow-with-claude-managed-agents"></a>
+<a href="https://platform.claude.com/cookbook/managed-agents-cma-dreaming-with-a-dynamic-workflow">Building a workflow with Claude Managed Agents:</a> This cookbook demonstrates how you can build a "dreaming" dynamic workflow for Claude Managed Agents. The background process reads transcripts from past agent sessions, extracts key learnings, and distills them into a searchable, wiki-style memory store. Future agent sessions can then mount this updated memory read-only to improve context, avoid repeating past mistakes, and make better decisions.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-stop-claude-codes-subagents-from-eating-your-usage-limit"></a></p>
+<h2><strong>How to stop Claude Code’s subagents from eating your usage limit</strong></h2>
+<p>Background subagents in Claude Code were wasting your usage limit because every 30 seconds each one reread its entire conversation just to update a short status line.</p>
+<p>Anthropic’s Claude Code team <a href="https://archive.codenewsletter.ai/2118064914028019978">fixed</a> the issue. A smaller model now writes the status line using short notes. That makes each update about 99% cheaper, giving you roughly 6% more prompts within your limit.</p>
+<ul>
+<li><strong>Step 1:</strong> Check your version.</li>
+</ul>
+<pre><code>claude --version
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> If it’s below v2.1.316, update.</li>
+</ul>
+<pre><code>claude update
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> If you installed Claude Code with npm, run this instead of Step 2.</li>
+</ul>
+<pre><code>npm update -g @anthropic-ai/claude-code
+</code></pre>
+<p>That is all there is to it. Just restart any active sessions to apply the update, and keep in mind this only applies to the CLI.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Elon Musk predicts when the AI boom will hit a wall and says the bottleneck isn’t chips. Here’s the <a href="https://archive.codenewsletter.ai/2117572576390349155">real bottleneck</a> (4.5M views).</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/d2a465f5-6c1f-44f8-8380-5acad96cdaa7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Fthecode-cybersecurity.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The Code Cybersecurity</strong></a></p>
+</li>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/c8e380c2-717a-4ce2-8531-bf4e67c35ad7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Ftheitcode.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The IT Code</strong></a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code?"><strong>Get in touch.</strong></a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

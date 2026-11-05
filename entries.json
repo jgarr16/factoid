@@ -1,8 +1,207 @@
 {
   "version": 1,
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "sweep": "2026-09-05 → 2026-11-05",
   "entries": [
+    {
+      "uid": "b983f5343063964dc807ef26cfab08dbe7d1b51dd84a705dd8ff0ee8f8365677",
+      "id": 281,
+      "title": "Apple and Goldman start rationing employee AI tokens",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-05",
+          "time": "23:10",
+          "headline": "3. Apple and Goldman Sachs restrict employee AI use for different reasons",
+          "href": "newsletters/2026-11-05_newsletter_superhuman_ai.md",
+          "anchor": "3-apple-and-goldman-sachs-restrict-employee-ai-use-for-different-reaso"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-05",
+          "time": "23:07",
+          "headline": "Apple cuts daily AI spending limits for its engineers",
+          "href": "newsletters/2026-11-05_newsletter_the_code.md",
+          "anchor": "apple-cuts-daily-ai-spending-limits-for-its-engineers"
+        }
+      ],
+      "prose": [
+        "Apple reportedly cut some engineers' daily AI spending caps from $300 to $200 last month, with certain teams heading to $100 and anything more needing a senior-leadership exemption. Goldman Sachs limited AI coding tools to engineering, cutting off most traders and bankers over security — a reversal from its CIO praising vibe coding in July — and Meta and Microsoft made similar moves in October. Tokenmaxxing budgets are being rationed, so per-team measurement and waste cuts arrive before the cut-off does."
+      ],
+      "links": [
+        {
+          "label": "TechCrunch — Apple trims internal AI budgets",
+          "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/"
+        },
+        {
+          "label": "Quartz — Goldman restricts AI coding tools",
+          "url": "https://qz.com/goldman-sachs-restricts-ai-coding-tools-traders-bankers-110226"
+        }
+      ]
+    },
+    {
+      "uid": "53b7ee70d985aafde47817a8a2220d15e5576dfa95d61baf7931f267f3a36342",
+      "id": 280,
+      "title": "Grok Bot recipe publishes a team data analyst with Slack access",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-05",
+          "time": "23:10",
+          "headline": "How to build an on-demand data analyst for your team with Grok Bot",
+          "href": "newsletters/2026-11-05_newsletter_superhuman_ai.md",
+          "anchor": "how-to-build-an-on-demand-data-analyst-for-your-team-with-grok-bot"
+        }
+      ],
+      "prose": [
+        "Recipe: create a dedicated Grok Bot, connect its data sources, files, plugins and credentials, then load company context — metric definitions, table descriptions, reporting rules, dashboard conventions. The sample prompt makes it query, sanity-check by segment and period, name the likely drivers, flag data-quality issues and return charts plus the exact metrics used. Publish to Team, or share through the Slack integration, once a few real queries check out."
+      ],
+      "links": [
+        {
+          "label": "Grok Bot",
+          "url": "https://x.ai/bot"
+        }
+      ]
+    },
+    {
+      "uid": "e049594feeaca2821225bbd21123e56a3f05193d28ecdd8a6489ba5168224d09",
+      "id": 279,
+      "title": "Atmanity's Atmee v2 animates one photo into a talking avatar",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-05",
+          "time": "23:10",
+          "headline": "1. Atmanity releases a real-time video avatar model",
+          "href": "newsletters/2026-11-05_newsletter_superhuman_ai.md",
+          "anchor": "1-atmanity-releases-a-real-time-video-avatar-model"
+        }
+      ],
+      "prose": [
+        "Atmee v2 takes a single image plus a 10-second voice clip and returns a lifelike avatar you can talk to in real time; the company claims 50x faster and 10-100x cheaper than top video models. It was built over two years by founder Chen-Ping Yu, whose earlier AR startup sold to Google in 2022, and can be invoked by pasting one link into a chatbot. A cheap option for demo videos or a voice-agent front end without a camera."
+      ],
+      "links": [
+        {
+          "label": "Atmanity demo",
+          "url": "https://archive.superhuman.ai/2118017931519078609"
+        }
+      ]
+    },
+    {
+      "uid": "dfc7ccf5b6775daf9239f59739aee1cc22e701790c212d5db7b61b7d166c3d86",
+      "id": 278,
+      "title": "OpenAI's Images 2.6 adds two API models and GIF output",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-05",
+          "time": "23:10",
+          "headline": "2. OpenAI upgrades its image model to create GIFs",
+          "href": "newsletters/2026-11-05_newsletter_superhuman_ai.md",
+          "anchor": "2-openai-upgrades-its-image-model-to-create-gifs"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-05",
+          "time": "23:07",
+          "headline": "OpenAI unveils a new image model that generates 50% faster",
+          "href": "newsletters/2026-11-05_newsletter_the_code.md",
+          "anchor": "openai-unveils-a-new-image-model-that-generates-50-faster"
+        }
+      ],
+      "prose": [
+        "Images 2.6 is live across ChatGPT, Codex and the API, generating 50% faster. Two API models: Flare for quick drafts in as fast as six seconds, Sunburst for detailed edits. Both handle SVG output and animated GIFs, and a new complexity setting controls planning depth — the GIF path is a single call to animate product shots or a mascot. Pricing and parameters are on the image-generation pricing page."
+      ],
+      "links": [
+        {
+          "label": "OpenAI — introducing Images 2.6",
+          "url": "https://openai.com/index/introducing-images-2-6/"
+        },
+        {
+          "label": "Image API pricing",
+          "url": "https://developers.openai.com/api/docs/pricing#image-generation"
+        }
+      ]
+    },
+    {
+      "uid": "0b56ec8976efb39e0f50cc4cc4377796345a7e23db10fa81c9d6c4208b5061b2",
+      "id": 277,
+      "title": "Claude Managed Agents cookbook distills past sessions into wiki memory",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-05",
+          "time": "23:07",
+          "headline": "Building a workflow with Claude Managed Agents",
+          "href": "newsletters/2026-11-05_newsletter_the_code.md",
+          "anchor": "building-a-workflow-with-claude-managed-agents"
+        }
+      ],
+      "prose": [
+        "The cookbook builds a \"dreaming\" dynamic workflow: a background process reads transcripts from finished agent sessions, pulls out the key learnings, and distils them into a searchable wiki-style memory store. Later sessions mount that store read-only, so the agent starts from what already worked instead of re-deriving it. Portable to any harness that keeps session logs on disk."
+      ],
+      "links": [
+        {
+          "label": "Claude cookbook — dreaming with a dynamic workflow",
+          "url": "https://platform.claude.com/cookbook/managed-agents-cma-dreaming-with-a-dynamic-workflow"
+        }
+      ]
+    },
+    {
+      "uid": "ef5ff22ed0e0e938e1fb5bf6a4544a012221c33c8d1664057e8073e196a32ace",
+      "id": 276,
+      "title": "Claude Code update makes subagent status lines 99% cheaper",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-05",
+          "time": "23:07",
+          "headline": "How to stop Claude Code’s subagents from eating your usage limit",
+          "href": "newsletters/2026-11-05_newsletter_the_code.md",
+          "anchor": "how-to-stop-claude-codes-subagents-from-eating-your-usage-limit"
+        }
+      ],
+      "prose": [
+        "Background subagents were re-reading their entire conversation every 30 seconds just to refresh a one-line status, burning usage limit for nothing. Anthropic's fix has a smaller model write the status from short notes, making each update about 99% cheaper and freeing roughly 6% more prompts within a limit. One command: check `claude --version`, then `claude update` (or `npm update -g @anthropic-ai/claude-code`) if below v2.1.316, and restart active CLI sessions."
+      ],
+      "links": [
+        {
+          "label": "Anthropic's note on the fix",
+          "url": "https://archive.codenewsletter.ai/2118064914028019978"
+        }
+      ]
+    },
+    {
+      "uid": "681c0871eb89c7ead66eec638df0593934acfdbb140b49814355a6a26410d285",
+      "id": 275,
+      "title": "Mini Harness: 1,200 lines of Python that beat Claude Code on Haiku",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Product Compass",
+          "date": "2026-11-05",
+          "time": "20:10",
+          "headline": "Agent Harness: How I Built My Own Claude Code, Step by Step",
+          "href": "newsletters/2026-11-05_newsletter_the_product_compass.md",
+          "anchor": "agent-harness-how-i-built-my-own-claude-code-step-by-step"
+        }
+      ],
+      "prose": [
+        "Paweł Huryn wrote a ~1,200-line Python coding agent covering the 15 parts of a harness — reasoning loop, five file/shell tools, sessions, compaction, an AI-judge permission gate, subagents, /goal mode, skills and MCP. On Terminal-Bench 2.0 (10 tasks, 5 runs each) it averaged 9.2/10 on Claude Haiku 5.5 versus Claude Code's 8.4, top of eight harnesses with Hermes Agent at 8.4, and tied Claude Code at 8.4 on DeepSeek V4.1 Flash. The code is free on GitHub, but the post's value is 15 build prompts with a test each; running them on Haiku or V4.1 Flash costs well under $0.10."
+      ],
+      "links": [
+        {
+          "label": "The Product Compass — build your own agent harness",
+          "url": "https://open.substack.com/pub/huryn/p/build-your-own-agent-harness"
+        }
+      ]
+    },
     {
       "uid": "cb7e2dd95639bd59ae3b06e688c75c6227a939b6297d03951ba6b499ff1301c7",
       "id": 274,
