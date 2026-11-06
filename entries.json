@@ -1,11 +1,247 @@
 {
   "version": 1,
   "updated": "2026-11-07",
-  "sweep": "2026-09-05 → 2026-11-05",
+  "sweep": "2026-09-05 → 2026-11-07",
   "entries": [
     {
-      "uid": "b983f5343063964dc807ef26cfab08dbe7d1b51dd84a705dd8ff0ee8f8365677",
+      "uid": "27f993445772eceedab89b02bf96276e2145b523cd5bce9edccd1c61689dffad",
+      "id": 287,
+      "title": "OpenAI's Decisions API returns a choice or score, not prose",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-07",
+          "time": "02:03",
+          "headline": "Your App Doesn’t Need an Essay. It Needs a Decision.",
+          "href": "newsletters/2026-11-07_newsletter_future_tools.md",
+          "anchor": "your-app-doesnt-need-an-essay-it-needs-a-decision"
+        }
+      ],
+      "prose": [
+        "Give Decisions API context (text, images or JSON), a question and the allowed answers or a scoring rubric, and it returns a focused choice, probability or score instead of a paragraph. Fits the cheap decision-model pattern already in the log: routing billing vs. support vs. account requests, scoring damage from a photo, grading severity on ordered levels, or letting an agent pick continue / retry / ask-for-clarification mid-run."
+      ],
+      "links": [
+        {
+          "label": "OpenAI Decisions API docs",
+          "url": "https://platform.openai.com/decisions"
+        }
+      ]
+    },
+    {
+      "uid": "ba6413e9bc0604e45bc04c0236abb8ba68cab6bb428d4bdd71ea8227fd3fc2bd",
+      "id": 286,
+      "title": "Siri App Intents open to developers in the iOS 27.3 beta",
+      "theme": "🍎 Apple & Mac",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-07",
+          "time": "02:03",
+          "headline": "Apple Opens Siri AI to Third-Party Apps",
+          "href": "newsletters/2026-11-07_newsletter_future_tools.md",
+          "anchor": "apple-opens-siri-ai-to-third-party-apps"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-04",
+          "time": "23:10",
+          "headline": "Developers can finally get Siri to take actions in apps",
+          "href": "newsletters/2026-11-04_newsletter_the_code.md",
+          "anchor": "developers-can-finally-get-siri-to-take-actions-in-apps"
+        }
+      ],
+      "prose": [
+        "Apple rolled out a Developer Preview in the iOS 27.3 betas that lets apps plug into Siri AI through App Intents: you declare which data and actions Siri may touch, chain them into workflows, and drive multi-step tasks like checkout with markdown-based skills. Testing is limited to internal TestFlight builds for now, with users getting access in a few months and App Store submissions in spring — so this is the window to build against the real API rather than a demo."
+      ],
+      "links": [
+        {
+          "label": "Apple developer news",
+          "url": "https://developer.apple.com/news/?id=gdk2umrf"
+        }
+      ]
+    },
+    {
+      "uid": "af020f2b10e7db7a3bbeac8a458ec3915903103857e79e4569d429bab63fb1a9",
+      "id": 285,
+      "title": "Burn expiring Codex quota with a /goal cleanup run",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-06",
+          "time": "23:10",
+          "headline": "How to burn leftover Codex quota before it resets",
+          "href": "newsletters/2026-11-06_newsletter_the_code.md",
+          "anchor": "how-to-burn-leftover-codex-quota-before-it-resets"
+        }
+      ],
+      "prose": [
+        "For quota that resets half-unused: turn on the goals feature with `goals = true` under `[features]` in the Codex config, then give it a cleanup goal like `/goal Remove all dead code nothing calls, verified by passing tests` — it keeps working across turns until the goal is met. The thread adds four more targets: duplicated logic, unused dependencies, stale sessions and zombie scheduled tasks."
+      ],
+      "links": [
+        {
+          "label": "The Code — the four extra targets",
+          "url": "https://archive.codenewsletter.ai/2118357672106029272"
+        }
+      ]
+    },
+    {
+      "uid": "283c463c19584837f823de920e40db5a7e142714ceaf1871c23e66f8a01bf93d",
+      "id": 284,
+      "title": "Cutting CI wait from 40 minutes to 2 so agents stop stalling",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-06",
+          "time": "23:10",
+          "headline": "How to make your CI 20x faster",
+          "href": "newsletters/2026-11-06_newsletter_the_code.md",
+          "anchor": "how-to-make-your-ci-20x-faster"
+        }
+      ],
+      "prose": [
+        "Boardy's head of engineering breaks down how his team took PR wait times from 40 minutes to 2: where the pipeline actually loses time, what is worth caching or running in parallel, and how to run smarter tests so coding agents never sit blocked on a build. The agent-specific point is the loop time — a slow CI turns every agent iteration into a coffee break."
+      ],
+      "links": [
+        {
+          "label": "The Code — CI cookbook",
+          "url": "https://archive.codenewsletter.ai/2116291924219060319"
+        }
+      ]
+    },
+    {
+      "uid": "da1b99fe86bd7f74fc70f216630f87587be2e9db54fdb7c50d16ccef0ce7ba59",
+      "id": 283,
+      "title": "Untangle Codebase skill strips cruft so agents can navigate the repo",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-06",
+          "time": "23:10",
+          "headline": "Untangle Codebase",
+          "href": "newsletters/2026-11-06_newsletter_the_code.md",
+          "anchor": "untangle-codebase"
+        }
+      ],
+      "prose": [
+        "An agent skill you point at a repo from Claude Code, Cursor or Codex: it removes copy-paste, leaky abstractions, temporary workarounds and pointless wrappers so the code is easier for both you and the agent to read and change. Aimed at the accumulated cruft of months of vibe coding, before the codebase becomes unmaintainable."
+      ],
+      "links": [
+        {
+          "label": "Untangle Codebase",
+          "url": "https://archive.codenewsletter.ai/2118378945557004477"
+        }
+      ]
+    },
+    {
+      "uid": "7bf459a0b6f61d87a0f4b898d040fcf42bb88701aeaf27f4aa157c48888c52ee",
+      "id": 282,
+      "title": "Open-source local Wispr Flow clone for Mac dictation",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-06",
+          "time": "23:10",
+          "headline": "A dev reverse-engineered the paid dictation app Wispr Flow",
+          "href": "newsletters/2026-11-06_newsletter_the_code.md",
+          "anchor": "a-dev-reverse-engineered-the-paid-dictation-app-wispr-flow"
+        }
+      ],
+      "prose": [
+        "A developer reverse-engineered Wispr Flow — the paid, cloud dictation app — and published an open-source version that runs entirely on the Mac, with benchmarks the issue calls super-impressive (2.5K bookmarks on the thread). Same niche as Hex: hold a key, talk, and the text lands in whatever app has focus, which is the fastest way to dictate long prompts into a coding agent instead of typing them. Running locally means no audio leaves the machine."
+      ],
+      "links": [
+        {
+          "label": "The Code — local dictation write-up",
+          "url": "https://archive.codenewsletter.ai/2118386115170496855"
+        }
+      ]
+    },
+    {
+      "uid": "2028ddfd765da4fb6783378af9c6257199a0ff0ab38be08680e2af2e736a7aee",
       "id": 281,
+      "title": "VISTA keeps every frame an agent sees and lets it zoom back",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Batch",
+          "date": "2026-11-06",
+          "time": "23:03",
+          "headline": "Context Engineering for Images",
+          "href": "newsletters/2026-11-06_newsletter_the_batch.md",
+          "anchor": "context-engineering-for-images"
+        }
+      ],
+      "prose": [
+        "MIT's VISTA drops the usual embed-and-delete pattern: it stores every frame a vision-language agent receives, plus the actions and their results, and gives the agent a tool to retrieve and zoom into any of them, with separate notes for environment-level and level-specific facts. On ARC-AGI-3 it hit a perfect 100 RHAE with Claude Opus 5.0 (fewer actions than first-time humans; 99 with GPT-5.6 Sol), and 63.3% of GameWorld tasks against 40% for the native harness — the ablation without frame storage fell to 70 RHAE. The harness is open under the MIT licence; it is the image analogue of text context engineering."
+      ],
+      "links": [
+        {
+          "label": "VISTA harness (MIT licence)",
+          "url": "https://info.deeplearning.ai/e3t/Ctc/LX+113/cJhC404/VWtVy81yMrz4W7kThKc4qJ9YbW5j5c_V5X1JRTN7WbryH3qgz0W7lCdLW6lZ3llN3pQXF-5plzXW18xb3X61KQPZW5BjVQ42wwmphW8VMgmT5DFcL9W78S3vF29Y-zBVzFlqP4mBJtNW4NdpPF13492ZVJFlFL8ZDTMJW7SqLf03TXvKNW3jYHSv794wGfW3jfscH5C1tlLW3Wx_QR7F4VSpVRT_zx4Bs4jmW3wlCpj4FFN0cW51hr2x5XYlYsW8sLy7w8gWCSQW7hZbnp5rP6M-W2v9Nr34SbLBbW8HXrX82kh9pwW5JpHv69gMPWlVRH_vw2tWr1hW42Ddxs9g-h_yW44zmS24qnK57W5fSN_D6s3m4tf57lhKC04"
+        }
+      ]
+    },
+    {
+      "uid": "8549fb2590026741b9b20c1e74967efe506709adfa438608a184083476a57960",
+      "id": 280,
+      "title": "Gemini 4 Carbon tops the index at Argon's $2/$10 price",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "The Batch",
+          "date": "2026-11-06",
+          "time": "23:03",
+          "headline": "Gemini Leads the Pack Again",
+          "href": "newsletters/2026-11-06_newsletter_the_batch.md",
+          "anchor": "gemini-leads-the-pack-again"
+        },
+        {
+          "pub": "Future Tools",
+          "date": "2026-10-31",
+          "time": "01:07",
+          "headline": "Did Google Just Take the Lead Again?",
+          "href": "newsletters/2026-10-31_newsletter_future_tools.md",
+          "anchor": "did-google-just-take-the-lead-again"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-10-29",
+          "time": "23:07",
+          "headline": "Google’s new frontier model hunts bugs across codebases",
+          "href": "newsletters/2026-10-29_newsletter_the_code.md",
+          "anchor": "googles-new-frontier-model-hunts-bugs-across-codebases"
+        },
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-10-29",
+          "time": "22:08",
+          "headline": "Google announces Gemini 4 Carbon with leading results",
+          "href": "newsletters/2026-10-29_newsletter_superhuman_ai.md",
+          "anchor": "google-announces-gemini-4-carbon-with-leading-results"
+        }
+      ],
+      "prose": [
+        "Google's second Gemini 4 release in a month ranks #1 on Artificial Analysis' Intelligence Index, ahead of Claude Opus 5.5 and GPT-6 Astra, and is built for long-running engineering work — Google claims it spent days at a time tracking and patching bugs across codebases. It more than doubles Argon's secure-code success rate, cut successful cheating on Terminal-Bench 4.0 to zero and blocked every attack in Gray Swan's prompt-injection benchmark. It launches at Argon's introductory $2/$10 per million input/output tokens, with access going first to cyber defenders through Google's Fairwind programme."
+      ],
+      "links": [
+        {
+          "label": "Google's launch post",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+        },
+        {
+          "label": "Artificial Analysis intelligence index",
+          "url": "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index"
+        }
+      ]
+    },
+    {
+      "uid": "b983f5343063964dc807ef26cfab08dbe7d1b51dd84a705dd8ff0ee8f8365677",
+      "id": 279,
       "title": "Apple and Goldman start rationing employee AI tokens",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -42,7 +278,7 @@
     },
     {
       "uid": "53b7ee70d985aafde47817a8a2220d15e5576dfa95d61baf7931f267f3a36342",
-      "id": 280,
+      "id": 278,
       "title": "Grok Bot recipe publishes a team data analyst with Slack access",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -67,7 +303,7 @@
     },
     {
       "uid": "e049594feeaca2821225bbd21123e56a3f05193d28ecdd8a6489ba5168224d09",
-      "id": 279,
+      "id": 277,
       "title": "Atmanity's Atmee v2 animates one photo into a talking avatar",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -92,7 +328,7 @@
     },
     {
       "uid": "dfc7ccf5b6775daf9239f59739aee1cc22e701790c212d5db7b61b7d166c3d86",
-      "id": 278,
+      "id": 276,
       "title": "OpenAI's Images 2.6 adds two API models and GIF output",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -129,7 +365,7 @@
     },
     {
       "uid": "0b56ec8976efb39e0f50cc4cc4377796345a7e23db10fa81c9d6c4208b5061b2",
-      "id": 277,
+      "id": 275,
       "title": "Claude Managed Agents cookbook distills past sessions into wiki memory",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -154,7 +390,7 @@
     },
     {
       "uid": "ef5ff22ed0e0e938e1fb5bf6a4544a012221c33c8d1664057e8073e196a32ace",
-      "id": 276,
+      "id": 274,
       "title": "Claude Code update makes subagent status lines 99% cheaper",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -179,7 +415,7 @@
     },
     {
       "uid": "681c0871eb89c7ead66eec638df0593934acfdbb140b49814355a6a26410d285",
-      "id": 275,
+      "id": 273,
       "title": "Mini Harness: 1,200 lines of Python that beat Claude Code on Haiku",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -204,7 +440,7 @@
     },
     {
       "uid": "cb7e2dd95639bd59ae3b06e688c75c6227a939b6297d03951ba6b499ff1301c7",
-      "id": 274,
+      "id": 272,
       "title": "Claude's API message threads cut agent latency 35%",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -229,7 +465,7 @@
     },
     {
       "uid": "5ee3b87589208908783df74e5d725cb5351468704965c9b9cd9e5ba867b74e36",
-      "id": 273,
+      "id": 271,
       "title": "DeepSeek's open-source Super-Agent watches your group chats for bugs",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -254,7 +490,7 @@
     },
     {
       "uid": "1db7eb305bf58c48dfa1e0d44ffeb265079c409d0dd04092bdf47a8327177385",
-      "id": 272,
+      "id": 270,
       "title": "Higher reasoning effort can cost 42x more and do worse",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -283,7 +519,7 @@
     },
     {
       "uid": "03bae96d88d25b424eef6086d2899fa134ad74487c7f61f29af7f77154737266",
-      "id": 271,
+      "id": 269,
       "title": "One prompt rewrites stacked awaits into parallel calls",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -308,7 +544,7 @@
     },
     {
       "uid": "77b19a5c03a8da0ecd22388c313c70e040ab0ee2884058faa23998520a1f5a73",
-      "id": 270,
+      "id": 268,
       "title": "Why frontier LLM prices keep falling — and how to route for it",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -337,7 +573,7 @@
     },
     {
       "uid": "8b502fa6df929cace5c3e884bafd53fbaa913ea7ab850b863752f40d3f59ef0f",
-      "id": 269,
+      "id": 267,
       "title": "Terminal Mac gives coding agents a disposable macOS VM to drive",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -362,7 +598,7 @@
     },
     {
       "uid": "5bf817f1e19e8b61d515bb5d85dcc2d81131e3c7ec91bdd6d730947a8a7737e9",
-      "id": 268,
+      "id": 266,
       "title": "Postman's desktop app silently installs plugins into Claude Code and Codex",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -386,33 +622,8 @@
       ]
     },
     {
-      "uid": "ba6413e9bc0604e45bc04c0236abb8ba68cab6bb428d4bdd71ea8227fd3fc2bd",
-      "id": 267,
-      "title": "Siri App Intents open to developers in the iOS 27.3 beta",
-      "theme": "🍎 Apple & Mac",
-      "sources": [
-        {
-          "pub": "The Code",
-          "date": "2026-11-04",
-          "time": "23:10",
-          "headline": "Developers can finally get Siri to take actions in apps",
-          "href": "newsletters/2026-11-04_newsletter_the_code.md",
-          "anchor": "developers-can-finally-get-siri-to-take-actions-in-apps"
-        }
-      ],
-      "prose": [
-        "Apple rolled out a Developer Preview in the iOS 27.3 betas that lets apps plug into Siri AI through App Intents: you declare which data and actions Siri may touch, chain them into workflows, and drive multi-step tasks like checkout with markdown-based skills. Testing is limited to internal TestFlight builds for now, with users getting access in a few months and App Store submissions in spring — so this is the window to build against the real API rather than a demo."
-      ],
-      "links": [
-        {
-          "label": "Apple developer news",
-          "url": "https://developer.apple.com/news/?id=gdk2umrf"
-        }
-      ]
-    },
-    {
       "uid": "9550ae6201b06dc0cfb0ce0e785b65085e1bad50a4e75f11f4a2b6d47596bd0f",
-      "id": 266,
+      "id": 265,
       "title": "AgentKit puts an MCP gateway in front of production agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -437,7 +648,7 @@
     },
     {
       "uid": "8dea592be5d4e82bfd25daac16a2297a81587d1d2f9f5e7b91e9b058255c332a",
-      "id": 265,
+      "id": 264,
       "title": "Vaani open-sources its voice harness for phone-line agents",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -457,7 +668,7 @@
     },
     {
       "uid": "09fff989ce048af48230aa47af882633f30f42a6ba0f38551ec8a128609cd98d",
-      "id": 264,
+      "id": 263,
       "title": "Nine of ten agents lifted their own spend cap by reading the inbox",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -482,7 +693,7 @@
     },
     {
       "uid": "775581e4c64a03bcb206d863257674498fd1c74fd21531bddf47d0913026b0a3",
-      "id": 263,
+      "id": 262,
       "title": "Clean Machine sorts and trashes a cluttered Mac desktop",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -507,7 +718,7 @@
     },
     {
       "uid": "a28408cde6816eb11b38af8146fe3b2267f9d9222b7ffe9de13361d0c671a961",
-      "id": 262,
+      "id": 261,
       "title": "A ticket-to-parallel-agents software factory built on Claude Code",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -532,7 +743,7 @@
     },
     {
       "uid": "199ccc98841c26f815c54bf401d95257eb68ba8d18d19ce85a8711acaea55477",
-      "id": 261,
+      "id": 260,
       "title": "A /perf-review slash command that names the fix, not another cache",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -557,7 +768,7 @@
     },
     {
       "uid": "f09e37b8070adfc38d558fb8d126432ac3944b4e526cb4bd4ffdaf05dd0b0b27",
-      "id": 260,
+      "id": 259,
       "title": "NanoUI builds tiny Zig desktop apps an agent can verify headlessly",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -582,7 +793,7 @@
     },
     {
       "uid": "7ec93043ec6c40a5849c0c1da3e385870c1f5e4843f108343f4c6b35d4c4d6c1",
-      "id": 259,
+      "id": 258,
       "title": "Hume's one-call audio API answers questions about recordings",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -611,7 +822,7 @@
     },
     {
       "uid": "75df0923ef86b9a2d9e447e24af95f5d799935807aa3d6cc0f90f21a3b428e31",
-      "id": 258,
+      "id": 257,
       "title": "DeepSeek lets a prompt build plugins for its open-source Harness",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -652,7 +863,7 @@
     },
     {
       "uid": "124c2290ec9efd70c91133f16a601ff93ed367196e90da011be7478140e48967",
-      "id": 257,
+      "id": 256,
       "title": "Beacon — open-source self-improving memory for coding agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -677,7 +888,7 @@
     },
     {
       "uid": "eedaf254a1591cf4d01c32bf4e60753355b816d80967801219652ee69e0d96c2",
-      "id": 256,
+      "id": 255,
       "title": "Hex — local dictation for the Mac, pasted into any app",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -702,7 +913,7 @@
     },
     {
       "uid": "b86e3eff8d244d75d8f3f1f8c0a181f3bca312f7a7f15df15c838e59cbb9f45f",
-      "id": 255,
+      "id": 254,
       "title": "Linux TCP flaw turns into root exploit; Ubuntu and RHEL still unpatched",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -731,7 +942,7 @@
     },
     {
       "uid": "35ec0a99509e14f18b21221acdffe86f29d77ea16c9fde597a865afd08eacd7a",
-      "id": 254,
+      "id": 253,
       "title": "Vercel open-sources agent-desktop so coding agents drive real apps",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -760,7 +971,7 @@
     },
     {
       "uid": "510f7ee86c1ef2a7e10a964fa87c8a05a4ff30378cbf16f5a52fa30821e1f3ee",
-      "id": 253,
+      "id": 252,
       "title": "Overmind turns live agent traces into eval sets and a git-diff patch",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -785,7 +996,7 @@
     },
     {
       "uid": "25ec800a3ebba50c956af42f300073e7f4961728c0333088654835a333095c92",
-      "id": 252,
+      "id": 251,
       "title": "Dedica scores whether agents can actually use your site — free",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -810,7 +1021,7 @@
     },
     {
       "uid": "201c7cbdb7c86df955f1cdc03e04a2e77f499dc54d9080bd29cb566edc9d4c7a",
-      "id": 251,
+      "id": 250,
       "title": "Chopstick writes Mac widgets from your own activity, then builds them",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -835,7 +1046,7 @@
     },
     {
       "uid": "def80ed624b1ff7114fd5cd05f87aecdf0515aaef26d064000641467b9e528e5",
-      "id": 250,
+      "id": 249,
       "title": "Granola ships free voice typing, straight at Wispr Flow",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -860,7 +1071,7 @@
     },
     {
       "uid": "822cab70d25a0bdcf228ffa384fd1597d2d5f120fc8655a495927565170a9ef0",
-      "id": 249,
+      "id": 248,
       "title": "Mistral Large 4 ships open weights at 47% fewer tokens per task",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -892,51 +1103,6 @@
         {
           "label": "VentureBeat — 63% lower cost per task",
           "url": "https://venturebeat.com/technology/mistral-large-4-le-chonk-arrives-as-the-top-open-model-outside-china-with-improved-coding-performance-and-63-lower-cost-per-task"
-        }
-      ]
-    },
-    {
-      "uid": "8549fb2590026741b9b20c1e74967efe506709adfa438608a184083476a57960",
-      "id": 248,
-      "title": "Gemini 4 Carbon tops the index at Argon's $2/$10 price",
-      "theme": "⚙️ LLM tooling & SDKs",
-      "sources": [
-        {
-          "pub": "Future Tools",
-          "date": "2026-10-31",
-          "time": "01:07",
-          "headline": "Did Google Just Take the Lead Again?",
-          "href": "newsletters/2026-10-31_newsletter_future_tools.md",
-          "anchor": "did-google-just-take-the-lead-again"
-        },
-        {
-          "pub": "The Code",
-          "date": "2026-10-29",
-          "time": "23:07",
-          "headline": "Google’s new frontier model hunts bugs across codebases",
-          "href": "newsletters/2026-10-29_newsletter_the_code.md",
-          "anchor": "googles-new-frontier-model-hunts-bugs-across-codebases"
-        },
-        {
-          "pub": "Superhuman AI",
-          "date": "2026-10-29",
-          "time": "22:08",
-          "headline": "Google announces Gemini 4 Carbon with leading results",
-          "href": "newsletters/2026-10-29_newsletter_superhuman_ai.md",
-          "anchor": "google-announces-gemini-4-carbon-with-leading-results"
-        }
-      ],
-      "prose": [
-        "Google's second Gemini 4 release in a month ranks #1 on Artificial Analysis' Intelligence Index, ahead of Claude Opus 5.5 and GPT-6 Astra, and is built for long-running engineering work — Google claims it spent days at a time tracking and patching bugs across codebases. It more than doubles Argon's secure-code success rate, cut successful cheating on Terminal-Bench 4.0 to zero and blocked every attack in Gray Swan's prompt-injection benchmark. It launches at Argon's introductory $2/$10 per million input/output tokens, with access going first to cyber defenders through Google's Fairwind programme."
-      ],
-      "links": [
-        {
-          "label": "Google's launch post",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
-        },
-        {
-          "label": "Artificial Analysis intelligence index",
-          "url": "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index"
         }
       ]
     },

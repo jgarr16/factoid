@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>💍 An AI ring to replace your phone — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="💍 An AI ring to replace your phone — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>💍 An AI ring to replace your phone</h1>
+<p class="meta">2026-11-06 · received 2026-11-06 23:10 +0900
+ · <a href="https://codenewsletter.ai/p/openai-s-bug-hunting-ai-earns-a-critical-risk-rating" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>💍 An AI ring to replace your phone</h1>
+<p><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-06-primary&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/477e2be0-adcf-4699-9931-67aa25efb642/Group_ZEP.jpg?t=1793884410" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> OpenAI just launched a new security model, and it’s already helping fix some major vulnerabilities across the internet. Meanwhile, a new wearable promises to rethink the way you collab with your AI agents.</p>
+<p><strong>Also:</strong> How to use Notion without a subscription, a personal AI agent that claims to be unlike anything else, and why Microsoft is building a new data center every four days.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Why we should be building more ‘ambitious’ software</p>
+</li>
+<li>
+<p>The winner if AI models played Mafia</p>
+</li>
+<li>
+<p>How this dev uses Grok Bot in his workflow (tutorial)</p>
+</li>
+<li>
+<p>Make your CI 20x faster (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2118372390728319238"><img alt="Click here to see how you can now wear your AI agents." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/da1ad781-ef27-4fd1-afd4-9bf70c69e585/Thumbnail__78_.jpg?t=1793964221" /></a>
+<em>Click here to see how you can now wear your AI agents.</em></p>
+<hr />
+<p><strong>OpenAI’s new security model earns a ‘Critical’ risk rating:</strong> The ChatGPT maker just rolled out <a href="https://archive.codenewsletter.ai/2118390190246879554">GPT-6 Cyber</a>, which can hunt down vulnerabilities and suggest fixes. It has built working exploits for 948 Linux kernel flaws and uncovered 81 high-severity Firefox bugs that Mozilla is fixing. Only vetted <a href="https://openai.com/form/enterprise-trusted-access-for-cyber/">Daybreak Red</a> customers get access. But critics say OpenAI could be doing more. According to <a href="https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/">this report</a>, its defender program only reaches thousands, and its Linux bug hunt cost $1.2 million versus the roughly $6 million it spent on a fluid dynamics problem.</p>
+<p><strong>This startup wants you to wear your agents:</strong> If you’re tired of unlocking your phone every time an agent needs your approval, former Ultrahuman exec Apoorv Shankar has a fix. His hardware startup Aina built a <a href="https://archive.codenewsletter.ai/2118372390728319238">$399 ring</a> with a screen, joystick, mic, and speaker. It puts Zoom controls on your finger and lets you dictate or talk to agents. You can also write custom triggers in plain language and route unsupported apps to agents like Muse via virtual browsers. Ships January 2027. Preorder <a href="https://aina.com">here</a>.</p>
+<p><strong>Google’s new video model lets you edit through chat:</strong> The search giant just rolled out <a href="https://archive.codenewsletter.ai/2118407948187643978">Gemini Omni 1.2 Flash</a> to all developers and businesses, making AI video creation cheaper and easier. The model generates 15-second clips at $0.07 per second for 720p, down 30% from before. You can now tweak videos by chatting, changing backgrounds or lighting, without generating a new clip from scratch. It’s handy if your app needs dozens of variations. You can try it in Google AI Studio or start building with the Gemini API <a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">here</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY ZEP</strong></h5>
+<h2><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-06-primary&amp;tcad=1"><strong>Stop shipping agents that repeat mistakes.</strong></a></h2>
+<p><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-06-primary&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cac7cf9d-8833-42cf-98cd-2434b8f1ac4a/zep-the-code-2026-11-05-1920x1080.jpg?t=1793905106" /></a></p>
+<hr />
+<p><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-06-primary&amp;tcad=1"><strong>Zep Agent Skills</strong></a> turns your agents' traces into step-by-step skills they read at runtime, over MCP or the Zep SDKs.</p>
+<ul>
+<li>
+<p><strong>More tasks done right:</strong> agents start from steps that work instead of from zero.</p>
+</li>
+<li>
+<p><strong>Fewer tokens:</strong> agents take fewer steps, and a smaller model can use a skill from a larger model's run.</p>
+</li>
+<li>
+<p><strong>Works with your agent infra:</strong> use any framework, and bring traces from Braintrust, LangSmith or the Zep SDK.</p>
+</li>
+</ul>
+<p><a href="https://www.getzep.com/zep-agent-skills/?utm_source=the-code&amp;utm_medium=paid-newsletter&amp;utm_campaign=agent-skills-launch&amp;utm_content=2026-11-06-primary&amp;tcad=1"><strong>Start building with Zep Agent Skills →</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Why devs should be building more ‘ambitious’ software</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/72017a60-f4d6-4c98-852a-66a753d5cd18/superhumanteam_a_developer_and_a_robot_putting_blocks_togethe_6905bfe6-28ca-45eb-baaa-cb8b766b3b70_1.jpg?t=1793959882" />
+<em><em>Source: The Code, Superhuman</em></em></p>
+<hr />
+<p><strong>50x faster. So what?</strong> Imagine making Rust builds 50 times faster and deciding it’s not worth a blog post. Well, that’s exactly what senior engineer Dan Luu did. While devs complained about slow Rust compiles, he had an AI agent build an interpreter that made cold builds roughly 50x faster, by his informal estimate. Five years ago, that would have been a big deal. Today, Luu didn’t think it deserved a writeup. That says a lot about how devs approach AI.</p>
+<p><strong>The old math is broken.</strong> In a <a href="https://danluu.com/ambitious/">new essay</a>, Luu argues that devs should be building bigger, more ambitious software now that agents are around. But most still size projects by how much work they used to take. Luu also built a regex engine and a ripgrep fork with no experience in either. Work he’d once have set aside a year for took a few hours.</p>
+<p><strong>Chase the slow bits.</strong> Luu’s tips for picking what to build:</p>
+<ul>
+<li>
+<p>First, find out where your computer spends its time when models run ten to one hundred times faster.</p>
+</li>
+<li>
+<p>Then tackle those bottlenecks. For Luu, that meant ripgrep, Rust compiles, and filesystem overhead.</p>
+</li>
+<li>
+<p>Build for yourself. If it works for your own workloads, that’s enough.</p>
+</li>
+<li>
+<p>Think bigger. Speeding up old tasks with AI only gets you so far. Go after work that used to be too expensive.</p>
+</li>
+<li>
+<p>Don’t get attached to your tools. Models improve so fast they could be obsolete in three months.</p>
+</li>
+</ul>
+<p><strong>Slop needs a safety net.</strong> Luu admits most AI rewrites are slop, so testing is everything. He relies on fuzzing and property-based tests rather than traditional unit tests. And your own coding skills still matter. With every new model, Luu tackles harder problems where AI still struggles. He argues that programming skills are more valuable than ever. You can read the <a href="https://danluu.com/ambitious/">full essay here</a>.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/338b9be6-d78e-479f-8d79-babd5dfa6a39/Screenshot_2026-11-06_at_2.25.35_PM.jpg?t=1793960757" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Brain Hack</strong>: Notion wants to be the shared memory for all your AI agents, but this dev <a href="https://archive.codenewsletter.ai/2118172505198530616">found a way</a> to skip the subscription entirely (1.5K bookmarks).</p>
+</li>
+<li>
+<p><strong>Level Up:</strong> This <a href="https://archive.codenewsletter.ai/2118323416545591360">9-level roadmap</a> turns your workflow into a software factory, going from fixing AI’s mistakes to a pipeline that ships and fixes its own bugs (1.4K bookmarks).</p>
+</li>
+<li>
+<p><strong>Microsoft Scoop</strong>: An Azure engineering leader revealed <a href="https://archive.codenewsletter.ai/2118374025109881105">8 insider secrets</a>, including why Microsoft stamps a new datacenter into the ground every 4 days (3K likes).</p>
+</li>
+<li>
+<p><strong>Personal Profiler</strong>: A former Google engineer launched <a href="https://archive.codenewsletter.ai/2118388085256052967">Quest,</a> a personal AI agent that studies you like a profiler. Its 5 capabilities go further than any assistant yet (2K likes).</p>
+</li>
+</ul>
+<p><a id="a-dev-reverse-engineered-the-paid-dictation-app-wispr-flow"></a>
+* <strong>Local Dictation</strong>: A dev reverse-engineered the paid dictation app Wispr Flow, and his <a href="https://archive.codenewsletter.ai/2118386115170496855">open-source version</a> runs locally on your Mac with super-impressive benchmarks (2.5K bookmarks).</p>
+<ul>
+<li>
+<p><strong>AI Mafia</strong>: A podcaster spent $20,000 running AI models against one another in a Mafia deception game. The <a href="https://archive.codenewsletter.ai/2118449808402681911">top schemer</a> will surprise you (2.1K likes).</p>
+</li>
+<li>
+<p><strong>SSH Bypass</strong>: OpenSSH just patched a critical flaw that let attackers log into Alpine Linux servers with one long password. <a href="https://archive.codenewsletter.ai/2118365834506862710">This thread</a> shows how you can understand and patch it (2.7K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=yC8vMywtUEA"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1446a477-c654-4735-9012-6919a7b7f587/Thumbnail__79_.jpg?t=1793958919" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=yC8vMywtUEA">How this dev uses Grok Bot to run his coding workflow:</a> This tutorial shows how to use Grok Bot as the command center for your coding agents. You’ll learn how to orchestrate projects, delegate work across T3 Code, Codex, and Claude Code, and manage the whole workflow from one interface instead of bouncing between agents.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a id="untangle-codebase"></a>
+<a href="https://archive.codenewsletter.ai/2118378945557004477">Untangle Codebase:</a> A new agent skill for cleaning up messy codebases before they become a nightmare to maintain. Point Claude Code, Cursor, or Codex at a repo, and it helps remove copy-paste, leaky abstractions, temporary workarounds, and pointless wrappers so the code is easier for both you and your agents to navigate and change.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a id="how-to-make-your-ci-20x-faster"></a>
+<a href="https://archive.codenewsletter.ai/2116291924219060319">How to make your CI 20x faster:</a> Boardy's head of engineering breaks down how his team slashed PR wait times from 40 minutes down to just 2. You will learn where your CI pipeline actually loses time, what is worth caching or running in parallel, and how to run smarter tests so your coding agents never get stuck waiting on builds.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-burn-leftover-codex-quota-before-it-resets"></a></p>
+<h2><strong>How to burn leftover Codex quota before it resets</strong></h2>
+<p>A dev <a href="https://archive.codenewsletter.ai/2118357672106029272">shared a fix</a> for quota that resets half-unused: point Codex’s /goal command at the cruft months of vibe coding left behind.</p>
+<ul>
+<li><strong>Step 1:</strong> If /goal doesn’t appear in your slash menu, enable it:</li>
+</ul>
+<pre><code>[features]
+goals = true
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Set a cleanup goal. Codex keeps working across turns until it’s done:</li>
+</ul>
+<pre><code>/goal Remove all dead code nothing calls, verified by passing tests
+</code></pre>
+<p>The <a href="https://archive.codenewsletter.ai/2118357672106029272">full thread </a>has four more targets: duplicated logic, unused dependencies, stale sessions, and zombie scheduled tasks.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>These <a href="https://archive.codenewsletter.ai/2117587605982527581">15 hands-on projects</a> teach you to secure AI agents from cyber attacks. A must read for all developers.</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/d2a465f5-6c1f-44f8-8380-5acad96cdaa7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Fthecode-cybersecurity.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The Code Cybersecurity</strong></a></p>
+</li>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/c8e380c2-717a-4ce2-8531-bf4e67c35ad7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Ftheitcode.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The IT Code</strong></a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code?"><strong>Get in touch.</strong></a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
