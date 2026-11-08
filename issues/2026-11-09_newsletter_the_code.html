@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 How to make your AI limits last longer — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 How to make your AI limits last longer — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 How to make your AI limits last longer</h1>
+<p class="meta">2026-11-09 · received 2026-11-09 01:31 +0900
+ · <a href="https://codenewsletter.ai/p/how-devs-are-cutting-ai-coding-token-costs" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 How to make your AI limits last longer</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/19c25ccf-428f-4317-8865-bd0da7b9c121/Add_a_heading__9_.jpg?t=1793965482" /></p>
+<hr />
+<p><strong>Welcome back.</strong> After a year of tokenmaxxing, Big Tech is pulling back on AI spending. Companies like Apple, Uber, and Meta are now capping what engineers can spend on AI coding agents.</p>
+<p>Before your team hits its own cap, here are 3 workflows you can use to cut token costs this weekend. So let's dive in:</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Where your agent’s tokens actually go</p>
+</li>
+<li>
+<p>Workflow #1: Make your Claude Code limits last all week</p>
+</li>
+<li>
+<p>Workflow #2: Cut your cost per PR with cheaper models</p>
+</li>
+<li>
+<p>Workflow #3: Filter big data before your agent reads it</p>
+</li>
+</ul>
+<hr />
+<h5><strong>DEEP DIVE</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2117670658113155075"><img alt="Click here to see what Claude Code shipped to make your limits last longer." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e7cdc6c0-f5d9-484c-b83a-a6f71e11abc9/Thumbnail__35_.jpg?t=1794047407" /></a>
+<em>Click here to see what Claude Code shipped to make your limits last longer.</em></p>
+<hr />
+<p><strong>So where is all that money going?</strong> Once a cap is in place, you need to know where your tokens go. Coding agents are set up to give you the best possible answer, which often means using more tokens than a task needs.</p>
+<p><strong>Three defaults drive most of that spend.</strong></p>
+<ul>
+<li>
+<p>Subagents run at the same effort level as your main session.</p>
+</li>
+<li>
+<p>The same top model handles everything, from planning a feature to renaming a variable.</p>
+</li>
+<li>
+<p>The model reads every line of every log you give it, including the noise.</p>
+</li>
+</ul>
+<p><strong>Each one takes a few minutes to change.</strong> Claude Code’s “/usage” command now shows you what’s draining your limit, and the 3 workflows below help you fix each default one at a time:</p>
+<hr />
+<h5><strong>WORKFLOW #1: EFFORT LEVELS</strong></h5>
+<p><a id="how-to-make-your-claude-code-limits-last-the-whole-week"></a></p>
+<h2><strong>How to make your Claude Code limits last the whole week</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2113417302402322910"><img alt="Source: X.com/bcherny" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5e73524e-1653-4caf-81db-22837e96c903/CleanShot_2026-11-06_at_8.02.03_PM_2x.jpg?t=1793975555" /></a>
+<em>Source: X.com/bcherny</em></p>
+<hr />
+<p>You hit your usage limit on Wednesday. You still have half the week ahead of you, and there is no clear way to tell which session burned through it.</p>
+<p>Most of the time, the leak is your subagents. They copy your main session’s effort level by default, so if you work at max effort, every subagent you spawn runs at max effort too.</p>
+<p>Claude Code’s creator warns that this can <a href="https://archive.codenewsletter.ai/2113417302402322910">add up fast</a>, and the fix is to find the leak with “/usage” and turn your subagents’ effort down.</p>
+<p>Here’s how you can implement it:</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Update Claude Code and run “/usage” to see what’s using up your limit.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> Press “f” to apply the fixes it can make for you, then handle any rows it leaves for you to fix.</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Add an “effort” line, like “effort: medium”, to each subagent file in “.claude/agents/”, so your subagents run at a lower effort than your main session.</p>
+</li>
+</ul>
+<hr />
+<h3><strong>Your opinion matters!</strong></h3>
+<p>This is our sixth <strong>Sunday Special</strong>. It’s a quick 5 min email designed to show how to use the latest and most relevant AI tools to code faster. Let us know what you think of this email in the poll at the bottom of this email (or by replying to this email).</p>
+<p>We’re writing this email just for you, so your feedback will shape what we write next!</p>
+<hr />
+<h5><strong>WORKFLOW #2: MODEL ROUTING</strong></h5>
+<p><a id="how-to-cut-your-cost-per-pr-without-losing-quality"></a></p>
+<h2><strong>How to cut your cost per PR without losing quality</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2115443494374539635"><img alt="Source: X.com/zachlloydtweets" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d056944a-6b2d-4b15-ad94-dcfb4f00e495/CleanShot_2026-11-06_at_8.05.53_PM_2x.jpg?t=1793975781" /></a>
+<em>Source: X.com/zachlloydtweets</em></p>
+<hr />
+<p>Your agent uses the same expensive model to plan a feature and to rename a variable, so even simple work bills at top prices.</p>
+<p>Let a strong model plan the work and a cheaper model carry it out. Warp’s founder cut his team’s cost per PR from <a href="https://archive.codenewsletter.ai/2115443494374539635">$80 to $20</a> this way, with fewer reverts and more PRs shipped.</p>
+<p>Here’s how you can implement it:</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Set your main session to a strong model with “/model”, like Opus 5.5. That’s the model that plans the feature.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> Create “.claude/agents/executor.md” in your repo so a cheaper model makes the edits:</p>
+</li>
+</ul>
+<pre><code>---
+name: executor
+description: Use proactively for plan steps
+tools: Read, Edit, Grep
+model: haiku
+---
+Make the edits for the step you are
+given. Never change the plan or touch
+files outside it.
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Ask Claude for a plan, then tell it to “use the executor subagent for each step.” Compare your cost per PR before and after the switch, and watch for reverts.</li>
+</ul>
+<hr />
+<h5><strong>WORKFLOW #3: FILTER FIRST</strong></h5>
+<p><a id="how-to-run-an-agent-over-millions-of-rows-without-blowing-your-budget"></a></p>
+<h2><strong>How to run an agent over millions of rows without blowing your budget</strong></h2>
+<p><a href="https://archive.codenewsletter.ai/2116970707867566106"><img alt="Source: X.com/karpathy" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1b5889b1-3ec2-4c54-b516-500de9d93792/CleanShot_2026-11-06_at_8.09.57_PM_2x.jpg?t=1793976028" /></a>
+<em>Source: X.com/karpathy</em></p>
+<hr />
+<p>Last weekend, OpenAI co-founder Andrej Karpathy built a <a href="https://archive.codenewsletter.ai/2116957135661945283"><strong>better YouTube feed</strong></a> out of 43 million Hacker News comments.</p>
+<p>Karpathy, who joined Anthropic earlier this year, didn't just dump all that data into a model.</p>
+<p>Instead, he first filtered the comments using URL matching, regular expressions, and basic spam removal. Only then did he have Claude Sonnet read what was left.</p>
+<p>About two hours later, he had a curated list of 6,454 videos that Hacker News users consistently recommend.</p>
+<p>You can use this exact same approach on any large log or dataset.</p>
+<p>Here’s how you can implement it:</p>
+<ul>
+<li><strong>Step 1:</strong> Before any model call, ask your agent to write a filter script:</li>
+</ul>
+<pre><code>Write a script that filters [data] down to only the rows that could matter for [question]. Use regexes, URL matching and dedupes. Don't call a model. Print the row count before and after.
+</code></pre>
+<ul>
+<li>
+<p><strong>Step 2:</strong> Check the before-and-after count, and tighten the filter if too much is left.</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Switch to a cheaper model with “/model sonnet”, then ask Claude to read the filtered file and answer your question.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>FUN WEEKEND PROJECTS TO TRY</strong></h5>
+<ul>
+<li>
+<p>A browser extension that swaps YouTube thumbnails for a frame from the middle of each video (<a href="https://archive.codenewsletter.ai/2117321609665261667">link</a>).</p>
+</li>
+<li>
+<p>A full 3D floating-island scene built for 27 cents with a cheap model (<a href="https://archive.codenewsletter.ai/2113918421763076573">link</a>).</p>
+</li>
+<li>
+<p>A new mission added to GTA San Andreas with one paste-in prompt (<a href="https://archive.codenewsletter.ai/2112944980842946816">link</a>).</p>
+</li>
+</ul>
+<p><strong>P.S.</strong> Here’s Anthropic’s <a href="https://code.claude.com/docs/en/costs">official guide</a> to managing Claude Code costs.</p>
+<hr />
+<h5><strong>STARTING POINT</strong></h5>
+<p><strong>How to start this weekend.</strong> Start with Workflow #1 because “/usage” will show exactly where your limit went this week. Then try Workflow #2 on a real PR and compare the cost. Save Workflow #3 for the next time you’re tempted to paste a giant log into chat.</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/d2a465f5-6c1f-44f8-8380-5acad96cdaa7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Fthecode-cybersecurity.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter">The Code Cybersecurity</a></p>
+</li>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/c8e380c2-717a-4ce2-8531-bf4e67c35ad7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Ftheitcode.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter">The IT Code</a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

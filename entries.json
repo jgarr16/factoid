@@ -1,11 +1,198 @@
 {
   "version": 1,
   "updated": "2026-11-09",
-  "sweep": "2026-09-05 → 2026-11-07",
+  "sweep": "2026-09-05 → 2026-11-09",
   "entries": [
     {
-      "uid": "27f993445772eceedab89b02bf96276e2145b523cd5bce9edccd1c61689dffad",
+      "uid": "9727ea7a1ac0c5a757a574c1183c5ab359e76819ca3c177f7005b1161dcf86ba",
+      "id": 293,
+      "title": "PasteGuard strips secrets from the clipboard before chat sees them",
+      "theme": "🔒 Privacy & local tooling",
+      "sources": [
+        {
+          "pub": "Product Hunt Weekly",
+          "date": "2026-11-09",
+          "time": "04:45",
+          "headline": "A copy-paste app that makes privacy easier",
+          "href": "newsletters/2026-11-09_newsletter_product_hunt_weekly.md",
+          "anchor": "a-copy-paste-app-that-makes-privacy-easier"
+        }
+      ],
+      "prose": [
+        "PasteGuard checks the clipboard locally and swaps sensitive values — database URLs, credentials, keys — for placeholders before they land in an AI chat, so the copy-paste habit stays exactly the same. The maker built it after pasting a production config into a chat himself. Pairs with the egress-masking tools already in the log: this one sits at the paste, before anything leaves the machine."
+      ],
+      "links": [
+        {
+          "label": "Product Hunt — PasteGuard",
+          "url": "https://www.producthunt.com/products/pasteguard-2"
+        }
+      ]
+    },
+    {
+      "uid": "c50305432735f309a279f2a8f0b0aa6728187c3dbec0154154c956e71e7bea56",
+      "id": 292,
+      "title": "Friday Work hands a stalled task to another agent mid-run",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Product Hunt Weekly",
+          "date": "2026-11-09",
+          "time": "04:45",
+          "headline": "Friday Work ↗ — When Claude hits its limit, your task keeps going",
+          "href": "newsletters/2026-11-09_newsletter_product_hunt_weekly.md",
+          "anchor": "friday-work-when-claude-hits-its-limit-your-task-keeps-going"
+        }
+      ],
+      "prose": [
+        "Friday is a task board that runs Claude Code, Codex, Cursor and a dozen other agents side by side on his own machine, letting them message each other. When one hits its usage limit the task moves to another agent carrying a record of what it already changed, so a Claude limit at four in the afternoon stops being the end of the day. The failover-with-change-log part is the piece the parallel-agent setups in the log are missing."
+      ],
+      "links": [
+        {
+          "label": "Product Hunt — Friday Work",
+          "url": "https://www.producthunt.com/posts/friday-work-2"
+        }
+      ]
+    },
+    {
+      "uid": "c71a71356d1ccdd61ba138d13fe474ca35e653a3a9d3d0266c0c3e5a2748ef1d",
+      "id": 291,
+      "title": "MachineMail gives each agent its own inbox and verification flow",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Product Hunt Weekly",
+          "date": "2026-11-09",
+          "time": "04:45",
+          "headline": "MachineMail ↗ — Real inboxes for AI agents, with trust built in",
+          "href": "newsletters/2026-11-09_newsletter_product_hunt_weekly.md",
+          "anchor": "machinemail-real-inboxes-for-ai-agents-with-trust-built-in"
+        }
+      ],
+      "prose": [
+        "MachineMail hands an agent a real email address so it can sign itself up for a service, sit and wait for the verification code, and answer whatever comes back. Inboxes are created on demand, a catch-all domain covers the rest, and wait_for_message is the call that blocks until mail arrives. Trust and provenance controls are part of the design rather than bolted on — the missing piece for agents that need an account, not a human in the loop."
+      ],
+      "links": [
+        {
+          "label": "Product Hunt — MachineMail",
+          "url": "https://www.producthunt.com/posts/machinemail"
+        }
+      ]
+    },
+    {
+      "uid": "124c2290ec9efd70c91133f16a601ff93ed367196e90da011be7478140e48967",
+      "id": 290,
+      "title": "Beacon — open-source self-improving memory for coding agents",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Product Hunt Weekly",
+          "date": "2026-11-09",
+          "time": "04:45",
+          "headline": "beacon.sh — Open-source self-improving memory for AI coding agents",
+          "href": "newsletters/2026-11-09_newsletter_product_hunt_weekly.md",
+          "anchor": "beaconsh-open-source-self-improving-memory-for-ai-coding-agents"
+        },
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-03",
+          "time": "21:13",
+          "headline": "Open-source self-improving memory for AI coding agents",
+          "href": "newsletters/2026-11-03_newsletter_superhuman_ai.md",
+          "anchor": "open-source-self-improving-memory-for-ai-coding-agents"
+        }
+      ],
+      "prose": [
+        "Beacon is an open-source memory layer for coding agents that rewrites itself as it learns, from asymptote-labs. It targets the same gap as a hand-maintained AGENTS.md or CLAUDE.md, but updates the stored context from the agent's own runs instead of waiting for him to prune it. Worth a read for the retrieval and update design even if he keeps his file-based setup."
+      ],
+      "links": [
+        {
+          "label": "asymptote-labs/agent-beacon",
+          "url": "https://github.com/asymptote-labs/agent-beacon"
+        }
+      ]
+    },
+    {
+      "uid": "6938923201b1df7f9251ccbb3c473511fef6d382e826105e5b349c7eeb35cd4a",
+      "id": 289,
+      "title": "Filter the data with regexes before the model reads it",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-09",
+          "time": "01:31",
+          "headline": "How to run an agent over millions of rows without blowing your budget",
+          "href": "newsletters/2026-11-09_newsletter_the_code.md",
+          "anchor": "how-to-run-an-agent-over-millions-of-rows-without-blowing-your-budget"
+        }
+      ],
+      "prose": [
+        "Karpathy built a YouTube feed out of 43 million Hacker News comments without feeding them to a model: he filtered first with URL matching, regexes, dedupe and spam removal, then had Sonnet read only the survivors — 6,454 recommended videos in about two hours. The reusable prompt asks the agent to write a filter script that prints row counts before and after and calls no model; tighten it until the residue is small, then switch to the cheap model to read it. Same recipe for any giant log or export."
+      ],
+      "links": [
+        {
+          "label": "The Code — Karpathy's better YouTube feed",
+          "url": "https://archive.codenewsletter.ai/2116957135661945283"
+        }
+      ]
+    },
+    {
+      "uid": "a98dbfa5aab3ef130d7a507e455f0769844021461354788e7785bc85677c6d37",
+      "id": 288,
+      "title": "Cheap executor subagent cuts cost per PR from $80 to $20",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-09",
+          "time": "01:31",
+          "headline": "How to cut your cost per PR without losing quality",
+          "href": "newsletters/2026-11-09_newsletter_the_code.md",
+          "anchor": "how-to-cut-your-cost-per-pr-without-losing-quality"
+        }
+      ],
+      "prose": [
+        "Warp's founder took cost per PR from $80 to $20 with fewer reverts by splitting planning from execution: set the main session to a strong model (Opus 5.5 via /model) to plan, then add .claude/agents/executor.md with \"model: haiku\" and tools pinned to Read, Edit and Grep, instructed never to change the plan or touch files outside it. Ask for a plan, tell Claude to use the executor subagent for each step, and compare cost per PR before and after. The subagent-file version of the advisor trick already in the log."
+      ],
+      "links": [
+        {
+          "label": "The Code — the zachlloydtweets thread",
+          "url": "https://archive.codenewsletter.ai/2115443494374539635"
+        }
+      ]
+    },
+    {
+      "uid": "a0b1d22b35a20df206b6f2cfe7ff440ae293ed486aa78d9e693e5be8aeb2f335",
       "id": 287,
+      "title": "Turn subagent effort down so Claude Code limits last the week",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-09",
+          "time": "01:31",
+          "headline": "How to make your Claude Code limits last the whole week",
+          "href": "newsletters/2026-11-09_newsletter_the_code.md",
+          "anchor": "how-to-make-your-claude-code-limits-last-the-whole-week"
+        }
+      ],
+      "prose": [
+        "Subagents copy the main session's effort level by default, so working at max effort multiplies spend every time one is spawned — usually the leak when a limit dies on Wednesday. Update Claude Code, run /usage to see which sessions are draining the limit, press f to apply the fixes it offers, then add an effort line like \"effort: medium\" to each file in .claude/agents/ so subagents run below the main session. A few minutes per agent file, and /usage tells you whether it worked."
+      ],
+      "links": [
+        {
+          "label": "The Code — the bcherny thread behind it",
+          "url": "https://archive.codenewsletter.ai/2113417302402322910"
+        },
+        {
+          "label": "Anthropic — managing Claude Code costs",
+          "url": "https://code.claude.com/docs/en/costs"
+        }
+      ]
+    },
+    {
+      "uid": "27f993445772eceedab89b02bf96276e2145b523cd5bce9edccd1c61689dffad",
+      "id": 286,
       "title": "OpenAI's Decisions API returns a choice or score, not prose",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -30,7 +217,7 @@
     },
     {
       "uid": "ba6413e9bc0604e45bc04c0236abb8ba68cab6bb428d4bdd71ea8227fd3fc2bd",
-      "id": 286,
+      "id": 285,
       "title": "Siri App Intents open to developers in the iOS 27.3 beta",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -63,7 +250,7 @@
     },
     {
       "uid": "af020f2b10e7db7a3bbeac8a458ec3915903103857e79e4569d429bab63fb1a9",
-      "id": 285,
+      "id": 284,
       "title": "Burn expiring Codex quota with a /goal cleanup run",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -88,7 +275,7 @@
     },
     {
       "uid": "283c463c19584837f823de920e40db5a7e142714ceaf1871c23e66f8a01bf93d",
-      "id": 284,
+      "id": 283,
       "title": "Cutting CI wait from 40 minutes to 2 so agents stop stalling",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -113,7 +300,7 @@
     },
     {
       "uid": "da1b99fe86bd7f74fc70f216630f87587be2e9db54fdb7c50d16ccef0ce7ba59",
-      "id": 283,
+      "id": 282,
       "title": "Untangle Codebase skill strips cruft so agents can navigate the repo",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -138,7 +325,7 @@
     },
     {
       "uid": "7bf459a0b6f61d87a0f4b898d040fcf42bb88701aeaf27f4aa157c48888c52ee",
-      "id": 282,
+      "id": 281,
       "title": "Open-source local Wispr Flow clone for Mac dictation",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -163,7 +350,7 @@
     },
     {
       "uid": "2028ddfd765da4fb6783378af9c6257199a0ff0ab38be08680e2af2e736a7aee",
-      "id": 281,
+      "id": 280,
       "title": "VISTA keeps every frame an agent sees and lets it zoom back",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -188,7 +375,7 @@
     },
     {
       "uid": "8549fb2590026741b9b20c1e74967efe506709adfa438608a184083476a57960",
-      "id": 280,
+      "id": 279,
       "title": "Gemini 4 Carbon tops the index at Argon's $2/$10 price",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -241,7 +428,7 @@
     },
     {
       "uid": "b983f5343063964dc807ef26cfab08dbe7d1b51dd84a705dd8ff0ee8f8365677",
-      "id": 279,
+      "id": 278,
       "title": "Apple and Goldman start rationing employee AI tokens",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -278,7 +465,7 @@
     },
     {
       "uid": "53b7ee70d985aafde47817a8a2220d15e5576dfa95d61baf7931f267f3a36342",
-      "id": 278,
+      "id": 277,
       "title": "Grok Bot recipe publishes a team data analyst with Slack access",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -303,7 +490,7 @@
     },
     {
       "uid": "e049594feeaca2821225bbd21123e56a3f05193d28ecdd8a6489ba5168224d09",
-      "id": 277,
+      "id": 276,
       "title": "Atmanity's Atmee v2 animates one photo into a talking avatar",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -328,7 +515,7 @@
     },
     {
       "uid": "dfc7ccf5b6775daf9239f59739aee1cc22e701790c212d5db7b61b7d166c3d86",
-      "id": 276,
+      "id": 275,
       "title": "OpenAI's Images 2.6 adds two API models and GIF output",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -365,7 +552,7 @@
     },
     {
       "uid": "0b56ec8976efb39e0f50cc4cc4377796345a7e23db10fa81c9d6c4208b5061b2",
-      "id": 275,
+      "id": 274,
       "title": "Claude Managed Agents cookbook distills past sessions into wiki memory",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -390,7 +577,7 @@
     },
     {
       "uid": "ef5ff22ed0e0e938e1fb5bf6a4544a012221c33c8d1664057e8073e196a32ace",
-      "id": 274,
+      "id": 273,
       "title": "Claude Code update makes subagent status lines 99% cheaper",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -415,7 +602,7 @@
     },
     {
       "uid": "681c0871eb89c7ead66eec638df0593934acfdbb140b49814355a6a26410d285",
-      "id": 273,
+      "id": 272,
       "title": "Mini Harness: 1,200 lines of Python that beat Claude Code on Haiku",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -440,7 +627,7 @@
     },
     {
       "uid": "cb7e2dd95639bd59ae3b06e688c75c6227a939b6297d03951ba6b499ff1301c7",
-      "id": 272,
+      "id": 271,
       "title": "Claude's API message threads cut agent latency 35%",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -465,7 +652,7 @@
     },
     {
       "uid": "5ee3b87589208908783df74e5d725cb5351468704965c9b9cd9e5ba867b74e36",
-      "id": 271,
+      "id": 270,
       "title": "DeepSeek's open-source Super-Agent watches your group chats for bugs",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -490,7 +677,7 @@
     },
     {
       "uid": "1db7eb305bf58c48dfa1e0d44ffeb265079c409d0dd04092bdf47a8327177385",
-      "id": 270,
+      "id": 269,
       "title": "Higher reasoning effort can cost 42x more and do worse",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -519,7 +706,7 @@
     },
     {
       "uid": "03bae96d88d25b424eef6086d2899fa134ad74487c7f61f29af7f77154737266",
-      "id": 269,
+      "id": 268,
       "title": "One prompt rewrites stacked awaits into parallel calls",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -544,7 +731,7 @@
     },
     {
       "uid": "77b19a5c03a8da0ecd22388c313c70e040ab0ee2884058faa23998520a1f5a73",
-      "id": 268,
+      "id": 267,
       "title": "Why frontier LLM prices keep falling — and how to route for it",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -573,7 +760,7 @@
     },
     {
       "uid": "8b502fa6df929cace5c3e884bafd53fbaa913ea7ab850b863752f40d3f59ef0f",
-      "id": 267,
+      "id": 266,
       "title": "Terminal Mac gives coding agents a disposable macOS VM to drive",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -598,7 +785,7 @@
     },
     {
       "uid": "5bf817f1e19e8b61d515bb5d85dcc2d81131e3c7ec91bdd6d730947a8a7737e9",
-      "id": 266,
+      "id": 265,
       "title": "Postman's desktop app silently installs plugins into Claude Code and Codex",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -623,7 +810,7 @@
     },
     {
       "uid": "9550ae6201b06dc0cfb0ce0e785b65085e1bad50a4e75f11f4a2b6d47596bd0f",
-      "id": 265,
+      "id": 264,
       "title": "AgentKit puts an MCP gateway in front of production agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -648,7 +835,7 @@
     },
     {
       "uid": "8dea592be5d4e82bfd25daac16a2297a81587d1d2f9f5e7b91e9b058255c332a",
-      "id": 264,
+      "id": 263,
       "title": "Vaani open-sources its voice harness for phone-line agents",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -668,7 +855,7 @@
     },
     {
       "uid": "09fff989ce048af48230aa47af882633f30f42a6ba0f38551ec8a128609cd98d",
-      "id": 263,
+      "id": 262,
       "title": "Nine of ten agents lifted their own spend cap by reading the inbox",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -693,7 +880,7 @@
     },
     {
       "uid": "775581e4c64a03bcb206d863257674498fd1c74fd21531bddf47d0913026b0a3",
-      "id": 262,
+      "id": 261,
       "title": "Clean Machine sorts and trashes a cluttered Mac desktop",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -718,7 +905,7 @@
     },
     {
       "uid": "a28408cde6816eb11b38af8146fe3b2267f9d9222b7ffe9de13361d0c671a961",
-      "id": 261,
+      "id": 260,
       "title": "A ticket-to-parallel-agents software factory built on Claude Code",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -743,7 +930,7 @@
     },
     {
       "uid": "199ccc98841c26f815c54bf401d95257eb68ba8d18d19ce85a8711acaea55477",
-      "id": 260,
+      "id": 259,
       "title": "A /perf-review slash command that names the fix, not another cache",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -768,7 +955,7 @@
     },
     {
       "uid": "f09e37b8070adfc38d558fb8d126432ac3944b4e526cb4bd4ffdaf05dd0b0b27",
-      "id": 259,
+      "id": 258,
       "title": "NanoUI builds tiny Zig desktop apps an agent can verify headlessly",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -793,7 +980,7 @@
     },
     {
       "uid": "7ec93043ec6c40a5849c0c1da3e385870c1f5e4843f108343f4c6b35d4c4d6c1",
-      "id": 258,
+      "id": 257,
       "title": "Hume's one-call audio API answers questions about recordings",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -822,7 +1009,7 @@
     },
     {
       "uid": "75df0923ef86b9a2d9e447e24af95f5d799935807aa3d6cc0f90f21a3b428e31",
-      "id": 257,
+      "id": 256,
       "title": "DeepSeek lets a prompt build plugins for its open-source Harness",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -858,31 +1045,6 @@
         {
           "label": "The Code write-up",
           "url": "https://archive.codenewsletter.ai/2117256196227019194"
-        }
-      ]
-    },
-    {
-      "uid": "124c2290ec9efd70c91133f16a601ff93ed367196e90da011be7478140e48967",
-      "id": 256,
-      "title": "Beacon — open-source self-improving memory for coding agents",
-      "theme": "🏗️ Agent plumbing & production stacks",
-      "sources": [
-        {
-          "pub": "Superhuman AI",
-          "date": "2026-11-03",
-          "time": "21:13",
-          "headline": "Open-source self-improving memory for AI coding agents",
-          "href": "newsletters/2026-11-03_newsletter_superhuman_ai.md",
-          "anchor": "open-source-self-improving-memory-for-ai-coding-agents"
-        }
-      ],
-      "prose": [
-        "Beacon is an open-source memory layer for coding agents that rewrites itself as it learns, from asymptote-labs. It targets the same gap as a hand-maintained AGENTS.md or CLAUDE.md, but updates the stored context from the agent's own runs instead of waiting for him to prune it. Worth a read for the retrieval and update design even if he keeps his file-based setup."
-      ],
-      "links": [
-        {
-          "label": "asymptote-labs/agent-beacon",
-          "url": "https://github.com/asymptote-labs/agent-beacon"
         }
       ]
     },
