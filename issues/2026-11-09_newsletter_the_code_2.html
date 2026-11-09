@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚨 Claude Code&#x27;s new securityflaw — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚨 Claude Code&#x27;s new securityflaw — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚨 Claude Code&#x27;s new securityflaw</h1>
+<p class="meta">2026-11-09 · received 2026-11-09 23:31 +0900
+ · <a href="https://codenewsletter.ai/p/higgsfield-s-live-video-editor-is-coming-to-your-agents" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚨 Claude Code's new securityflaw</h1>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=thecode&amp;utm_content=primary-onedb-1109&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/33c508e7-212d-4824-85d8-de8119db4f14/Group_TigerData.jpg?t=1793995500" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Higgsfield just launched a tool that lets you edit videos in real time, and the demos are pretty insane. Meanwhile, Anthropic is finally looking into Claude Code's GitHub security leaks after a security firm uncovered over a thousand exposed secrets.</p>
+<p><strong>Also:</strong> A timeline of Jensen Huang’s affair with a “Beijing spy” and its fallout, a former OpenAI CTO on what’s next for AI models, and a CEO shares his coding setup for you to fork.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>A senior dev’s 4 rules that set you apart</p>
+</li>
+<li>
+<p>A dev open-sourced faster in-flight WiFi</p>
+</li>
+<li>
+<p>Build a remote coding setup (tutorial)</p>
+</li>
+<li>
+<p>How to “manage” coding agents (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2118732716346933423"><img alt="Click here to watch how Higgsfield’s new live video editor works." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/930b7138-8f16-4b27-85d1-6e0da51e7468/Thumbnail__80_.jpg?t=1794212644" /></a>
+<em>Click here to watch how Higgsfield’s new live video editor works.</em></p>
+<hr />
+<p><strong>Higgsfield can now edit videos as you watch them:</strong> The video AI lab just unveiled <a href="https://archive.codenewsletter.ai/2118732716346933423">Miracle</a>, which lets you edit parts of a video while it’s playing. You can recolor an object, adjust a scene’s timing, or lengthen an animal’s fur with a slider, all without touching the rest of the frame. Miracle is in private beta for now, with a ChatGPT plugin and Claude MCP support coming soon. <a href="https://higgsfield.ai/miracle">Join the waitlist </a>(and connect Higgsfield’s MCP) to be first in line.</p>
+<p><a id="anthropics-coding-agent-is-leaking-your-secrets-to-github"></a>
+<strong>Anthropic’s coding agent is leaking your secrets to GitHub:</strong> The AI lab’s Claude Code stores approved commands in plain text, including passwords and API keys. Users flagged it as far back as 2025, but reports went unfixed. Security firm Apiiro just found 1,379 secrets across 1,122 copies of that settings file on public GitHub. Claude Code head Boris Cherny says the team is finally looking into fixes. For now, rotate exposed keys, add the file to <em>.gitignore</em>, and reference secrets as variables. Here’s what researchers <a href="https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html#what-to-do">recommend</a> you do next.</p>
+<p><a id="apple-just-made-building-ios-apps-with-ai-easier"></a>
+<strong>Apple just made building iOS apps with AI easier:</strong> The iPhone maker dropped an <a href="https://archive.codenewsletter.ai/2119043277173207238">Xcode plugin</a> that lets Claude Code build and test your apps, render SwiftUI previews, and dig through build logs. It takes one command to set up, and the <a href="https://developer.apple.com/documentation/xcode-release-notes/xcode-27_3-release-notes">Xcode 27.3 beta</a> brings GitHub Copilot into the mix. Developers are already putting the plugin to work. One startup founder shared <a href="https://archive.codenewsletter.ai/2119229734563271124">a playbook</a> for finding, building, and monetizing iOS apps with it.</p>
+<hr />
+<h5><strong>PRESENTED BY TIGERDATA</strong></h5>
+<h2><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=thecode&amp;utm_content=primary-onedb-1109&amp;tcad=1">One Database for Agent Metrics, Memory, and Dashboards</a></h2>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=thecode&amp;utm_content=primary-onedb-1109&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/29c47792-f8ca-4d46-9582-53ed29c72ba5/scale_machine_-_Sophie_Bartch__1_.png?t=1793995685" /></a></p>
+<hr />
+<p>Your machines generate data every second. Your Postgres database needs to keep up.</p>
+<p>With <a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=thecode&amp;utm_content=primary-onedb-1109&amp;tcad=1">Tiger Data</a>, you can:</p>
+<ul>
+<li>
+<p>Ingest at full speed.</p>
+</li>
+<li>
+<p>Keep years of history without runaway storage costs.</p>
+</li>
+<li>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=thecode&amp;utm_content=primary-onedb-1109&amp;tcad=1">Query live and historical data together in a single SQL statement.</a></p>
+</li>
+</ul>
+<p>Spend less time stitching reports together and more time acting on fresh answers.</p>
+<p>Speed and history. With Tiger Data, you can have both.</p>
+<p><a href="https://www.tigerdata.com/go/trial?utm_source=content-syndication&amp;utm_medium=referral&amp;utm_campaign=thecode&amp;utm_content=primary-onedb-1109&amp;tcad=1"><strong>Start a trial on us. Get $1,000 in credit.</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>So AI writes most of your code. Here are 4 skills to set yourself apart.</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c0c8c070-08f6-4414-8e62-a7450ac934b9/superhumanteam_a_senior_engineer_writing_a_list_on_a_board_--_389f2c10-8c4b-420e-9788-d2f08a930d9a_2.jpg?t=1794215155" />
+<em><em>Source: The Code, Superhuman</em></em></p>
+<hr />
+<p><strong>Speed has a catch.</strong> Agents can now write in minutes what once took weeks, but that speed brings a whole new challenge. And that’s figuring out what is actually worth building. Director of Engineering at Cloudflare, Christoph Nakazawa, knows this firsthand and says he barely writes code himself anymore and that AI wrote 90% of his recent projects. In his updated essay on <a href="https://cpojer.net/posts/modern-engineering-values">Modern Engineering Values</a>, he explains what still makes a good engineer when agents match or beat his own code.</p>
+<p>It comes down to four values that matter whether you’re working with humans or AI:</p>
+<ul>
+<li>
+<p><strong>Strong ownership:</strong> Agents amplify ownership, so if you know your product inside out, you’ll ship faster. Without that understanding, you’ll just create more noise. Nakazawa prefers small teams of two or three, with clear responsibilities and separate repos.</p>
+</li>
+<li>
+<p><strong>Taste and strict guardrails:</strong> Agents let you build almost anything, and hence good taste helps you pick what’s worth building. Alongside, strict guardrails help agents get it right. Lint rules, automated tests, and checks on changed files can mean the difference between finishing in a minute or an hour.</p>
+</li>
+<li>
+<p><strong>Context in the repo and an owned stack:</strong> Every new agent session starts from scratch, and agents can’t reach knowledge scattered across Notion, commit messages and people’s heads. Put it in the repo instead. Nakazawa even built his own JavaScript stack, arguing agents make owning core code far more practical.</p>
+</li>
+<li>
+<p><strong>Option value:</strong> Every change should open up more possibilities for the next one. AI can rewrite huge chunks of code fast, but that won’t help if you’ve vibed yourself into a corner.</p>
+</li>
+</ul>
+<p>The real bottleneck according to Nakazawa now is exercising judgment. And with software shipping this fast, he believes we’ll need engineers more than ever. For a deeper dive, check out his <a href="https://cpojer.net/posts/principles-of-devx">Principles of Developer Experience</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY ARCHETYPE AI</strong></h5>
+<h2><a href="https://www.archetypeai.io/try-newton?utm_source=the-code&amp;utm_medium=news-spon&amp;utm_campaign=2026-q4-free-trial&amp;tcad=1">Build agents that understand the physical world</a></h2>
+<p><a href="https://www.archetypeai.io/try-newton?utm_source=the-code&amp;utm_medium=news-spon&amp;utm_campaign=2026-q4-free-trial&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/973ed99c-e6ad-424d-8ac2-64cd13cc0314/The_code_-_Mike_Kazantzis__1_.jpg?t=1793995956" /></a></p>
+<hr />
+<p>Build AI for physical systems the way you build with an LLM. Give <a href="https://www.archetypeai.io/try-newton?utm_source=the-code&amp;utm_medium=news-spon&amp;utm_campaign=2026-q4-free-trial&amp;tcad=1">Newton</a> a few examples, and it can detect anomalies, discover hidden operating states, and power applications on sensor and video data— without training specialized models for every use case. Connect your data and see what Newton finds.</p>
+<ul>
+<li>
+<p>Fuses sensor, video, and text</p>
+</li>
+<li>
+<p>Ready-to-use agents + APIs</p>
+</li>
+<li>
+<p>Adapts across machines</p>
+</li>
+</ul>
+<p><a href="https://www.archetypeai.io/try-newton?utm_source=the-code&amp;utm_medium=news-spon&amp;utm_campaign=2026-q4-free-trial&amp;tcad=1"><strong>Try Newton for free</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>W</strong><strong>hat’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day," src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/03cf6869-e54e-4437-ab1e-ad96fc867601/image__6_.jpg?t=1794214852" />
+<em>Meme of the day,</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Spy Scandal:</strong> Nvidia CEO admitted to a relationship with an executive who US intelligence says worked for Beijing. The <a href="https://archive.codenewsletter.ai/2118907457749533098">full chain of events</a> is crazy (9.1M views).</p>
+</li>
+<li>
+<p><strong>Harness Switch:</strong> A longtime Claude Code user just retired it for a <a href="https://caleb.software/posts/claude-to-pi.html">lesser-known open-source harness</a>. He says the switch fixed frustrations he’d carried for over a year.</p>
+</li>
+<li>
+<p><strong>Always Listening:</strong> A former OpenAI CTO and Thinking Machines founder explains why today’s chatbots will soon feel like fax machines. Her <a href="https://archive.codenewsletter.ai/2119032161286475962">2-minute take</a> on what comes next has got devs talking (1.1M views).</p>
+</li>
+<li>
+<p><strong>CEO Setup:</strong> If you’re tired of juggling dozens of chats, Coinbase’s CEO got agents to merge them into one prioritized queue. His <a href="https://archive.codenewsletter.ai/2119112609223827547">exact setup</a> is copyable (14K bookmarks).</p>
+</li>
+<li>
+<p><strong>WiFi Hack:</strong> One dev <a href="https://archive.codenewsletter.ai/2119102696280240176">found a clever way</a> to get roughly 4x faster in-flight WiFi without Starlink or constant resets and <a href="https://github.com/Th0rgal/satmux">open-sourced</a> the whole trick (5.8K bookmarks).</p>
+</li>
+<li>
+<p><strong>AI Layoffs Backfire:</strong> It turns out that replacing workers with AI is not going as planned. Companies are quietly rehiring for roles they cut, and <a href="https://archive.codenewsletter.ai/2119225096070140201">this breakdown explains why</a> (2K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=UvcH1hKM-mQ"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/df137fe7-919c-432e-9c63-42a49d42ff79/Thumbnail__81_.jpg?t=1794212939" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=UvcH1hKM-mQ">How to build a coding setup you can use from anywhere:</a> This tutorial shows how to turn a MacBook, a headless Mac mini, and even your phone into one always-available dev workflow. You’ll learn how to connect machines with Tailscale, SSH into your setup remotely, and keep coding agents running on heavier hardware while you work from wherever you are.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a id="let-coding-agents-use-your-real-browser-with-your-existing-tabs-logins"></a>
+<a href="https://opencode.ai/product/browse">Browse:</a> Let coding agents use your real browser, with your existing tabs, logins, and extensions. It works with OpenCode, Claude Code, Cursor, Codex, and other MCP clients, opens agent tabs quietly in the background, and hands control back to you for logins, 2FA, or payments before continuing.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://archive.codenewsletter.ai/2119332146485891501">How to “manage” coding agents (by Anthropic):</a> This guide shows why working with agents is starting to look a lot like managing a team. You’ll learn how to give better context, build in self-checks, know when to step in, and scale more agents without spending your day supervising every move.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-untangle-the-state-logic-in-a-messy-project"></a></p>
+<h2><strong>How to untangle the state logic in a messy project</strong></h2>
+<p>Messy codebases end up with implicit state machines everywhere, like random booleans, flags, and status strings scattered across files that inevitably break when one changes. A dev <a href="https://archive.codenewsletter.ai/2119444845890617507">shared </a>a quick one-prompt fix for Claude Code or Codex.</p>
+<ul>
+<li><strong>Step 1:</strong> Commit first, so the refactor is one command to undo:</li>
+</ul>
+<pre><code>git add -A &amp;&amp; git commit -m &quot;pre-refactor checkpoint&quot;
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Open Claude Code in the project root and paste:</li>
+</ul>
+<pre><code>Find all of the implicit state machines in my app. Make the best decision that will elevate all three: the user experience (UX), developer experience (DX), and agent experience (AX) always, without breaking anything.
+</code></pre>
+<p>Claude maps the hidden flags into explicit states, then refactors them.</p>
+<ul>
+<li><strong>Step 3:</strong> Review the diff before accepting. “Without breaking anything” is an instruction, not a guarantee, so run your tests after.</li>
+</ul>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from Friday</strong></h3>
+<p>Notion wants to be the shared memory for all your AI agents, but this dev <a href="https://archive.codenewsletter.ai/2118172505198530616">found a way</a> to skip the subscription entirely.</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/d2a465f5-6c1f-44f8-8380-5acad96cdaa7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Fthecode-cybersecurity.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The Code Cybersecurity</strong></a></p>
+</li>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/c8e380c2-717a-4ce2-8531-bf4e67c35ad7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Ftheitcode.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The IT Code</strong></a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code?"><strong>Get in touch.</strong></a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,8 +1,145 @@
 {
   "version": 1,
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "sweep": "2026-09-05 → 2026-11-09",
   "entries": [
+    {
+      "uid": "b6fc360e1fcb83afe0ab7e2f2e08f26d0f3b55d37d36bf5f34a9f0d4f96a18da",
+      "id": 298,
+      "title": "Thinking Machines' Inkling 2 Small: open weights with strong vision",
+      "theme": "🧠 Open / efficient / local models",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-09",
+          "time": "23:34",
+          "headline": "Thinking Machines debuts its second-generation AI model",
+          "href": "newsletters/2026-11-09_newsletter_superhuman_ai.md",
+          "anchor": "thinking-machines-debuts-its-second-generation-ai-model"
+        }
+      ],
+      "prose": [
+        "Thinking Machines' second-generation model targets long-running coding, research and office work, with vision as the standout skill — it picked three wines from a single photo 19 times out of 20, beating the lab's own researchers in a blind test. It is live now on Tinker, where it can be called like any API, and is expected to land at the top of DesignArena's open-weight leaderboard with full weights promised next week."
+      ],
+      "links": [
+        {
+          "label": "Inkling 2 Small",
+          "url": "https://thinkingmachines.ai/news/inkling-2-small/"
+        },
+        {
+          "label": "Tinker",
+          "url": "https://thinkingmachines.ai/tinker/"
+        }
+      ]
+    },
+    {
+      "uid": "681f12dc013ef11a7c7cf901eb97c292527b27fcee8761d4251806d729c4c8be",
+      "id": 297,
+      "title": "One prompt turns scattered flags into explicit state machines",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-09",
+          "time": "23:31",
+          "headline": "How to untangle the state logic in a messy project",
+          "href": "newsletters/2026-11-09_newsletter_the_code_2.md",
+          "anchor": "how-to-untangle-the-state-logic-in-a-messy-project"
+        }
+      ],
+      "prose": [
+        "A paste-ready prompt for Claude Code or Codex: find every implicit state machine in the app — scattered booleans, flags and status strings — and refactor them into explicit states without breaking anything, trading off user, developer and agent experience. The workflow is commit a checkpoint, paste the prompt, review the diff, then run tests, since \"without breaking anything\" is an instruction and not a guarantee."
+      ],
+      "links": [
+        {
+          "label": "The one prompt",
+          "url": "https://archive.codenewsletter.ai/2119444845890617507"
+        }
+      ]
+    },
+    {
+      "uid": "1d3c2429624626f459c4c745b2ba5e9cdd690f1d6a852953c16bc2089eea472e",
+      "id": 296,
+      "title": "Apple's Xcode plugin lets Claude Code build and preview iOS apps",
+      "theme": "🍎 Apple & Mac",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-09",
+          "time": "23:31",
+          "headline": "Apple just made building iOS apps with AI easier",
+          "href": "newsletters/2026-11-09_newsletter_the_code_2.md",
+          "anchor": "apple-just-made-building-ios-apps-with-ai-easier"
+        }
+      ],
+      "prose": [
+        "Apple released an Xcode plugin that lets Claude Code build and test iOS apps, render SwiftUI previews and dig through build logs, with a one-command setup. The Xcode 27.3 beta also brings GitHub Copilot into the same loop. The point is an agent that actually compiles and sees preview output rather than guessing at SwiftUI, and a founder has already published a playbook for finding, building and monetising iOS apps with it."
+      ],
+      "links": [
+        {
+          "label": "Xcode plugin",
+          "url": "https://archive.codenewsletter.ai/2119043277173207238"
+        },
+        {
+          "label": "Xcode 27.3 release notes",
+          "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27_3-release-notes"
+        },
+        {
+          "label": "iOS build playbook",
+          "url": "https://archive.codenewsletter.ai/2119229734563271124"
+        }
+      ]
+    },
+    {
+      "uid": "a3468c3fa38d89333d0deab834384be8929dd2dd5499d708de8d0ce6c86dbfdc",
+      "id": 295,
+      "title": "OpenCode Browse hands agents your real logged-in browser",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-09",
+          "time": "23:31",
+          "headline": "Let coding agents use your real browser, with your existing tabs, logins, and extensions",
+          "href": "newsletters/2026-11-09_newsletter_the_code_2.md",
+          "anchor": "let-coding-agents-use-your-real-browser-with-your-existing-tabs-logins"
+        }
+      ],
+      "prose": [
+        "OpenCode Browse lets a coding agent drive your actual browser instead of a headless sandbox with no session, so existing tabs, logins and extensions all work. It plugs into OpenCode, Claude Code, Cursor, Codex and other MCP clients, opens its tabs quietly in the background, and hands control back to you for logins, 2FA or payments before continuing."
+      ],
+      "links": [
+        {
+          "label": "opencode.ai/product/browse",
+          "url": "https://opencode.ai/product/browse"
+        }
+      ]
+    },
+    {
+      "uid": "5f20ccd5313afead48793ccdc4dc79c88a7339111139f547517e49faea566b76",
+      "id": 294,
+      "title": "Claude Code's allowlist leaked 1,379 secrets to public GitHub",
+      "theme": "🤖 AI security & agent risk",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-09",
+          "time": "23:31",
+          "headline": "Anthropic’s coding agent is leaking your secrets to GitHub",
+          "href": "newsletters/2026-11-09_newsletter_the_code_2.md",
+          "anchor": "anthropics-coding-agent-is-leaking-your-secrets-to-github"
+        }
+      ],
+      "prose": [
+        "Claude Code stores its approved-command allowlist in plain text, so every \"don't ask again\" entry that carried a password or API key sits on disk in the clear. Apiiro found 1,379 secrets across 1,122 copies of that settings file in public GitHub repositories; users flagged it in 2025 and the reports went unfixed until Claude Code lead Boris Cherny said the team is finally looking at a fix. Immediate action: rotate any key that ever passed through an approval prompt, add the settings file to .gitignore, and pass secrets as environment variables instead of inline."
+      ],
+      "links": [
+        {
+          "label": "What to do next",
+          "url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html"
+        }
+      ]
+    },
     {
       "uid": "9727ea7a1ac0c5a757a574c1183c5ab359e76819ca3c177f7005b1161dcf86ba",
       "id": 293,

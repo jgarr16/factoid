@@ -1,11 +1,79 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-11-09"
-updated: "2026-11-09"
-sources: "Product Hunt Weekly, Superhuman AI, The Code, Future Tools, The Batch, The Product Compass, The Frontier, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+updated: "2026-11-10"
+sources: "Superhuman AI, The Code, Product Hunt Weekly, Future Tools, The Batch, The Product Compass, The Frontier, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**298. Thinking Machines' Inkling 2 Small: open weights with strong vision**
+*🧠 Open / efficient / local models*
+*🗞 Superhuman AI · 2026-11-09 23:34 KST — ["Thinking Machines debuts its second-generation AI model"](newsletters/2026-11-09_newsletter_superhuman_ai.md#thinking-machines-debuts-its-second-generation-ai-model)*
+
+Thinking Machines' second-generation model targets long-running coding, research and office work, with vision as the standout skill — it picked three wines from a single photo 19 times out of 20, beating the lab's own researchers in a blind test. It is live now on Tinker, where it can be called like any API, and is expected to land at the top of DesignArena's open-weight leaderboard with full weights promised next week.
+
+- [Inkling 2 Small](https://thinkingmachines.ai/news/inkling-2-small/)
+- [Tinker](https://thinkingmachines.ai/tinker/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**297. One prompt turns scattered flags into explicit state machines**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-09 23:31 KST — ["How to untangle the state logic in a messy project"](newsletters/2026-11-09_newsletter_the_code_2.md#how-to-untangle-the-state-logic-in-a-messy-project)*
+
+A paste-ready prompt for Claude Code or Codex: find every implicit state machine in the app — scattered booleans, flags and status strings — and refactor them into explicit states without breaking anything, trading off user, developer and agent experience. The workflow is commit a checkpoint, paste the prompt, review the diff, then run tests, since "without breaking anything" is an instruction and not a guarantee.
+
+- [The one prompt](https://archive.codenewsletter.ai/2119444845890617507)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**296. Apple's Xcode plugin lets Claude Code build and preview iOS apps**
+*🍎 Apple & Mac*
+*🗞 The Code · 2026-11-09 23:31 KST — ["Apple just made building iOS apps with AI easier"](newsletters/2026-11-09_newsletter_the_code_2.md#apple-just-made-building-ios-apps-with-ai-easier)*
+
+Apple released an Xcode plugin that lets Claude Code build and test iOS apps, render SwiftUI previews and dig through build logs, with a one-command setup. The Xcode 27.3 beta also brings GitHub Copilot into the same loop. The point is an agent that actually compiles and sees preview output rather than guessing at SwiftUI, and a founder has already published a playbook for finding, building and monetising iOS apps with it.
+
+- [Xcode plugin](https://archive.codenewsletter.ai/2119043277173207238)
+- [Xcode 27.3 release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-27_3-release-notes)
+- [iOS build playbook](https://archive.codenewsletter.ai/2119229734563271124)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**295. OpenCode Browse hands agents your real logged-in browser**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-09 23:31 KST — ["Let coding agents use your real browser, with your existing tabs, logins, and extensions"](newsletters/2026-11-09_newsletter_the_code_2.md#let-coding-agents-use-your-real-browser-with-your-existing-tabs-logins)*
+
+OpenCode Browse lets a coding agent drive your actual browser instead of a headless sandbox with no session, so existing tabs, logins and extensions all work. It plugs into OpenCode, Claude Code, Cursor, Codex and other MCP clients, opens its tabs quietly in the background, and hands control back to you for logins, 2FA or payments before continuing.
+
+- [opencode.ai/product/browse](https://opencode.ai/product/browse)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**294. Claude Code's allowlist leaked 1,379 secrets to public GitHub**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-11-09 23:31 KST — ["Anthropic’s coding agent is leaking your secrets to GitHub"](newsletters/2026-11-09_newsletter_the_code_2.md#anthropics-coding-agent-is-leaking-your-secrets-to-github)*
+
+Claude Code stores its approved-command allowlist in plain text, so every "don't ask again" entry that carried a password or API key sits on disk in the clear. Apiiro found 1,379 secrets across 1,122 copies of that settings file in public GitHub repositories; users flagged it in 2025 and the reports went unfixed until Claude Code lead Boris Cherny said the team is finally looking at a fix. Immediate action: rotate any key that ever passed through an approval prompt, add the settings file to .gitignore, and pass secrets as environment variables instead of inline.
+
+- [What to do next](https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **293. PasteGuard strips secrets from the clipboard before chat sees them**
 *🔒 Privacy & local tooling*
