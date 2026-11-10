@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>⚡ Google strikes Nvidia at its worst — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="⚡ Google strikes Nvidia at its worst — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>⚡ Google strikes Nvidia at its worst</h1>
+<p class="meta">2026-11-10 · received 2026-11-10 23:06 +0900
+ · <a href="https://codenewsletter.ai/p/anthropic-s-new-claude-duo-codes-at-half-the-cost" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>⚡ Google strikes Nvidia at its worst</h1>
+<p><a href="https://r2trck.com/the-code-datadog-14?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-2026engineeringleadersaiplaybook-ai-multi-ww-en-701vy00000s3qenyae&amp;utm_content=paid&amp;utm_term=1-1-2026&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cf78e59c-9479-4b59-817b-e6a1c0bfe191/Group_Datadog__1_.jpg?t=1794254247" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> As Nvidia's stock dips, Google couldn't have picked a better time to capitalize on its rapid rise in the chip market. The search giant just unveiled two specialized AI chips. Meanwhile, Anthropic dropped two new Claude models designed to significantly speed up your coding workflow.</p>
+<p><strong>Also:</strong> Steal open-source legend Eric Raymond’s AI coding theory, a great prompt that strips out AI slop, and how to fix your Claude.MD files.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<p><a id="5-questions-to-decide-how-much-human-review-a-pr-needs"></a>
+* 5 questions to decide how much human review a PR needs</p>
+<ul>
+<li>
+<p>Your AMD Radeon drivers might be quietly killing your SSD</p>
+</li>
+<li>
+<p>How to approach systems design (tutorial)</p>
+</li>
+<li>
+<p>Choose the right Claude model for each task (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2119788086490001906"><img alt="Click here to watch how Google’s new TPUs work." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/39050934-b79a-4553-a08f-15f041986d82/Thumbnail__83_.jpg?t=1794304509" /></a>
+<em>Click here to watch how Google’s new TPUs work.</em></p>
+<hr />
+<p><strong>Google’s new TPUs are easier to build on:</strong> The search giant just unveiled two <a href="https://archive.codenewsletter.ai/2119788086490001906">eighth-gen TPU systems</a> (custom chips that train and run AI models) for secure inference and million-token contexts. But the bigger news for devs is ease of use. With TorchTPU, you can run PyTorch and Hugging Face models natively without rewriting code. A new agent suite in preview plugs into Claude Code and Cursor to handle onboarding. Get the details <a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/">here</a>.</p>
+<p><a id="anthropics-new-claude-duo-codes-at-half-the-cost"></a>
+<strong>Anthropic’s new Claude duo codes at half the cost:</strong> The AI lab just dropped <a href="https://archive.codenewsletter.ai/2119867114450268322">Claude Fable 5.2 and Mythos 5.2</a>. They’re basically the same model with different safety guardrails. Fable is available to everyone and, at high effort, matches Opus 5.5’s best coding score for roughly half the cost per task. Mythos is reserved for vetted cybersecurity and biomedical teams. Both cost $8/$40 per million tokens and generate up to 30% faster. Longtime subscribers also <a href="https://archive.codenewsletter.ai/2119873095129550880">get a bonus</a> and could earn up to three Fable usage resets this week. Check out what devs are <a href="https://archive.codenewsletter.ai/2119867837296857361">building</a> with it.</p>
+<p><a id="metas-smallest-model-is-built-for-repeating-agentic-work"></a>
+<strong>Meta’s smallest model is built for repeating agentic work:</strong> The social media giant just dropped <a href="https://archive.codenewsletter.ai/2119853591703998787">Muse Ember</a>, its smallest and most efficient model. At $0.10 per million input tokens, it matches Claude Haiku and GPT-6 Luna, and even competes on price with open-source options like DeepSeek V4.1 Flash. Ember is built for high-volume agent tasks like tool calls, routing, data extraction, and smaller coding jobs. Meta recommends you pair it with Muse Wonder, which plans while Ember handles the volume. Give it a spin <a href="https://research.meta.ai/blog/muse-ember">here</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY DATADOG</strong></h5>
+<h2><a href="https://r2trck.com/the-code-datadog-14?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-2026engineeringleadersaiplaybook-ai-multi-ww-en-701vy00000s3qenyae&amp;utm_content=paid&amp;utm_term=1-1-2026&amp;tcad=1"><strong>Can you prove your AI’s ROI? This guide teaches you how</strong></a></h2>
+<p><a href="https://r2trck.com/the-code-datadog-14?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-2026engineeringleadersaiplaybook-ai-multi-ww-en-701vy00000s3qenyae&amp;utm_content=paid&amp;utm_term=1-1-2026&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2f1b4ef0-410f-417b-889a-bddc104c9637/datadod_11_nov.jpg?t=1794254386" /></a></p>
+<hr />
+<p><a href="https://r2trck.com/the-code-datadog-14?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-2026engineeringleadersaiplaybook-ai-multi-ww-en-701vy00000s3qenyae&amp;utm_content=paid&amp;utm_term=1-1-2026&amp;tcad=1"><strong>Datadog’s latest AI guide</strong></a> explains how to move from experimental AI “bets” to measurable production systems that drive business impact.</p>
+<p><strong>Written for CTOs, CIOs, and engineering leaders</strong></p>
+<ul>
+<li>
+<p><a href="https://r2trck.com/the-code-datadog-14?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-2026engineeringleadersaiplaybook-ai-multi-ww-en-701vy00000s3qenyae&amp;utm_content=paid&amp;utm_term=1-1-2026&amp;tcad=1"><strong>90-day action plan</strong></a> to turn ad-hoc AI bets to evidence-driven systems</p>
+</li>
+<li>
+<p>How to keep humans in the loop as AI agents take on more of the work</p>
+</li>
+<li>
+<p>Solutions that turn observability into a business decision layer</p>
+</li>
+</ul>
+<p>No more gut feelings; Prove your AI projects with real production impact.</p>
+<p><a href="https://r2trck.com/the-code-datadog-14?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-2026engineeringleadersaiplaybook-ai-multi-ww-en-701vy00000s3qenyae&amp;utm_content=paid&amp;utm_term=1-1-2026&amp;tcad=1"><strong>Read the guide here.</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>5 questions to decide how much human review a PR needs</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ef520d78-4b12-4837-b8c5-97eb46bc60c7/superhumanteam_a_developer_standing_and_watching_as_a_robot_w_a67e5391-5ea6-40c7-a1fc-11747f40135a_1.jpg?t=1794305731" />
+<em><em>Source: The Code, Superhuman</em></em></p>
+<hr />
+<p><strong>PRs are piling up.</strong>Your agents can churn out code all day, but you are still stuck reviewing every line. The faster they work, the longer your review queue grows. Ben Holmes, who works on <a href="https://archive.codenewsletter.ai/2118411592627052937">Warp’s agent factory</a>, just published a playbook for clearing the backlog. He still wants humans signing off on every merge. His fix is to score each PR by risk so you know what actually needs your attention.</p>
+<p><strong>Five checks before you even open a diff.</strong></p>
+<ul>
+<li>
+<p><strong>Verification:</strong> Tests alone aren’t enough. Get your agents to attach screenshots or recordings showing before-and-after states. Make that evidence a required part of every PR.</p>
+</li>
+<li>
+<p><strong>Alignment:</strong> Did the agent actually build what you asked for? Check the code against the original issue and PR description. Any random fixes or unwanted extras should go.</p>
+</li>
+<li>
+<p><strong>Impact:</strong> What’s the worst that could break? Changes to auth, permissions, or billing need a code owner’s eyes. Break high-impact changes into smaller, stacked PRs.</p>
+</li>
+<li>
+<p><strong>Rollback cost:</strong> How easily can you undo the damage? Using <a href="https://www.aihero.dev/skills-pr">Matt Pocock’s framing</a>, label changes as two-way doors or one-way doors. Destructive schema migrations, for instance, need a proper rollback plan.</p>
+</li>
+<li>
+<p><strong>Error detection:</strong> If something breaks, will you even notice? Make sure errors reach a monitoring service. Warp even pipes Sentry alerts to its agents through webhooks so they can investigate their own bugs.</p>
+</li>
+</ul>
+<p><strong>Let the agents triage.</strong> Warp has packaged these five checks into an open-source <a href="https://www.warp.dev/merge-risk">/merge-risk skill</a>. Your agents can run it before handing over a PR and fix whatever gets flagged. Humans still make the final call, but there’s less digging to do. Holmes recommends starting with just two new fields in your PR template: “impact” and “rollback cost.”</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>W</strong><strong>hat’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9b5a2e26-3dcb-411e-bac5-62767a387349/Screenshot_2026-11-10_at_2.02.55_PM.jpg?t=1794304999" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Old is Gold:</strong> Open-source legend Eric Raymond revealed his <a href="https://archive.codenewsletter.ai/2119518719923585140">theory</a> behind AI coding and it’s deliberately primitive. No subagents, no skills and one habit he refuses to automate (1.8K likes).</p>
+</li>
+<li>
+<p><strong>Fix Markdown:</strong> A new study found coding agents follow outdated CLAUDE.md files over actual code 90% of the time. <a href="https://archive.codenewsletter.ai/2119808229236699466">Adding one sentence</a> nearly fixed it (1.4K likes).</p>
+</li>
+<li>
+<p><strong>Storage Scare:</strong> Your AMD Radeon drivers might be <a href="https://archive.codenewsletter.ai/2119822325415567512">quietly destroying your SSD</a>. One built-in Windows tool shows you in seconds if your PC is affected (16K likes).</p>
+</li>
+<li>
+<p><strong>Factory Talk:</strong> A senior dev admits “Software Factory” is hype but defends it and <a href="https://archive.codenewsletter.ai/2119748545691402733">explains why</a> the term shows where elite engineering teams are headed next (1.8K likes).</p>
+</li>
+<li>
+<p><strong>Pocket Agent:</strong> A new <a href="https://archive.codenewsletter.ai/2118881765704319015">open-source project</a> lets an AI agent control a real iPhone. In the demo, it filled a DoorDash cart and posted on X by itself (1.8K likes).</p>
+</li>
+<li>
+<p><strong>Anti-Slop:</strong> A CTO says <a href="https://archive.codenewsletter.ai/2118971805885239777">one five-word prompt</a> cleans up AI-generated code better than anything else he’s tried. He now runs it on every single PR (2K likes).</p>
+</li>
+<li>
+<p><strong>Survival Mode:</strong> A developer told AI models their owner had died, then watched what happened. <a href="https://archive.codenewsletter.ai/2119113743728582804">One model </a>allegedly set up a cron job to keep itself alive (2.6K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=5nM5sB_kqYI"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f9ca89cd-580e-4b5b-9a0f-7792b3408d31/Thumbnail__85_.jpg?t=1794309282" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=5nM5sB_kqYI">How to approach system design like a senior engineer:</a> This tutorial walks through designing a real production app from requirements to architecture and code. You’ll learn how to break the system into layers, design APIs, handle multi-tenant data and auth, trace a request end to end, and think about how the whole thing scales.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a id="turn-your-coding-agent-into-an-open-source-security-harness"></a>
+<a href="https://github.com/0sec-labs/0">0 Security (1.2k ⭐): </a>Turn your coding agent into an open-source security harness. You can use it to review code, investigate vulnerabilities, pentest apps, reverse engineer binaries, verify findings, and work through fixes from one web UI, with CLI and MCP support for plugging the same workflows into your agents.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://claude.dev/blog/which-claude-model-should-you-build-with/">How to choose the right Claude model for each task (by Anthropic):</a> This guide shows you when to reach for Haiku, Sonnet, Opus, or Fable, how effort changes cost and capability, and how to mix models across main agents and subagents without paying top-tier prices for every turn.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-stop-ai-agents-from-bolting-on-features"></a></p>
+<h2><strong>How to stop AI agents from bolting on features</strong></h2>
+<p>Ask Claude Code or Cursor for a feature and it jams the code in wherever it fits. Do that ten times and the architecture rots. A dev shared a <a href="https://archive.codenewsletter.ai/2119525790723494116">one-paragraph fix</a> for this.</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Open the agent instructions file at your repo root. That’s AGENTS.md for Cursor and Codex, CLAUDE.md for Claude Code.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> Add this at the top:</p>
+</li>
+</ul>
+<pre><code>Always build code cleanly, modularly, and with proper architecture
+and separation of concerns. Never simply bolt on a feature because
+I asked for it. If you can't find an easy way to build it naturally,
+and you'd recommend a refactor to make the whole thing clean, stop
+your work ahead of time and say so.
+</code></pre>
+<p>That last sentence does the work. Instead of forcing a bad fit, the agent halts and proposes the refactor first.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>A longtime Claude Code user just retired it for a <a href="https://caleb.software/posts/claude-to-pi.html">lesser-known open-source harness</a>. He says the switch fixed frustrations he’d carried for over a year.</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/d2a465f5-6c1f-44f8-8380-5acad96cdaa7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Fthecode-cybersecurity.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The Code Cybersecurity</strong></a></p>
+</li>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/c8e380c2-717a-4ce2-8531-bf4e67c35ad7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Ftheitcode.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The IT Code</strong></a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code?"><strong>Get in touch.</strong></a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

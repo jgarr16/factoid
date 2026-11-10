@@ -1,11 +1,80 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-11-09"
-updated: "2026-11-10"
-sources: "Superhuman AI, The Code, Product Hunt Weekly, Future Tools, The Batch, The Product Compass, The Frontier, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+sweep: "2026-09-05 → 2026-11-10"
+updated: "2026-11-11"
+sources: "The Code, Superhuman AI, Product Hunt Weekly, Future Tools, The Batch, The Product Compass, The Frontier, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**303. Claude Fable 5.2 matches Opus 5.5 coding at about half the cost**
+*⚙️ LLM tooling & SDKs*
+*🗞 Superhuman AI · 2026-11-10 23:10 KST — ["Anthropic debuts Fable and Mythos 5.2 as it nears IPO"](newsletters/2026-11-10_newsletter_superhuman_ai.md#anthropic-debuts-fable-and-mythos-52-as-it-nears-ipo)*
+*🗞 The Code · 2026-11-10 23:06 KST — ["Anthropic’s new Claude duo codes at half the cost"](newsletters/2026-11-10_newsletter_the_code.md#anthropics-new-claude-duo-codes-at-half-the-cost)*
+
+Fable 5.2 and Mythos 5.2 are the same underlying model with different guardrails: Fable is open to everyone and, at high effort, matches Opus 5.5's best coding score for roughly half the cost per task; Mythos is held back for vetted cybersecurity and biomedical teams. Both price at $8/$40 per million tokens and generate up to 30% faster, live now across paid Claude plans with an extra-usage allowance this week. Anthropic also shipped a Fable-specific prompting guide and a cookbook on which model to use when, including how effort level changes cost and how to mix models between a main agent and its subagents.
+
+- [Fable and Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2)
+- [Prompting guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2)
+- [Which model for which task](https://claude.dev/blog/which-claude-model-should-you-build-with/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**302. One AGENTS.md paragraph stops agents bolting features onto bad architecture**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-10 23:06 KST — ["How to stop AI agents from bolting on features"](newsletters/2026-11-10_newsletter_the_code.md#how-to-stop-ai-agents-from-bolting-on-features)*
+
+A one-paragraph addition at the top of AGENTS.md (Cursor, Codex) or CLAUDE.md (Claude Code) tells the agent to build modularly with proper separation of concerns and, if there is no natural place for the feature, to stop before writing code and propose the refactor instead. The last sentence does the work — it converts a silent architectural compromise into a question you can answer.
+
+- [The instruction](https://archive.codenewsletter.ai/2119525790723494116)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**301. 0 Security turns a coding agent into an open-source security harness**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-11-10 23:06 KST — ["Turn your coding agent into an open-source security harness"](newsletters/2026-11-10_newsletter_the_code.md#turn-your-coding-agent-into-an-open-source-security-harness)*
+
+0 Security (1.2k stars) packages code review, vulnerability investigation, app pentesting, binary reverse engineering, finding verification and the fix loop behind one web UI. CLI and MCP support mean the same workflows can be plugged straight into an existing agent, so it is a wrapper to point at your own repos rather than another dashboard to babysit.
+
+- [0sec-labs/0](https://github.com/0sec-labs/0)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**300. Warp's open-source /merge-risk skill scores a PR before you read it**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-10 23:06 KST — ["5 questions to decide how much human review a PR needs"](newsletters/2026-11-10_newsletter_the_code.md#5-questions-to-decide-how-much-human-review-a-pr-needs)*
+
+Warp's agent-factory lead published a five-check triage for the review queue — verification (screenshots or recordings of before/after, required on every PR), alignment against the original issue, impact (auth, permissions and billing need an owner; split high-impact work into stacked PRs), rollback cost (two-way versus one-way doors, per Matt Pocock's framing) and error detection (Sentry alerts piped to agents by webhook so they can investigate their own bugs). The five checks ship as an open-source /merge-risk skill the agent runs before handing over a PR, and the cheapest start is two extra PR-template fields: impact and rollback cost.
+
+- [merge-risk skill](https://www.warp.dev/merge-risk)
+- [Two-way vs one-way doors](https://www.aihero.dev/skills-pr)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**299. Meta's Muse Ember: $0.10/M input tokens for high-volume agent calls**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-10 23:06 KST — ["Meta’s smallest model is built for repeating agentic work"](newsletters/2026-11-10_newsletter_the_code.md#metas-smallest-model-is-built-for-repeating-agentic-work)*
+
+Muse Ember is Meta's smallest, cheapest model at $0.10 per million input tokens — level with Claude Haiku and GPT-6 Luna, and competitive with open-weight options like DeepSeek V4.1 Flash. It is aimed squarely at high-volume agent work: tool calls, routing, data extraction and smaller coding jobs, with Meta recommending you pair it with Muse Wonder as the planner that handles the thinking while Ember handles the volume.
+
+- [Muse Ember](https://research.meta.ai/blog/muse-ember)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **298. Thinking Machines' Inkling 2 Small: open weights with strong vision**
 *🧠 Open / efficient / local models*
