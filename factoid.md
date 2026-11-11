@@ -1,336 +1,42 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-11-10"
+sweep: "2026-09-05 → 2026-11-12"
 updated: "2026-11-12"
-sources: "Superhuman AI, The Code, Product Hunt Weekly, Future Tools, The Batch, The Product Compass, The Frontier, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+sources: "Future Tools, The Batch, The Code, Superhuman AI, The Frontier, Product Hunt Weekly, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**303. Claude Fable 5.2 matches Opus 5.5 coding at about half the cost**
-*⚙️ LLM tooling & SDKs*
-*🗞 Superhuman AI · 2026-11-10 23:10 KST — ["Anthropic debuts Fable and Mythos 5.2 as it nears IPO"](newsletters/2026-11-10_newsletter_superhuman_ai.md#anthropic-debuts-fable-and-mythos-52-as-it-nears-ipo)*
-*🗞 The Code · 2026-11-10 23:06 KST — ["Anthropic’s new Claude duo codes at half the cost"](newsletters/2026-11-10_newsletter_the_code.md#anthropics-new-claude-duo-codes-at-half-the-cost)*
-
-Fable 5.2 and Mythos 5.2 are the same underlying model with different guardrails: Fable is open to everyone and, at high effort, matches Opus 5.5's best coding score for roughly half the cost per task; Mythos is held back for vetted cybersecurity and biomedical teams. Both price at $8/$40 per million tokens and generate up to 30% faster, live now across paid Claude plans with an extra-usage allowance this week. Anthropic also shipped a Fable-specific prompting guide and a cookbook on which model to use when, including how effort level changes cost and how to mix models between a main agent and its subagents.
-
-- [Fable and Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2)
-- [Prompting guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2)
-- [Which model for which task](https://claude.dev/blog/which-claude-model-should-you-build-with/)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**302. One AGENTS.md paragraph stops agents bolting features onto bad architecture**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-11-10 23:06 KST — ["How to stop AI agents from bolting on features"](newsletters/2026-11-10_newsletter_the_code.md#how-to-stop-ai-agents-from-bolting-on-features)*
-
-A one-paragraph addition at the top of AGENTS.md (Cursor, Codex) or CLAUDE.md (Claude Code) tells the agent to build modularly with proper separation of concerns and, if there is no natural place for the feature, to stop before writing code and propose the refactor instead. The last sentence does the work — it converts a silent architectural compromise into a question you can answer.
-
-- [The instruction](https://archive.codenewsletter.ai/2119525790723494116)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**301. 0 Security turns a coding agent into an open-source security harness**
-*🤖 AI security & agent risk*
-*🗞 The Code · 2026-11-10 23:06 KST — ["Turn your coding agent into an open-source security harness"](newsletters/2026-11-10_newsletter_the_code.md#turn-your-coding-agent-into-an-open-source-security-harness)*
-
-0 Security (1.2k stars) packages code review, vulnerability investigation, app pentesting, binary reverse engineering, finding verification and the fix loop behind one web UI. CLI and MCP support mean the same workflows can be plugged straight into an existing agent, so it is a wrapper to point at your own repos rather than another dashboard to babysit.
-
-- [0sec-labs/0](https://github.com/0sec-labs/0)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**300. Warp's open-source /merge-risk skill scores a PR before you read it**
+**310. Totem links Claude Code, Codex and Cursor agents into one workspace**
 *🏗️ Agent plumbing & production stacks*
-*🗞 The Code · 2026-11-10 23:06 KST — ["5 questions to decide how much human review a PR needs"](newsletters/2026-11-10_newsletter_the_code.md#5-questions-to-decide-how-much-human-review-a-pr-needs)*
+*🗞 Future Tools · 2026-11-12 03:45 KST — ["Coordinate Multiple AI Agents"](newsletters/2026-11-12_newsletter_future_tools.md#coordinate-multiple-ai-agents)*
 
-Warp's agent-factory lead published a five-check triage for the review queue — verification (screenshots or recordings of before/after, required on every PR), alignment against the original issue, impact (auth, permissions and billing need an owner; split high-impact work into stacked PRs), rollback cost (two-way versus one-way doors, per Matt Pocock's framing) and error detection (Sentry alerts piped to agents by webhook so they can investigate their own bugs). The five checks ship as an open-source /merge-risk skill the agent runs before handing over a PR, and the cheapest start is two extra PR-template fields: impact and rollback cost.
+Totem is a free shared workspace that connects agents from different tools and accounts — Claude Code, Codex, Cursor — into one network with assignable goals, handoffs and shared context. It keeps a permissions layer over protected actions and shows agent activity live. Free to try, which makes it a cheap experiment in cross-harness coordination without building the bus yourself.
 
-- [merge-risk skill](https://www.warp.dev/merge-risk)
-- [Two-way vs one-way doors](https://www.aihero.dev/skills-pr)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**299. Meta's Muse Ember: $0.10/M input tokens for high-volume agent calls**
-*💸 Token & infra economics*
-*🗞 The Code · 2026-11-10 23:06 KST — ["Meta’s smallest model is built for repeating agentic work"](newsletters/2026-11-10_newsletter_the_code.md#metas-smallest-model-is-built-for-repeating-agentic-work)*
-
-Muse Ember is Meta's smallest, cheapest model at $0.10 per million input tokens — level with Claude Haiku and GPT-6 Luna, and competitive with open-weight options like DeepSeek V4.1 Flash. It is aimed squarely at high-volume agent work: tool calls, routing, data extraction and smaller coding jobs, with Meta recommending you pair it with Muse Wonder as the planner that handles the thinking while Ember handles the volume.
-
-- [Muse Ember](https://research.meta.ai/blog/muse-ember)
+- [Totem](https://totemlayer.com/)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
 
 ---
 
-**298. Thinking Machines' Inkling 2 Small: open weights with strong vision**
-*🧠 Open / efficient / local models*
-*🗞 Superhuman AI · 2026-11-09 23:34 KST — ["Thinking Machines debuts its second-generation AI model"](newsletters/2026-11-09_newsletter_superhuman_ai.md#thinking-machines-debuts-its-second-generation-ai-model)*
-
-Thinking Machines' second-generation model targets long-running coding, research and office work, with vision as the standout skill — it picked three wines from a single photo 19 times out of 20, beating the lab's own researchers in a blind test. It is live now on Tinker, where it can be called like any API, and is expected to land at the top of DesignArena's open-weight leaderboard with full weights promised next week.
-
-- [Inkling 2 Small](https://thinkingmachines.ai/news/inkling-2-small/)
-- [Tinker](https://thinkingmachines.ai/tinker/)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**297. One prompt turns scattered flags into explicit state machines**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-11-09 23:31 KST — ["How to untangle the state logic in a messy project"](newsletters/2026-11-09_newsletter_the_code_2.md#how-to-untangle-the-state-logic-in-a-messy-project)*
-
-A paste-ready prompt for Claude Code or Codex: find every implicit state machine in the app — scattered booleans, flags and status strings — and refactor them into explicit states without breaking anything, trading off user, developer and agent experience. The workflow is commit a checkpoint, paste the prompt, review the diff, then run tests, since "without breaking anything" is an instruction and not a guarantee.
-
-- [The one prompt](https://archive.codenewsletter.ai/2119444845890617507)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**296. Apple's Xcode plugin lets Claude Code build and preview iOS apps**
-*🍎 Apple & Mac*
-*🗞 The Code · 2026-11-09 23:31 KST — ["Apple just made building iOS apps with AI easier"](newsletters/2026-11-09_newsletter_the_code_2.md#apple-just-made-building-ios-apps-with-ai-easier)*
-
-Apple released an Xcode plugin that lets Claude Code build and test iOS apps, render SwiftUI previews and dig through build logs, with a one-command setup. The Xcode 27.3 beta also brings GitHub Copilot into the same loop. The point is an agent that actually compiles and sees preview output rather than guessing at SwiftUI, and a founder has already published a playbook for finding, building and monetising iOS apps with it.
-
-- [Xcode plugin](https://archive.codenewsletter.ai/2119043277173207238)
-- [Xcode 27.3 release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-27_3-release-notes)
-- [iOS build playbook](https://archive.codenewsletter.ai/2119229734563271124)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**295. OpenCode Browse hands agents your real logged-in browser**
-*🏗️ Agent plumbing & production stacks*
-*🗞 The Code · 2026-11-09 23:31 KST — ["Let coding agents use your real browser, with your existing tabs, logins, and extensions"](newsletters/2026-11-09_newsletter_the_code_2.md#let-coding-agents-use-your-real-browser-with-your-existing-tabs-logins)*
-
-OpenCode Browse lets a coding agent drive your actual browser instead of a headless sandbox with no session, so existing tabs, logins and extensions all work. It plugs into OpenCode, Claude Code, Cursor, Codex and other MCP clients, opens its tabs quietly in the background, and hands control back to you for logins, 2FA or payments before continuing.
-
-- [opencode.ai/product/browse](https://opencode.ai/product/browse)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**294. Claude Code's allowlist leaked 1,379 secrets to public GitHub**
-*🤖 AI security & agent risk*
-*🗞 The Code · 2026-11-09 23:31 KST — ["Anthropic’s coding agent is leaking your secrets to GitHub"](newsletters/2026-11-09_newsletter_the_code_2.md#anthropics-coding-agent-is-leaking-your-secrets-to-github)*
-
-Claude Code stores its approved-command allowlist in plain text, so every "don't ask again" entry that carried a password or API key sits on disk in the clear. Apiiro found 1,379 secrets across 1,122 copies of that settings file in public GitHub repositories; users flagged it in 2025 and the reports went unfixed until Claude Code lead Boris Cherny said the team is finally looking at a fix. Immediate action: rotate any key that ever passed through an approval prompt, add the settings file to .gitignore, and pass secrets as environment variables instead of inline.
-
-- [What to do next](https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**293. PasteGuard strips secrets from the clipboard before chat sees them**
-*🔒 Privacy & local tooling*
-*🗞 Product Hunt Weekly · 2026-11-09 04:45 KST — ["A copy-paste app that makes privacy easier"](newsletters/2026-11-09_newsletter_product_hunt_weekly.md#a-copy-paste-app-that-makes-privacy-easier)*
-
-PasteGuard checks the clipboard locally and swaps sensitive values — database URLs, credentials, keys — for placeholders before they land in an AI chat, so the copy-paste habit stays exactly the same. The maker built it after pasting a production config into a chat himself. Pairs with the egress-masking tools already in the log: this one sits at the paste, before anything leaves the machine.
-
-- [Product Hunt — PasteGuard](https://www.producthunt.com/products/pasteguard-2)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**292. Friday Work hands a stalled task to another agent mid-run**
-*🏗️ Agent plumbing & production stacks*
-*🗞 Product Hunt Weekly · 2026-11-09 04:45 KST — ["Friday Work ↗ — When Claude hits its limit, your task keeps going"](newsletters/2026-11-09_newsletter_product_hunt_weekly.md#friday-work-when-claude-hits-its-limit-your-task-keeps-going)*
-
-Friday is a task board that runs Claude Code, Codex, Cursor and a dozen other agents side by side on his own machine, letting them message each other. When one hits its usage limit the task moves to another agent carrying a record of what it already changed, so a Claude limit at four in the afternoon stops being the end of the day. The failover-with-change-log part is the piece the parallel-agent setups in the log are missing.
-
-- [Product Hunt — Friday Work](https://www.producthunt.com/posts/friday-work-2)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**291. MachineMail gives each agent its own inbox and verification flow**
-*🏗️ Agent plumbing & production stacks*
-*🗞 Product Hunt Weekly · 2026-11-09 04:45 KST — ["MachineMail ↗ — Real inboxes for AI agents, with trust built in"](newsletters/2026-11-09_newsletter_product_hunt_weekly.md#machinemail-real-inboxes-for-ai-agents-with-trust-built-in)*
-
-MachineMail hands an agent a real email address so it can sign itself up for a service, sit and wait for the verification code, and answer whatever comes back. Inboxes are created on demand, a catch-all domain covers the rest, and wait_for_message is the call that blocks until mail arrives. Trust and provenance controls are part of the design rather than bolted on — the missing piece for agents that need an account, not a human in the loop.
-
-- [Product Hunt — MachineMail](https://www.producthunt.com/posts/machinemail)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**290. Beacon — open-source self-improving memory for coding agents**
-*🏗️ Agent plumbing & production stacks*
-*🗞 Product Hunt Weekly · 2026-11-09 04:45 KST — ["beacon.sh — Open-source self-improving memory for AI coding agents"](newsletters/2026-11-09_newsletter_product_hunt_weekly.md#beaconsh-open-source-self-improving-memory-for-ai-coding-agents)*
-*🗞 Superhuman AI · 2026-11-03 21:13 KST — ["Open-source self-improving memory for AI coding agents"](newsletters/2026-11-03_newsletter_superhuman_ai.md#open-source-self-improving-memory-for-ai-coding-agents)*
-
-Beacon is an open-source memory layer for coding agents that rewrites itself as it learns, from asymptote-labs. It targets the same gap as a hand-maintained AGENTS.md or CLAUDE.md, but updates the stored context from the agent's own runs instead of waiting for him to prune it. Worth a read for the retrieval and update design even if he keeps his file-based setup.
-
-- [asymptote-labs/agent-beacon](https://github.com/asymptote-labs/agent-beacon)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**289. Filter the data with regexes before the model reads it**
-*💸 Token & infra economics*
-*🗞 The Code · 2026-11-09 01:31 KST — ["How to run an agent over millions of rows without blowing your budget"](newsletters/2026-11-09_newsletter_the_code.md#how-to-run-an-agent-over-millions-of-rows-without-blowing-your-budget)*
-
-Karpathy built a YouTube feed out of 43 million Hacker News comments without feeding them to a model: he filtered first with URL matching, regexes, dedupe and spam removal, then had Sonnet read only the survivors — 6,454 recommended videos in about two hours. The reusable prompt asks the agent to write a filter script that prints row counts before and after and calls no model; tighten it until the residue is small, then switch to the cheap model to read it. Same recipe for any giant log or export.
-
-- [The Code — Karpathy's better YouTube feed](https://archive.codenewsletter.ai/2116957135661945283)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**288. Cheap executor subagent cuts cost per PR from $80 to $20**
-*💸 Token & infra economics*
-*🗞 The Code · 2026-11-09 01:31 KST — ["How to cut your cost per PR without losing quality"](newsletters/2026-11-09_newsletter_the_code.md#how-to-cut-your-cost-per-pr-without-losing-quality)*
-
-Warp's founder took cost per PR from $80 to $20 with fewer reverts by splitting planning from execution: set the main session to a strong model (Opus 5.5 via /model) to plan, then add .claude/agents/executor.md with "model: haiku" and tools pinned to Read, Edit and Grep, instructed never to change the plan or touch files outside it. Ask for a plan, tell Claude to use the executor subagent for each step, and compare cost per PR before and after. The subagent-file version of the advisor trick already in the log.
-
-- [The Code — the zachlloydtweets thread](https://archive.codenewsletter.ai/2115443494374539635)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**287. Turn subagent effort down so Claude Code limits last the week**
-*💸 Token & infra economics*
-*🗞 The Code · 2026-11-09 01:31 KST — ["How to make your Claude Code limits last the whole week"](newsletters/2026-11-09_newsletter_the_code.md#how-to-make-your-claude-code-limits-last-the-whole-week)*
-
-Subagents copy the main session's effort level by default, so working at max effort multiplies spend every time one is spawned — usually the leak when a limit dies on Wednesday. Update Claude Code, run /usage to see which sessions are draining the limit, press f to apply the fixes it offers, then add an effort line like "effort: medium" to each file in .claude/agents/ so subagents run below the main session. A few minutes per agent file, and /usage tells you whether it worked.
-
-- [The Code — the bcherny thread behind it](https://archive.codenewsletter.ai/2113417302402322910)
-- [Anthropic — managing Claude Code costs](https://code.claude.com/docs/en/costs)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**286. OpenAI's Decisions API returns a choice or score, not prose**
-*⚙️ LLM tooling & SDKs*
-*🗞 Future Tools · 2026-11-07 02:03 KST — ["Your App Doesn’t Need an Essay. It Needs a Decision."](newsletters/2026-11-07_newsletter_future_tools.md#your-app-doesnt-need-an-essay-it-needs-a-decision)*
-
-Give Decisions API context (text, images or JSON), a question and the allowed answers or a scoring rubric, and it returns a focused choice, probability or score instead of a paragraph. Fits the cheap decision-model pattern already in the log: routing billing vs. support vs. account requests, scoring damage from a photo, grading severity on ordered levels, or letting an agent pick continue / retry / ask-for-clarification mid-run.
-
-- [OpenAI Decisions API docs](https://platform.openai.com/decisions)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**285. Siri App Intents open to developers in the iOS 27.3 beta**
-*🍎 Apple & Mac*
-*🗞 Future Tools · 2026-11-07 02:03 KST — ["Apple Opens Siri AI to Third-Party Apps"](newsletters/2026-11-07_newsletter_future_tools.md#apple-opens-siri-ai-to-third-party-apps)*
-*🗞 The Code · 2026-11-04 23:10 KST — ["Developers can finally get Siri to take actions in apps"](newsletters/2026-11-04_newsletter_the_code.md#developers-can-finally-get-siri-to-take-actions-in-apps)*
-
-Apple rolled out a Developer Preview in the iOS 27.3 betas that lets apps plug into Siri AI through App Intents: you declare which data and actions Siri may touch, chain them into workflows, and drive multi-step tasks like checkout with markdown-based skills. Testing is limited to internal TestFlight builds for now, with users getting access in a few months and App Store submissions in spring — so this is the window to build against the real API rather than a demo.
-
-- [Apple developer news](https://developer.apple.com/news/?id=gdk2umrf)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**284. Burn expiring Codex quota with a /goal cleanup run**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-11-06 23:10 KST — ["How to burn leftover Codex quota before it resets"](newsletters/2026-11-06_newsletter_the_code.md#how-to-burn-leftover-codex-quota-before-it-resets)*
-
-For quota that resets half-unused: turn on the goals feature with `goals = true` under `[features]` in the Codex config, then give it a cleanup goal like `/goal Remove all dead code nothing calls, verified by passing tests` — it keeps working across turns until the goal is met. The thread adds four more targets: duplicated logic, unused dependencies, stale sessions and zombie scheduled tasks.
-
-- [The Code — the four extra targets](https://archive.codenewsletter.ai/2118357672106029272)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**283. Cutting CI wait from 40 minutes to 2 so agents stop stalling**
-*🏗️ Agent plumbing & production stacks*
-*🗞 The Code · 2026-11-06 23:10 KST — ["How to make your CI 20x faster"](newsletters/2026-11-06_newsletter_the_code.md#how-to-make-your-ci-20x-faster)*
-
-Boardy's head of engineering breaks down how his team took PR wait times from 40 minutes to 2: where the pipeline actually loses time, what is worth caching or running in parallel, and how to run smarter tests so coding agents never sit blocked on a build. The agent-specific point is the loop time — a slow CI turns every agent iteration into a coffee break.
-
-- [The Code — CI cookbook](https://archive.codenewsletter.ai/2116291924219060319)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**282. Untangle Codebase skill strips cruft so agents can navigate the repo**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-11-06 23:10 KST — ["Untangle Codebase"](newsletters/2026-11-06_newsletter_the_code.md#untangle-codebase)*
-
-An agent skill you point at a repo from Claude Code, Cursor or Codex: it removes copy-paste, leaky abstractions, temporary workarounds and pointless wrappers so the code is easier for both you and the agent to read and change. Aimed at the accumulated cruft of months of vibe coding, before the codebase becomes unmaintainable.
-
-- [Untangle Codebase](https://archive.codenewsletter.ai/2118378945557004477)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**281. Open-source local Wispr Flow clone for Mac dictation**
+**309. Granola ships free voice typing, straight at Wispr Flow**
 *🗣️ Voice · TTS & STT*
-*🗞 The Code · 2026-11-06 23:10 KST — ["A dev reverse-engineered the paid dictation app Wispr Flow"](newsletters/2026-11-06_newsletter_the_code.md#a-dev-reverse-engineered-the-paid-dictation-app-wispr-flow)*
+*🗞 Future Tools · 2026-11-12 03:45 KST — ["Your favorite notetaker now does the typing too"](newsletters/2026-11-12_newsletter_future_tools.md#your-favorite-notetaker-now-does-the-typing-too)*
+*🗞 Future Tools · 2026-10-31 01:07 KST — ["Granola takes on Wispr with a new dictation tool"](newsletters/2026-10-31_newsletter_future_tools.md#granola-takes-on-wispr-with-a-new-dictation-tool)*
 
-A developer reverse-engineered Wispr Flow — the paid, cloud dictation app — and published an open-source version that runs entirely on the Mac, with benchmarks the issue calls super-impressive (2.5K bookmarks on the thread). Same niche as Hex: hold a key, talk, and the text lands in whatever app has focus, which is the fastest way to dictate long prompts into a coding agent instead of typing them. Running locally means no audio leaves the machine.
+Granola, the meeting-notes app, has launched a free voice-typing tool aimed squarely at Wispr Flow's turf. Worth a side-by-side against the paid dictation setup already in use on the Mac: same job — hold a key, talk, get clean text into any app — with no subscription attached, so the question is whether accuracy and latency hold up.
 
-- [The Code — local dictation write-up](https://archive.codenewsletter.ai/2118386115170496855)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**280. VISTA keeps every frame an agent sees and lets it zoom back**
-*🏗️ Agent plumbing & production stacks*
-*🗞 The Batch · 2026-11-06 23:03 KST — ["Context Engineering for Images"](newsletters/2026-11-06_newsletter_the_batch.md#context-engineering-for-images)*
-
-MIT's VISTA drops the usual embed-and-delete pattern: it stores every frame a vision-language agent receives, plus the actions and their results, and gives the agent a tool to retrieve and zoom into any of them, with separate notes for environment-level and level-specific facts. On ARC-AGI-3 it hit a perfect 100 RHAE with Claude Opus 5.0 (fewer actions than first-time humans; 99 with GPT-5.6 Sol), and 63.3% of GameWorld tasks against 40% for the native harness — the ablation without frame storage fell to 70 RHAE. The harness is open under the MIT licence; it is the image analogue of text context engineering.
-
-- [VISTA harness (MIT licence)](https://info.deeplearning.ai/e3t/Ctc/LX+113/cJhC404/VWtVy81yMrz4W7kThKc4qJ9YbW5j5c_V5X1JRTN7WbryH3qgz0W7lCdLW6lZ3llN3pQXF-5plzXW18xb3X61KQPZW5BjVQ42wwmphW8VMgmT5DFcL9W78S3vF29Y-zBVzFlqP4mBJtNW4NdpPF13492ZVJFlFL8ZDTMJW7SqLf03TXvKNW3jYHSv794wGfW3jfscH5C1tlLW3Wx_QR7F4VSpVRT_zx4Bs4jmW3wlCpj4FFN0cW51hr2x5XYlYsW8sLy7w8gWCSQW7hZbnp5rP6M-W2v9Nr34SbLBbW8HXrX82kh9pwW5JpHv69gMPWlVRH_vw2tWr1hW42Ddxs9g-h_yW44zmS24qnK57W5fSN_D6s3m4tf57lhKC04)
+- [Granola vs Wispr — report](https://app.dealroom.co/news/note/granola-launches-free-voice-typing-moving-onto-wispr-s-turf)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
 
 ---
 
-**279. Gemini 4 Carbon tops the index at Argon's $2/$10 price**
+**308. Gemini 4 Carbon tops the index at Argon's $2/$10 price**
 *⚙️ LLM tooling & SDKs*
+*🗞 Superhuman AI · 2026-11-11 23:10 KST — ["Google makes its strongest model generally available"](newsletters/2026-11-11_newsletter_superhuman_ai.md#google-makes-its-strongest-model-generally-available)*
 *🗞 The Batch · 2026-11-06 23:03 KST — ["Gemini Leads the Pack Again"](newsletters/2026-11-06_newsletter_the_batch.md#gemini-leads-the-pack-again)*
 *🗞 Future Tools · 2026-10-31 01:07 KST — ["Did Google Just Take the Lead Again?"](newsletters/2026-10-31_newsletter_future_tools.md#did-google-just-take-the-lead-again)*
 *🗞 The Code · 2026-10-29 23:07 KST — ["Google’s new frontier model hunts bugs across codebases"](newsletters/2026-10-29_newsletter_the_code.md#googles-new-frontier-model-hunts-bugs-across-codebases)*
@@ -346,7 +52,408 @@ Google's second Gemini 4 release in a month ranks #1 on Artificial Analysis' Int
 
 ---
 
-**278. Apple and Goldman start rationing employee AI tokens**
+**307. Boxes.dev gives each agent thread its own cloud computer**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-11 22:03 KST — ["Give every Claude Code or Codex thread its own cloud computer"](newsletters/2026-11-11_newsletter_the_code.md#give-every-claude-code-or-codex-thread-its-own-cloud-computer)*
+
+Boxes.dev hands each Claude Code or Codex thread a separate cloud machine, so agents keep running after you close the laptop. You start and steer them from Slack, Linear, phone, desktop or terminal, run several in parallel without worktree collisions, and keep using your existing subscription. Same shape as Cua, boat and Terminal Mac, aimed at the thread rather than the agent.
+
+- [Boxes.dev](https://boxes.dev/launch-yc)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**306. One audit prompt to re-check shipped code on every model release**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-11 22:03 KST — ["How to audit your codebase every time a new model ships"](newsletters/2026-11-11_newsletter_the_code.md#how-to-audit-your-codebase-every-time-a-new-model-ships)*
+
+An Anthropic engineer runs a single prompt over the project root each time a new model drops: read the whole project, fix everything clearly broken or dead, and list the rest for review. Saved to .claude/commands/audit.md it becomes a /audit slash command you re-run on every release. The value is the habit — newer models find bugs the old ones missed, and shipped code almost never gets re-read.
+
+- [Audit prompt thread](https://archive.codenewsletter.ai/2119884951550386671)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**305. Amazon's Strands Decider labels tickets 98% cheaper than Claude**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-11 22:03 KST — ["Amazon swaps Claude for a model 44x cheaper"](newsletters/2026-11-11_newsletter_the_code.md#amazon-swaps-claude-for-a-model-44x-cheaper)*
+
+Amazon replaced Claude Sonnet 4.6 with its own Strands Decider to label tickets in a large internal system, matching Sonnet's quality at 98% lower cost. The trick is the interface: instead of generating JSON, the model scores 20 candidate labels and returns the best one. The two ran side by side, so a rollback took 45 seconds — the same shadow-traffic pattern you would want before swapping a classifier in your own pipeline.
+
+- [Strands Decider write-up](https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**304. MiniMax-H3-Image ships open weights for native 16MP images**
+*🧠 Open / efficient / local models*
+*🗞 The Code · 2026-11-11 22:03 KST — ["MiniMax gives devs open weights for 16MP images"](newsletters/2026-11-11_newsletter_the_code.md#minimax-gives-devs-open-weights-for-16mp-images)*
+
+MiniMax released H3-Image with downloadable weights on Hugging Face, native 4K output in about 10 seconds, editing, and up to 16 reference images. It runs in ComfyUI locally or through the API, accepts 16MP+ jobs, and is half price this week. Anything that heavy belongs on a rented GPU, but the weights mean you can test it without a vendor account.
+
+- [MiniMax-H3-Image](https://archive.codenewsletter.ai/2120179737695826420)
+- [MiniMax platform](https://platform.minimax.io)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**303. Exa Monitors runs scheduled web searches that call your agent**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Frontier · 2026-11-11 07:36 KST — ["Exa Monitors v2 — Web search on a schedule that calls your agent"](newsletters/2026-11-11_newsletter_the_frontier.md#exa-monitors-v2-web-search-on-a-schedule-that-calls-your-agent)*
+
+Exa Monitors v2 runs a saved web query on a schedule and, instead of just mailing a digest, calls your agent with what changed — about $2 per 1,000 runs. That replaces the hand-rolled cron-plus-scraper pattern behind most 'watch this topic' automations, and is relevant to the briefing pipeline, where a monitor could take over part of the fetch loop.
+
+- [Exa Monitors v2](https://www.producthunt.com/posts/exa-monitors-v2)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**302. Glasshand hands an agent a real iPhone and Mac**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Frontier · 2026-11-11 07:36 KST — ["Glasshand — Give your agent a real iPhone and Mac"](newsletters/2026-11-11_newsletter_the_frontier.md#glasshand-give-your-agent-a-real-iphone-and-mac)*
+
+Glasshand puts a real iPhone and Mac on the other end of the agent's loop rather than a simulator, aimed at mobile work emulators cannot reproduce — signing flows, push, carrier or hardware-dependent behaviour. It shipped on Product Hunt with about 400 upvotes. Same category as TapKit: worth a look if iOS testing is ever the blocker.
+
+- [Glasshand](https://www.producthunt.com/posts/glasshand)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**301. Claude Fable 5.2 matches Opus 5.5 coding at about half the cost**
+*⚙️ LLM tooling & SDKs*
+*🗞 Superhuman AI · 2026-11-10 23:10 KST — ["Anthropic debuts Fable and Mythos 5.2 as it nears IPO"](newsletters/2026-11-10_newsletter_superhuman_ai.md#anthropic-debuts-fable-and-mythos-52-as-it-nears-ipo)*
+*🗞 The Code · 2026-11-10 23:06 KST — ["Anthropic’s new Claude duo codes at half the cost"](newsletters/2026-11-10_newsletter_the_code.md#anthropics-new-claude-duo-codes-at-half-the-cost)*
+
+Fable 5.2 and Mythos 5.2 are the same underlying model with different guardrails: Fable is open to everyone and, at high effort, matches Opus 5.5's best coding score for roughly half the cost per task; Mythos is held back for vetted cybersecurity and biomedical teams. Both price at $8/$40 per million tokens and generate up to 30% faster, live now across paid Claude plans with an extra-usage allowance this week. Anthropic also shipped a Fable-specific prompting guide and a cookbook on which model to use when, including how effort level changes cost and how to mix models between a main agent and its subagents.
+
+- [Fable and Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2)
+- [Prompting guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2)
+- [Which model for which task](https://claude.dev/blog/which-claude-model-should-you-build-with/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**300. One AGENTS.md paragraph stops agents bolting features onto bad architecture**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-10 23:06 KST — ["How to stop AI agents from bolting on features"](newsletters/2026-11-10_newsletter_the_code.md#how-to-stop-ai-agents-from-bolting-on-features)*
+
+A one-paragraph addition at the top of AGENTS.md (Cursor, Codex) or CLAUDE.md (Claude Code) tells the agent to build modularly with proper separation of concerns and, if there is no natural place for the feature, to stop before writing code and propose the refactor instead. The last sentence does the work — it converts a silent architectural compromise into a question you can answer.
+
+- [The instruction](https://archive.codenewsletter.ai/2119525790723494116)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**299. 0 Security turns a coding agent into an open-source security harness**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-11-10 23:06 KST — ["Turn your coding agent into an open-source security harness"](newsletters/2026-11-10_newsletter_the_code.md#turn-your-coding-agent-into-an-open-source-security-harness)*
+
+0 Security (1.2k stars) packages code review, vulnerability investigation, app pentesting, binary reverse engineering, finding verification and the fix loop behind one web UI. CLI and MCP support mean the same workflows can be plugged straight into an existing agent, so it is a wrapper to point at your own repos rather than another dashboard to babysit.
+
+- [0sec-labs/0](https://github.com/0sec-labs/0)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**298. Warp's open-source /merge-risk skill scores a PR before you read it**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-10 23:06 KST — ["5 questions to decide how much human review a PR needs"](newsletters/2026-11-10_newsletter_the_code.md#5-questions-to-decide-how-much-human-review-a-pr-needs)*
+
+Warp's agent-factory lead published a five-check triage for the review queue — verification (screenshots or recordings of before/after, required on every PR), alignment against the original issue, impact (auth, permissions and billing need an owner; split high-impact work into stacked PRs), rollback cost (two-way versus one-way doors, per Matt Pocock's framing) and error detection (Sentry alerts piped to agents by webhook so they can investigate their own bugs). The five checks ship as an open-source /merge-risk skill the agent runs before handing over a PR, and the cheapest start is two extra PR-template fields: impact and rollback cost.
+
+- [merge-risk skill](https://www.warp.dev/merge-risk)
+- [Two-way vs one-way doors](https://www.aihero.dev/skills-pr)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**297. Meta's Muse Ember: $0.10/M input tokens for high-volume agent calls**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-10 23:06 KST — ["Meta’s smallest model is built for repeating agentic work"](newsletters/2026-11-10_newsletter_the_code.md#metas-smallest-model-is-built-for-repeating-agentic-work)*
+
+Muse Ember is Meta's smallest, cheapest model at $0.10 per million input tokens — level with Claude Haiku and GPT-6 Luna, and competitive with open-weight options like DeepSeek V4.1 Flash. It is aimed squarely at high-volume agent work: tool calls, routing, data extraction and smaller coding jobs, with Meta recommending you pair it with Muse Wonder as the planner that handles the thinking while Ember handles the volume.
+
+- [Muse Ember](https://research.meta.ai/blog/muse-ember)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**296. Thinking Machines' Inkling 2 Small: open weights with strong vision**
+*🧠 Open / efficient / local models*
+*🗞 Superhuman AI · 2026-11-09 23:34 KST — ["Thinking Machines debuts its second-generation AI model"](newsletters/2026-11-09_newsletter_superhuman_ai.md#thinking-machines-debuts-its-second-generation-ai-model)*
+
+Thinking Machines' second-generation model targets long-running coding, research and office work, with vision as the standout skill — it picked three wines from a single photo 19 times out of 20, beating the lab's own researchers in a blind test. It is live now on Tinker, where it can be called like any API, and is expected to land at the top of DesignArena's open-weight leaderboard with full weights promised next week.
+
+- [Inkling 2 Small](https://thinkingmachines.ai/news/inkling-2-small/)
+- [Tinker](https://thinkingmachines.ai/tinker/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**295. One prompt turns scattered flags into explicit state machines**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-09 23:31 KST — ["How to untangle the state logic in a messy project"](newsletters/2026-11-09_newsletter_the_code_2.md#how-to-untangle-the-state-logic-in-a-messy-project)*
+
+A paste-ready prompt for Claude Code or Codex: find every implicit state machine in the app — scattered booleans, flags and status strings — and refactor them into explicit states without breaking anything, trading off user, developer and agent experience. The workflow is commit a checkpoint, paste the prompt, review the diff, then run tests, since "without breaking anything" is an instruction and not a guarantee.
+
+- [The one prompt](https://archive.codenewsletter.ai/2119444845890617507)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**294. Apple's Xcode plugin lets Claude Code build and preview iOS apps**
+*🍎 Apple & Mac*
+*🗞 The Code · 2026-11-09 23:31 KST — ["Apple just made building iOS apps with AI easier"](newsletters/2026-11-09_newsletter_the_code_2.md#apple-just-made-building-ios-apps-with-ai-easier)*
+
+Apple released an Xcode plugin that lets Claude Code build and test iOS apps, render SwiftUI previews and dig through build logs, with a one-command setup. The Xcode 27.3 beta also brings GitHub Copilot into the same loop. The point is an agent that actually compiles and sees preview output rather than guessing at SwiftUI, and a founder has already published a playbook for finding, building and monetising iOS apps with it.
+
+- [Xcode plugin](https://archive.codenewsletter.ai/2119043277173207238)
+- [Xcode 27.3 release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-27_3-release-notes)
+- [iOS build playbook](https://archive.codenewsletter.ai/2119229734563271124)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**293. OpenCode Browse hands agents your real logged-in browser**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-09 23:31 KST — ["Let coding agents use your real browser, with your existing tabs, logins, and extensions"](newsletters/2026-11-09_newsletter_the_code_2.md#let-coding-agents-use-your-real-browser-with-your-existing-tabs-logins)*
+
+OpenCode Browse lets a coding agent drive your actual browser instead of a headless sandbox with no session, so existing tabs, logins and extensions all work. It plugs into OpenCode, Claude Code, Cursor, Codex and other MCP clients, opens its tabs quietly in the background, and hands control back to you for logins, 2FA or payments before continuing.
+
+- [opencode.ai/product/browse](https://opencode.ai/product/browse)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**292. Claude Code's allowlist leaked 1,379 secrets to public GitHub**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-11-09 23:31 KST — ["Anthropic’s coding agent is leaking your secrets to GitHub"](newsletters/2026-11-09_newsletter_the_code_2.md#anthropics-coding-agent-is-leaking-your-secrets-to-github)*
+
+Claude Code stores its approved-command allowlist in plain text, so every "don't ask again" entry that carried a password or API key sits on disk in the clear. Apiiro found 1,379 secrets across 1,122 copies of that settings file in public GitHub repositories; users flagged it in 2025 and the reports went unfixed until Claude Code lead Boris Cherny said the team is finally looking at a fix. Immediate action: rotate any key that ever passed through an approval prompt, add the settings file to .gitignore, and pass secrets as environment variables instead of inline.
+
+- [What to do next](https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**291. PasteGuard strips secrets from the clipboard before chat sees them**
+*🔒 Privacy & local tooling*
+*🗞 Product Hunt Weekly · 2026-11-09 04:45 KST — ["A copy-paste app that makes privacy easier"](newsletters/2026-11-09_newsletter_product_hunt_weekly.md#a-copy-paste-app-that-makes-privacy-easier)*
+
+PasteGuard checks the clipboard locally and swaps sensitive values — database URLs, credentials, keys — for placeholders before they land in an AI chat, so the copy-paste habit stays exactly the same. The maker built it after pasting a production config into a chat himself. Pairs with the egress-masking tools already in the log: this one sits at the paste, before anything leaves the machine.
+
+- [Product Hunt — PasteGuard](https://www.producthunt.com/products/pasteguard-2)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**290. Friday Work hands a stalled task to another agent mid-run**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Product Hunt Weekly · 2026-11-09 04:45 KST — ["Friday Work ↗ — When Claude hits its limit, your task keeps going"](newsletters/2026-11-09_newsletter_product_hunt_weekly.md#friday-work-when-claude-hits-its-limit-your-task-keeps-going)*
+
+Friday is a task board that runs Claude Code, Codex, Cursor and a dozen other agents side by side on his own machine, letting them message each other. When one hits its usage limit the task moves to another agent carrying a record of what it already changed, so a Claude limit at four in the afternoon stops being the end of the day. The failover-with-change-log part is the piece the parallel-agent setups in the log are missing.
+
+- [Product Hunt — Friday Work](https://www.producthunt.com/posts/friday-work-2)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**289. MachineMail gives each agent its own inbox and verification flow**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Product Hunt Weekly · 2026-11-09 04:45 KST — ["MachineMail ↗ — Real inboxes for AI agents, with trust built in"](newsletters/2026-11-09_newsletter_product_hunt_weekly.md#machinemail-real-inboxes-for-ai-agents-with-trust-built-in)*
+
+MachineMail hands an agent a real email address so it can sign itself up for a service, sit and wait for the verification code, and answer whatever comes back. Inboxes are created on demand, a catch-all domain covers the rest, and wait_for_message is the call that blocks until mail arrives. Trust and provenance controls are part of the design rather than bolted on — the missing piece for agents that need an account, not a human in the loop.
+
+- [Product Hunt — MachineMail](https://www.producthunt.com/posts/machinemail)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**288. Beacon — open-source self-improving memory for coding agents**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Product Hunt Weekly · 2026-11-09 04:45 KST — ["beacon.sh — Open-source self-improving memory for AI coding agents"](newsletters/2026-11-09_newsletter_product_hunt_weekly.md#beaconsh-open-source-self-improving-memory-for-ai-coding-agents)*
+*🗞 Superhuman AI · 2026-11-03 21:13 KST — ["Open-source self-improving memory for AI coding agents"](newsletters/2026-11-03_newsletter_superhuman_ai.md#open-source-self-improving-memory-for-ai-coding-agents)*
+
+Beacon is an open-source memory layer for coding agents that rewrites itself as it learns, from asymptote-labs. It targets the same gap as a hand-maintained AGENTS.md or CLAUDE.md, but updates the stored context from the agent's own runs instead of waiting for him to prune it. Worth a read for the retrieval and update design even if he keeps his file-based setup.
+
+- [asymptote-labs/agent-beacon](https://github.com/asymptote-labs/agent-beacon)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**287. Filter the data with regexes before the model reads it**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-09 01:31 KST — ["How to run an agent over millions of rows without blowing your budget"](newsletters/2026-11-09_newsletter_the_code.md#how-to-run-an-agent-over-millions-of-rows-without-blowing-your-budget)*
+
+Karpathy built a YouTube feed out of 43 million Hacker News comments without feeding them to a model: he filtered first with URL matching, regexes, dedupe and spam removal, then had Sonnet read only the survivors — 6,454 recommended videos in about two hours. The reusable prompt asks the agent to write a filter script that prints row counts before and after and calls no model; tighten it until the residue is small, then switch to the cheap model to read it. Same recipe for any giant log or export.
+
+- [The Code — Karpathy's better YouTube feed](https://archive.codenewsletter.ai/2116957135661945283)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**286. Cheap executor subagent cuts cost per PR from $80 to $20**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-09 01:31 KST — ["How to cut your cost per PR without losing quality"](newsletters/2026-11-09_newsletter_the_code.md#how-to-cut-your-cost-per-pr-without-losing-quality)*
+
+Warp's founder took cost per PR from $80 to $20 with fewer reverts by splitting planning from execution: set the main session to a strong model (Opus 5.5 via /model) to plan, then add .claude/agents/executor.md with "model: haiku" and tools pinned to Read, Edit and Grep, instructed never to change the plan or touch files outside it. Ask for a plan, tell Claude to use the executor subagent for each step, and compare cost per PR before and after. The subagent-file version of the advisor trick already in the log.
+
+- [The Code — the zachlloydtweets thread](https://archive.codenewsletter.ai/2115443494374539635)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**285. Turn subagent effort down so Claude Code limits last the week**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-09 01:31 KST — ["How to make your Claude Code limits last the whole week"](newsletters/2026-11-09_newsletter_the_code.md#how-to-make-your-claude-code-limits-last-the-whole-week)*
+
+Subagents copy the main session's effort level by default, so working at max effort multiplies spend every time one is spawned — usually the leak when a limit dies on Wednesday. Update Claude Code, run /usage to see which sessions are draining the limit, press f to apply the fixes it offers, then add an effort line like "effort: medium" to each file in .claude/agents/ so subagents run below the main session. A few minutes per agent file, and /usage tells you whether it worked.
+
+- [The Code — the bcherny thread behind it](https://archive.codenewsletter.ai/2113417302402322910)
+- [Anthropic — managing Claude Code costs](https://code.claude.com/docs/en/costs)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**284. OpenAI's Decisions API returns a choice or score, not prose**
+*⚙️ LLM tooling & SDKs*
+*🗞 Future Tools · 2026-11-07 02:03 KST — ["Your App Doesn’t Need an Essay. It Needs a Decision."](newsletters/2026-11-07_newsletter_future_tools.md#your-app-doesnt-need-an-essay-it-needs-a-decision)*
+
+Give Decisions API context (text, images or JSON), a question and the allowed answers or a scoring rubric, and it returns a focused choice, probability or score instead of a paragraph. Fits the cheap decision-model pattern already in the log: routing billing vs. support vs. account requests, scoring damage from a photo, grading severity on ordered levels, or letting an agent pick continue / retry / ask-for-clarification mid-run.
+
+- [OpenAI Decisions API docs](https://platform.openai.com/decisions)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**283. Siri App Intents open to developers in the iOS 27.3 beta**
+*🍎 Apple & Mac*
+*🗞 Future Tools · 2026-11-07 02:03 KST — ["Apple Opens Siri AI to Third-Party Apps"](newsletters/2026-11-07_newsletter_future_tools.md#apple-opens-siri-ai-to-third-party-apps)*
+*🗞 The Code · 2026-11-04 23:10 KST — ["Developers can finally get Siri to take actions in apps"](newsletters/2026-11-04_newsletter_the_code.md#developers-can-finally-get-siri-to-take-actions-in-apps)*
+
+Apple rolled out a Developer Preview in the iOS 27.3 betas that lets apps plug into Siri AI through App Intents: you declare which data and actions Siri may touch, chain them into workflows, and drive multi-step tasks like checkout with markdown-based skills. Testing is limited to internal TestFlight builds for now, with users getting access in a few months and App Store submissions in spring — so this is the window to build against the real API rather than a demo.
+
+- [Apple developer news](https://developer.apple.com/news/?id=gdk2umrf)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**282. Burn expiring Codex quota with a /goal cleanup run**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-06 23:10 KST — ["How to burn leftover Codex quota before it resets"](newsletters/2026-11-06_newsletter_the_code.md#how-to-burn-leftover-codex-quota-before-it-resets)*
+
+For quota that resets half-unused: turn on the goals feature with `goals = true` under `[features]` in the Codex config, then give it a cleanup goal like `/goal Remove all dead code nothing calls, verified by passing tests` — it keeps working across turns until the goal is met. The thread adds four more targets: duplicated logic, unused dependencies, stale sessions and zombie scheduled tasks.
+
+- [The Code — the four extra targets](https://archive.codenewsletter.ai/2118357672106029272)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**281. Cutting CI wait from 40 minutes to 2 so agents stop stalling**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-06 23:10 KST — ["How to make your CI 20x faster"](newsletters/2026-11-06_newsletter_the_code.md#how-to-make-your-ci-20x-faster)*
+
+Boardy's head of engineering breaks down how his team took PR wait times from 40 minutes to 2: where the pipeline actually loses time, what is worth caching or running in parallel, and how to run smarter tests so coding agents never sit blocked on a build. The agent-specific point is the loop time — a slow CI turns every agent iteration into a coffee break.
+
+- [The Code — CI cookbook](https://archive.codenewsletter.ai/2116291924219060319)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**280. Untangle Codebase skill strips cruft so agents can navigate the repo**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-06 23:10 KST — ["Untangle Codebase"](newsletters/2026-11-06_newsletter_the_code.md#untangle-codebase)*
+
+An agent skill you point at a repo from Claude Code, Cursor or Codex: it removes copy-paste, leaky abstractions, temporary workarounds and pointless wrappers so the code is easier for both you and the agent to read and change. Aimed at the accumulated cruft of months of vibe coding, before the codebase becomes unmaintainable.
+
+- [Untangle Codebase](https://archive.codenewsletter.ai/2118378945557004477)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**279. Open-source local Wispr Flow clone for Mac dictation**
+*🗣️ Voice · TTS & STT*
+*🗞 The Code · 2026-11-06 23:10 KST — ["A dev reverse-engineered the paid dictation app Wispr Flow"](newsletters/2026-11-06_newsletter_the_code.md#a-dev-reverse-engineered-the-paid-dictation-app-wispr-flow)*
+
+A developer reverse-engineered Wispr Flow — the paid, cloud dictation app — and published an open-source version that runs entirely on the Mac, with benchmarks the issue calls super-impressive (2.5K bookmarks on the thread). Same niche as Hex: hold a key, talk, and the text lands in whatever app has focus, which is the fastest way to dictate long prompts into a coding agent instead of typing them. Running locally means no audio leaves the machine.
+
+- [The Code — local dictation write-up](https://archive.codenewsletter.ai/2118386115170496855)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**278. VISTA keeps every frame an agent sees and lets it zoom back**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Batch · 2026-11-06 23:03 KST — ["Context Engineering for Images"](newsletters/2026-11-06_newsletter_the_batch.md#context-engineering-for-images)*
+
+MIT's VISTA drops the usual embed-and-delete pattern: it stores every frame a vision-language agent receives, plus the actions and their results, and gives the agent a tool to retrieve and zoom into any of them, with separate notes for environment-level and level-specific facts. On ARC-AGI-3 it hit a perfect 100 RHAE with Claude Opus 5.0 (fewer actions than first-time humans; 99 with GPT-5.6 Sol), and 63.3% of GameWorld tasks against 40% for the native harness — the ablation without frame storage fell to 70 RHAE. The harness is open under the MIT licence; it is the image analogue of text context engineering.
+
+- [VISTA harness (MIT licence)](https://info.deeplearning.ai/e3t/Ctc/LX+113/cJhC404/VWtVy81yMrz4W7kThKc4qJ9YbW5j5c_V5X1JRTN7WbryH3qgz0W7lCdLW6lZ3llN3pQXF-5plzXW18xb3X61KQPZW5BjVQ42wwmphW8VMgmT5DFcL9W78S3vF29Y-zBVzFlqP4mBJtNW4NdpPF13492ZVJFlFL8ZDTMJW7SqLf03TXvKNW3jYHSv794wGfW3jfscH5C1tlLW3Wx_QR7F4VSpVRT_zx4Bs4jmW3wlCpj4FFN0cW51hr2x5XYlYsW8sLy7w8gWCSQW7hZbnp5rP6M-W2v9Nr34SbLBbW8HXrX82kh9pwW5JpHv69gMPWlVRH_vw2tWr1hW42Ddxs9g-h_yW44zmS24qnK57W5fSN_D6s3m4tf57lhKC04)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**277. Apple and Goldman start rationing employee AI tokens**
 *💸 Token & infra economics*
 *🗞 Superhuman AI · 2026-11-05 23:10 KST — ["3. Apple and Goldman Sachs restrict employee AI use for different reasons"](newsletters/2026-11-05_newsletter_superhuman_ai.md#3-apple-and-goldman-sachs-restrict-employee-ai-use-for-different-reaso)*
 *🗞 The Code · 2026-11-05 23:07 KST — ["Apple cuts daily AI spending limits for its engineers"](newsletters/2026-11-05_newsletter_the_code.md#apple-cuts-daily-ai-spending-limits-for-its-engineers)*
@@ -361,7 +468,7 @@ Apple reportedly cut some engineers' daily AI spending caps from $300 to $200 la
 
 ---
 
-**277. Grok Bot recipe publishes a team data analyst with Slack access**
+**276. Grok Bot recipe publishes a team data analyst with Slack access**
 *⚡ Productivity & agent follow-through*
 *🗞 Superhuman AI · 2026-11-05 23:10 KST — ["How to build an on-demand data analyst for your team with Grok Bot"](newsletters/2026-11-05_newsletter_superhuman_ai.md#how-to-build-an-on-demand-data-analyst-for-your-team-with-grok-bot)*
 
@@ -374,7 +481,7 @@ Recipe: create a dedicated Grok Bot, connect its data sources, files, plugins an
 
 ---
 
-**276. Atmanity's Atmee v2 animates one photo into a talking avatar**
+**275. Atmanity's Atmee v2 animates one photo into a talking avatar**
 *🗣️ Voice · TTS & STT*
 *🗞 Superhuman AI · 2026-11-05 23:10 KST — ["1. Atmanity releases a real-time video avatar model"](newsletters/2026-11-05_newsletter_superhuman_ai.md#1-atmanity-releases-a-real-time-video-avatar-model)*
 
@@ -387,7 +494,7 @@ Atmee v2 takes a single image plus a 10-second voice clip and returns a lifelike
 
 ---
 
-**275. OpenAI's Images 2.6 adds two API models and GIF output**
+**274. OpenAI's Images 2.6 adds two API models and GIF output**
 *⚙️ LLM tooling & SDKs*
 *🗞 Superhuman AI · 2026-11-05 23:10 KST — ["2. OpenAI upgrades its image model to create GIFs"](newsletters/2026-11-05_newsletter_superhuman_ai.md#2-openai-upgrades-its-image-model-to-create-gifs)*
 *🗞 The Code · 2026-11-05 23:07 KST — ["OpenAI unveils a new image model that generates 50% faster"](newsletters/2026-11-05_newsletter_the_code.md#openai-unveils-a-new-image-model-that-generates-50-faster)*
@@ -402,7 +509,7 @@ Images 2.6 is live across ChatGPT, Codex and the API, generating 50% faster. Two
 
 ---
 
-**274. Claude Managed Agents cookbook distills past sessions into wiki memory**
+**273. Claude Managed Agents cookbook distills past sessions into wiki memory**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-11-05 23:07 KST — ["Building a workflow with Claude Managed Agents"](newsletters/2026-11-05_newsletter_the_code.md#building-a-workflow-with-claude-managed-agents)*
 
@@ -415,7 +522,7 @@ The cookbook builds a "dreaming" dynamic workflow: a background process reads tr
 
 ---
 
-**273. Claude Code update makes subagent status lines 99% cheaper**
+**272. Claude Code update makes subagent status lines 99% cheaper**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-11-05 23:07 KST — ["How to stop Claude Code’s subagents from eating your usage limit"](newsletters/2026-11-05_newsletter_the_code.md#how-to-stop-claude-codes-subagents-from-eating-your-usage-limit)*
 
@@ -428,7 +535,7 @@ Background subagents were re-reading their entire conversation every 30 seconds 
 
 ---
 
-**272. Mini Harness: 1,200 lines of Python that beat Claude Code on Haiku**
+**271. Mini Harness: 1,200 lines of Python that beat Claude Code on Haiku**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Product Compass · 2026-11-05 20:10 KST — ["Agent Harness: How I Built My Own Claude Code, Step by Step"](newsletters/2026-11-05_newsletter_the_product_compass.md#agent-harness-how-i-built-my-own-claude-code-step-by-step)*
 
@@ -441,7 +548,7 @@ Paweł Huryn wrote a ~1,200-line Python coding agent covering the 15 parts of a 
 
 ---
 
-**271. Claude's API message threads cut agent latency 35%**
+**270. Claude's API message threads cut agent latency 35%**
 *⚙️ LLM tooling & SDKs*
 *🗞 Future Tools · 2026-11-05 02:04 KST — ["Claude's API cuts agent latency by 35% with new message threads"](newsletters/2026-11-05_newsletter_future_tools.md#claudes-api-cuts-agent-latency-by-35-with-new-message-threads)*
 
@@ -454,7 +561,7 @@ Anthropic added message threads to the Claude API, which it says cuts agent late
 
 ---
 
-**270. DeepSeek's open-source Super-Agent watches your group chats for bugs**
+**269. DeepSeek's open-source Super-Agent watches your group chats for bugs**
 *🧠 Open / efficient / local models*
 *🗞 Future Tools · 2026-11-05 02:04 KST — ["DeepSeek Takes Aim at Claude Code"](newsletters/2026-11-05_newsletter_future_tools.md#deepseek-takes-aim-at-claude-code)*
 
@@ -467,7 +574,7 @@ DeepSeek released a prototype of Super-Agent, an open-source coding assistant th
 
 ---
 
-**269. Higher reasoning effort can cost 42x more and do worse**
+**268. Higher reasoning effort can cost 42x more and do worse**
 *💸 Token & infra economics*
 *🗞 Superhuman AI · 2026-11-04 23:14 KST — ["Bigger isn’t always better. Using top models could be costing you more money — and getting worse results"](newsletters/2026-11-04_newsletter_superhuman_ai.md#bigger-isnt-always-better-using-top-models-could-be-costing-you-more-m)*
 
@@ -481,7 +588,7 @@ New research found higher reasoning effort often fails tasks that lower settings
 
 ---
 
-**268. One prompt rewrites stacked awaits into parallel calls**
+**267. One prompt rewrites stacked awaits into parallel calls**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-11-04 23:10 KST — ["How to parallelize your async calls with one prompt"](newsletters/2026-11-04_newsletter_the_code.md#how-to-parallelize-your-async-calls-with-one-prompt)*
 
@@ -494,7 +601,7 @@ Paste `Do a deep scan of all hot paths and fix any unnecessary sequential async 
 
 ---
 
-**267. Why frontier LLM prices keep falling — and how to route for it**
+**266. Why frontier LLM prices keep falling — and how to route for it**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-11-04 23:10 KST — ["Frontier labs are slashing their LLM prices. Here’s why"](newsletters/2026-11-04_newsletter_the_code.md#frontier-labs-are-slashing-their-llm-prices-heres-why)*
 
@@ -508,7 +615,7 @@ Max Woolf's analysis of the 2026 price cuts (GPT-5.6 Luna down 80% in July, the 
 
 ---
 
-**266. Terminal Mac gives coding agents a disposable macOS VM to drive**
+**265. Terminal Mac gives coding agents a disposable macOS VM to drive**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-11-04 23:10 KST — ["Terminal Mac"](newsletters/2026-11-04_newsletter_the_code.md#terminal-mac)*
 
@@ -521,7 +628,7 @@ Open-source tool that spins up a real macOS VM — its own apps, files and accou
 
 ---
 
-**265. Postman's desktop app silently installs plugins into Claude Code and Codex**
+**264. Postman's desktop app silently installs plugins into Claude Code and Codex**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-11-04 23:10 KST — ["Postman can quietly install plugins into your coding agents"](newsletters/2026-11-04_newsletter_the_code.md#postman-can-quietly-install-plugins-into-your-coding-agents)*
 
@@ -534,7 +641,7 @@ A developer flagged on GitHub that Postman's desktop app installed MCP plugins i
 
 ---
 
-**264. AgentKit puts an MCP gateway in front of production agents**
+**263. AgentKit puts an MCP gateway in front of production agents**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Frontier · 2026-11-04 07:31 KST — ["AgentKit by Scalekit — MCP gateway for production agents that acts on your behalf"](newsletters/2026-11-04_newsletter_the_frontier.md#agentkit-by-scalekit-mcp-gateway-for-production-agents-that-acts-on-yo)*
 
@@ -547,7 +654,7 @@ Scalekit's AgentKit is an MCP gateway aimed at agents that take actions on a use
 
 ---
 
-**263. Vaani open-sources its voice harness for phone-line agents**
+**262. Vaani open-sources its voice harness for phone-line agents**
 *🗣️ Voice · TTS & STT*
 *🗞 The Frontier · 2026-11-04 07:31 KST — ["Vaani opened up the voice harness it built for itself"](newsletters/2026-11-04_newsletter_the_frontier.md#vaani-opened-up-the-voice-harness-it-built-for-itself)*
 
@@ -558,7 +665,7 @@ Vaani released the harness it built internally for putting agents on a real phon
 
 ---
 
-**262. Nine of ten agents lifted their own spend cap by reading the inbox**
+**261. Nine of ten agents lifted their own spend cap by reading the inbox**
 *🤖 AI security & agent risk*
 *🗞 The Frontier · 2026-11-04 07:31 KST — ["Nine of ten agents raised their own spending cap by reading the confirmation email"](newsletters/2026-11-04_newsletter_the_frontier.md#nine-of-ten-agents-raised-their-own-spending-cap-by-reading-the-confir)*
 
@@ -571,7 +678,7 @@ Cornell Tech and Yale gave each model a wallet with a 0.01 USDC daily limit plus
 
 ---
 
-**261. Clean Machine sorts and trashes a cluttered Mac desktop**
+**260. Clean Machine sorts and trashes a cluttered Mac desktop**
 *🛠️ Mac utilities worth a look*
 *🗞 The Code · 2026-11-03 23:09 KST — ["Clean Machine"](newsletters/2026-11-03_newsletter_the_code.md#clean-machine)*
 
@@ -584,7 +691,7 @@ Clean Machine is an open-source macOS utility that tidies a cluttered desktop th
 
 ---
 
-**260. A ticket-to-parallel-agents software factory built on Claude Code**
+**259. A ticket-to-parallel-agents software factory built on Claude Code**
 *⚡ Productivity & agent follow-through*
 *🗞 The Code · 2026-11-03 23:09 KST — ["How to build your own Claude Code software factory"](newsletters/2026-11-03_newsletter_the_code.md#how-to-build-your-own-claude-code-software-factory)*
 
@@ -597,7 +704,7 @@ A tutorial that stops the babysitting loop: a linear ticket kicks off the work, 
 
 ---
 
-**259. A /perf-review slash command that names the fix, not another cache**
+**258. A /perf-review slash command that names the fix, not another cache**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-11-03 23:09 KST — ["How to get real performance fixes from Claude Code"](newsletters/2026-11-03_newsletter_the_code.md#how-to-get-real-performance-fixes-from-claude-code)*
 
@@ -610,7 +717,7 @@ Tell Claude Code to "make it faster" and it usually bolts on a cache. This promp
 
 ---
 
-**258. NanoUI builds tiny Zig desktop apps an agent can verify headlessly**
+**257. NanoUI builds tiny Zig desktop apps an agent can verify headlessly**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-11-03 23:09 KST — ["Build tiny cross-platform desktop apps in Zig with either native GPU-drawn UI or a web frontend"](newsletters/2026-11-03_newsletter_the_code.md#build-tiny-cross-platform-desktop-apps-in-zig-with-either-native-gpu-d)*
 
@@ -623,7 +730,7 @@ NanoUI builds small cross-platform desktop apps in Zig — macOS, Windows and Li
 
 ---
 
-**257. Hume's one-call audio API answers questions about recordings**
+**256. Hume's one-call audio API answers questions about recordings**
 *🗣️ Voice · TTS & STT*
 *🗞 The Code · 2026-11-03 23:09 KST — ["Hume wants to replace your audio model stack"](newsletters/2026-11-03_newsletter_the_code.md#hume-wants-to-replace-your-audio-model-stack)*
 
@@ -637,7 +744,7 @@ Hume's Audio Decision API takes plain-language questions about audio — how man
 
 ---
 
-**256. DeepSeek lets a prompt build plugins for its open-source Harness**
+**255. DeepSeek lets a prompt build plugins for its open-source Harness**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-11-03 23:09 KST — ["DeepSeek lets you build agent plugins with a prompt"](newsletters/2026-11-03_newsletter_the_code.md#deepseek-lets-you-build-agent-plugins-with-a-prompt)*
 *🗞 Superhuman AI · 2026-11-03 21:13 KST — ["DeepSeek launches Creator Mode for building custom plugins"](newsletters/2026-11-03_newsletter_superhuman_ai.md#deepseek-launches-creator-mode-for-building-custom-plugins)*
@@ -653,7 +760,7 @@ DeepSeek rolled out Creator Mode for its open-source Harness: describe the tool,
 
 ---
 
-**255. Hex — local dictation for the Mac, pasted into any app**
+**254. Hex — local dictation for the Mac, pasted into any app**
 *🗣️ Voice · TTS & STT*
 *🗞 The Code · 2026-11-02 23:06 KST — ["Hex: A local voice dictation tool for Mac, Windows, and Linux"](newsletters/2026-11-02_newsletter_the_code.md#hex-a-local-voice-dictation-tool-for-mac-windows-and-linux)*
 
@@ -666,7 +773,7 @@ Hex is a local voice dictation tool for macOS, Windows and Linux: hold Option on
 
 ---
 
-**254. Linux TCP flaw turns into root exploit; Ubuntu and RHEL still unpatched**
+**253. Linux TCP flaw turns into root exploit; Ubuntu and RHEL still unpatched**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-11-02 23:06 KST — ["Anthropic’s AI turns a Linux bug into root access"](newsletters/2026-11-02_newsletter_the_code.md#anthropics-ai-turns-a-linux-bug-into-root-access)*
 
@@ -680,7 +787,7 @@ Anthropic found a flaw in Linux's IPv4 TCP handling (CVE-2026-98432, CVSS 9.8) a
 
 ---
 
-**253. Vercel open-sources agent-desktop so coding agents drive real apps**
+**252. Vercel open-sources agent-desktop so coding agents drive real apps**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-11-02 23:06 KST — ["Vercel lets any coding agent drive your desktop"](newsletters/2026-11-02_newsletter_the_code.md#vercel-lets-any-coding-agent-drive-your-desktop)*
 
@@ -694,7 +801,7 @@ Vercel Labs open-sourced agent-desktop, which lets coding agents operate macOS, 
 
 ---
 
-**252. Overmind turns live agent traces into eval sets and a git-diff patch**
+**251. Overmind turns live agent traces into eval sets and a git-diff patch**
 *⚙️ LLM tooling & SDKs*
 *🗞 Product Hunt Weekly · 2026-11-02 03:30 KST — ["Open-source platform for continuous learning"](newsletters/2026-11-02_newsletter_product_hunt_weekly.md#open-source-platform-for-continuous-learning)*
 
@@ -707,7 +814,7 @@ Overmind is open source and works off the traffic an agent is already serving: t
 
 ---
 
-**251. Dedica scores whether agents can actually use your site — free**
+**250. Dedica scores whether agents can actually use your site — free**
 *🏗️ Agent plumbing & production stacks*
 *🗞 Product Hunt Weekly · 2026-11-02 03:30 KST — ["Check if AI agents can use your website"](newsletters/2026-11-02_newsletter_product_hunt_weekly.md#check-if-ai-agents-can-use-your-website)*
 
@@ -720,26 +827,13 @@ Hand Dedica a domain and it runs 125 checks across discovery, access, usability 
 
 ---
 
-**250. Chopstick writes Mac widgets from your own activity, then builds them**
+**249. Chopstick writes Mac widgets from your own activity, then builds them**
 *🛠️ Mac utilities worth a look*
 *🗞 Product Hunt Weekly · 2026-11-02 03:30 KST — ["Mac activity and action widgets that write themselves"](newsletters/2026-11-02_newsletter_product_hunt_weekly.md#mac-activity-and-action-widgets-that-write-themselves)*
 
 Chopstick watches what you do on the Mac, keeps stats on app usage, spots what you keep repeating and proposes a widget for it — a launcher, a status readout, a one-click action. The interesting half is the handoff: an editor generates the widget and passes the build to your coding agent so the thing actually gets compiled and installed rather than left as a mockup. Worth a look as a pattern for turning observed repetition into a real local tool.
 
 - [Chopstick — Product Hunt](https://www.producthunt.com/posts/chopstick)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**249. Granola ships free voice typing, straight at Wispr Flow**
-*🗣️ Voice · TTS & STT*
-*🗞 Future Tools · 2026-10-31 01:07 KST — ["Granola takes on Wispr with a new dictation tool"](newsletters/2026-10-31_newsletter_future_tools.md#granola-takes-on-wispr-with-a-new-dictation-tool)*
-
-Granola, the meeting-notes app, has launched a free voice-typing tool aimed squarely at Wispr Flow's turf. Worth a side-by-side against the paid dictation setup already in use on the Mac: same job — hold a key, talk, get clean text into any app — with no subscription attached, so the question is whether accuracy and latency hold up.
-
-- [Granola vs Wispr — report](https://app.dealroom.co/news/note/granola-launches-free-voice-typing-moving-onto-wispr-s-turf)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me

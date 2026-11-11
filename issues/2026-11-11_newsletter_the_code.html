@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚨 We need better coding interviews — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚨 We need better coding interviews — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚨 We need better coding interviews</h1>
+<p class="meta">2026-11-11 · received 2026-11-11 22:03 +0900
+ · <a href="https://codenewsletter.ai/p/minimax-gives-devs-open-weights-for-16mp-images" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚨 We need better coding interviews</h1>
+<p><a href="https://soniox.com/speech-to-text?tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/bac6d671-0722-4be6-ab71-d5f4d98db670/Group_Soniox__3_.png?t=1794392098" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Remember when we all agreed LeetCode interviews needed to go? One engineer's nightmare AI interview experience now has devs missing the good old LeetCode days. Plus, MiniMax just launched a faster image model at half the price.</p>
+<p><strong>Also:</strong> A developer let Claude control his 32-year-old Jeep, a setup for multi-repo updates, and a one-line trick to make Claude 5x more likely to catch duplicate code and fix bugs.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Why coding agents are quietly turning you into a manager</p>
+</li>
+<li>
+<p>The engineering role that grew 4.6x this year</p>
+</li>
+<li>
+<p>Fix 11 common coding agent problems today (tutorial)</p>
+</li>
+<li>
+<p>Make your agents better with eval-driven development (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2120179737695826420"><img alt="Click here to watch how MiniMax’s new model works." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/12f9e60f-0511-4b35-96a6-d494f873d759/Thumbnail__86_.jpg?t=1794386893" /></a>
+<em>Click here to watch how MiniMax’s new model works.</em></p>
+<hr />
+<p><a id="minimax-gives-devs-open-weights-for-16mp-images"></a>
+<strong>MiniMax gives devs open weights for 16MP images:</strong> The Chinese AI startup just dropped <a href="https://archive.codenewsletter.ai/2120179737695826420">MiniMax-H3-Image</a>, a new model that churns out native 4K images in 10 seconds. It supports editing and up to 16 reference images. You can grab the weights on Hugging Face, fire it up in ComfyUI or use the API, with 16MP+ jobs. It’s available at half price this week, and you can try it <a href="https://platform.minimax.io">here</a>.</p>
+<p><strong>AI coding interviews are making devs miss LeetCode:</strong> A developer’s <a href="https://archive.codenewsletter.ai/2120027296195396002">viral post</a> has reignited the debate over AI hiring tests. During a Bloomberg interview, behavioral questions ate up the first 30 minutes. That left just half an hour to navigate a large, unfamiliar Django codebase with AI. Although the proposed solution passed several tests, the candidate was still rejected and noted that the guidelines for using AI were never made clear. Veteran engineer Gergely Orosz <a href="https://archive.codenewsletter.ai/2120083793948086532">warns</a> that replacing LeetCode could leave devs facing subjective interviews with no clear way to prepare.</p>
+<p><a id="amazon-swaps-claude-for-a-model-44x-cheaper"></a>
+<strong>Amazon swaps Claude for a model 44x cheaper:</strong> The e-commerce giant just replaced Claude Sonnet 4.6 with its own Strands Decider model to label tickets in a massive internal system. Instead of generating JSON, Decider scores 20 labels and picks the best one. It matched Sonnet at 98% lower cost, which Amazon says could save millions every year. Since both models ran side by side, rolling back would take 45 seconds. You can read the guide <a href="https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/">here</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY SONIOX</strong></h5>
+<h2><a href="https://soniox.com/speech-to-text?tcad=1"><strong>Your voice agent should never interrupt itself.</strong></a></h2>
+<p><a href="https://soniox.com/speech-to-text?tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e8972bb4-f309-4a37-bd3d-e60bfc9186b3/V6_Newsletter_1080p__1_.jpg?t=1794392280" /></a></p>
+<hr />
+<p><a href="https://soniox.com/speech-to-text?tcad=1"><strong>Soniox STT v6</strong></a> introduces agent text input and agent voice echo cancellation to understand both sides of the conversation and filter out the agent’s own voice.</p>
+<p>V6 also delivers significantly higher accuracy across <a href="https://soniox.com/speech-to-text?tcad=1">60+ languages</a> for voice typing, meeting transcription, multilingual recognition, and real-time translation.</p>
+<p><a href="https://soniox.com/speech-to-text?tcad=1"><strong>Explore Soniox STT v6 →</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Anthropic engineer on why coding agents are quietly turning you into a manager</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/aae1eabe-f9c7-4a23-b195-04a0d658c3b8/superhumanteam_a_developer_standing_and_watching_as_multiple__52561042-bb0b-4a08-8c92-03bb4d4e4a56_0.jpg?t=1794392960" />
+<em><em>Source: The Code, Superhuman</em></em></p>
+<hr />
+<p><strong>Surprise promotion.</strong> Your job title might still say “software engineer,” but your coding agents think you’re the boss now. In a <a href="https://archive.codenewsletter.ai/2119332146485891501">new essay</a>, Anthropic’s Addy Osmani argues that working with agents looks a lot like managing a team. You hand out tasks, give instructions, check progress, review the work and decide what ships. The devs getting the most out of agents are the ones who’ve quietly become good managers.</p>
+<p>Here’re 10 major insights from his essay:</p>
+<ul>
+<li>
+<p>Give every agent a way to check its work with tests or screenshots, or you will end up validating everything yourself.</p>
+</li>
+<li>
+<p>Tell the agent what the code cannot show it, like your overall goal, constraints, and definition of done, and skip what it can already read.</p>
+</li>
+<li>
+<p>Whenever you correct the same mistake twice, record it in CLAUDE.md or a shared skill so your fix actually compounds over time.</p>
+</li>
+<li>
+<p>Let the agent make most calls on its own, and save hooks or deny rules for the few things that must always or never happen.</p>
+</li>
+<li>
+<p>Agree on a solid plan before coding starts, and split parallel work carefully so five agents do not create one giant merge conflict.</p>
+</li>
+<li>
+<p>Steer the agent in the first minute, and if it fails after two corrections, just wipe the slate clean with a fresh session and a better prompt.</p>
+</li>
+<li>
+<p>Delegate the work but never your judgment, and review every single diff like you are the one getting paged for it.</p>
+</li>
+<li>
+<p>Before any unattended run, define what done looks like, how the agent verifies itself, its limits, and who approves the output.</p>
+</li>
+<li>
+<p>Scale agents only as fast as your checks and reviewers can keep up, and track quality and rework instead of the share of AI-written code.</p>
+</li>
+<li>
+<p>Agents make code nearly free to build, so saying no matters a lot more now that review and validation are the real bottlenecks.</p>
+</li>
+</ul>
+<p><strong>P.S:</strong> Check out the <a href="https://archive.codenewsletter.ai/2119332146485891501">full essay</a> for the rest of his playbook. Also hit reply to this email and let us know what you’d like us to cover next in this section.</p>
+<hr />
+<h5><strong>PRESENTED BY RUNPOD</strong></h5>
+<h2><a href="https://srv.buysellads.com/ads/long/x/T6SO7SIPTTTTTT66AXINWTTTTTTVWPX42VTTTTTTBTXOABETTTTTTRQUKRDF6IP2P2DDLRBY5E7CLRS2P7CNKIPP5YYE?cid=404481&amp;tcad=1"><strong>How to run agents</strong> </a><a href="https://srv.buysellads.com/ads/long/x/T6SO7SIPTTTTTT66AXINWTTTTTTVWPX42VTTTTTTBTXOABETTTTTTRQUKRDF6IP2P2DDLRBY5E7CLRS2P7CNKIPP5YYE?cid=404481&amp;tcad=1"><strong>without</strong></a><a href="https://srv.buysellads.com/ads/long/x/T6SO7SIPTTTTTT66AXINWTTTTTTVWPX42VTTTTTTBTXOABETTTTTTRQUKRDF6IP2P2DDLRBY5E7CLRS2P7CNKIPP5YYE?cid=404481&amp;tcad=1">** torching your budget**</a></h2>
+<p><a href="https://srv.buysellads.com/ads/long/x/T6SO7SIPTTTTTT66AXINWTTTTTTVWPX42VTTTTTTBTXOABETTTTTTRQUKRDF6IP2P2DDLRBY5E7CLRS2P7CNKIPP5YYE?cid=404481&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/67dbd570-ea40-4e58-b3de-ca1930912a55/Display_Webinar_Paid_Ad_1920x1080_V2__1___1_.jpg?t=1794392475" /></a></p>
+<hr />
+<p>Agents drifting or burning tokens?</p>
+<p><a href="https://srv.buysellads.com/ads/long/x/T6SO7SIPTTTTTT66AXINWTTTTTTVWPX42VTTTTTTBTXOABETTTTTTRQUKRDF6IP2P2DDLRBY5E7CLRS2P7CNKIPP5YYE?cid=404481&amp;tcad=1">Learn how top teams keep agents on track</a> in this 30-minute session with Moonshot AI and Runpod on Nov 12:</p>
+<ul>
+<li>
+<p><strong>Delegate smarter:</strong> How to split work (K3 leads, K2 handles tasks)</p>
+</li>
+<li>
+<p><strong>Spend less:</strong> Cut tokens without losing quality</p>
+</li>
+<li>
+<p><strong>Ship faster:</strong> Connect Kimi CLI to Runpod</p>
+</li>
+</ul>
+<p>Plus, a game demo with Blender and Unreal Engine + live Q&amp;A.</p>
+<p><a href="https://srv.buysellads.com/ads/long/x/T6SO7SIPTTTTTT66AXINWTTTTTTVWPX42VTTTTTTBTXOABETTTTTTRQUKRDF6IP2P2DDLRBY5E7CLRS2P7CNKIPP5YYE?cid=404481&amp;tcad=1"><strong>Register now.</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>W</strong><strong>hat’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/57e9f39e-7e33-4045-984f-40c3c2035f08/Screenshot_2026-11-11_at_1.45.29_PM.jpg?t=1794390352" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Startup Rules</strong>: HashiCorp’s founder shared his <a href="https://archive.codenewsletter.ai/2120221244478083249">new company’s playbook</a>, and it’s turning heads. Anyone can cut a release, sync meetings don’t exist, and more (3.5K likes).</p>
+</li>
+<li>
+<p><strong>AI Mechanic</strong>: A dev let Claude loose on his 32-year-old Jeep, and things escalated fast. <a href="https://archive.codenewsletter.ai/2120204711790023128">The full video</a> of what it could eventually do is wild (12K likes).</p>
+</li>
+<li>
+<p><strong>Job Shakeup</strong>: Front-end and mobile engineering jobs dropped by half this year, yet <a href="https://archive.codenewsletter.ai/2120274852766703938">one engineering role grew 4.6x</a>. A report on the state of tech jobs has all the details (1.1K likes).</p>
+</li>
+<li>
+<p><strong>Agent HQ:</strong> A senior dev shares how <a href="https://archive.codenewsletter.ai/2120260969750540327">this simple setup</a> lets AI agents make sweeping updates across all 38 of his repositories at once (2.9K bookmarks).</p>
+</li>
+<li>
+<p><strong>Hiring Regret</strong>: A veteran engineer predicts companies replacing junior devs with AI will regret it within 5 years. <a href="https://archive.codenewsletter.ai/2120192510995644832">His reasoning flips the cost argument </a>on its head (2.7K likes).</p>
+</li>
+<li>
+<p><strong>Magic Sentence</strong>: A dev spotted a buried gem in Anthropic's prompting guide.<a href="https://archive.codenewsletter.ai/2120080226801820156"> Adding just one line</a> made Claude 5x more likely to merge duplicate code and fix bugs (4.3K bookmarks).</p>
+</li>
+<li>
+<p><strong>iPhone Alert</strong>: An unpatched iPhone flaw lets malicious apps read files from other apps, exposing passwords. Here’s what Binance <a href="https://archive.codenewsletter.ai/2120093246399430770">says to do now</a> (3.5M views).</p>
+</li>
+</ul>
+<p><strong><em>P.S.</em></strong> You can reply to this email and let us know your favorite story from this section, and we will do more of those.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=hMEQ4rdaOLw"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ec4f9593-cd2f-4229-98e9-a8ca8a3249e1/Thumbnail__87_.jpg?t=1794388980" /></a></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=hMEQ4rdaOLw">How to fix 11 common coding agent problems today:</a> This tutorial walks through the failure modes that keep wasting your time, from agents claiming they’re done when they aren’t to ignoring your rules, burning through limits, and getting worse as a session drags on. You’ll learn the small skills, rules, hooks, and verification tweaks that make each problem much easier to prevent.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a id="give-every-claude-code-or-codex-thread-its-own-cloud-computer"></a>
+<a href="https://boxes.dev/launch-yc">Boxes.dev:</a> Give every Claude Code or Codex thread its own cloud computer, then let the agents keep working even after you close your laptop. You can start and steer them from Slack, Linear, your phone, desktop, or terminal, run multiple agents in parallel without worktree collisions, and keep using the subscriptions you already pay for.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://www.langchain.com/blog/what-is-eval-driven-development">How to make your agents better with eval-driven development (by LangChain):</a> This guide shows how to stop tweaking prompts by feel and start improving agents against a consistent eval loop. You’ll learn how to define what good looks like, write the eval before the fix, compare versions without hiding regressions, and keep those checks running in CI and production.</p>
+<p><strong>P.S.</strong> You can reply to this email and let us know your favorite resource from this section, and we will do more of those.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-audit-your-codebase-every-time-a-new-model-ships"></a></p>
+<h2><strong>How to audit your codebase every time a new model ships</strong></h2>
+<p>An Anthropic engineer <a href="https://archive.codenewsletter.ai/2119884951550386671">shared</a> the prompt he runs on every project when a new model drops. Newer models catch bugs, dead code, and bad patterns the old one missed, but almost nobody re-checks shipped code.</p>
+<ul>
+<li><strong>Step 1:</strong> Open Claude Code in the project root and switch to the newest model:</li>
+</ul>
+<pre><code>/model
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Paste the prompt:</li>
+</ul>
+<pre><code>Read this entire project and find everything that's broken, inconsistent, inefficient, or no longer needed. Fix what you're sure about and list the rest for me to review.
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Review the “not sure” list before committing anything.</li>
+</ul>
+<p>Pro tip: save the prompt to .claude/commands/audit.md, then run /audit on every model release.</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/d2a465f5-6c1f-44f8-8380-5acad96cdaa7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Fthecode-cybersecurity.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The Code Cybersecurity</strong></a></p>
+</li>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/c8e380c2-717a-4ce2-8531-bf4e67c35ad7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Ftheitcode.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The IT Code</strong></a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code?"><strong>Get in touch.</strong></a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
