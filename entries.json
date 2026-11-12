@@ -1,11 +1,127 @@
 {
   "version": 1,
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "sweep": "2026-09-05 → 2026-11-12",
   "entries": [
     {
-      "uid": "ef2e0ab61d44f96ed3a069ab94c4454c5667dec75feb8fdcbeb7af8b1aeefc98",
+      "uid": "fd73de51a72d6ecd87c93a72db3c0c2e71e30c622cb7729e4049a32b5ed067c6",
+      "id": 313,
+      "title": "Ace gives agents your real Mac over Tailscale instead of a sandbox",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-12",
+          "time": "23:08",
+          "headline": "GitHub Next's open-source tool lets teams and agents collaborate on the same Mac",
+          "href": "newsletters/2026-11-12_newsletter_the_code.md",
+          "anchor": "github-nexts-open-source-tool-lets-teams-and-agents-collaborate-on-the"
+        }
+      ],
+      "prose": [
+        "Ace is GitHub Next's open-source tool for agents working on a real machine rather than a hosted sandbox: shared channels where teammates can steer each other's agents, plus direct access to the local shell, tools and apps over Tailscale. For a Mac-based workflow that is the difference between an agent that can drive real apps and one that only sees a container — the same direction as Terminal Mac and agent-desktop, with the human collaboration layer built in."
+      ],
+      "links": [
+        {
+          "label": "ace.githubnext.com",
+          "url": "https://ace.githubnext.com/"
+        }
+      ]
+    },
+    {
+      "uid": "15bd1896fb483da089606daa0f51afaf922a93282d67da1395873ca4763f5031",
+      "id": 312,
+      "title": "AWS Emulator stubs 200+ services locally so agents can test offline",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-12",
+          "time": "23:08",
+          "headline": "AWS gives coding agents their own local cloud",
+          "href": "newsletters/2026-11-12_newsletter_the_code.md",
+          "anchor": "aws-gives-coding-agents-their-own-local-cloud"
+        }
+      ],
+      "prose": [
+        "AWS shipped an open-source local stand-in for more than 200 of its services so coding agents can run their test loops offline instead of checking every change against the real cloud. That removes the per-call cost and the latency that makes agents stall between iterations, and the emulator itself was written by autonomous agents. AWS's own docs flag the limit: it cannot yet simulate throttling, outages or regional differences, so treat it as a dev-loop accelerator rather than a staging replacement."
+      ],
+      "links": [
+        {
+          "label": "AWS announcement",
+          "url": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator"
+        },
+        {
+          "label": "aws/aws-emulator on GitHub",
+          "url": "https://github.com/aws/aws-emulator"
+        }
+      ]
+    },
+    {
+      "uid": "2b18f99ec0129c3a1adf7c9869a5c4b542aea918087526d64d82aad233a1a724",
+      "id": 311,
+      "title": "Gemini Decision 1 scores 1,000 questions in one pass at $0.10/M",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-12",
+          "time": "23:08",
+          "headline": "Google’s decision model scores 1,000 questions at once",
+          "href": "newsletters/2026-11-12_newsletter_the_code.md",
+          "anchor": "googles-decision-model-scores-1000-questions-at-once"
+        }
+      ],
+      "prose": [
+        "Gemini Decision 1 is a multimodal model built for closed-set decisions: feed it text, images, audio, video or PDFs and it scores up to 1,000 questions in a single pass without generating any output tokens, so your code branches on the probabilities it returns. Typical responses take 150–250ms and it costs $0.10 per million input tokens with no output charges. That makes it the fifth vendor in the decision-model slot this log already tracks — Jev, Microsoft's Decision-1, OpenAI's Decisions API and SubQ Snap — and the first that takes video and PDF inputs."
+      ],
+      "links": [
+        {
+          "label": "The Code archive",
+          "url": "https://archive.codenewsletter.ai/2120581433639198885"
+        },
+        {
+          "label": "Decisions API docs",
+          "url": "https://aistudio.google.com/docs/decisions-api"
+        }
+      ]
+    },
+    {
+      "uid": "681f12dc013ef11a7c7cf901eb97c292527b27fcee8761d4251806d729c4c8be",
       "id": 310,
+      "title": "One prompt turns scattered flags into explicit state machines",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-12",
+          "time": "23:08",
+          "headline": "How to find hidden bugs with one state-machine prompt",
+          "href": "newsletters/2026-11-12_newsletter_the_code.md",
+          "anchor": "how-to-find-hidden-bugs-with-one-state-machine-prompt"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-09",
+          "time": "23:31",
+          "headline": "How to untangle the state logic in a messy project",
+          "href": "newsletters/2026-11-09_newsletter_the_code_2.md",
+          "anchor": "how-to-untangle-the-state-logic-in-a-messy-project"
+        }
+      ],
+      "prose": [
+        "A paste-ready prompt for Claude Code or Codex: find every implicit state machine in the app — scattered booleans, flags and status strings — and refactor them into explicit states without breaking anything, trading off user, developer and agent experience. The workflow is commit a checkpoint, paste the prompt, review the diff, then run tests, since \"without breaking anything\" is an instruction and not a guarantee."
+      ],
+      "links": [
+        {
+          "label": "The one prompt",
+          "url": "https://archive.codenewsletter.ai/2119444845890617507"
+        }
+      ]
+    },
+    {
+      "uid": "ef2e0ab61d44f96ed3a069ab94c4454c5667dec75feb8fdcbeb7af8b1aeefc98",
+      "id": 309,
       "title": "Totem links Claude Code, Codex and Cursor agents into one workspace",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -30,7 +146,7 @@
     },
     {
       "uid": "def80ed624b1ff7114fd5cd05f87aecdf0515aaef26d064000641467b9e528e5",
-      "id": 309,
+      "id": 308,
       "title": "Granola ships free voice typing, straight at Wispr Flow",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -63,7 +179,7 @@
     },
     {
       "uid": "8549fb2590026741b9b20c1e74967efe506709adfa438608a184083476a57960",
-      "id": 308,
+      "id": 307,
       "title": "Gemini 4 Carbon tops the index at Argon's $2/$10 price",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -124,7 +240,7 @@
     },
     {
       "uid": "35136fc276220bcca4de94a30e7f71edab2071e13572c625ae3e59081596846d",
-      "id": 307,
+      "id": 306,
       "title": "Boxes.dev gives each agent thread its own cloud computer",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -149,7 +265,7 @@
     },
     {
       "uid": "f279c1fdc49375b3764275a15ac718fab6dbde7fd047fd468e58baf2b4dac487",
-      "id": 306,
+      "id": 305,
       "title": "One audit prompt to re-check shipped code on every model release",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -174,7 +290,7 @@
     },
     {
       "uid": "cdcf4b871fd1413c06452485fe94f840eee196d2410db6abb5ac638aa74408f2",
-      "id": 305,
+      "id": 304,
       "title": "Amazon's Strands Decider labels tickets 98% cheaper than Claude",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -199,7 +315,7 @@
     },
     {
       "uid": "f1281aed3c5ea5c85be730fa0f9ac953bb869e2606ac9d5e16b64857d2b8f28e",
-      "id": 304,
+      "id": 303,
       "title": "MiniMax-H3-Image ships open weights for native 16MP images",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -228,7 +344,7 @@
     },
     {
       "uid": "088a2c77d32ddbb3e87efebeb1fa92329086ff75671e1abfb9f4d2f03b4fc21f",
-      "id": 303,
+      "id": 302,
       "title": "Exa Monitors runs scheduled web searches that call your agent",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -253,7 +369,7 @@
     },
     {
       "uid": "78b489fdbd9c225c5585cf3459e12f62391bac948e43586589cca8cf75f63dbe",
-      "id": 302,
+      "id": 301,
       "title": "Glasshand hands an agent a real iPhone and Mac",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -278,7 +394,7 @@
     },
     {
       "uid": "92eaecd4919df193d8e6a8210cab282c577da7d421a7b56a74911db3e99840b3",
-      "id": 301,
+      "id": 300,
       "title": "Claude Fable 5.2 matches Opus 5.5 coding at about half the cost",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -319,7 +435,7 @@
     },
     {
       "uid": "d942b1b3120c86e8a969eb41c2a44cccd745c36bdba9607e9ac3429738b58237",
-      "id": 300,
+      "id": 299,
       "title": "One AGENTS.md paragraph stops agents bolting features onto bad architecture",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -344,7 +460,7 @@
     },
     {
       "uid": "c3a118a26b9bc57be21d464013e385b3b1efb72c66c95de05ab035deb830430f",
-      "id": 299,
+      "id": 298,
       "title": "0 Security turns a coding agent into an open-source security harness",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -369,7 +485,7 @@
     },
     {
       "uid": "b27bd4a2f884042e650a3d4da2124bed0725dd021a87d5dcd8f2b24a2a0a8c29",
-      "id": 298,
+      "id": 297,
       "title": "Warp's open-source /merge-risk skill scores a PR before you read it",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -398,7 +514,7 @@
     },
     {
       "uid": "a0733504923e12533909bb0918b48212e85cca26677fed1e71fe505afb1aed55",
-      "id": 297,
+      "id": 296,
       "title": "Meta's Muse Ember: $0.10/M input tokens for high-volume agent calls",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -423,7 +539,7 @@
     },
     {
       "uid": "b6fc360e1fcb83afe0ab7e2f2e08f26d0f3b55d37d36bf5f34a9f0d4f96a18da",
-      "id": 296,
+      "id": 295,
       "title": "Thinking Machines' Inkling 2 Small: open weights with strong vision",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -447,31 +563,6 @@
         {
           "label": "Tinker",
           "url": "https://thinkingmachines.ai/tinker/"
-        }
-      ]
-    },
-    {
-      "uid": "681f12dc013ef11a7c7cf901eb97c292527b27fcee8761d4251806d729c4c8be",
-      "id": 295,
-      "title": "One prompt turns scattered flags into explicit state machines",
-      "theme": "⚙️ LLM tooling & SDKs",
-      "sources": [
-        {
-          "pub": "The Code",
-          "date": "2026-11-09",
-          "time": "23:31",
-          "headline": "How to untangle the state logic in a messy project",
-          "href": "newsletters/2026-11-09_newsletter_the_code_2.md",
-          "anchor": "how-to-untangle-the-state-logic-in-a-messy-project"
-        }
-      ],
-      "prose": [
-        "A paste-ready prompt for Claude Code or Codex: find every implicit state machine in the app — scattered booleans, flags and status strings — and refactor them into explicit states without breaking anything, trading off user, developer and agent experience. The workflow is commit a checkpoint, paste the prompt, review the diff, then run tests, since \"without breaking anything\" is an instruction and not a guarantee."
-      ],
-      "links": [
-        {
-          "label": "The one prompt",
-          "url": "https://archive.codenewsletter.ai/2119444845890617507"
         }
       ]
     },

@@ -1,13 +1,68 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-11-12"
-updated: "2026-11-12"
-sources: "Future Tools, Superhuman AI, The Batch, The Code, The Frontier, Product Hunt Weekly, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+updated: "2026-11-13"
+sources: "The Code, Future Tools, Superhuman AI, The Batch, The Frontier, Product Hunt Weekly, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**310. Totem links Claude Code, Codex and Cursor agents into one workspace**
+**313. Ace gives agents your real Mac over Tailscale instead of a sandbox**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-12 23:08 KST — ["GitHub Next's open-source tool lets teams and agents collaborate on the same Mac"](newsletters/2026-11-12_newsletter_the_code.md#github-nexts-open-source-tool-lets-teams-and-agents-collaborate-on-the)*
+
+Ace is GitHub Next's open-source tool for agents working on a real machine rather than a hosted sandbox: shared channels where teammates can steer each other's agents, plus direct access to the local shell, tools and apps over Tailscale. For a Mac-based workflow that is the difference between an agent that can drive real apps and one that only sees a container — the same direction as Terminal Mac and agent-desktop, with the human collaboration layer built in.
+
+- [ace.githubnext.com](https://ace.githubnext.com/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**312. AWS Emulator stubs 200+ services locally so agents can test offline**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-12 23:08 KST — ["AWS gives coding agents their own local cloud"](newsletters/2026-11-12_newsletter_the_code.md#aws-gives-coding-agents-their-own-local-cloud)*
+
+AWS shipped an open-source local stand-in for more than 200 of its services so coding agents can run their test loops offline instead of checking every change against the real cloud. That removes the per-call cost and the latency that makes agents stall between iterations, and the emulator itself was written by autonomous agents. AWS's own docs flag the limit: it cannot yet simulate throttling, outages or regional differences, so treat it as a dev-loop accelerator rather than a staging replacement.
+
+- [AWS announcement](https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator)
+- [aws/aws-emulator on GitHub](https://github.com/aws/aws-emulator)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**311. Gemini Decision 1 scores 1,000 questions in one pass at $0.10/M**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-12 23:08 KST — ["Google’s decision model scores 1,000 questions at once"](newsletters/2026-11-12_newsletter_the_code.md#googles-decision-model-scores-1000-questions-at-once)*
+
+Gemini Decision 1 is a multimodal model built for closed-set decisions: feed it text, images, audio, video or PDFs and it scores up to 1,000 questions in a single pass without generating any output tokens, so your code branches on the probabilities it returns. Typical responses take 150–250ms and it costs $0.10 per million input tokens with no output charges. That makes it the fifth vendor in the decision-model slot this log already tracks — Jev, Microsoft's Decision-1, OpenAI's Decisions API and SubQ Snap — and the first that takes video and PDF inputs.
+
+- [The Code archive](https://archive.codenewsletter.ai/2120581433639198885)
+- [Decisions API docs](https://aistudio.google.com/docs/decisions-api)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**310. One prompt turns scattered flags into explicit state machines**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-12 23:08 KST — ["How to find hidden bugs with one state-machine prompt"](newsletters/2026-11-12_newsletter_the_code.md#how-to-find-hidden-bugs-with-one-state-machine-prompt)*
+*🗞 The Code · 2026-11-09 23:31 KST — ["How to untangle the state logic in a messy project"](newsletters/2026-11-09_newsletter_the_code_2.md#how-to-untangle-the-state-logic-in-a-messy-project)*
+
+A paste-ready prompt for Claude Code or Codex: find every implicit state machine in the app — scattered booleans, flags and status strings — and refactor them into explicit states without breaking anything, trading off user, developer and agent experience. The workflow is commit a checkpoint, paste the prompt, review the diff, then run tests, since "without breaking anything" is an instruction and not a guarantee.
+
+- [The one prompt](https://archive.codenewsletter.ai/2119444845890617507)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**309. Totem links Claude Code, Codex and Cursor agents into one workspace**
 *🏗️ Agent plumbing & production stacks*
 *🗞 Future Tools · 2026-11-12 03:45 KST — ["Coordinate Multiple AI Agents"](newsletters/2026-11-12_newsletter_future_tools.md#coordinate-multiple-ai-agents)*
 
@@ -20,7 +75,7 @@ Totem is a free shared workspace that connects agents from different tools and a
 
 ---
 
-**309. Granola ships free voice typing, straight at Wispr Flow**
+**308. Granola ships free voice typing, straight at Wispr Flow**
 *🗣️ Voice · TTS & STT*
 *🗞 Future Tools · 2026-11-12 03:45 KST — ["Your favorite notetaker now does the typing too"](newsletters/2026-11-12_newsletter_future_tools.md#your-favorite-notetaker-now-does-the-typing-too)*
 *🗞 Future Tools · 2026-10-31 01:07 KST — ["Granola takes on Wispr with a new dictation tool"](newsletters/2026-10-31_newsletter_future_tools.md#granola-takes-on-wispr-with-a-new-dictation-tool)*
@@ -34,7 +89,7 @@ Granola, the meeting-notes app, has launched a free voice-typing tool aimed squa
 
 ---
 
-**308. Gemini 4 Carbon tops the index at Argon's $2/$10 price**
+**307. Gemini 4 Carbon tops the index at Argon's $2/$10 price**
 *⚙️ LLM tooling & SDKs*
 *🗞 Superhuman AI · 2026-11-11 23:10 KST — ["Google makes its strongest model generally available"](newsletters/2026-11-11_newsletter_superhuman_ai.md#google-makes-its-strongest-model-generally-available)*
 *🗞 The Batch · 2026-11-06 23:03 KST — ["Gemini Leads the Pack Again"](newsletters/2026-11-06_newsletter_the_batch.md#gemini-leads-the-pack-again)*
@@ -52,7 +107,7 @@ Google's second Gemini 4 release in a month ranks #1 on Artificial Analysis' Int
 
 ---
 
-**307. Boxes.dev gives each agent thread its own cloud computer**
+**306. Boxes.dev gives each agent thread its own cloud computer**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-11-11 22:03 KST — ["Give every Claude Code or Codex thread its own cloud computer"](newsletters/2026-11-11_newsletter_the_code.md#give-every-claude-code-or-codex-thread-its-own-cloud-computer)*
 
@@ -65,7 +120,7 @@ Boxes.dev hands each Claude Code or Codex thread a separate cloud machine, so ag
 
 ---
 
-**306. One audit prompt to re-check shipped code on every model release**
+**305. One audit prompt to re-check shipped code on every model release**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-11-11 22:03 KST — ["How to audit your codebase every time a new model ships"](newsletters/2026-11-11_newsletter_the_code.md#how-to-audit-your-codebase-every-time-a-new-model-ships)*
 
@@ -78,7 +133,7 @@ An Anthropic engineer runs a single prompt over the project root each time a new
 
 ---
 
-**305. Amazon's Strands Decider labels tickets 98% cheaper than Claude**
+**304. Amazon's Strands Decider labels tickets 98% cheaper than Claude**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-11-11 22:03 KST — ["Amazon swaps Claude for a model 44x cheaper"](newsletters/2026-11-11_newsletter_the_code.md#amazon-swaps-claude-for-a-model-44x-cheaper)*
 
@@ -91,7 +146,7 @@ Amazon replaced Claude Sonnet 4.6 with its own Strands Decider to label tickets 
 
 ---
 
-**304. MiniMax-H3-Image ships open weights for native 16MP images**
+**303. MiniMax-H3-Image ships open weights for native 16MP images**
 *🧠 Open / efficient / local models*
 *🗞 The Code · 2026-11-11 22:03 KST — ["MiniMax gives devs open weights for 16MP images"](newsletters/2026-11-11_newsletter_the_code.md#minimax-gives-devs-open-weights-for-16mp-images)*
 
@@ -105,7 +160,7 @@ MiniMax released H3-Image with downloadable weights on Hugging Face, native 4K o
 
 ---
 
-**303. Exa Monitors runs scheduled web searches that call your agent**
+**302. Exa Monitors runs scheduled web searches that call your agent**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Frontier · 2026-11-11 07:36 KST — ["Exa Monitors v2 — Web search on a schedule that calls your agent"](newsletters/2026-11-11_newsletter_the_frontier.md#exa-monitors-v2-web-search-on-a-schedule-that-calls-your-agent)*
 
@@ -118,7 +173,7 @@ Exa Monitors v2 runs a saved web query on a schedule and, instead of just mailin
 
 ---
 
-**302. Glasshand hands an agent a real iPhone and Mac**
+**301. Glasshand hands an agent a real iPhone and Mac**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Frontier · 2026-11-11 07:36 KST — ["Glasshand — Give your agent a real iPhone and Mac"](newsletters/2026-11-11_newsletter_the_frontier.md#glasshand-give-your-agent-a-real-iphone-and-mac)*
 
@@ -131,7 +186,7 @@ Glasshand puts a real iPhone and Mac on the other end of the agent's loop rather
 
 ---
 
-**301. Claude Fable 5.2 matches Opus 5.5 coding at about half the cost**
+**300. Claude Fable 5.2 matches Opus 5.5 coding at about half the cost**
 *⚙️ LLM tooling & SDKs*
 *🗞 Superhuman AI · 2026-11-10 23:10 KST — ["Anthropic debuts Fable and Mythos 5.2 as it nears IPO"](newsletters/2026-11-10_newsletter_superhuman_ai.md#anthropic-debuts-fable-and-mythos-52-as-it-nears-ipo)*
 *🗞 The Code · 2026-11-10 23:06 KST — ["Anthropic’s new Claude duo codes at half the cost"](newsletters/2026-11-10_newsletter_the_code.md#anthropics-new-claude-duo-codes-at-half-the-cost)*
@@ -147,7 +202,7 @@ Fable 5.2 and Mythos 5.2 are the same underlying model with different guardrails
 
 ---
 
-**300. One AGENTS.md paragraph stops agents bolting features onto bad architecture**
+**299. One AGENTS.md paragraph stops agents bolting features onto bad architecture**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-11-10 23:06 KST — ["How to stop AI agents from bolting on features"](newsletters/2026-11-10_newsletter_the_code.md#how-to-stop-ai-agents-from-bolting-on-features)*
 
@@ -160,7 +215,7 @@ A one-paragraph addition at the top of AGENTS.md (Cursor, Codex) or CLAUDE.md (C
 
 ---
 
-**299. 0 Security turns a coding agent into an open-source security harness**
+**298. 0 Security turns a coding agent into an open-source security harness**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-11-10 23:06 KST — ["Turn your coding agent into an open-source security harness"](newsletters/2026-11-10_newsletter_the_code.md#turn-your-coding-agent-into-an-open-source-security-harness)*
 
@@ -173,7 +228,7 @@ A one-paragraph addition at the top of AGENTS.md (Cursor, Codex) or CLAUDE.md (C
 
 ---
 
-**298. Warp's open-source /merge-risk skill scores a PR before you read it**
+**297. Warp's open-source /merge-risk skill scores a PR before you read it**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-11-10 23:06 KST — ["5 questions to decide how much human review a PR needs"](newsletters/2026-11-10_newsletter_the_code.md#5-questions-to-decide-how-much-human-review-a-pr-needs)*
 
@@ -187,7 +242,7 @@ Warp's agent-factory lead published a five-check triage for the review queue —
 
 ---
 
-**297. Meta's Muse Ember: $0.10/M input tokens for high-volume agent calls**
+**296. Meta's Muse Ember: $0.10/M input tokens for high-volume agent calls**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-11-10 23:06 KST — ["Meta’s smallest model is built for repeating agentic work"](newsletters/2026-11-10_newsletter_the_code.md#metas-smallest-model-is-built-for-repeating-agentic-work)*
 
@@ -200,7 +255,7 @@ Muse Ember is Meta's smallest, cheapest model at $0.10 per million input tokens 
 
 ---
 
-**296. Thinking Machines' Inkling 2 Small: open weights with strong vision**
+**295. Thinking Machines' Inkling 2 Small: open weights with strong vision**
 *🧠 Open / efficient / local models*
 *🗞 Superhuman AI · 2026-11-09 23:34 KST — ["Thinking Machines debuts its second-generation AI model"](newsletters/2026-11-09_newsletter_superhuman_ai.md#thinking-machines-debuts-its-second-generation-ai-model)*
 
@@ -208,19 +263,6 @@ Thinking Machines' second-generation model targets long-running coding, research
 
 - [Inkling 2 Small](https://thinkingmachines.ai/news/inkling-2-small/)
 - [Tinker](https://thinkingmachines.ai/tinker/)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**295. One prompt turns scattered flags into explicit state machines**
-*⚙️ LLM tooling & SDKs*
-*🗞 The Code · 2026-11-09 23:31 KST — ["How to untangle the state logic in a messy project"](newsletters/2026-11-09_newsletter_the_code_2.md#how-to-untangle-the-state-logic-in-a-messy-project)*
-
-A paste-ready prompt for Claude Code or Codex: find every implicit state machine in the app — scattered booleans, flags and status strings — and refactor them into explicit states without breaking anything, trading off user, developer and agent experience. The workflow is commit a checkpoint, paste the prompt, review the diff, then run tests, since "without breaking anything" is an instruction and not a guarantee.
-
-- [The one prompt](https://archive.codenewsletter.ai/2119444845890617507)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
