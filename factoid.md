@@ -1,11 +1,131 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-11-12"
+sweep: "2026-09-05 → 2026-11-16"
 updated: "2026-11-16"
-sources: "The Code, Future Tools, Superhuman AI, The Batch, The Frontier, Product Hunt Weekly, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+sources: "Product Hunt Weekly, Future Tools, The Code, Superhuman AI, The Batch, The Frontier, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**322. Subscriptrack finds forgotten subscriptions from email, no bank login**
+*🔒 Privacy & local tooling*
+*🗞 Product Hunt Weekly · 2026-11-16 03:33 KST — ["A subscription-finder that doesn’t need your bank details"](newsletters/2026-11-16_newsletter_product_hunt_weekly.md#a-subscription-finder-that-doesnt-need-your-bank-details)*
+
+Subscriptrack works out what you're paying for by reading your email instead of asking for bank credentials, flagging trials that quietly converted, unnoticed price rises and apps nobody uses. The email-only approach is both the privacy argument and a pattern he could reuse in his own inbox tooling, where the receipts already live.
+
+- [Product Hunt](https://www.producthunt.com/products/subscriptrack)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**321. ChromePing translates a live phone call both ways from the browser**
+*🗣️ Voice · TTS & STT*
+*🗞 Product Hunt Weekly · 2026-11-16 03:33 KST — ["Talk to anyone by phone, in a language you don't speak"](newsletters/2026-11-16_newsletter_product_hunt_weekly.md#talk-to-anyone-by-phone-in-a-language-you-dont-speak)*
+
+ChromePing calls any real phone number from the browser and translates the conversation live in both directions with captions running underneath. The person on the other end just picks up their normal phone and hears their own language a couple of seconds after you stop talking — no app on their side, which is the useful bit for calling Korean businesses or family.
+
+- [Product Hunt](https://www.producthunt.com/posts/chromeping)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**320. FindDepth writes research reports and checks figures against sources**
+*⚙️ LLM tooling & SDKs*
+*🗞 Future Tools · 2026-11-14 02:05 KST — ["Research With Verifiable Sources"](newsletters/2026-11-14_newsletter_future_tools.md#research-with-verifiable-sources)*
+
+FindDepth is a paid research assistant that splits a broad question into smaller tasks and produces structured reports from primary sources, verifying each figure against the original document before citing it, with tables and charts, in eight languages. The verification-against-source step is the part worth lifting into his own document pipelines rather than paying for the UI.
+
+- [finddepth.com](https://finddepth.com/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**319. Archilas gives agents one cited, conflict-resolved memory across tools**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Future Tools · 2026-11-14 02:05 KST — ["Give AI Agents a Shared Memory"](newsletters/2026-11-14_newsletter_future_tools.md#give-ai-agents-a-shared-memory)*
+
+Archilas is a memory layer for agents that connects to Slack, Notion, GitHub and Linear, stores each team decision with its source and timestamp, and resolves contradictions when a newer decision replaces an older one. Agents query it over MCP, so Claude Code, Cursor and ChatGPT get current, cited context instead of stale notes. Free and paid tiers.
+
+- [archilas.com](https://archilas.com/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**318. Gemini 4 Hydrogen: 2.5x faster coding at $1.50/$7.50 per million**
+*💸 Token & infra economics*
+*🗞 Superhuman AI · 2026-11-13 23:09 KST — ["Google ships a leaner Carbon alternative and launches new smart glasses"](newsletters/2026-11-13_newsletter_superhuman_ai.md#google-ships-a-leaner-carbon-alternative-and-launches-new-smart-glasse)*
+*🗞 The Code · 2026-11-13 23:07 KST — ["Google gives devs a faster coding model"](newsletters/2026-11-13_newsletter_the_code.md#google-gives-devs-a-faster-coding-model)*
+
+Gemini 4 Hydrogen is a lighter model aimed at the everyday coding tasks you hand off to agents: Google says it finishes jobs 2.5x faster than Gemini 3.8 Flash and scores three times higher on Terminal-Bench 4.1, at a flat $1.50/$7.50 per million input/output tokens. A new Orchestrator in Antigravity pairs it with the heavier Carbon model to get near-Carbon results on 24% less quota, so the usable pattern is cheap model for the inner loop and escalate only when a task stalls.
+
+- [Google's announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/)
+- [The Code's writeup](https://archive.codenewsletter.ai/2120940951292268640)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**317. Two-step prompt catches mobile bugs with Chrome DevTools MCP**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-13 23:07 KST — ["How to catch mobile bugs before your users do"](newsletters/2026-11-13_newsletter_the_code.md#how-to-catch-mobile-bugs-before-your-users-do)*
+
+A design engineer published a two-step QA loop for AI-built frontends that look fine on desktop and break on a phone with bad signal. Install the browser MCP server with `claude mcp add chrome-devtools -- npx chrome-devtools-mcp@latest`, then paste a prompt telling the agent to resize the viewport, emulate touch, throttle to 3G, fix whatever breaks and return before/after screenshots as receipts. The same MCP server works in Cursor and Gemini CLI.
+
+- [The Code's writeup](https://archive.codenewsletter.ai/2120508498236596597)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**316. LiquidCodec: 74M-param speech codec, 361x realtime on one CPU thread**
+*🗣️ Voice · TTS & STT*
+*🗞 The Code · 2026-11-13 23:07 KST — ["Liquid AI makes on-device voice agents faster"](newsletters/2026-11-13_newsletter_the_code.md#liquid-ai-makes-on-device-voice-agents-faster)*
+
+LiquidCodec is a ~74M-parameter model that turns speech into tokens an LLM can work with and back into audio. Liquid AI says it encodes speech 361x faster than real time on a single CPU thread — roughly 13x faster than Kyutai's Mimi — which means lower-latency streaming voice agents that fit on edge devices. It runs through Hugging Face or llama.cpp, so it can be tried locally without a GPU.
+
+- [Liquid AI blog](https://www.liquid.ai/blog/liquidcodec)
+- [The Code's writeup](https://archive.codenewsletter.ai/2120947649994228088)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**315. Anthropic lets you self-host the whole Claude agent stack**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-13 23:07 KST — ["Anthropic lets you run its agents behind your firewall"](newsletters/2026-11-13_newsletter_the_code.md#anthropic-lets-you-run-its-agents-behind-your-firewall)*
+
+Anthropic opened a private beta of self-hosted Claude Managed Agents in which the entire agent stack — sandboxes, credentials and session history — runs in your own cloud or on-premises. The stated use is agents fixing builds and triaging alerts on sensitive code, where the code and the agent's context can't leave the network. Even gated, it is the reference design worth copying: credential isolation plus private session storage around a hosted model.
+
+- [The Code's writeup](https://archive.codenewsletter.ai/2120938988165091693)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**314. OpenWorker open-sources its agent harness SDK and builder skill**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Batch · 2026-11-13 23:03 KST — ["OpenWorker Agent Harness SDK"](newsletters/2026-11-13_newsletter_the_batch.md#openworker-agent-harness-sdk)*
+
+DeepLearning.AI released the OpenWorker Agent Harness SDK — the code that wraps an LLM with context, tools, approvals, memory compaction, credential isolation and sandboxing — plus a builder skill that scaffolds an agent from a prompt: `npx @openworkerai/openworker-harness-builder --agent claude --project .`. It is open source and model-agnostic (OpenAI or Anthropic keys), and Andrew Ng's sample prompt for a directory-restricted file-organising agent with per-move approval is a usable template.
+
+- [The Batch issue](https://info.deeplearning.ai/gpt-6-cyber-versus-linux-the-problem-with-llm-powered-search-llms-edit-model-weights-agentic-doc-retrieval)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **313. Ace gives agents your real Mac over Tailscale instead of a sandbox**
 *🏗️ Agent plumbing & production stacks*

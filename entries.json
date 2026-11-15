@@ -1,8 +1,249 @@
 {
   "version": 1,
   "updated": "2026-11-16",
-  "sweep": "2026-09-05 → 2026-11-12",
+  "sweep": "2026-09-05 → 2026-11-16",
   "entries": [
+    {
+      "uid": "5f1204835cda36892e6bfc6c97cce9dcdabc826c76fb76bd231cca6f4925781c",
+      "id": 322,
+      "title": "Subscriptrack finds forgotten subscriptions from email, no bank login",
+      "theme": "🔒 Privacy & local tooling",
+      "sources": [
+        {
+          "pub": "Product Hunt Weekly",
+          "date": "2026-11-16",
+          "time": "03:33",
+          "headline": "A subscription-finder that doesn’t need your bank details",
+          "href": "newsletters/2026-11-16_newsletter_product_hunt_weekly.md",
+          "anchor": "a-subscription-finder-that-doesnt-need-your-bank-details"
+        }
+      ],
+      "prose": [
+        "Subscriptrack works out what you're paying for by reading your email instead of asking for bank credentials, flagging trials that quietly converted, unnoticed price rises and apps nobody uses. The email-only approach is both the privacy argument and a pattern he could reuse in his own inbox tooling, where the receipts already live."
+      ],
+      "links": [
+        {
+          "label": "Product Hunt",
+          "url": "https://www.producthunt.com/products/subscriptrack"
+        }
+      ]
+    },
+    {
+      "uid": "d5a289e57e99f2e9a8da43b45ae96eb90bb449bb459fae9fac49eba0a717da78",
+      "id": 321,
+      "title": "ChromePing translates a live phone call both ways from the browser",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "Product Hunt Weekly",
+          "date": "2026-11-16",
+          "time": "03:33",
+          "headline": "Talk to anyone by phone, in a language you don't speak",
+          "href": "newsletters/2026-11-16_newsletter_product_hunt_weekly.md",
+          "anchor": "talk-to-anyone-by-phone-in-a-language-you-dont-speak"
+        }
+      ],
+      "prose": [
+        "ChromePing calls any real phone number from the browser and translates the conversation live in both directions with captions running underneath. The person on the other end just picks up their normal phone and hears their own language a couple of seconds after you stop talking — no app on their side, which is the useful bit for calling Korean businesses or family."
+      ],
+      "links": [
+        {
+          "label": "Product Hunt",
+          "url": "https://www.producthunt.com/posts/chromeping"
+        }
+      ]
+    },
+    {
+      "uid": "49dfbc79e3b9c31edc7f0a269194afd4e4d1a06144a867ae8f49e8b02a5efc9f",
+      "id": 320,
+      "title": "FindDepth writes research reports and checks figures against sources",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-14",
+          "time": "02:05",
+          "headline": "Research With Verifiable Sources",
+          "href": "newsletters/2026-11-14_newsletter_future_tools.md",
+          "anchor": "research-with-verifiable-sources"
+        }
+      ],
+      "prose": [
+        "FindDepth is a paid research assistant that splits a broad question into smaller tasks and produces structured reports from primary sources, verifying each figure against the original document before citing it, with tables and charts, in eight languages. The verification-against-source step is the part worth lifting into his own document pipelines rather than paying for the UI."
+      ],
+      "links": [
+        {
+          "label": "finddepth.com",
+          "url": "https://finddepth.com/"
+        }
+      ]
+    },
+    {
+      "uid": "f5a2baa73dc9c6abcb03995a151a98abd7a306c1b66902767515b0ad4bff5a0f",
+      "id": 319,
+      "title": "Archilas gives agents one cited, conflict-resolved memory across tools",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-14",
+          "time": "02:05",
+          "headline": "Give AI Agents a Shared Memory",
+          "href": "newsletters/2026-11-14_newsletter_future_tools.md",
+          "anchor": "give-ai-agents-a-shared-memory"
+        }
+      ],
+      "prose": [
+        "Archilas is a memory layer for agents that connects to Slack, Notion, GitHub and Linear, stores each team decision with its source and timestamp, and resolves contradictions when a newer decision replaces an older one. Agents query it over MCP, so Claude Code, Cursor and ChatGPT get current, cited context instead of stale notes. Free and paid tiers."
+      ],
+      "links": [
+        {
+          "label": "archilas.com",
+          "url": "https://archilas.com/"
+        }
+      ]
+    },
+    {
+      "uid": "ff98de984f963829f0eab9c6b6f63c66c5e86c172dcdc2e04238bbe0b5979478",
+      "id": 318,
+      "title": "Gemini 4 Hydrogen: 2.5x faster coding at $1.50/$7.50 per million",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-13",
+          "time": "23:09",
+          "headline": "Google ships a leaner Carbon alternative and launches new smart glasses",
+          "href": "newsletters/2026-11-13_newsletter_superhuman_ai.md",
+          "anchor": "google-ships-a-leaner-carbon-alternative-and-launches-new-smart-glasse"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-13",
+          "time": "23:07",
+          "headline": "Google gives devs a faster coding model",
+          "href": "newsletters/2026-11-13_newsletter_the_code.md",
+          "anchor": "google-gives-devs-a-faster-coding-model"
+        }
+      ],
+      "prose": [
+        "Gemini 4 Hydrogen is a lighter model aimed at the everyday coding tasks you hand off to agents: Google says it finishes jobs 2.5x faster than Gemini 3.8 Flash and scores three times higher on Terminal-Bench 4.1, at a flat $1.50/$7.50 per million input/output tokens. A new Orchestrator in Antigravity pairs it with the heavier Carbon model to get near-Carbon results on 24% less quota, so the usable pattern is cheap model for the inner loop and escalate only when a task stalls."
+      ],
+      "links": [
+        {
+          "label": "Google's announcement",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+        },
+        {
+          "label": "The Code's writeup",
+          "url": "https://archive.codenewsletter.ai/2120940951292268640"
+        }
+      ]
+    },
+    {
+      "uid": "63ce68e0e04c3b642094229feb7bd5c7710f30b81f5d3d2b68101d7f0783741f",
+      "id": 317,
+      "title": "Two-step prompt catches mobile bugs with Chrome DevTools MCP",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-13",
+          "time": "23:07",
+          "headline": "How to catch mobile bugs before your users do",
+          "href": "newsletters/2026-11-13_newsletter_the_code.md",
+          "anchor": "how-to-catch-mobile-bugs-before-your-users-do"
+        }
+      ],
+      "prose": [
+        "A design engineer published a two-step QA loop for AI-built frontends that look fine on desktop and break on a phone with bad signal. Install the browser MCP server with `claude mcp add chrome-devtools -- npx chrome-devtools-mcp@latest`, then paste a prompt telling the agent to resize the viewport, emulate touch, throttle to 3G, fix whatever breaks and return before/after screenshots as receipts. The same MCP server works in Cursor and Gemini CLI."
+      ],
+      "links": [
+        {
+          "label": "The Code's writeup",
+          "url": "https://archive.codenewsletter.ai/2120508498236596597"
+        }
+      ]
+    },
+    {
+      "uid": "040852e5a890c98f727e2bfa6358d64b3d3d0a13b3c34ea5539b38d063551eb6",
+      "id": 316,
+      "title": "LiquidCodec: 74M-param speech codec, 361x realtime on one CPU thread",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-13",
+          "time": "23:07",
+          "headline": "Liquid AI makes on-device voice agents faster",
+          "href": "newsletters/2026-11-13_newsletter_the_code.md",
+          "anchor": "liquid-ai-makes-on-device-voice-agents-faster"
+        }
+      ],
+      "prose": [
+        "LiquidCodec is a ~74M-parameter model that turns speech into tokens an LLM can work with and back into audio. Liquid AI says it encodes speech 361x faster than real time on a single CPU thread — roughly 13x faster than Kyutai's Mimi — which means lower-latency streaming voice agents that fit on edge devices. It runs through Hugging Face or llama.cpp, so it can be tried locally without a GPU."
+      ],
+      "links": [
+        {
+          "label": "Liquid AI blog",
+          "url": "https://www.liquid.ai/blog/liquidcodec"
+        },
+        {
+          "label": "The Code's writeup",
+          "url": "https://archive.codenewsletter.ai/2120947649994228088"
+        }
+      ]
+    },
+    {
+      "uid": "ee20434a1de5c9f67ab2cca812b87775f3ce8f5427a6087eee186610fd6b623b",
+      "id": 315,
+      "title": "Anthropic lets you self-host the whole Claude agent stack",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-13",
+          "time": "23:07",
+          "headline": "Anthropic lets you run its agents behind your firewall",
+          "href": "newsletters/2026-11-13_newsletter_the_code.md",
+          "anchor": "anthropic-lets-you-run-its-agents-behind-your-firewall"
+        }
+      ],
+      "prose": [
+        "Anthropic opened a private beta of self-hosted Claude Managed Agents in which the entire agent stack — sandboxes, credentials and session history — runs in your own cloud or on-premises. The stated use is agents fixing builds and triaging alerts on sensitive code, where the code and the agent's context can't leave the network. Even gated, it is the reference design worth copying: credential isolation plus private session storage around a hosted model."
+      ],
+      "links": [
+        {
+          "label": "The Code's writeup",
+          "url": "https://archive.codenewsletter.ai/2120938988165091693"
+        }
+      ]
+    },
+    {
+      "uid": "4e4d138af3c932fef4093192f680f154b09baec9eaf992c241b55527546c74ae",
+      "id": 314,
+      "title": "OpenWorker open-sources its agent harness SDK and builder skill",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Batch",
+          "date": "2026-11-13",
+          "time": "23:03",
+          "headline": "OpenWorker Agent Harness SDK",
+          "href": "newsletters/2026-11-13_newsletter_the_batch.md",
+          "anchor": "openworker-agent-harness-sdk"
+        }
+      ],
+      "prose": [
+        "DeepLearning.AI released the OpenWorker Agent Harness SDK — the code that wraps an LLM with context, tools, approvals, memory compaction, credential isolation and sandboxing — plus a builder skill that scaffolds an agent from a prompt: `npx @openworkerai/openworker-harness-builder --agent claude --project .`. It is open source and model-agnostic (OpenAI or Anthropic keys), and Andrew Ng's sample prompt for a directory-restricted file-organising agent with per-move approval is a usable template."
+      ],
+      "links": [
+        {
+          "label": "The Batch issue",
+          "url": "https://info.deeplearning.ai/gpt-6-cyber-versus-linux-the-problem-with-llm-powered-search-llms-edit-model-weights-agentic-doc-retrieval"
+        }
+      ]
+    },
     {
       "uid": "fd73de51a72d6ecd87c93a72db3c0c2e71e30c622cb7729e4049a32b5ed067c6",
       "id": 313,

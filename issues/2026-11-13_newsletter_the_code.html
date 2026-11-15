@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚀 Google drops a faster coding model — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚀 Google drops a faster coding model — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚀 Google drops a faster coding model</h1>
+<p class="meta">2026-11-13 · received 2026-11-13 23:07 +0900
+ · <a href="https://codenewsletter.ai/p/google-gives-devs-a-faster-coding-model" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚀 Google drops a faster coding model</h1>
+<p><a href="https://www.jetbrains.com/air/ides/?utm_source=newsletter&amp;utm_medium=banner&amp;utm_campaign=air&amp;utm_term=thecode&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/183b2e42-0703-4bee-87fc-88dab3c025d6/Group_JetBrains.jpg?t=1794562321" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Google’s on a roll, and its latest model is built to make your everyday coding tasks faster and cheaper. Meanwhile, Anthropic is giving you more control over Claude’s agents, letting you run the entire stack, from sandboxes to session history, in your own cloud or on-premises.</p>
+<p><strong>Also:</strong> Check if your coding agents hog resources, a researcher’s “proof” that four Chinese AI labs used banned NVIDIA chips, and seven steps to turn AI slop into gold.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Why Gumloop’s CTO stopped babysitting coding agents</p>
+</li>
+<li>
+<p>Four everyday habits reveal if you’re an AI power user</p>
+</li>
+<li>
+<p>Manage coding agents across multiple repos (tutorial)</p>
+</li>
+<li>
+<p>Train a transformer with no ML experience (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2120940601319260164"><img alt="Click here to watch how you can use Google’s new model, Hydrogen." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b7f4f7fb-4fd1-44c1-9518-2872ed6ac645/Thumbnail__91_.jpg?t=1794556619" /></a>
+<em>Click here to watch how you can use Google’s new model, Hydrogen.</em></p>
+<hr />
+<p><a id="google-gives-devs-a-faster-coding-model"></a>
+<strong>Google gives devs a faster coding model:</strong> The search giant just dropped <a href="https://archive.codenewsletter.ai/2120940601319260164">Gemini 4 Hydrogen</a>, a lighter model built for everyday coding tasks you hand off to agents. Google <a href="https://archive.codenewsletter.ai/2120940951292268640">says</a> it finishes jobs 2.5x quicker than Gemini 3.8 Flash and scores three times higher on Terminal-Bench 4.1. And when you need more muscle, a new Orchestrator in Antigravity pairs it with the heavier Carbon model, delivering near-Carbon results on 24% less quota. Pricing is a flat $1.50/$7.50 per 1M input/output tokens. Try it <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">here</a>.</p>
+<p><a id="anthropic-lets-you-run-its-agents-behind-your-firewall"></a>
+<strong>Anthropic lets you run its agents behind your firewall:</strong> The AI lab just opened a private beta of self-hosted <a href="https://archive.codenewsletter.ai/2120938988165091693">Claude Managed Agents</a>, so your team can run the entire agent stack in its own cloud or on-premise. That includes sandboxes, credentials and session history, making it easier to put agents to work fixing builds and triaging alerts on sensitive code. Anthropic is also rolling out <a href="https://claude.com/resources/articles/claude-meetings">Claude Meetings</a> in beta, which joins your video calls, creates docs and whiteboards as you talk, and saves notes afterward.</p>
+<p><a id="liquid-ai-makes-on-device-voice-agents-faster"></a>
+<strong>Liquid AI makes on-device voice agents faster:</strong> The AI startup just shipped <a href="https://archive.codenewsletter.ai/2120947649994228088">LiquidCodec</a>, a ~74M-parameter model that turns speech into tokens language models can work with, then converts them back into audio. Liquid AI says it encodes speech 361x faster than real time on a single CPU thread, making it roughly 13x faster than Kyutai’s Mimi. That could mean quicker responses and smoother streaming for your voice agents, even on edge devices. It runs through Hugging Face or llama.cpp. Try it <a href="https://www.liquid.ai/blog/liquidcodec">here</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY JETBRAINS</strong></h5>
+<h2><a href="https://www.jetbrains.com/air/ides/?utm_source=newsletter&amp;utm_medium=banner&amp;utm_campaign=air&amp;utm_term=thecode&amp;tcad=1">Use your agents. Keep your IDE with Air</a></h2>
+<p><a href="https://www.jetbrains.com/air/ides/?utm_source=newsletter&amp;utm_medium=banner&amp;utm_campaign=air&amp;utm_term=thecode&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/278a31f0-1c88-4976-a055-64f44054835d/Air_Logo_with_Toy_Airplane_Illustration.jpg?t=1794562655" /></a></p>
+<hr />
+<p>AI agents now write more of your code than ever, which makes reviewing it the new bottleneck.</p>
+<p><a href="https://www.jetbrains.com/air/ides/?utm_source=newsletter&amp;utm_medium=banner&amp;utm_campaign=air&amp;utm_term=thecode&amp;tcad=1">Air, now built into JetBrains IDEs</a>, gives you one place to run your agents and stay in control of every change:</p>
+<ul>
+<li>
+<p>Use Claude Code, Codex or GitHub Copilot with your own subscriptions</p>
+</li>
+<li>
+<p><a href="https://www.jetbrains.com/air/ides/?utm_source=newsletter&amp;utm_medium=banner&amp;utm_campaign=air&amp;utm_term=thecode&amp;tcad=1">Run several agents in parallel</a>, each with real IDE context like the debugger and code search</p>
+</li>
+<li>
+<p>Review their changes and send code notes back to a specific session and agent</p>
+</li>
+</ul>
+<p><a href="https://www.jetbrains.com/air/ides/?utm_source=newsletter&amp;utm_medium=banner&amp;utm_campaign=air&amp;utm_term=thecode&amp;tcad=1"><strong>Try Air with free AI</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Why Gumloop’s CTO stopped babysitting coding agents and built a factory instead</strong></h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0fdbdd29-458f-438a-a708-b08a974c74dd/superhumanteam_a_man_holding_up_a_small_robot_--ar_169_--sref_be16fe2a-d135-40e7-af86-ffc14f6062f8_1.jpg?t=1794564754" /></p>
+<hr />
+<p><strong>Five VMs, one problem.</strong> Gumloop’s AI agents had gotten slow to start, and users noticed. CTO Rahul Behal then opened five VMs and asked a coding agent in each one to find the cause. Before he finished setting up the fifth, the first came back with a fix. Most of the time, the agents were right. So why was he still in the middle?</p>
+<p><strong>Enter the factory.</strong> That experiment became the basis of Gumloop’s <a href="https://www.gumloop.com/engineering/software-factory">Software Factory</a>, where agents handle the repetitive work and engineers focus on what actually needs their attention. Here’s the playbook in six steps:</p>
+<ul>
+<li>
+<p><strong>Pick easy wins.</strong> Start with bugs, slow endpoints, or platform tasks where the fix is easy to verify.</p>
+</li>
+<li>
+<p><strong>Give tasks their own lanes.</strong> Split work into production lines, each owned by the engineer who knows it best.</p>
+</li>
+<li>
+<p><strong>Ditch the busywork.</strong> Scheduled triggers or a quick ping open Linear tickets for you.</p>
+</li>
+<li>
+<p><strong>Let agents manage agents.</strong> A Gumloop worker reads your team’s skills and conventions, then sends the task to a coding agent.</p>
+</li>
+<li>
+<p><strong>Demand receipts.</strong> Every PR needs proof, like a test that fails before the fix and passes after. You still get the final say on merges.</p>
+</li>
+<li>
+<p><strong>Answer once, reuse forever.</strong> Agents ask the line owner in Slack for decisions and remember the answer.</p>
+</li>
+</ul>
+<p><strong>The scoreboard.</strong> In six weeks, engineers merged 571 agent-written PRs. P99 agent start times dropped from 24.9 to 4.5 seconds, and 83% of closed agent-written PRs needed zero human code changes.</p>
+<p><strong>Write it down.</strong> Gumloop wrote or updated 94 skills in five weeks, and no-human-edit merges jumped from 57% to 89%. The more you document your team’s decisions, the less you have to babysit agents. The <a href="https://www.gumloop.com/engineering/software-factory">full breakdown</a> goes deeper, from Slack judgment calls to adding Devin after a Cursor outage.</p>
+<hr />
+<h5><strong>PRESENTED BY GRANOLA</strong></h5>
+<h2><a href="http://go.granola.ai/thecode?tcad=1">Your team's meetings, in one place</a></h2>
+<p><a href="http://go.granola.ai/thecode?tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9b69ecef-136f-4758-88cd-24c6aeadda17/VoiceTyping%2BGranola%2BNewsletter_2__1_.jpg?t=1794487432" /></a></p>
+<hr />
+<p><a href="http://go.granola.ai/thecode?tcad=1">Granola Voice Typing</a> is now available on Mac, Windows and iOS (Android coming soon).</p>
+<p>Hold a key, talk, and clean text lands in any app, with your colleagues' names and jargon spelled right because Granola already knows your meetings. Unlimited words for all Granola users.</p>
+<p><a href="http://go.granola.ai/thecode?tcad=1"><strong>First month on us with code THECODE.</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>W</strong><strong>hat’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ddeb571c-bee9-4e95-a572-c740d35616db/Screenshot_2026-11-13_at_2.24.50_PM.jpg?t=1794565509" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Tool Audit:</strong> A new benchmark ran 15 AI coding tools on one Mac with identical tasks. <a href="https://archive.codenewsletter.ai/2121005921694556557">The rankings reveal</a> which ones secretly hog your CPU, memory, and tokens.</p>
+</li>
+<li>
+<p><strong>Silicon Sleuth:</strong> A researcher claims he can prove <a href="https://archive.codenewsletter.ai/2120992457630326841">four Chinese AI labs</a> used banned NVIDIA chips, no leaks or insiders required (4.8M views).</p>
+</li>
+<li>
+<p><strong>Skill Shift:</strong> A principal engineer at GoDaddy says the technical skills that built his career are quietly losing value. He laid out <a href="https://archive.codenewsletter.ai/2120897438001283512">what software engineers should do</a> instead (2.8K bookmarks).</p>
+</li>
+<li>
+<p><strong>Slop to Gold:</strong> A SpaceXAI engineer reports her team ships 11,000 agent-written pull requests a month, and <a href="https://archive.codenewsletter.ai/2120607968408531110">her seven steps</a> can help you do it too (2.5K bookmarks).</p>
+</li>
+<li>
+<p><strong>Endangered Roles:</strong> A veteran engineer says <a href="https://archive.codenewsletter.ai/2120426774576103438">two established engineering specialties are dying</a>, with openings nearly halved in a year. He also named what’s replacing them (1.7K likes).</p>
+</li>
+<li>
+<p><strong>Power Users:</strong> One trait separates people who use AI agents effectively from everyone else, a senior dev claims. <a href="https://archive.codenewsletter.ai/2120970648310927519">Four everyday habits reveal</a> where you stand.</p>
+</li>
+<li>
+<p><strong>Same Mistakes:</strong> Your agent’s memory may be an illusion. A new benchmark claims the top agents learn nothing from experience, while <a href="https://archive.codenewsletter.ai/2120535187587268777">one tiny model quietly did</a> (1.2M views).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=hWe-j78vNpc"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/57f50f5e-1b3f-4ad9-9ba1-9db04c6143e8/Thumbnail__92_.jpg?t=1794565093" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=hWe-j78vNpc">How to manage coding agents across multiple repos:</a> Senior dev Matt Pocock shows how to use a single “Home Repo” to keep shared skills, steering files, and custom tooling in one place instead of duplicating them across every project. You’ll learn how to structure the setup, scale it across repos, and keep your agent workflow consistent without moving everything into a monorepo.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://alexandria.firecrawl.dev/go/jobtools">Firecrawl:</a> Turn ChatGPT or Claude into a job-hunting agent. It can match your resume against 7M+ open roles, find hiring managers across 250M+ people, and surface what they care about before you reach out. It also works with Claude Code, Codex, Cursor, Grok Build, OpenCode, and other agent setups.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://aiengg.dev/blog/how-to-train-a-transformer">How to train a transformer with no ML experience:</a> This guide follows a software engineer building and training a transformer from scratch for a real coding challenge. You’ll learn how to turn application state into tokens, use distillation and self-play, shrink the model to fit tight runtime limits, and test whether better training scores actually translate into better results in the real system.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-catch-mobile-bugs-before-your-users-do"></a></p>
+<h2><strong>How to catch mobile bugs before your users do</strong></h2>
+<p>A design engineer <a href="https://archive.codenewsletter.ai/2120508498236596597">shared</a> a QA prompt that fixes a common failure: AI-built frontends look fine on your desktop and fall apart on a phone with bad signal.</p>
+<ul>
+<li><strong>Step 1:</strong> First, give Claude Code a real browser. Install the Chrome DevTools MCP server</li>
+</ul>
+<pre><code>claude mcp add chrome-devtools -- npx chrome-devtools-mcp@latest
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Start your dev server, then paste this prompt</li>
+</ul>
+<pre><code>Test this in the browser at different widths, with touch emulation, and on a throttled 3G connection. Fix anything that looks broken or feels off. Save a before and after screenshot for every fix and send me a summary afterwards.
+</code></pre>
+<p>Claude opens the app, resizes the viewport, throttles the network, patches what breaks, and hands back before/after screenshots as receipts. The same MCP works in Cursor and Gemini CLI.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>A software engineer <a href="https://archive.codenewsletter.ai/2120157869232537650">shared a site</a> tracking tech layoffs and 90K+ open roles in real time, and it’s already blown up.</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/d2a465f5-6c1f-44f8-8380-5acad96cdaa7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Fthecode-cybersecurity.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The Code Cybersecurity</strong></a></p>
+</li>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/c8e380c2-717a-4ce2-8531-bf4e67c35ad7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Ftheitcode.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The IT Code</strong></a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code?"><strong>Get in touch.</strong></a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
