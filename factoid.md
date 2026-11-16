@@ -2,7 +2,7 @@
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-11-16"
 updated: "2026-11-16"
-sources: "Product Hunt Weekly, Future Tools, The Code, Superhuman AI, The Batch, The Frontier, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+sources: "Product Hunt Weekly, Future Tools, Superhuman AI, The Code, The Batch, The Frontier, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
