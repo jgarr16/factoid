@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚀 How to get your side project funded — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚀 How to get your side project funded — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚀 How to get your side project funded</h1>
+<p class="meta">2026-11-16 · received 2026-11-16 00:31 +0900
+ · <a href="https://codenewsletter.ai/p/how-to-fund-the-ai-project-vcs-won-t-touch-yet" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚀 How to get your side project funded</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/19c25ccf-428f-4317-8865-bd0da7b9c121/Add_a_heading__9_.jpg?t=1793965483" /></p>
+<hr />
+<p><strong>Welcome back.</strong> Don’t know how to raise venture capital for your project? Or don’t want to? Now there’s another path to get your project funded and build it on your terms.</p>
+<p>Maybe it’s a small model fine-tuned for a single task. Maybe it’s an AI app built as a side project or an open‑source tool that a few teams self‑host. VCs pass on these projects, so you end up paying for the compute yourself.</p>
+<p>Now, <a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/human-scale-ai/?utm_medium=paid&amp;utm_source=code-newsletter&amp;utm_campaign=26-ai-human-scale&amp;utm_content=ad_deep-dive&amp;utm_term=nov-2026">Mozilla Foundation is stepping in</a>. They’re backing seven of these projects with up to $500,000 each over three years and taking no equity.</p>
+<p>Today we’ll break down the three projects Mozilla has already backed and show you how to apply.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Project #1: A private AI assistant that runs locally</p>
+</li>
+<li>
+<p>Project #2: A tool that measures your code’s CO₂</p>
+</li>
+<li>
+<p>Project #3: A private AI memory for your family</p>
+</li>
+<li>
+<p>What Mozilla is funding and how to apply</p>
+</li>
+</ul>
+<hr />
+<h5><strong>PROJECT #1: TILES</strong></h5>
+<p><a id="how-tiles-runs-a-private-ai-assistant-locally"></a></p>
+<h2><strong>How Tiles runs a private AI assistant locally</strong></h2>
+<p><a href="https://tiles.run/"><img alt="Click here to watch how Tiles works." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a82e584d-82fe-41e9-a6e5-45a3d4650efd/Thumbnail__38___1_.jpg?t=1794479237" /></a>
+<em>Click here to watch how Tiles works.</em></p>
+<hr />
+<p>Most AI apps get more expensive to run with every new user. Every chat hits servers the team has to pay for. For a project that will never raise venture capital, that bill is usually the end of the road.</p>
+<p><a href="https://tiles.run/"><strong>Tiles</strong></a> is different. It’s a private AI assistant for Mac and Linux designed to keep costs under control. The models run locally on your machine, so your chats never touch a Tiles server.</p>
+<p><strong>Here’s how they built it:</strong></p>
+<ul>
+<li>
+<p>Models run locally, and Tiles picks the default models for you, so there’s little to set up and the user’s own hardware does the inference.</p>
+</li>
+<li>
+<p>Accounts and their keys are generated on the device, with no central identity provider. They’re built on two open standards (DIDs and UCANs).</p>
+</li>
+<li>
+<p>Chats sync directly between users' devices with end-to-end encryption over an open-source peer-to-peer library called Iroh.</p>
+</li>
+<li>
+<p>Chat sharing runs on AT Protocol, the open network behind Bluesky, so the team did not build its own.</p>
+</li>
+<li>
+<p>When a laptop is too weak for a model, it borrows the GPU of another machine the user owns.</p>
+</li>
+</ul>
+<p>Most of that list is open standards and libraries maintained by others. A small team assembled them into a product, so its costs don’t increase as users join.</p>
+<p>Tiles shipped version 0.5.0 Alpha 24 this week, and <a href="https://thecode-tiles-workflow.netlify.app/"><strong>you can test it here</strong></a><a href="https://thecode-tiles-workflow.netlify.app/">.</a></p>
+<hr />
+<h5><strong>PROJECT #2: CODECARBON</strong></h5>
+<h2><strong>How CodeCarbon shows you the CO₂ your code emits</strong></h2>
+<p><a href="https://vimeo.com/1246342034?share=copy&amp;fl=sv&amp;fe=ci"><img alt="Benoît Courty talks CodeCarbon on the mainstage at [Mozilla Festival in 2026](https://mzl.la/4zkNC1h)." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4a404640-490f-4011-a66a-0dfa8e782ddd/Thumbnail__42_.jpg?t=1794584151" /></a>
+<em>Benoît Courty talks CodeCarbon on the mainstage at <a href="https://mzl.la/4zkNC1h">Mozilla Festival in 2026</a>.</em></p>
+<hr />
+<p>Every training run and batch job uses power, and that power comes with a carbon cost. Most developers never see that number. <a href="https://codecarbon.io/">CodeCarbon</a> is an open-source Python package that puts it front and center.</p>
+<p>It measures the electricity your CPU, GPU, and RAM consume while your code runs, then factors in the carbon intensity of your local power grid. It works on any hardware you manage, whether that is a laptop, a dedicated workstation, or a cloud VM.</p>
+<p>Once you have that data, you can compare two models, test different regions, or benchmark a job before and after optimization. Setup takes one install and a few lines around your code, and you can follow <a href="https://thecode-codecarbon-workflow.netlify.app/"><strong>the full steps here.</strong></a></p>
+<p>CodeCarbon is built and maintained by volunteers in their spare time, and it joined Mozilla’s inaugural cohort last year. According to the team, the grant included coaching on strategy, operations, and design to help transition the project into a financially sustainable nonprofit.</p>
+<hr />
+<h5><strong>PROJECT #3: FAMILY INTELLIGENCE</strong></h5>
+<p><a id="how-family-intelligence-stops-a-model-from-guessing-who-said-what"></a></p>
+<h2><strong>How Family Intelligence stops a model from guessing who said what</strong></h2>
+<p><a href="https://www.intelligence.family/research"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/38606917-25ab-4ce5-b1c1-6c00fb2dc4e7/Thumbnail__39_.jpg?t=1794482067" /></a></p>
+<hr />
+<p>If you've ever run a recording through a transcription model, you know how it goes. Every line is labeled "SPEAKER_00" or "SPEAKER_01," and you're still left trying to figure out which one is Grandma.</p>
+<p>Family Intelligence can’t afford that kind of guesswork. The team is building a shared AI memory for households, turning recorded <a href="https://www.intelligence.family/research">family conversations into an archive</a> of people, places, and milestones. It runs offline on home hardware, using pyannote-audio to separate voices and faster-whisper to transcribe them, so no outside server can read the data.</p>
+<p>To identify who is speaking, their prompt directs the model to gather context clues throughout the conversation, like someone asking “Wouldn’t it, Mia?” right before SPEAKER_01 chimes in. From there, the model grades its own answer:</p>
+<pre><code>CERTAIN: explicit statement like &quot;I am John&quot;
+PROBABLE: direct address followed by a response
+POSSIBLE: single weak clue or conflicting clues
+UNKNOWN: no identification clues found
+</code></pre>
+<p>Each grade is defined by the evidence it needs, so the model checks clues against a rubric rather than rating its own confidence. Read the <a href="https://thecode-family-intelligence-prompt.netlify.app/"><strong>full prompt here.</strong></a></p>
+<p>It’s also a clear example of what the Mozilla Foundation funds: a focused user base, data that never leaves the house, and <a href="https://www.intelligence.family/research">published research</a> proving it works.</p>
+<hr />
+<h5><strong>HOW TO</strong> <strong>APPLY</strong></h5>
+<p><a href="https://player.vimeo.com/progressive_redirect/playback/1246629327/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&amp;signature=15c01b05c08cd830367e641e80aedb6ed69d5f44ffa74f75176fdb13244535e8"><img alt="Click here to learn more details about Mozilla Foundation’s Studio." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8dfbe40a-3c51-438b-bf82-87a1c991adc3/Thumbnail__43_.jpg?t=1794584360" /></a>
+<em>Click here to learn more details about Mozilla Foundation’s Studio.</em></p>
+<hr />
+<p>So, how can you get your project funded?</p>
+<p>Seven projects will each receive up to $500,000 over three years, with devs keeping full ownership. Selected teams also get access to a shared GPU cluster, so you don’t have to rent from major cloud providers.</p>
+<p><strong>Who should apply.</strong> Devs with a working project and active users. If you only have an early idea, Mozilla’s <a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/fellowship/2027-call-for-applications/?utm_medium=paid&amp;utm_source=code-newsletter&amp;utm_campaign=27-fellowships&amp;utm_content=ad_deep-dive&amp;utm_term=46338">Fellowship</a> is the better fit.</p>
+<p><strong>How to apply.</strong> If that sounds like your project, you have until Friday.</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Read the full <a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/human-scale-ai/call-for-proposals/?utm_medium=paid&amp;utm_source=code-newsletter&amp;utm_campaign=26-ai-human-scale&amp;utm_content=ad_deep-dive&amp;utm_term=nov-2027"><strong>call for proposals</strong></a><a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/human-scale-ai/call-for-proposals/?utm_medium=paid&amp;utm_source=code-newsletter&amp;utm_campaign=26-ai-human-scale&amp;utm_content=ad_deep-dive&amp;utm_term=nov-2027">.</a></p>
+</li>
+<li>
+<p><strong>Step 2:</strong> Submit your proposal by Friday, November 20, at 11:59 p.m. Pacific (UTC-8).</p>
+</li>
+</ul>
+<p>Not applying? Mozilla is also backing 20 performing artists who build tech for their own fields, such as open-source live captions for theaters and haptics that let deaf audiences feel music. They’re looking for developers to help and you can <a href="https://mozillafoundation.tfaforms.net/f/grantmaking"><strong>sign up here</strong></a><a href="https://mozillafoundation.tfaforms.net/f/grantmaking">.</a></p>
+<hr />
+<h5><strong>MORE PROJECTS MOZILLA FOUNDATION IS BACKING</strong></h5>
+<ul>
+<li>
+<p>DAIR plans to open-source Kaskazi Foundry, the platform behind its sustainable shared compute, so other organizations can pool and share theirs too (<a href="https://dair-institute.org/projects/">link</a>).</p>
+</li>
+<li>
+<p>A tool that shows you where an AI model repeats stereotypes (<a href="https://ia.vialibre.org.ar/en/home/"><strong>link</strong></a>).</p>
+</li>
+<li>
+<p>A single website where people can search Philippine government services (<a href="https://bettergov.ph/contribute"><strong>link</strong></a>).</p>
+</li>
+<li>
+<p>A checker that finds mistakes in quantum computing models in milliseconds (<a href="https://github.com/MathysRennela/emlint"><strong>link</strong></a>).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>STARTING POINT</strong></h5>
+<p><strong>Before you apply.</strong> See how your project stacks up against the three above, and note that each solves a specific problem for a specific group and is already up and running.</p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://thecode-cybersecurity.beehiiv.com/subscribe">The Code Cybersecurity</a></p>
+</li>
+<li>
+<p><a href="https://theitcode.beehiiv.com/subscribe_v1">The IT Code</a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

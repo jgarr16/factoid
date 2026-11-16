@@ -1,11 +1,169 @@
 {
   "version": 1,
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "sweep": "2026-09-05 → 2026-11-16",
   "entries": [
     {
+      "uid": "7949c98b02d7d3f3c9cb0e28627f1365d21b1e3c8ff36a50715af94cf7d36da0",
+      "id": 330,
+      "title": "ChatGPT Wallet lets agents pay with a token, not your card",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-16",
+          "time": "23:08",
+          "headline": "OpenAI launches a secure way to pay with agents",
+          "href": "newsletters/2026-11-16_newsletter_superhuman_ai.md",
+          "anchor": "openai-launches-a-secure-way-to-pay-with-agents"
+        }
+      ],
+      "prose": [
+        "Built with American Express, Mastercard and Visa, ChatGPT Wallet swaps the card details for a per-purchase payment token, so the agent never sees the number. It is rolling out now, starting on Dots for US ChatGPT Pro subscribers. OpenAI also published commerce guidance for merchants on making a business agent-friendly — the practical piece if you ever want an agent to complete a checkout rather than hand you a link."
+      ],
+      "links": [
+        {
+          "label": "ChatGPT Wallet",
+          "url": "https://openai.com/index/introducing-chatgpt-wallet/"
+        },
+        {
+          "label": "Agent-friendly commerce guidance",
+          "url": "https://developers.openai.com/commerce"
+        }
+      ]
+    },
+    {
+      "uid": "c24eecc9af4f6fc4514926351f4b73eac36a5e0b4d49dc8c7c04a80868ff3c41",
+      "id": 329,
+      "title": "Bland AI's Tofu-1 voices whole soundscapes in real time",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-16",
+          "time": "23:08",
+          "headline": "Bland AI reveals a voice model that generates entire soundscapes",
+          "href": "newsletters/2026-11-16_newsletter_superhuman_ai.md",
+          "anchor": "bland-ai-reveals-a-voice-model-that-generates-entire-soundscapes"
+        }
+      ],
+      "prose": [
+        "Tofu-1 does not emit a single clean voice: it generates multiple speakers, overlapping voices and background noise in one output. It is full-duplex, so it hears and speaks simultaneously and keeps thinking while talking, and it separates the speaker's voice from surrounding sound. Bland claims 92% of listeners could not tell it was AI; it ships in early January with a research-preview waitlist open now — relevant for phone-agent testing where the tell is usually the dead air and the sterile background."
+      ],
+      "links": [
+        {
+          "label": "Request early access",
+          "url": "https://www.bland.ai/speech-to-speech#request-access"
+        }
+      ]
+    },
+    {
+      "uid": "ad694185eb479da99a3c0112ada25cd4e773dcb4cb702d3a47ba3e3926a6dac3",
+      "id": 328,
+      "title": "Qwen4-Max: 1M context at $1.50/$4.50, cached input 70% off",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-16",
+          "time": "23:06",
+          "headline": "Alibaba’s new flagship model won’t break your bank",
+          "href": "newsletters/2026-11-16_newsletter_the_code_2.md",
+          "anchor": "alibabas-new-flagship-model-wont-break-your-bank"
+        }
+      ],
+      "prose": [
+        "Alibaba's Qwen4-Max takes a 1M-token context at $1.50/$4.50 per million input/output tokens, with cached input 70% cheaper. The company says it narrowly beats Claude Opus 5.5 and GPT-6.1 Sol on DeepSWE, though it falls well behind Kimi K3.1 on Terminal-Bench and scores 43 on the Artificial Analysis index — so strong on that one coding benchmark, not necessarily across every task. Available now through Qwen Cloud in the Singapore region."
+      ],
+      "links": [
+        {
+          "label": "Qwen4-Max announcement",
+          "url": "https://qwen.ai/blog?id=qwen4-max"
+        },
+        {
+          "label": "API (ap-southeast-1)",
+          "url": "https://www.qwencloud.com/models/qwen4-max?region=ap-southeast-1"
+        }
+      ]
+    },
+    {
+      "uid": "42cf42e1f022d5a28bb6af9553162abdc0fd758fb78bd8ff2e95d5dd5cdd9844",
+      "id": 327,
+      "title": "Malicious Claude Code update hit ~5,000 Cursor users via SSH backdoor",
+      "theme": "🤖 AI security & agent risk",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-16",
+          "time": "23:06",
+          "headline": "Cursor links hijacked Claude Code extension to Fireworks AI breach",
+          "href": "newsletters/2026-11-16_newsletter_the_code_2.md",
+          "anchor": "cursor-links-hijacked-claude-code-extension-to-fireworks-ai-breach"
+        }
+      ],
+      "prose": [
+        "An access key exposed in the Fireworks AI breach let an attacker push a malicious update to the Anthropic Claude Code extension on Cursor's marketplace. Versions 2.1.312 and 2.1.313 stayed live roughly 11 hours on October 29 and tried to install a persistent SSH backdoor on nearly 5,000 machines. Anyone who installed either version should check for unauthorised SSH access and rotate credentials — the lesson being that a marketplace extension is a supply-chain surface as live as an npm package."
+      ],
+      "links": [
+        {
+          "label": "What Cursor disclosed",
+          "url": "https://archive.codenewsletter.ai/2121881924348342477"
+        }
+      ]
+    },
+    {
+      "uid": "dbcab970b3f327c4d4c1fd6d6596d5ab2edb8fe8360de66bed45fe710d994026",
+      "id": 326,
+      "title": "A CLAUDE.md line makes Claude Code previews open on your phone",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-16",
+          "time": "23:06",
+          "headline": "How to open Claude Code preview links on your phone",
+          "href": "newsletters/2026-11-16_newsletter_the_code_2.md",
+          "anchor": "how-to-open-claude-code-preview-links-on-your-phone"
+        }
+      ],
+      "prose": [
+        "Claude Code's preview links point at localhost, so they die when you leave the desk. The fix is one paragraph in CLAUDE.md or AGENTS.md telling the agent to publish with `tailscale serve`, open the link itself to check it, then send you the HTTPS URL instead of localhost. Needs Tailscale on the Mac and the phone on the same free account; the trick generalises to any dashboard or review page the agent serves."
+      ],
+      "links": [
+        {
+          "label": "The one-paragraph fix",
+          "url": "https://archive.codenewsletter.ai/2121702208546967753"
+        }
+      ]
+    },
+    {
+      "uid": "4ef8de89b52173f477ca3779d13f466d5f45da07ac987a6fe8fda3feae6de104",
+      "id": 325,
+      "title": "Token Economizer learns your repo to cut agent cost 18–31%",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-16",
+          "time": "23:06",
+          "headline": "Make your coding agents cheaper the more you use them",
+          "href": "newsletters/2026-11-16_newsletter_the_code_2.md",
+          "anchor": "make-your-coding-agents-cheaper-the-more-you-use-them"
+        }
+      ],
+      "prose": [
+        "Microsoft's open-source plugin (6.8k stars) learns repo-specific quirks from past sessions, prunes tools the agent never touches, and nudges it out of repeated failure loops. On SWE-Bench the team reports 18.4–30.9% lower mean cost across five agent-model combinations. It works with Claude Code, Codex, Copilot CLI and Pi, with experimental support for several others — a drop-in for an existing harness rather than a new one."
+      ],
+      "links": [
+        {
+          "label": "TokenEconomizer on GitHub",
+          "url": "https://github.com/microsoft/TokenEconomizer"
+        }
+      ]
+    },
+    {
       "uid": "5f1204835cda36892e6bfc6c97cce9dcdabc826c76fb76bd231cca6f4925781c",
-      "id": 322,
+      "id": 324,
       "title": "Subscriptrack finds forgotten subscriptions from email, no bank login",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -30,7 +188,7 @@
     },
     {
       "uid": "d5a289e57e99f2e9a8da43b45ae96eb90bb449bb459fae9fac49eba0a717da78",
-      "id": 321,
+      "id": 323,
       "title": "ChromePing translates a live phone call both ways from the browser",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -50,6 +208,64 @@
         {
           "label": "Product Hunt",
           "url": "https://www.producthunt.com/posts/chromeping"
+        }
+      ]
+    },
+    {
+      "uid": "bf4ea74b17a26559cd1f550d1973c970bd48f7e0bcb67d0fef44ecac8ed53bc6",
+      "id": 322,
+      "title": "Family Intelligence grades speaker IDs from evidence, offline",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-16",
+          "time": "00:31",
+          "headline": "How Family Intelligence stops a model from guessing who said what",
+          "href": "newsletters/2026-11-16_newsletter_the_code.md",
+          "anchor": "how-family-intelligence-stops-a-model-from-guessing-who-said-what"
+        }
+      ],
+      "prose": [
+        "Their household-memory stack runs entirely on home hardware with pyannote-audio for diarisation and faster-whisper for transcription. To get past SPEAKER_00 vs SPEAKER_01, the prompt tells the model to collect context clues across the conversation — direct address followed by a reply, an explicit \"I am John\" — then grade its own answer against a rubric: CERTAIN, PROBABLE, POSSIBLE, UNKNOWN, each defined by the evidence it requires. That is a reusable pattern for any speaker-attribution or identity-inference task, since it scores evidence rather than self-reported confidence. The full prompt is published."
+      ],
+      "links": [
+        {
+          "label": "The speaker-ID prompt",
+          "url": "https://thecode-family-intelligence-prompt.netlify.app/"
+        },
+        {
+          "label": "Family Intelligence research",
+          "url": "https://www.intelligence.family/research"
+        }
+      ]
+    },
+    {
+      "uid": "7ef4aed8a06f9bfac87776aec57ac13647e6ea7f91c0c823213248b0ae58c123",
+      "id": 321,
+      "title": "Tiles runs a private AI assistant locally on Mac and Linux",
+      "theme": "🔒 Privacy & local tooling",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-16",
+          "time": "00:31",
+          "headline": "How Tiles runs a private AI assistant locally",
+          "href": "newsletters/2026-11-16_newsletter_the_code.md",
+          "anchor": "how-tiles-runs-a-private-ai-assistant-locally"
+        }
+      ],
+      "prose": [
+        "Tiles keeps inference on the machine, so chats never touch its servers and cost does not grow with users — and it borrows the GPU of another machine you own when a laptop is too weak. Identities are device-generated on DIDs and UCANs with no central provider, sync is end-to-end encrypted over Iroh, and chat sharing rides AT Protocol instead of a bespoke backend. Version 0.5.0 Alpha 24 is testable now, and it is one of seven projects Mozilla is backing with up to $500,000 over three years with no equity taken — that call for proposals closes Friday, November 20 at 11:59pm Pacific."
+      ],
+      "links": [
+        {
+          "label": "Tiles",
+          "url": "https://tiles.run/"
+        },
+        {
+          "label": "Mozilla human-scale AI call for proposals",
+          "url": "https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/human-scale-ai/call-for-proposals/"
         }
       ]
     },

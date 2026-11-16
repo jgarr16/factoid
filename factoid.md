@@ -1,13 +1,93 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-11-16"
-updated: "2026-11-16"
-sources: "Product Hunt Weekly, Future Tools, Superhuman AI, The Code, The Batch, The Frontier, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+updated: "2026-11-17"
+sources: "Superhuman AI, The Code, Product Hunt Weekly, Future Tools, The Batch, The Frontier, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**322. Subscriptrack finds forgotten subscriptions from email, no bank login**
+**330. ChatGPT Wallet lets agents pay with a token, not your card**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Superhuman AI · 2026-11-16 23:08 KST — ["OpenAI launches a secure way to pay with agents"](newsletters/2026-11-16_newsletter_superhuman_ai.md#openai-launches-a-secure-way-to-pay-with-agents)*
+
+Built with American Express, Mastercard and Visa, ChatGPT Wallet swaps the card details for a per-purchase payment token, so the agent never sees the number. It is rolling out now, starting on Dots for US ChatGPT Pro subscribers. OpenAI also published commerce guidance for merchants on making a business agent-friendly — the practical piece if you ever want an agent to complete a checkout rather than hand you a link.
+
+- [ChatGPT Wallet](https://openai.com/index/introducing-chatgpt-wallet/)
+- [Agent-friendly commerce guidance](https://developers.openai.com/commerce)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**329. Bland AI's Tofu-1 voices whole soundscapes in real time**
+*🗣️ Voice · TTS & STT*
+*🗞 Superhuman AI · 2026-11-16 23:08 KST — ["Bland AI reveals a voice model that generates entire soundscapes"](newsletters/2026-11-16_newsletter_superhuman_ai.md#bland-ai-reveals-a-voice-model-that-generates-entire-soundscapes)*
+
+Tofu-1 does not emit a single clean voice: it generates multiple speakers, overlapping voices and background noise in one output. It is full-duplex, so it hears and speaks simultaneously and keeps thinking while talking, and it separates the speaker's voice from surrounding sound. Bland claims 92% of listeners could not tell it was AI; it ships in early January with a research-preview waitlist open now — relevant for phone-agent testing where the tell is usually the dead air and the sterile background.
+
+- [Request early access](https://www.bland.ai/speech-to-speech#request-access)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**328. Qwen4-Max: 1M context at $1.50/$4.50, cached input 70% off**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-16 23:06 KST — ["Alibaba’s new flagship model won’t break your bank"](newsletters/2026-11-16_newsletter_the_code_2.md#alibabas-new-flagship-model-wont-break-your-bank)*
+
+Alibaba's Qwen4-Max takes a 1M-token context at $1.50/$4.50 per million input/output tokens, with cached input 70% cheaper. The company says it narrowly beats Claude Opus 5.5 and GPT-6.1 Sol on DeepSWE, though it falls well behind Kimi K3.1 on Terminal-Bench and scores 43 on the Artificial Analysis index — so strong on that one coding benchmark, not necessarily across every task. Available now through Qwen Cloud in the Singapore region.
+
+- [Qwen4-Max announcement](https://qwen.ai/blog?id=qwen4-max)
+- [API (ap-southeast-1)](https://www.qwencloud.com/models/qwen4-max?region=ap-southeast-1)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**327. Malicious Claude Code update hit ~5,000 Cursor users via SSH backdoor**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-11-16 23:06 KST — ["Cursor links hijacked Claude Code extension to Fireworks AI breach"](newsletters/2026-11-16_newsletter_the_code_2.md#cursor-links-hijacked-claude-code-extension-to-fireworks-ai-breach)*
+
+An access key exposed in the Fireworks AI breach let an attacker push a malicious update to the Anthropic Claude Code extension on Cursor's marketplace. Versions 2.1.312 and 2.1.313 stayed live roughly 11 hours on October 29 and tried to install a persistent SSH backdoor on nearly 5,000 machines. Anyone who installed either version should check for unauthorised SSH access and rotate credentials — the lesson being that a marketplace extension is a supply-chain surface as live as an npm package.
+
+- [What Cursor disclosed](https://archive.codenewsletter.ai/2121881924348342477)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**326. A CLAUDE.md line makes Claude Code previews open on your phone**
+*⚡ Productivity & agent follow-through*
+*🗞 The Code · 2026-11-16 23:06 KST — ["How to open Claude Code preview links on your phone"](newsletters/2026-11-16_newsletter_the_code_2.md#how-to-open-claude-code-preview-links-on-your-phone)*
+
+Claude Code's preview links point at localhost, so they die when you leave the desk. The fix is one paragraph in CLAUDE.md or AGENTS.md telling the agent to publish with `tailscale serve`, open the link itself to check it, then send you the HTTPS URL instead of localhost. Needs Tailscale on the Mac and the phone on the same free account; the trick generalises to any dashboard or review page the agent serves.
+
+- [The one-paragraph fix](https://archive.codenewsletter.ai/2121702208546967753)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**325. Token Economizer learns your repo to cut agent cost 18–31%**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-16 23:06 KST — ["Make your coding agents cheaper the more you use them"](newsletters/2026-11-16_newsletter_the_code_2.md#make-your-coding-agents-cheaper-the-more-you-use-them)*
+
+Microsoft's open-source plugin (6.8k stars) learns repo-specific quirks from past sessions, prunes tools the agent never touches, and nudges it out of repeated failure loops. On SWE-Bench the team reports 18.4–30.9% lower mean cost across five agent-model combinations. It works with Claude Code, Codex, Copilot CLI and Pi, with experimental support for several others — a drop-in for an existing harness rather than a new one.
+
+- [TokenEconomizer on GitHub](https://github.com/microsoft/TokenEconomizer)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**324. Subscriptrack finds forgotten subscriptions from email, no bank login**
 *🔒 Privacy & local tooling*
 *🗞 Product Hunt Weekly · 2026-11-16 03:33 KST — ["A subscription-finder that doesn’t need your bank details"](newsletters/2026-11-16_newsletter_product_hunt_weekly.md#a-subscription-finder-that-doesnt-need-your-bank-details)*
 
@@ -20,13 +100,41 @@ Subscriptrack works out what you're paying for by reading your email instead of 
 
 ---
 
-**321. ChromePing translates a live phone call both ways from the browser**
+**323. ChromePing translates a live phone call both ways from the browser**
 *🗣️ Voice · TTS & STT*
 *🗞 Product Hunt Weekly · 2026-11-16 03:33 KST — ["Talk to anyone by phone, in a language you don't speak"](newsletters/2026-11-16_newsletter_product_hunt_weekly.md#talk-to-anyone-by-phone-in-a-language-you-dont-speak)*
 
 ChromePing calls any real phone number from the browser and translates the conversation live in both directions with captions running underneath. The person on the other end just picks up their normal phone and hears their own language a couple of seconds after you stop talking — no app on their side, which is the useful bit for calling Korean businesses or family.
 
 - [Product Hunt](https://www.producthunt.com/posts/chromeping)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**322. Family Intelligence grades speaker IDs from evidence, offline**
+*🗣️ Voice · TTS & STT*
+*🗞 The Code · 2026-11-16 00:31 KST — ["How Family Intelligence stops a model from guessing who said what"](newsletters/2026-11-16_newsletter_the_code.md#how-family-intelligence-stops-a-model-from-guessing-who-said-what)*
+
+Their household-memory stack runs entirely on home hardware with pyannote-audio for diarisation and faster-whisper for transcription. To get past SPEAKER_00 vs SPEAKER_01, the prompt tells the model to collect context clues across the conversation — direct address followed by a reply, an explicit "I am John" — then grade its own answer against a rubric: CERTAIN, PROBABLE, POSSIBLE, UNKNOWN, each defined by the evidence it requires. That is a reusable pattern for any speaker-attribution or identity-inference task, since it scores evidence rather than self-reported confidence. The full prompt is published.
+
+- [The speaker-ID prompt](https://thecode-family-intelligence-prompt.netlify.app/)
+- [Family Intelligence research](https://www.intelligence.family/research)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**321. Tiles runs a private AI assistant locally on Mac and Linux**
+*🔒 Privacy & local tooling*
+*🗞 The Code · 2026-11-16 00:31 KST — ["How Tiles runs a private AI assistant locally"](newsletters/2026-11-16_newsletter_the_code.md#how-tiles-runs-a-private-ai-assistant-locally)*
+
+Tiles keeps inference on the machine, so chats never touch its servers and cost does not grow with users — and it borrows the GPU of another machine you own when a laptop is too weak. Identities are device-generated on DIDs and UCANs with no central provider, sync is end-to-end encrypted over Iroh, and chat sharing rides AT Protocol instead of a bespoke backend. Version 0.5.0 Alpha 24 is testable now, and it is one of seven projects Mozilla is backing with up to $500,000 over three years with no equity taken — that call for proposals closes Friday, November 20 at 11:59pm Pacific.
+
+- [Tiles](https://tiles.run/)
+- [Mozilla human-scale AI call for proposals](https://www.mozillafoundation.org/en/what-we-do/grantmaking/incubator/human-scale-ai/call-for-proposals/)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
