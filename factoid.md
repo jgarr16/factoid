@@ -1,11 +1,66 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-11-16"
+sweep: "2026-09-05 → 2026-11-17"
 updated: "2026-11-18"
-sources: "Superhuman AI, The Code, Product Hunt Weekly, Future Tools, The Batch, The Frontier, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+sources: "The Code, Superhuman AI, Product Hunt Weekly, Future Tools, The Batch, The Frontier, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**334. Linear MCP turns a Claude Code plan into a 40-issue backlog**
+*⚡ Productivity & agent follow-through*
+*🗞 The Code · 2026-11-17 23:07 KST — ["How to make Claude Code run its own backlog"](newsletters/2026-11-17_newsletter_the_code.md#how-to-make-claude-code-run-its-own-backlog)*
+
+The fix for plan mode losing its plan when context runs out: add Linear's MCP server (free tier works) with `claude mcp add --transport http linear https://mcp.linear.app/mcp`, authenticate via /mcp, then tell Claude to interrogate you until it fully understands the feature, write focused Linear issues, and begin work. Expect 40+ scoped issues; the backlog outlives the context window, so a fresh session picks up where the last one stopped and you drive it with "work on the next thing".
+
+- [The Code write-up](https://archive.codenewsletter.ai/2122381648679608354)
+- [Linear MCP endpoint](https://mcp.linear.app/mcp)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**333. Cloudflare Kitesurf runs a browser engine on Workers for agents**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-17 23:07 KST — ["Kitesurf (2.1k ⭐)"](newsletters/2026-11-17_newsletter_the_code.md#kitesurf)*
+
+Kitesurf is Cloudflare's experimental browser engine running entirely on Workers: it parses HTML and CSS, executes JavaScript, renders screenshots and exposes a Chrome DevTools Protocol endpoint, so Puppeteer and other CDP clients drive it as-is. No Chrome image or browser container to keep warm, which turns page rendering for an agent into a per-request cost instead of an always-on machine. Open source on GitHub, 2.1k stars.
+
+- [cloudflare/kitesurf](https://github.com/cloudflare/kitesurf)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**332. Tencent Hy4 flash: 18x cheaper than Claude Haiku at $0.07/M in**
+*💸 Token & infra economics*
+*🗞 The Code · 2026-11-17 23:07 KST — ["Tencent’s cheapest model rivals Claude Haiku for 18x less"](newsletters/2026-11-17_newsletter_the_code.md#tencents-cheapest-model-rivals-claude-haiku-for-18x-less)*
+
+Hy4 flash is 224B parameters but activates only 12B per token, carries a 1M-token context and is natively multimodal. In Tencent's own tests it matches Claude Haiku 5.5 on everyday tasks at roughly 18x lower cost per task. Pricing is $0.07 per million input tokens, $0.281 output and $0.003 cached input — a cheap tier for a router or for high-volume classification and extraction work.
+
+- [Hy4 flash model page](https://hy.tencent.ai/research/hy4-flash)
+- [The Code write-up](https://archive.codenewsletter.ai/2122217770314301469)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**331. Liquid AI's d1.2 decision models answer with confidence at $0.02/M**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-17 23:07 KST — ["Liquid AI’s new models top the benchmark charts"](newsletters/2026-11-17_newsletter_the_code.md#liquid-ais-new-models-top-the-benchmark-charts)*
+
+Liquid AI shipped d1.2 and d1.2-ultra, omnimodal decision models that take text, images and audio and return a structured answer plus a confidence score instead of prose; ultra takes first place on Artificial Analysis's Decision Index. Input starts at $0.02 per million tokens, and when a value is missing they say "not found" rather than inventing it. That makes them a cheap front gate: auto-approve high-confidence calls and send the uncertain ones to review or a larger model.
+
+- [Liquid AI d1.2](https://www.liquid.ai/blog/d1-2)
+- [The Code write-up](https://archive.codenewsletter.ai/2122346077231923698)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **330. ChatGPT Wallet lets agents pay with a token, not your card**
 *🏗️ Agent plumbing & production stacks*
