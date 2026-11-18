@@ -1,11 +1,330 @@
 {
   "version": 1,
   "updated": "2026-11-19",
-  "sweep": "2026-09-05 → 2026-11-17",
+  "sweep": "2026-09-05 → 2026-11-19",
   "entries": [
     {
-      "uid": "fa94668bacebea6245e13ea8afc207a755f3e6d3c3f72d239ffd79575691bc1e",
+      "uid": "1250d09a06599dfbaafd27f543d5caf4fb5734109be7e26cde74a968be532f6e",
+      "id": 343,
+      "title": "Proton Lumo reaches desktop with per-action permission control",
+      "theme": "🔒 Privacy & local tooling",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-19",
+          "time": "02:03",
+          "headline": "Proton brings its privacy-focused Lumo assistant to Windows, Mac, and Linux",
+          "href": "newsletters/2026-11-19_newsletter_future_tools.md",
+          "anchor": "proton-brings-its-privacy-focused-lumo-assistant-to-windows-mac-and-li"
+        }
+      ],
+      "prose": [
+        "Proton's privacy-focused Lumo assistant now ships as desktop apps for Windows, Mac and Linux, and lets you decide which actions the AI may take on its own. Useful as the conservative-by-default option when you want a cloud assistant without handing over blanket agency."
+      ],
+      "links": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/"
+        }
+      ]
+    },
+    {
+      "uid": "2b8f7ab779dcc1b944d04d04428925eb4fc3bab70f40a88998a625647f4d0813",
+      "id": 342,
+      "title": "Microsoft MAI Code 2 claims 98% of Sol's coding at 40% cost",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-19",
+          "time": "02:03",
+          "headline": "Microsoft unveils seven new MAI models at Ignite, including MAI Code 2",
+          "href": "newsletters/2026-11-19_newsletter_future_tools.md",
+          "anchor": "microsoft-unveils-seven-new-mai-models-at-ignite-including-mai-code-2"
+        }
+      ],
+      "prose": [
+        "At Ignite 2026 Microsoft announced seven new MAI models, with MAI Code 2 the one to watch: Microsoft says it delivers 98% of GPT-6.1 Sol's coding performance at 40% of the cost. That makes it a plausible second provider for agent loops where near-Sol code quality at half the bill is good enough."
+      ],
+      "links": [
+        {
+          "label": "Ignite 2026",
+          "url": "https://microsoft.ai/news/microsoft-ignite-2026/"
+        }
+      ]
+    },
+    {
+      "uid": "7949c98b02d7d3f3c9cb0e28627f1365d21b1e3c8ff36a50715af94cf7d36da0",
+      "id": 341,
+      "title": "ChatGPT Wallet lets agents pay with a token, not your card",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-19",
+          "time": "02:03",
+          "headline": "OpenAI Lets AI Agents Shop With Your Money",
+          "href": "newsletters/2026-11-19_newsletter_future_tools.md",
+          "anchor": "openai-lets-ai-agents-shop-with-your-money"
+        },
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-16",
+          "time": "23:08",
+          "headline": "OpenAI launches a secure way to pay with agents",
+          "href": "newsletters/2026-11-16_newsletter_superhuman_ai.md",
+          "anchor": "openai-launches-a-secure-way-to-pay-with-agents"
+        }
+      ],
+      "prose": [
+        "Built with American Express, Mastercard and Visa, ChatGPT Wallet swaps the card details for a per-purchase payment token, so the agent never sees the number. It is rolling out now, starting on Dots for US ChatGPT Pro subscribers. OpenAI also published commerce guidance for merchants on making a business agent-friendly — the practical piece if you ever want an agent to complete a checkout rather than hand you a link."
+      ],
+      "links": [
+        {
+          "label": "ChatGPT Wallet",
+          "url": "https://openai.com/index/introducing-chatgpt-wallet/"
+        },
+        {
+          "label": "Agent-friendly commerce guidance",
+          "url": "https://developers.openai.com/commerce"
+        }
+      ]
+    },
+    {
+      "uid": "2a0d3855456f6d523ef4a75e22c73f147fdd98d8cef512f185edc215ac4f7e3a",
+      "id": 340,
+      "title": "Anthropic's guide to verifying agent work at scale",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-18",
+          "time": "23:12",
+          "headline": "Self Verification",
+          "href": "newsletters/2026-11-18_newsletter_superhuman_ai.md",
+          "anchor": "self-verification"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-18",
+          "time": "23:08",
+          "headline": "How to verify coding agent work at scale",
+          "href": "newsletters/2026-11-18_newsletter_the_code.md",
+          "anchor": "how-to-verify-coding-agent-work-at-scale"
+        }
+      ],
+      "prose": [
+        "The Claude Code team writes and reviews roughly 90% of its code with Claude, and this write-up explains the verification system behind that. It covers which tests are actually worth investing in, how to build fast verification loops an agent can trust, and how to turn misses into standing rules so you can delegate more without reading every diff."
+      ],
+      "links": [
+        {
+          "label": "Verification guide",
+          "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/"
+        }
+      ]
+    },
+    {
+      "uid": "0b60ef67a320bb958e0a5e2606d9a01067fcfd64c27771bcc435e396561f3afc",
+      "id": 339,
+      "title": "GPT-6.2 Astra cuts to $8/$40, Sol as the lean alternative",
+      "theme": "💸 Token & infra economics",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-18",
+          "time": "23:12",
+          "headline": "2. OpenAI launches two new models, plus a sales plugin",
+          "href": "newsletters/2026-11-18_newsletter_superhuman_ai.md",
+          "anchor": "2-openai-launches-two-new-models-plus-a-sales-plugin"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-18",
+          "time": "23:08",
+          "headline": "OpenAI’s cheaper coding models divide devs",
+          "href": "newsletters/2026-11-18_newsletter_the_code.md",
+          "anchor": "openais-cheaper-coding-models-divide-devs"
+        }
+      ],
+      "prose": [
+        "OpenAI shipped GPT-6.2 Astra and GPT-6.2 Sol in Codex and the API, both aimed at finishing the job with fewer output tokens. Astra also takes a 20% price cut to $8/$40 per million input/output tokens, with Sol the cheaper everyday option. Early reviews split: some devs report cleaner code and better reviews, while a CTO says Astra stalls on long tasks and asks baffling questions — the prompting guide is the fast way to judge it against your own harness."
+      ],
+      "links": [
+        {
+          "label": "OpenAI announcement",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+        },
+        {
+          "label": "Prompting guide",
+          "url": "https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra"
+        }
+      ]
+    },
+    {
+      "uid": "480cb0e24dadb978adb046a12a88a5de897487b1f9d22f895f80762ddb01088e",
+      "id": 338,
+      "title": "A prompt that vets a new library with a graded draft-PR proof",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-18",
+          "time": "23:08",
+          "headline": "How to find out if your new tech stack is any good",
+          "href": "newsletters/2026-11-18_newsletter_the_code.md",
+          "anchor": "how-to-find-out-if-your-new-tech-stack-is-any-good"
+        }
+      ],
+      "prose": [
+        "Instead of reading docs to guess whether a library fits, paste this prompt into the agent inside the repo where you would actually use it: research the technology, find the gnarliest existing problem it could address, and build a proof of concept in a draft PR. The agent then grades the attempt on API nuance, typesafety, testability, complexity, docs and deployment changes; a skip verdict means delete the branch. Demoed on the XState v6 beta."
+      ],
+      "links": [
+        {
+          "label": "The prompt",
+          "url": "https://archive.codenewsletter.ai/2122618527840354327"
+        }
+      ]
+    },
+    {
+      "uid": "f0f449ac55c1ae5c38ecb90f361e7e976ee57405a320ff2ed09269599ad4bb37",
+      "id": 337,
+      "title": "Hermes software-factory tutorial: GitHub issues to merged PRs",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-18",
+          "time": "23:08",
+          "headline": "How to turn Hermes into an autonomous software factory",
+          "href": "newsletters/2026-11-18_newsletter_the_code.md",
+          "anchor": "how-to-turn-hermes-into-an-autonomous-software-factory"
+        }
+      ],
+      "prose": [
+        "A walkthrough of running Hermes as an autonomous factory: it watches GitHub issues, writes specs, builds and validates fixes, and opens pull requests with minimal intervention. The video covers installing the factory skill, connecting GitHub, running the first issue end to end, and scheduling the workflow so it keeps working across repos."
+      ],
+      "links": [
+        {
+          "label": "Tutorial (YouTube)",
+          "url": "https://www.youtube.com/watch?v=jSfK4VjDMEc"
+        }
+      ]
+    },
+    {
+      "uid": "85b20073dbb63ccc01659127e1fb850424b222f75d1d4aad938998804a098c30",
+      "id": 336,
+      "title": "SID-2 swarms agents for search at $0.25-2 per million tokens",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-18",
+          "time": "23:08",
+          "headline": "A new Silicon Valley startup beats Opus and Astra at search",
+          "href": "newsletters/2026-11-18_newsletter_the_code.md",
+          "anchor": "a-new-silicon-valley-startup-beats-opus-and-astra-at-search"
+        }
+      ],
+      "prose": [
+        "San Francisco startup SID attacks web search with teams of up to dozens of cooperating agents instead of one large model. It claims SID-2 beats frontier models like Opus and Astra on search quality while running 8x faster and cutting search cost 20x, priced at $0.25 to $2 per million tokens. The models are callable from sid.ai/models, so it is a candidate replacement for a RAG or search step in your own pipeline."
+      ],
+      "links": [
+        {
+          "label": "SID models",
+          "url": "https://www.sid.ai/models"
+        },
+        {
+          "label": "The Code item",
+          "url": "https://archive.codenewsletter.ai/2122758430721204407"
+        }
+      ]
+    },
+    {
+      "uid": "abc5e753f75aa03470427bd1372faed2037fc3f65364b01b0ecf1550785e008a",
+      "id": 335,
+      "title": "Nod by n8n: open-source personal agent with its own computer",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Frontier",
+          "date": "2026-11-18",
+          "time": "07:34",
+          "headline": "Nod by n8n — Open source personal agent with its own computer",
+          "href": "newsletters/2026-11-18_newsletter_the_frontier.md",
+          "anchor": "nod-by-n8n-open-source-personal-agent-with-its-own-computer"
+        }
+      ],
+      "prose": [
+        "The n8n team's open-source take on a personal agent: instead of bolting tools onto a chat window, the agent gets its own computer to work in. It finished at 306 upvotes on Product Hunt, and it is worth a read for the architecture even if you keep running your own harness."
+      ],
+      "links": [
+        {
+          "label": "Nod on Product Hunt",
+          "url": "https://www.producthunt.com/posts/nod-by-n8n"
+        }
+      ]
+    },
+    {
+      "uid": "97622a0d1abe497df98993c7d69e7b93c15655fa1ef0a3f257541c78ed560846",
       "id": 334,
+      "title": "Scribe v3: ElevenLabs speech-to-text, 27% fewer errors in 90+ languages",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "The Frontier",
+          "date": "2026-11-18",
+          "time": "07:34",
+          "headline": "Scribe v3 by ElevenLabs — Speech to text with 27% fewer errors in 90+ languages",
+          "href": "newsletters/2026-11-18_newsletter_the_frontier.md",
+          "anchor": "scribe-v3-by-elevenlabs-speech-to-text-with-27-fewer-errors-in-90-lang"
+        }
+      ],
+      "prose": [
+        "ElevenLabs' third-generation Scribe transcription model claims 27% fewer errors across 90+ languages, making it a drop-in candidate for dictation and meeting-transcript pipelines. It launched to 181 upvotes on Product Hunt and sits alongside the company's TTS and realtime voice stack."
+      ],
+      "links": [
+        {
+          "label": "Scribe v3",
+          "url": "https://www.producthunt.com/posts/scribe-v3-by-elevenlabs"
+        }
+      ]
+    },
+    {
+      "uid": "42cf42e1f022d5a28bb6af9553162abdc0fd758fb78bd8ff2e95d5dd5cdd9844",
+      "id": 333,
+      "title": "Malicious Claude Code update hit ~5,000 Cursor users via SSH backdoor",
+      "theme": "🤖 AI security & agent risk",
+      "sources": [
+        {
+          "pub": "The Frontier",
+          "date": "2026-11-18",
+          "time": "07:34",
+          "headline": "A stolen Fireworks AI key let attackers plant a backdoored Claude Code extension in Cursor's marketplace",
+          "href": "newsletters/2026-11-18_newsletter_the_frontier.md",
+          "anchor": "a-stolen-fireworks-ai-key-let-attackers-plant-a-backdoored-claude-code"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-16",
+          "time": "23:06",
+          "headline": "Cursor links hijacked Claude Code extension to Fireworks AI breach",
+          "href": "newsletters/2026-11-16_newsletter_the_code_2.md",
+          "anchor": "cursor-links-hijacked-claude-code-extension-to-fireworks-ai-breach"
+        }
+      ],
+      "prose": [
+        "An access key exposed in the Fireworks AI breach let an attacker push a malicious update to the Anthropic Claude Code extension on Cursor's marketplace. Versions 2.1.312 and 2.1.313 stayed live roughly 11 hours on October 29 and tried to install a persistent SSH backdoor on nearly 5,000 machines. Anyone who installed either version should check for unauthorised SSH access and rotate credentials — the lesson being that a marketplace extension is a supply-chain surface as live as an npm package."
+      ],
+      "links": [
+        {
+          "label": "What Cursor disclosed",
+          "url": "https://archive.codenewsletter.ai/2121881924348342477"
+        }
+      ]
+    },
+    {
+      "uid": "fa94668bacebea6245e13ea8afc207a755f3e6d3c3f72d239ffd79575691bc1e",
+      "id": 332,
       "title": "Linear MCP turns a Claude Code plan into a 40-issue backlog",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -34,7 +353,7 @@
     },
     {
       "uid": "7a65f7be0b7255c9dd427e5dbf60ee57ca075f311f39ed82f207e65cc1f292e9",
-      "id": 333,
+      "id": 331,
       "title": "Cloudflare Kitesurf runs a browser engine on Workers for agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -59,7 +378,7 @@
     },
     {
       "uid": "64a274d5f2c3edf336a47e8a69ce826f9375e2d127329b80bca0d05306336532",
-      "id": 332,
+      "id": 330,
       "title": "Tencent Hy4 flash: 18x cheaper than Claude Haiku at $0.07/M in",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -88,7 +407,7 @@
     },
     {
       "uid": "3180f0ec0c591f8ccf84d57fd3a97e82fca722f37921f945c6f4af28bf9daf49",
-      "id": 331,
+      "id": 329,
       "title": "Liquid AI's d1.2 decision models answer with confidence at $0.02/M",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -116,37 +435,8 @@
       ]
     },
     {
-      "uid": "7949c98b02d7d3f3c9cb0e28627f1365d21b1e3c8ff36a50715af94cf7d36da0",
-      "id": 330,
-      "title": "ChatGPT Wallet lets agents pay with a token, not your card",
-      "theme": "🏗️ Agent plumbing & production stacks",
-      "sources": [
-        {
-          "pub": "Superhuman AI",
-          "date": "2026-11-16",
-          "time": "23:08",
-          "headline": "OpenAI launches a secure way to pay with agents",
-          "href": "newsletters/2026-11-16_newsletter_superhuman_ai.md",
-          "anchor": "openai-launches-a-secure-way-to-pay-with-agents"
-        }
-      ],
-      "prose": [
-        "Built with American Express, Mastercard and Visa, ChatGPT Wallet swaps the card details for a per-purchase payment token, so the agent never sees the number. It is rolling out now, starting on Dots for US ChatGPT Pro subscribers. OpenAI also published commerce guidance for merchants on making a business agent-friendly — the practical piece if you ever want an agent to complete a checkout rather than hand you a link."
-      ],
-      "links": [
-        {
-          "label": "ChatGPT Wallet",
-          "url": "https://openai.com/index/introducing-chatgpt-wallet/"
-        },
-        {
-          "label": "Agent-friendly commerce guidance",
-          "url": "https://developers.openai.com/commerce"
-        }
-      ]
-    },
-    {
       "uid": "c24eecc9af4f6fc4514926351f4b73eac36a5e0b4d49dc8c7c04a80868ff3c41",
-      "id": 329,
+      "id": 328,
       "title": "Bland AI's Tofu-1 voices whole soundscapes in real time",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -171,7 +461,7 @@
     },
     {
       "uid": "ad694185eb479da99a3c0112ada25cd4e773dcb4cb702d3a47ba3e3926a6dac3",
-      "id": 328,
+      "id": 327,
       "title": "Qwen4-Max: 1M context at $1.50/$4.50, cached input 70% off",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -195,31 +485,6 @@
         {
           "label": "API (ap-southeast-1)",
           "url": "https://www.qwencloud.com/models/qwen4-max?region=ap-southeast-1"
-        }
-      ]
-    },
-    {
-      "uid": "42cf42e1f022d5a28bb6af9553162abdc0fd758fb78bd8ff2e95d5dd5cdd9844",
-      "id": 327,
-      "title": "Malicious Claude Code update hit ~5,000 Cursor users via SSH backdoor",
-      "theme": "🤖 AI security & agent risk",
-      "sources": [
-        {
-          "pub": "The Code",
-          "date": "2026-11-16",
-          "time": "23:06",
-          "headline": "Cursor links hijacked Claude Code extension to Fireworks AI breach",
-          "href": "newsletters/2026-11-16_newsletter_the_code_2.md",
-          "anchor": "cursor-links-hijacked-claude-code-extension-to-fireworks-ai-breach"
-        }
-      ],
-      "prose": [
-        "An access key exposed in the Fireworks AI breach let an attacker push a malicious update to the Anthropic Claude Code extension on Cursor's marketplace. Versions 2.1.312 and 2.1.313 stayed live roughly 11 hours on October 29 and tried to install a persistent SSH backdoor on nearly 5,000 machines. Anyone who installed either version should check for unauthorised SSH access and rotate credentials — the lesson being that a marketplace extension is a supply-chain surface as live as an npm package."
-      ],
-      "links": [
-        {
-          "label": "What Cursor disclosed",
-          "url": "https://archive.codenewsletter.ai/2121881924348342477"
         }
       ]
     },

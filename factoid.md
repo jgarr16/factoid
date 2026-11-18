@@ -1,13 +1,163 @@
 ---
 title: "Interesting tidbits"
-sweep: "2026-09-05 → 2026-11-17"
+sweep: "2026-09-05 → 2026-11-19"
 updated: "2026-11-19"
-sources: "The Code, Superhuman AI, Product Hunt Weekly, Future Tools, The Batch, The Frontier, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+sources: "Future Tools, Superhuman AI, The Code, The Frontier, Product Hunt Weekly, The Batch, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**334. Linear MCP turns a Claude Code plan into a 40-issue backlog**
+**343. Proton Lumo reaches desktop with per-action permission control**
+*🔒 Privacy & local tooling*
+*🗞 Future Tools · 2026-11-19 02:03 KST — ["Proton brings its privacy-focused Lumo assistant to Windows, Mac, and Linux"](newsletters/2026-11-19_newsletter_future_tools.md#proton-brings-its-privacy-focused-lumo-assistant-to-windows-mac-and-li)*
+
+Proton's privacy-focused Lumo assistant now ships as desktop apps for Windows, Mac and Linux, and lets you decide which actions the AI may take on its own. Useful as the conservative-by-default option when you want a cloud assistant without handing over blanket agency.
+
+- [TechCrunch](https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**342. Microsoft MAI Code 2 claims 98% of Sol's coding at 40% cost**
+*💸 Token & infra economics*
+*🗞 Future Tools · 2026-11-19 02:03 KST — ["Microsoft unveils seven new MAI models at Ignite, including MAI Code 2"](newsletters/2026-11-19_newsletter_future_tools.md#microsoft-unveils-seven-new-mai-models-at-ignite-including-mai-code-2)*
+
+At Ignite 2026 Microsoft announced seven new MAI models, with MAI Code 2 the one to watch: Microsoft says it delivers 98% of GPT-6.1 Sol's coding performance at 40% of the cost. That makes it a plausible second provider for agent loops where near-Sol code quality at half the bill is good enough.
+
+- [Ignite 2026](https://microsoft.ai/news/microsoft-ignite-2026/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**341. ChatGPT Wallet lets agents pay with a token, not your card**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Future Tools · 2026-11-19 02:03 KST — ["OpenAI Lets AI Agents Shop With Your Money"](newsletters/2026-11-19_newsletter_future_tools.md#openai-lets-ai-agents-shop-with-your-money)*
+*🗞 Superhuman AI · 2026-11-16 23:08 KST — ["OpenAI launches a secure way to pay with agents"](newsletters/2026-11-16_newsletter_superhuman_ai.md#openai-launches-a-secure-way-to-pay-with-agents)*
+
+Built with American Express, Mastercard and Visa, ChatGPT Wallet swaps the card details for a per-purchase payment token, so the agent never sees the number. It is rolling out now, starting on Dots for US ChatGPT Pro subscribers. OpenAI also published commerce guidance for merchants on making a business agent-friendly — the practical piece if you ever want an agent to complete a checkout rather than hand you a link.
+
+- [ChatGPT Wallet](https://openai.com/index/introducing-chatgpt-wallet/)
+- [Agent-friendly commerce guidance](https://developers.openai.com/commerce)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**340. Anthropic's guide to verifying agent work at scale**
+*🏗️ Agent plumbing & production stacks*
+*🗞 Superhuman AI · 2026-11-18 23:12 KST — ["Self Verification"](newsletters/2026-11-18_newsletter_superhuman_ai.md#self-verification)*
+*🗞 The Code · 2026-11-18 23:08 KST — ["How to verify coding agent work at scale"](newsletters/2026-11-18_newsletter_the_code.md#how-to-verify-coding-agent-work-at-scale)*
+
+The Claude Code team writes and reviews roughly 90% of its code with Claude, and this write-up explains the verification system behind that. It covers which tests are actually worth investing in, how to build fast verification loops an agent can trust, and how to turn misses into standing rules so you can delegate more without reading every diff.
+
+- [Verification guide](https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**339. GPT-6.2 Astra cuts to $8/$40, Sol as the lean alternative**
+*💸 Token & infra economics*
+*🗞 Superhuman AI · 2026-11-18 23:12 KST — ["2. OpenAI launches two new models, plus a sales plugin"](newsletters/2026-11-18_newsletter_superhuman_ai.md#2-openai-launches-two-new-models-plus-a-sales-plugin)*
+*🗞 The Code · 2026-11-18 23:08 KST — ["OpenAI’s cheaper coding models divide devs"](newsletters/2026-11-18_newsletter_the_code.md#openais-cheaper-coding-models-divide-devs)*
+
+OpenAI shipped GPT-6.2 Astra and GPT-6.2 Sol in Codex and the API, both aimed at finishing the job with fewer output tokens. Astra also takes a 20% price cut to $8/$40 per million input/output tokens, with Sol the cheaper everyday option. Early reviews split: some devs report cleaner code and better reviews, while a CTO says Astra stalls on long tasks and asks baffling questions — the prompting guide is the fast way to judge it against your own harness.
+
+- [OpenAI announcement](https://openai.com/index/introducing-gpt-6-2-astra-sol/)
+- [Prompting guide](https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**338. A prompt that vets a new library with a graded draft-PR proof**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-18 23:08 KST — ["How to find out if your new tech stack is any good"](newsletters/2026-11-18_newsletter_the_code.md#how-to-find-out-if-your-new-tech-stack-is-any-good)*
+
+Instead of reading docs to guess whether a library fits, paste this prompt into the agent inside the repo where you would actually use it: research the technology, find the gnarliest existing problem it could address, and build a proof of concept in a draft PR. The agent then grades the attempt on API nuance, typesafety, testability, complexity, docs and deployment changes; a skip verdict means delete the branch. Demoed on the XState v6 beta.
+
+- [The prompt](https://archive.codenewsletter.ai/2122618527840354327)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**337. Hermes software-factory tutorial: GitHub issues to merged PRs**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-18 23:08 KST — ["How to turn Hermes into an autonomous software factory"](newsletters/2026-11-18_newsletter_the_code.md#how-to-turn-hermes-into-an-autonomous-software-factory)*
+
+A walkthrough of running Hermes as an autonomous factory: it watches GitHub issues, writes specs, builds and validates fixes, and opens pull requests with minimal intervention. The video covers installing the factory skill, connecting GitHub, running the first issue end to end, and scheduling the workflow so it keeps working across repos.
+
+- [Tutorial (YouTube)](https://www.youtube.com/watch?v=jSfK4VjDMEc)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**336. SID-2 swarms agents for search at $0.25-2 per million tokens**
+*⚙️ LLM tooling & SDKs*
+*🗞 The Code · 2026-11-18 23:08 KST — ["A new Silicon Valley startup beats Opus and Astra at search"](newsletters/2026-11-18_newsletter_the_code.md#a-new-silicon-valley-startup-beats-opus-and-astra-at-search)*
+
+San Francisco startup SID attacks web search with teams of up to dozens of cooperating agents instead of one large model. It claims SID-2 beats frontier models like Opus and Astra on search quality while running 8x faster and cutting search cost 20x, priced at $0.25 to $2 per million tokens. The models are callable from sid.ai/models, so it is a candidate replacement for a RAG or search step in your own pipeline.
+
+- [SID models](https://www.sid.ai/models)
+- [The Code item](https://archive.codenewsletter.ai/2122758430721204407)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**335. Nod by n8n: open-source personal agent with its own computer**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Frontier · 2026-11-18 07:34 KST — ["Nod by n8n — Open source personal agent with its own computer"](newsletters/2026-11-18_newsletter_the_frontier.md#nod-by-n8n-open-source-personal-agent-with-its-own-computer)*
+
+The n8n team's open-source take on a personal agent: instead of bolting tools onto a chat window, the agent gets its own computer to work in. It finished at 306 upvotes on Product Hunt, and it is worth a read for the architecture even if you keep running your own harness.
+
+- [Nod on Product Hunt](https://www.producthunt.com/posts/nod-by-n8n)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**334. Scribe v3: ElevenLabs speech-to-text, 27% fewer errors in 90+ languages**
+*🗣️ Voice · TTS & STT*
+*🗞 The Frontier · 2026-11-18 07:34 KST — ["Scribe v3 by ElevenLabs — Speech to text with 27% fewer errors in 90+ languages"](newsletters/2026-11-18_newsletter_the_frontier.md#scribe-v3-by-elevenlabs-speech-to-text-with-27-fewer-errors-in-90-lang)*
+
+ElevenLabs' third-generation Scribe transcription model claims 27% fewer errors across 90+ languages, making it a drop-in candidate for dictation and meeting-transcript pipelines. It launched to 181 upvotes on Product Hunt and sits alongside the company's TTS and realtime voice stack.
+
+- [Scribe v3](https://www.producthunt.com/posts/scribe-v3-by-elevenlabs)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**333. Malicious Claude Code update hit ~5,000 Cursor users via SSH backdoor**
+*🤖 AI security & agent risk*
+*🗞 The Frontier · 2026-11-18 07:34 KST — ["A stolen Fireworks AI key let attackers plant a backdoored Claude Code extension in Cursor's marketplace"](newsletters/2026-11-18_newsletter_the_frontier.md#a-stolen-fireworks-ai-key-let-attackers-plant-a-backdoored-claude-code)*
+*🗞 The Code · 2026-11-16 23:06 KST — ["Cursor links hijacked Claude Code extension to Fireworks AI breach"](newsletters/2026-11-16_newsletter_the_code_2.md#cursor-links-hijacked-claude-code-extension-to-fireworks-ai-breach)*
+
+An access key exposed in the Fireworks AI breach let an attacker push a malicious update to the Anthropic Claude Code extension on Cursor's marketplace. Versions 2.1.312 and 2.1.313 stayed live roughly 11 hours on October 29 and tried to install a persistent SSH backdoor on nearly 5,000 machines. Anyone who installed either version should check for unauthorised SSH access and rotate credentials — the lesson being that a marketplace extension is a supply-chain surface as live as an npm package.
+
+- [What Cursor disclosed](https://archive.codenewsletter.ai/2121881924348342477)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**332. Linear MCP turns a Claude Code plan into a 40-issue backlog**
 *⚡ Productivity & agent follow-through*
 *🗞 The Code · 2026-11-17 23:07 KST — ["How to make Claude Code run its own backlog"](newsletters/2026-11-17_newsletter_the_code.md#how-to-make-claude-code-run-its-own-backlog)*
 
@@ -21,7 +171,7 @@ The fix for plan mode losing its plan when context runs out: add Linear's MCP se
 
 ---
 
-**333. Cloudflare Kitesurf runs a browser engine on Workers for agents**
+**331. Cloudflare Kitesurf runs a browser engine on Workers for agents**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-11-17 23:07 KST — ["Kitesurf (2.1k ⭐)"](newsletters/2026-11-17_newsletter_the_code.md#kitesurf)*
 
@@ -34,7 +184,7 @@ Kitesurf is Cloudflare's experimental browser engine running entirely on Workers
 
 ---
 
-**332. Tencent Hy4 flash: 18x cheaper than Claude Haiku at $0.07/M in**
+**330. Tencent Hy4 flash: 18x cheaper than Claude Haiku at $0.07/M in**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-11-17 23:07 KST — ["Tencent’s cheapest model rivals Claude Haiku for 18x less"](newsletters/2026-11-17_newsletter_the_code.md#tencents-cheapest-model-rivals-claude-haiku-for-18x-less)*
 
@@ -48,7 +198,7 @@ Hy4 flash is 224B parameters but activates only 12B per token, carries a 1M-toke
 
 ---
 
-**331. Liquid AI's d1.2 decision models answer with confidence at $0.02/M**
+**329. Liquid AI's d1.2 decision models answer with confidence at $0.02/M**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Code · 2026-11-17 23:07 KST — ["Liquid AI’s new models top the benchmark charts"](newsletters/2026-11-17_newsletter_the_code.md#liquid-ais-new-models-top-the-benchmark-charts)*
 
@@ -62,21 +212,7 @@ Liquid AI shipped d1.2 and d1.2-ultra, omnimodal decision models that take text,
 
 ---
 
-**330. ChatGPT Wallet lets agents pay with a token, not your card**
-*🏗️ Agent plumbing & production stacks*
-*🗞 Superhuman AI · 2026-11-16 23:08 KST — ["OpenAI launches a secure way to pay with agents"](newsletters/2026-11-16_newsletter_superhuman_ai.md#openai-launches-a-secure-way-to-pay-with-agents)*
-
-Built with American Express, Mastercard and Visa, ChatGPT Wallet swaps the card details for a per-purchase payment token, so the agent never sees the number. It is rolling out now, starting on Dots for US ChatGPT Pro subscribers. OpenAI also published commerce guidance for merchants on making a business agent-friendly — the practical piece if you ever want an agent to complete a checkout rather than hand you a link.
-
-- [ChatGPT Wallet](https://openai.com/index/introducing-chatgpt-wallet/)
-- [Agent-friendly commerce guidance](https://developers.openai.com/commerce)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**329. Bland AI's Tofu-1 voices whole soundscapes in real time**
+**328. Bland AI's Tofu-1 voices whole soundscapes in real time**
 *🗣️ Voice · TTS & STT*
 *🗞 Superhuman AI · 2026-11-16 23:08 KST — ["Bland AI reveals a voice model that generates entire soundscapes"](newsletters/2026-11-16_newsletter_superhuman_ai.md#bland-ai-reveals-a-voice-model-that-generates-entire-soundscapes)*
 
@@ -89,7 +225,7 @@ Tofu-1 does not emit a single clean voice: it generates multiple speakers, overl
 
 ---
 
-**328. Qwen4-Max: 1M context at $1.50/$4.50, cached input 70% off**
+**327. Qwen4-Max: 1M context at $1.50/$4.50, cached input 70% off**
 *💸 Token & infra economics*
 *🗞 The Code · 2026-11-16 23:06 KST — ["Alibaba’s new flagship model won’t break your bank"](newsletters/2026-11-16_newsletter_the_code_2.md#alibabas-new-flagship-model-wont-break-your-bank)*
 
@@ -97,19 +233,6 @@ Alibaba's Qwen4-Max takes a 1M-token context at $1.50/$4.50 per million input/ou
 
 - [Qwen4-Max announcement](https://qwen.ai/blog?id=qwen4-max)
 - [API (ap-southeast-1)](https://www.qwencloud.com/models/qwen4-max?region=ap-southeast-1)
-
-- [ ] 📌 remind me
-- [ ] 🙈 hide me
-
----
-
-**327. Malicious Claude Code update hit ~5,000 Cursor users via SSH backdoor**
-*🤖 AI security & agent risk*
-*🗞 The Code · 2026-11-16 23:06 KST — ["Cursor links hijacked Claude Code extension to Fireworks AI breach"](newsletters/2026-11-16_newsletter_the_code_2.md#cursor-links-hijacked-claude-code-extension-to-fireworks-ai-breach)*
-
-An access key exposed in the Fireworks AI breach let an attacker push a malicious update to the Anthropic Claude Code extension on Cursor's marketplace. Versions 2.1.312 and 2.1.313 stayed live roughly 11 hours on October 29 and tried to install a persistent SSH backdoor on nearly 5,000 machines. Anyone who installed either version should check for unauthorised SSH access and rotate credentials — the lesson being that a marketplace extension is a supply-chain surface as live as an npm package.
-
-- [What Cursor disclosed](https://archive.codenewsletter.ai/2121881924348342477)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me
