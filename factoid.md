@@ -1,11 +1,25 @@
 ---
 title: "Interesting tidbits"
 sweep: "2026-09-05 → 2026-11-19"
-updated: "2026-11-19"
-sources: "Future Tools, Superhuman AI, The Code, The Frontier, Product Hunt Weekly, The Batch, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+updated: "2026-11-20"
+sources: "Superhuman AI, Future Tools, The Code, The Frontier, Product Hunt Weekly, The Batch, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**344. ChatGPT Live Dictation streams speech to text on every plan**
+*🗣️ Voice · TTS & STT*
+*🗞 Superhuman AI · 2026-11-19 23:09 KST — ["OpenAI rolls out Live Dictation for ChatGPT, plus an accounting plugin"](newsletters/2026-11-19_newsletter_superhuman_ai.md#openai-rolls-out-live-dictation-for-chatgpt-plus-an-accounting-plugin)*
+
+ChatGPT's dictation now transcribes as you speak instead of waiting until you stop, so the text appears in real time while you talk. It is live on all plans across iOS, Android, web and desktop, which makes it a usable dictation layer anywhere ChatGPT runs. The same rollout adds ChatGPT for Accounting, a plugin that connects to common accounting tools for invoicing and month-end reporting.
+
+- [Live Dictation rollout](https://archive.superhuman.ai/2123114715257946334)
+- [ChatGPT for Accounting](https://openai.com/business/solutions/accounting/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **343. Proton Lumo reaches desktop with per-action permission control**
 *🔒 Privacy & local tooling*

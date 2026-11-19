@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "sweep": "2026-09-05 → 2026-11-19",
   "entries": [
+    {
+      "uid": "83ce59ff1463338ea7031de7057cd571407f7efac2c1caae7b230fcfa14cd88c",
+      "id": 344,
+      "title": "ChatGPT Live Dictation streams speech to text on every plan",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-19",
+          "time": "23:09",
+          "headline": "OpenAI rolls out Live Dictation for ChatGPT, plus an accounting plugin",
+          "href": "newsletters/2026-11-19_newsletter_superhuman_ai.md",
+          "anchor": "openai-rolls-out-live-dictation-for-chatgpt-plus-an-accounting-plugin"
+        }
+      ],
+      "prose": [
+        "ChatGPT's dictation now transcribes as you speak instead of waiting until you stop, so the text appears in real time while you talk. It is live on all plans across iOS, Android, web and desktop, which makes it a usable dictation layer anywhere ChatGPT runs. The same rollout adds ChatGPT for Accounting, a plugin that connects to common accounting tools for invoicing and month-end reporting."
+      ],
+      "links": [
+        {
+          "label": "Live Dictation rollout",
+          "url": "https://archive.superhuman.ai/2123114715257946334"
+        },
+        {
+          "label": "ChatGPT for Accounting",
+          "url": "https://openai.com/business/solutions/accounting/"
+        }
+      ]
+    },
     {
       "uid": "1250d09a06599dfbaafd27f543d5caf4fb5734109be7e26cde74a968be532f6e",
       "id": 343,
