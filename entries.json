@@ -1,11 +1,292 @@
 {
   "version": 1,
   "updated": "2026-11-21",
-  "sweep": "2026-09-05 → 2026-11-19",
+  "sweep": "2026-09-05 → 2026-11-21",
   "entries": [
     {
-      "uid": "83ce59ff1463338ea7031de7057cd571407f7efac2c1caae7b230fcfa14cd88c",
+      "uid": "ad80baa856c0ef3930152094ff45bb7b13dd64d410b70ee7d305c4d56fe67f54",
+      "id": 352,
+      "title": "Gemini API's Tool Retrieval loads only the tools a call needs",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-21",
+          "time": "02:04",
+          "headline": "Tool Retrieval in preview, so agents with big tool libraries only load the details they need",
+          "href": "newsletters/2026-11-21_newsletter_future_tools.md",
+          "anchor": "tool-retrieval-in-preview-so-agents-with-big-tool-libraries-only-load-"
+        }
+      ],
+      "prose": [
+        "In preview, the Gemini API can search a large tool library and load only the tool details relevant to the current request instead of the whole set — the same token problem as stuffing every MCP tool definition into context on every turn. Worth testing against existing on-demand skill and MCP loading setups."
+      ],
+      "links": [
+        {
+          "label": "Gemini API Tool Retrieval",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/"
+        }
+      ]
+    },
+    {
+      "uid": "8a28e12dc3c37e5870b6873d0dc0a1504de7cf7156b427e061d96127e2f08735",
+      "id": 351,
+      "title": "Tabentic puts an agent inside your browser tabs",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-21",
+          "time": "02:04",
+          "headline": "Put an AI Agent in Your Browser Tabs",
+          "href": "newsletters/2026-11-21_newsletter_future_tools.md",
+          "anchor": "put-an-ai-agent-in-your-browser-tabs"
+        }
+      ],
+      "prose": [
+        "A Chrome extension where the agent works in the tabs you already have open: extracting page content into structured formats, summarizing, filling forms, and running repetitive chores across tabs, with an approve-before-execute step. Free tier plus paid plans."
+      ],
+      "links": [
+        {
+          "label": "Tabentic",
+          "url": "https://www.tabentic.com/"
+        }
+      ]
+    },
+    {
+      "uid": "36ffed8eef04ed0d6ed5bc6edb24783085888945932d6eda18d4884fe6d5771c",
+      "id": 350,
+      "title": "Gemini takes over Mac apps and files, asking before it acts",
+      "theme": "🍎 Apple & Mac",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-21",
+          "time": "02:04",
+          "headline": "computer use, letting it handle multi-step tasks across your files, desktop apps, and the web in a background window",
+          "href": "newsletters/2026-11-21_newsletter_future_tools.md",
+          "anchor": "computer-use-letting-it-handle-multi-step-tasks-across-your-files-desk"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-20",
+          "time": "23:08",
+          "headline": "Google gives Gemini control of your Mac and tightens Android installs",
+          "href": "newsletters/2026-11-20_newsletter_the_code.md",
+          "anchor": "google-gives-gemini-control-of-your-mac-and-tightens-android-installs"
+        }
+      ],
+      "prose": [
+        "The Gemini app for macOS can now run multistep tasks across files, desktop apps and the web in a background window, and waits for approval before acting — US-only for now, on paid AI plans. The same issue flags Android developer verification going global in January 2027, eventually covering apps installed from anywhere rather than just the Play Store, with new APIs to automate registration in CI."
+      ],
+      "links": [
+        {
+          "label": "Google: Gemini computer use on Mac",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/"
+        },
+        {
+          "label": "Android developer verification 2027",
+          "url": "https://developer.android.com/blog/posts/android-developer-verification-2027"
+        }
+      ]
+    },
+    {
+      "uid": "4980f07bb10a30e292de04f323008305c0d5d3e4e51db2efd4ea38456ff6f957",
+      "id": 349,
+      "title": "Claude joins a Meet call and builds the whiteboard live",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-20",
+          "time": "23:08",
+          "headline": "How to build docs and whiteboards during a team call with Claude Meetings",
+          "href": "newsletters/2026-11-20_newsletter_superhuman_ai.md",
+          "anchor": "how-to-build-docs-and-whiteboards-during-a-team-call-with-claude-meeti"
+        }
+      ],
+      "prose": [
+        "Claude > Meetings connects your Google Calendar, then the bot joins a Google Meet as a visible participant and takes requests by saying \"Claude\" or typing in the Meet chat. The sample prompt builds a live project-planning whiteboard split into Goals, Decisions, Open Questions, Risks and Next Steps, updating as the call runs and assigning owners and deadlines when they are mentioned. The meeting page holds the live transcript, internal chat and every artifact, and the summary and action items stay readable afterwards."
+      ],
+      "links": [
+        {
+          "label": "Claude Meetings walkthrough",
+          "url": "https://archive.superhuman.ai/2120973994191094179"
+        },
+        {
+          "label": "Claude",
+          "url": "https://claude.ai/new"
+        }
+      ]
+    },
+    {
+      "uid": "18c80bd69c801d1b742d504483ceaf2b0b0154a274c8eb38dfe0cad09987fc16",
+      "id": 348,
+      "title": "A swapped model endpoint makes the case for model attestation",
+      "theme": "🤖 AI security & agent risk",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-20",
+          "time": "23:08",
+          "headline": "Hijacked model answered Prime Intellect customers for two days",
+          "href": "newsletters/2026-11-20_newsletter_the_code.md",
+          "anchor": "hijacked-model-answered-prime-intellect-customers-for-two-days"
+        }
+      ],
+      "prose": [
+        "Prime Intellect's DeepSeek V4.1 Flash endpoint was replaced with a copy that refused just 1 in 100 jailbreak prompts, and it served customers that way from November 8 to 10. Developers found out through OpenRouter rather than the provider, and the ask afterwards is model attestation: a way to verify that the endpoint you are calling actually runs the model you signed up for. That matters for anything routed through resellers, routers or aggregators."
+      ],
+      "links": [
+        {
+          "label": "How devs found out",
+          "url": "https://archive.codenewsletter.ai/2123430257697157587"
+        }
+      ]
+    },
+    {
+      "uid": "aecee28fec8d8e1f5cf1ca065d7c8fd7bd6de1963e506aff62274e620df29485",
+      "id": 347,
+      "title": "Two weeks of OpenCode plus Qwen on a Mac Studio: what broke",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-20",
+          "time": "23:08",
+          "headline": "A developer tried to replace Claude Code with a local setup. Here’s what broke",
+          "href": "newsletters/2026-11-20_newsletter_the_code.md",
+          "anchor": "a-developer-tried-to-replace-claude-code-with-a-local-setup-heres-what"
+        }
+      ],
+      "prose": [
+        "David Gewirtz tried to replace Claude Code with OpenCode plus Qwen's coding model on a 128GB Mac Studio, entirely local — but the harness gave him 64,000 tokens of context against Claude Code's million. A PDF organizer worked on one file and failed on a folder; a 7,000-screenshot renamer ate four days of failed fixes until the context collapsed. His rules worth copying: scrap and restart rather than piling patches on a failing loop, give each feature or bug its own conversation, have the agent write what it learned to a markdown file for the next session, pick the model explicitly, and keep shell commands behind manual approval. Ollama has a one-command setup for the same stack."
+      ],
+      "links": [
+        {
+          "label": "ZDNet experiment",
+          "url": "https://www.zdnet.com/innovation/free-local-ai-coding-claude-code-alternative-test/"
+        },
+        {
+          "label": "Ollama + OpenCode guide",
+          "url": "https://docs.ollama.com/integrations/opencode"
+        }
+      ]
+    },
+    {
+      "uid": "16515a06a45fbd1fb33c57b819cdcf1b9148444531d07e5e1c52dcfd34611f51",
+      "id": 346,
+      "title": "OpenAI puts full-duplex voice in the API at $0.05 a minute",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-20",
+          "time": "23:08",
+          "headline": "OpenAI hands devs the voice behind ChatGPT",
+          "href": "newsletters/2026-11-20_newsletter_the_code.md",
+          "anchor": "openai-hands-devs-the-voice-behind-chatgpt"
+        }
+      ],
+      "prose": [
+        "GPT-Live-1.1 is the same full-duplex voice model ChatGPT Plus and Pro users have had since October 15, now callable from the API. It listens while it speaks and is better at tricky details like letters and numbers, and a standby mode kicks in after 5–60 seconds of silence so idle minutes are not billed at full rate. Active sessions cost $0.05 per minute, which is cheap enough to put a voice front end on an existing agent."
+      ],
+      "links": [
+        {
+          "label": "OpenAI model docs",
+          "url": "https://developers.openai.com/api/docs/models/gpt-live-1.1"
+        },
+        {
+          "label": "The Code write-up",
+          "url": "https://archive.codenewsletter.ai/2123506733524136446"
+        }
+      ]
+    },
+    {
+      "uid": "35faf1e206c99788e537ee965613b7131125b7c5c08f70d90f15219f7094cd6c",
+      "id": 345,
+      "title": "World Labs opens Atlas: text to 3D scenes, priced per frame",
+      "theme": "📡 Also worth knowing",
+      "sources": [
+        {
+          "pub": "The Batch",
+          "date": "2026-11-20",
+          "time": "23:02",
+          "headline": "World Labs has opened Atlas, its latest world model, to the public",
+          "href": "newsletters/2026-11-20_newsletter_the_batch.md",
+          "anchor": "world-labs-has-opened-atlas-its-latest-world-model-to-the-public"
+        }
+      ],
+      "prose": [
+        "Atlas is now self-serve: text or photos in, 3D scenes and camera-controllable video out, exportable as Gaussian splats and polygon meshes for Blender or a game engine. The API is pay-as-you-go — $0.04 for a first 720p frame, $0.008 per additional frame, $5 to turn views into refined splats — with $10 of free credits and an onboarding prompt written for a coding agent. Caveat: AMD closed its roughly $8.2bn acquisition of World Labs on November 16 and has not said what happens to Atlas."
+      ],
+      "links": [
+        {
+          "label": "World Labs",
+          "url": "https://www.worldlabs.ai/"
+        },
+        {
+          "label": "Atlas developer docs",
+          "url": "https://docs.worldlabs.ai/"
+        }
+      ]
+    },
+    {
+      "uid": "92eaecd4919df193d8e6a8210cab282c577da7d421a7b56a74911db3e99840b3",
       "id": 344,
+      "title": "Claude Fable 5.2 matches Opus 5.5 coding at about half the cost",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "The Batch",
+          "date": "2026-11-20",
+          "time": "23:02",
+          "headline": "Claude Fable Gets a Price Cut",
+          "href": "newsletters/2026-11-20_newsletter_the_batch.md",
+          "anchor": "claude-fable-gets-a-price-cut"
+        },
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-10",
+          "time": "23:10",
+          "headline": "Anthropic debuts Fable and Mythos 5.2 as it nears IPO",
+          "href": "newsletters/2026-11-10_newsletter_superhuman_ai.md",
+          "anchor": "anthropic-debuts-fable-and-mythos-52-as-it-nears-ipo"
+        },
+        {
+          "pub": "The Code",
+          "date": "2026-11-10",
+          "time": "23:06",
+          "headline": "Anthropic’s new Claude duo codes at half the cost",
+          "href": "newsletters/2026-11-10_newsletter_the_code.md",
+          "anchor": "anthropics-new-claude-duo-codes-at-half-the-cost"
+        }
+      ],
+      "prose": [
+        "Fable 5.2 and Mythos 5.2 are the same underlying model with different guardrails: Fable is open to everyone and, at high effort, matches Opus 5.5's best coding score for roughly half the cost per task; Mythos is held back for vetted cybersecurity and biomedical teams. Both price at $8/$40 per million tokens and generate up to 30% faster, live now across paid Claude plans with an extra-usage allowance this week. Anthropic also shipped a Fable-specific prompting guide and a cookbook on which model to use when, including how effort level changes cost and how to mix models between a main agent and its subagents."
+      ],
+      "links": [
+        {
+          "label": "Fable and Mythos 5.2",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        },
+        {
+          "label": "Prompting guide",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2"
+        },
+        {
+          "label": "Which model for which task",
+          "url": "https://claude.dev/blog/which-claude-model-should-you-build-with/"
+        }
+      ]
+    },
+    {
+      "uid": "83ce59ff1463338ea7031de7057cd571407f7efac2c1caae7b230fcfa14cd88c",
+      "id": 343,
       "title": "ChatGPT Live Dictation streams speech to text on every plan",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -34,7 +315,7 @@
     },
     {
       "uid": "1250d09a06599dfbaafd27f543d5caf4fb5734109be7e26cde74a968be532f6e",
-      "id": 343,
+      "id": 342,
       "title": "Proton Lumo reaches desktop with per-action permission control",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -59,7 +340,7 @@
     },
     {
       "uid": "2b8f7ab779dcc1b944d04d04428925eb4fc3bab70f40a88998a625647f4d0813",
-      "id": 342,
+      "id": 341,
       "title": "Microsoft MAI Code 2 claims 98% of Sol's coding at 40% cost",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -84,7 +365,7 @@
     },
     {
       "uid": "7949c98b02d7d3f3c9cb0e28627f1365d21b1e3c8ff36a50715af94cf7d36da0",
-      "id": 341,
+      "id": 340,
       "title": "ChatGPT Wallet lets agents pay with a token, not your card",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -121,7 +402,7 @@
     },
     {
       "uid": "2a0d3855456f6d523ef4a75e22c73f147fdd98d8cef512f185edc215ac4f7e3a",
-      "id": 340,
+      "id": 339,
       "title": "Anthropic's guide to verifying agent work at scale",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -154,7 +435,7 @@
     },
     {
       "uid": "0b60ef67a320bb958e0a5e2606d9a01067fcfd64c27771bcc435e396561f3afc",
-      "id": 339,
+      "id": 338,
       "title": "GPT-6.2 Astra cuts to $8/$40, Sol as the lean alternative",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -191,7 +472,7 @@
     },
     {
       "uid": "480cb0e24dadb978adb046a12a88a5de897487b1f9d22f895f80762ddb01088e",
-      "id": 338,
+      "id": 337,
       "title": "A prompt that vets a new library with a graded draft-PR proof",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -216,7 +497,7 @@
     },
     {
       "uid": "f0f449ac55c1ae5c38ecb90f361e7e976ee57405a320ff2ed09269599ad4bb37",
-      "id": 337,
+      "id": 336,
       "title": "Hermes software-factory tutorial: GitHub issues to merged PRs",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -241,7 +522,7 @@
     },
     {
       "uid": "85b20073dbb63ccc01659127e1fb850424b222f75d1d4aad938998804a098c30",
-      "id": 336,
+      "id": 335,
       "title": "SID-2 swarms agents for search at $0.25-2 per million tokens",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -270,7 +551,7 @@
     },
     {
       "uid": "abc5e753f75aa03470427bd1372faed2037fc3f65364b01b0ecf1550785e008a",
-      "id": 335,
+      "id": 334,
       "title": "Nod by n8n: open-source personal agent with its own computer",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -295,7 +576,7 @@
     },
     {
       "uid": "97622a0d1abe497df98993c7d69e7b93c15655fa1ef0a3f257541c78ed560846",
-      "id": 334,
+      "id": 333,
       "title": "Scribe v3: ElevenLabs speech-to-text, 27% fewer errors in 90+ languages",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -320,7 +601,7 @@
     },
     {
       "uid": "42cf42e1f022d5a28bb6af9553162abdc0fd758fb78bd8ff2e95d5dd5cdd9844",
-      "id": 333,
+      "id": 332,
       "title": "Malicious Claude Code update hit ~5,000 Cursor users via SSH backdoor",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -353,7 +634,7 @@
     },
     {
       "uid": "fa94668bacebea6245e13ea8afc207a755f3e6d3c3f72d239ffd79575691bc1e",
-      "id": 332,
+      "id": 331,
       "title": "Linear MCP turns a Claude Code plan into a 40-issue backlog",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -382,7 +663,7 @@
     },
     {
       "uid": "7a65f7be0b7255c9dd427e5dbf60ee57ca075f311f39ed82f207e65cc1f292e9",
-      "id": 331,
+      "id": 330,
       "title": "Cloudflare Kitesurf runs a browser engine on Workers for agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -407,7 +688,7 @@
     },
     {
       "uid": "64a274d5f2c3edf336a47e8a69ce826f9375e2d127329b80bca0d05306336532",
-      "id": 330,
+      "id": 329,
       "title": "Tencent Hy4 flash: 18x cheaper than Claude Haiku at $0.07/M in",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -436,7 +717,7 @@
     },
     {
       "uid": "3180f0ec0c591f8ccf84d57fd3a97e82fca722f37921f945c6f4af28bf9daf49",
-      "id": 329,
+      "id": 328,
       "title": "Liquid AI's d1.2 decision models answer with confidence at $0.02/M",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -465,7 +746,7 @@
     },
     {
       "uid": "c24eecc9af4f6fc4514926351f4b73eac36a5e0b4d49dc8c7c04a80868ff3c41",
-      "id": 328,
+      "id": 327,
       "title": "Bland AI's Tofu-1 voices whole soundscapes in real time",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -490,7 +771,7 @@
     },
     {
       "uid": "ad694185eb479da99a3c0112ada25cd4e773dcb4cb702d3a47ba3e3926a6dac3",
-      "id": 327,
+      "id": 326,
       "title": "Qwen4-Max: 1M context at $1.50/$4.50, cached input 70% off",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -519,7 +800,7 @@
     },
     {
       "uid": "dbcab970b3f327c4d4c1fd6d6596d5ab2edb8fe8360de66bed45fe710d994026",
-      "id": 326,
+      "id": 325,
       "title": "A CLAUDE.md line makes Claude Code previews open on your phone",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -544,7 +825,7 @@
     },
     {
       "uid": "4ef8de89b52173f477ca3779d13f466d5f45da07ac987a6fe8fda3feae6de104",
-      "id": 325,
+      "id": 324,
       "title": "Token Economizer learns your repo to cut agent cost 18–31%",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -569,7 +850,7 @@
     },
     {
       "uid": "5f1204835cda36892e6bfc6c97cce9dcdabc826c76fb76bd231cca6f4925781c",
-      "id": 324,
+      "id": 323,
       "title": "Subscriptrack finds forgotten subscriptions from email, no bank login",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -594,7 +875,7 @@
     },
     {
       "uid": "d5a289e57e99f2e9a8da43b45ae96eb90bb449bb459fae9fac49eba0a717da78",
-      "id": 323,
+      "id": 322,
       "title": "ChromePing translates a live phone call both ways from the browser",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -619,7 +900,7 @@
     },
     {
       "uid": "bf4ea74b17a26559cd1f550d1973c970bd48f7e0bcb67d0fef44ecac8ed53bc6",
-      "id": 322,
+      "id": 321,
       "title": "Family Intelligence grades speaker IDs from evidence, offline",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -648,7 +929,7 @@
     },
     {
       "uid": "7ef4aed8a06f9bfac87776aec57ac13647e6ea7f91c0c823213248b0ae58c123",
-      "id": 321,
+      "id": 320,
       "title": "Tiles runs a private AI assistant locally on Mac and Linux",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -677,7 +958,7 @@
     },
     {
       "uid": "49dfbc79e3b9c31edc7f0a269194afd4e4d1a06144a867ae8f49e8b02a5efc9f",
-      "id": 320,
+      "id": 319,
       "title": "FindDepth writes research reports and checks figures against sources",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -702,7 +983,7 @@
     },
     {
       "uid": "f5a2baa73dc9c6abcb03995a151a98abd7a306c1b66902767515b0ad4bff5a0f",
-      "id": 319,
+      "id": 318,
       "title": "Archilas gives agents one cited, conflict-resolved memory across tools",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -727,7 +1008,7 @@
     },
     {
       "uid": "ff98de984f963829f0eab9c6b6f63c66c5e86c172dcdc2e04238bbe0b5979478",
-      "id": 318,
+      "id": 317,
       "title": "Gemini 4 Hydrogen: 2.5x faster coding at $1.50/$7.50 per million",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -764,7 +1045,7 @@
     },
     {
       "uid": "63ce68e0e04c3b642094229feb7bd5c7710f30b81f5d3d2b68101d7f0783741f",
-      "id": 317,
+      "id": 316,
       "title": "Two-step prompt catches mobile bugs with Chrome DevTools MCP",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -789,7 +1070,7 @@
     },
     {
       "uid": "040852e5a890c98f727e2bfa6358d64b3d3d0a13b3c34ea5539b38d063551eb6",
-      "id": 316,
+      "id": 315,
       "title": "LiquidCodec: 74M-param speech codec, 361x realtime on one CPU thread",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -818,7 +1099,7 @@
     },
     {
       "uid": "ee20434a1de5c9f67ab2cca812b87775f3ce8f5427a6087eee186610fd6b623b",
-      "id": 315,
+      "id": 314,
       "title": "Anthropic lets you self-host the whole Claude agent stack",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -843,7 +1124,7 @@
     },
     {
       "uid": "4e4d138af3c932fef4093192f680f154b09baec9eaf992c241b55527546c74ae",
-      "id": 314,
+      "id": 313,
       "title": "OpenWorker open-sources its agent harness SDK and builder skill",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -868,7 +1149,7 @@
     },
     {
       "uid": "fd73de51a72d6ecd87c93a72db3c0c2e71e30c622cb7729e4049a32b5ed067c6",
-      "id": 313,
+      "id": 312,
       "title": "Ace gives agents your real Mac over Tailscale instead of a sandbox",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -893,7 +1174,7 @@
     },
     {
       "uid": "15bd1896fb483da089606daa0f51afaf922a93282d67da1395873ca4763f5031",
-      "id": 312,
+      "id": 311,
       "title": "AWS Emulator stubs 200+ services locally so agents can test offline",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -922,7 +1203,7 @@
     },
     {
       "uid": "2b18f99ec0129c3a1adf7c9869a5c4b542aea918087526d64d82aad233a1a724",
-      "id": 311,
+      "id": 310,
       "title": "Gemini Decision 1 scores 1,000 questions in one pass at $0.10/M",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -951,7 +1232,7 @@
     },
     {
       "uid": "681f12dc013ef11a7c7cf901eb97c292527b27fcee8761d4251806d729c4c8be",
-      "id": 310,
+      "id": 309,
       "title": "One prompt turns scattered flags into explicit state machines",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -984,7 +1265,7 @@
     },
     {
       "uid": "ef2e0ab61d44f96ed3a069ab94c4454c5667dec75feb8fdcbeb7af8b1aeefc98",
-      "id": 309,
+      "id": 308,
       "title": "Totem links Claude Code, Codex and Cursor agents into one workspace",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1009,7 +1290,7 @@
     },
     {
       "uid": "def80ed624b1ff7114fd5cd05f87aecdf0515aaef26d064000641467b9e528e5",
-      "id": 308,
+      "id": 307,
       "title": "Granola ships free voice typing, straight at Wispr Flow",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -1042,7 +1323,7 @@
     },
     {
       "uid": "8549fb2590026741b9b20c1e74967efe506709adfa438608a184083476a57960",
-      "id": 307,
+      "id": 306,
       "title": "Gemini 4 Carbon tops the index at Argon's $2/$10 price",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -1103,7 +1384,7 @@
     },
     {
       "uid": "35136fc276220bcca4de94a30e7f71edab2071e13572c625ae3e59081596846d",
-      "id": 306,
+      "id": 305,
       "title": "Boxes.dev gives each agent thread its own cloud computer",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1128,7 +1409,7 @@
     },
     {
       "uid": "f279c1fdc49375b3764275a15ac718fab6dbde7fd047fd468e58baf2b4dac487",
-      "id": 305,
+      "id": 304,
       "title": "One audit prompt to re-check shipped code on every model release",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -1153,7 +1434,7 @@
     },
     {
       "uid": "cdcf4b871fd1413c06452485fe94f840eee196d2410db6abb5ac638aa74408f2",
-      "id": 304,
+      "id": 303,
       "title": "Amazon's Strands Decider labels tickets 98% cheaper than Claude",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -1178,7 +1459,7 @@
     },
     {
       "uid": "f1281aed3c5ea5c85be730fa0f9ac953bb869e2606ac9d5e16b64857d2b8f28e",
-      "id": 303,
+      "id": 302,
       "title": "MiniMax-H3-Image ships open weights for native 16MP images",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -1207,7 +1488,7 @@
     },
     {
       "uid": "088a2c77d32ddbb3e87efebeb1fa92329086ff75671e1abfb9f4d2f03b4fc21f",
-      "id": 302,
+      "id": 301,
       "title": "Exa Monitors runs scheduled web searches that call your agent",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -1232,7 +1513,7 @@
     },
     {
       "uid": "78b489fdbd9c225c5585cf3459e12f62391bac948e43586589cca8cf75f63dbe",
-      "id": 301,
+      "id": 300,
       "title": "Glasshand hands an agent a real iPhone and Mac",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1252,47 +1533,6 @@
         {
           "label": "Glasshand",
           "url": "https://www.producthunt.com/posts/glasshand"
-        }
-      ]
-    },
-    {
-      "uid": "92eaecd4919df193d8e6a8210cab282c577da7d421a7b56a74911db3e99840b3",
-      "id": 300,
-      "title": "Claude Fable 5.2 matches Opus 5.5 coding at about half the cost",
-      "theme": "⚙️ LLM tooling & SDKs",
-      "sources": [
-        {
-          "pub": "Superhuman AI",
-          "date": "2026-11-10",
-          "time": "23:10",
-          "headline": "Anthropic debuts Fable and Mythos 5.2 as it nears IPO",
-          "href": "newsletters/2026-11-10_newsletter_superhuman_ai.md",
-          "anchor": "anthropic-debuts-fable-and-mythos-52-as-it-nears-ipo"
-        },
-        {
-          "pub": "The Code",
-          "date": "2026-11-10",
-          "time": "23:06",
-          "headline": "Anthropic’s new Claude duo codes at half the cost",
-          "href": "newsletters/2026-11-10_newsletter_the_code.md",
-          "anchor": "anthropics-new-claude-duo-codes-at-half-the-cost"
-        }
-      ],
-      "prose": [
-        "Fable 5.2 and Mythos 5.2 are the same underlying model with different guardrails: Fable is open to everyone and, at high effort, matches Opus 5.5's best coding score for roughly half the cost per task; Mythos is held back for vetted cybersecurity and biomedical teams. Both price at $8/$40 per million tokens and generate up to 30% faster, live now across paid Claude plans with an extra-usage allowance this week. Anthropic also shipped a Fable-specific prompting guide and a cookbook on which model to use when, including how effort level changes cost and how to mix models between a main agent and its subagents."
-      ],
-      "links": [
-        {
-          "label": "Fable and Mythos 5.2",
-          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
-        },
-        {
-          "label": "Prompting guide",
-          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2"
-        },
-        {
-          "label": "Which model for which task",
-          "url": "https://claude.dev/blog/which-claude-model-should-you-build-with/"
         }
       ]
     },
