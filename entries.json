@@ -5,7 +5,7 @@
   "entries": [
     {
       "uid": "ad80baa856c0ef3930152094ff45bb7b13dd64d410b70ee7d305c4d56fe67f54",
-      "id": 1496,
+      "id": 1498,
       "title": "Gemini API's Tool Retrieval loads only the tools a call needs",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -30,7 +30,7 @@
     },
     {
       "uid": "8a28e12dc3c37e5870b6873d0dc0a1504de7cf7156b427e061d96127e2f08735",
-      "id": 1495,
+      "id": 1497,
       "title": "Tabentic puts an agent inside your browser tabs",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -55,7 +55,7 @@
     },
     {
       "uid": "36ffed8eef04ed0d6ed5bc6edb24783085888945932d6eda18d4884fe6d5771c",
-      "id": 1494,
+      "id": 1496,
       "title": "Gemini takes over Mac apps and files, asking before it acts",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -96,7 +96,7 @@
     },
     {
       "uid": "4980f07bb10a30e292de04f323008305c0d5d3e4e51db2efd4ea38456ff6f957",
-      "id": 1493,
+      "id": 1495,
       "title": "Claude joins a Meet call and builds the whiteboard live",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -125,7 +125,7 @@
     },
     {
       "uid": "18c80bd69c801d1b742d504483ceaf2b0b0154a274c8eb38dfe0cad09987fc16",
-      "id": 1492,
+      "id": 1494,
       "title": "A swapped model endpoint makes the case for model attestation",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -150,7 +150,7 @@
     },
     {
       "uid": "aecee28fec8d8e1f5cf1ca065d7c8fd7bd6de1963e506aff62274e620df29485",
-      "id": 1491,
+      "id": 1493,
       "title": "Two weeks of OpenCode plus Qwen on a Mac Studio: what broke",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -179,7 +179,7 @@
     },
     {
       "uid": "16515a06a45fbd1fb33c57b819cdcf1b9148444531d07e5e1c52dcfd34611f51",
-      "id": 1490,
+      "id": 1492,
       "title": "OpenAI puts full-duplex voice in the API at $0.05 a minute",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -208,7 +208,7 @@
     },
     {
       "uid": "35faf1e206c99788e537ee965613b7131125b7c5c08f70d90f15219f7094cd6c",
-      "id": 1489,
+      "id": 1491,
       "title": "World Labs opens Atlas: text to 3D scenes, priced per frame",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -237,7 +237,7 @@
     },
     {
       "uid": "92eaecd4919df193d8e6a8210cab282c577da7d421a7b56a74911db3e99840b3",
-      "id": 1488,
+      "id": 1490,
       "title": "Claude Fable 5.2 matches Opus 5.5 coding at about half the cost",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -281,6 +281,56 @@
         {
           "label": "Which model for which task",
           "url": "https://claude.dev/blog/which-claude-model-should-you-build-with/"
+        }
+      ]
+    },
+    {
+      "uid": "520db4d6604dabe153053d4c59c2c326b5772ea547cde1eb5fc0e8b12924da95",
+      "id": 1489,
+      "title": "Mike Caulfield's model-library prompting queries several models about one image",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "Indicator",
+          "date": "2026-11-20",
+          "time": "21:10",
+          "headline": "Tools & Tips",
+          "href": "newsletters/2026-11-20_newsletter_indicator.md",
+          "anchor": "tools-tips"
+        }
+      ],
+      "prose": [
+        "Rather than asking a single model whether an image is misleading or out of context, the model-library approach puts it to a set of models and compares their answers. On the two-4090 Ollama box you can run that entirely local, nothing leaving the machine."
+      ],
+      "links": [
+        {
+          "label": "Model library approach",
+          "url": "https://mikecaulfield.substack.com/p/the-model-library-approach-to-prompting"
+        }
+      ]
+    },
+    {
+      "uid": "8da09c60b87b8a8fe968043505963208a1c660dafeacce25f86295704c5c4aa4",
+      "id": 1488,
+      "title": "Claude skills can automate court-record lookups and assemble a timeline",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Indicator",
+          "date": "2026-11-20",
+          "time": "21:10",
+          "headline": "Tools & Tips",
+          "href": "newsletters/2026-11-20_newsletter_indicator.md",
+          "anchor": "tools-tips"
+        }
+      ],
+      "prose": [
+        "A TraceLabs award writeup shows two students wiring Claude into municipal and state court-record sites to pull defendants, charges and outcomes into one timeline. The pattern — an LLM driving scripted lookups over public records — is the same shape Hermes would need for any recurring research chore."
+      ],
+      "links": [
+        {
+          "label": "TraceLabs MVO writeup",
+          "url": "https://writeups.benpolonsky.dev/tracelabs-mvo-writeup-oct-2026.html"
         }
       ]
     },

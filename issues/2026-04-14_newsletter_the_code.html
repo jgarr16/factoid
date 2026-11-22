@@ -87,7 +87,7 @@
 <hr />
 <p><strong>The 45-minute cliff.</strong> AI agents start strong but lose steam halfway through, declaring projects "finished" at 60% completion. Anthropic engineer Prithvi Rajasekaran <a href="https://www.anthropic.com/engineering/harness-design-long-running-apps"><strong>identified</strong></a> two main culprits: models lose focus as context windows fill, and they can't honestly critique their own work.</p>
 <p><strong>Agents are terrible at grading themselves.</strong> They routinely praise mediocre or even broken code as high-quality. This is especially bad for subjective tasks like frontend design, where automated tests don't exist. You can't easily tune a generator to be self-critical, so a different approach is needed.</p>
-<p><strong>The fix.</strong> Rajasekaran solved this with a planner, a generator, and a skeptical evaluator. The evaluator uses** <a href="https://playwright.dev/">Playwright</a>** (a browser automation tool) to test the app like a real user. While a solo agent built a broken game for $9 in 20 minutes, this multi-agent harness produced a working game for $200 over 6 hours.</p>
+<p><strong>The fix.</strong> Rajasekaran solved this with a planner, a generator, and a skeptical evaluator. The evaluator uses<strong> <a href="https://playwright.dev/">Playwright</a></strong> (a browser automation tool) to test the app like a real user. While a solo agent built a broken game for $9 in 20 minutes, this multi-agent harness produced a working game for $200 over 6 hours.</p>
 <p><strong>The catch is maintenance.</strong> Agent harnesses are built on assumptions about model limitations that quickly become obsolete. When upgrading from Opus 4.5 to 4.6, Anthropic found they could strip away entire structures that the newer model no longer needed. The real engineering challenge is figuring out which components to remove as models continue to improve.</p>
 <hr />
 <h5><strong>IN THE KNOW</strong></h5>
@@ -103,16 +103,16 @@
 <p><strong>Total Recall:</strong> Your AI agent forgets everything between sessions. This <a href="https://x.com/akshay_pachaar/status/2043745099792953508">guide</a> builds an agent memory that actually learns.</p>
 </li>
 <li>
-<p><strong>Under the Hood:</strong> A senior engineer built an** <a href="https://x.com/theo/status/2043611205856837680">AI coding harness</a>** from scratch in 60 lines of Python, demystifying the "magic" behind coding agents.</p>
+<p><strong>Under the Hood:</strong> A senior engineer built an<strong> <a href="https://x.com/theo/status/2043611205856837680">AI coding harness</a></strong> from scratch in 60 lines of Python, demystifying the "magic" behind coding agents.</p>
 </li>
 <li>
-<p><strong>The Philosopher:</strong> Google DeepMind's** <a href="https://x.com/dioscuri/status/2043661976534950323">newest hire</a>** isn't an engineer, a researcher, or a product lead. It's a Cambridge philosopher (1.1M views).</p>
+<p><strong>The Philosopher:</strong> Google DeepMind's<strong> <a href="https://x.com/dioscuri/status/2043661976534950323">newest hire</a></strong> isn't an engineer, a researcher, or a product lead. It's a Cambridge philosopher (1.1M views).</p>
 </li>
 <li>
 <p><strong>Before You Ship:</strong> Vibe-coded apps keep shipping with exposed API keys. This <a href="https://x.com/Hartdrawss/status/2043351026053386727"><strong>pre-launch checklist</strong></a> covers every blind spot AI won't catch for you.</p>
 </li>
 <li>
-<p><strong>Holy War:</strong> A leaked memo from OpenAI's CRO calls Claude "a religion" internally and lays out a** <a href="https://www.theverge.com/ai-artificial-intelligence/911118/openai-memo-cro-ai-competition-anthropic">five-point plan</a>** to win the enterprise AI war.</p>
+<p><strong>Holy War:</strong> A leaked memo from OpenAI's CRO calls Claude "a religion" internally and lays out a<strong> <a href="https://www.theverge.com/ai-artificial-intelligence/911118/openai-memo-cro-ai-competition-anthropic">five-point plan</a></strong> to win the enterprise AI war.</p>
 </li>
 <li>
 <p><strong>Hard Truth:</strong> An ex-Microsoft engineering lead says tech hiring isn't dead, but most developers are making <a href="https://x.com/ujjwalscript/status/2043591033162965085"><strong>three mistakes</strong></a> that kill their applications before a human even reads them.</p>

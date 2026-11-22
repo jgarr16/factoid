@@ -111,7 +111,7 @@
 <p><strong>Lazy Agents:</strong> AI coding agents degrade the longer they run. This <a href="https://x.com/systematicls/status/2038241033755168959">post explains</a> why and how to design harnesses that keep them on track.</p>
 </li>
 <li>
-<p><strong>Flattery Trap:</strong> Andrej Karpathy spent 4 hours perfecting a blog post with an LLM. The same LLM flipped his** <a href="https://x.com/karpathy/status/2037921699824607591">entire argument</a>** in seconds (3M views).</p>
+<p><strong>Flattery Trap:</strong> Andrej Karpathy spent 4 hours perfecting a blog post with an LLM. The same LLM flipped his<strong> <a href="https://x.com/karpathy/status/2037921699824607591">entire argument</a></strong> in seconds (3M views).</p>
 </li>
 <li>
 <p><strong>Buried Features:</strong> The creator of Claude Code just shared 15 under-utilized <a href="https://x.com/bcherny/status/2038454336355999749">features</a> that can drastically change how you build.</p>
@@ -120,7 +120,7 @@
 <p><strong>Plug and Play:</strong> OpenAI dropped a gallery of real-world <a href="https://x.com/romainhuet/status/2037604733847003367"><strong>Codex examples</strong></a> with starter prompts you can use directly in the app.</p>
 </li>
 <li>
-<p><strong>Zero-Day Hunter:</strong> In a live demo, a security expert** <a href="https://x.com/chiefofautism/status/2037951563931500669">showed</a>** Claude finding unknown vulnerabilities in Ghost CMS and the Linux kernel entirely on its own (1.6M views).</p>
+<p><strong>Zero-Day Hunter:</strong> In a live demo, a security expert<strong> <a href="https://x.com/chiefofautism/status/2037951563931500669">showed</a></strong> Claude finding unknown vulnerabilities in Ghost CMS and the Linux kernel entirely on its own (1.6M views).</p>
 </li>
 </ul>
 <hr />
@@ -129,7 +129,7 @@
 <p><a href="https://www.builder.io/blog/cursor-tips#using-yolo-mode"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2c80003c-f864-4a04-8b5b-fe9b53fec369/CleanShot_2026-03-30_at_10.48.40_2x.jpg?t=1774847955" /></a></p>
 <hr />
 <p>Every time Cursor tries to run a test or build your project, it pauses and asks for permission. You click "allow," it runs, hits another snag, and asks all over again. <a href="https://www.builder.io/blog/cursor-tips#using-yolo-mode"><strong>YOLO mode</strong></a> solves this by letting the agent execute commands autonomously, but simply toggling the setting isn't enough. You need a scoped prompt to whitelist safe commands.</p>
-<p>Go to <strong>Cursor Settings &gt; Features</strong> and enable** YOLO mode**. Once active, you'll find a prompt field that dictates which commands the agent can run without intervention. Paste this:</p>
+<p>Go to <strong>Cursor Settings &gt; Features</strong> and enable<strong> YOLO mode</strong>. Once active, you'll find a prompt field that dictates which commands the agent can run without intervention. Paste this:</p>
 <pre><code>any kind of tests are always allowed like vitest, npm test, nr test, etc. also basic build commands like build, tsc, etc. creating files and making directories (like touch, mkdir, etc) is always ok too
 </code></pre>
 <p>Now, when Cursor hits a TypeScript error, it automatically runs “tsc”, fixes the issue, and restarts the build until it passes. You can swap in your own tools (like “pytest” or “cargo build”) and use the deny list to block destructive commands like “rm -rf” or database migrations.</p>

@@ -2,12 +2,12 @@
 title: "Interesting tidbits"
 sweep: "2025-09-08 → 2026-11-21"
 updated: "2026-11-22"
-sources: "Future Tools, The Code, Superhuman AI, The Batch, Lonely Octopus, The Frontier, The Product Compass, Indicator, Product Hunt Weekly, Compound With AI, The Economist, DeepLearning.AI, OpenRouter Team, Superhuman AI · Sunday Special"
+sources: "Future Tools, The Code, Superhuman AI, The Batch, Indicator, Lonely Octopus, The Frontier, The Product Compass, Product Hunt Weekly, Compound With AI, The Economist, DeepLearning.AI, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
 
-**1496. Gemini API's Tool Retrieval loads only the tools a call needs**
+**1498. Gemini API's Tool Retrieval loads only the tools a call needs**
 *⚙️ LLM tooling & SDKs*
 *🗞 Future Tools · 2026-11-21 02:04 KST — ["Tool Retrieval in preview, so agents with big tool libraries only load the details they need"](newsletters/2026-11-21_newsletter_future_tools.md#tool-retrieval-in-preview-so-agents-with-big-tool-libraries-only-load-)*
 
@@ -20,7 +20,7 @@ In preview, the Gemini API can search a large tool library and load only the too
 
 ---
 
-**1495. Tabentic puts an agent inside your browser tabs**
+**1497. Tabentic puts an agent inside your browser tabs**
 *⚙️ LLM tooling & SDKs*
 *🗞 Future Tools · 2026-11-21 02:04 KST — ["Put an AI Agent in Your Browser Tabs"](newsletters/2026-11-21_newsletter_future_tools.md#put-an-ai-agent-in-your-browser-tabs)*
 
@@ -33,7 +33,7 @@ A Chrome extension where the agent works in the tabs you already have open: extr
 
 ---
 
-**1494. Gemini takes over Mac apps and files, asking before it acts**
+**1496. Gemini takes over Mac apps and files, asking before it acts**
 *🍎 Apple & Mac*
 *🗞 Future Tools · 2026-11-21 02:04 KST — ["computer use, letting it handle multi-step tasks across your files, desktop apps, and the web in a background window"](newsletters/2026-11-21_newsletter_future_tools.md#computer-use-letting-it-handle-multi-step-tasks-across-your-files-desk)*
 *🗞 The Code · 2026-11-20 23:08 KST — ["Google gives Gemini control of your Mac and tightens Android installs"](newsletters/2026-11-20_newsletter_the_code.md#google-gives-gemini-control-of-your-mac-and-tightens-android-installs)*
@@ -49,7 +49,7 @@ The Gemini app for macOS can now run multistep tasks across files, desktop apps 
 
 ---
 
-**1493. Claude joins a Meet call and builds the whiteboard live**
+**1495. Claude joins a Meet call and builds the whiteboard live**
 *⚡ Productivity & agent follow-through*
 *🗞 Superhuman AI · 2026-11-20 23:08 KST — ["How to build docs and whiteboards during a team call with Claude Meetings"](newsletters/2026-11-20_newsletter_superhuman_ai.md#how-to-build-docs-and-whiteboards-during-a-team-call-with-claude-meeti)*
 
@@ -63,7 +63,7 @@ Claude > Meetings connects your Google Calendar, then the bot joins a Google Mee
 
 ---
 
-**1492. A swapped model endpoint makes the case for model attestation**
+**1494. A swapped model endpoint makes the case for model attestation**
 *🤖 AI security & agent risk*
 *🗞 The Code · 2026-11-20 23:08 KST — ["Hijacked model answered Prime Intellect customers for two days"](newsletters/2026-11-20_newsletter_the_code.md#hijacked-model-answered-prime-intellect-customers-for-two-days)*
 
@@ -76,7 +76,7 @@ Prime Intellect's DeepSeek V4.1 Flash endpoint was replaced with a copy that ref
 
 ---
 
-**1491. Two weeks of OpenCode plus Qwen on a Mac Studio: what broke**
+**1493. Two weeks of OpenCode plus Qwen on a Mac Studio: what broke**
 *🏗️ Agent plumbing & production stacks*
 *🗞 The Code · 2026-11-20 23:08 KST — ["A developer tried to replace Claude Code with a local setup. Here’s what broke"](newsletters/2026-11-20_newsletter_the_code.md#a-developer-tried-to-replace-claude-code-with-a-local-setup-heres-what)*
 
@@ -90,7 +90,7 @@ David Gewirtz tried to replace Claude Code with OpenCode plus Qwen's coding mode
 
 ---
 
-**1490. OpenAI puts full-duplex voice in the API at $0.05 a minute**
+**1492. OpenAI puts full-duplex voice in the API at $0.05 a minute**
 *🗣️ Voice · TTS & STT*
 *🗞 The Code · 2026-11-20 23:08 KST — ["OpenAI hands devs the voice behind ChatGPT"](newsletters/2026-11-20_newsletter_the_code.md#openai-hands-devs-the-voice-behind-chatgpt)*
 
@@ -104,7 +104,7 @@ GPT-Live-1.1 is the same full-duplex voice model ChatGPT Plus and Pro users have
 
 ---
 
-**1489. World Labs opens Atlas: text to 3D scenes, priced per frame**
+**1491. World Labs opens Atlas: text to 3D scenes, priced per frame**
 *📡 Also worth knowing*
 *🗞 The Batch · 2026-11-20 23:02 KST — ["World Labs has opened Atlas, its latest world model, to the public"](newsletters/2026-11-20_newsletter_the_batch.md#world-labs-has-opened-atlas-its-latest-world-model-to-the-public)*
 
@@ -118,7 +118,7 @@ Atlas is now self-serve: text or photos in, 3D scenes and camera-controllable vi
 
 ---
 
-**1488. Claude Fable 5.2 matches Opus 5.5 coding at about half the cost**
+**1490. Claude Fable 5.2 matches Opus 5.5 coding at about half the cost**
 *⚙️ LLM tooling & SDKs*
 *🗞 The Batch · 2026-11-20 23:02 KST — ["Claude Fable Gets a Price Cut"](newsletters/2026-11-20_newsletter_the_batch.md#claude-fable-gets-a-price-cut)*
 *🗞 Superhuman AI · 2026-11-10 23:10 KST — ["Anthropic debuts Fable and Mythos 5.2 as it nears IPO"](newsletters/2026-11-10_newsletter_superhuman_ai.md#anthropic-debuts-fable-and-mythos-52-as-it-nears-ipo)*
@@ -129,6 +129,32 @@ Fable 5.2 and Mythos 5.2 are the same underlying model with different guardrails
 - [Fable and Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2)
 - [Prompting guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2)
 - [Which model for which task](https://claude.dev/blog/which-claude-model-should-you-build-with/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1489. Mike Caulfield's model-library prompting queries several models about one image**
+*⚙️ LLM tooling & SDKs*
+*🗞 Indicator · 2026-11-20 21:10 KST — ["Tools & Tips"](newsletters/2026-11-20_newsletter_indicator.md#tools-tips)*
+
+Rather than asking a single model whether an image is misleading or out of context, the model-library approach puts it to a set of models and compares their answers. On the two-4090 Ollama box you can run that entirely local, nothing leaving the machine.
+
+- [Model library approach](https://mikecaulfield.substack.com/p/the-model-library-approach-to-prompting)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1488. Claude skills can automate court-record lookups and assemble a timeline**
+*⚡ Productivity & agent follow-through*
+*🗞 Indicator · 2026-11-20 21:10 KST — ["Tools & Tips"](newsletters/2026-11-20_newsletter_indicator.md#tools-tips)*
+
+A TraceLabs award writeup shows two students wiring Claude into municipal and state court-record sites to pull defendants, charges and outcomes into one timeline. The pattern — an LLM driving scripted lookups over public records — is the same shape Hermes would need for any recurring research chore.
+
+- [TraceLabs MVO writeup](https://writeups.benpolonsky.dev/tracelabs-mvo-writeup-oct-2026.html)
 
 - [ ] 📌 remind me
 - [ ] 🙈 hide me

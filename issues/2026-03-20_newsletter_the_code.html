@@ -76,9 +76,9 @@
 <p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1660433e-3289-419c-ba4a-b60dc99e2c0a/superhumanteam_a_software_engineering_team_working_on_a_white_6a8076a4-9102-4bee-af5a-844c96372a05_1.jpg?t=1774002437" />
 <em>Source: The Code, Superhuman</em></p>
 <hr />
-<p><strong>Everybody shipped at once.</strong> Cursor and Claude Code both** <a href="https://cursor.com/blog/marketplace">launched</a>** a plugin marketplace in February, the same month AWS** <a href="https://aws.amazon.com/blogs/developer/introducing-agent-plugins-for-aws/">released</a>** its open-source agent plugins. By bundling skills, MCP servers, hooks, and rules into installable units, these plugins fill a gap that coding agents have had since MCP shipped.</p>
+<p><strong>Everybody shipped at once.</strong> Cursor and Claude Code both<strong> <a href="https://cursor.com/blog/marketplace">launched</a></strong> a plugin marketplace in February, the same month AWS<strong> <a href="https://aws.amazon.com/blogs/developer/introducing-agent-plugins-for-aws/">released</a></strong> its open-source agent plugins. By bundling skills, MCP servers, hooks, and rules into installable units, these plugins fill a gap that coding agents have had since MCP shipped.</p>
 <p><strong>The missing packaging layer.</strong> MCP allowed agents to access external tools, but other essential components like skills, subagents, hooks, and rules lacked a unified format. These elements were scattered across various configuration files and prompts. Plugins bundle all of it into one installable unit that works across projects and teams.</p>
-<p><strong>Intercom is already there.</strong> Senior principal engineer Brian Scanlan recently** <a href="https://x.com/brian_scanlan/status/2033978300003987527">explained</a>** how his team built 13 internal Claude Code plugins, totaling more than 100 skills. Creating individual plugins is easy, but the real challenge is building the infrastructure, like telemetry and automated reporting. This feedback loop is what allows plugins to evolve and improve on their own instead of remaining static.</p>
+<p><strong>Intercom is already there.</strong> Senior principal engineer Brian Scanlan recently<strong> <a href="https://x.com/brian_scanlan/status/2033978300003987527">explained</a></strong> how his team built 13 internal Claude Code plugins, totaling more than 100 skills. Creating individual plugins is easy, but the real challenge is building the infrastructure, like telemetry and automated reporting. This feedback loop is what allows plugins to evolve and improve on their own instead of remaining static.</p>
 <p><strong>Now build yours.</strong> While Claude Code and Cursor offer access to marketplaces, the real advantage lies in building internal plugins for your specific workflows, like code reviews and security protocols. Intercom has proven that this iterative approach of using real-world data to build new skills creates a more robust system. Plugins are the future of platform infrastructure, and the teams investing in them now will see the greatest long-term benefits.</p>
 <hr />
 <h5><strong>IN THE KNOW</strong></h5>
@@ -97,7 +97,7 @@
 <p><strong>Nano Banana 2:</strong> Gemini's newest image model can now pull real photos from Google Search and use them as context during generation. This <a href="https://x.com/_philschmid/status/2033573084297331163"><strong>dev guide</strong></a> has ready-to-use code snippets.</p>
 </li>
 <li>
-<p><strong>Token Budget:</strong> A clip of Jensen Huang telling engineers exactly how much they should be spending on AI tokens is** <a href="https://x.com/TFTC21/status/2034725105285353962">going viral</a>** (1.6M views).</p>
+<p><strong>Token Budget:</strong> A clip of Jensen Huang telling engineers exactly how much they should be spending on AI tokens is<strong> <a href="https://x.com/TFTC21/status/2034725105285353962">going viral</a></strong> (1.6M views).</p>
 </li>
 <li>
 <p><strong>DevSheets:</strong> Stop Googling the same syntax twice. This <a href="https://www.devsheets.io/"><strong>site</strong></a> has searchable cheat sheets for 30+ technologies, including Git, Docker, React, and Go.</p>
@@ -110,7 +110,7 @@
 <em>Source: X/lydiahallie</em></p>
 <hr />
 <p>Every tool call within a skill typically lands in your main context window. For instance, if you run a research skill that reads 20 files, those intermediate calls will quickly clutter your conversation history. Lydia Hallie recently <a href="https://x.com/lydiahallie/status/2033603164398883042"><strong>shared</strong></a> a simple two-line fix.</p>
-<p>Just add <strong>“context: fork”</strong> and** “agent”** to your skill's YAML frontmatter to run it in an isolated subagent with its own dedicated context window.</p>
+<p>Just add <strong>“context: fork”</strong> and<strong> “agent”</strong> to your skill's YAML frontmatter to run it in an isolated subagent with its own dedicated context window.</p>
 <pre><code># .claude/skills/deep-research/SKILL.md
 
 name: deep-research
