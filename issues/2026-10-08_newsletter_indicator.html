@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>How to investigate potential sockpuppets and manipulation on Wikipedia — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="How to investigate potential sockpuppets and manipulation on Wikipedia — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>How to investigate potential sockpuppets and manipulation on Wikipedia</h1>
+<p class="meta">2026-10-08 · received 2026-10-08 20:03 +0900
+ · <a href="https://indicator.media/p/how-to-investigate-potential-sockpuppets-and-manipulation-on-wikipedia" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>How to investigate potential sockpuppets and manipulation on Wikipedia</h1>
+<p>Wikipedia remains one of the <a href="https://www.similarweb.com/website/wikipedia.org/">world's top websites</a>, logging more than 3.5 billion visits in August. Even as it grapples with<a href="https://san.com/cc/house-republicans-investigate-wikipedia-over-allegations-of-bias/"> accusations of bias</a>, <a href="https://theconversation.com/wikipedia-has-a-huge-gender-equality-problem-heres-why-it-matters-251675">challenges of representation</a>, <a href="https://signpost.news/2026-01-15/Special_report">editor fatigue</a> and an <a href="https://indicator.media/p/briefing-grokipedia-is-back-kinda">AI-powered rival set up</a> by the world's richest man, it maintains a central role in our online information ecosystem.</p>
+<p>This makes Wikipedia an appealing target for influence operations. Over the years <a href="https://therecord.media/wikimedia-bans-admin-of-wikipedia-croatia-for-pushing-radical-right-agendas">politically motivated groups</a>, <a href="https://www.thebureauinvestigates.com/stories/2011-12-08/bell-pottinger-targeted-campaigner-on-wikipedia">PR firms</a>,and <a href="https://hongkongfp.com/2021/09/14/exclusive-wikipedia-bans-7-mainland-chinese-power-users-over-infiltration-and-exploitation-in-unprecedented-clampdown/">editors sympathetic to authoritarian regimes</a> have tried to circumvent Wikipedia's rules to impose their view of the world. The site’s commitment to anonymity creates an opening for sockpuppetry, while its extensive transparency makes it an ideal platform to study it. According to Wikipedia data, almost 28,000 users have been identified as “sockmasters,” that is operating a group of two or more accounts on the platform for deceptive purposes.</p>
+<p>In January, journalist and researcher Claire Wilmot <a href="https://www.thebureauinvestigates.com/stories/2026-01-14/london-pr-firm-rewrites-wikipedia-for-governments-and-billionaires">uncovered</a> a decade-long effort by London-based PR firm Portland Communications to deceptively edit Wikipedia, via a contractor, on behalf of its clients. (Portland told <a href="https://www.theguardian.com/technology/2026/jan/16/pr-firm-portland-accused-of-commissioning-favourable-changes-to-wikipedia-pages">The Guardian</a> that it “has a policy of strict adherence to the guidelines on all social media platforms.”)</p>
+<p>Wikipedia’s public records provided a “huge body of evidence that could corroborate what my sources were saying,” Wilmot told me.</p>
+<p>In this guide, I’ll explain how Wikipedia’s sockpuppet policy works and the information and tools that investigators, journalists, and researchers can use to investigate potential manipulation. I've also collected tips from five journalists, researchers, and Wikipedia editors.</p>
+<p>“What is remarkable about sock puppet investigations is they can be really broad,” said Stephen Harrison, a journalist who wrote <a href="https://stephenharrison.com/the-editors">a rollicking novel</a> about Wikipedia sockpuppetry. “Someone or some team can have so many sock puppets and they can last for years.”</p>
+<p><strong>1. Wikipedia’s policy on sockpuppets</strong></p>
+<p>Wikipedia operates under the general policy that every editor should have only one account, with a few exceptions, such as for privacy and safety reasons. It’s forbidden to use multiple accounts for deceptive purposes.</p>
+<p>Bad actors might use multiple undisclosed accounts, or sockpuppets, to fake support for a proposed edit, evade a block, impersonate or harass another user, or get around editing restrictions imposed on a primary account. When a Wikipedian suspects an editor of running a sockpuppet operation, they can file a case that gets listed on the <a href="https://en.wikipedia.org/wiki/Wikipedia:Sockpuppet_investigations">Sockpuppet investigations page</a>.</p>
+<p>Cases are reviewed by clerks, who are more experienced Wikipedians. They can endorse or decline the use of <a href="https://www.mediawiki.org/wiki/Help:Extension:CheckUser">CheckUser</a>, the strongest tool available in such investigations. CheckUser is available only to <a href="https://meta.wikimedia.org/wiki/CheckUser_policy">selected senior admins</a> and exposes a Wikipedia editor’s IP address, browser and device details, among other logged data. In the case of English Wikipedia, 47 admins are authorized to use CheckUser. Partly because of how sensitive this data can be, CheckUser is used infrequently – I found it was run in 180 of 866 reports (21%) across 540 cases filed between Aug 22 and Oct 1.</p>
+<p>Instead, Wikipedians typically determine sockpuppetry based on suspicious behavioral indicators like high overlap in the pages edited, the content added or removed, the timing and sources of the contributions, and so on.</p>
+<p>Accounts found to be sockpuppets are <a href="https://en.wikipedia.org/wiki/Wikipedia:Sockpuppet_investigations/SPI/Administrators_instructions#Blocking_and_tagging">blocked from editing</a>, at least temporarily, and tagged. Their edits may also be reversed.</p>
+<p><strong>2. Case pages</strong></p>
+<p>The <a href="https://en.wikipedia.org/wiki/Wikipedia:Sockpuppet_investigations">case pages</a> for suspected sockpuppet accounts are filled with information and the lingo can be a little cryptic for non-Wikipedians.</p>
+<p>The filing names the oldest known account in the alleged cluster, and that account also becomes the name of the associated investigation. Suspected “sock” accounts tied to the main account are listed below the oldest account.</p>
+<p>The Wikipedian who makes the accusation files evidence to support their case. This typically takes the form of an analysis of “diffs,” or edits made by the suspected accounts that indicate coordination. (Wikipedians are strongly discouraged from <a href="https://en.wikipedia.org/wiki/Wikipedia:Casting_aspersions">casting aspersions</a>; their evidence is expected to be rigorous.)</p>
+<p>Take for example the recent <a href="https://en.wikipedia.org/wiki/Wikipedia:Sockpuppet_investigations/Hila1951">Hila1951 investigation</a>. The editor who filed the case argued that the accused accounts “focused on adding material that supports Erion Veliaj, a mayor who has had ‘a team of PR consultants’, ‘a social media PR campaign’, and ‘a broad lobbying campaign’ since he was arrested in February 2025.” Besides Hila1951, the first filing mentions five other accounts. Additional comments cited other possibly related accounts.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0d067bb2-f773-4ad4-a4ff-9ff2767fe950/image.png?t=1791440964" /></p>
+<p>A good first step is to enter a Wikipedia username in a tool like <a href="https://whatsmyname.app/">whatsmyname.app</a> to see if it’s used by other online accounts. There's no guarantee that the same person is behind the Wikipedia account and others that use the same username. They’re potential leads worth examining.</p>
+<p>The most important thing to review on the case files is the “contribs” link for each suspected sockpuppet, which surfaces their edit histories. Edit history is “really really useful,” Wilmot said. It can give a first indication of whether an account focuses on a single topic or on unusual pairings of articles.</p>
+<p>In the case above, Hila1951’s <a href="https://en.wikipedia.org/w/index.php?title=Special:Contributions/Hila1951&amp;target=Hila1951&amp;offset=&amp;limit=500">contributions page</a> shows the person behind the account made 22 edits over ten days in December 2025 to an article about Massad Boulos, a senior White House advisor who is also the father-in-law of Tiffany Trump.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/09108c5e-9a2d-4bf7-88cc-0802b502b7ec/image.png?t=1791440964" /></p>
+<p>"Wikipedians become very suspicious when some account seems like it's primarily interested in editing about this one topic as opposed to having a wide range of interests," Harrison said.</p>
+<p>Repeated edits on a small page that doesn’t have much organic interest might also be a tip-off.</p>
+<p>A case page usually lists the Wikipedia editors who were involved in the investigation (these can also be found in the <a href="https://en.wikipedia.org/w/index.php?title=Wikipedia:Sockpuppet_investigations/Hila1951&amp;action=history">history</a>). In the Hila1951 case, editors included Dreamyshade, who filed the case, Vermont, who served as clerk and approved the request for CheckUser, and RoySmith and Barkeep49, who ran CheckUser tests. Clicking on their usernames opens their profiles, which often include a “send me an email” option. Reaching out to the editors involved, making sure to clearly explain your motives, is a helpful way to get more information on the case.</p>
+<p>CheckUser, as mentioned above, exposes digital fingerprints like IP addresses for suspected sockpuppets. Admins can use this information to reverse search other accounts that use the same IP (see example below).</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e383d10a-4d56-4e49-b383-46fe612e6465/image.png?t=1791440964" /></p>
+<p>While this information is not directly shared in the report, admins with access to CheckUser will share the results in the case file. CheckUser is used sparingly and might not always be of assistance, an expert Wikipedia editor that goes by the handle <a href="https://xtools.wmcloud.org/ec/en.wikipedia.org/TheSandDoctor">TheSandDoctor</a> told me. "If your sockmaster or latest CheckUser confirmed sockpuppet last edited or did a logged action 4 months ago for instance, there is generally nothing to go off of."</p>
+<p>In Hila1951's case, the core accounts were found to be "possilikely" connected (a CheckUser rating between "possible" and "likely"). A second batch of accounts was "confirmed" to be linked to each other, but not to Hila1951.</p>
+<p><strong>3. Using Wikipedia’s tools and the API</strong></p>
+<p>You can use several open-access tools and the Wikipedia API to go deeper.</p>
+<p><a href="https://guc.toolforge.org/">Global contributions</a> or<a href="https://xtools.wmcloud.org/"> Edit Counter</a> can help you review an account’s edits across wikis, their edit counts and active hours. I also like the TopEdits view, which gives a sense of the pages an account has interacted with. Below is the overview of my <a href="https://xtools.wmcloud.org/topedits/en.wikipedia.org/Alexios88/0">relatively meager</a> Wikipedia edit history.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/95242c02-69f0-4745-900c-dbd8bf5ff739/image.png?t=1791440964" /></p>
+<p>This information can also be obtained through the <a href="https://www.mediawiki.org/wiki/API:Action_API">MediaWiki Action API</a>, which is especially helpful when investigating accounts with a large corpus of edits. Make sure to follow the <a href="https://www.mediawiki.org/wiki/API:Etiquette">API’s usage guidelines</a> by identifying yourself and providing contact details. To avoid getting blocked, send requests at a reasonable rate and pause when servers are busy. (I had Claude write my scripts, then ran them in Terminal.) Generally speaking, these are the three most useful requests:</p>
+<ul>
+<li>
+<p>list=users&amp;ususers=NAME&amp;usprop=editcount|registration|blockinfo has information about account creation, edits, and block status.</p>
+</li>
+<li>
+<p>list=usercontribs&amp;ucuser=NAME&amp;uclimit=500 returns the account’s edits in batches of 500s with the relevant page, time, edit summary and size change (basically what you would see manually on the contribs page)</p>
+</li>
+<li>
+<p>action=compare&amp;fromrev=EDIT_ID&amp;torelative=prev gives you the actual text edit (added or removed)</p>
+</li>
+</ul>
+<p>Through the API, I retrieved Hila1951’s full history and could analyze their edits. After an initial focus on Massad Boulos, the account shifted to Albania’s Special Structure against Corruption and Organized Crime (SPAK) and its investigation of Tirana’s jailed mayor Erion Veliaj. These account for almost half of all their edits and pushed the argument that the corruption investigations were politically motivated and excessive.</p>
+<p>Beyond digging into individual editors, you should analyze activity across the alleged sockpuppet accounts. Things to look for include whether they push similar narratives, cite the same sources, or have edits that are reversed for similar reasons. Harrison said that sockpuppet accounts “try to create the perception of consensus.” This might include staggering edits across accounts or endorsing each other’s tweaks.</p>
+<p>A practical way to compare editors is using <a href="https://sigma.toolforge.org/editorinteract.py">Editor Interaction Analyser</a> or <a href="https://interaction-timeline.toolforge.org/">Interaction Timeline</a>.</p>
+<p>In the Hila1951 case, one of the suspected sockpuppet accounts, Malmoboy, <a href="https://en.wikipedia.org/w/index.php?diff=1334429427">weakened</a> the description of a scandal involving misappropriated funds in Veliaj’s article. A few days later, another suspected sock, Abogadodejusticia, <a href="https://en.wikipedia.org/w/index.php?diff=1335340949">deleted the whole section</a>.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/243324bc-55a0-4e80-8138-5b7cdedb7663/image.png?t=1791440963" /></p>
+<p>You could also look at linguistic tells to see whether there are certain similarities in the way editors write. <a href="https://lucraszewski.com/">Luc Raszewski</a>, who co-authored a <a href="https://aclanthology.org/2025.acl-long.1083/">paper</a> on detecting Wikipedia sockpuppetry through automated means, told me that prior approaches have tried to use <a href="https://en.wikipedia.org/wiki/Stylometry">stylometry</a> to this end.</p>
+<p>"Even if you try to vary your vocabulary or your style of writing,” Raszewski said, “you are very unlikely to be as random as a group of 10 random people. So in theory there should be some signal linking your [accounts] together." He warns that this approach, never bulletproof, is even more vulnerable if genuine editors increasingly use AI tools to help them write and start sounding more alike.</p>
+<p>"You might end up in a scenario where a group of 10 nefarious people look more diverse than 10 good editors," Raszewski said. Building more complex detection approaches with machine learning as he did for his paper is possible, but still not a substitute to careful manual analysis.</p>
+<p>Beyond textual analysis, you can look at sourcing and other signals. Britta Gustafson is a Wikipedia editor who uses the account <a href="https://en.wikipedia.org/wiki/User:Dreamyshade">Dreamyshade</a> and filed the Hila1951 case. She detailed other strategies to sniff out deceptive behavior on the platform.</p>
+<p>Gustafson said she found “a lot of websites that accept paid placement of both positive and negative material and publish it without disclosure cited by suspicious articles.” She maintains a list of pay-for-play websites and uses <a href="https://spamcheck.toolforge.org/">SpamCheck</a> to find articles that cite them. Then she reviews the contributions of editors who add them to Wikipedia. (Her notes on sourcing challenges on Wikipedia are worth reading in full <a href="https://en.wikipedia.org/wiki/User:Dreamyshade/Reliability_resources">here</a>.)</p>
+<p>Gustafson also built a tool called <a href="https://projo.toolforge.org/review?prior_deletion=1&amp;inexperienced=1">ProJo</a> to flag “suspicious new articles,” which uses signals like a relatively inexperienced editor, possible AI use, flags for conflicts of interest, and so on. Finally, she recommends staying up to date with noticeboards like <a href="https://en.wikipedia.org/wiki/Wikipedia:Conflict_of_interest/Noticeboard">this one</a> that flags users who have been accused of a conflict of interest.</p>
+<p><strong>4. Be aware of limitations – and do additional reporting</strong></p>
+<p>The amount of information available when investigating Wikipedia can lead you astray. Editors might make similar edits because they reflect their worldview, not as a result of coordination. I’ve also found that AI assistants can be very eager to overfit editorial overlap when there is only a tenuous connection, so be wary about consulting them without reviewing evidence closely.</p>
+<p>“It can be very easy to go down rabbit holes and say ‘Oh, this is suspicious,’” Wilmot told me. “Some volunteer editors are really passionate about certain things” and their continued focus on specific pages is “not necessarily an indicator that they are paid.”</p>
+<p>Even expert Wikipedia editors warn that proving coordination is difficult. Detecting sockpuppets is “highly contextual,” according to TheSandDoctor. What looks like fishy behavior “could be anything from run-of-the-mill vandalism, a genuine disagreement over content, routine edit warring, or actual sockpuppetry.”</p>
+<p>It’s much easier to find evidence of common edits across accounts than it is to prove coordination, or attribute it to a specific person or organization.</p>
+<p>"You're just never going to get an answer of 'this person is controlling both accounts'” through an analysis of what’s on Wikipedia, says Harrison. “It's sort of like they're under common control based on these suspicions."</p>
+<p>“You do run into some limits if you are using an only-OSINT approach to investigate Wikipedia,” Wilmot told me.</p>
+<p>She recommends that journalists and researchers use a mixed methods approach that includes source interviews and other forms of outreach. That’s how she ultimately landed her Portland Communications story. In an inevitable turn of events, the accusations of wikilaundering are now listed on Portland’s own Wikipedia <a href="https://en.wikipedia.org/wiki/Portland_Communications">article</a>.</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

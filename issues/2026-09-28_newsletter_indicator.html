@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Reddit OSINT: What still works for search, monitoring, and archives — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Reddit OSINT: What still works for search, monitoring, and archives — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Reddit OSINT: What still works for search, monitoring, and archives</h1>
+<p class="meta">2026-09-28 · received 2026-09-28 19:31 +0900
+ · <a href="https://indicator.media/p/reddit-osint-what-still-works-for-search-monitoring-and-archives" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>Reddit OSINT: What still works for search, monitoring, and archives</h1>
+<p>“Just about anybody using Google at this point will end up on Reddit at some point,” <a href="https://www.seroundtable.com/reddit-earnings-call-39873.html">said</a> Reddit CEO Steve Huffman on an earnings call last year.</p>
+<p>People congregate on Reddit to share tips, experiences, knowledge, and ephemera. It’s an increasingly rare style of online community — and one heavily mined for search results and AI training data.</p>
+<p>Google and other search engines (though <a href="https://www.bloomberg.com/news/articles/2024-08-01/reddit-blocks-microsoft-from-searching-site-without-paying">not</a> Bing) use Reddit pages to source information for results, especially AI Overviews. Google and OpenAI also pay to license Reddit data for model training.</p>
+<p>All of which makes Reddit an important platform for OSINT and a target for manipulation. A cottage industry of tools and agencies now claims it can seed products and messaging across Reddit to influence SEO and AI chatbots. And governments have been <a href="https://www.bbc.com/news/technology-43255285">caught</a> trying to influence conversations.</p>
+<p>Reddit OSINT has changed dramatically over the past three years. The big change came when the company restricted API access to prevent AI companies from using its content without compensation. One result is that a slew of useful Reddit-focused tools stopped working.</p>
+<p>It's similar to <a href="https://indicator.media/p/worst-case-scenario-twitters-api">what happened on X</a> after the platform curtailed its free API. On Reddit, the changes cut off Pushshift, a free archive of Reddit posts and comments that many tools relied on. A few other dead tools of note:</p>
+<ul>
+<li>
+<p>Unddit and Removeddit died with Pushshift.</p>
+</li>
+<li>
+<p>removeddit.com now serves casino spam.</p>
+</li>
+<li>
+<p>Karma Decay, a reverse image search tool focused on Reddit, is unreliable.</p>
+</li>
+<li>
+<p>GummySearch stopped accepting new customers in November 2025 after failing to get a commercial API license. It will shut down completely in December 2026.</p>
+</li>
+</ul>
+<p>But there are still options. This guide highlights what works now, suggests third-party tools, and walks through core approaches for Reddit search and monitoring, including which LLMs to use.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li>
+<p><a href="#users-and-subreddits">Users and subreddits</a></p>
+</li>
+<li>
+<p><a href="#user-accounts">User accounts</a></p>
+</li>
+<li>
+<p><a href="#subreddits">Subreddits</a></p>
+</li>
+</ul>
+<p><a id="monitoring"></a>
+* <a href="#monitoring">Monitoring</a></p>
+<ul>
+<li>
+<p><a href="#thirdparty-options">Third-party options</a></p>
+</li>
+<li>
+<p><a href="#searching-reddit">Searching Reddit</a></p>
+</li>
+<li>
+<p><a href="#searching-reddit-with-ll-ms">Searching Reddit with LLMs</a></p>
+</li>
+</ul>
+<p><a id="third-party-tools"></a>
+* <a href="#thirdparty-tools">Third-party tools</a></p>
+<ul>
+<li>
+<p><a href="#comparison-table">Comparison Table</a></p>
+</li>
+<li>
+<p><a href="#finding-deleted-content">Finding deleted content</a></p>
+</li>
+<li>
+<p><a href="#a-final-note-on-reddit-as-a-target-">A final note on Reddit as a target of manipulation</a></p>
+</li>
+</ul>
+<h2>Users and subreddits</h2>
+<h3><strong>User accounts</strong></h3>
+<p>As always, I suggest using the ABC — Actor, Behavior, Content — <a href="https://gijn.org/resource/reporters-guide-investigating-digital-threats-introduction/">framework</a> to analyze a Reddit account. (I gave a basic description of how to apply ABC in my <a href="https://indicator.media/p/how-to-investigate-online-reviews-trustpilot-google">guide</a> to investigating online reviews.)</p>
+<p>One frustration for investigators is that Reddit now allows users to hide activity on their profile, which means you can’t view their post and comment history. It locks you out of Content analysis, and limits Behavioral analysis.</p>
+<p><strong>Actor</strong></p>
+<p>Examine the username and profile photo (reverse search when possible). Also, look at the right-hand sidebar on the page. It lists information such as when they joined, number of posts, whether the user moderates any subreddits, etc.</p>
+<p>Here’s my account’s right-hand sidebar:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2e260ffb-549e-438f-ba47-09ca54e4281e/image.png?t=1790431340" /></p>
+<p>It reveals how many years my account has existed, my number of posts (“contributions”) and that I have been active in seven subreddits.</p>
+<p>Also pay attention to the Achievements section, which you can click on and view in more detail. It gives you a sense of the user’s activity on the platform. My Achievements section (located at <a href="https://www.reddit.com/user/ordinarymedia/achievements">https://www.reddit.com/user/ordinarymedia/achievements</a>) includes the exact date I joined Reddit:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a51135c-11e9-4aff-baea-dd4fff3884e4/image.png?t=1790431344" /></p>
+<p>This is what a user page looks like if the account owner hides their activity (I chose this user at random):</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/19ab178c-9b65-427c-9d0a-fe9cc35ba88e/image.png?t=1790431344" /></p>
+<p>But I can still view their sidebar and see that they moderate a subreddit:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a2d4ac65-9fc8-4486-a398-fe7c9f0dfc81/image.png?t=1790431355" /></p>
+<p>I can also load their Achievements at <a href="https://www.reddit.com/user/Zappyle/achievements/">https://www.reddit.com/user/Zappyle/achievements/</a> and view the date they joined Reddit:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/79545e08-ab8b-4012-9b03-5568105a9beb/image.png?t=1790431355" /></p>
+<p><strong>Behavior</strong></p>
+<p>Profiles that don’t hide their activity display a menu like this:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7f342f53-81ee-41f3-9229-3819d1ed874b/image.png?t=1790431355" /></p>
+<p>Behavioral analysis involves looking at the ratios of posts versus comments, as well as each item on its own. What patterns emerge? Does the user consistently post in certain subreddits? Are there bursts of activity? What timezone best aligns with their posting times?</p>
+<p><a href="https://arctic-shift.photon-reddit.com/">ArcticShift</a> (detailed below) lets you extract user activity data via simple browser-based API calls. I’ll show you how to grab data about the subreddits someone is active in, ranked by volume; who they interact with; and posting frequency by year.</p>
+<p><strong>Content</strong></p>
+<p>A profile without hidden content allows you to look at previous posts and comments, and use the “Feed options” menu to filter the information:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0fcb2c35-39c3-4a2d-9a43-f68423fa1e99/image.png?t=1790431355" /></p>
+<p>But hiding posts on your profile doesn't mean they disappear from Reddit. It’s easy to use the <em>site:</em> operator on Google and other search engines to pull up posts. For example:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d66695f6-7949-454d-ae6c-a76b46fc233a/image.png?t=1790431343" /></p>
+<p>I found that the above search typically pulls up threads where the user is the original poster. But if you want to see comments from them, I suggest using Google’s time filters to restrict results by time frame::</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9f7d3dc5-5dfc-496f-b6aa-f332d3436e99/image.png?t=1790431344" /></p>
+<p>Older posts can pull up interesting details. For example, the test user zappyle posted in a language subreddit, and I saw they had profile flair to indicate the languages they speak. “Native: French” indicates they may be from a French-speaking location, a useful Actor indicator.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7faafa60-c59e-4d35-95f2-2b87abc590f9/image.png?t=1790431344" /></p>
+<p>I like to add the phrase “I was born” (plus variations) to a platform-focused username search, like this:</p>
+<p><em>site:reddit.com/r “i was born” “zappyle”</em></p>
+<p>Or:</p>
+<p><em>site:reddit.com/r “zappyle” AND (“I was born” OR “I’m from” OR “I grew up in” OR “I’m a”)</em></p>
+<p>It may surface a comment where they share personal details. In this case, the results were from subreddits dedicated to Montreal, Canada, and the Montreal Canadiens, which is an indicator that the user could be French-Canadian:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/edbdb3b6-df08-4230-8587-4d52625824db/image.png?t=1790431355" /></p>
+<p>Of course, the more unique the username, the more effective the search. You should also take the username and search it in <a href="https://whatsmyname.app/">WhatsMyName</a> or another username search tool like <a href="https://theosintvault.io/omerta">Omertà</a> to see if the same person uses the handle on other sites or services.</p>
+<h3>Subreddits</h3>
+<p>Subreddits are channels focused on a specific topic or theme. Public subreddits can be read and joined by anyone. You can also post to a public subreddit without having to join. Subreddits display basic activity stats, and list the accounts that act as moderators.</p>
+<p>The stats are displayed on the right-hand side of the page:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/dafdc8a7-c4d3-4d10-b995-ca5a3b791e1a/image.png?t=1790431355" /></p>
+<p>Moderators are listed further down the sidebar:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c8a37f97-893b-450a-acd5-46214e58f96a/image.png?t=1790431344" /></p>
+<p>You can also click “Best” at the top of the page to filter posts using different criteria:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b3878764-e7c4-4139-94eb-b9c350eb8627/image.png?t=1790431355" /></p>
+<p>Reddit makes it easy to search within a subreddit. Once you load a subreddit in your browser, the site’s native search bar automatically applies a filter:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/73bf5f01-ae3f-4dea-a1d8-515cff1503dd/image.png?t=1790431344" /></p>
+<p>You can also use Google to search a subreddit with this query (I’ll use the r/TOR subreddit as an example):</p>
+<p><em>site:reddit.com/r/TOR/ “keyword”</em></p>
+<h2>Monitoring</h2>
+<p>Reddit offers useful options for monitoring subreddits, users, and even search terms.</p>
+<p>First, you can join a subreddit to add it to your left-hand sidebar. This is a shortcut that brings you to the subreddit. It also means content from the subreddit will show up in your home feed.</p>
+<p>You can also click the three-dot menu in the upper right-hand corner to add a subreddit to a Custom Feed.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8251da64-a304-4017-a34b-b099763eb29f/image.png?t=1790431355" /></p>
+<p>This allows you to create a feed of content from multiple subreddits. For example, I could add a collection of subreddits to an OSINT feed, allowing me to see new content from all of them in one place.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/29695ad2-6076-49a7-a6ae-4442de813be8/image.png?t=1790431355" /></p>
+<p>Once created, custom feeds appear on your left-hand menu.</p>
+<p>Reddit also offers the ability to turn any subreddit, user, keyword search, or custom feed URL into an RSS feed. Just add “.rss” to the URL and you can add it to your preferred RSS reader.</p>
+<p>For example, this is r/Advertising’s normal URL:</p>
+<p><em>https://www.reddit.com/r/advertising/</em></p>
+<p>It becomes an RSS feed by removing the slash and adding .rss:</p>
+<p><em>https://www.reddit.com/r/advertising.rss</em></p>
+<p>The RSS feed for my user account is:</p>
+<p><em>https://www.reddit.com/user/ordinarymedia.rss</em></p>
+<p>This is the formula for a search RSS feed:</p>
+<p><em>https://www.reddit.com/search.rss?q="phrase"&amp;sort=new</em></p>
+<p>As an example, here’s an RSS feed for the latest Reddit posts that mention the phrase “AI slop”:</p>
+<p><em>https://www.reddit.com/search.rss?q="ai slop"&amp;sort=new</em></p>
+<h3>Third-party options</h3>
+<p>Off platform, one of the best free ways to monitor Reddit is <a href="https://f5bot.com/">F5Bot</a>, a keyword monitoring tool I <a href="https://indicator.media/p/12-free-tools-for-monitoring-webpages-and-keywords-google-alerts-distill-alternatives">highlighted</a> in this recent post. The free tier allows you to set up five alerts with up to 20 results per day.</p>
+<p>It’s also possible to create Reddit-focused Google Alerts using the <em>site:</em> operator. For example, if I want to monitor Reddit for mentions of “AI slop” I can create this Alert:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a4fda9f2-9a57-452a-8b73-e42c845dbad1/image.png?t=1790431344" /></p>
+<h2>Searching Reddit</h2>
+<p>Reddit offers native search operators that make it easy to run targeted searches. Key operators are:</p>
+<ul>
+<li>
+<p><strong>Author:</strong> use this to search for posts from a specific account. <em>author:ordinarymedia</em>. (Note: This does not work for users who hide their content. But you can use the search engine work-around I previously mentioned.)</p>
+</li>
+<li>
+<p><strong>Title:</strong> restricts results to words in the title of a post. If you include a phrase it will search for it as if you placed it in quotes. <em>title:disinformation campaign</em></p>
+</li>
+<li>
+<p><strong>Site:</strong> restricts results to posts or comments that link to a specific domain. <em>site:indicator.media</em></p>
+</li>
+<li>
+<p><strong>Selftext:</strong> restricts results to words in the body of a post. <em>selftext:I’m on a glp-1</em></p>
+</li>
+<li>
+<p><strong>Subreddit:</strong> ** **restricts results to a specific subreddit. <em>subreddit:OSINT</em></p>
+</li>
+</ul>
+<p>You can combine the above operators. For example, if I wanted to surface posts that use the word “metadata” in their title within the OSINT subreddit, I would search:</p>
+<p><em>subreddit:osint title:metadata</em></p>
+<p>Here’s what it looks like in the search bar:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9bc62cd0-7860-43b8-952b-6a4ed46a56d7/image.png?t=1790431344" /></p>
+<p>You can also use Boolean operators like AND, OR, NOT to make a more complex query.</p>
+<p>Note the search filters you can use to further narrow down results:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8dedf41e-f8d1-4781-bb27-9b33b483b053/image.png?t=1790431344" /></p>
+<p>The Relevance menu sorts results (e.g., by New or Top); the “All time” menu limits results to a date range.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/bacba8ca-b53a-40b2-ad59-ca68640ffc2d/image.png?t=1790431344" /></p>
+<p>“All time” offers a temporal option:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1a36466c-cbe6-4f68-8407-33308c92a9e1/image.png?t=1790431344" /></p>
+<p>One thing to note is that Reddit has started displaying AI-generated summaries at the top of some searches:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5aa50a21-5990-499c-93cd-cefeebfacfbc/image.png?t=1790431355" /></p>
+<h3>Searching Reddit with LLMs</h3>
+<p>You can also use an LLM to pull information from Reddit. The platform partnered with Google and OpenAI to use its data for training, which may help explain why ChatGPT and Gemini performed better in my tests.</p>
+<p>Testing basic queries in Gemini and ChatGPT indicates neither model accesses the full Reddit dataset; instead, they pull from publicly accessible information, and appear to be limited by Reddit’s scraping restrictions.</p>
+<p>Here’s a side-by-side comparison of results from Gemini and ChatGPT when I asked them to “find me all the posts from a reddit user named ordinarymedia and put them into a table.”</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b6ce1627-adf3-4de4-9027-3e096de18a40/image.png?t=1790431355" /></p>
+<p>Both failed to grab a post that I made to the r/Walmart subreddit that was later removed by moderators. But they found the other two.</p>
+<p>ChatGPT’s response was more helpful, in that it offered to also pull my comments and put them into a CSV.</p>
+<p>Gemini’s response included the warning that:</p>
+<p><em>A complete, direct extraction of all posts via the Reddit user profile (<a href="https://www.reddit.com/user/ordinarymedia/">https://www.reddit.com/user/ordinarymedia/</a>) is obstructed by Reddit's client-side rendering and scraper blocks. The table above contains the publicly indexed posts retrieved via Google search.</em></p>
+<p>Both successfully executed my next request: “find posts on reddit from the past 6 weeks that mention potentially useful OSINT tools.” They came up with different suggestions, but that’s expected. Here are ChatGPT’s results:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0877ad6e-e605-4232-8128-7827aef6e605/image.png?t=1790431355" /></p>
+<p>To compare, I ran the same prompt with Claude. It performed worse than ChatGPT and Gemini. (It suggested we use my paid subscription to Firecrawl to do a better job scraping data; but it too faced issues):</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3e8f49f6-bc19-428d-b5f2-32da561a3acc/image.png?t=1790431344" /></p>
+<p>Gemini and ChatGPT appear to be better choices for Reddit searches with an LLM. (Reddit is currently suing Anthropic and Perplexity.)</p>
+<h2>Third-party tools</h2>
+<p>Reddit’s API cutoff killed many useful tools, but a few notable options remain. Here’s a rundown of some of the best free options, and what they can do.</p>
+<p><strong>Arctic Shift</strong></p>
+<p>One of the best Reddit search tools. It offers access to historical data about users, subreddits, posts and comments via a simple interface. It’s a nice alternative to running search with Reddit’s native operators, and may enable you to pull up posts and user accounts that were removed or deleted. (Note that Arctic Shift honors removal requests, so it is by no means a full archive of Reddit.)</p>
+<p>Another advantage is that it offers a better option for filtering results by date than Reddit's native search. But there’s an important limitation: you can’t do sitewide keyword searches. Arctic Shift requires you to pick a subreddit or account to search within.</p>
+<p>Here’s what the search page looks like:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/52e3fb5e-b088-4d53-a992-16363e109dcc/image.png?t=1790431355" /></p>
+<p>It also has a tool to download content from users and subreddits:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ec711a8d-db30-44ea-81d8-f160c81b1a56/image.png?t=1790431356" /></p>
+<p>You can check the project’s <a href="https://github.com/ArthurHeitmann/arctic_shift">GitHub</a> to learn about pulling data via an API.</p>
+<p>As previously noted, you can use Arctic Shift's API to pull a user’s activity. Just fill in the username and paste these URLs into your browser. It returns a block of JSON but you can easily paste that into a chatbot and ask it to render it as a table or CSV.</p>
+<ul>
+<li>
+<p>List the subreddits someone is active in, ranked by volume: <a href="https://arctic-shift.photon-reddit.com/api/users/interactions/subreddits?author=USERNAME">https://arctic-shift.photon-reddit.com/api/users/interactions/subreddits?author=USERNAME</a>.</p>
+</li>
+<li>
+<p>List who a user interacts with (limited to accounts with 10 or more interactions): <a href="https://arctic-shift.photon-reddit.com//api/users/interactions/users?author=USERNAME&amp;min_count=10">https://arctic-shift.photon-reddit.com/api/users/interactions/users?author=USERNAME&amp;min_count=10</a></p>
+</li>
+<li>
+<p>List comment frequency by year: <a href="https://arctic-shift.photon-reddit.com//api/comments/search/aggregate?aggregate=created_utc&amp;frequency=year&amp;author=USERNAME&amp;after=2006-01-01">https://arctic-shift.photon-reddit.com/api/comments/search/aggregate?aggregate=created_utc&amp;frequency=year&amp;author=USERNAME&amp;after=2006-01-01</a></p>
+</li>
+</ul>
+<p><a href="https://pullpush.io/">PullPush</a></p>
+<p>An API-based archive of Reddit that also offers two web-based products.</p>
+<p>It has a web-based search <a href="https://search.pullpush.io/">option</a> that’s similar to Arctic Shift, with one notable addition: it allows you to search by keyword.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/539021ff-0347-4af5-a590-87a96f88a051/image.png?t=1790431355" /></p>
+<h3>Comparison Table</h3>
+<p>PullPush and Arctic Shift are the two best free Reddit archives (along with Wayback Machine captures of specific URLs, though note that Reddit began blocking the site’s crawlers in 2025). Here's how they compare.</p>
+<p><strong>PullPush</strong></p>
+<p><strong>Arctic Shift</strong></p>
+<p>Coverage</p>
+<p>Pushshift archive 2005– 2023 + own collection since</p>
+<p>Dec 2005 to current month, monthly releases</p>
+<p>Auth</p>
+<p>None</p>
+<p>None</p>
+<p>Site-wide keyword search</p>
+<p>Yes (<code>q=</code>)</p>
+<p>No. Needs author, subreddit or thread</p>
+<p>Author / subreddit / date filters</p>
+<p>Yes</p>
+<p>Yes</p>
+<p>Comment tree</p>
+<p>Yes (<code>link_id</code>)</p>
+<p>Yes (<code>/api/comments/tree</code>)</p>
+<p>Network analysis</p>
+<p>No</p>
+<p>Yes. User-to-user and user-to-subreddit interactions</p>
+<p>Aggregations / time series</p>
+<p>No</p>
+<p>Yes — by author, subreddit or date; site-wide trends</p>
+<p>Web UI</p>
+<p><a href="https://search.pullpush.io">search.pullpush.io</a>, <a href="https://undelete.pullpush.io">undelete.pullpush.io</a></p>
+<p>/search, /download-tool</p>
+<p>Output formats</p>
+<p>JSON</p>
+<p>JSON, RSS, JSON Feed</p>
+<p>API base</p>
+<p><code>api.pullpush.io</code></p>
+<p><code>arctic-shift.photon-reddit.com/api</code></p>
+<p>API endpoints</p>
+<p>3: <code>/comment</code>, <code>/topic</code>, <code>/link_id</code></p>
+<p>12+, including post and comment search, comment tree, user interactions, aggregations, subreddit rules and wikis, short-link resolution, time series</p>
+<p>Rate limits</p>
+<p>~15/min soft and ~30/min hard by third-party accounting. In testing it returned HTTP 429 after a few consecutive requests</p>
+<p>Dynamic, based on server load and query complexity; reported in <code>X-RateLimit-*</code> headers. Docs ask heavy users to take the monthly dumps instead</p>
+<p>API docs</p>
+<p><a href="https://pullpush.io">pullpush.io</a></p>
+<p>The <code>api</code> folder in the GitHub repo</p>
+<p>Honors removal requests</p>
+<p>Yes</p>
+<p>Yes</p>
+<p><strong>THINKPOL</strong></p>
+<p>You have to either pay or be granted access to search within its full +30-billion-post archive, but THINKPOL offers some free <a href="https://think-pol.com/tools">tools</a> that provide partial data. This is the full free tool list from its site:</p>
+<ul>
+<li>
+<p><a href="https://think-pol.com/tools/reddit-user-lookup">Reddit User Lookup</a></p>
+</li>
+<li>
+<p><a href="https://think-pol.com/tools/reddit-trends">Reddit Trends</a></p>
+</li>
+<li>
+<p><a href="https://think-pol.com/tools/reddit-activity-check">Subreddit Activity Check</a></p>
+</li>
+<li>
+<p><a href="https://think-pol.com/tools/reddit-subreddit-lookup">Subreddit Intelligence</a></p>
+</li>
+<li>
+<p><a href="https://think-pol.com/tools/reddit-search">Reddit Archive Search</a></p>
+</li>
+<li>
+<p><a href="https://think-pol.com/tools/reddit-deleted-posts">View Deleted Reddit Posts</a></p>
+</li>
+</ul>
+<p>Here’s an example of a free profile report for my user account:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/99f37df4-51a1-423d-83ad-60a84484b18c/image.png?t=1790431355" /></p>
+<p>You need to pay if you want to go deeper.</p>
+<p>A few other tools of note:</p>
+<ul>
+<li>
+<p><a href="https://betterredditsearch.web.app/">Better Reddit Search</a>: a nice interface that evokes Advanced X search. Allows you to craft a query by including or excluding words, adding date filters, and more.</p>
+</li>
+<li>
+<p><a href="https://redditcommentsearch.com/">Reddit Comment Search</a>: does what it says, “Search through comments of a particular reddit user.” This is also easy to do using Reddit’s operators.</p>
+</li>
+<li>
+<p><a href="https://redship.io/">RedShip</a>: this is a paid keyword monitoring tool but it offers a free<a href="https://redship.io/free-tools/subreddit-finder"> subreddit finder</a>.</p>
+</li>
+<li>
+<p><a href="https://www.reveddit.com/">Reveddit</a>: a website and two related Chrome extensions (<a href="https://chromewebstore.google.com/detail/reddit-uncensored/amfnaoebakgdklcahkilhjoglflgnhbm">1</a>, <a href="https://chromewebstore.google.com/detail/reveddit-real-time/ickfhlplfbipnfahjbeongebnmojbnhm">2</a>) that help you track content that was removed by a moderator. Enter the username or subreddit to view a list of removed posts/comments. Note that it only flags content removed by mods. It can’t tell you if a user removed their own post or comment.</p>
+</li>
+</ul>
+<h2>Finding deleted content</h2>
+<p>A common use case is trying to recover a post or comment that's no longer visible. Before reaching for tools, work out which of three things happened, because they behave differently:</p>
+<ul>
+<li>
+<p><strong>A moderator removed it.</strong> Reddit shows the author and the timestamp, but not the content.</p>
+</li>
+<li>
+<p><strong>The user deleted it.</strong> The username is replaced too, so you lose the author as well as the text.</p>
+</li>
+<li>
+<p><strong>Reddit itself removed it</strong>. Either an admin action or an automated filter.</p>
+</li>
+</ul>
+<p>Recovering the actual text of a removed post has become difficult. When Reddit cut off Pushshift in 2023, recovery tools like Unddit and Removeddit died with it. The Wayback Machine is also less useful, because Reddit blocked the Internet Archive from crawling post pages, comments and profiles in August 2025. Old snapshots survive; new ones mostly don't.</p>
+<p>As of today, you may only be able to recover metadata, such as the fact that the post was removed, who removed it (moderator, user, etc.), when it was posted, what it was called, and who replied.</p>
+<p>Two of the better options for potentially recovering removed content are PullPush and Arctic Shift. Both archive content as it is posted. One Arctic Shift record I checked was captured 18 seconds after publication. They may hold material that later disappeared. But it's far from a certainty, according to some of my testing.</p>
+<p>I used Claude to sample around 440 posts from r/Scams across 2019, 2021, 2023 and 2026 and identify every post a moderator had removed. In no case did either archive still hold the original body text. One looked like an exception until I checked the live page and found the post had been restored — the archive was holding a stale removal flag. Ten of the removed posts checked against PullPush came back empty as well. Both services appear to revisit a record after publication and that pass may overwrite the text.</p>
+<p>But you should still check both. One reason is that they record a field called "removed_by_category." It tells you whether a moderator, a Reddit admin, an automated filter, or the user removed the post. Arctic Shift is the easier one to query — it answers reliably, while PullPush starts refusing requests after a few in a row.</p>
+<p>Grab the post ID — the string in any Reddit URL after <em>/comments/</em> — and use this URL format:</p>
+<p><em>https://arctic-shift.photon-reddit.com/api/posts/ids?ids=POSTID</em></p>
+<p>It returns a block of JSON. You can paste it into an LLM to extract the fields you care about, or into a <a href="https://codebeautify.org/json-to-text-converter">JSON to text converter</a>. The endpoint takes up to 500 comma-separated IDs if you want to check a batch.</p>
+<p>Here’s an example of the JSON block:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2c0a053e-dd6e-4595-8db6-5369ceea466c/Screenshot_2026-09-27_at_10.23.03_AM.png?t=1790559439" /></p>
+<p>Here’s the “removed_by_category” highlighted:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a088f26d-89d5-475f-937f-98dbb6844272/Screenshot_2026-09-27_at_10.24.00_AM.png?t=1790559513" /></p>
+<p>To look at several posts at once, use the search endpoint:</p>
+<p><em>https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=SUBREDDIT&amp;limit=auto</em></p>
+<p>That returns a batch of the most recent archived posts. On a busy subreddit, it returns roughly a day's worth; on a quiet one, months. Note: do not include r/ in the SUBREDDIT field. So for the TOR subreddit it would be:</p>
+<p><em>https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=TOR&amp;limit=auto</em></p>
+<p>To cover a specific period, add a date bound:</p>
+<p>_https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=TOR&amp;limit=auto&amp;<strong><em>before=2026-06-05</em></strong></p>
+<p>One caution before relying on “removed_by_category.” It records what the archive saw when it last looked at a post. It is not updated if the post is later restored. Treat the flag as "was removed at some point," and check the live page to verify the current post status.</p>
+<p>Also note that the comment tree associated with a removed post often remains visible even when the post body is gone. Replies frequently quote or summarize what the removed post said. And the URL slug preserves the original title, because Reddit builds the slug from the title at posting time and doesn't rewrite it afterwards.</p>
+<p><strong>Other options</strong></p>
+<ul>
+<li>
+<p><a href="https://deletedby.com/"><strong>Deletedby</strong></a> says it surfaces content removed by moderators or by Reddit's spam filter.</p>
+</li>
+<li>
+<p><a href="https://think-pol.com/"><strong>THINKPOL</strong></a> says it has deleted content in its archive and offers a free View Deleted Posts tool, with the full archive behind a paywall or an access request.</p>
+</li>
+<li>
+<p><a href="https://www.reveddit.com/">Reveddit</a> can also flag comments that were removed by a moderator.</p>
+</li>
+</ul>
+<h2>A final note on Reddit as a target of manipulation</h2>
+<p>Reddit’s increasing prominence in LLM systems and longstanding SEO value have made it a target for <a href="https://www.reddit.com/r/ukraine/comments/1fhfops/covert_russian_influence_operation_targeting/">information operations</a>, search engine and LLM manipulation, and deceptive marketing.</p>
+<p>The most common tactic is for someone to use keyword monitoring tools to look for conversation and posts where people discuss a specific topic, such as a health concern or the type of product they’re looking for. Once flagged as relevant, a marketer or an AI tool will post in the thread, suggesting a product or seeding a talking point. In some cases, they post about a product or promote a website in subreddits. But I’ve come across tools that focus on identifying organic posts and conversations and adding replies.</p>
+<p>Such efforts used to be easier to spot, as you’d often see new accounts that only post about a specific topic, product, or service. Sometimes they copied and pasted the same content over and over.</p>
+<p>But things have evolved. You can purchase aged Reddit accounts and easily hide posts and comments from a profile to make it more difficult for investigators to identify a pattern. The days of copypasta are receding because LLMs make it easy to generate variations of the same message.</p>
+<p>However, you can still use the above-mentioned tools and techniques to locate posts and comments about specific products, websites, services, etc. And even if a profile hides its content, you can use Google dorks to pull up their content and piece together the activity.</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

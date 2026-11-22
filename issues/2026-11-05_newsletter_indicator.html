@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Meta’s election Community Notes caught politicians — but weren’t always fact checks — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Meta’s election Community Notes caught politicians — but weren’t always fact checks — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Meta’s election Community Notes caught politicians — but weren’t always fact checks</h1>
+<p class="meta">2026-11-05 · received 2026-11-05 00:12 +0900
+ · <a href="https://indicator.media/p/meta-s-election-community-notes-caught-politicians-but-weren-t-always-fact-checks" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>Meta’s election Community Notes caught politicians — but weren’t always fact checks</h1>
+<p>The 2026 US midterms were the first nationwide vote to be held since Meta <a href="https://indicator.media/p/zuck-chucks-fact-checkers-to-cosplay-as-elon-musk">abolished</a> the third-party fact-checking program in the country and replaced it with Community Notes.</p>
+<p>So, how did the crowdsourced fact-checking program do? To answer that question, I reviewed all notes that appeared in the month before the election.</p>
+<p>Fully a quarter were about politics, including some that debunked claims by politicians. However, many notes weren’t fact checks and instead often provided unnecessary context or opinions.</p>
+<h3><strong>DEFINING POLITICAL NOTES</strong></h3>
+<p>In March, the Oversight Board said Meta <a href="https://www.oversightboard.com/decision/pao-007g5zuv/">promised</a> it would publish data "on par" with X about its crowdsourced fact-checking program. The Board took this to mean "the full text of notes and their associated geographies, ratings for each note, status history, user enrollment and the requests for notes on content."</p>
+<p>For now, all Meta publishes is a dashboard linking out to 40-odd <a href="https://www.meta.com/technologies/community-notes/helpful-notes/">helpful notes</a> published in the previous 24 hours. (Meta declined to comment on its data sharing plans.)</p>
+<p>But I’ve been able to collect a more complete dataset because the dashboard exposes a data feed that appears to contain all of the helpful notes from the previous 24 hours. Over the past month, the number of crowdsourced context cards deemed helpful ranged between 119 and 369 a day. (This excludes notes that were proposed but not upvoted by other users and therefore not shown on Meta's platforms.)</p>
+<p>A Meta spokesperson told Indicator that an average of 240 notes a day are published through the program. That's roughly in line with my count, which gives me confidence that I collected most of the helpful notes. The company also confirmed that the portal doesn't contain notes from the recent <a href="https://indicator.media/p/meta-says-community-notes-is-bigger-than-fact-checking-that-s-not-the-whole-story">expansion</a> of Community Notes to Spanish-language Latin American countries.</p>
+<p>First, I wanted to understand how much of the corpus was actually about politics.</p>
+<p>To do that, I used Claude Haiku via an API to read the text of 6,519 notes posted across Facebook, Instagram, and Threads between Oct. 4 and Nov. 3 and determine whether they were about US politics. I manually reviewed 5% of classified notes and agreed with the ratings 90% of the time. (The prompt and more details are in the Info Box at the end of this article.)</p>
+<p>Overall, about a quarter of Community Notes were about US politics, with a notably higher share on Threads and Facebook than on Instagram.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b6f4617b-772a-4fe5-bdaa-ba69e8abb9ca/image.png?t=1793804100" /></p>
+<p>I used a similar method to code the topic of each political note and grouped similar notes to find recurring narratives.</p>
+<p>I also extracted and categorized the sources cited by the Community Notes, along with any engagement data I could gather from the three platforms.</p>
+<p>Finally, I reviewed who got fact-checked the most, with a particular focus on accounts belonging to elected officials and political parties. Meta <a href="https://www.snopes.com/news/2022/11/17/facebook-not-fact-checking-trump/">used</a> to forbid fact-checkers from flagging false posts by politicians, so the (relatively limited) number of notes on their content is a change from the past.</p>
+<p>Indicator members can search and filter the 1,669 political notes in the interactive below and also download the full dataset of 6,519 helpful notes collected in the past month.</p>
+<h3><strong>WHO GOT NOTED</strong></h3>
+<p>The 1,669 political notes were added to posts by 1,122 different accounts, most of which appeared to be ordinary users or partisan pages.</p>
+<p>One account stood out as a repeat target for Community Notes contributors. Right-wing influencer <a href="https://www.facebook.com/davidjharrisjr">David J Harris Jr.</a> received 94 notes in a month, or 6% of the entire politics corpus. Among other things, he posted false claims about <a href="https://www.facebook.com/2040935000938364">Supreme Court rulings on late ballots</a> and <a href="https://www.facebook.com/DavidJHarrisJr/posts/pfbid0csKjkoG7e1oo1RpqR849gNWFP2THQWsRQjB55qfnrcFaC1ng39LoFtHj8uVzRFVtl">fake Denzel Washington quotes</a>.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b083bee8-9cd3-4dc7-9fba-49259fd7f887/top10_accounts.png?t=1793804473" /></p>
+<p>The presence of the White House on the list of most-noted accounts is a change from the third-party fact-checking program, which <a href="https://edition.cnn.com/2022/11/15/politics/facebook-fact-check-donald-trump/index.html">prohibited</a> fact-checking on posts by politicians. I found <a href="https://docs.google.com/spreadsheets/d/1L1z4DPYmpKwAGYH5mFUEP2HJZJQY0444plMoTqLLq6s/edit?usp=sharing">70 notes</a> appended to posts from accounts tied to a politician or a party in the month before the election.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/565dd4d9-9e3b-40d8-a833-f0382cb73427/politicians_2plus.png?t=1793804462" /></p>
+<p>For example, a note <a href="https://www.instagram.com/p/DfSZ6f2JXyV/">contradicted</a> a claim by Vice President JD Vance about ending federal income taxes on Social Security.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6963f77b-20f7-4408-bfb5-aab1456e3a7f/image.png?t=1793804101" /></p>
+<p><a href="https://www.instagram.com/p/DecVhO4gqpB/">Another</a> note correctly pointed out that there's no evidence Ukrainian strikes on Russian data centers reduced traffic to right-wing accounts on X, a claim shared by Congressman Dan Crenshaw. And notes on the White House's posts provided context about the number of <a href="https://www.instagram.com/p/De7JRfqG59l/">immigrants leaving the country</a> and <a href="https://www.instagram.com/p/De9rTSOm01X/">a new Audi factory</a> touted by the Trump administration.</p>
+<h2><strong>WHAT GOT NOTED</strong></h2>
+<p>Not surprisingly, elections and voting were the biggest topic, with 441 political notes. Of those, 176 addressed claims about <a href="https://www.instagram.com/reel/Dezi_pZJjba/">voting machines malfunctioning</a>, <a href="https://www.facebook.com/DavidJHarrisJr/posts/pfbid02yPcPsT6KnFvLhMrvCSWebhtsgyqThfoSmfsU7ZrucEhS5BwKDo521VhZLXj9vD8kl">voter fraud</a>, or <a href="https://www.facebook.com/1620628010105663">federal</a> and <a href="https://www.instagram.com/reel/DfQj5kRvfNx/">court interventions</a> in the electoral process. A <a href="https://www.facebook.com/1539004224937488">whole</a> <a href="https://www.instagram.com/reel/DeIRAfhAL8G/">lot</a> <a href="https://www.threads.com/@johnnypalmadessa/post/DeqC00QCWxH">of</a> <a href="https://www.threads.com/@joncooper.us/post/DfPh0amkV3X">notes</a> <a href="https://www.threads.com/@micah_erfan/post/DfAT31uIGrR">were</a> <a href="https://www.threads.com/@zaxidstyle/post/DeXAGOWEUpW">about</a> <a href="https://www.threads.com/@mahdi_calanle/post/DfQZ5P6Fr3f">polls</a>, which don't lend themselves especially well to fact-checking.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5e5f8480-4fd6-498b-9157-c944f914a725/image.png?t=1793804100" /></p>
+<p>----------A significant chunk (15%) of notes fell into an amorphous "other" category made up mostly of <a href="https://www.facebook.com/suzy.senseney/posts/pfbid0k9Y5CqfLJvoPyZifLtYgmMAySPosbfouHCy4VCh77HPKt2eEgWjCeX1oWFNHAM2El">clickbait</a>, <a href="https://www.threads.com/@tomcolicchio/post/DfDKo-zmQtD">hoaxes</a>, and <a href="https://www.threads.com/@evolveu_365/post/Deb942mDs4C">political gossip</a>.</p>
+<p>I also looked at how often Community Notes were added to posts that were flagged by AFP, PolitiFact, and Lead Stories, three of Meta’s former US fact-checking partners. Of the 85 Facebook, Instagram, or Threads posts debunked by professional fact-checkers in the past month, <a href="https://www.facebook.com/TheOfficialGayGuy/posts/pfbid02Eh3dcZ6PsNza8yUFCSsv97fedfpZWhUNkD1nSFftxEajVkDMKExdxdn3i5kJPLCil">only</a> <a href="https://www.instagram.com/p/DeZ_g53gxLG/">three</a> <a href="https://www.threads.com/@mahoney5929/post/DeyMdewFeqq">had</a> a Community Note.</p>
+<p>This doesn't necessarily mean that most claims debunked by professional fact-checkers went unchecked by the crowd. In some cases, Community Notes debunked the same narrative on a different post.</p>
+<p>In other cases, the crowd appears to have gotten there first. David Harris, the top-noted account mentioned above, <a href="https://www.facebook.com/photo/?fbid=1997383278626870&amp;set=a.397492538615960#">posted</a> a false claim on Oct. 4 that the Supreme Court would invalidate mail ballots arriving after Election Day. A Community Note was added shortly thereafter. AFP <a href="https://factcheck.afp.com/doc.afp.com.D4YN3T6">debunked the claim</a> on Nov. 2, by which time Harris had posted it at least five more times (<a href="https://www.facebook.com/1999130608452137">1</a>, <a href="https://www.facebook.com/DavidJHarrisJr/posts/pfbid0kAWi88ro523SE4wER62xmsnMH7qnD6xnQdYGeXgP7NmoN8cosAyLSzJhw4p3ogXpl">2</a>, <a href="https://www.facebook.com/2037585794606618">3</a>, <a href="https://www.facebook.com/2040935000938364">4</a>, <a href="https://www.facebook.com/DavidJHarrisJr/posts/pfbid0WyHZWkDzn8KaUNWFcsvaTBZj9sBoxhfKeCNuBKXQDa8heV2gd3ERDH6bLqpxKPRol">5</a>).</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/333c67de-9f99-4f81-9217-3260bdae3160/image.png?t=1793804101" /></p>
+<p>At a minimum, the missing notes show that professional fact-checkers can provide context that Community Notes does not. Social media posts that went without a note — despite a relevant fact check being available — included false claims that a <a href="https://www.instagram.com/p/DeimQLppUXk/">Maricopa County election worker was caught inserting flash drives into tabulators</a>, that a <a href="https://www.instagram.com/reel/Det-Tj9vaN5/">Cook County voting machine was rigged against Republicans</a>, and that <a href="https://www.threads.com/@tiller2430/post/DewVt6bDg1r">voting machines in several states were refusing to register votes for Democrats</a>. (The AFP fact checks are <a href="https://factcheck.afp.com/doc.afp.com.D3Z8863">here</a>, <a href="https://factcheck.afp.com/doc.afp.com.D3WF6NQ">here</a>, and <a href="https://factcheck.afp.com/doc.afp.com.D46B69E">here</a>.)</p>
+<p>A comprehensive approach to combating misinformation would combine the strengths of crowdsourcing and fact-checking partnerships rather than pitting them against each other, as Meta has done <a href="https://indicator.media/p/zuck-chucks-fact-checkers-to-cosplay-as-elon-musk">for political purposes</a>.</p>
+<h2><strong>A NOISY CORPUS</strong></h2>
+<p>I clustered notes further using word similarity to identify narratives that were repeatedly addressed by Community Notes.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3d057cfb-4ac1-4341-b87a-a10b1f811eff/image.png?t=1793804100" /></p>
+<p>Reading the notes themselves shows that Meta's crowdsourced fact-checking program is still very noisy. There were at least 27 notes on posts about the <a href="https://apnews.com/article/ohio-ramaswamy-ad-acton-mother-365745259579371f41122b184254fdde">controversial ad </a>featuring the mother of Ohio governor-elect Amy Acton calling her daughter a liar. But many of them <a href="https://www.instagram.com/reel/DeukCNZhCYM/">confirmed</a> <a href="https://www.threads.com/@demsmight/post/DeuuKKYEoHL">what</a> <a href="https://www.facebook.com/AltUSNationalParkService/posts/pfbid02aP4R5jUUYndzodXzzbFrbfcQZx4tN187rLXT7rWwQTTJGsU9evLcgrXP3GR37YLJl">was</a> <a href="https://www.threads.com/@entertainmentweekly/post/DevSRmhDmqd">already</a> <a href="https://www.instagram.com/reel/DexsJp4Dqs6/">clear</a> <a href="https://www.threads.com/@kaitlancollins/post/De0BJwlEUS2">in</a> <a href="https://www.instagram.com/reel/Dex2B3glezK/">the</a> <a href="https://www.threads.com/@cnn/post/DevxIrfEQ8S">post</a>.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/28a514e3-c432-4625-af25-7483e833ec50/image.png?t=1793804101" /></p>
+<p>This is a common issue. Across the entire corpus, <a href="https://www.threads.com/@thehumanityarchive/post/DeuzsPYgfTU">dozens</a> of <a href="https://www.threads.com/@judyhandley/post/DfFaDX6loxO">notes</a> were some <a href="https://www.threads.com/@timwhitakerspeaks/post/DeJzaEflobs">variation</a> of "<a href="https://www.threads.com/@thefilmlord/post/De7mpIFkj7J">This is accurate</a>" or "This is true."</p>
+<p>Others added unnecessary facts. A largely fact-free Instagram <a href="https://www.instagram.com/reels/DckE7G4MDK9/">post</a> by a US veteran, seen more than 10 million times, received a note that outlined the bio of the creator and called his video a "serious conversation about the state of the union."</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/17a7a1fa-f152-465f-8376-4958e0de7683/image.png?t=1793804101" /></p>
+<p>Other notes said outright that no note was needed, yet they were rated <a href="https://www.facebook.com/29933490242906204">helpful</a> and <a href="https://www.instagram.com/reel/DeLCiIouxVT/">published</a>. In some cases, contributors used notes to make political comments. For example, a note on a <a href="https://www.threads.com/@housedemocrats/post/DdohRmHFhKB">post</a> by the Threads account of the Democratic Caucus in the House "refutes" a claim about the party's efforts to fight inflation and corruption with the sentence "The fuck you are." It’s unclear how this made it past Meta's bridging algorithm, which is designed to screen out overly partisan notes.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6b8f7f1c-827a-4df6-b0b8-42b32ea66432/image.png?t=1793804100" /></p>
+<p>In general, Community Notes may be best suited to address obvious hoaxes. For example, notes corrected social media accounts that prematurely killed off Arizona governor <a href="https://www.facebook.com/star.aquarius.731/posts/pfbid02xziMmFxM16jb6gKuJGtBKr95cehocciin3p4bnYGeZPSQVn6oXgqBZUfL3rAFtSl">Katie Hobbs</a>, former president <a href="https://www.facebook.com/instylefashiononeofficial/posts/pfbid037T2Pcp3RHfQbhUZh6CeETCC4h1gCqrzgZGquAJwjmXxKkaZ9seJbcaRhscebdvDNl">Barack Obama</a>, and Alaska politicians <a href="https://www.facebook.com/1678639794277311">Sarah Palin</a> and <a href="https://www.threads.com/@ayeetippy/post/De7a97DGorV">Mary Peltola</a>. These are relatively easy to debunk.</p>
+<h2><strong>WHO GOT CITED</strong></h2>
+<p>I also examined the sources cited in Community Notes. Almost every political note linked to a source: 1,563 of 1,669 (94%). They pointed to <a href="https://docs.google.com/spreadsheets/d/1eFbI8Ly4Fp8w_tAWHCQNvZSF21Vh1cXCLB3K2Gv8sJs/edit?usp=sharing">573 different websites</a>. The most frequently cited sources are similar to those often cited in X's Community Notes: Wikipedia, government websites, news media, and fact-checkers.</p>
+<p>Fact checks were cited in 145 political notes (9%). Meta ended its partnerships with US fact-checkers, but Community Notes contributors still lean on their work to correct misinformation on its platforms.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0e6e5b85-2f25-4476-81c5-965218709fbe/top10_cited_sites.png?t=1793804498" /></p>
+<p><a id="indicator-info-box"></a></p>
+<h2><strong>INDICATOR INFO BOX</strong></h2>
+<ul>
+<li>
+<p>I collected every note shown on Meta’s <a href="https://www.meta.com/technologies/community-notes/helpful-notes/">helpful notes page</a> from Oct. 4 to Nov. 3, 2026. The page displays fewer than 50 notes a day, but the code behind its disabled “show more” button can still be called to load older ones, about 25 at a time. I wrote a script that did this every morning and saved what was available on the page (note text and link); a second script then opened each link to grab the poster, post text, engagement, and the note’s sources. Meta confirmed that no notes are being published to that site from its Latin America expansion, so the corpus contains only US notes. We also found a metadata marker called community_note_is_ai_generated but found it always labeled "false." Meta told Indicator that it is experimenting with a range of features but isn't currently using AI in Community Notes.</p>
+</li>
+<li>
+<p>Claude Haiku 5.5 labeled each note and post as US politics or not. I reviewed 326 notes by hand and agreed with its labels 90% of the time. Here's the prompt used to label US politics based on note and post text:</p>
+</li>
+</ul>
+<pre><code>You label Community Notes (short crowd-written corrections attached to social media posts) for a research project on how much the notes cover US politics.
+
+For each note, return:
+- id: copy exactly.
+- us_politics: true if the note, or the claim it corrects, is about US domestic politics or government: US politicians and officials, parties, the presidency and administration, Congress, US courts in political cases, US political policy claims (including immigration enforcement and tariffs), US political campaigns and elections. This includes hoaxes and fabrications about US political figures (fake quotes, fake posts, death or health rumours, fake resignations) and US foreign policy actions or claims by US officials (sanctions, aid, military strikes, trade deals). False for non-political US news (crime with no political angle, celebrities, sports, health claims with no political actor) and for politics outside the US.
+
+Judge from the note text (and the post text when given). Notes often state the correct fact without restating the claim; infer the claim when it is reasonably clear. Do not guess beyond the text. Return every id exactly once by calling the record_labels tool. Always call the tool; do not answer in plain text.
+</code></pre>
+<ul>
+<li>
+<p>To find possible political accounts, I used the <a href="https://github.com/unitedstates/congress-legislators">congress-legislators</a> list of current members of Congress and Wikipedia’s lists of governors and 2026 Senate and gubernatorial candidates. I reviewed all matched political accounts manually.</p>
+</li>
+<li>
+<p>Indicator members have <a href="https://docs.google.com/spreadsheets/d/1iqJBMHgthid2uCUlSmQwWs8o9NOgn8njgt0x7UfRZxk/edit?usp=sharing">access to the full dataset</a>.</p>
+</li>
+</ul></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

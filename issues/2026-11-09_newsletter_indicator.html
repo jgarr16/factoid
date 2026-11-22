@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>The username search playbook: What I learned testing 10 tools — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="The username search playbook: What I learned testing 10 tools — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>The username search playbook: What I learned testing 10 tools</h1>
+<p class="meta">2026-11-09 · received 2026-11-09 21:01 +0900
+ · <a href="https://indicator.media/p/the-username-search-playbook-what-i-learned-testing-10-tools" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>The username search playbook: What I learned testing 10 tools</h1>
+<p>In May, Wheel of Fortune announcer Jim Thornton was on an American Airlines flight when he fired up his Tor browser and visited <a href="https://lifeline.chat">lifeline.chat</a>, a chatroom for pedophiles. A nearby passenger realized what Thornton was doing and alerted airline staff. Law enforcement met Thornton when the plane landed, according to <a href="https://www.tmz.com/2026/09/03/jim-thornton-chatroom-messages-that-led-to-airport-detainment/">reporting</a> from TMZ.</p>
+<p>While in the air, Thornton apparently felt that his use of Tor and an online handle, “NicholasB77,” would protect his identity. When another chatroom participant expressed concern, Thornton wrote, "What if someone sees a random sequence of lines on a screen. I love it. I hide the part that says ‘Lifeline’ so it's just a few lines. It's a big middle finger to da man who takes away every other enjoyable activity."</p>
+<p>Not long after TMZ’s story, journalist Dean Sterling-Jones took Thornton’s handle (NicholasB77) and searched for other online accounts with the same username. Here’s the opening of his resulting <a href="https://shootingthemessenger.blog/2026/09/04/scoop-a-pseudonym-used-by-wheel-of-fortune-announcer-was-active-on-second-child-abuse-forum/">story</a>:</p>
+<p>“A LAWYER FOR JIM THORNTON says he only visited <a href="https://lifeline.chat">lifeline.chat</a>— an illicit chatroom for paedophiles— by mistake, believing it was a suicide prevention site. But someone with the same username was active for at least two years on another paedophilia forum, where they posted a photo of a topless boy, professed their love of <a href="https://lifeline.chat">lifeline.chat</a>, compared being a paedophile to being a Jedi, advised other members on how to hide their secret, and left comments like “I am wearing only a diaper.”“ — Dean Sterling-Jones</p>
+<p>Sterling-Jones told me that even if he “wasn't able to definitively prove that Jim Thornton was behind the boychat account … it seemed newsworthy that someone with the same idiosyncratic username was active on a second, seemingly connected child abuse forum. Not only that, NicholasB77 had posted several comments enthusiastically directing other users to the very chatroom that Thornton can be seen using in photos published by TMZ.”</p>
+<p>Usernames are useful in any investigation. People reuse usernames because it’s easier to remember or because they want to make it part of their brand. Maybe it’s a childhood nickname, a tribute to a favorite character, or a combination with their initials or favorite sports team. Even those engaged in shady or illegal behavior cut corners and reuse usernames. Such habits and mistakes are just the opening an investigator needs.</p>
+<p>I think the first username search (aka username enumeration) tool I used was Namechk. <a href="https://web.archive.org/web/20090923080411/http://namechk.com/">Here’s</a> what it looked like in the fall of 2009:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/89a274f7-5658-4b6f-8ea9-6c23bc2a1d40/image__453___1_.png?t=1794153339" /></p>
+<p>It checked for accounts on 72 platforms. Today you can use a web-based tool like <a href="http://whatsmyname.app">WhatsMyName.app</a> to search more than 600 online services for a username hit. Or you can use a command-line tool like <a href="https://github.com/soxoj/maigret">Maigret</a> to check thousands. These tools tell you whether an account exists with that username on a platform. But it’s up to you to verify whether it belongs to your target.</p>
+<p>Those aren't the only options. There’s a wide range of free and paid username search tools, including a new breed of apps that enrich results with profile images and other data to speed up the process. It’s tough to know which tool(s) to use, so I ran manual and automated tests of 10 username search tools and spoke to some of their creators, including <a href="https://webbreacher.com/about/">Micah Hoffman</a>, <a href="https://theosintvault.io/nicole-hurey">Nicole Hurey</a>, and <a href="https://soxoj.com/">Dmitry “Soxoj” Danilov</a>.</p>
+<p>The result is a username search playbook anyone can use to enhance their investigations.</p>
+<h2>Table of Contents</h2>
+<p><a id="tools-tested"></a>
+* <a href="#tools-tested">Tools tested</a></p>
+<ul>
+<li>
+<p><a href="#my-tests">My tests</a></p>
+</li>
+<li>
+<p><a href="#top-tips">Top tips</a></p>
+</li>
+<li>
+<p><a href="#the-new-breed-of-username-tools">The new breed of username tools</a></p>
+</li>
+<li>
+<p><a href="#enriched-results">Enriched results</a></p>
+</li>
+</ul>
+<p><a id="additional-validation"></a>
+* <a href="#additional-validation">Additional validation</a></p>
+<p><a id="ai-features"></a>
+* <a href="#ai-features">AI features</a></p>
+<ul>
+<li>
+<p><a href="#test-results">Test results</a></p>
+</li>
+<li>
+<p><a href="#false-positives">False positives</a></p>
+</li>
+<li>
+<p><a href="#account-hits">Account hits</a></p>
+</li>
+<li>
+<p><a href="#results-for-webbased-tools-can-chan">Results for web-based tools can change</a></p>
+</li>
+<li>
+<p><a href="#takeaways">Takeaways</a></p>
+</li>
+</ul>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/24406eb9-0e70-4b13-89bc-461fe0975d77/tool-logos-preview.png?t=1794155094" /></p>
+<h2>Tools tested</h2>
+<p>Here are the 10 tools I tested:</p>
+<ul>
+<li>
+<p><a href="https://github.com/p1ngul1n0/blackbird">Blackbird</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OSINT-Experts-Society/Consensus-OSINT">Consensus-OSINT</a></p>
+</li>
+<li>
+<p><a href="https://github.com/thalha-a9/helix">Helix</a></p>
+</li>
+<li>
+<p><a href="https://github.com/soxoj/maigret">Maigret</a></p>
+</li>
+<li>
+<p><a href="https://www.myrecon.xyz">MyRecon</a></p>
+</li>
+<li>
+<p><a href="https://theosintvault.io/omerta">Omertà</a></p>
+</li>
+<li>
+<p><a href="https://osintsearch.org">OSINTsearch</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sherlock-project/sherlock">Sherlock</a></p>
+</li>
+<li>
+<p><a href="https://usersearch.com/">UserSearch</a></p>
+</li>
+<li>
+<p><a href="https://whatsmyname.app">WhatsMyName</a></p>
+</li>
+</ul>
+<p>It’s important to note that many username tools use the same lists of platforms. WhatsMyName’s <a href="https://github.com/WebBreacher/WhatsMyName">list</a> of hundreds of platforms is open source and often <a href="https://github.com/WebBreacher/WhatsMyName#tools-and-sites-that-use-whatsmyname">used</a> by others. That means you could use multiple tools and get essentially the same results. Here’s a table showing the platform list each tool uses.</p>
+<p><strong>Tool</strong></p>
+<p><strong>Site list it's built on</strong></p>
+<p><strong>Sites checked in my test</strong></p>
+<p><a href="https://WhatsMyName.app"><em>WhatsMyName.app</em></a>, run by OSINT Combine</p>
+<p>WhatsMyName</p>
+<p>653</p>
+<p>Blackbird</p>
+<p>WhatsMyName</p>
+<p>692</p>
+<p>Omertà</p>
+<p>WhatsMyName, plus its own checks of Keybase, Bluesky, Mastodon, and Chess.com</p>
+<p>612</p>
+<p>Sherlock</p>
+<p>Its own</p>
+<p>481</p>
+<p>Maigret</p>
+<p>Its own</p>
+<p>500 by default; 7,818 with all sites</p>
+<p>Consensus-OSINT</p>
+<p>19 open-source projects, including Maigret, WhatsMyName, and Sherlock</p>
+<p>About 8,160</p>
+<p>UserSearch</p>
+<p>Says it's powered by Consensus-OSINT</p>
+<p>About 4,250– 4,900</p>
+<p>Helix</p>
+<p>WhatsMyName, Sherlock, and Maigret, plus its own 56 sites and about 3,700 Mastodon and other fediverse servers</p>
+<p>56 by default; 11,663– 12,111 with all sites</p>
+<p>OSINTsearch</p>
+<p>Doesn't say</p>
+<p>773</p>
+<p>MyRecon</p>
+<p>Its own (561 checks, according to its site)</p>
+<p>100 (free guest scan)</p>
+<p>As you can see, WhatsMyName, Maigret, and Sherlock offer three foundational lists that other tools build on.</p>
+<p>One more thing: <a href="https://WhatsMyName.app">WhatsMyName.app</a> is a website that puts an easy-to-use interface on top of the WhatsMyName (WMN) dataset. Australian company <a href="https://www.osintcombine.com/">OSINT Combine</a> runs the site. The dataset itself, which specifies which sites to check and how to check them, is primarily maintained by Micah Hoffman, a well-known member of the OSINT community, the director of capabilities and innovation for the National Child Protection Task Force, and the cofounder of <a href="https://www.myosint.training/">My OSINT Training</a>.</p>
+<p>“WMN maintenance has fallen to basically just me and a couple of random people that occasionally help,” he told me. “It's exhausting and time-consuming.”</p>
+<p>We owe Hoffman a debt of gratitude, as WMN continues to be a key dataset used by other tools. It’s a reminder that the OSINT community still relies on volunteers to maintain valuable resources — and that free (and paid) tools often build on their efforts.</p>
+<h2>My tests</h2>
+<p>I ran manual and automated tests to get a sense of which tools kick up false positives and how they compare. I used Claude to test the command-line tools Sherlock, Maigret (top 500 and all sites), Blackbird, Consensus-OSINT, and Helix. Then I ran manual searches with WhatsMyName, Omertà, OSINTsearch, MyRecon, and UserSearch.</p>
+<p>I used four handles and ran two rounds of searches. The test handles were my own, one from a CNN story I describe below, and two gibberish handles meant to look for false positives. (UserSearch figures are from a Nov. 8 rerun.)</p>
+<ul>
+<li>
+<p>craigsilverman</p>
+</li>
+<li>
+<p>minisoldr</p>
+</li>
+<li>
+<p>fatavapub</p>
+</li>
+<li>
+<p>g70vdgou2sbz</p>
+</li>
+</ul>
+<h2>Top tips</h2>
+<p>Running a search is just the start of the username research process. The real work comes next. Here are some top-level things to keep in mind:</p>
+<ul>
+<li>
+<p><strong>Use more than one tool and consider a control:</strong> At the end of this guide, I outline how I've adjusted my workflow based on my testing. But the TL;DR is that one (free) username search tool isn’t enough. I suggest running at least one search with a web-based tool that relies on the WMN list and combining it with a command-line search tool like Maigret or Helix. Another suggestion: Run a made-up handle through the same command-line tool and discard results from any site that also reports a hit for the made-up name. Hoffman suggests a similar test before you adopt any new tool: “try the tools with names like 'john' or '<a href="mailto:john@example.com">john@example.com</a>' for email checkers and see what comes back.” Finally, manually check for the username on the major platforms most relevant to your investigation. Anti-bot protections used by companies like Meta and LinkedIn can block the tools.</p>
+</li>
+<li>
+<p><strong>You have to check every result:</strong> It bears repeating that the presence of an account with the same username doesn’t prove a link to your target. It’s a lead to check out. That’s one source of false positives: an account exists but it belongs to a different person.</p>
+</li>
+<li>
+<p><strong>A hit isn’t always a hit:</strong> A second common type of false positive is when a tool falsely indicates that an account exists with a username. The creator of MyRecon <a href="https://www.myrecon.xyz/blog/osint-username-tools-and-techniques.html">explained</a> that some platforms have "identical profile placeholder pages for both active private accounts and nonexistent handles." The tool gets a result and can’t tell that it’s a placeholder, so it presents it as a hit. Nicole Hurey, the creator of Omertà, called it the <a href="https://Chess.com">Chess.com</a> problem. “I started building Omertà because I was so tired of getting false positives from existing username-search tools,” she said, adding that “what really aggravated me, literally to my core, was how often everything seemed to come back positive for <a href="https://Chess.com">Chess.com</a>.”</p>
+</li>
+<li>
+<p><strong>False negatives are also a thing:</strong> A false negative is when you or your tools fail to identify an account that exists. You can often catch a false positive by visiting the profile URL, but a missed account never shows up in your results. Dmitry “Soxoj” Danilov, the creator of Maigret, told me that missed accounts are "even harder to notice than a false positive." (He says Maigret searches about 9,000 sites; the number may fluctuate when you run it.)</p>
+</li>
+<li>
+<p><strong>A null isn’t always null:</strong> Sometimes there’s a hit but a tool will fail to detect it. This can happen when a platform blocks the tool because of bot detection, rate limiting, or other reasons. For example, my tests with Consensus-OSINT listed more than 1,200 blocked, unknown, or otherwise failed checks out of 8,161. Danilov said that “you need to use proxies to bypass antibot protection of many sites.” I didn't use proxies or any other bot-bypass options in my tests, so my results show what each tool finds without them. This is why manual checks are an important part of the process.</p>
+</li>
+<li>
+<p><strong>More isn’t necessarily better:</strong> Maigret is an awesome tool if you want to cast the widest possible net. But it could give you more than 100 account results, many of which may ultimately turn out to be false positives or dead ends. In my tests, Maigret's all-sites mode gave a 70– 74% false-positive rate (read more in the test section below). This is where LLMs and agents might be able to sort through results for you. I’ll emphasize the word sort. AI can help triage the results so you review the most promising first. But you still need to manually review every result.</p>
+</li>
+<li>
+<p><strong>Check creation dates and beware of username squatters:</strong> As part of my tests, I ran the username minisoldr. It gained notoriety thanks to a 2024 CNN <a href="https://www.cnn.com/2024/09/19/politics/kfile-mark-robinson-black-nazi-pro-slavery-porn-forum">story</a> that linked the username (and a whole bunch of offensive posts) to a candidate for governor of North Carolina. The tests showed that several accounts were registered with the username <em>after</em> the story ran. Some even added the candidate’s name to the account.</p>
+</li>
+</ul>
+<h2>The new breed of username tools</h2>
+<p>Traditional username check tools are evolving. That's what inspired me to write this guide. Here are three trends I see and the tools that you can use to take advantage of them.</p>
+<h3>Enriched results</h3>
+<p>Let’s start with a reminder of the results you get from a traditional username checker like <a href="https://WhatsMyName.app">WhatsMyName.app</a>:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ea624aea-7ba2-4027-b62f-f7577eb642c4/image.png?t=1794153284" /></p>
+<p>It’s a list of URLs that likely resolve to an account with the username. You visit each link and analyze the account yourself. It’s simple and useful.</p>
+<p>Next-generation tools like Omertà and OSINTsearch, which checked 612 and 773 online services, respectively, in my tests, enrich their results with information like display names, photos, listed locations, and email addresses, and cluster results by shared characteristics.</p>
+<p>Danilov said that “enrichment isn't just about collecting profile pictures or making reports look more informative.” He added: “Extracted data can give you new pivots: alternative usernames, links to other accounts, internal platform IDs, and so on. So you can start with one username and eventually discover accounts under completely different names.”</p>
+<p>A username at its core is a somewhat weak indicator. But it can lead you to stronger indicators like email addresses, phone numbers, and more.</p>
+<p>“If an investigator starts with something as simple as a username, email address, phone number, or name, I wanted them to be able to follow what they find, look at the connections around it, and start determining whether those pieces point back to the same person,” Hurey said.</p>
+<p>Instead of clicking through the results to inspect each account, tools like Omertà let you scan the aggregated data and quickly get a sense of which accounts may belong to your target.</p>
+<p>For example, OSINTsearch shows cards with additional profile details when you run a search for the username craigsilverman:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4e4c38ee-0ef3-41c7-b411-dff3dd88a769/image.png?t=1794153284" /></p>
+<p>Of course, it’s still best practice to visit every result, regardless of how much information is pulled in. But the enriched data make it easy to decide which profiles to analyze first.</p>
+<p>“The point for me was never just finding more results. I wanted those results to be useful, traceable, and something an investigator could actually work with instead of manually chasing every possible lead from the beginning,” Hurey said.</p>
+<p>Both her tool and OSINTsearch explain what triggered each username hit. You can see whether it was based on a simple HTTP response or on something more meaningful that indicates an actual profile exists, rather than an error or placeholder page. In my tests, OSINTsearch checked more sites, but Omertà provided more useful additional data.</p>
+<p>“The verification part was one of the things that mattered most to me,” she said. “I didn’t want another tool that throws 500 possible matches at an investigator and leaves them to figure out what’s real. Results include the underlying evidence, including the HTTP response, the signature that matched, and the source that produced it.”</p>
+<p>This allows for more nuanced sorting. For example, Omertà groups results under Verified when profiles share signals, such as the same display name:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0adc6387-a19f-4d31-b9c6-6630fa078895/image.png?t=1794153284" /></p>
+<p>It offers a summary of shared indicators that point to one identity:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f63ea9a7-c4d3-4014-bd65-fb60f0e7e5a1/image.png?t=1794153284" /></p>
+<p>It also lists Unverified results, which have a lower probability of resolving to the same target:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/339e2f59-229e-47dc-83c9-d9c9e0c31ce9/image.png?t=1794153284" /></p>
+<p>I also ran tests with MyRecon, which offers its own version of results cards:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7e7ac4ad-6930-4e9c-9e01-7b4d35a1356e/image.png?t=1794153284" /></p>
+<p>However, as you’ll see in the test section below, MyRecon produced a high rate of false positives.</p>
+<h3>Additional validation</h3>
+<p>Some tools add a verification layer to try to reduce false positives. Helix’s full run checks more than 11,000 sites, about a third of which are Mastodon and other fediverse servers. It rechecks each positive result to confirm it’s real.</p>
+<p>Helix calls this a control probe. When a site reports a hit, the tool queries the same site with at least three made-up usernames that are similar to the real one. Helix only counts a result as valid if the real username is found again and every made-up name returns a "no such user" answer. A site that "finds" the made-up names is dropped. It’s a clever approach.</p>
+<p>In each full scan, which I ran via Claude, Helix dropped about 100 to 110 sites that failed the control probe. It reported no accounts at all for either of my fake handles.</p>
+<p>Helix also tells you what it couldn't check. In each full scan, between roughly 1,200 and 1,300 sites gave no clear answer due to bot verification, connection errors, timeouts, and rate limits. Helix lists them as not checked and identifies the reason, instead of counting them as "not found."</p>
+<p>The trade-off is that Helix found fewer real accounts than Maigret's full list: 25 sites with a real craigsilverman account, compared with 36 for Maigret. Facebook, LinkedIn, Threads, and Snapchat were among the sites it missed. Sites that block automated checks end up in its not-checked pile rather than in its results.</p>
+<p>Helix also grades each account HIGH, MEDIUM, or LOW, based on evidence that links it to the other accounts, such as the same profile photo. A username match on its own is always LOW, which is the right call, since a shared username alone isn’t a strong indicator of a connection.</p>
+<p>Maigret has its own way of validating whether its site checks still work. Danilov said it has "a built-in mechanism for checking whether individual site checkers are still working correctly, and even a self-repair mechanism."</p>
+<h3>AI features</h3>
+<p>Some username tools now use AI to help analyze results. Danilov integrated an option in Maigret to run an AI-generated summary on the accounts identified in the search. AI can analyze the profiles, look for similarities, and produce an overview that helps flag the most interesting accounts, he said.</p>
+<p>Blackbird also offers a free AI-generated "behavioral and technical profile" for the username hits. Helix allows you to use AI to perform a second check for false positives. OSINTsearch and UserSearch also offer AI features, but they’re in the paid tier. And Consensus-OSINT offers an MCP server, which lets you connect it to AI assistants like Claude. (I didn’t test any of the AI features.)</p>
+<p>“AI summaries are also a great step in the direction of better and faster analysis of thousands [of] results,” Danilov said.</p>
+<h2>Test results</h2>
+<h3>False positives</h3>
+<p>The not-so-surprising takeaway here is that you get more false positives the more services you check. If you run the full Maigret search of thousands of sites, you inevitably get a lot of false positives.</p>
+<p>Interestingly, Hurey’s <a href="https://Chess.com">Chess.com</a> problem didn’t show up in my tests: All the hits for that site turned out to be actual accounts.</p>
+<p>Here’s how each tool performed, including false-positive rates for the two real handles and the number of hits for each fake handle.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cadecd36-f63d-4716-9e8f-08d1f5b21847/username-tools-false-positives.png?t=1794155552" /></p>
+<p>How I scored the results: Claude or I checked every account URL the tools reported for my two real handles. Claude used automated page fetches, and I checked sites that block bots in a browser. Each result was classified as an account that exists, no such account, or can't tell. The false-positive rate is the share of “no such account” results among the ones that could be checked; “can't tell” results were left out.</p>
+<p>Every hit for the two made-up handles counts as a false positive. The tests ran from Nov. 1 to Nov. 8, without proxies or any bot-bypass options, and used only the free version of each web tool (for MyRecon, the free 100-site scan).</p>
+<h3>Account hits</h3>
+<p>The table above shows false-positive rates. The one below shows how many verified accounts each tool found for the two real handles in my second round of searches, meaning that a manual or automated check confirmed an account with that username existed on the platform. It gives a sense of how many potential matches each tool provides. Of course, you still need to check each one to confirm whether it’s connected to your target.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6a994cad-6a53-4b2f-a3a9-1ec19a781efe/username-tools-account-hits.png?t=1794155466" /></p>
+<p>Not surprisingly, Maigret’s full list kicked up the most accounts for both usernames. Also note that Omertà’s row includes only its Verified accounts, which share characteristics such as a display name. Including Unverified results, Omertà found 26 accounts for craigsilverman and 16 for minisoldr.</p>
+<h3>Results for web-based tools can change</h3>
+<p>The tests revealed how bot detection, rate limits, and other challenges get in the way of consistent results with web-based tools.</p>
+<p>For example, my two searches for craigsilverman on <a href="https://WhatsMyName.app">WhatsMyName.app</a> delivered different results. Each returned 17 hits, but seven of the 17 sites were different. I also encountered timeouts with some tools.</p>
+<p>Fortunately, the command-line tools I ran via Claude gave nearly the same number of results in both tests. (Helix's site list grew by 448 sites between my two runs, because it downloads Maigret's latest list each time, but it found the same accounts both times.)</p>
+<h2>Takeaways</h2>
+<p>After running the tests and evaluating the tools, I’m going to begin username searches with Omertà because it uses the high-quality list from WhatsMyName and enriches the data with useful information such as profile photos, locations, email addresses, and other indicators. (If you prefer running from the command line, I suggest Blackbird as a first search.)</p>
+<p>Next, perform a wide scan using Maigret or Helix. I’ll probably start with Helix because of its clever verification process. Then run an initial AI summary to try to find accounts that match your target. It’s also a good idea to run a search with a gibberish username to compare results and discard those that overlap with your initial search.</p>
+<p>If possible, run your searches more than once. Omertà sometimes times out, and your first run could fail on some platforms because of bot detection.</p>
+<p>Then perform manual checks across the most important platforms. Hoffman's workflow ends with a manual step the username tools can't do for you. After running paid and command-line tools, combining the results, and analyzing them, he turns to search engines, “as search engines capture things Maigret/Sherlock/WMN cannot.”</p>
+<p>Sterling-Jones also shared a few manual tips from his work on the NicholasB77 story.</p>
+<p>“Beyond an obligatory search for NicholasB77 on social media, I checked Wikipedia for any contributors using the handle, hoping their edit history might reveal their identity,: he said. “I also used reverse image and facial recognition tools like Tineye and Pimeyes to try to find the origins of a photo NicholasB77 posted to boychat which the user claimed depicted themselves as a child.”</p>
+<p>The bottom line is that if you want to be comprehensive, you can’t rely on a single username tool or a single run. Otherwise, you risk the dreaded false negative.</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

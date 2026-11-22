@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>27 tips for investigating mobile apps — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="27 tips for investigating mobile apps — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>27 tips for investigating mobile apps</h1>
+<p class="meta">2026-11-16 · received 2026-11-16 21:03 +0900
+ · <a href="https://indicator.media/p/27-tips-for-investigating-mobile-apps" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>27 tips for investigating mobile apps</h1>
+<p>Now that AI makes apps easier to ship than ever before, the number of mobile apps in Google Play and Apple's App Store has <a href="https://techcrunch.com/2026/04/18/the-app-store-is-booming-again-and-ai-may-be-why/">exploded</a>.</p>
+<p>That means investigators of all types need at least a basic comfort level with analyzing apps. At Indicator, we’ve investigated abusive <a href="https://indicator.media/p/explicit-ads-for-nudifiers-and-ai-girlfriend-apps-continue-to-plague-meta">nudifier</a> apps, <a href="https://indicator.media/p/most-faceswap-apps-in-the-apple-and-google-stores-could-be-used-to-make-deepfake-nudes">faceswap</a> apps, <a href="https://indicator.media/p/meta-chinese-microdrama-web-novel-apps-explicit-ads">microdrama</a> apps, <a href="https://indicator.media/p/fake-virus-ads-hacker-warnings-meta-cleaner-apps">suspicious</a> “cleaner” apps, and AI girlfriend and <a href="https://indicator.media/p/ai-companion-apps-are-a-nonconsensual-nightmare">companion</a> apps. For the most part, we use foundational OSINT approaches combined with app-specific techniques, none of which are overly technical. Anyone can learn them, and this guide shows you how.</p>
+<p>This guide highlights nontechnical ways to investigate apps, from gathering metadata and identifying information via official stores, to using free third-party tools, analyzing reviews, and more. It covers publicly available information and doesn't get into analyzing network connections or more advanced code/SDK analysis. I intend to tackle some of that in a second guide.</p>
+<p>This is a great place to start if you want a clear path and methodology for investigating the ownership, connections, popularity, and potential red flags of an Android or iOS app.</p>
+<p><a id="gather-app-store-information"></a></p>
+<h2>Gather app store information</h2>
+<ol>
+<li><strong>Get the app ID.</strong> Each mobile app has a unique ID, which appears in the URL of its app store listing. On Google Play it comes after “id=” and begins with com. In Apple's App Store, it's the number after “id.” This is the most reliable identifier and you can use it in search queries.</li>
+</ol>
+<p>Play Store IDs may also reveal useful information about an app owner. Sometimes they contain a company name or even a person’s name. For example, when I <a href="https://indicator.media/p/briefing-popular-osint-tool-gets-a-mysterious-new-owner">went looking</a> for the new owner of the Instant Data Scraper Chrome extension, I saw that they also have an Android app called “Data Usage Manager &amp; Monitor.”</p>
+<p>Its ID was “com.roysolberg.android.datacounter.” That led me to a developer named Roy Solberg, who previously owned the app. He told me he’d sold it.</p>
+<p>Apps get bought and sold all the time, but the ID doesn’t change. As with the Solberg example, the ID could point you to a previous owner. They can also lead to a related app. Take a <a href="https://play.google.com/store/apps/details?id=top.loverai.android.pro">look</a> at the Chatie AI app in the Play Store. Its URL is:</p>
+<p><a href="https://play.google.com/store/apps/details?id=top.loverai.android.pro">https://play.google.com/store/apps/details?id=top.loverai.android.pro</a></p>
+<p>The ID contains “loverai,” which isn’t the name of the app. The next step is to…</p>
+<ol start="2">
+<li><strong>Search the Android app ID prefix.</strong> You can run this web search to potentially find other apps using the same prefix:</li>
+</ol>
+<p>"top.loverai.*"</p>
+<p>The “*” acts as a wildcard operator, returning webpage results that contain “top.loverai.”</p>
+<p>I ran it in Google and it turned up information about the app’s previous iteration, when it was called Lover AI and was marketing itself as a nudifier app:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4753a6ab-be72-4609-9d9c-a2a037cdf1a8/image.png?t=1794686182) [Google results for the app ID prefix, showing Softonic, AppBrain and APKPure listings for an Android app called Lover.AI]</p>
+<p>In this case, my search also resulted in a helpful AI Overview that nicely summarizes why this is a useful OSINT tactic:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2e278d83-9d35-45a1-b03f-eb2e4af055c2/image.png?t=1794686182) [Google AI Overview explaining that "top.loverai.*" is the Android package name prefix used by the developer AG Team]</p>
+<p>The search results pointed me to <a href="https://www.appbrain.com/">AppBrain</a>, which is a great place to search for an app and learn about its history. For example, the timeline section on an app page can help you learn roughly when an app was removed or updated.</p>
+<p>Here's the AppBrain timeline for Lover AI, which shows when it rebranded to Chatie AI:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/52d32301-8faa-4154-9faa-f71790b802f0/image.png?t=1794686182) [AppBrain timeline for AG Team showing Lover.AI unpublished on March 1, 2026, followed by updates to Chatie AI]</p>
+<p>I found similar information on <a href="https://chrome-stats.com/d/top.loverai.android">chrome-stats.com</a>:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0036de27-965b-479b-8ba8-afc55d7fa301/image.png?t=1794686182) [chrome-stats.com page for Lover.AI: Meet Your AI Lover, with a notice that the app was removed from Google Play on March 2, 2026]</p>
+<ol start="3">
+<li><strong>Find the developer name and contact details.</strong> On Google Play, the developer name is listed under the app title:</li>
+</ol>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7d168e10-3633-4c70-b15b-71af0166c5e8/image.png?t=1794686182) [Google Play listing for Chatie AI with an arrow pointing to the developer name, AG Team, under the app title]</p>
+<p>But the better place is on the right-hand side of the page under the App Support menu. Click the arrow to reveal the full contact information:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/482cfcc8-4ba0-4a06-ab15-291deba4ab6d/image.png?t=1794686182) [Google Play "App support" panel for Chatie AI listing a support email, a company name, and a Hong Kong address and phone number]</p>
+<p>Note that this name is different from the developer listed at the top of the page. Collect and research both, though the information in the App Support menu is typically more closely connected to the person or entity that owns the app. And it includes contact information that you can use for your research. Be sure to click on the Privacy Policy link, as that may lead to a different website than the one listed on the Play Store.</p>
+<p>In the iOS App Store, the developer name first appears under the App Privacy heading. For the app <a href="https://apps.apple.com/ie/app/ai-girlfriend-virtual-ai-girl/id6470382939">“AI Girlfriend: Virtual AI Girl,”</a> the developer name is “AIWAY LLP”:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fb952643-548b-4739-a128-b40155b34781/image.png?t=1794686182) [App Store page showing the App Privacy section, which names the developer as AIWAY LLP]</p>
+<p>As with the Play Store, click on the Privacy Policy link. If you're outside the EU, use the workaround in the next tip to see the fuller contact details Apple shows EU users.</p>
+<ol start="4">
+<li><strong>Check Apple's EU listing.</strong> Under the Digital Services Act, Apple shows a verified address, phone and email for apps where the owner or developer has registered as a trader in the EU. Not all apps have such status. But you should always check because it means you can see more detailed ownership and contact information. It’s easy to do. I’m based in Canada, so when I viewed “AI Girlfriend: Virtual AI Girl,” the URL looked like this:</li>
+</ol>
+<p><a href="https://apps.apple.com/ca/app/ai-girlfriend-virtual-ai-girl/id6470382939">https://apps.apple.com/ca/app/ai-girlfriend-virtual-ai-girl/id6470382939</a></p>
+<p>The “ca” means I’m viewing the Canadian App Store. I can simply swap that for “ie” (for Ireland) and reload the page:</p>
+<p><a href="https://apps.apple.com/ie/app/ai-girlfriend-virtual-ai-girl/id6470382939">https://apps.apple.com/ie/app/ai-girlfriend-virtual-ai-girl/id6470382939</a></p>
+<p>Now I have the option to click on the “Provider”:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2f664d85-028b-4492-8a34-6a7a5db8705e/image.png?t=1794686182) [Irish App Store "Information" section with an arrow pointing to the expandable Provider field]</p>
+<p>Click and it shows this:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b104682c-f99a-46ca-b688-79b192650ab8/image.png?t=1794686182) [Expanded Provider panel showing AIVEI, TOO's trader details: a DUNS number, an address in Almaty, Kazakhstan, a phone number and an email]</p>
+<p>That’s another name and more information to use in an investigation.</p>
+<ol start="5">
+<li><strong>Check the developer’s other apps.</strong> Click on the developer name to go to a page that lists all apps from the same developer. Chatie AI was the only app from AG Team, its developer:</li>
+</ol>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fdfe3774-260c-46a8-8273-7dfcef9b280a/image.png?t=1794686182) [Google Play developer page for AG Team showing a single app, Chatie AI]</p>
+<p>But the developer name for another app, “AI Charm - AI Creation,” leads to a page with customized design and several other apps:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/66569b7b-52a2-44cc-b356-7b5e0670f02a/image.png?t=1794686182) [Google Play developer page for UK Vision Tech Limited with a PGC Group banner and six apps, including AI Charm - AI Creation]</p>
+<p>The developer is listed as UK Vision Tech Limited, while the page carries branding for PGC Group. You should collect and research both names.</p>
+<p>The Apple App Store lists the other apps owned by the same developer in this section near the bottom of the webpage:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/83267c21-6c89-4c47-865f-6c4d64bcad06/image.png?t=1794686182) [App Store "More by AIWAY LLP" section listing six other apps from the developer]</p>
+<ol start="6">
+<li>
+<p><strong>Pivot on emails, numbers, and other indicators.</strong> With these details in hand, background the company, trace the emails and phone numbers, and investigate any associated domains.</p>
+</li>
+<li>
+<p><strong>Check the age rating.</strong> Chatie AI and AI Girlfriend have a Mature rating. But we've sometimes found nudifier apps rated Teen. For example, we <a href="https://indicator.media/p/ai-nudifiers-pivot-to-video-and-reach-users-via-apple-google-meta-telegram-and-x">reported</a> on a nudifier app called One Play that had a Teen rating. The app was rebranded to “AI Charm - AI Creation,” which I highlighted above. Based on reviews, it may no longer offer nonconsensual explicit image generation.</p>
+</li>
+</ol>
+<p>With this and other metadata in the store, ask yourself whether it aligns with the type of app that it appears to be. What rating should it have? Is there a mismatch?</p>
+<ol start="8">
+<li><strong>Compare the privacy label with the privacy policy.</strong> The Play and App stores display the data collection and sharing practices of an app.</li>
+</ol>
+<p>The Play Store labels it Data Safety, and you can click to expand the information:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/62c014e6-daf3-4f97-bf19-62110857a64b/image.png?t=1794686182) [Google Play "Data safety" section listing the data types the app may collect and noting that data isn't encrypted]</p>
+<p>The App Store calls it App Privacy and also has a click-to-expand option:</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fd9b0ff4-80c6-499f-8771-93e841ebbd86/image.png?t=1794686182) [App Store "App Privacy" section with three panels: data used to track you, data linked to you, and data not linked to you]</p>
+<p>Compare what’s declared in these sections to the privacy policy linked on the store page. An LLM can be helpful with this.</p>
+<p>You should also review the privacy policy for a company name, email address, or governing jurisdiction that doesn't appear in the listing.</p>
+<p><a id="analyze-the-reviews"></a></p>
+<h2>Analyze the reviews</h2>
+<ol start="9">
+<li>
+<p><strong>Read the reviews.</strong> User complaints often reveal how an app actually operates— such as whether it pushes deceptive subscription offers or fails to work as advertised. Look for clusters of four- and five-star reviews and pay attention to the names. Do they seem real? Also be sure to read the one-star reviews and the developer's reply. You may find that the developer shares a different contact email than the one in the store listing.</p>
+</li>
+<li>
+<p><strong>Look at when the reviews arrived.</strong> A flood of five-star reviews right after launch is a warning sign. My <a href="https://indicator.media/p/fake-virus-ads-hacker-warnings-meta-cleaner-apps">story</a> about fake virus alert ads that helped promote cleaner apps noted that one app “was among the 10 most popular downloaded apps in the US App Store’s ‘Utilities’ category” and that the “app also boasted hundreds of reviews, the vast majority of which gave it 5-stars.” Both metrics stood out, given that the app had only been in the store for a few weeks and wasn’t a mainstream hit.</p>
+</li>
+<li>
+<p><strong>Collect reviews for a larger analysis.</strong> Apple has a free reviews feed you can access by filling in your country code and the app ID in the placeholders marked with {} below:</p>
+</li>
+</ol>
+<p><a href="https://itunes.apple.com/{country}/rss/customerreviews/id={id}/json">itunes.apple.com/{country}/rss/customerreviews/id={id}/json</a></p>
+<p>For AI Girlfriend, it would be:</p>
+<p><a href="https://itunes.apple.com/us/rss/customerreviews/id=6470382939/json">itunes.apple.com/us/rss/customerreviews/id=6470382939/json</a></p>
+<p>For an app with more reviews, the feed format is:</p>
+<p><a href="https://itunes.apple.com/{country}/rss/customerreviews/page={1-10}/id={id}/sortby=mostrecent/json">https://itunes.apple.com/{country}/rss/customerreviews/page={1-10}/id={id}/sortby=mostrecent/json</a>.</p>
+<p>It returns up to 50 reviews per page and stops at 10 pages, so 500 reviews per country at most.</p>
+<p>There are also Apify App Store scrapers to choose from, including <a href="https://apify.com/thewolves/appstore-reviews-scraper">this</a> one.</p>
+<p>Google Play doesn’t offer a reviews feed, so I suggest using an Apify scraper. Here are some options:</p>
+<ul>
+<li>
+<p><a href="https://apify.com/thewolves/google-play-reviews-scraper">Google Play Reviews Scraper API | $0.10/1K Reviews</a></p>
+</li>
+<li>
+<p><a href="https://apify.com/neatrat/google-play-store-reviews-scraper">Google Play Store Reviews Scraper</a></p>
+</li>
+<li>
+<p><a href="https://apify.com/code-node-tools/google-play-reviews-scraper">Google Play Store Reviews Scraper API | App Review Extraction</a></p>
+</li>
+<li>
+<p><a href="https://apify.com/automation-lab/google-play-scraper">Google Play Store Scraper</a></p>
+</li>
+</ul>
+<p><a id="check-other-stores-and-the-apps-history"></a></p>
+<h2>Check other stores and the app's history</h2>
+<ol start="12">
+<li><strong>Check if the app is in both major stores.</strong> Not every developer builds for both Android and iOS, but it’s always worth checking both stores. If you don’t find the same app in a store, run a web search like this to check if it may have been present in the past:</li>
+</ol>
+<p>"play.google.com" AND ("app name" OR "app ID")</p>
+<p>"apps.apple.com" AND ("app name" OR "app ID")</p>
+<p>If your search turns up a listing that leads to a 404 error, you now know the app was removed from that store, either by the developer or by the platform.</p>
+<ol start="13">
+<li><strong>Search alternative stores.</strong> Apple and Google aren’t the only app stores. Other companies run them too, and third-party sites aggregate Android app packages. Check APKPure, APKMirror, Aptoide, Uptodown, Huawei AppGallery, Samsung Galaxy Store, and Amazon Appstore. Aptoide shows the signing certificate and version history.</li>
+</ol>
+<p>You can also try a search like the one below. (The app ID applies only to Android apps, since iOS apps typically aren’t found on third-party sites.)</p>
+<p><em>(APKPure OR APKMirror OR Aptoide OR Uptodown OR AppBrain) AND ("app name" OR "app ID")</em></p>
+<p>If you find a listing in one or several stores, gather the same information listed above. Some third-party sites might list different privacy policies or developer information. Be aware that sites like APKPure allow anyone to upload an app. So when you see a name in the “Uploaded by” field, it could be the developer or a user who submitted it.</p>
+<ol start="14">
+<li><strong>Look at app versions and archived store pages.</strong> APK archives keep dated versions, and Wayback Machine captures of the store page can show name and developer changes. Apps get sold and repurposed, so pay attention to changes in the developer and contact information in archived store listings, which could indicate that the app was sold at some point. I did an <a href="https://www.buzzfeednews.com/article/craigsilverman/how-a-massive-ad-fraud-scheme-exploited-android-phones-to">investigation</a> years ago into a digital ad fraud operation that bought Android apps and used bots to inflate their audience. I was able to locate the original owner of an app and interview him because of archives and Google dorks.</li>
+</ol>
+<h2>Estimate size and revenue</h2>
+<ol start="15">
+<li><strong>Check the app’s install count on Google Play.</strong> It's a range, but it comes from Google itself. Apple doesn't provide such data.</li>
+</ol>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6cdfa512-7543-48d0-8b53-d3eeb9d3b256/image.png?t=1794686182) [Google Play listing for Chatie AI with an arrow pointing to the "100K+ downloads" figure]</p>
+<ol start="16">
+<li>
+<p><strong>Use free tiers of Sensor Tower, AppBrain, AppMagic, Appfigures, or FoxData</strong> for download and revenue estimates. They are modeled estimates but can provide a sense of how popular an app is. They also aggregate metadata about the apps, such as when updates were shipped or removed, as noted with the Lover AI and Chatie AI example cited above.</p>
+</li>
+<li>
+<p><strong>Use Similarweb for the traffic and referral sources of the app's website.</strong> Similarweb gives you one month of traffic data for free. If you install the browser <a href="https://www.similarweb.com/corp/extension/">extension</a>, you get three months of data. (Similarweb doesn't offer app data for free.)</p>
+</li>
+</ol>
+<p><a id="look-at-what-the-app-does"></a></p>
+<h2>Look at what the app does</h2>
+<ol start="18">
+<li>
+<p><strong>See what permissions it requests.</strong> You already know what permissions it’s supposed to need thanks to the store page. Now see if the app requests something different when you use it. For example, why would a VPN ask for access to your photo library?</p>
+</li>
+<li>
+<p><strong>Run the app ID through</strong> <a href="https://exodus-privacy.eu.org/en/"><strong>Exodus Privacy</strong></a>. This is a free scan for Android apps that can reveal embedded trackers and permissions. (Android is easier to inspect because its install files are easy to download; iOS apps are encrypted.)</p>
+</li>
+</ol>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9936eea4-7bca-4ff1-88c8-c54f6cda4440/Screenshot_2026-11-14_at_3.16.11_PM.png?t=1794687400) [Exodus Privacy homepage with a search box for looking up an Android app by name or Google Play URL]</p>
+<ol start="20">
+<li>
+<p><strong>Note the ads.</strong> Look at how many there are and whether they're placed so you tap them by accident (which is against the policies of Google and other ad networks).</p>
+</li>
+<li>
+<p><strong>Watch battery and data use.</strong> Unexplained battery drain can mean activity in the background. See <a href="https://www.buzzfeednews.com/article/craigsilverman/in-banner-video-ad-fraud">this</a> previous investigation I worked on.</p>
+</li>
+<li>
+<p><strong>Install it via different methods.</strong> A great recent <a href="https://aiforensics.org/uploads/Advertised_by_design.pdf">investigation</a> of nudifier apps by Dr. Paul Bouchaud of AI Forensics showed how the same app can behave dramatically differently depending on how it's installed. Bouchaud downloaded an app called Prilos from the Play Store. “Interestingly, at first we only found an AI-powered hair salon and outfit-change app: a user can, after purchasing credits, generate images and videos,” the report says. But when the app was installed after clicking a link in the Meta Ad Library that promoted it as a nudifier, the functionality changed:</p>
+</li>
+</ol>
+<p>“When the user downloads the app “organically,” i.e., without going through an ad, the “safe” version shown above appears. When it comes from a Meta ad, a completely different explicit version is displayed (see below), loading a webpage embedded inside the app.“ — Dr. Paul Bouchaud</p>
+<p>Apps can serve a completely different experience to users who install via an ad versus those who install directly from the store. If the app is advertised, install it through the ad link and document any differences.</p>
+<h2>Investigate associated websites, emails, and phone numbers</h2>
+<ol start="23">
+<li>
+<p><strong>Check for /app-ads.txt and /ads.txt files on the developer's website.</strong> They list the ad networks authorized to sell the app's ad space, with seller IDs that can link developers. You can learn more about the ads.txt standard and how to use it in my recent <a href="https://indicator.media/p/the-indicator-guide-to-investigating-digital-ad-supply-chains">guide</a> to investigating digital ad supply chains.</p>
+</li>
+<li>
+<p><strong>Examine site infrastructure for connections and ownership.</strong> Follow tips in my <a href="https://indicator.media/p/indicator-guide-to-connecting-websites-together-osint-tools-tags-ids-favicon">guide</a> to connecting websites together, my WordPress <a href="https://indicator.media/p/osint-tips-for-investigating-wordpress-sites">tips</a>, and my <a href="https://indicator.media/p/i-watched-8-hours-of-osint-videos-and-here-are-the-best-tips-and-insights">roundup</a> of tips from watching eight hours of OSINT videos.</p>
+</li>
+<li>
+<p><strong>Check older versions of the site.</strong> Use the <a href="https://web.archive.org/">Wayback Machine</a>, <a href="https://archive.is/">archive.is</a>, and other online archive sites to see what the developer’s or app’s website looked like in the past.</p>
+</li>
+<li>
+<p><strong>Search the app name, domain, and app ID in the</strong> <a href="https://www.facebook.com/ads/library"><strong>Meta Ad Library</strong></a>** and** <a href="https://adstransparency.google.com/?region=CA"><strong>Google Ads Transparency Center</strong></a><strong>.</strong> This is a standard pivot for us at Indicator. Apps need users and they often run ads to attract them. To learn more about investigating with ad libraries, read my <a href="https://indicator.media/p/the-indicator-guide-to-investigating-digital-ad-libraries-meta-google-linkedin">guide</a> to using them in investigations.</p>
+</li>
+<li>
+<p><strong>Click through the ads and document each step.</strong> Note interstitial pages and tracking links. I dug into examining URLs in <a href="https://indicator.media/p/19-free-tools-you-can-use-to-investigate-a-url">this guide</a>. (And remember to install the app via this method, as previously noted.)</p>
+</li>
+</ol></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

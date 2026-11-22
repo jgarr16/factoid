@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>The Indicator guide to investigating crypto transactions — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="The Indicator guide to investigating crypto transactions — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>The Indicator guide to investigating crypto transactions</h1>
+<p class="meta">2026-09-24 · received 2026-09-24 20:01 +0900
+ · <a href="https://indicator.media/p/the-indicator-guide-to-investigating-crypto-transactions" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>The Indicator guide to investigating crypto transactions</h1>
+<p><em>Tom Caliendo is a cryptocurrency investigator for a private company. In his role, he focuses on global security matters, including foreign espionage, sanctions evasion, and cyber threats. Caliendo previously spent two decades at the NSA and CIA, where he saw firsthand how open-source and blockchain intelligence could complement traditional collection.</em></p>
+<p>In January, two alleged cybercriminals got into a contest.</p>
+<p>While speaking in a Telegram channel, Dritan Kapplani Jr. asked John Daghita to go “band for band,” meaning he challenged him to show how much money he had in his crypto wallets.</p>
+<p>Daghita accepted and eventually piled $23 million into a single wallet. That bit of braggadocio was Daghita’s downfall: cryptocurrency investigator ZachXBT used the trail of transactions to unmask Daghita as the person who allegedly stole $46 million in crypto from seizure wallets managed by the US Marshals. The twentysomething was <a href="https://www.forbes.com/sites/digital-assets/2026/03/05/fbi-arrests-us-contractors-son-in-46-million-crypto-theft/">arrested</a> on the Caribbean island of Saint Martin in March.</p>
+<p>ZachXBT is an elite crypto investigator, but the core techniques used to trace transactions and analyze wallets can be used by anyone. Given the widespread use of crypto and how it intersects with scams, criminal activity, and global finance, it’s essential for every investigator to at least know the basics of how crypto moves and how to dig into transactions and activity.</p>
+<p>This guide provides:</p>
+<ul>
+<li>
+<p>Essential information that you need to know about crypto in order to investigate it.</p>
+</li>
+<li>
+<p>Fundamental crypto investigation techniques.</p>
+</li>
+<li>
+<p>Free tools for cryptocurrency investigations and how to use them.</p>
+</li>
+</ul>
+<h2><strong>What is cryptocurrency</strong></h2>
+<p>Cryptocurrency is a form of digital money. There are thousands of cryptocurrencies, such as Bitcoin and Ether. By comparison, a government-backed national currency (like dollars, pesos, and riyals) is called fiat.</p>
+<p>An owner of cryptocurrency will have an “address” that holds the currency. An address is a unique series of numbers and letters (e.g., 0xeA609c15f4fa1205346b875B7F65fc298249214b). When someone sends crypto from their address to their friend’s address, the transaction is recorded in a public ledger that shows funds moving from one address to another.</p>
+<p>Cryptocurrencies use public-key encryption to ensure that only the owner can access an address. Public-key encryption uses a public key to encrypt data and a corresponding private key to decrypt it. An owner will have a “wallet,” which stores public and private keys for one or multiple addresses.</p>
+<p>The advantage for investigators is that crypto addresses, the amount of currency held in them, and their transfers are all public. The challenge is that the name of the person or entity that owns the address isn't. It is like being able to see every bank account and transfer but not the names of the owners. It’s difficult but sometimes possible to connect an address to a person or entity. Even when you can’t, there’s a lot you can learn by analyzing transactions.</p>
+<h3><strong>Currencies vs Tokens</strong></h3>
+<p>In addition to cryptocurrency, addresses can hold and transfer something called a “token.” The most famous token is Tether (USDT), which is pegged to the US Dollar. In theory, one USDT is worth one US Dollar.</p>
+<p>What is the difference between cryptocurrencies and crypto tokens? It's complicated. But for now the most important thing to understand is the transaction fee. When an address transfers currency or tokens, it pays a small transaction fee. The fee can be paid with cryptocurrency, but cannot be paid with tokens. Imagine having enough tokens to be worth millions of dollars (or your fiat of choice) but you can’t move the tokens from your address because you don’t have enough currency to pay the $2 transaction fee.</p>
+<h3><strong>Blockchains</strong></h3>
+<p>The transactions related to a cryptocurrency or token are listed on something called a “blockchain.” Think of a blockchain as a public list of financial transactions. Everyone in the world can look at the list. When someone sends money to someone else, the transaction and its data (what, when, how much, etc.) are added to the list. So the list is constantly updated.</p>
+<p>There are multiple blockchains with information about different cryptocurrencies. For example, the cryptocurrency Ether exists on a blockchain called the Ethereum blockchain. Bitcoin exists on a blockchain called the Bitcoin blockchain. These are often referred to as the cryptocurrencies’ native blockchains. These currencies cannot leave their blockchains. You cannot send ETH from Ethereum to the Bitcoin blockchain.</p>
+<p>Blockchains are central to cryptocurrency investigations because they are the original source for all information on crypto activity. Investigators must always consider sources and verify information. In the case of cryptocurrency, any information on a crypto blockchain is verified.</p>
+<h3><strong>Transactions</strong></h3>
+<p>Let’s look at what you can discover on a blockchain. Here’s a crypto address: 0xeA609c15f4fa1205346b875B7F65fc298249214b. For ease of reference, I’ll refer to addresses by their first six characters: 0xeA60.</p>
+<p>I go into more detail below about tools for analyzing a crypto address. For now, let’s look it up on <a href="https://blockchain.com">blockchain.com</a>. I simply entered the address in the site’s search bar.</p>
+<p>Right away we see that it is an address on the Ethereum blockchain. At the time, it held a small amount of the Ether (ETH) cryptocurrency.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4c725129-9cee-4c13-b111-e3cb3ed132f1/image.png?t=1790192939" /></p>
+<p>Below is an example of a transaction on the blockchain. It shows that the address (0xeA60) sent 939 ETH to a second address (0x1398) on December 20, 2021, and the transaction cost a small fee worth the equivalent of $3.22. The transaction fee is measured in “Gwei,” which is simply a smaller measure of ETH, akin to describing “0.50 US dollars” as “50 US cents.” (Remember that every crypto transaction requires a fee.)</p>
+<p>The transaction record also includes a “Hash ID,” which is a unique identifier for the transaction.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/989f0806-7aaa-4ddb-ad94-138bd4f89fdb/image.png?t=1790192940" /></p>
+<p>Compare the ETH transfer to a Tether (USDT) transfer between two addresses:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2f8bf5cd-a3a7-48aa-968a-dab2c4b1bf57/image.png?t=1790192939" /></p>
+<p>As previously described, ETH is a currency and USDT is a token. Note that both transfers included a fee that was paid in Gwei (i.e. ETH, the currency).</p>
+<p>The address sending $500,000 worth of USDT still needed to have at least $2 worth of ETH in its balance or else it would not be able to send the funds.</p>
+<h3><strong>Cryptocurrency Exchange</strong></h3>
+<p>You can buy, sell, and trade cryptocurrencies at something called a cryptocurrency exchange. Most people download the app for one of the major exchanges, like Coinbase, set up an account, and use their fiat to buy crypto. It is just as easy to sell crypto and trade it back to fiat.</p>
+<p>Coinbase is a centralized exchange (CEX), meaning the exchange is controlled by a business that acts as an intermediary. A decentralized exchange (DEX) has no intermediary, and often relies on code to facilitate direct transactions between crypto traders.</p>
+<p>To send funds from your personal wallet to your account on a CEX, you have to send the funds to a deposit address. This is a unique address assigned to your account and any funds sent to the address will be credited to your account. The CEX controls the deposit address and sends the funds to its internal holdings, where they are no longer associated with the account.</p>
+<p>This is not the case when withdrawing funds from a CEX. If you choose to send funds from your CEX account to your personal wallet, the address the CEX sends the funds from is known as a withdrawal address. For any withdrawal, the sender/withdrawal address is not associated with any specific account.</p>
+<h2><strong>Crypto investigation fundamentals</strong></h2>
+<p>Now let’s focus on how to investigate a cryptocurrency address. There are a variety of things you can do, even if you don’t have any information about the address’ owner or what they use the address for.</p>
+<p>We'll look at three core techniques:</p>
+<ol>
+<li>
+<p><strong>Address Triage</strong> determines if the target has money or is financially active.</p>
+</li>
+<li>
+<p><strong>Clustering</strong> identifies multiple addresses with the same owner.</p>
+</li>
+<li>
+<p><strong>Tracing</strong> identifies related transactions that move specific funds through multiple addresses.</p>
+</li>
+</ol>
+<h3><strong>Address Triage</strong></h3>
+<p>To triage an address we look for:</p>
+<ul>
+<li>
+<p>How much money it currently holds.</p>
+</li>
+<li>
+<p>The total amount of inbound and outbound funds.</p>
+</li>
+<li>
+<p>Dates of first and last transactions.</p>
+</li>
+<li>
+<p>Total number of transactions.</p>
+</li>
+</ul>
+<p>These four details give you a basic overview of the address. They show how much money it has, its activity, and the quantity of money it is handling.</p>
+<p>Beyond basic address triage, we also want to look at attribution datasets. In this case, “attribution” refers to the identification of the owner of a crypto address. Attribution databases provide information about the potential (or verified) owner of an address. I’ll show you how to use some of the free attribution datasets below.</p>
+<p>You should always check if there is information in an attribution database for the address you’re investigating, aka the “target address.” Also look at attribution for the target address’ counterparties. A “counterparty” is an address that transfers assets to or from the target address. This includes direct and indirect transfers. You always want to see what you can learn about an address based on who it transacts with.</p>
+<p><a id="clustering"></a></p>
+<h3><strong>Clustering</strong></h3>
+<p>Clustering is the process of connecting multiple crypto addresses to the same owner.</p>
+<p>Here are criteria you can use to identify addresses that may be co-owned or connected to your target address:</p>
+<ul>
+<li>
+<p><strong>First funder (currency)</strong>: the first address to send currency to your target.</p>
+</li>
+<li>
+<p><strong>First funder (tokens):</strong> the first address to send tokens to your target address. Note that some tokens are worthless. You are only interested in the first transfer of tokens that are worth money. It’s easy to verify the value of transferred tokens because each transaction includes the fiat equivalent of the transferred tokens. Check to make sure the supply of transferred tokens is worth more than nothing, preferably more than $0.50 USD (or the equivalent in the fiat of your choice).</p>
+</li>
+<li>
+<p><strong>Cashout recipient</strong>: just before an address stops being active, it often makes a final transaction where it sends the remaining funds to another address. Then it goes dormant. This is the “cashout.” You want to identify the address that received the cashout from your target. Take note of the final cashout of tokens and the cashout of currency in case they are different.</p>
+</li>
+<li>
+<p><strong>Transaction fee funder</strong>: sometimes a target address receives currency before it sends tokens. This is often done to provide the target address with currency to pay the transaction fee for sending tokens. Look at the target address’ balance of currency before the transaction to see if the balance is less than the transaction fee for the subsequent token transfer.</p>
+</li>
+<li>
+<p><strong>Co-Depositors:</strong> if the target address sends funds to an address owned by a CEX, the recipient is likely a deposit address. The target may or may not own the CEX account. Look at whether the deposit address has received funds from other addresses. The target address is at least indirectly linked to any other address sending to the same deposit address. The other addresses could be mutual associates or co-owned. Multiple addresses that send funds to the same deposit address are co-depositors.</p>
+</li>
+</ul>
+<p>Also check if the target address is the first funder, cashout recipient, or transaction fee funder for another address.</p>
+<p>Any or all of the above criteria could indicate there’s a connection between two addresses. They could be owned by the same person, co-owned, or otherwise linked. It’s one way to identify another address, or more, that is worth investigating.</p>
+<h3><strong>Tracing</strong></h3>
+<p>Tracing funds is ultimately rooted in the question: “Is this transfer related to that one?”</p>
+<p>The process is based on looking at the input and output transfers of an address to determine if one input is affiliated with one output.</p>
+<p>Sometimes we trace funds because the owner intentionally sends the money through multiple addresses to hide the destination. In such cases, the owner, or an associate, often controls the intermediary addresses.</p>
+<p>For example, we can start with something called a burner. This is an address that was used to receive and then send the same amount. It has only two transactions. In the example below, the address received 939 ETH on one day and sent a similar amount to a different address the next day.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/254328ee-5db7-4ca4-bc3e-220addfa61f9/image.png?t=1790192948" /></p>
+<p>Note that the amount received is slightly higher than the amount subsequently sent out. The sender needs to pay a transaction fee, which is often taken out of the received funds. The amount sent is therefore typically slightly less than the amount received. In this example, the burner address received 939.318 ETH and sent 939.317 ETH.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/74b1b3b4-60ad-4c77-b3e7-f327c0b5046d/image.png?t=1790192939" /></p>
+<p>The use of a burner address is considered suspicious and a possible red flag.</p>
+<p>When tracing funds, there are certain patterns to look out for. They include:</p>
+<ul>
+<li>
+<p><strong>Passthrough address:</strong> a burner that’s used more than once. The tell is that the address repeatedly receives funds and sends the same amount forward.</p>
+</li>
+<li>
+<p><strong>Passthrough chain:</strong> a chain of addresses used to transfer funds until reaching the intended recipient.</p>
+</li>
+<li>
+<p><strong>Commingle</strong>: funds from two or more sources are combined at one address.</p>
+</li>
+<li>
+<p><strong>Sweep</strong>: when an address transfers out its full balance. This helps to distinguish funds received before and after a sweep. When a sweep is the final transaction of an address, it is referred to as a “cashout.”</p>
+</li>
+<li>
+<p><strong>Build and sweep</strong>: an address receives multiple inbound transfers from one source in a structured pattern and transfers out the full balance. Such a pattern usually reflects a planned, coordinated operation. By comparison, a commingle is unstructured, combines funds from different sources, and does not appear planned out in advance.</p>
+</li>
+<li>
+<p><strong>Tainted funds</strong>: funds linked to crime, such as stolen funds. When tainted and untainted funds are combined at one address, the standard approach is to treat the whole balance as tainted, though there are accounting methods for apportioning it.</p>
+</li>
+<li>
+<p><strong>Fan out:</strong> when an address receives funds and immediately sends multiple transfers of smaller amounts to different addresses.</p>
+</li>
+<li>
+<p><strong>Concentration address:</strong> funds from multiple sources are sent to one address. This could be the destination of a fan out. Scammers also often use different addresses to receive funds from victims and then send all of the money to one address.</p>
+</li>
+</ul>
+<p>It’s important to be cautious as you get started tracing crypto. Try to focus your efforts on burner addresses because the intention and destination are easier to find. A good rule of thumb is to stop tracing when funds reach an address that has attribution. I’ll dig into this concept when I provide a walkthrough of visualization tools.</p>
+<h2><strong>Tools for investigating crypto</strong></h2>
+<p>There are several useful free tools to help with a crypto investigation. I’ll focus on websites that offer free services and do not require technical expertise.</p>
+<p>I suggest beginning by using a standard search engine like Google to search an address of interest. You will be surprised how often this turns up useful information. Also, feel free to ask your AI chatbot of choice any questions about crypto. They’re generally pretty knowledgeable (though you should of course verify the information with reliable sources).</p>
+<p>There are three main types of crypto investigation tools.</p>
+<p><strong>Blockchain explorer</strong></p>
+<p>An explorer enables you to look up data from the blockchain. This is the first stop if you find a string of numbers and characters and need to figure out if it is a crypto address. A few options to try:</p>
+<ul>
+<li>
+<p><a href="http://blockchain.com">Blockchain.com </a></p>
+</li>
+<li>
+<p><a href="http://blockchair.com">Blockchair.com</a></p>
+</li>
+<li>
+<p><a href="http://blockscan.com">Blockscan.com</a></p>
+</li>
+</ul>
+<p><strong>Blockchain intelligence</strong></p>
+<p>These tools provide additional information about an address, often focused on attribution. Here are a few options:</p>
+<ul>
+<li>
+<p><a href="http://arkm.com">Arkm.com </a>(general attribution database)</p>
+</li>
+<li>
+<p><a href="http://opensanctions.org">OpenSanctions.org</a> (sanctions data)</p>
+</li>
+<li>
+<p><a href="http://light.misttrack.io">Light.misttrack.io</a> (data focused on illegal activity)</p>
+</li>
+<li>
+<p><a href="http://checkcryptoaddress.com">CheckCryptoAddress.com</a> (scam-related domains and crypto addresses, victim-reported)</p>
+</li>
+</ul>
+<p>A note on free versus paid tools: free tools primarily offer attribution data that is public or crowd-sourced. Paid tools offer proprietary data (and a host of other capabilities) that are not publicly available. In the interest of full disclosure, I work for a company that sells paid tools of this kind.</p>
+<p>See the following sections for further details on how free tools discover, cross-reference, and present attribution data in support of investigations.</p>
+<p><strong>Visualization</strong></p>
+<p>These tools can visualize addresses and transfers between them, which is crucial for tracing funds. Tracing typically entails plotting an address and then looking up its transaction history to decide on the next transfer or address to plot. You do not need to use a visualization tool, but it can be difficult to keep track of your work without one. Two options are:</p>
+<ul>
+<li>
+<p><a href="https://metasleuth.io/">Metasleuth</a></p>
+</li>
+<li>
+<p><a href="http://breadcrumbs.app">Breadcrumbs.app</a></p>
+</li>
+</ul>
+<p>Now let’s look at how to use them.</p>
+<h3><strong>Block explorer: address triage</strong></h3>
+<p>Let’s do a basic address triage using <a href="https://blockchain.com">blockchain.com</a>. I’ll look up the address 0x40307b6331f5fb670342e3819f737468e959e12a (0x4030).</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/61998dd9-c140-4488-bf98-5157e63ba580/image.png?t=1790192940" /></p>
+<p>The lookup shows how much is currently held by the address, total amount received and sent, and the number of transactions. Scroll down for the transaction history.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3f57fbc2-195e-42d3-8019-85748051dd64/image.png?t=1790192940" /></p>
+<p>The transaction history includes the dates of the first and last transactions, which completes the address triage.</p>
+<p><a id="blockchain-intelligence-attribution-lookup"></a></p>
+<h3><strong>Blockchain intelligence: attribution lookup</strong></h3>
+<p>Here are the main free sources for attribution data:</p>
+<ul>
+<li>
+<p><a href="http://opensanctions.org">OpenSanctions.org</a> pulls data from a variety of governments and datasets around the world. It sources the information directly from public records. Sanctions data is the gold standard for attributing crypto addresses, as is information based on official records.</p>
+</li>
+<li>
+<p><a href="http://light.misttrack.io">Light.misttrack.io</a> has a database of reportedly malicious addresses, sourced to unidentified investigators. Misttrack also has a database of addresses that were publicly banned by the stablecoin issuers Tether and Circle.</p>
+</li>
+<li>
+<p><a href="http://checkcryptoaddress.com">CheckCryptoAddress.com</a> has a database with over 40,000 reports identifying scam addresses. The reports are crowdsourced from unidentified users and are therefore not definitive proof of malicious activity.</p>
+</li>
+<li>
+<p><a href="http://arkm.com">Arkham Intelligence</a> has an extensive attribution dataset. Depending on the address, it may contain information about the potential owner.</p>
+</li>
+</ul>
+<p>The Arkham website states that its attribution comes from a variety of sources, including public records, leaked databases, crowd-sourced data (reportedly checked by Arkham staff), and social media. As with any attribution database, do not assume that the information is 100% verified, especially when you do not know the source of the information. Treat it as a lead, not a confirmed fact.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8388cc63-0260-4e4d-8e0b-9415dec43118/image.png?t=1790192940" /></p>
+<p>I suggest starting with Arkham to look up attribution data. It is the most extensive free database and therefore the most likely to have information about your address. Then check the others.</p>
+<p>Start by pasting an address, 0xa7D2cF62487AA87dDba211D1e8DC7259BE2a9A70 (0xa7D2), into the search bar. Arkham provides different kinds of data for a given address.</p>
+<p>In some cases Arkham provides indicators about where you can look for further information. It might tell you if an address:</p>
+<ul>
+<li>
+<p>Is sanctioned by a government.</p>
+</li>
+<li>
+<p>Is the first funder for another address.</p>
+</li>
+<li>
+<p>Has an account on a blockchain-focused investment, social, or gaming platform.</p>
+</li>
+</ul>
+<p>This kind of information is typically reliable because it can be directly verified. For example, if Arkham lists that an address has an account on <a href="https://debank.com">debank.com</a>, you can go to the website and search the address to find the account’s profile page.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/23cf9dab-7f04-47c1-8584-b9deee9adc61/image.png?t=1790192940" /></p>
+<p>In this example, Arkham identifies the owner as a member of a North Korean hacker group.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d0e0e249-37f8-4c5e-a852-14dd7ecbaf6e/image.png?t=1790192939" /></p>
+<h3><strong>Blockchain intelligence: counterparties lookup</strong></h3>
+<p>We can also use tools like Arkham to investigate a target address’ counterparties.</p>
+<p>The main results page has two sections at the bottom for counterparties.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a71ede28-1380-43b4-a5a4-805fab7f7f38/image.png?t=1790192940" /></p>
+<p>On the right side is the address’ transaction history. A standard blockchain explorer typically displays a list of transfers between two unidentified addresses. But the transaction history in Arkham could include attribution for other addresses that it transacted with.</p>
+<p>In this case we see that Arkham labels the recipient as the Lazarus Group, a DPRK hacking group. We also see that funds were received from the Binance cryptocurrency exchange.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d1fb4dfa-82b1-4491-bf05-2735139ef3cb/image.png?t=1790192940" /></p>
+<p>The left side lists the target address’ main counterparties, including attribution for those addresses.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2f52e6d2-3916-4916-b0b3-d2c10e7272b7/image.png?t=1790192940" /></p>
+<p><a id="visualization-tools-tracing-funds"></a></p>
+<h3><strong>Visualization tools: tracing funds</strong></h3>
+<p><a href="https://docs.google.com/document/d/1OA1AhpKllsb7txISSxVha-T0KeT0Nux4/edit#heading=h.5eoymmhzlh93">Metasleuth</a> and <a href="https://docs.google.com/document/d/1OA1AhpKllsb7txISSxVha-T0KeT0Nux4/edit#heading=h.a32tqlebt0pg">Breadcrumbs.app</a> are good tools for visualizing crypto data. They also offer attribution data and the capability to look up addresses and their associated transactions. I’ll look at both tools.</p>
+<h4><strong><a href="https://Metasleuth.io">Metasleuth.io</a></strong></h4>
+<p>Go to <a href="https://metasleuth.io">metasleuth.io</a> and sign up for a free account. Then head back to the Metasleuth homepage and enter an address in the search bar.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b01e945a-b57b-4187-8a3c-9c8edb7f0008/image.png?t=1790192950" /></p>
+<p>The address will be plotted on a new graph:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c770b304-1dd9-4fe7-af8a-e8f4ef253230/image.png?t=1790192940" /></p>
+<p>Clicking on the “+” signs next to the address plots its incoming and outgoing transfers.</p>
+<p>After a few iterations, it reveals that a specific amount of ETH was passed from one address to another.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ef13d69b-e2a8-4d2c-a1d9-25b7a1a5d4d0/image.png?t=1790192940" /></p>
+<p>You can expand the graph by following the funds to their destination and tracking backwards from recipient to sender to the source. It helps to see it laid out this way, as opposed to a simple list of transactions.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/31418964-9cd1-4cc4-9fed-548aaee4fa9a/image.png?t=1790192946" /></p>
+<p>We can go a step closer to the source of the funds and see that the chain originally received the same amount of funds from two addresses marked “<a href="https://Tornado.Cash">Tornado.Cash</a>.”</p>
+<p>Metasleuth adds in a marker on each node to indicate if an address is considered high risk or not. In this case, even if we’re not familiar with “<a href="https://Tornado.Cash">Tornado.Cash</a>,” we see that it is labeled “Critical Risk.” This reveals that the target address is linked to a high risk entity. Metasleuth’s risk rankings are generally reliable.</p>
+<p>Metasleuth assesses risk based on factors including the type of activity associated with an address, whether it appears on relevant blacklists, and its exposure to other risky entities. Tornado Cash has on and off faced sanctions and transacted with illicit actors, including hackers and terrorist organizations.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7b896854-d371-4b14-b9d8-b0dfd6a227f7/image.png?t=1790192946" /></p>
+<p>Follow the passthrough chain to its resolution and you’ll see that the funds were ultimately sent to a “Paxful: Deposit Address.”</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d6e32095-d476-431a-abbc-d82df65f2767/image.png?t=1790192949" /></p>
+<p>It is a good rule of thumb to stop tracing funds when they reach an address with a name or tag you do not understand. This is the point where you accept the limits of your knowledge and seek assistance from an experienced crypto investigator.</p>
+<p>You should also generally stop tracing funds when the funds connect to an address owned by a Virtual Asset Service Provider (VASP), such as <a href="https://Tornado.Cash">Tornado.Cash</a> or Paxful. VASPs provide services such as exchanging cryptocurrency for fiat. A VASP takes ownership and control over funds received, meaning that the crypto is no longer linked to your target. It’s similar to depositing and withdrawing from a bank.</p>
+<p>If you deposit a $10 bill at a bank and then withdraw $10 the next day, the bank does not give you the same physical bill that you deposited.</p>
+<p>Similarly, if you deposit 1 Bitcoin at a VASP, and withdraw 1 Bitcoin the next day, the VASP does not give you the same Bitcoin back.</p>
+<h4><strong><a href="https://Breadcrumbs.App">Breadcrumbs.App</a></strong></h4>
+<p>Lets try a separate case with <a href="https://docs.google.com/document/d/1OA1AhpKllsb7txISSxVha-T0KeT0Nux4/edit#heading=h.a32tqlebt0pg">Breadcrumbs.App</a></p>
+<p>Go to <a href="https://Breadcrumbs.App">Breadcrumbs.App</a> and sign up for a free account. Once you’re logged in, click on “new case.” Now you can enter an address in the field shown below. I searched the Ethereum address 0xb722a8af023a92bc1764978fd926cde1b48c5e28 (0xb722)</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/bc9485b2-4f42-4c2f-be2b-2a00119fb4f4/image.png?t=1790192940" /></p>
+<p>The app displays a small diamond icon on the address because it’s on the Ethereum blockchain.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/15c23f67-0df4-42c7-a65c-6fc3c2a1f4cc/image.png?t=1790192939" /></p>
+<p>Click the node and then click the lightbulb icon for “smart expand” to open the address’ transaction history.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2be98824-2b44-4c7b-a650-152a67254b05/image.png?t=1790192939" /></p>
+<p>A window appears, listing each transaction in order. Click on a transaction in the list to plot it on the graph.</p>
+<p>This is an example where transaction fee funding comes into play. The target address appears to receive tokens with the goal of sending them to another address. But the outbound transfer cannot take place until a transaction fee funder sends currency to the target address to pay for the transfer fees.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/237b2900-8cd2-41ac-bf6b-d928a76fecc5/image.png?t=1790192940" /></p>
+<p>Starting at the bottom, the target address 0xb722 received a transfer of 15,500 tokens of USDT. It had not received any other transfer at that point, so we can assume it does not have any cryptocurrency to pay a transaction fee.</p>
+<p>The next day, the target address received about 1 ETH from another address. This allowed it to transfer the USDT tokens.</p>
+<p>Less than 10 minutes after receiving the ETH, the target address 0xb722 sent some of the USDT. This is the first of two transfers that cumulatively sent all 15,500 USDT from 0xb722 to 0x730b.</p>
+<p>That level of coordination proves a link between the two addresses and suggests that the target address and the ETH sender are possibly owned by the same person, or owned by two people who are in communication.</p>
+<p>To plot this, we simply click on each transaction in the transaction history list, and they appear on the graph.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/da333fa6-b22d-46b3-9666-e0b124118a48/image.png?t=1790192942" /></p>
+<p>Congratulations, you now understand foundational cryptocurrency investigation techniques.</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

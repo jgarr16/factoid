@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Why there’s no one-size-fits-all OPSEC setup for OSINT — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Why there’s no one-size-fits-all OPSEC setup for OSINT — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Why there’s no one-size-fits-all OPSEC setup for OSINT</h1>
+<p class="meta">2026-10-19 · received 2026-10-19 20:01 +0900
+ · <a href="https://indicator.media/p/why-there-s-no-one-size-fits-all-opsec-setup-for-osint" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>Why there’s no one-size-fits-all OPSEC setup for OSINT</h1>
+<p><em><a href="https://www.linkedin.com/in/tony-cqcore-solutions/">Tony Marshall</a></em>_ is an award-winning detective with more than 26 years of experience in UK policing. He specializes in digital and technical threats, intelligence, and online investigations including OSINT. He has been active in the OSINT community as Ginger T for nearly a decade._</p>
+<p>Phone syncing is an age-old OSINT trick to identify social and mobile app accounts connected to a phone number. Download the apps you want to test to a burner phone, then create contacts using the mobile numbers you want to research. Allow the apps to sync with your contact list and <em>presto</em> — you’ve now identified the apps your subject uses. Now you can gather more information, such as a profile picture that you can reverse image search.</p>
+<p>But sometimes it goes wrong. In this particular case, you might accidentally ring one of the numbers of interest, revealing your number and the fact that you have theirs. I always say to people that OPSEC oopsies happen. The most important part is to learn from them. It’s the potential for such errors that got me interested in OPSEC.</p>
+<p>Accidentally calling a target is a risk to an investigation, not to mention your personal safety. That’s why it’s never acceptable to use a personal phone for syncing. Remember, too, that the people you investigate can use OSINT on you. That’s why OPSEC is essential.</p>
+<p>But what do I mean by OPSEC? Operational security as a term and concept originated with the US military to “prevent sensitive information from getting into the hands of an adversary, primarily by denying access to the data,” according to a SANS <a href="https://www.sans.org/blog/what-is-opsec">article</a> by OSINT expert Ritu Gill.</p>
+<p>Google’s AI Overview says it’s “a process for identifying critical information, assessing whether it could be useful to an adversary, and then applying measures to eliminate or reduce that risk. It focuses on protecting sensitive operational details so attackers can’t gain an actionable insight.”</p>
+<p>One word stands out to me: “assessing.” Many OSINT professionals do not properly assess their OPSEC requirements. They stick to the same methodology time after time. Something else I would add to the definition is that OPSEC is about not being discovered.</p>
+<p>Let’s take this into the physical world of surveillance. A primary concern for a surveillance operative is to remain undetected. It’s exactly the same in the digital world.</p>
+<p>That raises a question that gets to the heart of this guide: Is Facebook an adversary, or a very good OSINT resource with questionable privacy practices? Your answer depends on whether you’re thinking about privacy or OPSEC.</p>
+<p>For me, OPSEC and privacy are different, but related, disciplines. However, some OSINT professionals believe they are the same thing. We can certainly learn from the privacy community, but we shouldn’t use its guidance as our OPSEC strategy.</p>
+<p>Standard OPSEC advice includes using a VPN, virtual machine, privacy-enhanced web browser such as Brave or Firefox, as well as burner accounts/sockpuppets and perhaps even mobile device emulators. But following the crowd may mean you don’t get the most out of the OSINT environment you have built.</p>
+<p>There isn’t a single perfect OPSEC setup for doing OSINT. Rather than prescribing a single tech stack, this guide helps you think through the process and make the right choices based on your investigation and your needs. Because sometimes, the best way to ensure operational security is to blend in rather than stick out with a highly customized setup.</p>
+<h2>OS, web browser, and search engine</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b2ffaf67-7221-4987-9da3-082dfdf2897b/opsec-section-os-browser-search.png?t=1792287622" /></p>
+<p>Any OSINT professional will tell you that training, knowledge, and experience are key ingredients in a successful OSINT investigation. One way to gain knowledge of OPSEC is to take on the role of an adversary and try to see what they see. It’s the approach I used for learning about websites and web OPSEC. I decided to create my own website to go through the process of buying a domain, hosting the domain, and ultimately having access to the back-end to understand what a website admin can see when someone visits their site.</p>
+<p>That typically includes:</p>
+<ul>
+<li>
+<p>Date and time you visited</p>
+</li>
+<li>
+<p>Your referrer, meaning did you come to the site directly or via a third-party link</p>
+</li>
+<li>
+<p>Your user agent string (which includes the type of browser, operating system, device, etc.)</p>
+</li>
+<li>
+<p>Your IP</p>
+</li>
+</ul>
+<p>An admin who examines their website logs can also tell if someone has used the <a href="https://developer.ibm.com/articles/what-is-curl-command/">cURL</a> command to scrape the site. If I am running a criminal website, will that stand out? If I see the same IP with the same user agent string visiting my site at the same time every day for days or weeks, what does that potentially tell me about the visitor?</p>
+<p>The starting point is to understand what a target can see about you. Then think about building a setup that allows you to blend in and not be profiled or exposed. In some cases, this may require counterintuitive decisions.</p>
+<p>For example, many people deploy user agent switchers to change how their machine appears in web logs. You might be running Chrome on a Mac, but it shows up in web logs as someone using Chrome on a Pixel phone. It can be an effective way to prevent an admin from fingerprinting your setup. But it can also expose you.</p>
+<p>I can sometimes tell when someone is using a switcher because their user agent string might list an OS that is no longer supported. Agent switchers are notorious for not being kept up to date. You think you’re blending in, but you actually stick out.</p>
+<p>I’ve observed a user agent string of a Pixel 3 phone running Chrome 98 on the Android 10 operating system. The Pixel 3 was released in 2018 and Android 10 in 2019. Chrome 98 was released in 2022. It is now 2026 and we have Pixel 11 and Android 17. I accept that older phones and operating systems are still in use in some parts of the world. But this combination is unique enough to stand out. If it kept hitting my website, I’d notice.</p>
+<p>This is why from a purely OPSEC perspective I will not typically use a Linux OS or Firefox browser. The below statistics demonstrate the point. Linux accounts for just 4.52% of desktop human web traffic worldwide, <a href="https://technologychecker.io/blog/operating-system-market-share">according</a> to Technology Checker. And Firefox’s market share is 3.6% overall, with 7.4% on desktop and 0.7% on mobile.</p>
+<p>That’s not to say I won't ever use Linux or Firefox. It depends on what my OSINT investigation has gleaned about my subject of interest or the nature of the investigation. I assess my OPSEC needs and adapt accordingly.</p>
+<p>I might, for example, use them if I’m investigating a website believed to be malicious or linked to malicious actors. In this scenario, a more generic setup of a Windows machine running Chrome may not be the right choice. Between January and August 2025, Surfshark Antivirus recorded 419,000 malware detections on Windows (87.4% of the total), compared to just 60,000 detections on macOS (12.6%).</p>
+<p>Google Chrome is the most targeted web browser for malware because of its massive global market share. That’s not because it’s less secure than other browsers; it’s because malware is a business, and criminals target Chrome to obtain the best return on investment.</p>
+<p>My point is that your choice of browser and OS should be based upon the answer to two questions:</p>
+<ul>
+<li>
+<p>Who or what am I investigating?</p>
+</li>
+<li>
+<p>What am I trying to achieve?</p>
+</li>
+</ul>
+<p>The same is true for your search engine. Many investigators eschew Chrome and Google because of privacy concerns, and I understand. But to me, they're a powerful OSINT combination when you’re trying to collect information about a particular subject.</p>
+<p>If I am investigating a person or entity that is tech-savvy, and the sites I need to go to have been flagged as suspicious, then a Linux virtual machine running Firefox may be the best way to go.</p>
+<p>But if you’re trying to set up a social media account, would a Linux virtual machine, Firefox browser, and DuckDuckGo search engine be more or less likely to be flagged? What if you used a Windows machine with Chrome and Google?</p>
+<p>As a general rule, I don’t sign into my browser. I have little need to sync content, and I want to minimize my digital footprint. I also avoid creating accounts unless I have to. Can I get what I need without that extra step? Think for a moment about everything that goes into creating an online account. That said, I have occasionally done exactly that when my workflow demanded it. It came down to time and efficiency.</p>
+<p>The point is to think about what you are doing and how best to achieve your goals and objectives. Don’t tie yourself to doing something the same way every time. You could be missing out — and you could cause yourself to stick out, or to get blocked.</p>
+<h2>VPN</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c4bc127f-c2fb-468d-9279-813e713947c5/opsec-section-vpn.png?t=1792287752" /></p>
+<p>I once overheard an OSINT professional say that you need a VPN for good OPSEC. I doubt many people would disagree with that statement. But it reflects a misconception about the role of a VPN in OPSEC.</p>
+<p>If you ask someone how a VPN improves their OPSEC, the answer will likely be a variation of, “It hides my IP address.”</p>
+<p>Yes, it does. But that’s more about privacy and digital security than OPSEC. Many websites and platforms can identify when someone is using a VPN, as many VPN IP ranges are known. You may get flagged as a result. How does that help your OPSEC?</p>
+<p>Recall that operational security is about <em>not</em> being discovered.</p>
+<p>A second reason most people use a VPN is to hide their location. This, too, can affect OSINT: the country your IP address is in can shape the results a search engine delivers. In that sense, a VPN can help with OSINT work. (It could also negatively affect you if you don’t factor in how search results can be affected by IP.) If your subject is from a different country, that’s when you should consider altering your IP to match.</p>
+<p>Putting it all together, here are two common OSINT scenarios and the associated OS, browser, search engine, and VPN setups I’d propose to optimize for both OPSEC and OSINT.</p>
+<ol>
+<li><strong>Investigating Facebook on the clear web</strong></li>
+</ol>
+<ul>
+<li>
+<p>OS: Windows</p>
+</li>
+<li>
+<p>Browser: Chrome</p>
+</li>
+<li>
+<p>Search engine: Google</p>
+</li>
+<li>
+<p>VPN: none</p>
+</li>
+</ul>
+<ol start="2">
+<li><strong>Investigating a dark-web forum that also exists on the clear web</strong></li>
+</ol>
+<ul>
+<li>
+<p>OS: Linux</p>
+</li>
+<li>
+<p>Browser: Firefox</p>
+</li>
+<li>
+<p>Search engine: DuckDuckGo</p>
+</li>
+<li>
+<p>VPN: set to whatever location is consistent with the profile you want to portray</p>
+</li>
+</ul>
+<p>Facebook is less likely to flag you for using such a common setup. You’ll look like an everyday user. And admins of dark-web forums that also exist on the clear web won’t be surprised to see a visitor with the setup I’ve proposed.</p>
+<p>If you are creating sockpuppet accounts or burner accounts, it’s essential to appear as an everyday user. Some platforms and websites will be okay with a VPN and virtual machine but many will treat them as red flags. You may get blocked. And if you are creating online personas for investigative work, be sure to create them on the kind of device a normal user would.</p>
+<p>The key is to blend with your surroundings.</p>
+<p><a id="virtual-machine"></a></p>
+<h2>Virtual Machine</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1a01a508-a885-46aa-9149-8fc1799b01c1/opsec-section-virtual-machine-no-emulator.png?t=1792287901" /></p>
+<p>Keeping with the theme of matching your setup to the context, will a virtual machine help us avoid being discovered? Or is it more likely to make us vulnerable? I can tell you from personal experience it is more likely to make you vulnerable to discovery.</p>
+<p>For example, the Telegram desktop app can detect the presence of a VM. It even knows which flavor of VM you’re running. If Telegram knows you’re using a VM, other apps — and the websites you visit through your browser — may be able to tell, too.</p>
+<p>Along with VMs, some investigators use an emulator. This desktop software mimics a mobile OS like iOS or Android and enables you to run apps. Emulators were designed for developers to test applications across different devices and screen sizes without needing physical hardware, not for OSINT — but we often use them anyway. From personal experience I know that WhatsApp can detect if you are using an emulator and will suspend your account.</p>
+<p>Emulators on the whole are not able to replicate what a real mobile device can do. Snapchat expects to see a camera; does the emulator you use have a camera? Virtual machines and emulators may help prevent platforms, app makers, website owners, and others from determining exactly who you are, but they can also flag you as a nonstandard user and lead you to be banned or segmented in ways that undermine your investigation.</p>
+<p>That doesn’t mean I never use a VM. It depends on what I’m doing and what I want to achieve. A VM is typically essential for dark-web investigations. But even clear-web websites or resources could pose a risk to my digital security. It may be that I have to investigate a malicious website or I need to download content and scan it for malware. Sometimes I just need a throwaway machine that doesn’t pose a risk to my work and identity if compromised.</p>
+<p>Another reason to use a VM is that it provides you with a clean machine that has never been used before. I’ve used them for that reason, but I have also done a complete factory reset on a Windows device to have a fresh machine for OSINT. I understand that certain parts of the device’s hardware will remain the same and be identifiable, but I still believe it is better than using a VM all the time.</p>
+<p>One final note: OSINT-focused VMs like the one <a href="https://tracelabs.org/blog/trace-labs-osint-vm-release-2026-10/">from Trace Labs</a> are useful because they come preloaded with popular open-source tools. Alternatively, you can create your own master VM with your preferred stack and reinstall it each time you start a new investigation or it becomes infected. Be aware that some identifiers are baked into your chosen VM, so in practice it’s the same as factory resetting a Windows machine: some things persist.</p>
+<h2>Bottom line</h2>
+<p>The overarching theme of this article isn’t to give you a list of tools to use and install. It’s to help you understand the fundamental concepts and goals of OPSEC and to apply them based on your circumstances. I want you to be protected. I also don’t want you to compromise your OSINT collection capabilities by overdoing OPSEC.</p>
+<p>I will leave you with one topic to consider within the framework that I’ve outlined: do you always delete your browsing history? If so, why?</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
