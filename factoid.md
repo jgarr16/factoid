@@ -1,11 +1,50 @@
 ---
 title: "Interesting tidbits"
-sweep: "2025-09-08 → 2026-11-21"
-updated: "2026-11-22"
-sources: "Future Tools, The Code, Superhuman AI, The Batch, Indicator, Lonely Octopus, The Frontier, The Product Compass, Product Hunt Weekly, Compound With AI, The Economist, DeepLearning.AI, OpenRouter Team, Superhuman AI · Sunday Special"
+sweep: "2025-09-08 → 2026-11-23"
+updated: "2026-11-23"
+sources: "Compound With AI, Product Hunt Weekly, Future Tools, The Code, Superhuman AI, The Batch, Indicator, Lonely Octopus, The Frontier, The Product Compass, The Economist, DeepLearning.AI, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**1501. A Claude prompt pattern that red-teams an investment thesis with simulated bad news**
+*⚡ Productivity & agent follow-through*
+*🗞 Compound With AI · 2026-11-23 03:56 KST — ["Meet the Stock Drop Simulator"](newsletters/2026-11-23_newsletter_compound_with_ai.md#meet-the-stock-drop-simulator)*
+
+The post walks through a Claude-driven simulator that takes a ticker plus your written thesis and generates adverse events — earnings miss, new competitor, regulatory action — so you rehearse decisions before real money is at stake; the prompt itself sits behind a paywall. The pattern ports cleanly into a Hermes agent, and pointing it at a local Ollama model keeps brokerage positions and your thesis off third-party APIs.
+
+- [Stock Drop Simulator post](https://news.aiinvestinghq.com/p/i-built-a-flight-simulator-for-investors)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1500. Rakazo is an open-source Grok-style assistant you host yourself**
+*🔒 Privacy & local tooling*
+*🗞 [Product Hunt Weekly · 2026-11-23 03:29 KST](newsletters/2026-11-23_newsletter_product_hunt_weekly.md)*
+
+An open-source, self-hostable bot pitched as a Grok Bot alternative you actually own, so the agent side isn't tied to someone else's account or cloud. Relevant if you'd rather point Hermes at a stack you control on the two-4090 box than bolt on another hosted chat client. Worth a repo read before adopting.
+
+- [Rakazo on Product Hunt](https://www.producthunt.com/posts/rakazo-2?utm_campaign=58445_2026-11-22&utm_medium=newsletter&utm_source=Weekly+Digest&utm_term=featured)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1499. seshka kills the dev servers and watchers Claude Code leaves running**
+*🛠️ Mac utilities worth a look*
+*🗞 [Product Hunt Weekly · 2026-11-23 03:29 KST](newsletters/2026-11-23_newsletter_product_hunt_weekly.md)*
+
+A macOS menu bar app that finds and kills the dev servers, watchers and scripts still running after a Claude Code session closes. If Hermes spawns background processes, this is the cleanup pass that prevents port collisions and stray CPU load between runs. Small, but it removes a recurring manual chore.
+
+- [seshka on Product Hunt](https://www.producthunt.com/posts/seshka?utm_campaign=58445_2026-11-22&utm_medium=newsletter&utm_source=Weekly+Digest&utm_term=editorial)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **1498. Gemini API's Tool Retrieval loads only the tools a call needs**
 *⚙️ LLM tooling & SDKs*
