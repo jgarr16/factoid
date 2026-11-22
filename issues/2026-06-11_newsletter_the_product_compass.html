@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Claude Fable 5: The Ultimate Guide for PMs — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Claude Fable 5: The Ultimate Guide for PMs — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Claude Fable 5: The Ultimate Guide for PMs</h1>
+<p class="meta">2026-06-11 · received 2026-06-11 13:28 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/claude-fable-5-guide" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>Claude Fable 5: The Ultimate Guide for PMs</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRmNsYXVkZS1mYWJsZS01LWd1aWRlIiwicCI6MjAxNDcyNDM2LCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzgxMTUyMjU3LCJleHAiOjIwOTY3MjgyNTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.5pQ-WbQuNr0KgPkoYUeuPbYpFqfNVHAwrsLs8wKpCnE?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=201472436&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIwMTQ3MjQzNiwiaWF0IjoxNzgxMTUyMjU3LCJleHAiOjE3ODM3NDQyNTcsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.LOZ4I6CpfJ3I_hmU0j0dXypEYr37gJ-zjeSHkm4tKME">Claude Fable 5: The Ultimate Guide for PMs</a></h1>
+<h3>Fable 5 dropped 36 hours ago. 6 experiments later: what changed, when your model silently swaps, and the first prompt you should run.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Jun 11</p>
+<p>∙</p>
+<p>Preview</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!C2pO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fcfcfec-32a1-4970-aee1-8a1ab05a76c0_750x750.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/claude-fable-5-guide?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>Fable 5 is the first model that’s <strong>made me feel audited</strong>.</p>
+<p>Yesterday, mid-task, it read my CLAUDE.md and caught it teaching the exact pattern my own quality gate bans. I hadn’t asked for a review. It hit the contradiction and flagged it on its own.</p>
+<p>That file is 320 lines. The knowledge layer behind it is 166 files, around 300k words of rules my agents follow every day. Every one of those rules was written by and for a weaker model.</p>
+<p>This guide is what I did about that, plus everything else from six experiments (effort dial, speed head-to-head, time-to-first-token, depth chain, recursive workflows, nesting cost) in Fable 5’s first 36 hours.</p>
+<p><strong>We’ll cover:</strong></p>
+<ul>
+<li>What changed, what it costs, and what the benchmark chart won’t tell you</li>
+<li>The effort dial and the “Fable is slow” complaint, measured</li>
+<li>When your model silently swaps mid-conversation, and the safeguards behind it</li>
+<li>Why “agentic judgment” is the real headline, with receipts from my own repo</li>
+<li>The audit prompt to run before giving Fable real work, and the migration workflow behind the paywall</li>
+<li>Objectives, not tasks: /goal patterns (paid)</li>
+<li>My nesting and workflow depth experiments, the costs, the decision rule (paid)</li>
+</ul>
+<p><strong>We won’t cover:</strong> API migration fine print, benchmark-by-benchmark analysis, or anything I haven’t run myself.</p>
+<hr />
+<h2><strong>1. What Actually Changed</strong></h2>
+<p>According to Anthropic, Fable 5 is “<em>a Mythos-class model that we’ve made safe for general use. Its capabilities exceed those of any model we’ve ever made generally available</em>.”</p>
+<p>They built a model they don’t fully release. <strong>Mythos 5 stays limited-access</strong>, available to trusted partners. <strong>Fable 5</strong> is the version of it you’re <strong>allowed to have</strong>. That framing matters more than any spec row, and we’ll come back to it in Section 2.</p>
+<p>Fable plugs in wherever Opus 4.7/4.8 did, with a few breaks that will bite you if you migrate blind:</p>
+<p><a href="https://substack.com/redirect/1d99c666-27c6-41d5-b4de-b4d531d43058?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Opus 4.8 vs. Fable 5: The row that matters isn't price. It's the thinking row: you lost the off switch." src="https://substackcdn.com/image/fetch/$s_!gSgs!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5d8f7ccd-cef2-4c99-a3d2-222a5e03f824_2304x1374.png" /></a></p>
+<p>The row that matters isn't price. It's the thinking row: you lost the off switch.</p>
+<p>Three migration gotchas hiding in that table:</p>
+<ol>
+<li><strong>You can’t turn thinking off.</strong> Pipelines that set thinking: disabled for speed get a 400 error. The effort dial survives; zero doesn’t.</li>
+<li><strong>Temperature is gone.</strong> If your eval suite sweeps sampling settings, those configs fail on Fable.</li>
+<li><strong>Until June 22, your API keys can’t reach it.</strong> Subscription surfaces only (Claude Code, Cowork, the apps). Plan your team’s testing window accordingly.</li>
+</ol>
+<h3>1.1 Fable 5 effort dial, measured</h3>
+<p>Instead of taking the docs' word for it, I ran 5 rounds of experiments and measured mean times:</p>
+<p><a href="https://substack.com/redirect/51095376-f342-4f95-9400-2f4f0e915b7f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Fable 5 effort dial, measured. Claude Fable 5 effort vs. speed." src="https://substackcdn.com/image/fetch/$s_!eOfE!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F095727ea-efa4-414a-bd2c-5a466123b436_1152x1334.png" /></a></p>
+<p>The results:</p>
+<ul>
+<li><strong>Easy question, no tools</strong>: below max the dial barely moves; thinking is adaptive and the model ignores budget it doesn’t need. Max triples the time and swings wildly between runs.</li>
+<li><strong>Realistic task, read two files and reconcile an apparent contradiction</strong>: here the dial bites from xhigh up; max costs double low.</li>
+<li><strong>Hard math puzzle with a checkable answer:</strong> every effort level got it right, with the same method. The extra seconds bought re-verification and caveats, not correctness. Same on the realistic task: identical verdicts at every level, max just showed more work.</li>
+</ul>
+<p>The practical setting based on my experiments so far: <strong>default to high</strong>. Dialing down buys back a few seconds, not different answers. Max should be a rare exception.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtZmFibGUtNS1ndWlkZSZyPTZ5NWltayZ0b2tlbj1leUoxYzJWeVgybGtJam8wTWpBeE5qRTBNakFzSW1saGRDSTZNVGM0TVRFMU1qSTFOeXdpWlhod0lqb3hOemd6TnpRME1qVTNMQ0pwYzNNaU9pSndkV0l0T1RRek1UVTNJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5iRGt2b1hfV1lQQUNfVU1WanJpUEtkZ0Q1OXY2cktIejMtX0RJVVhMRWtZIiwicCI6MjAxNDcyNDM2LCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzgxMTUyMjU3LCJleHAiOjIwOTY3MjgyNTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.ISHA64punEQu4-vqJU6tgckgZsPSHlE_NuNLU0KbaDY?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=201472436">Upgrade to paid</a></p>
+<h3>1.2 Fable 5 speed question, measured</h3>
+<p>The loudest day-one complaint after the classifiers: <strong>“Fable is slow.”</strong> One widely shared review called it a crawl, "<em>even on simple tasks</em>." I couldn't find numbers, so here are mine. I ran two tests: 3-round checks on the startup pause and in-flight token use, and a bigger 50-answer sweep (5 questions, 5 rounds each) aimed at the simple-tasks complaint. Both used stream-level timestamps and exact token counts:</p>
+<p><a href="https://substack.com/redirect/100be619-3018-4436-8fa7-e9729a065023?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Is Claude Fable 5 slow? Opus 4.8 vs Fable 5 speed." src="https://substackcdn.com/image/fetch/$s_!ige5!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb275d7da-801e-4d0f-abcb-3855d0ec54d5_2400x3000.png" /></a></p>
+<p>Based on my experiments:</p>
+<ul>
+<li><strong>Fable starts about 3 seconds later.</strong> First visible model activity on the same prompt: Opus in 4.7 to 5.3 seconds, Fable in 7.4 to 8.2, no overlap. You stare at a blank line for three extra seconds before anything moves, and that pause is my bet for where the “it crawls” feeling comes from.</li>
+<li><strong>In flight it’s denser, not slower.</strong> Same math problem, both models correct every time: Fable used about 40% fewer output tokens than Opus and finished 5 to 9 seconds sooner. It’s not thinking less. It’s saying the same thing in half the words.</li>
+<li><strong>On trivial one-shot questions, a real but modest tax.</strong> Fable averaged 1.4x Opus wall-clock (the round-by-round ratio ranged 1.2 to 1.7), every answer correct from both models. The single slowest answer in all fifty runs came from Opus, not Fable. And on a heavier multi-file audit the gap vanished entirely: 59 vs 63 seconds, and Fable caught a third more issues. Tighter per point, more points.</li>
+</ul>
+<p>So the verdict is narrower than what social media says: you can budget a bit of patience at the start of every exchange, and stop worrying about the rest.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtZmFibGUtNS1ndWlkZSZyPTZ5NWltayZ0b2tlbj1leUoxYzJWeVgybGtJam8wTWpBeE5qRTBNakFzSW1saGRDSTZNVGM0TVRFMU1qSTFOeXdpWlhod0lqb3hOemd6TnpRME1qVTNMQ0pwYzNNaU9pSndkV0l0T1RRek1UVTNJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5iRGt2b1hfV1lQQUNfVU1WanJpUEtkZ0Q1OXY2cktIejMtX0RJVVhMRWtZIiwicCI6MjAxNDcyNDM2LCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzgxMTUyMjU3LCJleHAiOjIwOTY3MjgyNTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.ISHA64punEQu4-vqJU6tgckgZsPSHlE_NuNLU0KbaDY?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=201472436">Upgrade to paid</a></p>
+<h3>1.3 The benchmarks</h3>
+<p>Anthropic's official chart covers these better than any table I'd retype:</p>
+<p><a href="https://substack.com/redirect/860cdcc3-63ab-4aa7-a4bf-66e340bea3d5?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Mythos 5 &amp; Fable 5, comparing Claude Mythos 5 and Fable 5 against Claude Mythos Preview, Claude Opus 4.8, GPT 5.5, and Gemini 3.1 Pro." src="https://substackcdn.com/image/fetch/$s_!70q8!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd189ec9b-7cfb-420d-9f04-088eeed137f5_1200x1200.png" /></a></p>
+<p>Source: <a href="https://substack.com/redirect/98ec95ff-d629-47d4-a87c-763ef150944f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">@claudeai on X</a></p>
+<p>Two things the official chart won't tell you:</p>
+<ul>
+<li>
+<p>The row that tells you what tier this is: <strong>FrontierCode Diamond</strong>, the hardest unseen problems in the set, where Fable more than doubles Opus 4.8 (29.3 vs 13.4) and runs 5x GPT-5.5:<a href="https://substack.com/redirect/cc4763a8-ba36-42a2-ae51-95b8086f2103?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="FrontierCode Diamond chart: Claude 5 Fable is already 30% of the way to saturating it" src="https://substackcdn.com/image/fetch/$s_!L6Ao!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3b5c4378-ab1e-4b46-a78a-2989534abe0d_1200x702.jpeg" /></a>Source: <a href="https://substack.com/redirect/0884b694-6ff2-491e-b972-c866dadcd858?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">@ChrissGPT on X</a></p>
+</li>
+<li>
+<p>And one honest footnote from the <a href="https://substack.com/redirect/351a4e86-b8f7-48fb-91f8-1cf584bc5c5b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">system card</a>: Fable's published scores already include its production safeguards, which is why some rows run slightly below Mythos.</p>
+</li>
+</ul>
+<hr />
+<h2><strong>2. The Safeguard Layer Most Coverage Missed</strong></h2>
+<h3>2.1 The visible layer: routing</h3>
+<p><a href="https://substack.com/redirect/303f8d45-bdc4-4c82-bb31-3ff7cc762417?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Fable 5 routing. Fable 5 ships with classifiers that screen for high-risk domains: cyber offense, biological and chemical synthesis, and model distillation." src="https://substackcdn.com/image/fetch/$s_!CVVj!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6cc5f7f3-1b95-4376-8fdb-566f1376b36f_1536x1024.png" /></a></p>
+<p>Fable 5 ships with classifiers that screen for high-risk domains. When a query trips one, the session is routed to Opus 4.8 instead, and you get a notification that it happened. Anthropic puts it at ~5% of sessions.</p>
+<p>My own experiments with subagents got capped, too:</p>
+<p><a href="https://substack.com/redirect/b22ce913-5eb7-4e63-92df-7fa29b17be90?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Fable's safety measures flagged this message" src="https://substackcdn.com/image/fetch/$s_!2B6P!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe597344a-7a82-4687-bfe8-60082fe41a42_1275x320.png" /></a></p>
+<p>It doesn't fail the query. It hands it to a different model, on purpose, and tells you. The capability ceiling and the safeguard layer are different things, and knowing which one you hit changes what you do next.</p>
+<p>According to Anthropic, “<em>Mythos-class models have <strong>reached a threshold where they present significant risks</strong>.</em>” The example they give: these models “<em>excel at discovering and exploiting software vulnerabilities,</em>” enough to make cyberattacks “<em>substantially easier and cheaper to commit.</em>”</p>
+<p>There’s also a second, invisible layer: per the system card’s Section 1.5, requests targeting frontier LLM development itself don’t reroute, they get quietly degraded, with no notification, on ~0.03% of traffic. Unless your team pretrains models, you’ll never hit it. Researchers are furious anyway (Elie Bakouch’s “<a href="https://substack.com/redirect/d2832df5-b2c2-42eb-8de1-26bd940333d7?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">very very sad for the research community</a>”), and the precedent is: the model you bought can be tuned down by topic, silently.</p>
+<h3>2.2 What this means for your team</h3>
+<p>Two practical notes from the first 36 hours:</p>
+<ul>
+<li><strong>Expect occasional routing, especially if your work touches security, healthcare, or biotech:</strong> Anthropic admits it (Claude Code’s Boris Cherny: “We know the classifiers are trigger-happy, and are working on improving it”). The notification is your signal: you did nothing wrong, and the answer quality drops to “merely Opus 4.8.” For security audits, the supported path is the built-in /security-review command. Also see my <a href="https://substack.com/redirect/cdc2e7d8-ac0f-4d62-9080-f4facd72c54e?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">/security-review-static</a> which inspects the full solution, not just the diff.</li>
+<li><strong>The API behaves differently:</strong> When per-token access opens June 22, there is no automatic fallback by default: a tripped classifier <strong>blocks the request</strong> and returns a structured refusal category. Server-side fallback to Opus is opt-in. If your team is planning eval pipelines, budget for retry logic now.</li>
+</ul>
+<p>The safeguard is worth copying: it swaps your model mid-session for safety. You can swap on purpose, for cost. Keep a cheaper model as your default and bring in Fable 5 only for the one call that needs it. Section 7 has what that costs.</p>
+<hr />
+<h2><strong>3. Judgment Is the Feature</strong></h2>
+<p>The benchmarks got their chart in Section 1. The interesting part of this launch is a behavior change.</p>
+<p>One disclosure before the quotes: Every voice quoted in praise here works at Anthropic. Read them as insider testimony, not independent validation, then check them against my receipts.</p>
+<p>Karpathy called it “<em>a major-version-bump-deserving step change forward,</em>” strongest “<em>for long problem-solving sessions on very difficult problems</em>”:</p>
+<p><a href="https://substack.com/redirect/bab1bcc9-c94c-43e5-ad21-153527548c78?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Andrej Karpathy on Claude Fable 5: a major-version-bump-deserving step change forward" src="https://substackcdn.com/image/fetch/$s_!gHgE!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6cea8a15-e554-4d9f-869c-0b3951f71b3d_1494x662.png" /></a></p>
+<p>The people building Claude Code describe the same thing. Cherny, from his launch post: Fable “<em>has judgement, taste, and dimensionality in a way that previous models didn’t</em>”:</p>
+<p><a href="https://substack.com/redirect/5c6346b4-a354-4199-948c-bb2fa9db63a2?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Boris Cherny on Claude Fable 5: has judgement, taste, and dimensionality in a way that previous models didn’t" src="https://substackcdn.com/image/fetch/$s_!jBOD!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F034add2b-a628-4b63-b27f-ce3b3ed24604_1496x458.png" /></a></p>
+<p>He asked it to debug something, and it took measurements, added logs, and verified the fix before declaring victory. Then the line that stuck with me: “<em>There’s nothing in claude code’s prompting telling the model to do that, it’s just part of its personality.</em>”</p>
+<p>Thariq Shihipar compressed it to six words:</p>
+<p><a href="https://substack.com/redirect/4b99fb49-7085-4b1d-a2ca-0283813f8add?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Thariq Shihipar on CLaude Fable 5: it's time to be more ambitious" src="https://substackcdn.com/image/fetch/$s_!LeAO!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd0823cc9-4733-49df-8835-a5150ef48eab_1493x373.png" /></a></p>
+<p>The closest thing to an outside read, two days in, is the shape of the criticism. Researchers are <strong>angry about the invisible safeguards</strong> (Section 2), and Dylan Patel of SemiAnalysis reports power users defecting to Codex after “<em><a href="https://substack.com/redirect/51d6bb31-7003-48da-a777-3eb93e2dafea?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">refusals for nonsensical reasons</a>.</em>” Both complaints are about <strong>access to the capability</strong>. Neither questions the capability.</p>
+<p>My version of that moment is the one this guide opened with. Fable read my instruction files and <strong>started surfacing contradictions instead of executing them</strong>. Previous models followed my rules. This one evaluated them.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtZmFibGUtNS1ndWlkZSZyPTZ5NWltayZ0b2tlbj1leUoxYzJWeVgybGtJam8wTWpBeE5qRTBNakFzSW1saGRDSTZNVGM0TVRFMU1qSTFOeXdpWlhod0lqb3hOemd6TnpRME1qVTNMQ0pwYzNNaU9pSndkV0l0T1RRek1UVTNJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5iRGt2b1hfV1lQQUNfVU1WanJpUEtkZ0Q1OXY2cktIejMtX0RJVVhMRWtZIiwicCI6MjAxNDcyNDM2LCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzgxMTUyMjU3LCJleHAiOjIwOTY3MjgyNTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.ISHA64punEQu4-vqJU6tgckgZsPSHlE_NuNLU0KbaDY?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=201472436">Upgrade to paid</a></p>
+<hr />
+<h2><strong>4. Your Knowledge Layer Was Built for a Weaker Model</strong></h2>
+<p>Fable flagged the first contradiction on its own, mid-task, before I’d read anyone’s tips. So I gave it the full job: read everything my agents follow and report what’s wrong.</p>
+<p>That conclusion is consistent with voices inside Anthropic. Alex Albert’s launch tips name the same mechanism: instructions written for old models keep Fable behaving like those old models. Rework your skills and CLAUDE.md files; let the model use its own judgment first.</p>
+<h3>4.1 What Fable found in my repo</h3>
+<p>My agents maintain those files, not me. I trust Opus to keep them clean enough. Still, five finds:</p>
+<ul>
+<li><strong>A hardcoded date telling the model what day it is.</strong> One strategy file contains “<em>(today is 2026-05-24)</em>”, written during a May session and never noticed again. Every session since has been told the wrong date by its own instructions. A latent risk that didn’t materialize.</li>
+<li><strong>A rule documented with the pattern it bans.</strong> My writing system now bans em dashes in published content. The file that documents the ban is written with em dashes. Instructions teach by example as much as by rule, and the example contradicted the rule.</li>
+<li><strong>Calibration constants that drifted.</strong> An X voice rule still gates on an audience under 50K followers. That number was true when the rule was written. It isn’t two months later (75K).</li>
+<li><strong>Guardrails for failure modes the new model doesn’t have.</strong> Rules like “<em>never delegate judgment-heavy work to cheaper models</em>” and complex self-check procedures exist because earlier models needed them. Each one now eats context and pulls the model toward old habits without buying the safety it used to.</li>
+<li><strong>The same rule stated in three files.</strong> Three maintenance surfaces, three chances to drift apart.</li>
+</ul>
+<p>Two were plain mistakes. The rest were right for the model they were written for. That’s exactly the problem. The better your system was for the last model, the more it holds back this one.</p>
+<h3>4.2 Written by a weaker model</h3>
+<p>The pushback I got within hours of <a href="https://substack.com/redirect/63db1b74-d1dc-46d0-bd03-c5cff02d4937?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">posting my first thoughts on X</a>: if your files contradict each other, isn't that just sloppy housekeeping? Fair question, wrong model of the system.</p>
+<p>This knowledge layer isn't a config file a human writes once. It's self-improving: agents file evidence as they work, turn evidence into working rules, and edit their own CLAUDE.md (the system from <a href="https://substack.com/redirect/d4a7c3ff-cdf4-4c0d-9d22-d34042435b1b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Three CLAUDE.md Blocks</a>). 166 files, maintained partly by the things that read them.</p>
+<p>In a system like that, contradictions aren't carelessness. They're drift, the same drift every wiki and every org's process docs accumulate, except here it accumulates as fast as the agents write.</p>
+<p>That creates the real trap: a knowledge layer written by a weaker model has a flaw no amount of review can fix. Every line an agent added passed review by the model that added it, by definition. <strong>A system maintained by model N tends to preserve the errors model N can't see.</strong></p>
+<p>I review these files every day and didn't catch it. Neither did Codex, which <a href="https://substack.com/redirect/54f4284c-d039-4bb8-b3c4-3c20055812e5?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">reviews my knowledge files as a second pair of eyes</a>. And no automated check could: a rule in one file conflicting with a teaching example in another is a conflict in meaning, not in text. It sat there until the first reader arrived that was stronger than the system's own authors.</p>
+<p><a id="43-the-audit-prompt"></a></p>
+<h3>4.3 The audit prompt</h3>
+<p>So the first prompt I ran with Fable 5 wasn't a task. It's the prompt I'd now run before giving any new model real work, and it's yours:</p>
+<pre><code>Read your own instruction files (CLAUDE.md, skills, rules, memory files) end to end.1. Where do they contradict each other? Quote both sides.2. Which rules exist to manage a weaker model: guardrails for failure   modes you don't have, recipes for things you no longer need spelled   out, hardcoded facts that have drifted? List them with file:line.3. Which rules teach by bad example: documents that violate the   patterns they prescribe?4. What would you delete? What would you keep exactly as is, and why?Don't fix anything yet. Report first. I decide what gets cut.
+</code></pre>
+<p>The audit is the model's judgment; the deletions are yours. What you do with the report, and how I turned mine into a repeatable migration workflow, is where we go next.</p>
+<hr />
+<p><strong>Behind the paywall:</strong></p>
+<ul>
+<li><strong>The migration workflow</strong> → the three-bucket rule classification (constraint, calibration, scaffolding) so you cut anchors without cutting your actual taste</li>
+<li><strong>Objectives, not tasks</strong> → the /goal patterns that let Fable run long PM work unattended + prompt templates</li>
+<li><strong>How deep agents stack now</strong> → my nesting experiments, cost control + CLAUDE.md snippet for delegating and escalating work with Fable</li>
+<li><strong>What doesn’t work (yet)</strong> → the honest list, so you spend your first week on the parts that do</li>
+<li><strong>The week-one plan</strong> → day by day, copy-paste ready...</li>
+</ul>
+<h2>Keep reading with a 7-day free trial</h2>
+<p>Subscribe to The Product Compass to keep reading this post and get 7 days of free access to the full post archives.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtZmFibGUtNS1ndWlkZSZyPTZ5NWltayZ0b2tlbj1leUoxYzJWeVgybGtJam8wTWpBeE5qRTBNakFzSW1saGRDSTZNVGM0TVRFMU1qSTFOeXdpWlhod0lqb3hOemd6TnpRME1qVTNMQ0pwYzNNaU9pSndkV0l0T1RRek1UVTNJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5iRGt2b1hfV1lQQUNfVU1WanJpUEtkZ0Q1OXY2cktIejMtX0RJVVhMRWtZIiwicCI6MjAxNDcyNDM2LCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzgxMTUyMjU3LCJleHAiOjIwOTY3MjgyNTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.ISHA64punEQu4-vqJU6tgckgZsPSHlE_NuNLU0KbaDY?simple=true&amp;utm_source=paywall&amp;utm_medium=email&amp;utm_content=201472436&amp;next=https://www.productcompass.pm/p/claude-fable-5-guide&amp;coupon=34546817">Start trial</a></p>
+<h3>A subscription gets you:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>𝗔𝗰𝗰𝗲𝘀𝘀 𝗲𝘃𝗲𝗿𝘆 𝗶𝘀𝘀𝘂𝗲 → 200+ actionable AI PM sarticles. Full archive. Premium Notion collection and templates.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>𝗝𝗼𝗶𝗻 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗦𝗹𝗮𝗰𝗸 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 → A 1,850+ AI PM community to grow together + DM me.</td>
+</tr>
+<tr>
+<td></td>
+<td>𝗕𝗼𝗼𝘀𝘁 𝘆𝗼𝘂𝗿 𝗣𝗠 𝗰𝗮𝗿𝗲𝗲𝗿 → Enroll in the AI PM Learning Program ($700 value) and 4 video courses ($546 value).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=201472436&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIwMTQ3MjQzNiwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3ODExNTIyNTcsImV4cCI6MTc4Mzc0NDI1NywiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.iGtns3SzKox4wQOTmSpkKd9ssLAiA1zRi_YWtGSRtyI&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=201472436&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIwMTQ3MjQzNiwiaWF0IjoxNzgxMTUyMjU3LCJleHAiOjE3ODM3NDQyNTcsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.LOZ4I6CpfJ3I_hmU0j0dXypEYr37gJ-zjeSHkm4tKME&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9jbGF1ZGUtZmFibGUtNS1ndWlkZT91dG1fc291cmNlPXN1YnN0YWNrJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXJlc3RhY2stY29tbWVudCZhY3Rpb249cmVzdGFjay1jb21tZW50JnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbkJ2YzNSZmFXUWlPakl3TVRRM01qUXpOaXdpYVdGMElqb3hOemd4TVRVeU1qVTNMQ0psZUhBaU9qRTNPRE0zTkRReU5UY3NJbWx6Y3lJNkluQjFZaTA1TkRNeE5UY2lMQ0p6ZFdJaU9pSndiM04wTFhKbFlXTjBhVzl1SW4wLkxPWjRJNkNwZkozSV9obVUwajBkWHlwRVlyMzdnSi16amVTSGttNHRLTUUiLCJwIjoyMDE0NzI0MzYsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3ODExNTIyNTcsImV4cCI6MjA5NjcyODI1NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.W61inDhQY6AyBrPJ8hW7kiKAOPWo3obzwbVB4C22X1s?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qSXdNVFEzTWpRek5pd2lhV0YwSWpveE56Z3hNVFV5TWpVM0xDSmxlSEFpT2pFNE1USTJPRGd5TlRjc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAuSS13eEhONnJFSnR6RnlUbXh3d0tfaVRTTmhpcjlLVW9YYUg4VHIxRVNKRSIsInAiOjIwMTQ3MjQzNiwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc4MTE1MjI1NywiZXhwIjoyMDk2NzI4MjU3LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.6yylv7nYnXv_rXIp9oBZz81oZJueHnDw4DqidE6rhXQ?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/cd9c3f38-fdb6-44de-8fa0-53423b5e9bec?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoyMDE0NzI0MzYsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3ODExNTIyNTcsImV4cCI6MjA5NjcyODI1NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.1yjNf4d3bs4-KIjUo5Ca_VnQmU07mHFb-UCVEuT258s?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

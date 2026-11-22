@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Your .claude/ Folder Is a Production Agent — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Your .claude/ Folder Is a Production Agent — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Your .claude/ Folder Is a Production Agent</h1>
+<p class="meta">2026-04-15 · received 2026-04-15 07:29 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/claude-agent-sdk-production-agent" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>Your .claude/ Folder Is a Production Agent</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRmNsYXVkZS1hZ2VudC1zZGstcHJvZHVjdGlvbi1hZ2VudCIsInAiOjE5NDIxMTk0NywicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3NjIwNTg4MiwiZXhwIjoyMDkxNzgxODgyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.0-2vigwdE-iCYue7Do7qT4mK51I78rHw3x1KiS9mq0o?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=194211947&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5NDIxMTk0NywiaWF0IjoxNzc2MjA1ODgyLCJleHAiOjE3Nzg3OTc4ODIsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.L-OCADVfBZs-MSqCmGsha1Y2QZ7KnDuhkSk4x5ZTt3M">Your .claude/ Folder Is a Production Agent</a></h1>
+<h3>You already know how to build production AI agents. You just didn't know it counted.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Apr 14</p>
+<p>∙</p>
+<p>Preview</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!qMwR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fba18ea7b-0b42-4881-96ff-8e7a8d555f86_1024x1024.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/claude-agent-sdk-production-agent?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>Last week I ran a spike. Same <code>CLAUDE.md</code>, same skills, same MCPs, same hooks I write every day in Claude Code — pointed at a Next.js app. Shipped a working Knowledge Chatbot in an afternoon. No new framework. No Claude Managed Agents. Zero files I hadn’t written a dozen times before.</p>
+<p>Everyone's covering agents helping you build or do knowledge work. The pattern nobody's shipping: <strong>the same primitives are the production runtime.</strong></p>
+<p>What you’ll learn:</p>
+<ul>
+<li>The Claude Code primitives that double as a production runtime</li>
+<li>When to pick the Agent SDK over Claude Managed Agents or a framework</li>
+<li>The architecture — one function call replaces an n8n-style workflow</li>
+<li>A full working demo: source code, build prompt, hosting notes</li>
+<li>The gotchas that silently break things</li>
+<li>How to host your Claude agents in production</li>
+</ul>
+<hr />
+<p><a id="1-the-missing-pattern-agent-as-a-callable-component"></a></p>
+<h2>1. The Missing Pattern — Agent as A Callable Component</h2>
+<p>Two narratives dominate right now:</p>
+<ul>
+<li><strong>Agents as products.</strong> Claude Code, Lovable, Cursor. You use them to code or to do your work.</li>
+<li><strong>Agents as infrastructure.</strong> Claude Managed Agents, LangGraph, n8n. You adopt a platform to build them.</li>
+</ul>
+<p>The pattern sitting between those two is <strong>agent as a callable component</strong> inside your app.</p>
+<p>How does it work?</p>
+<p>Your web app handles routing, auth, CRUD, form validation. When a request needs reasoning, you call the agent — which runs in a sandbox with its own CLAUDE.md, skills, and MCP servers.</p>
+<p>This is how microservices work. Nobody builds a monolithic agent. You build an app that calls an agent when it needs one.</p>
+<p>The part that surprised me: the same <code>.claude/</code> folder I've been editing every day for months <em>is</em> the deployable unit. There is no translation layer between dev and prod. The CLAUDE.md that guides Claude Code in your terminal is the exact same CLAUDE.md format that runs in production.</p>
+<hr />
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtYWdlbnQtc2RrLXByb2R1Y3Rpb24tYWdlbnQmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0ltbGhkQ0k2TVRjM05qSXdOVGc0TWl3aVpYaHdJam94TnpjNE56azNPRGd5TENKcGMzTWlPaUp3ZFdJdE9UUXpNVFUzSWl3aWMzVmlJam9pWTJobFkydHZkWFFpZlEuRmltQmRCY3lDaGJkZHc4bmNkQ2FCOFJudzllUnBLSTRlYjVKSWhHUGc1MCIsInAiOjE5NDIxMTk0NywicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3NjIwNTg4MiwiZXhwIjoyMDkxNzgxODgyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.zL6Zti2hTW6Wq0xi_eOQYhKz-BOQxoieyGXPP46nJ2Y?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=194211947">Upgrade to paid</a></p>
+<hr />
+<p><a id="2-the-primitives-you-already-use"></a></p>
+<h2>2. The Primitives You Already Use</h2>
+<p>Five key things. We've discussed most of them in <a href="https://substack.com/redirect/9a330bac-49ff-427d-a0f9-a6065f007ec8?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">the previous posts about Claude Code and Cowork</a>:</p>
+<ul>
+<li><strong>CLAUDE.md</strong> — the agent’s identity in markdown. Tone, rules, constraints. In dev it shapes how Claude Code behaves in your terminal. In prod it loads as the system prompt of your production agent. Edit the file, ship the behavior.</li>
+<li><strong>Skills</strong> (<code>.claude/skills/</code>) — reusable behaviors, also markdown. “When the user asks for a summary, use Glob + Read, produce a structured overview.” Same file format in dev and prod. Same loader.</li>
+<li><strong>MCPs</strong> (<code>.claude/mcp.json</code>) — servers that extend the agent’s tool surface. Your dev config probably talks to Chrome and your filesystem. Your production agent’s config talks to your search API and your database. Different servers, identical contract.</li>
+<li><strong>Hooks</strong> — functions that fire on tool events. <code>PreToolUse</code> can block dangerous operations (reading <code>.env</code>, path traversal). <code>PostToolUse</code> can log everything the agent read so you can show it in the UI. Five lines of code replace an IF-node-per-tool in any workflow builder.</li>
+<li><strong>Sub-agents</strong> (<code>.claude/agents/&lt;name&gt;/</code>) — each directory is a self-contained agent: its own CLAUDE.md, its own skills, its own MCP config, its own docs. Adding a second agent to your product is a new folder.</li>
+</ul>
+<p><a href="https://substack.com/redirect/d555411a-7667-40b6-82b1-60e92b2e0294?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Code subagents" src="https://substackcdn.com/image/fetch/$s_!W4pi!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F10dd4285-88db-4ec0-b238-727ab4b7094f_1040x648.png" /></a></p>
+<p>Sub-agents in Claude Code</p>
+<p>Everything is files. Everything is version-controlled. Everything diffs cleanly in a PR. If you've onboarded to Claude Code, you've already onboarded to the production stack.</p>
+<p>In case you wondered, here’s a more comprehensive overview:</p>
+<p><a href="https://substack.com/redirect/901d4164-984b-41a4-8448-e3f5f3655513?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="How Claude Projects Actually Work, CLAUDE.md" src="https://substackcdn.com/image/fetch/$s_!9rIK!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8171d1c-ec6c-46f7-b581-0ca46f3f8911_1200x1500.png" /></a></p>
+<p>Claude Code projects</p>
+<hr />
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtYWdlbnQtc2RrLXByb2R1Y3Rpb24tYWdlbnQmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0ltbGhkQ0k2TVRjM05qSXdOVGc0TWl3aVpYaHdJam94TnpjNE56azNPRGd5TENKcGMzTWlPaUp3ZFdJdE9UUXpNVFUzSWl3aWMzVmlJam9pWTJobFkydHZkWFFpZlEuRmltQmRCY3lDaGJkZHc4bmNkQ2FCOFJudzllUnBLSTRlYjVKSWhHUGc1MCIsInAiOjE5NDIxMTk0NywicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3NjIwNTg4MiwiZXhwIjoyMDkxNzgxODgyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.zL6Zti2hTW6Wq0xi_eOQYhKz-BOQxoieyGXPP46nJ2Y?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=194211947">Upgrade to paid</a></p>
+<hr />
+<h2>3. Why This Matters in Production</h2>
+<p>Here’s how it stacks up against the alternatives most posts point you to:</p>
+<p><a href="https://substack.com/redirect/e9a654a5-c5e8-4fec-af44-c02d8160d3f9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Agent SDK vs. Managed Agents vs. LangGraph vs. n8n" src="https://substackcdn.com/image/fetch/$s_!NdPI!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8bf4d62-06aa-4e49-98f3-69a81dc8da3e_1040x493.png" /></a></p>
+<p>Agent SDK vs. Managed Agents vs. LangGraph vs. n8n</p>
+<p>Four things fall out of this that I didn't expect going into the spike:</p>
+<ul>
+<li><strong>Nothing new to learn.</strong> The CLAUDE.md you wrote in dev is the CLAUDE.md that ships. Your muscle memory is already the production runtime.</li>
+<li><strong>You can skip Claude Managed Agents unless you actively need a hosted runtime.</strong> For request-response agents inside an app you already host, the SDK is a smaller dependency than a whole platform.</li>
+<li><strong>Full observability without a new vendor.</strong> Hooks give you live per-response metadata — cost, duration, files read — for your UI. OTEL exports full traces to Langfuse or any OTLP backend when you want dashboards.</li>
+<li><strong>Same loop, dev → prod.</strong> The config you tested in Claude Code is the config running in production. If it worked in your terminal, it works in your app. No mental translation.</li>
+</ul>
+<p><strong>For PMs:</strong> this is what lets you prototype and ship agent features without becoming a bottleneck. Changing the agent's behavior is editing a markdown file — not a sprint, not a code review, not a redeploy cycle. You iterate on AI behavior at the speed you iterate on a Notion doc.</p>
+<p>Now the part most people skip — how you actually wire it up.</p>
+<hr />
+<p><em>Keep reading for:</em></p>
+<ul>
+<li><em>The full build prompt that scaffolds the app — paste into an empty repo, Claude Code builds the rest.</em></li>
+<li><em>The lib/agent.ts wrapper with the TypeScript pitfalls the SDK docs skip</em></li>
+<li><em>The postbuild trick that stops production from inheriting your repo’s CLAUDE.md.</em></li>
+<li><em>A cloneable demo — Knowledge Chatbot, streaming responses, per-message cost metadata. Full source code.</em></li>
+<li><em>The limitations I hit in the spike and the workarounds for each.</em></li>
+<li><em>How to host this in production...</em></li>
+</ul>
+<h2>Keep reading with a 7-day free trial</h2>
+<p>Subscribe to The Product Compass to keep reading this post and get 7 days of free access to the full post archives.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtYWdlbnQtc2RrLXByb2R1Y3Rpb24tYWdlbnQmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0ltbGhkQ0k2TVRjM05qSXdOVGc0TWl3aVpYaHdJam94TnpjNE56azNPRGd5TENKcGMzTWlPaUp3ZFdJdE9UUXpNVFUzSWl3aWMzVmlJam9pWTJobFkydHZkWFFpZlEuRmltQmRCY3lDaGJkZHc4bmNkQ2FCOFJudzllUnBLSTRlYjVKSWhHUGc1MCIsInAiOjE5NDIxMTk0NywicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3NjIwNTg4MiwiZXhwIjoyMDkxNzgxODgyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.zL6Zti2hTW6Wq0xi_eOQYhKz-BOQxoieyGXPP46nJ2Y?simple=true&amp;utm_source=paywall&amp;utm_medium=email&amp;utm_content=194211947&amp;next=https://www.productcompass.pm/p/claude-agent-sdk-production-agent&amp;coupon=34546817">Start trial</a></p>
+<h3>A subscription gets you:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>𝗔𝗰𝗰𝗲𝘀𝘀 𝗲𝘃𝗲𝗿𝘆 𝗶𝘀𝘀𝘂𝗲 → Stay ahead with 180+ actionable AI PM strategies and advice. Full archive.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>𝗝𝗼𝗶𝗻 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗦𝗹𝗮𝗰𝗸 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 → Get exclusive access to Paweł (DM) and 1,850+ AI PM community to grow together.</td>
+</tr>
+<tr>
+<td></td>
+<td>𝗕𝗼𝗼𝘀𝘁 𝘆𝗼𝘂𝗿 𝗣𝗠 𝗰𝗮𝗿𝗲𝗲𝗿 → Enroll in the AI PM Learning Program ($700 value) and 4 video courses ($546 value).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=194211947&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5NDIxMTk0NywicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3NzYyMDU4ODIsImV4cCI6MTc3ODc5Nzg4MiwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.RzGrhcsl0SkY8vvFwRT3lsNsFKGfQ_ACTaE_tUdSbZw&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=194211947&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5NDIxMTk0NywiaWF0IjoxNzc2MjA1ODgyLCJleHAiOjE3Nzg3OTc4ODIsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.L-OCADVfBZs-MSqCmGsha1Y2QZ7KnDuhkSk4x5ZTt3M&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9jbGF1ZGUtYWdlbnQtc2RrLXByb2R1Y3Rpb24tYWdlbnQ_dXRtX3NvdXJjZT1zdWJzdGFjayZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1lbWFpbC1yZXN0YWNrLWNvbW1lbnQmYWN0aW9uPXJlc3RhY2stY29tbWVudCZyPTZ5NWltayZ0b2tlbj1leUoxYzJWeVgybGtJam8wTWpBeE5qRTBNakFzSW5CdmMzUmZhV1FpT2pFNU5ESXhNVGswTnl3aWFXRjBJam94TnpjMk1qQTFPRGd5TENKbGVIQWlPakUzTnpnM09UYzRPRElzSW1semN5STZJbkIxWWkwNU5ETXhOVGNpTENKemRXSWlPaUp3YjNOMExYSmxZV04wYVc5dUluMC5MLU9DQURWZkJacy1NU3FDbUdzaGExWTJRWjdLbkR1aGtTazR4NVpUdDNNIiwicCI6MTk0MjExOTQ3LCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzc2MjA1ODgyLCJleHAiOjIwOTE3ODE4ODIsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.QCP5tfkDpf9oHYf-2PD7hCdXt7uLz3G43oylP0UqCdc?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVOREl4TVRrME55d2lhV0YwSWpveE56YzJNakExT0RneUxDSmxlSEFpT2pFNE1EYzNOREU0T0RJc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAuZWV4MmFmcklUNDNaX29UTWV3VjlkT1kxdE9vUkRFS1dxTm5IckpzQXpKSSIsInAiOjE5NDIxMTk0NywicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3NjIwNTg4MiwiZXhwIjoyMDkxNzgxODgyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.nRhHOkjHWPD7dDJ2Hls5btOFew-x0C305Rns40QKTDI?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/0d6b49b4-1b49-4966-9aaa-4e8b62359b16?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoxOTQyMTE5NDcsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzYyMDU4ODIsImV4cCI6MjA5MTc4MTg4MiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.zteOAETX3D-3SdaM2iECMs075aBrmUaA5YoICCNC_oE?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

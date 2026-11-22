@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚀 MiniMax drops H3 — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚀 MiniMax drops H3 — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚀 MiniMax drops H3</h1>
+<p class="meta">2026-08-04 · received 2026-08-04 23:04 +0900
+ · <a href="https://codenewsletter.ai/p/minimax-s-h3-model-runs-on-one-consumer-gpu" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚀 MiniMax drops H3</h1>
+<p><a href="https://ref.wisprflow.ai/thecode"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/21329a99-b8c8-4322-b437-779bd1566b31/Group_Wispr__4_.jpg?t=1785811308" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Anthropic is winning the AI talent war so decisively that its CEO now has an unusual problem. In a recent report, he voiced concerns that new hires are prioritizing paychecks over the company mission. In response, the dev community sparked a meme fest, but one senior engineer's ironic take cut deeper than the rest (read below).</p>
+<p><strong>Also:</strong> Inside Uber’s AI Native Engineering team, a vibe-coded solution for data transfer using QR codes, and a Claude Skill that watches youtube videos and podcasts for you.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>3 Claude Skills every dev team should have</p>
+</li>
+<li>
+<p>The best method to lease your new MacBook</p>
+</li>
+<li>
+<p>Senior engineer’s AI coding workflow (tutorial)</p>
+</li>
+<li>
+<p>How to design effective prompts (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://x.com/MiniMax_AI/status/2084106804032872591"><img alt="Click here to see MiniMax-H3 in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2d7b1029-edf2-4ef9-95b8-0fefe04c6447/Thumbnail__89_.jpg?t=1785833376" /></a>
+<em>Click here to see MiniMax-H3 in action.</em></p>
+<hr />
+<p><strong>MiniMax's new video model runs on one consumer GPU:</strong> The Chinese AI lab just dropped <a href="https://huggingface.co/MiniMaxAI/MiniMax-H3">H3</a>, a 33B model capable of generating 2K video clips up to 15 seconds long, complete with synced stereo audio. While 2K regeneration still happens server-side, early tests indicate it can run locally on a single RTX 5090 using ComfyUI. This allows US-based teams to prototype without racking up massive cloud bills. The open weights are currently licensed for use in the US, EU, UK, and South Korea.</p>
+<p><strong>Anthropic's CEO fears engineers chase hefty salaries over mission:</strong> The AI lab reportedly outpays every rival. When an Axios <a href="https://x.com/etnshow/status/2084221242614202704">report</a> on the talent wars went public, the developer community was quick to jump in. Veteran engineer Gergely Orosz <a href="https://x.com/GergelyOrosz/status/2084317675291816227">remarked</a> that the mission-driven lab should try underpaying than its rivals and then see who shows up for the work. Meanwhile, others flooded the internet with memes mocking the company's concern. See how much Anthropic <a href="https://x.com/zuhayeer/status/2084371745516212517">pays its engineers.</a></p>
+<p><strong>Cursor plugs coding agents into Google Workspace:</strong> The AI code editor just shipped a <a href="https://cursor.com/changelog/google-workspace-plugins">suite of plugins</a> that give its agents direct access to Gmail, Google Drive, Calendar, Docs, and Sheets. This means agents can now pull context straight from your inbox, draft or update files, and manage schedules without you ever having to leave the editor. On top of that, cloud agents now use tokens <a href="https://x.com/cursor_ai/status/2084317547608911986">20-30% more efficiently</a>, helping engineering teams offload bigger tasks while staying under budget.</p>
+<hr />
+<h5><strong>PRESENTED BY WISPR</strong></h5>
+<h2><a href="https://ref.wisprflow.ai/thecode">You know what never gets written? The docs.</a></h2>
+<p><a href="https://ref.wisprflow.ai/thecode"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b48435cf-de31-4c08-848d-99743cd0d030/wispr_the_code_august_image.jpg?t=1785812158" /></a></p>
+<hr />
+<p>Not because you don't care. Because after 6 hours of building, typing paragraphs about what you built feels
+like punishment.</p>
+<p>So the PR description stays vague. The README gets "TODO." The architecture decision lives in your head until you leave the company.</p>
+<p>Wispr Flow: <a href="https://ref.wisprflow.ai/thecode">syntax-aware voice dictation</a> that works in every app. Speak your PR descriptions, commit messages, and docs. camelCase, snake_case, and acronyms stay intact.</p>
+<p><a href="https://ref.wisprflow.ai/thecode">Engineers at OpenAI and Vercel use it daily.</a> Available on Mac, Windows, iPhone, and Android. The best docs are the ones that actually get written.</p>
+<p><a href="https://ref.wisprflow.ai/thecode"><strong>Try free</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>AI-native engineering starts with PRDs. Here’s how engineering teams at Uber do it:</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2cf69620-4946-4d66-aa84-30053755c989/superhumanteam_a_software_engineering_team_working_on_one_eng_3430aba5-cd22-4b01-ad53-2c2d8fd66342_3.jpg?t=1785832697" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p>Product managers at Uber operate within systems too complex for any one person to fully grasp. Their blueprint, the PRD (Product Requirements Document), cycles through design, engineering, and several other departments before a feature ships. Uber** **recently <a href="https://www.uber.com/in/en/blog/first-pass-prd/">shared</a> how its team uses AI to review PRDs. It’s basically a version of an RFC review, where engineers vet a design doc to catch flaws before anyone writes code.</p>
+<p><strong>The usual suspects.</strong> PRDs often arrive with the same issues: shaky assumptions, blind spots around adjacent systems, or ideas another team already tested and dropped. The context to catch them sits scattered across docs, dashboards, and institutional memory. Reviews then become scavenger hunts. Teams rebuild lost context and surface problems that were cheaper to fix early, leaving slower decisions, uneven feedback, and rework that takes far too much time.</p>
+<p><strong>A better first pass.</strong> To combat this, Uber first ran a structured checkpoint process, but checkpoints only work as well as what goes into them. The team then asked, what if every PM had a fast first-pass reviewer before a PRD hit broader approval?</p>
+<p>This reviewer can:</p>
+<ul>
+<li>
+<p>Pull together relevant docs, past experiments, and company context.</p>
+</li>
+<li>
+<p>Classify each PRD by complexity and risk, then matches scrutiny, from light UX checks to deep review on risky changes.</p>
+</li>
+<li>
+<p>Check launch readiness and return a scorecard with a starting point.</p>
+</li>
+</ul>
+<p><strong>Why it matters.</strong> The reviewer widens a PM's field of view by offering a specific diagnosis. Helping later reviews run sharper and faster. Reviewing the doc is half the job. Drafting it and spinning up tickets is the next part of the grind.</p>
+<p>P.S. This <a href="https://www.lennysnewsletter.com/p/cursor-is-a-much-better-product-manager">tutorial</a> is a good place to start for engineering teams who want to learn to automate PRDs.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ec8ef33f-ac0f-4d98-8434-6c6b914a63a7/CleanShot_2026-08-04_at_14.11.21_2x.jpg?t=1785832912" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>QR Transfer:</strong> You can now transfer data between phones by quickly flashing QR codes. One developer vibe-coded a solution with Claude Code, hitting 120 KB/s. <a href="https://www.reddit.com/r/vibecoding/comments/1vawz1e/had_an_idea_for_air_gapped_file_transfer_able_to/">See it in action</a> (6.9K upvotes).</p>
+</li>
+<li>
+<p><strong>MacBook Lease:</strong> Apple's leasing program lets you get a Mac without paying full price upfront. This post <a href="https://x.com/VadimYuryev/status/2084320556921565394">explains</a> how developers and engineering teams can actually leverage the offer (4.6M views).</p>
+</li>
+<li>
+<p><strong>Claude Skills for Teams:</strong> A Google staff engineer just named the <a href="https://arpitbhayani.me/blogs/three-skills">3 Claude skills</a> every engineering team should have.</p>
+</li>
+<li>
+<p><strong>Claude is Watching:</strong> Here's a <a href="https://x.com/coreyhainesco/status/2083953532903059846">Claude Skill</a> that watches videos for you. Point it at conference talks, recorded code reviews, or call recordings, and it files structured notes automatically (4.5K bookmarks).</p>
+</li>
+<li>
+<p><strong>Cool Resume Project:</strong> This developer vibe-coded an app that turns a simple finger frame into an AI portal. You can fork the <a href="https://x.com/sophiamyang/status/2084022861820297575">repo</a> and ship your interactive vision demo (1.2K likes).</p>
+</li>
+<li>
+<p><strong>20 System Design Concepts:</strong> A principal engineer at Atlassian broke down 20 <a href="https://x.com/system_monarch/status/2084233289016238343">system design fundamentals</a> he says make it far easier than people think (8.5K bookmarks).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=wcRR5P0S2Us"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fbbaa312-aaa7-4d3f-92d0-28b3bea01904/Thumbnail__88_.jpg?t=1785831816" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=wcRR5P0S2Us"><strong>Senior engineer’s AI coding workflow that works:</strong> </a> You’ll learn a structured AI-assisted coding workflow using spec files, roadmaps, automated testing, and mandatory manual review gates. This tutorial shows how setting strict repo guidelines and using automated tools for code reviews prevents token waste while producing clean, reliable software.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/FareedKhan-dev/kimi-k3-in-c"><strong>Kimi-k3-in-c</strong></a>** (1.3K ⭐):** You can now run Moonshot AI’s Kimi K3, a 2.78 trillion parameter model, on a single CPU with just 8.24 GB of RAM.</p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://docs.qwencloud.com/developer-guides/accuracy-tuning/text-generation"><strong>How to design effective prompts (by Qwen):</strong> </a> Vague or unorganized prompts often lead to inconsistent and inaccurate AI responses. To fix this, use this prompting guide that gives you clear constraints, step-by-step reasoning, and a structured framework.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-stop-a-long-codex-task-from-falling-apart"></a></p>
+<h2><strong>How to stop a long Codex task from falling apart</strong></h2>
+<p>When a long Codex run drifts, it's tempting to fire off constant corrections mid-run. But each minor adjustment clutter the context and often makes things worse.</p>
+<p>An engineer at OpenAI <a href="https://x.com/pvncher/status/2083602795391782927">suggests</a> a better approach: interrupt the run once and provide a single, detailed course correction. The Codex CLI even includes specific commands to handle this.</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Press Esc to interrupt the run. Avoid hitting Enter to inject instructions mid-turn.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> Start a side chat to troubleshoot the issue. This transcript stays separate from the main thread:</p>
+</li>
+</ul>
+<pre><code>/side Review what drifted from the plan and help me write one detailed correction prompt.
+</code></pre>
+<ul>
+<li><strong>Step 3:</strong> Go back to the main thread and send that one prompt. If things started going off the rails a few messages back, hit "Esc" twice with an empty composer to edit that specific message and branch off from there.</li>
+</ul>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>A Vercel engineer just used 60 billion tokens to perfect an AGENTS(.)md file that manages long-running agent tasks without any issues. <a href="https://x.com/MarcosHernanz/status/2083954734487212511">Go ahead and grab it.</a></p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>📝 Anthropic explains its watermark — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="📝 Anthropic explains its watermark — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>📝 Anthropic explains its watermark</h1>
+<p class="meta">2026-08-17 · received 2026-08-17 23:05 +0900
+ · <a href="https://codenewsletter.ai/p/alibaba-s-open-models-are-leaving-meta-and-google-far-behind" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>📝 Anthropic explains its watermark</h1>
+<p><a href="https://coderabbit.link/the-code-002"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1c9bec64-c91d-4148-9a13-340233ff7e20/Group_code_rabbit.jpg?t=1786925355" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> If you've been leaning hard on coding agents lately, you've probably hit that context window wall. You're definitely not the only one. The lead engineer at Codex just dropped his personal setup for stretching context in heavy coding sessions, and devs are already swearing by it. Details below.</p>
+<p><strong>Also:</strong> How a VP of Engineering promotes engineers, Andrew Ng explains what AI engineers actually need, and how top devs use GrokBot.</p>
+<hr />
+<p><a id="todays-brief"></a></p>
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Does your company actually need an FDE</p>
+</li>
+<li>
+<p>Why devs using coding agents face burnout</p>
+</li>
+<li>
+<p>A prompt to audit your codebase with agents</p>
+</li>
+<li>
+<p>Anthropic’s guide to run Claude Code without burning tokens</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2088280182356611304"><img alt="Click here to see Qwen3.8’s full benchmarks." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/43a27298-7a42-4042-a275-89ed15e4f1be/Thumbnail__2_.jpg?t=1786968683" /></a>
+<em>Click here to see Qwen3.8’s full benchmarks.</em></p>
+<hr />
+<p><strong>Alibaba’s open models are leaving Meta and Google far behind:</strong> The Chinese tech giant just released the weights for a compact <a href="https://archive.codenewsletter.ai/2088280182356611304">27B model</a> that is small enough to run on your MacBook. According to coding benchmarks, the lab claims it performs on par with Anthropic's Opus 4.6 Max. The Qwen family just topped 3 billion downloads in only six months, making it the most popular open model family, far surpassing Google's 418 million and Meta's 227 million. You can grab the <a href="https://huggingface.co/PocketAiHub/Qwen3.8-27B-Abliterated-MLX">weights here.</a></p>
+<p><strong>Anthropic watermarks Claude text but spares most code:</strong> The AI lab just dropped a <a href="https://www.anthropic.com/news/claude-text-watermark">blog post</a> detailing how their new watermarks will work. And they’re promising there’s no catch for devs: no extra tokens, no hidden costs, and zero performance lag. Your code should stay virtually untouched too, since the watermarking only affects word choice, and strict syntax doesn't leave much room for changes. The move comes just as Anthropic CEO defended his recent AI warnings in a rare social media post. Read his statement <a href="https://archive.codenewsletter.ai/2088758816376807762">here</a>.</p>
+<p><strong>OpenAI engineer reveals 1M-token setup for Codex:</strong> A post by an OpenAI researcher just went viral after he shared how to enable a 1M-token context window in Codex for GPT-5.6 Sol. With just a few lines in a config file or a single command flag, developers can now massively expand the model's immediate memory. This lets the agent track more code, tool outputs, and conversation history before it ever has to start cutting older data. Check out <a href="https://archive.codenewsletter.ai/2089082893804896524">the setup here.</a></p>
+<hr />
+<h5><strong>PRESENTED BY CODERABBIT</strong></h5>
+<h2><a href="https://coderabbit.link/the-code-002">Once you PR review like this, you’ll never go back (free tool)</a></h2>
+<p><a href="https://coderabbit.link/the-code-002"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9a4733d6-7c47-4cc8-9f50-637521e90226/image1__20_.jpg?t=1786925597" /></a></p>
+<hr />
+<p>AI is writing more and more code than ever before in history.</p>
+<p>So <a href="https://coderabbit.link/the-code-002">why are you still reviewing PRs like it’s 2010</a>— alphabetical order, zero context, no high-level summary of _why _changes were made?</p>
+<p><a href="https://coderabbit.link/the-code-002">CodeRabbit’s Change Stack restructures PR reviews into layered walkthroughs</a>, giving you…</p>
+<ul>
+<li>
+<p>Approachable PR overviews with one-click fixes</p>
+</li>
+<li>
+<p>Timeline View to <strong>see how the PR evolved over time</strong> (and why)</p>
+</li>
+<li>
+<p>Semantic Diff to understand real logic changes</p>
+</li>
+</ul>
+<p>And if you need help? Just ask the Agent Chat for context directly where you’re working.</p>
+<p><a href="https://coderabbit.link/the-code-002">Try it here</a> (<strong>early access costs nothing</strong>).</p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Why Silicon Valley is obsessed with Forward Deployed Engineers and why it might backfire</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e6ff9fb8-e5cd-4688-a068-3bbc29097973/superhumanteam_an_engineering_team_in_an_office_with_code_tic_32b547c7-d06b-4089-b90a-d2f880d5659c_1.jpg?t=1786965658" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>The big debate.</strong> When in doubt, hire a Forward Deployed Engineer (FDE). Or at least, that’s the trend Decagon CEO Jesse Zhang is noticing across the AI landscape. Demand for the role is surging, with labs like Anthropic and OpenAI building out dedicated deployment teams. But an FDE is a major investment, so the real question according to Zhang becomes whether your company actually needs one.</p>
+<p><strong>The field work.</strong> The defense of the role comes down to discovery. When a category is brand new, there's no playbook, so engineers work out how the product should behave alongside the customer. This is where an FDE earns its place:</p>
+<ul>
+<li>
+<p>Since the workflow doesn’t exist yet, you’re building it in real time with the users.</p>
+</li>
+<li>
+<p>What seems like a bug might actually be a new use case or product requirement no one has identified yet.</p>
+</li>
+<li>
+<p>Being on the ground reveals the edge cases, workarounds, and friction points you’d never spot from a distance.</p>
+</li>
+</ul>
+<p>But this model can easily slip into a services business. Here are a few red flags that you’ve crossed that line:</p>
+<ul>
+<li>
+<p>Every new deployment takes just as much work as the last one.</p>
+</li>
+<li>
+<p>You’re constantly patching fixes in the field instead of upgrading the core product.</p>
+</li>
+<li>
+<p>Engineers keep running into the same problems without turning them into reusable solutions.</p>
+</li>
+</ul>
+<p><strong>Watch the numbers.</strong> Every deployment should make the next one cheaper. FDEs earn their place while they're still uncovering the workflow, and they turn into overhead once they're only absorbing it. If each rollout keeps costing the same, discovery is over and you're drifting into a services business.</p>
+<p><strong>PS:</strong> Here’s Zhang's <a href="https://archive.codenewsletter.ai/2087198484093149421">full essay</a> and also another view from Andrew Ng who further <a href="https://archive.codenewsletter.ai/2061477558693384395">pushes back</a>, arguing the field will need far more AI engineers than FDEs.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<p><a id="whats-trending-on-socials-and-headlines"></a></p>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/75030cde-0b1a-4460-a6a7-9d1ac39e87c4/CleanShot_2026-08-17_at_16.34.19_2x.jpg?t=1786964694" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Promotion Secrets</strong>: An Amazon CXO promoted 270+ engineers. He just revealed the criteria <a href="https://archive.codenewsletter.ai/2088384322793513424"><strong>VPs actually use</strong></a> to decide who moves up (4.2K bookmarks).</p>
+</li>
+<li>
+<p><strong>Codebase Audit</strong>: A senior engineer ran an agentic audit on his codebase while he was asleep, and it surfaced 93 improvement opportunities across 55 subsystems. <a href="https://archive.codenewsletter.ai/2088285625946370352">Get his prompt here</a> (4.1K bookmarks).</p>
+</li>
+<li>
+<p><strong>Coding Command Center</strong>: One developer turned Grok Bot into an orchestrator for every agent on every computer he owns. His <a href="https://archive.codenewsletter.ai/2088468642438521212">setup thread</a> is a glimpse at where workflows are heading (1.3K likes).</p>
+</li>
+<li>
+<p><strong>Engineering Burnout</strong>: AI tools ship code faster, but a senior engineer says they burn out devs quickly. His "<a href="https://archive.codenewsletter.ai/2088285241068941712">vampire effect</a>" thread has sparked a heated discussion (3.3K likes).</p>
+</li>
+<li>
+<p><strong>AI Skills Roadmap</strong>: Industry Veteran Andrew Ng distilled 10,000+ job postings and dozens of hiring interviews into <a href="https://archive.codenewsletter.ai/2088302050706686198">a map</a> of what AI engineers need next (4.8M views).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=Tos-zPxYPuc"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/accb00f6-8512-42c1-82ae-cf249311c36e/Thumbnail__3_.jpg?t=1786957572" /></a></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=Tos-zPxYPuc">How to build your own AgentOS on Claude's Agent SDK:</a> You will learn how to build practical, LLM-powered applications while mastering prompt techniques, model chaining, and the creation of smart AI agents. This tutorial equips you to rapidly prototype, automate complex workflows, and level up your software projects.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/deepseek-ai/deepseek-harness"><strong>DeepSeek Harness</strong></a>** (114.2K ⭐):** An open-source agent harness from DeepSeek AI, built on Cordis. Its big idea is simple: everything is a plugin, so models, tools, workflows, and interfaces can all be swapped out easily.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions">How to run Claude Code without burning tokens (by Anthropic):</a> Coding costs used to be fixed, regardless of the task. Today, the price for the exact same job can fluctuate wildly depending on your workflow. This guide helps you keep your expenses under control.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to keep Claude Code working overnight after you hit your limit</strong></h2>
+<p>You hit your limit at 11 PM right in the middle of a refactor, and the session just stops. Even though the window resets at 3 AM, nobody’s awake to hit "continue," so you end up losing four hours of progress on work that was ready to go. Anthropic just <a href="https://x.com/ClaudeDevs/status/2088014831605702937">shipped</a> a fix for this:</p>
+<ul>
+<li>
+<p><strong>Step 1.</strong> In Claude Code desktop, check "Auto-continue when limits reset" on the usage card.</p>
+</li>
+<li>
+<p><strong>Step 2.</strong> The CLI doesn't have that checkbox yet, and a standard cron job won't cut it because the reset time shifts based on your usage. Install the tool that reads the real reset time.</p>
+</li>
+</ul>
+<pre><code>npm i -g claude-auto-retry
+claude-auto-retry install
+</code></pre>
+<ul>
+<li><strong>Step 3.</strong> Run Claude in your CLI like you normally do. A background process watches for the limit message, waits for the printed reset time, and sends continue.</li>
+</ul>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from Friday</strong></h3>
+<p>Check out how this <strong><a href="https://archive.codenewsletter.ai/2087844279624323159">viral workflow</a></strong> cuts token costs for Claude and Codex by 95% by offloading the grunt work.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

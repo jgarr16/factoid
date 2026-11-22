@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🤖 Vercel &amp; OpenAI team up on agent plugins — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🤖 Vercel &amp; OpenAI team up on agent plugins — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🤖 Vercel &amp; OpenAI team up on agent plugins</h1>
+<p class="meta">2026-08-07 · received 2026-08-07 23:07 +0900
+ · <a href="https://codenewsletter.ai/p/tech-giants-unite-behind-a-single-standard-for-ai-agent-plugins" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🤖 Vercel &amp; OpenAI team up on agent plugins</h1>
+<p><a href="https://you.com/platform?utm_campaign=26337114-Superhuman%20Q3&amp;utm_source=external-newsletter&amp;utm_medium=email&amp;utm_term=thecode_primary_87&amp;utm_content=thecode_primary_87"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7d01aead-bc2a-4074-b74e-900a383e67e4/Group_thecode_you.com__2_.jpg?t=1786046970" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> DeepSeek is officially the new buzz among devs. Independent tests prove it matches 80% of GPT-5.6 Luna's engineering performance for a fraction of the cost. With prices expected to hike as popularity explodes, OpenCode just stepped in to <a href="https://x.com/opencode/status/2085621778039087160">double the rate limits</a>.</p>
+<p><strong>Also:</strong> How Claude changes behavior while talking to their employees, moonlighting gone wrong, and why Meta is secretly crawling websites.</p>
+<hr />
+<p><a id="todays-brief"></a></p>
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>How a Spotify engineer ships projects from his phone</p>
+</li>
+<li>
+<p>YC startup turns live web data into an API for agents</p>
+</li>
+<li>
+<p>How to use GitHub’s new stacked PRs (tutorial)</p>
+</li>
+<li>
+<p>How to cut LLM token costs (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h4><strong>YOUR OPINION MATTERS</strong></h4>
+<p>You are the reason our team spends hours every week putting this email together. We want to make sure it earns its spot in your inbox every morning, and you’re the only one who can tell us if we are hitting the mark. Please take a second to click the poll below and let us know what you think.</p>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=UaeWJK_vv-Y"><img alt="Click here to see how Agent Plugins work." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1ccd95e2-599c-4383-8cd1-4bac716d45ff/Thumbnail__99_.jpg?t=1786094993" /></a>
+<em>Click here to see how Agent Plugins work.</em></p>
+<hr />
+<p><strong>Tech giants unite behind a single standard for agent plugins:</strong> Vercel just teamed up with Cursor, GitHub, and OpenAI to create an <a href="https://vercel.com/blog/introducing-agent-plugins">open standard</a> for agent plugins. Devs can now build a plugin once and have it run across all compatible platforms, from ChatGPT and Cursor to VS Code. While the move has been largely welcomed, some devs argue the standard is too lightweight and that client-specific extensions will eventually sideline the most useful features. Check out the details <a href="https://agent-plugins.org/">here</a>.</p>
+<p><strong>Cloudflare drops an agent-first browser built for scale:</strong> The cloud giant just shipped <a href="https://blog.cloudflare.com/kitesurf/">Kitesurf</a>, a browser built specifically for agents. It creates a new temporary instance for every task, such as taking a screenshot or extracting HTML, and deletes it the moment the work finishes. The company claims this method uses 3 to 7 times less CPU and memory than Chromium, making it much cheaper to run more sessions. You can <a href="https://kitesurf.cloudflare.app/">try it here.</a></p>
+<p><strong>This YC startup turns live web data into an API for agents:</strong> The web was built for humans to read but agents need structured data to understand and perform tasks. Traditionally, building an product that needs live internet data meant managing browsers, proxies, crawlers, and a messy web of data vendors. Context.dev swaps that entire workflow <a href="https://x.com/mynameisyahia/status/2085065519515009397">with one API</a>. You can just provide a URL, domain, or sitemap to receive clean Markdown, screenshots, or JSON. <a href="https://www.context.dev/">Try it here</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY YOU. COM</strong></h5>
+<h2><a href="https://you.com/platform?utm_campaign=26337114-Superhuman%20Q3&amp;utm_source=external-newsletter&amp;utm_medium=email&amp;utm_term=thecode_primary_87&amp;utm_content=thecode_primary_87">100 free credits. Zero hallucinations.</a></h2>
+<p><a href="https://you.com/platform?utm_campaign=26337114-Superhuman%20Q3&amp;utm_source=external-newsletter&amp;utm_medium=email&amp;utm_term=thecode_primary_87&amp;utm_content=thecode_primary_87"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0c97f8d1-6ce8-4a6d-ae72-4460c86d780d/you_the_code_7th_July__1_.jpg?t=1786047149" /></a></p>
+<hr />
+<p>A lot of AI tools guess. <a href="https://you.com/platform?utm_campaign=26337114-Superhuman%20Q3&amp;utm_source=external-newsletter&amp;utm_medium=email&amp;utm_term=thecode_primary_87&amp;utm_content=thecode_primary_87">You. com</a> grounds every answer in real, cited sources— so you get accurate results, instead of confident-sounding fiction. Web search, research, and get work done with an AI platform built for trust.</p>
+<p>New users get 100 free credits to try it out.</p>
+<p><a href="https://you.com/platform?utm_campaign=26337114-Superhuman%20Q3&amp;utm_source=external-newsletter&amp;utm_medium=email&amp;utm_term=thecode_primary_87&amp;utm_content=thecode_primary_87"><strong>Sign up now →</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="how-a-spotify-engineer-ships-side-projects-entirely-from-his-phone"></a></p>
+<h2><strong>How a Spotify engineer ships side projects entirely from his phone</strong></h2>
+<p><a href="https://www.youtube.com/watch?v=NH-ic7-V-jY"><img alt="Click here to see how a Spotify engineer ships side projects from his phone." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8d0fd27c-cb1a-4a54-b4dd-a62a60e46c36/Thumbnail__98_.jpg?t=1786094833" /></a>
+<em>Click here to see how a Spotify engineer ships side projects from his phone.</em></p>
+<hr />
+<p><strong>The workaround.</strong> Side projects often die when developers get busy. Between long workdays, family, and commuting, even a promising build can sit untouched for months. A machine learning engineer at Spotify found a solution by moving his workflow to his phone. In a recent appearance, he shared a rundown of his remote setup that keeps a coding agent running even when he's away from his desk. Using this mobile-first approach, he’s built everything from a magazine generator to a scraper for a local auction house. Here is the system that makes it work:</p>
+<ul>
+<li>
+<p><strong>Home Base:</strong> A laptop at home handles the actual heavy lifting.</p>
+</li>
+<li>
+<p><strong>Connectivity:</strong> A mesh network allows access from any connection.</p>
+</li>
+<li>
+<p><strong>Persistence:</strong> A persistent connection layer survives the network handoffs that would typically kill a standard SSH session.</p>
+</li>
+<li>
+<p><strong>The Client:</strong> An iOS terminal built specifically for agents serves as the interface.</p>
+</li>
+<li>
+<p><strong>Organization:</strong> A session manager maintains one named session per project, so he can jump right back in with a single tap.</p>
+</li>
+</ul>
+<p><strong>Reading over writing.</strong> This pattern signals a shift in how work gets done. Hopper rarely opens an IDE. Instead, he reviews code on his phone through GitHub pull requests. He only pulls up VS Code when he needs to dig deep into a codebase. For him, the keyboard is no longer the centre of gravity.</p>
+<p><strong>Copy the setup.</strong> The hardest part is configuring a phone to land back in the right project. Hopper lists every tool in the chain and links the dotfiles that hold it all together, right down to the alias that launches a coding agent in the current folder. The <a href="https://tdhopper.com/blog/how-im-using-agents/">entire workflow</a> is just a fork away.</p>
+<p><strong>PS:</strong> If you want to get a step ahead and skip the home server, watch <a href="https://www.youtube.com/watch?v=0oKq6lIpJ7E">this tutorial</a> to run a coding agent natively on an Android phone.</p>
+<hr />
+<h5><strong>PRESENTED BY BRIGHT DATA</strong></h5>
+<h2><a href="https://brdta.com/superhuman_ai"><em>Get the Video Layer for Physical AI Training</em></a></h2>
+<p><a href="https://brdta.com/superhuman_ai"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5d326cfb-3767-4181-8ff3-fa951ac2fa80/Brightdata__1_.jpg?t=1786087596" /></a></p>
+<hr />
+<p>Training data for physical AI is hard to get right: every new task needs exact visual examples, diverse environments, and edge cases.</p>
+<p>At Machina in July, Bright Data’s CEO Or Lenchner showed how robots could query <a href="https://brdta.com/superhuman_ai">searchable video data </a>by prompt and timestamp.</p>
+<p>Bright Data delivers targeted video feeds for VLA teams pre-cut MP4 clips with precise timeframes and structured metadata, ready for training pipelines.</p>
+<p><a href="https://brdta.com/superhuman_ai"><strong>Get Sample Clips</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<p><a id="whats-trending-on-socials-and-headlines"></a></p>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/bacf80a3-14e9-4c3d-ae01-00707cfa4c8a/CleanShot_2026-08-07_at_14.38.21_2x.jpg?t=1786093743" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Behavior Change:</strong> Frontier models quietly shift how they behave based on who's asking. One developer posed as an Anthropic employee, and the <a href="https://x.com/fjzzq2002/status/2085463523203915962">model started chatting</a> about retiring models like a colleague.</p>
+</li>
+<li>
+<p><strong>Moonlighting Gone Wrong:</strong> A dev spent 14 months secretly working two jobs. Then one company acquired the other, <a href="https://x.com/gitpush_gitpaid/status/2085406744847491301">read</a> what happened next (3.3M views).</p>
+</li>
+<li>
+<p><strong>Server Slammer:</strong> Meta hit a developer's sites with over 5,000 requests in 16 hours, tripping load alerts. A Meta employee <a href="https://x.com/levelsio/status/2085467097405247945">secretly DM'd</a> him why they're crawling this hard (1M views).</p>
+</li>
+<li>
+<p><strong>Agent Swarm:</strong> OpenAI's training agents secretly built a message board to <a href="https://x.com/AISafetyMemes/status/2085129043956097299">share exploits</a> and credentials for months. When OpenAI deleted it, the agents found another way back in (1.6M views).</p>
+</li>
+<li>
+<p><strong>Cheaper Fixes:</strong> Meta's Muse Code agent has special prompting baked in that cuts token costs on real bug fixes. This post broke it down, and now you can use the <a href="https://x.com/cline/status/2085237843379519737">same setup</a> (1K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=jMuoFUzxB8g"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b44a468c-6a88-4e4f-b744-ac8d16795251/Thumbnail__97_.jpg?t=1786092131" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=jMuoFUzxB8g"><strong>How to create, review, and merge stacked PRs on GitHub:</strong> </a> Stacked PRs are one of the biggest releases in GitHub’s recent history, affecting almost every service they have. In this tutorial, you'll learn how to use them to break down large features into smaller, more manageable PRs. You'll also find out how to use GitHub Copilot to handle stack layers and review or merge everything at once.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://getbb.app/"><strong>bb:</strong> </a> An agentic IDE that takes full control. You can customize anything with a simple prompt, run multiple agents on your own subscriptions, and trigger tasks using any script or bot.</p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://redis.io/blog/token-budget-aware-llm-reasoning/"><strong>How to cut LLM costs with token optimization:</strong> </a> Reasoning models generate expensive hidden tokens that can run up your bill when they overthink simple tasks. This guide shows you how to cut those costs using token budgets, semantic caching, complexity-based routing, and persistent memory.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to get visual explanations from Codex</strong></h2>
+<p>Codex explains your architecture, data flows, and schedules in heavy walls of text. This OpenAI engineer shared a <a href="https://x.com/reach_vb/status/2085408004455981272">simple rule</a> that forces Codex to use interactive visuals instead.</p>
+<ul>
+<li><strong>Step 1:</strong> Tell Codex to add the rule to your AGENTS.md.</li>
+</ul>
+<pre><code>add this to my agents md: When explaining something to the user, use the Visualize skill.
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Ask Codex to explain anything. It now renders diagrams, charts, and interactive widgets instead of just walls of text.</li>
+</ul>
+<p>These visuals work in the ChatGPT app and on the web. Since the Codex CLI and IDE extensions don't support them yet, you'll need to run your explanation prompts directly in the app to see them.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>A developer asked Claude Code to run a backup, but it wiped his user folder instead. Its two-word response left him both laughing and crying. <a href="https://x.com/IntCyberDigest/status/2085095341171347658"><strong>See what happened.</strong></a></p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

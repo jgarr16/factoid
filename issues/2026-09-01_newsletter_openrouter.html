@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Stop switching models per task — Openrouter</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Stop switching models per task — Openrouter" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Openrouter</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Stop switching models per task</h1>
+<p class="meta">2026-09-01 · received 2026-09-01 10:00 +0900
+</p>
+</div><div class="issue-body"><h1>Stop switching models per task</h1>
+<p>Model routing</p>
+<h1>openrouter/auto picks the model per request</h1>
+<p>Set the model field to <code>openrouter/auto</code> and each request routes to a model chosen for that task. A lightweight classifier assigns the prompt a task type, then ranks candidate models by what the OpenRouter community spends on that kind of work over the trailing 7 days. Routing itself adds no fee.</p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9vcGVucm91dGVyL2F1dG8_dXRtX2NhbXBhaWduPWFyLWFkb3B0LTAxXHUwMDI2dXRtX2NvbnRlbnQ9aGVyb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYTZjZmU5NTAxYmZmNmM2MDEiLCJsaW5rX2lkIjoxMDEyOX0/03708f14c455ac3b4669a15aab4457bac31b7613ac303272ec901d43b66e9333">Try openrouter/auto</a></p>
+<p>Usage</p>
+<p>curl -X POST "https://openrouter.ai/api/v1/chat/completions" \
+  -H "Authorization: Bearer $OPENROUTER_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "openrouter/auto",
+    "messages": [{ "role": "user", "content": "Explain quantum entanglement in simple terms" }]
+  }'</p>
+<p>The response's <code>model</code> field shows which model answered. Multi-turn conversations stay coherent: the router remembers the model a conversation landed on and prefers it on later turns while it remains a top candidate.</p>
+<p>How it routes</p>
+<p>Task first. Each prompt is classified into one of roughly 30 task types, such as <code>code:debugging</code> or <code>agent:multi_step_planning</code>, before any model is considered.</p>
+<p>Ranked by real spend. For that task type, candidates rank by the community's share of spend over a trailing 7-day window, the same data as the public <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9yYW5raW5ncz91dG1fY2FtcGFpZ249YXItYWRvcHQtMDFcdTAwMjZ1dG1fY29udGVudD1yYW5raW5nc1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyaW8jdGFzay1zcGVuZCIsImludGVybmFsIjoiODRmZDBhNmNmZTk1MDFiZmY2YzYwMSIsImxpbmtfaWQiOjEwMTMwfQ/21817a7fc376fbdc692141ccf1326d99f9996fd6b000ad9f00c702fcbd20c5c0">task-spend rankings</a>. When developers move a workload to a new model, the router follows within days.</p>
+<p>Tuned by cost tier. The <code>cost_tier</code> setting selects a cost band from <code>low</code> to <code>max</code>. Requests that set nothing route in the low band, the cheapest models that still fit the task. Defaults can be saved in <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9zZXR0aW5ncy9yb3V0aW5nP3V0bV9jYW1wYWlnbj1hci1hZG9wdC0wMVx1MDAyNnV0bV9jb250ZW50PXJvdXRpbmctc2V0dGluZ3NcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lcmlvIiwiaW50ZXJuYWwiOiI4NGZkMGE2Y2ZlOTUwMWJmZjZjNjAxIiwibGlua19pZCI6MTAxMzF9/7c9fa8acec23d96e8f22895f7a2d802730349c1d793dba52ba79d968aabab092">routing settings</a>.</p>
+<p>Standard rates, no router fee.</p>
+<p>You pay the price of whichever model is selected. Any account-level model and provider restrictions still apply to every routed request. Full behavior, including allowed and excluded model patterns, is in the <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9kb2NzL2d1aWRlcy9yb3V0aW5nL3JvdXRlcnMvYXV0by1yb3V0ZXI_dXRtX2NhbXBhaWduPWFyLWFkb3B0LTAxXHUwMDI2dXRtX2NvbnRlbnQ9ZG9jc1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYTZjZmU5NTAxYmZmNmM2MDEiLCJsaW5rX2lkIjoxMDEzMn0/97dce06bc12601534bc4632a1835f086fc49519eac60c3d0670b7e11d95878a0">Auto Router docs</a>.</p>
+<p>Latest from the blog</p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9hbm5vdW5jZW1lbnRzL29wZW5yb3V0ZXItaXMtam9pbmluZy1zdHJpcGU_dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXJpbyIsImludGVybmFsIjoiODRmZDBhNmNmZTk1MDFiZmY2YzYwMSIsImxpbmtfaWQiOjgzODB9/3c5efdc05a246ea3eb985b1a5ed1b8575142ebdbce71c9619989b2da05dfab20"><img alt="OpenRouter is Joining Stripe" src="https://userimg-assets.customeriomail.com/images/client-env-179844/01M0DKENHBNMFAPDJD7B8F2FJY.jpg" /></a></p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9hbm5vdW5jZW1lbnRzL29wZW5yb3V0ZXItaXMtam9pbmluZy1zdHJpcGU_dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXJpbyIsImludGVybmFsIjoiODRmZDBhNmNmZTk1MDFiZmY2YzYwMSIsImxpbmtfaWQiOjgzODB9/3c5efdc05a246ea3eb985b1a5ed1b8575142ebdbce71c9619989b2da05dfab20">OpenRouter is Joining Stripe</a></p>
+<p>Today, we are excited to announce that we are joining forces with Stripe, to power the next wave of GDP growth globally.</p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9hbm5vdW5jZW1lbnRzL29wZW5yb3V0ZXItaXMtam9pbmluZy1zdHJpcGU_dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXJpbyIsImludGVybmFsIjoiODRmZDBhNmNmZTk1MDFiZmY2YzYwMSIsImxpbmtfaWQiOjgzODB9/3c5efdc05a246ea3eb985b1a5ed1b8575142ebdbce71c9619989b2da05dfab20">Read the announcement →</a></p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9hbm5vdW5jZW1lbnRzL2FjdGl2aXR5LWRhc2hib2FyZD91dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lcmlvIiwiaW50ZXJuYWwiOiI4NGZkMGE2Y2ZlOTUwMWJmZjZjNjAxIiwibGlua19pZCI6ODM1MX0/c91977ad75d2d61d1918ed8a0c33cda81db298d540520e00b5bc0d7107d70285"><img alt="Understand your AI usage: every agent, model, and request" src="https://userimg-assets.customeriomail.com/images/client-env-179844/01M0D5N37GKPFQN6V23Y76CZMX.jpg" /></a></p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9hbm5vdW5jZW1lbnRzL2FjdGl2aXR5LWRhc2hib2FyZD91dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lcmlvIiwiaW50ZXJuYWwiOiI4NGZkMGE2Y2ZlOTUwMWJmZjZjNjAxIiwibGlua19pZCI6ODM1MX0/c91977ad75d2d61d1918ed8a0c33cda81db298d540520e00b5bc0d7107d70285">Understand your AI usage: every agent, model, and request</a></p>
+<p>See what your team spent on every model, save the charts you keep rebuilding, click any bar to land in the logs behind it, and query the same data from your terminal with the Analytics API.</p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9hbm5vdW5jZW1lbnRzL2FjdGl2aXR5LWRhc2hib2FyZD91dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lcmlvIiwiaW50ZXJuYWwiOiI4NGZkMGE2Y2ZlOTUwMWJmZjZjNjAxIiwibGlua19pZCI6ODM1MX0/c91977ad75d2d61d1918ed8a0c33cda81db298d540520e00b5bc0d7107d70285">Read the announcement →</a></p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9hbm5vdW5jZW1lbnRzL29yaS1ldmFsP3V0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYTZjZmU5NTAxYmZmNmM2MDEiLCJsaW5rX2lkIjo4MzczfQ/0ee9db53c922698e4dea8b43cbd3d8293cef5c1953f2e3e5be43a9465a784aa8"><img alt="Ori Eval: Find the Best Model for What You're Building" src="https://userimg-assets.customeriomail.com/images/client-env-179844/01M0D5V2J6C0830B8QVRT8QVMR.jpg" /></a></p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9hbm5vdW5jZW1lbnRzL29yaS1ldmFsP3V0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYTZjZmU5NTAxYmZmNmM2MDEiLCJsaW5rX2lkIjo4MzczfQ/0ee9db53c922698e4dea8b43cbd3d8293cef5c1953f2e3e5be43a9465a784aa8">Ori Eval: Find the Best Model for What You're Building</a></p>
+<p>Choosing the model inside your product is often decided without a systematic method. Ori Eval answers the question with proof: it runs your agent on your own prompts, checks the tools it called, and grades the answers.</p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9hbm5vdW5jZW1lbnRzL29yaS1ldmFsP3V0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYTZjZmU5NTAxYmZmNmM2MDEiLCJsaW5rX2lkIjo4MzczfQ/0ee9db53c922698e4dea8b43cbd3d8293cef5c1953f2e3e5be43a9465a784aa8">Read the announcement →</a></p>
+<p><strong>We are always shipping.</strong>Keep up with our latest insights, announcements, and more on<a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9ibG9nP3V0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYTZjZmU5NTAxYmZmNmM2MDEiLCJsaW5rX2lkIjo4Mzc5fQ/e52f2e971addcab25ab38d4289a3dcdfb0fd956ed3d68aaa364d685338cfeeee">our blog →</a></p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haT91dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lcmlvIiwiaW50ZXJuYWwiOiI4NGZkMGE2Y2ZlOTUwMWJmZjZjNjAxIiwibGlua19pZCI6MX0/983a04bc180e2a3d92f4a07020eb3a1548c931883d088e4b5a7b9fca692b8cf6">openrouter.ai</a>·<a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vZGlzY29yZC5nZy9vcGVucm91dGVyP3V0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYTZjZmU5NTAxYmZmNmM2MDEiLCJsaW5rX2lkIjoyfQ/5abb261ad9560661bdc090b7a54462c55abe99f020bd0fb230e5af0e4c6f900d">Discord</a>·<a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8veC5jb20vb3BlbnJvdXRlcj91dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lcmlvIiwiaW50ZXJuYWwiOiI4NGZkMGE2Y2ZlOTUwMWJmZjZjNjAxIiwibGlua19pZCI6MTAzNH0/f53c3242de5b6c7707a49b55f1e3c2ce5b8493dc9c646abeef97274a860eafd7">X</a>·<a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9MQUxfMnhnRy05c1lCQWFCYWV3U1RodEV4U1h4RDNxX2Y0Zz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9kb2NzP3V0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYTZjZmU5NTAxYmZmNmM2MDEiLCJsaW5rX2lkIjo1fQ/40c8f702a5440f5c2ac6c7d3cb5a00430022b8d72ca9038349fd906965258a7c">Docs</a></p>
+<p>169 Madison Avenue, New York, NY 10016</p>
+<p><a href="https://email-v3.openrouter.ai/manage_subscription_preferences/dgSE_QoLAL_2xgG-9sYBAaBaewSThtExSXxD3q_f4g==">Manage preferences</a>|<a href="https://email-v3.openrouter.ai/unsubscribe/dgSE_QoLAL_2xgG-9sYBAaBaewSThtExSXxD3q_f4g==">Unsubscribe</a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

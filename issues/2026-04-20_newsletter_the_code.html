@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚨 Vercel suffers MAJOR security breach — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚨 Vercel suffers MAJOR security breach — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚨 Vercel suffers MAJOR security breach</h1>
+<p class="meta">2026-04-20 · received 2026-04-20 23:01 +0900
+ · <a href="https://codenewsletter.ai/p/vercel-breached-via-compromised-ai-tool-anthropic-drops-claude-design" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚨 Vercel suffers MAJOR security breach</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/32c8c971-340a-4f62-a6b8-f362e57e5397/image__83_.jpg?t=1770628392" /></p>
+<hr />
+<p><strong>Welcome back.</strong> The AI race is quietly opening side doors for supply chain attacks. Vercel just became the latest platform caught in the crosshairs after a major breach through a third-party AI tool. This may be a sign of things to come.</p>
+<p><strong>Also:</strong> How to check if the Vercel breach tool hit your Google Workspace, automate 5 dev workflows with Claude routines, and why the NSA is using Mythos despite a DoW blacklist.</p>
+<hr />
+<p><a id="todays-insights"></a></p>
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>Why is selling chips to China splitting AI experts</p>
+</li>
+</ul>
+<p><a id="how-to-catch-errors-before-claude-code-commits"></a>
+* How to catch errors before Claude Code commits</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><img alt="Vercel CEO Guillermo Rauch is in the hotseat. Made with Midjourney." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b8806cd7-bb6e-45d4-ac8d-ea99955e038e/Vercel_CEO.jpg?t=1776672002" />
+<em>Vercel CEO Guillermo Rauch is in the hotseat. Made with Midjourney.</em></p>
+<hr />
+<p><strong>Hackers breach Vercel through a compromised third-party AI tool:</strong> The frontend cloud platform <a href="https://vercel.com/kb/bulletin/vercel-april-2026-security-incident">disclosed</a> that attackers compromised an employee through a breach at a third-party AI tool called Context.ai, then escalated from his Google Workspace account into Vercel's internal environments. There, they dug through environment variables that weren't flagged as sensitive. The attacker is now <a href="https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/#:~:text=Hacker%20claims%20to%20be%20selling%20stolen%20Vercel%20data">advertising</a> stolen tokens and source code. Next.js and Turbopack remain unaffected, but customers should rotate their secrets immediately.</p>
+<p><strong>Open-source project recreates Claude Mythos architecture:</strong> A 22-year-old founder, Kye Gomez, just released <a href="https://x.com/i/trending/2045727811395289285"><strong>OpenMythos</strong></a>. It's a PyTorch project that rebuilds what Gomez thinks is Anthropic's flagship model. His theory is that Mythos runs the same weights through a loop multiple times, doing all its thinking silently within a single forward pass. The code is available on GitHub, but without trained weights, engineering teams get a research baseline instead of a plug-and-play model.</p>
+<p><strong>Anthropic drops a new product for visual prototypes:</strong> The AI lab recently dropped <a href="https://www.anthropic.com/news/claude-design-anthropic-labs"><strong>Claude Design</strong></a>, a new tool from its Labs division that turns prompts, uploads, or codebases into prototypes, wireframes, and slide decks. It lets you quickly turn finished designs into ready-to-use production bundles. Claude also scans your codebase during onboarding to build a design system, keeping everything you build aligned with your current components and style.</p>
+<hr />
+<h5><strong>PRESENTED BY GOOGLE</strong></h5>
+<h2><a href="https://cloudonair.withgoogle.com/events/best-of-next-for-startups?utm_source=it_media&amp;utm_medium=paidasset&amp;utm_campaign=FY26-Q1-GLOBAL-SMB39711-onlineevent-er-Best-of-Next26-155242%20&amp;utm_content=superhumanai&amp;utm_term=-">Best of NEXT for Startups</a></h2>
+<p><a href="https://cloudonair.withgoogle.com/events/best-of-next-for-startups?utm_source=it_media&amp;utm_medium=paidasset&amp;utm_campaign=FY26-Q1-GLOBAL-SMB39711-onlineevent-er-Best-of-Next26-155242%20&amp;utm_content=superhumanai&amp;utm_term=-"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/88bacf4b-bd05-462e-baf2-481c57deeb46/GOOGLE_20_APRIL.jpg?t=1776665274" /></a></p>
+<hr />
+<p>Skip the travel and catch the top startup insights from <a href="https://cloudonair.withgoogle.com/events/best-of-next-for-startups?utm_source=it_media&amp;utm_medium=paidasset&amp;utm_campaign=FY26-Q1-GLOBAL-SMB39711-onlineevent-er-Best-of-Next26-155242%20&amp;utm_content=superhumanai&amp;utm_term=-">Google Cloud Next ’26</a>.</p>
+<p>This high-impact digital wrap-up covers essential AI trends— like GenMedia and multi-agent workflows— and features a live expert Q&amp;A to help refine your strategy.</p>
+<p><a href="https://cloudonair.withgoogle.com/events/best-of-next-for-startups?utm_source=it_media&amp;utm_medium=paidasset&amp;utm_campaign=FY26-Q1-GLOBAL-SMB39711-onlineevent-er-Best-of-Next26-155242%20&amp;utm_content=superhumanai&amp;utm_term=-">Register now</a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Jenses Huang lost his temper on a heated podcast interview that’s splitting Silicon Valley. Here’s why</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d57cd9d3-f548-444d-bc5d-6656bace1496/superhumanteam_two_software_engineers_working_on_on_a_podcast_263ef88d-d4d4-40d5-a928-cd8e4b7cd419_3.jpg?t=1776673926" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>“I didn’t wake up a loser.”</strong> Nvidia CEO Jensen Huang's 103-minute sitdown with Dwarkesh Patel got heated when Patel <a href="https://www.dwarkesh.com/i/194289889/005736-should-we-be-selling-ai-chips-to-china">argued</a> giving China more compute would let them train and deploy dangerous AI models at scale. Huang called the idea that Nvidia should concede the Chinese market a "loser premise", arguing bans don't slow China's AI but drive business straight to Huawei.</p>
+<p>Patel argued that American labs reach frontier capabilities first because they have more compute, a critical lead when a single model could deploy a million hackers instead of a thousand. And Anthropic's models already run on Nvidia, Trainium, and TPUs, so the argument for keeping China tied to American silicon looks shakier than it sounds.</p>
+<p>Investor Gavin Baker <a href="https://x.com/GavinSBaker/status/2044861680015069571">counters</a> that portability is quickly fading as labs shift their focus to inference. Huawei's CloudMatrix 384 uses a different scale-up topology than Nvidia's, meaning a model optimized for one won't run well on the other. This architectural fork strengthens the case for selling China older GPUs: keeping Chinese AI dependent on American hardware gives the US leverage it would lose to an all-Huawei stack.</p>
+<p>If the US sells the chips, China may reach the AI frontier faster. If they don't, the US risks losing global hardware standards to Huawei. Both sides are looking at the same facts and just can't agree on which outcome is worse.</p>
+<hr />
+<h5><strong>PRESENTED BY VIKTOR</strong></h5>
+<h2><a href="https://ref.getviktor.com/vik-tc-primary1">The best-run companies we know all made the same hire.</a></h2>
+<p><a href="https://ref.getviktor.com/vik-tc-primary1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2f12eee2-5a0d-4319-a377-a0236c6f68fa/best-run-companies.jpg__1_.jpg?t=1776665004" /></a></p>
+<hr />
+<p><a href="https://ref.getviktor.com/vik-tc-primary1">One Slack message</a>, and marketing gets a board-ready Google Ads + Stripe revenue report. Engineering gets a PR review cross-referenced with Linear tickets. Ops gets three vendor contracts summarized before the founder's morning coffee. Same colleague. Every department. 7,000+ teams already there.</p>
+<p><strong><a href="https://ref.getviktor.com/vik-tc-primary1">Get Viktor free with $100 in credits →</a></strong></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<p><a id="whats-trending-on-socials-and-headlines"></a></p>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/07a284b4-6b68-4fd3-8cc8-4a4c7024a8ad/Apr_20_2026_Screenshot_from_Squoosh.jpg?t=1776689174" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Workspace Check:</strong> The tool that compromised Vercel may have hit your Google Workspace too. Here's the <a href="https://x.com/BrendanFalk/status/2045953132770025769"><strong>2-step filter</strong></a> to find out in under a minute.</p>
+</li>
+<li>
+<p><strong>Prod-Ready Vibes:</strong> A 30-min talk from Anthropic's Member of Technical Staff is quietly becoming the <a href="https://x.com/0xMovez/status/2045541438079836253"><strong>go-to guide</strong></a> for vibe coding in production (1.2M views).</p>
+</li>
+<li>
+<p><strong>Parallel Play:</strong> An OpenAI Codex engineer** <a href="https://x.com/Dimillian/status/2045908187618894176">shared</a>** how git worktrees turn Codex into a one-click sandbox for running multiple agents in parallel.</p>
+</li>
+<li>
+<p><strong>Frontier Leak:</strong> Anthropic restricted its top model to ~40 orgs for security reasons. Turns out the** <a href="https://x.com/axios/status/2045926085011874216">NSA is using it</a>**, despite being blacklisted by the Department of War.</p>
+</li>
+<li>
+<p><strong>Set and Forget:</strong> Claude's new routines run scheduled tasks on autopilot. These are <a href="https://x.com/DeRonin_/status/2045809222378463303"><strong>5 dev workflows</strong></a> you can automate today.</p>
+</li>
+<li>
+<p><strong>$100k Lesson:</strong> After getting hit with a $100k Claude Code bill, a founder shipped a plugin that <a href="https://www.linkedin.com/posts/bentcollins_youre-probably-overpaying-for-claude-code-ugcPost-7450938966121476096-fvu_/"><strong>cuts costs</strong></a> 25-55% and makes it meaningfully faster.</p>
+</li>
+<li>
+<p><strong>Exec Exodus:</strong> Three senior OpenAI leaders walked out in <a href="https://www.businessinsider.com/openai-executive-departures-shake-up-leadership-team-2026-4"><strong>a single day</strong></a>, including ex-CPO Kevin Weil, as the company kills "side quests" like Sora to double down on its core business.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to catch errors before Claude Code commits</strong></h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0c3a58e7-8b4f-45a4-a338-9caffedf93e5/superhumanteam_a_software_engineer_sitting_at_a_desk_typing_o_40bc592f-a1db-4412-822e-ad95651f8673_0.jpg?t=1776678950" /></p>
+<hr />
+<p>Claude's code often looks solid but hides type errors, unused imports, or missing return types. While you might catch these in review, some always slip through.</p>
+<p>Language Server Protocol (LSP) plugins <a href="https://code.claude.com/docs/en/plugins-reference#lsp-servers">fix this</a> by giving Claude automatic diagnostics after every edit. The moment a file is saved, the language server flags issues so Claude can fix them before you even check the diff. Just pick your language and run the command:</p>
+<pre><code>/plugin install typescript-lsp@claude-plugins-official
+/plugin install pyright-lsp@claude-plugins-official
+/plugin install rust-analyzer-lsp@claude-plugins-official
+/plugin install gopls-lsp@claude-plugins-official
+</code></pre>
+<p>Run “/plugin” and head to the Discover tab to check out the full list. Just make sure you have the right language server binary installed on your system (the plugin will let you know if anything is missing).</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=njWyDHKYeVA&amp;t=1562s"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/35985105-c185-423e-a011-ec16fe37df0a/Vercel_CEO__1_.jpg?t=1776675122" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=njWyDHKYeVA">How to deploy LLMs on Cloud Run GPUs (by Google):</a> This tutorial teaches developers how to self-host and deploy the Gemma 4 LLM on Google Cloud Run GPUs. You will learn to build automated CI/CD pipelines, manage model weights in Cloud Storage, and evaluate Ollama for rapid prototyping versus vLLM for high-performance production scaling.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/ooples/token-optimizer-mcp"><strong>Token Optimizer:</strong> </a> This repo provides intelligent token optimization for Claude Code, achieving a 95%+ reduction in token usage through advanced caching, compression, and smart tool intelligence.</p>
+<hr />
+<h3><strong>Trending Paper</strong></h3>
+<p><a href="https://x.com/Kimi_Moonshot/status/2045461663898599472"><strong>Prefill-as-a-Service</strong></a>** **<a href="https://x.com/Kimi_Moonshot/status/2045461663898599472"><strong>(by Moonshot AI):</strong> </a> Splitting AI tasks across data centers is normally blocked by massive data transfer requirements. By pairing efficient models with smart routing, this research proves standard internet cables can handle the workload seamlessly.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 240K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>The Intent Engineering Framework for AI Agents — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="The Intent Engineering Framework for AI Agents — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>The Intent Engineering Framework for AI Agents</h1>
+<p class="meta">2026-01-13 · received 2026-01-13 19:37 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/intent-engineering-framework-for-ai-agents" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>The Intent Engineering Framework for AI Agents</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRmludGVudC1lbmdpbmVlcmluZy1mcmFtZXdvcmstZm9yLWFpLWFnZW50cyIsInAiOjE4NDM0MzM2NiwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc2ODMwMDgwNSwiZXhwIjoyMDgzODc2ODA1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.VBVJyoqVg96JZdnENFl-eLaNGZFbyiW3HvN3j3cJyHg?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=184343366&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NDM0MzM2NiwiaWF0IjoxNzY4MzAwODA1LCJleHAiOjE3NzA4OTI4MDUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.1g-oDN4l5N-bH7Sf9D5njW89X7SAMUAU6Cp7pBhjIOA">The Intent Engineering Framework for AI Agents</a></h1>
+<h3>How to design objectives, outcomes, and enforced constraints for reliable autonomy</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Jan 13</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!e9EM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c7398f1-2f07-4de3-b7c3-abdc6a982ad0_1350x1350.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/intent-engineering-framework-for-ai-agents?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>Everyone talks about the importance of “expressing intent” when building AI agents. Few explain what it actually means, what to avoid, or how to do it without watching your agent optimize the wrong thing.</p>
+<p>In my experience, agents fail not because they can’t reason. They fail because their objectives, outcomes, and constraints are underspecified, and the solution isn’t necessarily more detailed step-by-step instructions.</p>
+<p>This guide breaks down intent engineering into something you can actually use.</p>
+<p>We discuss:</p>
+<ol>
+<li>What Intent for AI Agents Actually Means</li>
+<li>The AI Agent Intent StructurePart 1: The ObjectivePart 2: Desired OutcomesPart 3: Health MetricsPart 4: Strategic ContextPart 5: Constraints: Steering vs. HardPart 6: Decision Types and AutonomyPart 7: Stop Rules</li>
+<li>Part 1: The Objective</li>
+<li>Part 2: Desired Outcomes</li>
+<li>Part 3: Health Metrics</li>
+<li>Part 4: Strategic Context</li>
+<li>Part 5: Constraints: Steering vs. Hard</li>
+<li>Part 6: Decision Types and Autonomy</li>
+<li>Part 7: Stop Rules</li>
+<li>The Flow: How to Use the Intent Engineering Framework</li>
+<li>Complete Example: Customer Support Agent</li>
+<li>AI Agents Intent Validation Checklist</li>
+<li>Conclusion</li>
+</ol>
+<p>Let’s dive in.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZpbnRlbnQtZW5naW5lZXJpbmctZnJhbWV3b3JrLWZvci1haS1hZ2VudHMmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0ltbGhkQ0k2TVRjMk9ETXdNRGd3TlN3aVpYaHdJam94Tnpjd09Ea3lPREExTENKcGMzTWlPaUp3ZFdJdE9UUXpNVFUzSWl3aWMzVmlJam9pWTJobFkydHZkWFFpZlEuM2FFTTZBYWFYODQ0cXpFYUotemNfT2VUZUVjckMycUY3SkQ5NVVnQjVWQSIsInAiOjE4NDM0MzM2NiwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc2ODMwMDgwNSwiZXhwIjoyMDgzODc2ODA1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.Ur2wbuuu9-y026hW2lnrY1SQzJPVv0TEJPALnmynQ4E?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=184343366">Upgrade to paid</a></p>
+<hr />
+<h2>1. What Intent for AI Agents Actually Means</h2>
+<p>Intent is not:</p>
+<ul>
+<li>A task list</li>
+<li>A prompt</li>
+<li>A goal metric</li>
+</ul>
+<p>Intent is defined by an objective, desired outcomes, health metrics, strategic context, constraints, decision types and autonomy, and stop rules. Together, these determine how an agent acts when instructions run out.</p>
+<p>If any of these are implicit, humans fill the gaps instinctively. Agents don’t. They exploit them.</p>
+<p>Tobi Lütke, CEO of Shopify, <a href="https://substack.com/redirect/8ec8c28d-c6b3-49d2-a721-4404d9cf4236?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">said</a>:</p>
+<p><em>“I like the term context engineering because I think the fundamental skill of using AI well is to be able to state a problem with enough context, in such a way that without any additional pieces of information, the task is plausibly solvable.”</em></p>
+<p>But context without clear intent is noise.</p>
+<p>We <a href="https://substack.com/redirect/964bd190-66bd-4fee-91b5-aaf759c91ffa?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">discussed context engineering</a> previously. In this issue, I double down on the intent aspect and how to define it systematically.</p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=184343366&amp;utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;utm_campaign=email-share&amp;action=share&amp;triggerShare=true&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NDM0MzM2NiwiaWF0IjoxNzY4MzAwODA1LCJleHAiOjE3NzA4OTI4MDUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.1g-oDN4l5N-bH7Sf9D5njW89X7SAMUAU6Cp7pBhjIOA">Share</a></p>
+<hr />
+<h2>2. The AI Agent Intent Structure</h2>
+<p>Whether you’re setting team objectives, delegating to a human, or configuring an agent, the structure is the same:</p>
+<ol>
+<li><strong>Objective</strong>: The problem to solve + why it matters</li>
+<li><strong>Desired Outcomes</strong>: Measurable states that indicate success</li>
+<li><strong>Health Metrics</strong>: What must not degrade while pursuing the outcomes</li>
+<li><strong>Strategic Context</strong>: The system we operate in</li>
+</ol>
+<p>This pattern shows up in <a href="https://substack.com/redirect/681b21b9-b1ff-4a4b-939d-203def425b87?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">OKRs, as defined by Christina Wodtke</a>, and in how <a href="https://substack.com/redirect/ffb57598-6084-401b-ba43-60cd9fd049f3?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Marty Cagan defines empowered team objectives</a>.</p>
+<p>For agents, we extend this with explicit:</p>
+<ol>
+<li><strong>Constraints</strong>: Steering (prompt layer) + Hard (enforced in orchestration, not prompts)</li>
+<li><strong>Decision Types and Autonomy:</strong>Which decisions the agent may take autonomously vs. must escalate</li>
+<li><strong>Stop Rules</strong>: When to halt, escalate, or complete</li>
+</ol>
+<p>Let’s build this up.</p>
+<hr />
+<h3>Part 1: The Objective</h3>
+<p>The objective is the problem you’re solving and why it matters. It’s aspirational and qualitative. It’s the “why” that guides decision-making when instructions run out.</p>
+<h4>What Makes a Good Objective</h4>
+<ul>
+<li><strong>Problem-focused</strong>: What’s broken or missing?</li>
+<li><strong>Explains why it matters</strong>: Business value, user impact, strategic importance</li>
+<li><strong>Guides trade-offs</strong>: When the agent faces ambiguity, the objective helps it choose</li>
+</ul>
+<h4>Examples</h4>
+<ul>
+<li><strong>Weak:</strong> “Handle customer support tickets” (This is a task, not an objective. No problem, no why.)</li>
+<li><strong>Better:</strong> “Help customers resolve issues quickly so they can get back to work, without creating more frustration than they started with.” (Problem: customers stuck. Why it matters: their time, their trust. Trade-off guidance: don’t make it worse.)</li>
+</ul>
+<p>When you explain the why, the agent can reason about <strong>edge cases</strong> and make better <strong>autonomous decisions</strong>. I demonstrated that in <a href="https://substack.com/redirect/4bf1865e-2a08-426f-ac69-39a0633f198b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">How to Build Autonomous AI Agents</a>. A 2024 paper (<a href="https://substack.com/redirect/fdcfddf2-f7cc-437c-aa50-38ef8660234d?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">arXiv:2401.04729</a>) demonstrated that supplying strategic context beyond raw task specifications significantly improves AI autonomy.</p>
+<hr />
+<h3>Part 2: Desired Outcomes</h3>
+<p>Outcomes are the measurable states that indicate you’ve achieved the objective. Not activities. Not lagging metrics. Observable states.</p>
+<h4>How to Express Outcomes</h4>
+<p>Outcomes should be:</p>
+<ul>
+<li><strong>Observable state changes</strong> (not activities the agent performs)</li>
+<li><strong>From user/stakeholder perspective</strong> (not the agent’s perspective)</li>
+<li><strong>Measurable or verifiable</strong> (without relying on agent self-report)</li>
+<li><strong>Leading, not lagging</strong> (observable during or shortly after, not months later)</li>
+</ul>
+<p>Activities describe what the agent does. Outcomes describe the state that exists after.</p>
+<h4>Keep Outcomes Focused</h4>
+<p>Two to four outcomes is usually right. More than that and you’re either micromanaging or unclear on what actually matters.</p>
+<pre><code>Objective: Help customers resolve Tier-1 issues without frustration
+
+Desired Outcomes:
+- Customer confirms their issue is resolved
+- No follow-up ticket on same topic within 24 hours
+- Customer rates interaction as helpful
+</code></pre>
+<p>Each outcome is observable, measurable, and from the customer’s perspective.</p>
+<hr />
+<h3>Part 3: Health Metrics</h3>
+<p>Health metrics are what must not degrade while pursuing the outcomes. They’re your Goodhart defense.</p>
+<h4>The Goodhart Problem</h4>
+<p>“When a measure becomes a target, it ceases to be a good measure.”</p>
+<p>Without health metrics:</p>
+<ul>
+<li>“Resolve issues faster” → Agent rushes, quality drops</li>
+<li>“Increase throughput” → Agent takes shortcuts</li>
+<li>“Reduce escalations” → Agent handles things it shouldn’t</li>
+</ul>
+<h4>Health Metrics Steer Reasoning</h4>
+<p>Health metrics primarily inform the prompt layer. They guide how the agent thinks and makes trade-offs.</p>
+<pre><code>Health Metrics:
+- CSAT must stay above 4.2 - if trending down, be more conservative
+- Repeat contact rate must not increase above X - prioritize resolution quality
+- Escalation quality score must stay below Y - don't under-escalate to hit targets
+</code></pre>
+<p>The agent monitors these and adjusts: “I could close this faster, but the health metrics suggest I should make sure it’s actually resolved.”</p>
+<p>This is different from hard guardrails, which block actions entirely. Health metrics steer; guardrails enforce.</p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=184343366&amp;utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;utm_campaign=email-share&amp;action=share&amp;triggerShare=true&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NDM0MzM2NiwiaWF0IjoxNzY4MzAwODA1LCJleHAiOjE3NzA4OTI4MDUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.1g-oDN4l5N-bH7Sf9D5njW89X7SAMUAU6Cp7pBhjIOA">Share</a></p>
+<hr />
+<h3>Part 4: Strategic Context</h3>
+<p>This is where most intent specifications fail. They explain what the agent should do but not what world it operates in.</p>
+<h4>What Strategic Context Includes</h4>
+<p><strong>System context: What is this agent part of?</strong></p>
+<ul>
+<li>Other agents it interacts with</li>
+<li>Human workflows it plugs into</li>
+<li>Services and data it depends on</li>
+<li>Downstream consumers of its outputs</li>
+</ul>
+<p><strong>Organization context: What’s the bigger picture?</strong></p>
+<ul>
+<li>What the business does</li>
+<li>Who the users are</li>
+<li>What matters to them</li>
+</ul>
+<p>For more information, see <a href="https://substack.com/redirect/3ff67b6f-3c47-4c26-96c7-45116cc78b50?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">product strategy canvas</a>, <a href="https://substack.com/redirect/794a179f-7afa-4156-8b3f-a15317331410?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">startup canvas</a>, and <a href="https://substack.com/redirect/df68ce59-fee8-4dd7-a330-d1702d6d8eb8?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">how to design value proposition</a>.</p>
+<p><strong>Trade-off priorities: When values conflict, which wins?</strong></p>
+<ul>
+<li>Trust vs. Speed vs. Cost</li>
+<li>False positives vs. false negatives</li>
+<li>Completeness vs. timeliness</li>
+</ul>
+<h4>Example: Strategic Context for a Support Agent</h4>
+<pre><code>System context:
+- Works alongside human Tier-2 agents and self-serve knowledge base
+- Escalations go to human queue with full conversation context
+- Outputs feed into ticket system and customer health scoring
+
+Organization context:
+- B2B software for enterprise customers
+- Users are often non-technical admins under time pressure
+- Brand is built on reliability
+
+Trade-off priorities:
+- Trust &gt; Speed &gt; Cost
+- Admitting uncertainty is better than false confidence
+- Resolution quality matters more than resolution speed
+</code></pre>
+<h4>Not Everything Goes in the Prompt</h4>
+<p>Strategic context doesn’t mean dumping everything into the system prompt. The agent should know <strong>where to look</strong> for context it might need.</p>
+<ul>
+<li><strong>Core context</strong> (always needed): In the prompt</li>
+<li><strong>Reference context</strong> (sometimes needed): Available via retrieval</li>
+<li><strong>Dynamic context</strong> (changes per request): Injected by orchestration layer</li>
+</ul>
+<p>Think Netflix’s “<a href="https://substack.com/redirect/665f9d74-bc61-4e3e-ae9b-fe95627544f2?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">lead with context, not control”</a> - give the agent enough understanding of the system that it can make good judgment calls, without micromanaging every decision.</p>
+<hr />
+<h3>Part 5: Constraints: Steering vs. Hard</h3>
+<p>Here’s a critical distinction most people miss:</p>
+<p><a href="https://substack.com/redirect/75cf490f-58a4-4337-a65f-015f2361d032?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="AI Agent Constraints - Steering vs. Hard" src="https://substackcdn.com/image/fetch/$s_!AGXA!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3645d83a-d497-4f56-b6b8-f127d81eafc9_2209x892.png" /></a></p>
+<p>AI Agent Constraints: Steering vs. Hard</p>
+<h4>Why This Split Matters</h4>
+<p>You can’t just tell an agent “don’t do X” in a prompt and trust it. If you give an agent access to a tool, assume it will use that tool.</p>
+<p>Prompts are suggestions. Architecture is enforcement.</p>
+<p>This mirrors how we structure human processes. A junior analyst can recommend a trade, but the system requires sign-off before execution. The analyst doesn’t have the keys. The process does.</p>
+<p>The reasoning layer proposes. The orchestration layer enforces.</p>
+<p><a id="implementing-hard-guardrails"></a></p>
+<h4>Implementing Hard Guardrails</h4>
+<p><strong>Wrap tools with constraints:</strong> Don’t give raw tool access. Every tool should have validation, rate limits, and logging.</p>
+<p><strong>Force structured outputs:</strong> Don’t let agents output free-form text that gets executed. Force schemas that downstream systems can validate.</p>
+<p>For example, enforce structured outputs such as the following schema (you can do it also in <a href="https://substack.com/redirect/99d8da53-1a8e-4d4e-a98c-083e3bf60d87?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">n8n</a>):</p>
+<pre><code>{
+  &quot;action&quot;: &quot;send_email&quot;,
+  &quot;recipient&quot;: &quot;user@example.com&quot;,
+  &quot;confidence&quot;: 0.87,
+  &quot;requires_approval&quot;: true
+}
+</code></pre>
+<p><strong>Define agent-to-agent (e.g., A2A) contracts:</strong> When agents hand off to other agents, specify what inputs are valid, what outputs are expected, and what the receiving agent can do. This prevents one agent from tricking another into exceeding its autonomy.</p>
+<p><strong>Defense against prompt injection:</strong> If the agent can call a tool, assume adversarial inputs will try to exploit it. The defense is in infrastructure: validate inputs before they reach the agent, validate outputs before execution.</p>
+<hr />
+<h3>Part 6: Decision Types and Autonomy</h3>
+<p>All agent behavior reduces to four decision types. Each carries different risk.</p>
+<p><a href="https://substack.com/redirect/43349fb6-681b-41cd-8d26-d48e695f9c3f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="AI Agent Decision Types and Autonomy" src="https://substackcdn.com/image/fetch/$s_!3JD-!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6d342212-9362-4659-9b17-d9019c33dfb2_2218x1437.png" /></a></p>
+<p>AI Agent Decision Types and Autonomy</p>
+<p><a id="four-autonomy-zones"></a></p>
+<h4>Four Autonomy Zones</h4>
+<ol>
+<li><strong>Full Autonomy</strong>: Reversible actions, low blast radius, well-understood failure modes.</li>
+<li><strong>Guarded Autonomy</strong>: User-visible changes, medium risk. Requires confidence thresholds, logging, rollback capability.</li>
+<li><strong>Proposal-Only</strong>: Strategic or sensitive decisions. Agent proposes → approval required → then executes.</li>
+<li><strong>No Autonomy</strong>: Legal commitments, irreversible changes, financial actions, brand promises. Agent analyzes and recommends only.</li>
+</ol>
+<h4>Individual vs. Product Context</h4>
+<p>The appropriate autonomy depends on who bears the risk.</p>
+<p><a href="https://substack.com/redirect/0d8626d9-97ad-4723-826e-a88e3eacac95?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="AI Agent Autonomy in Individual vs. Product Context" src="https://substackcdn.com/image/fetch/$s_!uc6e!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc46eff99-8e7e-4da0-9d32-395cd934a36e_2222x1157.png" /></a></p>
+<p>AI Agent Autonomy in Individual vs. Product Context</p>
+<p>When you build agents for yourself, the blast radius is bounded by your tolerance.</p>
+<p>When you build agents into a product:</p>
+<ul>
+<li>Users may not know an agent acted</li>
+<li>Users can’t assess AI-generated outputs</li>
+<li>Users will blame the company when it breaks</li>
+</ul>
+<p><strong>Rule:</strong> The less the user understands about what the agent is doing, the tighter your constraints need to be.</p>
+<h4>Risk Assessment: Five Lenses</h4>
+<p>Use these to inform autonomy zones and constraint design:</p>
+<p><a href="https://substack.com/redirect/e9009efe-9b39-41fa-b43a-1a7749a19c93?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="AI Agent Risk Assessment - Five Lenses" src="https://substackcdn.com/image/fetch/$s_!AaP9!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3068dd65-1744-4a80-bb43-09ed295aa671_2732x1397.png" /></a></p>
+<p>AI Agent Risk Assessment - Five Lenses</p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=184343366&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NDM0MzM2NiwiaWF0IjoxNzY4MzAwODA1LCJleHAiOjE3NzA4OTI4MDUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.1g-oDN4l5N-bH7Sf9D5njW89X7SAMUAU6Cp7pBhjIOA&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment">Leave a comment</a></p>
+<hr />
+<p><a id="part-7-stop-rules"></a></p>
+<h3>Part 7: Stop Rules</h3>
+<p>Every agent needs explicit conditions for halting or escalating. Without them, autonomous loops become self-justifying.</p>
+<p>For example:</p>
+<p><strong>Halt when:</strong></p>
+<ul>
+<li>Confidence below threshold</li>
+<li>Conflicting constraints detected</li>
+<li>Anomaly in outputs</li>
+</ul>
+<p><strong>Escalate when:</strong></p>
+<ul>
+<li>Outside defined scope</li>
+<li>User frustration detected</li>
+<li>Legal/compliance topic</li>
+<li>Confidence too low to act</li>
+</ul>
+<p><strong>Complete when:</strong></p>
+<ul>
+<li>Desired outcomes achieved</li>
+<li>User confirms resolution</li>
+<li>Defined end state reached</li>
+</ul>
+<hr />
+<h2>3. The Flow: How to Use the Intent Engineering Framework</h2>
+<p>Here are specific steps I recommend you take. In the next section, we follow up with an example.</p>
+<h3>Step 1: Define the Objective (Part 1)</h3>
+<p>What problem are you solving? Why does it matter? What trade-offs should this guide?</p>
+<h3>Step 2: Specify Desired Outcomes (Part 2)</h3>
+<p>What measurable states indicate success? (2-4 outcomes, observable, from user perspective, leading not lagging)</p>
+<h3>Step 3: Identify Health Metrics (Part 3)</h3>
+<p>What must not degrade while pursuing the outcomes? (These steer reasoning in the prompt layer)</p>
+<h3>Step 4: Add Strategic Context (Part 4)</h3>
+<p>What system is this agent part of? What’s the organization context? What are trade-off priorities?</p>
+<h3>Step 5: Design Constraints (Part 5)</h3>
+<p>Steering (prompt layer): Health metrics, confidence thresholds, behavioral guidance Hard (orchestration layer): Tool wrappers, output validation, action gates, A2A contracts</p>
+<h3>Step 6: Classify Decisions and Assign Autonomy (Part 6)</h3>
+<p>What decision types will the agent make? Apply the five risk lenses. Individual use or product? Assign autonomy zones.</p>
+<h3>Step 7: Set Stop Rules (Part 7)</h3>
+<p>What’s in scope? What’s out of scope? Halt conditions, escalation triggers, completion criteria.</p>
+<h3>Step 8: Validate</h3>
+<p>Use the checklist to verify nothing is missing.</p>
+<hr />
+<h2>4. Complete Example: Customer Support Agent</h2>
+<h3>Part 1: Objective</h3>
+<p>Help customers resolve Tier-1 issues quickly without creating more frustration than they started with. Every unresolved question creates churn risk. Every wrong answer damages trust more than no answer.</p>
+<h3>Part 2: Desired Outcomes</h3>
+<ul>
+<li>Customer confirms their issue is resolved</li>
+<li>No follow-up ticket on same topic within 24 hours</li>
+<li>Customer rates interaction as helpful</li>
+</ul>
+<h3>Part 3: Health Metrics</h3>
+<ul>
+<li>CSAT stays above 4.2 - if dropping, be more conservative</li>
+<li>Repeat contact rate doesn’t increase - prioritize resolution quality</li>
+<li>Escalation quality score stable - don’t under-escalate</li>
+</ul>
+<h3>Part 4: Strategic Context</h3>
+<ul>
+<li><strong>System:</strong> Works alongside human Tier-2 agents and self-serve KB. Escalations go to human queue with full context. Outputs feed ticket system and customer health scoring.</li>
+<li><strong>Organization:</strong> B2B software for enterprise. Users are non-technical admins under time pressure. Brand built on reliability.</li>
+<li><strong>Trade-offs:</strong> Trust &gt; Speed &gt; Cost. Uncertainty better than false confidence.</li>
+</ul>
+<h3>Part 5: Constraints</h3>
+<p><strong>Steering (prompt):</strong></p>
+<ul>
+<li>Monitor health metrics, adjust accordingly</li>
+<li>Confidence &lt; 0.8 → caveat the answer</li>
+<li>Confidence &lt; 0.6 → escalate</li>
+<li>When uncertain, ask clarifying question</li>
+</ul>
+<p><strong>Hard (orchestration):</strong></p>
+<ul>
+<li>Cannot send external emails</li>
+<li>Cannot modify account settings</li>
+<li>Cannot access other customers’ data</li>
+<li>Cannot promise refunds or exceptions</li>
+<li>Responses validated before delivery</li>
+</ul>
+<h3>Part 6: Decision Types and Autonomy</h3>
+<p><strong>Context:</strong> Product with mostly unaware users → tight constraints</p>
+<p><a href="https://substack.com/redirect/d74c88e0-ba62-4ee4-8003-a2ea2301f8d3?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Decision Types and Autonomy for Customer Support Agent" src="https://substackcdn.com/image/fetch/$s_!GDMg!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd35a465c-6cec-43c9-b03d-2b961986baf1_1942x1006.png" /></a></p>
+<p>Decision Types and Autonomy for Customer Support Agent</p>
+<p><strong>Scope:</strong></p>
+<ul>
+<li><strong>In</strong>: Billing questions, feature how-tos, account settings</li>
+<li><strong>Out</strong>: Refunds, pricing exceptions, legal/compliance</li>
+</ul>
+<p><strong>Conditions:</strong></p>
+<ul>
+<li><strong>Halt:</strong> Confidence &lt; 0.5 twice consecutively</li>
+<li><strong>Escalate:</strong> Frustration detected, legal topic, out of scope</li>
+<li><strong>Complete:</strong> Customer confirms resolution</li>
+</ul>
+<hr />
+<h2>5. AI Agents Intent Validation Checklist</h2>
+<p><a href="https://substack.com/redirect/ce087336-d535-46a0-b74b-d4472d210a12?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!Jg7c!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8bd00ce5-b4e7-4d2c-b9aa-13074aa5be17_1200x1500.png" /></a></p>
+<p>AI Agents Intent Validation Checklist</p>
+<hr />
+<h2>Conclusion</h2>
+<p>Intent engineering is not prompt writing. It is system design.</p>
+<p>Most agents fail in production not because the model is weak, but because the intent is incomplete. Objectives are vague. Outcomes are implicit. Trade-offs are unstated. Constraints exist only as suggestions. Autonomy is granted without understanding risk.</p>
+<p>When that happens, agents do exactly what you told them to do. Just not what you meant.</p>
+<p>The fix is not more instructions. It is making intent explicit and enforceable.</p>
+<p>The reasoning layer proposes. The orchestration layer enforces.</p>
+<p>If a constraint matters, it cannot live only in a prompt.
+If a decision is risky, it cannot be fully autonomous.
+If failure is expensive, stop rules must exist before you ship.</p>
+<p>The models are already capable enough. What separates agents that work in production from those that fail quietly is not intelligence, but intent.</p>
+<p>If you can hand your intent specification to another human and they would make the same decisions under pressure, your agent has a chance.</p>
+<p>If not, it will optimize something you forgot to say out loud.</p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=184343366&amp;utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;utm_campaign=email-share&amp;action=share&amp;triggerShare=true&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NDM0MzM2NiwiaWF0IjoxNzY4MzAwODA1LCJleHAiOjE3NzA4OTI4MDUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.1g-oDN4l5N-bH7Sf9D5njW89X7SAMUAU6Cp7pBhjIOA">Share</a></p>
+<hr />
+<h2>Thanks for Reading The Product Compass</h2>
+<p>2026 is here. The agentic shift has begun.</p>
+<p>Start building. Stop theorizing.</p>
+<p>For dozens of AI PM resources, see <a href="https://substack.com/redirect/f41101ad-97af-44b4-95ef-8c06d95a0b38?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">The Ultimate AI PM Learning Roadmap</a> and our <a href="https://substack.com/redirect/a2b3a90e-0493-4a97-8fe0-3275b7db8c18?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">articles archive</a>.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZpbnRlbnQtZW5naW5lZXJpbmctZnJhbWV3b3JrLWZvci1haS1hZ2VudHMmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0ltbGhkQ0k2TVRjMk9ETXdNRGd3TlN3aVpYaHdJam94Tnpjd09Ea3lPREExTENKcGMzTWlPaUp3ZFdJdE9UUXpNVFUzSWl3aWMzVmlJam9pWTJobFkydHZkWFFpZlEuM2FFTTZBYWFYODQ0cXpFYUotemNfT2VUZUVjckMycUY3SkQ5NVVnQjVWQSIsInAiOjE4NDM0MzM2NiwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc2ODMwMDgwNSwiZXhwIjoyMDgzODc2ODA1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.Ur2wbuuu9-y026hW2lnrY1SQzJPVv0TEJPALnmynQ4E?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=184343366">Upgrade to paid</a></p>
+<p>Have an amazing week ahead,
+Paweł</p>
+<p><em>You’re currently a free subscriber to The Product Compass Newsletter.</em></p>
+<p><em>A full subscription gives you the full archive, all premium Notion templates, a closed Slack community, the <a href="https://substack.com/redirect/28f4cbc2-e1d6-49fb-b02c-df6ad085a5a5?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">AI PM Learning Program</a>, the <a href="https://substack.com/redirect/355b6dca-d9d9-4ad1-a14a-1a0dfc28566c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Continuous Product Discovery Masterclass</a>, the <a href="https://substack.com/redirect/33436b31-9104-4ad1-9426-771bc4811ce4?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">From Strategy to Objectives Masterclass</a>, and the <a href="https://substack.com/redirect/e257ad94-76fe-4426-8cd2-25e759687648?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Product Innovation Masterclass</a>.</em></p>
+<p><em>Consider upgrading your account for the full experience. The price just went up, but for the next few days, there’s a temporary 30% lifetime discount.</em></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZpbnRlbnQtZW5naW5lZXJpbmctZnJhbWV3b3JrLWZvci1haS1hZ2VudHMmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0ltbGhkQ0k2TVRjMk9ETXdNRGd3TlN3aVpYaHdJam94Tnpjd09Ea3lPREExTENKcGMzTWlPaUp3ZFdJdE9UUXpNVFUzSWl3aWMzVmlJam9pWTJobFkydHZkWFFpZlEuM2FFTTZBYWFYODQ0cXpFYUotemNfT2VUZUVjckMycUY3SkQ5NVVnQjVWQSIsInAiOjE4NDM0MzM2NiwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc2ODMwMDgwNSwiZXhwIjoyMDgzODc2ODA1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.Ur2wbuuu9-y026hW2lnrY1SQzJPVv0TEJPALnmynQ4E?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=184343366">Upgrade to paid</a></p>
+<p><em>No hassle. 30-day money-back guarantee. Many expense it through their learning budgets.</em></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=184343366&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NDM0MzM2NiwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3NjgzMDA4MDUsImV4cCI6MTc3MDg5MjgwNSwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.8FvFSe0zVVwrlJn_ZcaoZpaydjtkjAHfWrtF4hlTPkU&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=184343366&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NDM0MzM2NiwiaWF0IjoxNzY4MzAwODA1LCJleHAiOjE3NzA4OTI4MDUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.1g-oDN4l5N-bH7Sf9D5njW89X7SAMUAU6Cp7pBhjIOA&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9pbnRlbnQtZW5naW5lZXJpbmctZnJhbWV3b3JrLWZvci1haS1hZ2VudHM_dXRtX3NvdXJjZT1zdWJzdGFjayZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1lbWFpbC1yZXN0YWNrLWNvbW1lbnQmYWN0aW9uPXJlc3RhY2stY29tbWVudCZyPTZ5NWltayZ0b2tlbj1leUoxYzJWeVgybGtJam8wTWpBeE5qRTBNakFzSW5CdmMzUmZhV1FpT2pFNE5ETTBNek0yTml3aWFXRjBJam94TnpZNE16QXdPREExTENKbGVIQWlPakUzTnpBNE9USTRNRFVzSW1semN5STZJbkIxWWkwNU5ETXhOVGNpTENKemRXSWlPaUp3YjNOMExYSmxZV04wYVc5dUluMC4xZy1vRE40bDVOLWJIN1NmOUQ1bmpXODlYN1NBTVVBVTZDcDdwQmhqSU9BIiwicCI6MTg0MzQzMzY2LCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzY4MzAwODA1LCJleHAiOjIwODM4NzY4MDUsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.S8rygdMLY2_itxaMgdJX1tObLcSrwClw-L7Q4jTs-OY?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTRORE0wTXpNMk5pd2lhV0YwSWpveE56WTRNekF3T0RBMUxDSmxlSEFpT2pFM09UazRNelk0TURVc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAuNXprQmVKV1dCa0dfbzY1WkJIa1pqV2dVQ3RqandFVS1ERUJBTkZZUDg2cyIsInAiOjE4NDM0MzM2NiwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc2ODMwMDgwNSwiZXhwIjoyMDgzODc2ODA1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.7pZtISvp1xIpCK1tnge-sS_d-3ctgD147Aj_sgWlqWE?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/48f20606-3099-4ba4-956e-37414dd4caff?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoxODQzNDMzNjYsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NjgzMDA4MDUsImV4cCI6MjA4Mzg3NjgwNSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.4lEvFrqfxPunuUK427A1D5lKUZp4X3-PgTXoRCxDHOg?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 Subscription vs. API: Which one actually saves you more? — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 Subscription vs. API: Which one actually saves you more? — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 Subscription vs. API: Which one actually saves you more?</h1>
+<p class="meta">2026-06-12 · received 2026-06-12 22:03 +0900
+ · <a href="https://codenewsletter.ai/p/castform-drops-its-rl-training-platform-openai-unveils-dev-mode-in-codex" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 Subscription vs. API: Which one actually saves you more?</h1>
+<p><a href="https://aws.amazon.com/events/summits/washington-dc/?trk=2cf4166b-5059-4537-b929-0106e0accd94&amp;sc_channel=el"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c43ccb21-82ec-492e-ba33-f813c269dd55/Group_AWS.jpg?t=1781210744" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Coding tasks that would cost thousands on an API can run for weeks on a $200 subscription. A viral report just <a href="https://x.com/kimmonismus/status/2064987311402537184"><strong>compared</strong></a> every tier of Claude and ChatGPT to see how they stack up — and OpenAI's top plan turned out nearly twice as generous as Anthropic's.</p>
+<p>You'd think numbers like these would force prices up. OpenAI is <a href="https://x.com/Reuters/status/2065004888765972804"><strong>reportedly</strong></a> about to do the opposite.</p>
+<p><strong>Also:</strong> Cut your Claude Code token usage in half, OpenClaw creator's loop engineering setup, and which resumes actually land a job at Anthropic.</p>
+<p><strong>Help us improve</strong>: what was your favorite part of today's issue? Click your pick in the poll below.</p>
+<hr />
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>An AI researcher breaks down how to build a vertical agent</p>
+</li>
+</ul>
+<p><a id="how-to-stop-opus-from-draining-your-token-usage"></a>
+* How to stop Opus from draining your token usage</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://x.com/googrish/status/2065107744215171486"><img alt="Click here to watch Castform in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c0d7faaa-e973-4e40-982c-adba3c44c97f/Thumbnail__7_.jpg?t=1781255611" /></a>
+<em>Click here to watch Castform in action.</em></p>
+<hr />
+<p><strong>Castform enables every team to train their own models:</strong> The SF-based startup just dropped its <a href="https://castform.com/blog/beta-launch/"><strong>RL training platform</strong></a> in open beta. They are betting that the old advice to never train a custom model is outdated. With Castform, teams simply define what a good output means to them. The platform then handles data prep, GPU infrastructure, and algorithm tuning. They claim task-trained open models close the gap with closed APIs at a fraction of the cost. See an example setup to train a <a href="https://app.castform.com/demo/rag-default">RAG agent</a>.</p>
+<p><strong>OpenAI gives Codex the keys to Chrome's debugger:</strong> The ChatGPT maker just rolled out <a href="https://x.com/OpenAIDevs/status/2065226355495895521"><strong>Developer Mode</strong></a> for browser use in Chrome and the Codex in-app browser. It gives the coding agent access to the Chrome DevTools Protocol. This lets it profile JavaScript performance and inspect console output, network traffic, and page state to track down bugs. Since this involves touching sensitive browser data, Codex asks for explicit approval before inspecting a site.</p>
+<p><strong>Anthropic's CEO demands mandatory safety tests for AI:</strong> Dario Amodei published Policy on the AI Exponential, arguing the technology is advancing far faster than the rules meant to govern it. He says transparency is no longer enough and proposes mandatory third-party safety testing for frontier models, with governments empowered to block releases that fail. The essay maps five policy areas needing a rethink, from job displacement to civil liberties. <a href="https://darioamodei.com/post/policy-on-the-ai-exponential">Read the full essay.</a></p>
+<hr />
+<h5><strong>PRESENTED BY AWS</strong></h5>
+<h2><a href="https://aws.amazon.com/events/summits/washington-dc/?trk=2cf4166b-5059-4537-b929-0106e0accd94&amp;sc_channel=el"><strong>AI and Cloud Innovation Starts in DC</strong></a></h2>
+<p><a href="https://aws.amazon.com/events/summits/washington-dc/?trk=2cf4166b-5059-4537-b929-0106e0accd94&amp;sc_channel=el"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d2399009-63f6-47ab-ab50-975a72c9b9df/AWS_Summit_DC_1920_x_1080_-_Bethany_Jacobs__1_.jpg?t=1781210850" /></a></p>
+<hr />
+<p><a href="https://aws.amazon.com/events/summits/washington-dc/?trk=2cf4166b-5059-4537-b929-0106e0accd94&amp;sc_channel=el"><strong>AWS Summit DC</strong></a> brings together developers, architects, and public-sector leaders for two days of technical sessions, hands-on demos, and real-world insights into AI, security, and modernization. No cost to attend.</p>
+<p><a href="https://aws.amazon.com/events/summits/washington-dc/?trk=2cf4166b-5059-4537-b929-0106e0accd94&amp;sc_channel=el"><strong>Register now for June 30– July 1.</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="how-to-build-a-good-vertical-agent-lessons-from-an-ai-researcher"></a></p>
+<h2><strong>How to build a good vertical agent: Lessons from an AI researcher</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/44dd2c96-7dc3-45f8-84a9-9f03d84c9749/superhumanteam_a_software_engineering_team_working_on_buildin_3a0df4fe-a8c4-42f8-927f-fa4d4c06f8fb_1.jpg?t=1781254988" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>The secret is out.</strong> This year, the recipe for building AI agents went public. It is basically just a while loop where a model calls tools until the job is finished. You can build one in an afternoon. But that only gets you a generic agent. The real prize is a vertical agent. These are built for one specific field. Customers choose them because they are more accurate. A founding scientist at Fundamental Research Labs, Peter Wang, just dropped a playbook on how to build a high-quality one.</p>
+<p><strong>A year of getting it right.</strong> Wang spent the last year building a <a href="https://shortcut.ai/">spreadsheet agent</a> for some of the world's biggest hedge funds. In that world, one wrong number can cost a lot of money. His first design choice was unusual. He gave the agent one tool instead of thirty. The agent simply writes code, and that code handles all the reading and writing. Having fewer tools means fewer chances to mess up. Beyond that, accuracy is all about context. Give the model too much and it loses track of what matters. Give it too little and it starts to guess.</p>
+<p><strong>The fix comes from hardware.</strong> A processor keeps its most important data in a small, fast cache. Everything else sits in slower memory until it is actually needed. Wang organizes an agent's context the same way, sorting it by how often each task comes up. Daily work like reading and writing cells stays right in the prompt. Occasional jobs like pivot tables become short guides that the agent pulls up on demand. The really rare stuff lives in one big API file that the agent can search.</p>
+<p><strong>Apply it to your domain.</strong> Wang argues that this structure works for any project because you understand your users better than anyone else. Just ask yourself three questions:</p>
+<ul>
+<li>
+<p>What does your agent do all the time?</p>
+</li>
+<li>
+<p>What does it do every once in a while?</p>
+</li>
+<li>
+<p>What is the backup plan for everything else?</p>
+</li>
+</ul>
+<p>Put each task in the right spot to keep the agent fast and accurate. The full <a href="https://x.com/BrainsAndTennis/status/2065190286519906657">playbook</a> is definitely worth reading.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a16eebd9-c598-46d0-b521-4cb24e1068a6/CleanShot_2026-06-12_at_14.18.53_2x.jpg?t=1781266402" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Limit Loophole:</strong> Fable 5 is so overpowered you shouldn't be using it for every step. This <a href="https://x.com/daniel_mac8/status/2065066247448821841">workflow</a> stretches your Claude Code limits (7K bookmarks).</p>
+</li>
+<li>
+<p><strong>Fast Track:</strong> An Atlassian Principal Engineer condensed his 12-year climb from backend dev into <a href="https://x.com/system_monarch/status/2064978857263014366">one playbook</a> you can run at any company (19K bookmarks).</p>
+</li>
+<li>
+<p><strong>Loop Revealed:</strong> After loop engineering blew up, OpenClaw's creator posted his <a href="https://x.com/steipete/status/2064998499780084154"><strong>real setup</strong></a>, an agent that triages and ships work while he's away (7.4K bookmarks).</p>
+</li>
+<li>
+<p><strong>Half the Burn:</strong> This developer cut his weekly Claude Code token usage in half with <a href="https://x.com/cjzafir/status/2065104422762684745"><strong>one change</strong></a> to how his models split the work (2.8K bookmarks).</p>
+</li>
+<li>
+<p><strong>Zero Handwriting:</strong> Conductor's CEO broke down <a href="https://www.youtube.com/watch?v=fQmlML9Lay4"><strong>his AI coding setup</strong></a> in a new YC video. He writes no code by hand anymore, except in "caveman mode" (3K likes).</p>
+</li>
+<li>
+<p><strong>Parallel Power:</strong> This <a href="https://www.youtube.com/watch?v=CTWzaXVMImg"><strong>walkthrough</strong></a> teaches you to run 20 coding agents at once without them stepping on each other's code.</p>
+</li>
+<li>
+<p><strong>Hiring Decoded:</strong> An AI startup's Head of Talent ran the numbers on 1,680 Anthropic engineer resumes. The results say a lot about who <a href="https://x.com/hiiinternet/status/2065117819948437765"><strong>gets hired</strong></a> there.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to stop Opus from draining your token usage</strong></h2>
+<p>Opus writes better plans than Sonnet, but it can burn through your weekly quota in days. Anthropic’s documentation lists an alias that <a href="https://code.claude.com/docs/en/model-config#model-aliases">automates</a> the trade-off most devs already do manually. Use Opus for thinking and Sonnet for typing.</p>
+<p>Just use "/model opusplan" and press shift+tab to enter plan mode. Claude will use Opus for the planning phase. Once it starts writing code, it switches to Sonnet automatically. The context carries over, so Sonnet knows exactly what Opus decided. To make this permanent, start every session with this command:</p>
+<pre><code>claude --model opusplan
+</code></pre>
+<p>Codely, an AI education platform, compared the models in its own workflow and <a href="https://codely.com/en/blog/how-to-use-opus-for-planning-and-sonnet-for-implementing-in-claude-code">concluded</a> Opus's edge is largest in planning and narrows during implementation.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=Fzd0BWMH65s"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c4b5c8ce-9ad9-481d-9699-3f50cc93627f/Thumbnail__6_.jpg?t=1781253683" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=Fzd0BWMH65s"><strong>How to design a multi-agent system that skips the LLM (by Google):</strong> </a> You’ll learn how to build multi-agent systems that are both highly scalable and cost-effective. You’ll also get a handle on designing hybrid architectures that balance AI with deterministic code. By using callbacks, you can bypass unnecessary LLM requests and implement Redis session storage to run thousands of agents at the same time.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://nessielabs.com/"><strong>Nessie (</strong></a><a href="https://nessielabs.com/">Recommended by YC CEO</a><strong><a href="https://nessielabs.com/">):</a></strong> This tool makes every AI agent you use smarter. It turns all your chats and notes into a single searchable and shareable memory layer that generates reusable, project-ready context.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/kenn-io/agentsview"><strong>Agentsview</strong></a>** (2K ⭐):** Local-first session intelligence and analytics for coding agents. It lets you browse, search, and track costs across all your AI coding agents.</p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://platform.claude.com/cookbook/patterns-agents-async-multi-agent-orchestration">Async multi-agent orchestration (by Anthropic):</a> Managing communication between multiple AI agents can get tricky when you're dealing with complex task logic. This cookbook shows that effective orchestration actually boils down to just two straightforward asynchronous patterns: a fixed team and dynamic subagents.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>This six-step process helps you start thinking like a <a href="https://x.com/mattpocockuk/status/2064663221718425660">senior developer</a>, using a coding agent as your personal mentor.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

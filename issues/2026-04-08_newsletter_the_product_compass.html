@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Claude Code Pricing: Subscriptions vs API, Token Visibility, and the Models That Actually Work — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Claude Code Pricing: Subscriptions vs API, Token Visibility, and the Models That Actually Work — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Claude Code Pricing: Subscriptions vs API, Token Visibility, and the Models That Actually Work</h1>
+<p class="meta">2026-04-08 · received 2026-04-08 23:42 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/claude-code-pricing" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>Claude Code Pricing: Subscriptions vs API, Token Visibility, and the Models That Actually Work</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRmNsYXVkZS1jb2RlLXByaWNpbmciLCJwIjoxOTM1NTk0MjcsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzU2NTk0NzEsImV4cCI6MjA5MTIzNTQ3MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.352vQBkZOYWzIN_iE0MPg0mC1pjx-OzhHs4z8Dk62Wg?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=193559427&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MzU1OTQyNywiaWF0IjoxNzc1NjU5NDcxLCJleHAiOjE3NzgyNTE0NzEsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.zowVNEn0tKJBTzSp_WXHUNnH8Kua0Z_Jyls6SAzdkgY">Claude Code Pricing: Subscriptions vs API, Token Visibility, and the Models That Actually Work</a></h1>
+<h3>Claude subscriptions are 15-30x cheaper than the API. Full cost breakdown of Claude Code plans, OpenRouter setup, best API models for agentic coding, and an open-source token visibility dashboard.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Apr 8</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!qMwR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fba18ea7b-0b42-4881-96ff-8e7a8d555f86_1024x1024.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/claude-code-pricing?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>Claude subscriptions are 15-30x cheaper than the API. But Anthropic just killed every third-party tool that used them — and you still can’t see where your tokens go.</p>
+<p>I run Claude Code on a Max plan. 440 sessions last month, 18,000 turns. I built a dashboard to track what that actually costs: <strong>$1,588 in API-equivalent tokens</strong>. Covered by a <strong>$200 subscription</strong>.</p>
+<p>Here’s the full breakdown — what April 4 killed, which API models actually work for agentic coding, and how to see exactly where your budget goes.</p>
+<hr />
+<h2>What You’ll Learn</h2>
+<ul>
+<li><strong>What April 4 actually killed</strong> — which tools lost subscription access and why Anthropic pulled the plug</li>
+<li><strong>The full cost landscape</strong> — subscriptions and API models in one table, ranked by the metric that actually predicts agentic performance</li>
+<li><strong>Why SWE-bench is misleading</strong> — it didn’t match my experience. Agentic Index did.</li>
+<li><strong>OpenRouter setup</strong>: two environment variables, 400+ models, done</li>
+<li><strong>Token visibility</strong>: an open-source dashboard that shows exactly where your Claude Code tokens go</li>
+</ul>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtY29kZS1wcmljaW5nJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNOVFkxT1RRM01Td2laWGh3SWpveE56YzRNalV4TkRjeExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLjFXeE5ydkJzNUlacFpYNWxrRHVzNFZKNWNRQS0tWlVRMjliWVpQXzdCQUkiLCJwIjoxOTM1NTk0MjcsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzU2NTk0NzEsImV4cCI6MjA5MTIzNTQ3MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.qu2xI_vsKQj8jHP975S2uFoEGqj9E9LYe7StvdoR0CI?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=193559427">Upgrade to paid</a></p>
+<hr />
+<h2>1. The April 4 Policy Change: What Died, What Lives</h2>
+<p><strong>April 4, 2026:</strong> Anthropic announced Claude subscriptions no longer work with third-party tools. If you were using Cline, Cursor, Windsurf, OpenClaw, or any non-Anthropic harness through your subscription — it stopped working.</p>
+<p><a href="https://substack.com/redirect/1fee3095-dfbd-489d-ae5f-5cad93f8aab8?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="X avatar for @bcherny" src="https://substackcdn.com/image/fetch/$s_!klRp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F1902044548936953856%2FJ2jeik0t.jpg" />Boris Cherny@bchernyWe’ve been working hard to meet the increase in demand for Claude, and our subscriptions weren't built for the usage patterns of these third-party tools. Capacity is a resource we manage thoughtfully and we are prioritizing our customers using our products and API.11:14 PM · Apr 3, 2026 · 420K Views101 Replies · 40 Reposts · 1.86K Likes</a></p>
+<p><strong>What Still Works with Subscriptions</strong></p>
+<ul>
+<li><strong><a href="https://substack.com/redirect/447510c2-9d53-430e-bc90-6f04ae7994e9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code CLI</a></strong> — Anthropic’s official agentic coding tool</li>
+<li><strong><a href="https://substack.com/redirect/447510c2-9d53-430e-bc90-6f04ae7994e9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code extension for VS Code</a></strong>— same mechanism</li>
+<li><strong>Claude.ai</strong> — web and mobile interface, including agentic Code sessions</li>
+<li><strong><a href="https://substack.com/redirect/154a2094-2d8a-4299-ba2d-cd65e2c73073?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Cowork</a></strong>— user-friendly agent inside Claude Desktop</li>
+<li><strong><a href="https://substack.com/redirect/9342601a-5901-4730-bf4f-71202b7b5f8a?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Dispatch</a></strong> — the orchestration layer for Cowork and code</li>
+</ul>
+<p><strong>What Died</strong></p>
+<ul>
+<li><strong>Cline</strong> — popular VS Code agent, relied on subscription auth</li>
+<li><strong>Cursor</strong> — AI-native editor, subscription routing cut off</li>
+<li><strong>Windsurf</strong> — Codeium’s editor, same story</li>
+<li><strong><a href="https://substack.com/redirect/9ce52903-01b5-4eab-a114-c036597fa481?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">OpenClaw</a></strong> — open-source Claude Code alternative with 135,000+ instances</li>
+<li><strong>Custom agents and automation</strong> — anything routing through subscription billing</li>
+</ul>
+<p><strong>For automation workflows (<a href="https://substack.com/redirect/edabf6a5-2b16-4222-8bb8-442f77bfa10b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">n8n</a>, OpenClaw, custom agents):</strong> You’re on API billing now. The next section shows you exactly what that costs — and why it might actually be cheaper than you think.</p>
+<p>—</p>
+<p><em>OpenClaw footnote: A community workaround briefly routed OpenClaw through Claude Code’s MCP bridge. Anthropic closed it — one exact substring match to <a href="https://substack.com/redirect/e22c919a-f0a9-4f2d-972a-361573a89c28?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">block OpenClaw’s system prompt</a>.</em></p>
+<p><a href="https://substack.com/redirect/e22c919a-f0a9-4f2d-972a-361573a89c28?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="X avatar for @steipete" src="https://substackcdn.com/image/fetch/$s_!fakz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F1131851609774985216%2FOcsssQ9J.png" />Peter Steinberger 🦞@steipeteAnthropic now blocks first-party harness use too 👀 claude -p --append-system-prompt 'A personal assistant running inside OpenClaw.' 'is clawd here?' → 400 Third-party apps now draw from your extra usage, not your plan limits. So yeah: bring your own coin 🪙🦞3:19 PM · Apr 5, 2026 · 1.6M Views491 Replies · 278 Reposts · 5.45K Likes</a></p>
+<hr />
+<h2>2. The Full Cost Landscape</h2>
+<p>Many builders and PMs either overpay for a subscription they don’t fully use, or overpay for API models because they default to Sonnet. Here’s everything in one place.</p>
+<h3>Claude Subscriptions: Flat Cost, Predictable</h3>
+<p>Every tier requires discipline. Opus burns credits ~5x faster than Sonnet, so use Opus for hard problems and switch to Sonnet for straightforward tasks. Run <code>/compact</code> regularly. Without this, you’ll hit limits on any plan — including Max 20x.</p>
+<p><a href="https://substack.com/redirect/048bb5fc-2a51-42f6-8108-a61e8f4ee55e?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Subscriptions: Pro, Teams, Max 5x, Max 20x, Enterprise" src="https://substackcdn.com/image/fetch/$s_!OuJD!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c0f25eb-58e5-40a5-98b5-21f16e235b0a_2610x2303.png" /></a></p>
+<p>Claude Subscriptions: Pro, Teams, Max 5x, Max 20x, Enterprise</p>
+<p><strong>How cheap is this compared to API?</strong> My Max 20x costs $200/month. The dashboard I built (Section 4) shows $1,588 in API-equivalent costs for Claude Code alone — and I use Code and Cowork roughly 50:50, so the real API bill would be far higher. The Claude subscription runs roughly <strong>15-30x cheaper</strong> than paying per token for the same work.</p>
+<p><strong>Teams and Enterprise subscribers:</strong> If your company already provides Claude Teams or Enterprise, you have Claude Code access included. Check with your admin — you may not need a personal subscription at all.</p>
+<h3>API: Pay Per Token, Choose Your Model</h3>
+<p>OpenRouter gives you access to 400+ models. Most aren't worth your time for agentic coding. I tested dozens — the table below is what survived real multi-step Claude Code sessions, ranked by Agentic Index:</p>
+<p><a href="https://substack.com/redirect/02a7e9f9-1f78-4206-a40d-e83a78c44ae6?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Best LLM Models for Claude Code and OpenClaw available via API" src="https://substackcdn.com/image/fetch/$s_!K7tK!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F116551e8-483e-4c1d-af1e-8f518f40fa81_1200x1457.png" /></a></p>
+<p><strong>Why Agentic Index?</strong></p>
+<ul>
+<li>SWE-Bench (Verified and Pro) tests isolated bug fixes — one issue, one patch, no iteration. It didn't match my experience.</li>
+<li>Agentic Index (from Aider's polyglot benchmark) measures what Claude Code actually does: read files, plan changes, apply diffs, run tools, recover from errors, iterate. It matched what I saw in practice.</li>
+</ul>
+<h3>Claude Subscription vs API</h3>
+<p><strong>Subscription wins if</strong> you code with Claude Code daily. Opus is the best agentic model — and cost per token isn’t <strong>cost per correct token</strong>. A cheaper model that needs many iterations to fix its own errors costs more than Opus getting it right the first time. <strong>Cowork, Dispatch, and web-based Claude Code</strong> sessions also require a subscription.</p>
+<p><strong>API wins if</strong> your usage is moderate, spiky, or you’re running automation workflows. Opus and Sonnet via API are hard to justify when the subscription gives you flat-rate access — and budget models match or beat Sonnet’s agentic performance:</p>
+<ul>
+<li><strong>GLM-5.1</strong> — matches Opus 4.6 on agentic performance (67.0 vs 67.6) at 1/12x the input cost. Default for automation.</li>
+<li><strong>GLM-5</strong> — same family, cheaper. Matches Sonnet’s 4.6 agentic score at 1/4x the cost.</li>
+<li><strong>MiniMax M2.7</strong> — when cost matters most. 1/10x Sonnet’s 4.6 score. Still solid.</li>
+</ul>
+<h3>One Thing Missing: Token Visibility</h3>
+<p>The subscription model has one real frustration: you can't see where your tokens go. <code>/usage</code> exists but doesn't break down by model, project, or session — so when you hit limits unexpectedly, it's not obvious why.</p>
+<p><a href="https://substack.com/redirect/3ce5fcad-a0e4-49ab-b23e-85a363886391?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Token visibility in Claude subscriptions" src="https://substackcdn.com/image/fetch/$s_!pNtG!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffdde69dc-6979-4fee-8e4c-23a614088d73_1544x1179.png" /></a></p>
+<p>Token visibility in Claude subscriptions</p>
+<p>Anthropic knows: there are open feature requests for <a href="https://substack.com/redirect/66c8d88d-2ddc-4875-a1ef-8cddde4a660e?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">per-prompt token breakdown</a> and a <a href="https://substack.com/redirect/64f44f99-9aa2-4f8e-9fea-b98079fe0333?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">real-time usage indicator</a>. I built an open source solution — Section 4 covers it.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtY29kZS1wcmljaW5nJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNOVFkxT1RRM01Td2laWGh3SWpveE56YzRNalV4TkRjeExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLjFXeE5ydkJzNUlacFpYNWxrRHVzNFZKNWNRQS0tWlVRMjliWVpQXzdCQUkiLCJwIjoxOTM1NTk0MjcsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzU2NTk0NzEsImV4cCI6MjA5MTIzNTQ3MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.qu2xI_vsKQj8jHP975S2uFoEGqj9E9LYe7StvdoR0CI?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=193559427">Upgrade to paid</a></p>
+<hr />
+<p><a id="3-openrouter-setup-for-claude-code"></a></p>
+<h2>3. OpenRouter Setup for Claude Code</h2>
+<p>Claude Code isn’t locked to Anthropic’s models. Switch <code>ANTHROPIC_BASE_URL</code> and it routes to any compatible API. Add a <code>.claude/settings.local.json</code> to your project root, for example:</p>
+<pre><code>{  &quot;env&quot;: {    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://openrouter.ai/api&quot;,    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;sk-or-v1-{your-OpenRouter-API-key}&quot;,    &quot;ANTHROPIC_API_KEY&quot;: &quot;&quot;    },  &quot;model&quot;: &quot;z-ai/glm-5.1&quot;}
+</code></pre>
+<p><strong>Why OpenRouter over direct provider APIs?</strong></p>
+<p>One key, one endpoint, 400+ models. Switch between GLM-5, Qwen, Gemini, and GPT-5 by changing one variable— no juggling multiple API keys or base URLs.</p>
+<p>Switching the API works for Claude Code CLI, but not for Claude Code Extension. In practice, this doesn’t make a huge difference, as you can still work with VS Code interface.</p>
+<p>Step-by-step demo:</p>
+<p><a href="https://substack.com/redirect/1accf6b7-d278-46df-9918-7893155f6a5b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!FhsZ!,w_1100,h_670,c_pad,f_auto,q_auto:good,fl_progressive:steep/l_play_button_usfui2,w_144,e_colorize:0/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F193559427%2Ff4f07e39-5254-43d8-bde3-1f004aac02f5%2Ftranscoded-03743.png" /></a></p>
+<hr />
+<p><em><strong>Side Note:</strong> Want to build with Claude? Join our <a href="https://substack.com/redirect/2a6c82f7-9c63-4467-841f-7bcf5ed30c3c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">AI Agents Claudathon</a> — in 4 weeks you will learn everything to ship real agentic products with Claude Code. No experience required:</em></p>
+<p><a href="https://substack.com/redirect/908bf2f5-4e9c-4ddc-80c4-5a85fffb1934?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="AI Agents Claudathon for PMs" src="https://substackcdn.com/image/fetch/$s_!PaEG!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F31445faf-1e9d-4588-8bcd-88cb259cfc9d_2342x1150.png" /></a></p>
+<p><a href="https://substack.com/redirect/2a6c82f7-9c63-4467-841f-7bcf5ed30c3c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Learn more</a></p>
+<p><em>P.S. This is not an external cohort. Just me and <a href="https://open.substack.com/users/400036942-olia-herbelin?utm_source=mentions">Olia Herbelin</a>.</em></p>
+<hr />
+<p><a id="4-claude-code-usage-dashboard-see-where-your-tokens-go-for-free"></a></p>
+<h2>4. Claude Code Usage Dashboard: See Where Your Tokens Go for Free</h2>
+<p>I mentioned the visibility gap in Section 2 — <code>/usage</code> doesn’t break down by model, project, or session. You hit limits and have no idea why.</p>
+<p>That frustrated me enough to build something.</p>
+<p>I open-sourced a local dashboard that reads your Claude Code transcripts and shows you exactly where tokens go. No cloud, no telemetry — everything stays on your machine:</p>
+<p><a href="https://substack.com/redirect/71117b90-af03-45f3-9c50-5993f26b1a79?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Code Usage Dashboard on GitHub" src="https://substackcdn.com/image/fetch/$s_!tnLB!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa1fda32d-2b68-4841-a39e-d4c7d4f1ccc8_3840x4620.png" /></a></p>
+<p><a href="https://substack.com/redirect/cc635a96-5571-46f4-860e-a9aea7f5b4c2?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code Usage Dashboard</a> on GitHub</p>
+<p>You can star it, fork it, and make it your own. GitHub (open source, MIT):</p>
+<p><a href="https://substack.com/redirect/cc635a96-5571-46f4-860e-a9aea7f5b4c2?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code Usage Dashboard</a></p>
+<h3>What It Shows</h3>
+<ul>
+<li><strong>Cost per day</strong>, broken down by model (Opus vs Sonnet vs Haiku)</li>
+<li><strong>Sessions and turns</strong> over time</li>
+<li><strong>Filter by model</strong>, filter by time range (7d / 30d / 90d)</li>
+<li><strong>Top projects by tokens</strong> — see which codebase is eating your budget</li>
+<li>Auto-refreshes every 30 seconds at localhost:8080</li>
+</ul>
+<h3>My 30-Day Numbers</h3>
+<p>440 sessions. 18,000 turns. <strong>$1,588 in estimated API costs.</strong></p>
+<p>All covered by the Max subscription. For a fraction of the price.</p>
+<p>First thing the dashboard caught: one day spiked to <strong>700 million cached tokens</strong>. Not my usage — an Anthropic bug. Without the dashboard, I’d never have noticed.</p>
+<h3>Setup &amp; Run on Windows</h3>
+<pre><code>git clone https://github.com/phuryn/claude-usagecd claude-usagepython cli.py dashboard
+</code></pre>
+<h3>Setup &amp; Run on MacOS, Linux</h3>
+<pre><code>git clone https://github.com/phuryn/claude-usagecd claude-usagepython3 cli.py dashboard
+</code></pre>
+<h3>What It Measures</h3>
+<p>Claude Code Usage Dashboard works with any Claude subscription (Pro, Max, Team, Enterprise) running Claude Code — CLI, VS Code extension, and dispatched code sessions.</p>
+<p>At the same time, Cowork and web code sessions are not included. We need to wait for Anthropic for a better solution.</p>
+<hr />
+<h2>5. Token-Saving Techniques (Works Everywhere)</h2>
+<p>Before switching models or tools, optimize what you’re already doing. These apply whether you’re on subscription or API.</p>
+<h3>Use /compact Aggressively</h3>
+<p>Context accumulates fast. Every file read, tool call, and response adds tokens. A 30-minute session easily hits 200K tokens, and you’re paying for all of it on every subsequent message.</p>
+<p>Run <code>/compact</code> after major milestones. It preserves intent and drops noise.</p>
+<h3>Don’t Use Opus for Everything</h3>
+<p>Opus 4 costs 5x more than Sonnet ($15/$75 vs $3/$15 per M tokens). For most coding tasks, Sonnet is equivalent— and GLM-5.1 matches Opus on agentic tasks at 1/12th the cost.</p>
+<p>If you struggle with available tokens, use Opus only for:</p>
+<ul>
+<li>Complex architectural reasoning when Sonnet keeps failing</li>
+<li>Long-context analysis where every detail matters</li>
+<li>Tasks with extreme ambiguity</li>
+</ul>
+<p>Default to Sonnet or GLM. Escalate to Opus when the model fails.</p>
+<h3>Watch for MCP Tool Overhead</h3>
+<p>MCP tools can easily add ~20K tokens to every session just from tool definitions.</p>
+<p>While by default they are loaded on demand in Opus and Sonnet, this may not work with custom LLMs. Remove MCP servers you don’t need by typing /mcp in Claude Code CLI.</p>
+<p><em>Hint: This is where you can adjust default settings for Opus and Sonnet:</em></p>
+<pre><code>  {    “env”: {      “ENABLE_TOOL_SEARCH”: “true”    }  }
+</code></pre>
+<p><a id="code-graph-mcp-feed-claude-only-what-it-needs"></a></p>
+<h3>Code Graph MCP: Feed Claude Only What It Needs</h3>
+<p>Every time Claude Code reviews a change, it searches your codebase with grep and glob — smart, but not structural. It doesn’t know which functions call what.</p>
+<p><a href="https://substack.com/redirect/0dfd3a07-48c4-4ac5-ae74-05ace2211ea5?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">code-review-graph</a> adds that structural layer. It parses your codebase into an AST, stores it in SQLite, and tracks changes via git hooks. At review time, it traces the blast radius of your change and feeds Claude only the affected files.</p>
+<p><a href="https://substack.com/redirect/c8759874-4d58-43f1-895c-c8534fb3aec9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Code Graph MCP, The Token Problem: 8.2x average token reduction across 6 real repositories" src="https://substackcdn.com/image/fetch/$s_!HWYN!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26d3e297-3a60-4a66-8b0b-6cbd812a6663_3150x2599.png" /></a></p>
+<p>code-review-graph (open source)</p>
+<p>The author’s benchmarks: 6.8x fewer tokens on code reviews, up to 49x on daily coding. On a 27,700-file monorepo, only 15 files were read.</p>
+<p><strong>I haven’t tested these numbers myself</strong>, I currently don’t work with such large codebases, but the architecture makes sense — especially for large codebases where the savings compound.</p>
+<p><a id="agent-browser-browse-without-screenshots"></a></p>
+<h3>Agent-Browser: Browse Without Screenshots</h3>
+<p>If your agents need browser access, don’t use Chrome MCP with screenshots — each screenshot eats thousands of tokens for a single page view.</p>
+<p><a href="https://substack.com/redirect/ff5754f0-a67a-4a12-82e4-236310d2315b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">agent-browser</a> by Vercel Labs takes a different approach: instead of screenshots, it returns an accessibility tree snapshot with element references (@e1, @e2, etc.). Agents interact via those refs — compact text, not images. The result: 82% fewer tokens than Playwright MCP, up to 93% reduction overall.</p>
+<p>It’s also much more reliable than the standard web fetch:</p>
+<p><a href="https://substack.com/redirect/54a649d7-4047-4c0c-94a9-ffdfb25a06bb?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="X avatar for @PawelHuryn" src="https://substackcdn.com/image/fetch/$s_!Ibs0!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F2031703870615715840%2Faq6W0Caw.jpg" />Paweł Huryn@PawelHuryn"A perfect score is unlikely for any current agent." — MongoDB's Developer Education team, launching the Agent Reading Test. Claude Opus scored 19/20 with a simpe change. 1. What the test measures The Agent Reading Test isn't a vibe check. 10 tests, 20 points. Each test<img alt="Image" src="https://substackcdn.com/image/fetch/$s_!uD7n!,w_550,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fmedia%2FHFSFVDqb0AAuLYa.jpg" />6:30 AM · Apr 7, 2026 · 1.21K Views1 Reply · 7 Likes</a></p>
+<p>No configuration needed. Works with Claude Code (tell it to use it in CLAUDE.md) and any MCP-compatible agent. Installation:</p>
+<pre><code>npm install -g agent-browser
+</code></pre>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtY29kZS1wcmljaW5nJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNOVFkxT1RRM01Td2laWGh3SWpveE56YzRNalV4TkRjeExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLjFXeE5ydkJzNUlacFpYNWxrRHVzNFZKNWNRQS0tWlVRMjliWVpQXzdCQUkiLCJwIjoxOTM1NTk0MjcsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzU2NTk0NzEsImV4cCI6MjA5MTIzNTQ3MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.qu2xI_vsKQj8jHP975S2uFoEGqj9E9LYe7StvdoR0CI?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=193559427">Upgrade to paid</a></p>
+<hr />
+<h2>8. Closing</h2>
+<p>Subscribe for daily coding — stop watching the meter. Route automation to GLM-5.1 for Opus-level agentic performance at 1/12th the cost. Track every token with an open-source dashboard so you know exactly what you’re getting.</p>
+<p>Anthropic’s April policy change forced automation users onto API billing. But it also clarified the landscape: subscriptions for interactive work, APIs for everything else.</p>
+<p>The one thing still missing: real token visibility from Anthropic. Until they ship it, the dashboard fills the gap. Clone it, see where your tokens go, and stop guessing:</p>
+<p><a href="https://substack.com/redirect/69fc3f97-070a-4f01-8bc1-d4eaf247c0c7?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!fL-B!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F46525ac3-14fc-4c7a-8a1c-0e60da0f0cdb_1200x600.jpeg" /></a></p>
+<p><a href="https://substack.com/redirect/cc635a96-5571-46f4-860e-a9aea7f5b4c2?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">https://github.com/phuryn/claude-usage</a></p>
+<hr />
+<h2>Thanks for Reading The Product Compass</h2>
+<p>It’s amazing to learn and grow together.</p>
+<p>Next: prototyping for PMs (3 tools &amp; templates). This will be a paid content.</p>
+<p>Have a great week ahead,
+Paweł</p>
+<p><em>You’re currently a free subscriber to The Product Compass Newsletter.</em></p>
+<p><em>A full subscription gives you the full archive, all premium Notion templates, a closed Slack community, the <a href="https://substack.com/redirect/6e774b5d-68b8-46cb-ac6e-fd7eedcd6ab0?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">AI PM Learning Program</a>, the <a href="https://substack.com/redirect/d1e728e7-e446-448c-81f5-91a08001ff73?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Continuous Product Discovery Masterclass</a>, the <a href="https://substack.com/redirect/d8b22c71-de4e-4dab-8404-da9607e3e666?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">From Strategy to Objectives Masterclass</a>, and the <a href="https://substack.com/redirect/52bdb452-6fa8-4b26-a6f9-10e70ca957ea?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Product Innovation Masterclass</a>.</em></p>
+<p><em>Consider upgrading your account for the full experience. The price just went up, but for the next few days, there’s a temporary 30% lifetime discount.</em></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtY29kZS1wcmljaW5nJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNOVFkxT1RRM01Td2laWGh3SWpveE56YzRNalV4TkRjeExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLjFXeE5ydkJzNUlacFpYNWxrRHVzNFZKNWNRQS0tWlVRMjliWVpQXzdCQUkiLCJwIjoxOTM1NTk0MjcsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzU2NTk0NzEsImV4cCI6MjA5MTIzNTQ3MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.qu2xI_vsKQj8jHP975S2uFoEGqj9E9LYe7StvdoR0CI?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=193559427">Upgrade to paid</a></p>
+<p><em>No hassle. 30-day money-back guarantee. Many expense it through their learning budgets.</em></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=193559427&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MzU1OTQyNywicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3NzU2NTk0NzEsImV4cCI6MTc3ODI1MTQ3MSwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.rcxbgTipMOKUMlJEk261o2i1H0dol5_VM-406LjacoQ&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=193559427&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MzU1OTQyNywiaWF0IjoxNzc1NjU5NDcxLCJleHAiOjE3NzgyNTE0NzEsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.zowVNEn0tKJBTzSp_WXHUNnH8Kua0Z_Jyls6SAzdkgY&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9jbGF1ZGUtY29kZS1wcmljaW5nP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtcmVzdGFjay1jb21tZW50JmFjdGlvbj1yZXN0YWNrLWNvbW1lbnQmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVNelUxT1RReU55d2lhV0YwSWpveE56YzFOalU1TkRjeExDSmxlSEFpT2pFM056Z3lOVEUwTnpFc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKd2IzTjBMWEpsWVdOMGFXOXVJbjAuem93Vk5FbjB0S0pCVHpTcF9XWEhVTm5IOEt1YTBaX0p5bHM2U0F6ZGtnWSIsInAiOjE5MzU1OTQyNywicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3NTY1OTQ3MSwiZXhwIjoyMDkxMjM1NDcxLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.UZ_pVpen1TlqWEm9g3hcVeFAav19pZ5rEKVsNW2h66A?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVNelUxT1RReU55d2lhV0YwSWpveE56YzFOalU1TkRjeExDSmxlSEFpT2pFNE1EY3hPVFUwTnpFc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAuYmhvaWRfYmZOM082RnNvT0h2RmdrSHVjQ1BiZG54SlpSa2x2Sk1pM3ZndyIsInAiOjE5MzU1OTQyNywicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3NTY1OTQ3MSwiZXhwIjoyMDkxMjM1NDcxLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.V2xH9Yd19DGmhGqwJ4jLq-yZMBHZKnPd5r7YqLHyB78?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/1a701c5c-2918-4aac-bee6-bc9c1e6f27d7?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoxOTM1NTk0MjcsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzU2NTk0NzEsImV4cCI6MjA5MTIzNTQ3MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.IjzLV5wMejC2bHqYMjCvPLW-NWt70N65ixymIys2qYo?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

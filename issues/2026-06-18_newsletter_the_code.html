@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚀 Vercel open sources Eve — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚀 Vercel open sources Eve — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚀 Vercel open sources Eve</h1>
+<p class="meta">2026-06-18 · received 2026-06-18 23:05 +0900
+ · <a href="https://codenewsletter.ai/p/vercel-drops-eve-github-ships-a-desktop-home-for-coding-agents" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚀 Vercel open sources Eve</h1>
+<p><a href="https://www.vanta.com/downloads/on-demand-demo?utm_campaign=on-demand-demo&amp;utm_source=the-code&amp;utm_medium=newsletter"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ce6df015-4959-4022-b78c-9449ded76932/Group_Vanta.jpg?t=1781686846" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Back in late February, Block cut 4,000 jobs and credited the move to AI. Now we've seen the proof. Their internal agent system is already merging 1,500 PRs a week and handling 15% of all code changes company-wide. And Block just shared the full <a href="https://block.xyz/inside/block-rolls-out-builderbot-a-new-suite-of-ai-native-tools-that-changes-the-way-we-ship#:~:text=What%20it%20means%20for%20how%20we%20build"><strong>breakdown</strong></a> of exactly how they're changing the way they build.</p>
+<p><strong>Also:</strong> How to run agents while you sleep, what a former Meta engineer hands to AI, and which company the mind behind the Transformer just left Google for.</p>
+<hr />
+<p><a id="todays-insights"></a></p>
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>How to measure the impact of AI-assisted engineering</p>
+</li>
+</ul>
+<p><a id="how-to-make-claude-code-write-useful-plans"></a>
+* How to make Claude Code write useful plans</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://vercel.com/blog/introducing-eve#:~:text=Agents%20today%20are%20where%20the%20web%20was%20before%20frameworks%2C%20with%20everyone%20hand%2Drolling%20the%20same%20plumbing%20and%20nothing%20carrying%20over%20to%20the%20next%20one.%20Next.js%20ended%20this%20for%20the%20web%2C%20and%20eve%20is%20doing%20the%20same%20for%20agents."><img alt="Click here to watch how Vercel’s Eve works." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4c473a23-4c17-4c85-849c-64ec0ad3fdbc/Thumbnail__16_.jpg?t=1781778702" /></a>
+<em>Click here to watch how Vercel’s Eve works.</em></p>
+<hr />
+<p><strong>Vercel open sources a framework for production agents:</strong> The cloud hosting platform just dropped <a href="https://vercel.com/blog/introducing-eve"><strong>eve</strong></a>, which treats an agent as a simple directory of files instead of a complex web of custom code. It comes with built-in durable execution, sandboxes, human approvals, and evals. The framework works with any model and any MCP server, and the same agent runs across Slack, Discord, and GitHub. More than a hundred agents already run it in production.</p>
+<p><strong>OpenAI's Codex runs on any open model:</strong> The ChatGPT maker's coding agent supports more than just its own models, a feature that <a href="https://x.com/thsottiaux/status/2067181377028538431"><strong>resurfaced</strong></a> this week. You can use an open-source flag to route Codex through Ollama or LM Studio on your local machine, or even connect a custom provider like Azure via your config file. This allows you to keep proprietary code in-house and avoid per-token costs.</p>
+<p><strong>GitHub ships a desktop home for its coding agents:</strong> The code-hosting giant just made its Copilot app <a href="https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/"><strong>generally available</strong></a> on Mac, Windows, and Linux. Developers can now start a session from an issue, PR, or prompt, and even run multiple sessions in parallel, each on its own branch. The new canvases put you and the agent on the same plan, terminal, or browser, so progress stays steerable. Plus, you can also schedule recurring work in the cloud and bring your own model.</p>
+<hr />
+<h5><strong>PRESENTED BY VANTA</strong></h5>
+<h2><a href="https://www.vanta.com/downloads/on-demand-demo?utm_campaign=on-demand-demo&amp;utm_source=the-code&amp;utm_medium=newsletter">The enterprise deal is ready. Is your SOC 2?</a></h2>
+<p><a href="https://www.vanta.com/downloads/on-demand-demo?utm_campaign=on-demand-demo&amp;utm_source=the-code&amp;utm_medium=newsletter"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d23ac791-1d52-4d63-91eb-e149972645b9/Marcus_social_1920x1080_-_Mary_Almada__1_.jpg?t=1781696651" /></a></p>
+<hr />
+<p>The fastest-growing startups know that when customers ask for a SOC 2 report, they need to have it ready to go.</p>
+<p>That's where Vanta comes in. Used by over 16,000 global companies like Ramp, Cursor, and Harvey, Vanta helps you get audit-ready quickly — and stay that way.</p>
+<p>The <a href="https://www.vanta.com/downloads/on-demand-demo?utm_campaign=on-demand-demo&amp;utm_source=the-code&amp;utm_medium=newsletter">Vanta Agent</a> runs in your background like a 24/7 GRC engineer, pulling evidence, drafting fixes, and answering questionnaires.</p>
+<p><a href="https://www.vanta.com/downloads/on-demand-demo?utm_campaign=on-demand-demo&amp;utm_source=the-code&amp;utm_medium=newsletter">Don't let compliance be the reason a deal slips.</a> Watch the on-demand demo to see how Vanta works.</p>
+<p><a href="https://www.vanta.com/downloads/on-demand-demo?utm_campaign=on-demand-demo&amp;utm_source=the-code&amp;utm_medium=newsletter"><strong>See it now</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Lines of Code is a vanity metric. Here’s how top engineering teams measure productivity:</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9af29c4b-0c0e-44b4-a6f7-8ae2136c9167/superhumanteam_a_software_engineering_team_working_on_a_scree_606ac528-dfbc-46de-b473-773848e1ef24_0.jpg?t=1781779151" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>The unmeasured bill.</strong> Engineering teams are burning tokens without seeing real value. This happens because AI output is notoriously hard to track. After analyzing thousands of sessions, the Devin team at Cognition built a system to measure actual results. Now, they’re <a href="https://cognition.ai/blog/ai-productivity">sharing</a> their framework.</p>
+<p><strong>The activity trap.</strong> Tracking tokens and commits is easy but misleading. Cognition learned that code volume doesn't equal effort. A complex two-line fix can take all day. Meanwhile, a basic refactor creates thousands of lines in minutes. Measuring output just shows activity. It does not show how much work the agent actually took off your plate.</p>
+<p><strong>Measure in hours.</strong> Their solution shifts the focus to a simple question. How long would a human have taken to do this? Cognition uses an agent to review every session. It analyzes the full process rather than just the final code. They account for the investigation and the dead ends that never make it into a pull request. This allows them to measure the true engineering effort being saved.</p>
+<p><strong>Use the setup.</strong> You don't need to build Cognition's estimator to apply this. Ask your developers what AI saved them each week, then check that against your delivery data. From there, DX, a developer-productivity research firm, suggests <a href="https://getdx.com/research/measuring-ai-code-assistants-and-agents/">in their guide</a> pairing that output metric with a quality one, like change failure rate. This tells you more than how much was done. It tells you whether it was done well. And stop reporting lines of AI-written code. That only proves the tool was used. It does not prove it provided value.</p>
+<hr />
+<h5><strong>PRESENTED BY CODEWALNUT</strong></h5>
+<h2><a href="https://link.codewalnut.com/the-code">Are you still coding like it's 2022? Here's your guide to agentic coding:</a></h2>
+<p><a href="https://link.codewalnut.com/the-code"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3ef4282c-e880-42c1-b9bd-79a70a8a75dc/CodeWalnut_Banner_for_Agentic_Coding_Masterclass_-_Nattu___CodeWalnut.jpg?t=1781713173" /></a></p>
+<hr />
+<p>AI-generated code is everywhere.</p>
+<p>But engineers with agentic coding skills are in short supply.</p>
+<p>You are no longer paid to write code. You are in demand if you can command AI agents.</p>
+<p>Join a 90-minute hands-on masterclass on <a href="https://link.codewalnut.com/the-code">agentic coding</a>. See how to build software without writing a single line of code.</p>
+<p>Don’t let juniors with Cursor outpace your engineering experience.</p>
+<p><a href="https://link.codewalnut.com/the-code"><strong>Reserve your seat here -&gt;</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0b3d3bec-4691-4e29-99e7-0f036b8bdaa6/CleanShot_2026-06-18_at_14.39.30_2x.jpg?t=1781773818" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Loop Logic:</strong> The creator of Claude Code doesn't prompt Claude anymore. This guide shows how to <a href="https://x.com/mikenevermiss/status/2066401066518802637">build loops</a> that prompt your agents while you sleep (1.5M views).</p>
+</li>
+<li>
+<p><strong>Agent Playbook:</strong> Prompt engineering is the easy part. This thread <a href="https://x.com/sairahul1/status/2067171101978071501"><strong>breaks down</strong></a> the skill that keeps agents from failing on step 20.</p>
+</li>
+<li>
+<p><strong>Grunt Work:</strong> A former Meta staff engineer offloads his most tedious work to AI. Here's the unglamorous <a href="https://www.linkedin.com/posts/yangshun_most-people-are-using-ai-to-write-code-faster-activity-7469748308551548928-N7DL">chore list</a> that keeps a codebase from rotting.</p>
+</li>
+<li>
+<p><strong>Plan Mode Upgrade:</strong> This open-source skill turns Claude Code's wall-of-text plans into <a href="https://x.com/Steve8708/status/2066906454704218337"><strong>wireframes</strong></a> you can mark up before the agent touches anything.</p>
+</li>
+<li>
+<p><strong>Voice Coder Fix:</strong> If you dictate code with tools like Wispr Flow, this <a href="https://www.linkedin.com/posts/areganti_one-of-the-highest-leverage-lines-to-add-share-7472810376061984768-dFTT/">one line</a> in your CLAUDE.md tells the agent to read past transcription errors.</p>
+</li>
+<li>
+<p><strong>Caught Cheating:</strong> This <a href="https://bhavsarpratik.github.io/rsi/">site created</a> by an AI engineer at Galileo shows you how recursive self-improvement loops work and how they break.</p>
+</li>
+<li>
+<p><strong>Shazeer Moves:</strong> One of the minds behind the architecture inside every major LLM is <a href="https://x.com/NoamShazeer/status/2067400851438932297">leaving Google</a> for OpenAI. The talent war isn't cooling off (4.7M views).</p>
+</li>
+<li>
+<p><strong>Switch Flip:</strong> The U.S. just blocked Anthropic's newest models from <a href="https://techcrunch.com/2026/06/17/world-leaders-want-american-ai-they-just-dont-want-america-to-be-able-to-turn-it-off/">going abroad</a>, and world leaders at the G7 are spooked that American AI could get shut off on them at any moment.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to make Claude Code write useful plans</strong></h2>
+<p>Claude Code implementation plans often end up as massive Markdown files. Nobody actually reads them. This breaks the human review process because the output is just too clunky. Thariq Shihipar from Anthropic solved this by ditching <a href="https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html">Markdown for HTML</a>. Markdown is limited to basic text and ASCII.</p>
+<p>However, HTML allows for actual tables, SVG diagrams, and real mockups. You can open these right in your browser. To fix your workflow, just tell your planning prompt to add this one line:</p>
+<pre><code>Create a thorough implementation plan in a HTML file, be sure to make some mockups, show data flow and add important code snippets I might want to review. Make it easy to read and digest.
+</code></pre>
+<p>Claude writes the plan as a styled page rather than a wall of text. You can open it, scan the diagrams, and review relevant snippets instantly. Share the file with a link instead of a bulky attachment.</p>
+<p>This approach also works for PR reviews, incident reports, and design exploration. Start with the planning prompt, then pull from Thariq's <a href="https://github.com/anthropics/html-effectiveness">template gallery</a> as needed.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.deeplearning.ai/courses/voice-for-ai-agents-and-applications"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/226c3d78-1581-42cb-8eed-9e66ba842f2f/Thumbnail__15_.jpg?t=1781773628" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.deeplearning.ai/courses/voice-for-ai-agents-and-applications"><strong>How to build voice for AI agents and applications:</strong> </a> You’ll learn how to build fast, reliable voice-enabled AI agents. The tutorial covers how to embed interactive voice interfaces alongside UI clicks, add voice layers to existing agents with minimal code, and enable agents to make phone calls as an automated tool.</p>
+<hr />
+<p><a id="top-tool"></a></p>
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://www.pandaprobe.com/platform/cloud"><strong>PandaProbe Cloud:</strong> </a> An open-source agent engineering platform built for deep observability. It lets you trace, evaluate, monitor, and debug your AI agents across both development and production.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/mattpocock/skills"><strong>Skills For Real Engineers</strong></a>** (134K ⭐):** Software engineering fundamentals matter more than ever. This repo is an ex-Vercel engineer's best effort at condensing these basics into repeatable practices, helping you ship the best apps of your career.</p>
+<hr />
+<h3><strong>Trending Paper</strong></h3>
+<p><a href="https://openai.com/index/deployment-simulation/"><strong>How models may behave in real-world use before release (by OpenAI):</strong> </a> Traditional safety tests struggle to predict real-world AI behavior because models often realize they are being evaluated. Replaying past user conversations to simulate deployments fixes this, vastly improving risk forecasts and catching hidden flaws before release.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Developers are stockpiling local coding models that run entirely offline. Here is the best one to <a href="https://x.com/DataChaz/status/2066526796858978304">download</a> before you need it.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

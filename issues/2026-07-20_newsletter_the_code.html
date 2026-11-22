@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 AI labs are facing a compute crunch — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 AI labs are facing a compute crunch — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 AI labs are facing a compute crunch</h1>
+<p class="meta">2026-07-20 · received 2026-07-20 22:02 +0900
+ · <a href="https://codenewsletter.ai/p/moonshot-ai-freezes-new-kimi-k3-subs-alibaba-previews-qwen3-8-max" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 AI labs are facing a compute crunch</h1>
+<p><a href="https://www.ibm.com/think/insights/tokenmaxxing-dead-long-live-valuemaxxing?utm_content=PVLWW&amp;p1=Newsletter&amp;p2=%epid!&amp;p3=%ecid!"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a50263b5-e44f-4d65-a388-cde7c2097e68/Group_IBM.jpg?t=1784500315" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> The demand for the newly released Kimi K3 was so high that the Chinese lab had to freeze signups within 48 hours. Some observers think Moonshot doesn’t have enough compute available to meet the rising demand for their new model. Big AI labs like OpenAI and Anthropic are probably safe for now — but for how long?</p>
+<p><strong>Also:</strong> A developer's guide to cost-saving model routing, 12 agentic AI projects for your next AI engineering role, and a look inside Coinbase's agent-run engineering.</p>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://x.com/kimi_moonshot/status/2078855608565207130"><img alt="Source: X.com/KimiMoonshot" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/90d5db8c-6965-42fc-80aa-dcd255024628/Thumbnail__61_.jpg?t=1784542051" /></a>
+<em>Source: X.com/Kimi_Moonshot</em></p>
+<hr />
+<p><strong>AI labs are capping their best models:</strong> The Chinese AI lab Moonshot just <a href="https://x.com/kimi_moonshot/status/2078855608565207130">paused</a> new Kimi K3 signups, barely 48 hours after launch. The company said demand pushed its GPUs near capacity. Now it's splitting membership into consumer and coding tiers to ration compute. Anthropic <a href="https://x.com/claudeai/status/2078302415804379218">hit</a> the same wall. Claude Fable 5 will be included in all Max and Team Premium plans, but at 50% of the limits. VC Deedy Das <a href="https://www.linkedin.com/posts/debarghyadas_the-story-of-ai-in-the-next-few-years-is-share-7484641225543942145-vYxz/">argues</a> that Moonshot is short on infra needed to meet the demand.</p>
+<p><strong>Hugging Face breach exposes a blind spot in frontier guardrails:</strong> The AI startup recently reported a <a href="https://huggingface.co/blog/security-incident-july-2026"><strong>major breach</strong></a> orchestrated by an autonomous AI agent. It gained entry through a poisoned dataset and harvested internal credentials. When the defense team tried to respond, commercial frontier models <a href="https://www.thestack.technology/hugging-face-hacked-turned-to-chinese-llm-for-help-after-us-models-blocked-blue-team/"><strong>refused</strong></a> to analyze the exploit code. To keep the attacker data in-house, the team self-hosted China's GLM 5.2 instead. Now, Hugging Face recommends that all defenders maintain their own vetted, self-hosted model.</p>
+<p><strong>Alibaba claims its new model trails only Claude Fable 5:</strong> The Chinese e-commerce giant just previewed <a href="https://x.com/Alibaba_Qwen/status/2078759124914098291"><strong>Qwen3.8-Max</strong></a>, their first 2.4 trillion-parameter model capable of handling images, video, and documents alongside text. Alibaba says it ranks second only to Anthropic's Fable 5, though they haven't released benchmarks to back that up yet. Developers can test it now through <a href="https://www.alibabacloud.com/help/en/model-studio/qoder-agent"><strong>Qoder</strong></a> at 10% of the standard price, and the company has promised to release open weights soon.</p>
+<hr />
+<h5><strong>PRESENTED BY IBM</strong></h5>
+<h2><a href="https://www.ibm.com/think/insights/tokenmaxxing-dead-long-live-valuemaxxing?utm_content=PVLWW&amp;p1=Newsletter&amp;p2=%epid!&amp;p3=%ecid!">Tokenmaxxing is dead, long live valuemaxxing</a></h2>
+<p><a href="https://www.ibm.com/think/insights/tokenmaxxing-dead-long-live-valuemaxxing?utm_content=PVLWW&amp;p1=Newsletter&amp;p2=%epid!&amp;p3=%ecid!"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7ef2d6f9-1eb1-4196-9d17-30a98a2b7a0e/Superhuman-AI-July-20-1920x1080.jpg?t=1784500558" /></a></p>
+<hr />
+<p>Enterprise AI adoption was initially driven by <a href="https://www.ibm.com/think/insights/tokenmaxxing-dead-long-live-valuemaxxing?utm_content=PVLWW&amp;p1=Newsletter&amp;p2=%epid!&amp;p3=%ecid!">tokenmaxxing</a>: more users, more prompts and more AI-generated code. But as AI becomes embedded in development workflows, organizations are questioning whether higher usage equals better results.</p>
+<p>Discover why teams are shifting to <a href="https://www.ibm.com/think/insights/tokenmaxxing-dead-long-live-valuemaxxing?utm_content=PVLWW&amp;p1=Newsletter&amp;p2=%epid!&amp;p3=%ecid!">valuemaxxing</a>, focusing on fast delivery, high-quality code, reduced rework and business impact.</p>
+<p><a href="https://www.ibm.com/think/insights/tokenmaxxing-dead-long-live-valuemaxxing?utm_content=PVLWW&amp;p1=Newsletter&amp;p2=%epid!&amp;p3=%ecid!">Read the full article</a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="how-to-cut-your-ai-bill-without-downgrading-your-model"></a></p>
+<h2><strong>How to cut your AI bill without downgrading your model</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b822aa1f-7091-4808-b2ea-5c65da6d2bd3/superhumanteam_a_software_engineering_team_working_on_cutting_73df78b0-ef66-4e3f-bd50-9610cac7e096_3.jpg?t=1784540788" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>Adoption sends an invoice.</strong> Coding agents are spreading across teams, and their costs are rising fast. Most teams fix this by rationing. They limit seats or switch to cheaper models, hoping the output quality holds. A senior platform engineer suggests a <a href="https://tech.autoscout24.com/blog/posts/3-techniques-to-reduce-token-consumption-claude-code-codex/">different playbook</a> for cutting token spend. To really dig into this guide, we first need to look at what's actually driving these costs.</p>
+<p><strong>Billed by the token.</strong> Every word the model reads costs money, whether it's useful or not. If you paste a thousand-line log just to find one error, you pay for all thousand lines. If you ask a top-tier model for a simple docstring, you'll pay five times more than a smaller model for the exact same result. In short, not every problem demands the intelligence of Fable 5.</p>
+<p><strong>Fixes live in config.</strong>You can't expect every engineer to have perfect prompting discipline. The real fix happens at the environment level. Instead of manual effort, his team baked these optimizations into default settings to make them seamless to replicate:</p>
+<ul>
+<li>
+<p>Add a <a href="https://github.com/rtk-ai/rtk">hook</a> that trims noisy tool output before the model reads it.</p>
+</li>
+<li>
+<p>Give the agent a code graph, so targeted searches replace blind file reads.</p>
+</li>
+<li>
+<p>Route routine tasks to smaller, cheaper models automatically.</p>
+</li>
+</ul>
+<p><strong>The playbook is public.</strong> Every technique ships with a config you can copy. This includes everything from the output hook to the subagent templates. Combine this with Anthropic's <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching">prompt caching</a>, which cuts the cost of repeated context by 90%.</p>
+<hr />
+<h5><strong>PRESENTED BY LANGCHAIN</strong></h5>
+<h2><a href="https://info.langchain.com/guide/the-agentic-operating-model/?utm_medium=paid-email&amp;utm_source=thecode&amp;utm_campaign=q2-2026_agentic-operating-model_cv">Why AI agents break in production</a></h2>
+<p><a href="https://info.langchain.com/guide/the-agentic-operating-model/?utm_medium=paid-email&amp;utm_source=thecode&amp;utm_campaign=q2-2026_agentic-operating-model_cv"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/de983f8f-54ae-4918-b002-6499fb2fd6ab/Agentic_Operating_Model_1200x628__2_.jpg?t=1784321325" /></a></p>
+<hr />
+<p>Agents are non-deterministic, stateful, and dependent on models, prompts, and tools that change without warning. Traditional engineering playbooks to build and operate software for decades do not translate.</p>
+<p><a href="https://info.langchain.com/guide/the-agentic-operating-model/?utm_medium=paid-email&amp;utm_source=thecode&amp;utm_campaign=q2-2026_agentic-operating-model_cv">LangSmith's new guide</a> breaks down the Agentic Operating Model, aligning people, process, and technology to build, deploy, and scale agents.</p>
+<p><a href="https://info.langchain.com/guide/the-agentic-operating-model/?utm_medium=paid-email&amp;utm_source=thecode&amp;utm_campaign=q2-2026_agentic-operating-model_cv">Get the guide.</a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5199795d-db4a-4ec8-90ed-fc6fa98e4dbb/CleanShot_2026-07-20_at_12.16.58_2x.jpg?t=1784530086" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Kimi Review:</strong> A senior engineer stress-tested Moonshot's newly launched Kimi K3. His <a href="https://x.com/theo/status/2078071827021320425"><strong>verdict</strong></a> hints at where Chinese models are headed (3.4K likes).</p>
+</li>
+<li>
+<p><strong>Agent Portfolio:</strong> These 12 agentic AI projects can prove you're ready for an <a href="https://x.com/suraj_sharma14/status/2078449718414180393"><strong>AI engineering role</strong></a> (6K bookmarks).</p>
+</li>
+<li>
+<p><strong>AI at Scale:</strong> An engineer shares how he uses <a href="https://x.com/victortaelin/status/2078489750013403262"><strong>AI at scale</strong></a> without ever losing his codebase to chaos. The trick is what he audits.</p>
+</li>
+<li>
+<p><strong>Smart Routing:</strong> This developer's setup cuts token costs by** <a href="https://x.com/shannholmberg/status/2078122971898827117">routing tasks</a>** to the right model automatically. One agent makes every call.</p>
+</li>
+<li>
+<p><strong>Loops in Action:</strong> The CEO of Coinbase reveals how their AI agents now manage the entire <a href="https://x.com/brian_armstrong/status/2078151508692984314"><strong>engineering cycle</strong></a> from start to finish (1.2K bookmarks).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=aVO6E181cNU"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f6e26500-79f3-428f-9004-cef205895364/Thumbnail__60_.jpg?t=1784516503" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=aVO6E181cNU"><strong>How to plan, build, and run loops with Claude Code</strong></a>** (by an Anthropic engineer):** You’ll learn how an MTS at Anthropic optimizes Claude Code for complex, long-running tasks. You’ll also learn how to use commands like /loop, /goal, and workflows to automate multi-step processes, delegate work to sub-agents, and reduce micromanagement, ultimately improving your productivity.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://vibeisland.app"><strong>Vibe Island:</strong> </a> This tool puts all your AI coding agents right in your Mac’s notch. You can monitor tasks and approve permissions instantly. Then, jump back to your terminal without breaking your flow.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/MoonshotAI/kimi-code"><strong>Kimi Code CLI</strong></a>** (3.9K ⭐):** An AI coding agent that runs in your terminal. It reads, edits, and executes code. It uses Moonshot AI to automate complex engineering tasks directly from your command line.</p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://www.freestyle.sh/blog/opinion/designing-apis-for-agents">How to design APIs for agents:</a> APIs designed for humans rely on defaults to hide complexity, which often causes AI agents to hallucinate. To work effectively, agent APIs must instead prioritize explicit field definitions, precise error messages, and raw facts over helpful abstractions.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to add instructions while Codex is working</strong></h2>
+<p>When Codex goes off track mid-task, both options are frustrating. You can let it finish and ask for a redo, but that bloats your context. Or, you can interrupt the turn and lose all progress.</p>
+<p>Thibault Sottiaux, head of Codex at OpenAI, shared a <a href="https://x.com/thsottiaux/status/2012074358471319599">built-in fix</a> for the CLI. Steer mode lets you inject a message at the next thinking step. This happens while the turn is still running. The agent adjusts course instantly without stopping. To use it, enable Steer mode inside any Codex session:</p>
+<pre><code>/experimental
+</code></pre>
+<p>Toggle the "Steer conversation" setting to on. This update saves directly to your config file, so it stays active across all your sessions.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from Friday</strong></h3>
+<p>Check out <a href="https://www.glean.com/resources/guides/eng-field-guide-ai-stack/?utm_source=3rd-party&amp;utm_medium=email&amp;utm_partner=the-code">this guide</a> to building an AI stack that helps your team ship faster and more reliably.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

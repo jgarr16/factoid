@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🐋 Developers are turning to DeepSeek — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🐋 Developers are turning to DeepSeek — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🐋 Developers are turning to DeepSeek</h1>
+<p class="meta">2026-08-03 · received 2026-08-03 23:06 +0900
+ · <a href="https://codenewsletter.ai/p/alibaba-drops-qwen3-8-max-its-most-capable-model-yet" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🐋 Developers are turning to DeepSeek</h1>
+<p><a href="https://cloud.google.com/resources/content/technical-guide-genmedia?utm_source=gfs&amp;utm_medium=email&amp;utm_campaign=FY26-Q3-GLOBAL-GCP41128-website-dl-startupgenmedia-195260&amp;utm_content=superhuman_2"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e72f8296-2a34-455c-914e-a5b868825fe0/Group_Google__5_.jpg?t=1785730032" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Over the past week, we saw multiple instances where the harness actually mattered more than the model. Top devs in Silicon Valley have finally admitted it. A Vercel engineer just burnt 60 billion tokens to refine a single AGENTS.md file that actually handles long-running agentic tasks without breaking. <a href="https://x.com/MarcosHernanz/status/2083954734487212511">Steal it.</a></p>
+<p><strong>Also:</strong> DeepSeek drops a cost-effective model for devs, Y Combinator unveils its internal harness, and how to build a code review agent.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Big Tech's most wanted engineering skill</p>
+</li>
+<li>
+<p>Build AI agents that fix user bugs automatically</p>
+</li>
+<li>
+<p>How to run an agentic setup from your phone</p>
+</li>
+<li>
+<p>Codex builds 3D interactive websites</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=CKlK-KDFKjM"><img alt="Click here to see Alibaba Qwen3.8-Max in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/477a96bb-f022-4bdf-84bc-6d023363c260/Thumbnail__86_.jpg?t=1785749908" /></a>
+<em>Click here to see Alibaba Qwen3.8-Max in action.</em></p>
+<hr />
+<p><strong>Alibaba brings its biggest model to developers:</strong> The Chinese tech giant just dropped <a href="https://x.com/Alibaba_Qwen/status/2084100707423289643">Qwen 3.8 Max</a>, its most advanced model to date at 2.4 trillion parameters with 95 billion active. This multimodal powerhouse handles text, images, and video within a 1M token context window. It also includes five integrated tools, including web search and a code interpreter. Developers can access the model at a flat rate of $2 per million input tokens and $6 per million output tokens. More details on the API <a href="https://www.qwencloud.com/models/qwen3.8-max">here.</a></p>
+<p><strong>DeepSeek's cheapest model catches up to Anthropic:</strong> A Chinese AI startup just unveiled <a href="https://x.com/deepseek_ai/status/2083084415157022911">V4-Flash</a> into public beta, nearly closing the performance gap with frontier labs like Anthropic. The model scored 82.7 on Terminal-Bench 2.1, putting it within a few points of Claude Opus 4.8 on agentic coding. At just <a href="https://x.com/cline/status/2083638204037820734">$0.14 per million</a> input tokens, it delivers that near-frontier performance at a fraction of the cost. You can read more about the API <a href="https://api-docs.deepseek.com/quick_start/agent_integrations/codex/">here.</a></p>
+<p><strong>YCombinator open-sources its company-wide agent harness:</strong> The startup incubator just open-sourced <a href="https://x.com/ycombinator/status/2083243960684908768"><strong>QM</strong></a>, the same multiplayer agent harness its engineering teams use internally. You can easily customize it like Hermes or OpenClaw, but it’s built for entire companies. Every person and room gets its own memory, permissions, and sandbox. Security modes range from strict approval to a no-pause dangerous mode. It works with Pi, OpenCode, Codex, or Claude Code. <a href="https://github.com/yc-software/qm">Try it here.</a></p>
+<hr />
+<h5><strong>PRESENTED BY GOOGLE</strong></h5>
+<h2><a href="https://cloud.google.com/resources/content/technical-guide-genmedia?utm_source=gfs&amp;utm_medium=email&amp;utm_campaign=FY26-Q3-GLOBAL-GCP41128-website-dl-startupgenmedia-195260&amp;utm_content=superhuman_2">Startups: This is the only guide you need for generative media</a></h2>
+<p><a href="https://cloud.google.com/resources/content/technical-guide-genmedia?utm_source=gfs&amp;utm_medium=email&amp;utm_campaign=FY26-Q3-GLOBAL-GCP41128-website-dl-startupgenmedia-195260&amp;utm_content=superhuman_2"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/10dcabc3-4333-4993-93ea-cc7d3a3464b0/TABN_26_Hero_imagery_With_Title%2BCTA_1_1920x1080__2___1_.jpg?t=1785730229" /></a></p>
+<hr />
+<p>If your startup doesn’t have a generative media plan in place (or you need to sharpen yours), <a href="https://cloud.google.com/resources/content/technical-guide-genmedia?utm_source=gfs&amp;utm_medium=email&amp;utm_campaign=FY26-Q3-GLOBAL-GCP41128-website-dl-startupgenmedia-195260&amp;utm_content=superhuman_2">read Google’s latest startup guide</a> on using DeepMind’s generative media models.</p>
+<p>It will teach you everything you need to succeed with generative media, including:</p>
+<ul>
+<li>
+<p><a href="https://cloud.google.com/resources/content/technical-guide-genmedia?utm_source=gfs&amp;utm_medium=email&amp;utm_campaign=FY26-Q3-GLOBAL-GCP41128-website-dl-startupgenmedia-195260&amp;utm_content=superhuman_2">Building with Google DeepMind’s generative media models</a>, including Gemini Image (Nano Banana), Gemini Omni, Veo, Lyria, Gemini Audio, Gemini, and Genie</p>
+</li>
+<li>
+<p>Creating production-grade output from generative models</p>
+</li>
+<li>
+<p>How to achieve trust and quality efficiently</p>
+</li>
+</ul>
+<p><a href="https://cloud.google.com/resources/content/technical-guide-genmedia?utm_source=gfs&amp;utm_medium=email&amp;utm_campaign=FY26-Q3-GLOBAL-GCP41128-website-dl-startupgenmedia-195260&amp;utm_content=superhuman_2"><strong>Download the guide here.</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Big tech and frontier labs are hiring for this engineering skill (insights from Netflix CTO)</strong></h2>
+<p><a href="https://www.youtube.com/watch?v=t0GiTyz4syY"><img alt="Click here to watch Netflix CTO’s talk on systems thinking." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4a28373f-20d6-465e-bbe4-2b7dff6fe173/Thumbnail__85_.jpg?t=1785745765" /></a>
+<em>Click here to watch Netflix CTO’s talk on systems thinking.</em></p>
+<hr />
+<p><strong>The narrow expert is worth less.</strong> Deep expertise used to be the safest bet in engineering. You'd master a specific domain and become the indispensable go-to person. But that advantage is fading. On a recent podcast, Netflix CTO Elizabeth Stone <a href="https://www.youtube.com/watch?v=t0GiTyz4syY">noted</a> that large organizations can no longer depend on specialists who only know one thing. Today, she's looking for systems thinkers.</p>
+<p><strong>Range over depth.</strong> A few years back you could get by as a specialist. Now companies want engineers who pivot. They want people who jump between backend and frontend, dive into infrastructure, and get up to speed on new layers fast. Being adaptable now carries more weight than just mastering one niche area.</p>
+<p><strong>The irreplaceable part.</strong> Stone notes that truly great engineering remains rare, so deep expertise still holds significant value. That said, being a specialist in only one narrow area is no longer a safe bet. There is a massive gap between simply writing code and actually understanding how a system works. While AI agents can handle the coding, it takes a real engineer to verify the output and diagnose exactly why something failed.</p>
+<p><strong>The big picture</strong>.** **That level of understanding isn't something you can just pick up as you go. It develops when you start questioning the fundamentals of a problem before you even touch the keyboard. This <a href="https://www.youtube.com/watch?v=hMarCPjGEuw&amp;t=3s">tutorial</a> on systems thinking for engineers dives into the details, covering everything from feedback loops to second-order effects.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1c4bfb8d-740d-4ec9-8863-f9ce804d7e22/CleanShot_2026-08-03_at_12.35.34_2x.jpg?t=1785740777" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Codex 3D Magic:</strong> A developer vibe-coded a fully interactive 3D human** <a href="https://x.com/thebuggeddev/status/2083884856531177942">anatomy app</a>** with GPT 5.6 and Codex, starting from a single design image (1M views).</p>
+</li>
+<li>
+<p><strong>Phone Setup:</strong> Top devs are shipping code mid-dinner date. This** <a href="https://x.com/TermiusHQ/status/2082616764605874207">three-tool stack</a>** keeps their agents running while they're away (1.1M views).</p>
+</li>
+<li>
+<p><strong>Bug Autopilot:</strong> A top Silicon Valley engineer connected user feedback straight to cloud agents that <a href="https://x.com/ericzakariasson/status/2083206179254309036"><strong>now fix bugs</strong></a> and open PRs on their own (2.3K bookmarks).</p>
+</li>
+<li>
+<p><strong>Model Whisperer:</strong> A Meta engineer who runs every major AI model daily reveals which <a href="https://x.com/kunchenguid/status/2082525751606419830"><strong>one to use</strong></a> for what (1.5K likes).</p>
+</li>
+<li>
+<p><strong>Shire Simulator:</strong> Andrej Karpathy gave Opus 5 the opening paragraph of Lord of the Rings and $10. Two hours later, it had written** <a href="https://x.com/karpathy/status/2083749667410727319">5,500 lines of code</a>** (3.3M views).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.deeplearning.ai/courses/ai-code-review"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f64bc355-fddd-4ba1-aeb2-8a90520154ff/Thumbnail__11___1_.jpg?t=1785734262" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.deeplearning.ai/courses/ai-code-review"><strong>How to build a review agent (by DeepLearning.ai):</strong> </a> You’ll learn to make AI code reviews work for you. This tutorial covers practical tips like pre-PR reviews and repo context, plus risk-based sorting. Finally, you’ll build your own context-aware review system, starting with a custom retrieval engine and expanding into specialized AI agents.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://graphify.com/"><strong>Graphify</strong></a>** (100K** ⭐<strong>):</strong> This open-source repo turns your codebase into a knowledge graph that your AI assistant queries directly instead of searching through text.</p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://www.llamaindex.ai/blog/parse-gateway-smart-page-level-document-parser-routing"><strong>How to cut document parsing costs without losing accuracy:</strong> </a> Most document parsing tools treat every page the same way, leading you to either overspend on simple pages or lose accuracy on complex ones. Parse Gateway solves this by checking each page's complexity. It handles simple pages with free local parsing and only routes the difficult ones to high-performance LlamaParse tiers.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-stop-codex-subagents-from-draining-your-usage-limits"></a></p>
+<h2><strong>How to stop Codex subagents from draining your usage limits</strong></h2>
+<p>Codex subagents default to the parent session's model, meaning every delegated task costs as much as your main thread. One engineer shared a <a href="https://x.com/Voxyz_ai/status/2083545774768402673"><strong>workaround</strong></a>: pin the delegate to GPT-5.6 Luna with max reasoning effort. This maximizes performance while keeping costs at a minimum.</p>
+<p>Just paste this into Codex, and it will write the agent file for you:</p>
+<pre><code>create a custom agent named luna_worker at ~/.codex/agents/luna-worker.toml with model = &quot;gpt-5.6-luna&quot; and model_reasoning_effort = &quot;max&quot;.
+
+add instructions for bounded delegated work, validate against my installed Codex version, and show me the diff.
+</code></pre>
+<p>Codex only triggers custom agents when you explicitly call them out, so make sure to mention luna_worker in your prompt to delegate tasks. Agents stored in ~/.codex/agents/ will load for every project you work on.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from Friday</strong></h3>
+<p>Check out <a href="https://www.youtube.com/watch?v=bhB57Meachc">this tutorial</a> on 7 ways to cut your Claude Code token usage in half.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

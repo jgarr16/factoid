@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>⚡ Anthropic drops Claude Tag — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="⚡ Anthropic drops Claude Tag — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>⚡ Anthropic drops Claude Tag</h1>
+<p class="meta">2026-06-24 · received 2026-06-24 23:03 +0900
+ · <a href="https://codenewsletter.ai/p/anthropic-drops-claude-tag-krea-unveils-krea-2-raw-and-turbo" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>⚡ Anthropic drops Claude Tag</h1>
+<p><a href="https://www.ibm.com/think/insights/standardize-ai-code-generation-across-your-development-team?utm_content=PVLWW&amp;p1=Display&amp;p2=447887783&amp;p3=247627917&amp;utm_term=30A06"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/032a7f59-68ca-4b27-b49c-596cdee9ad05/Group_IBM.jpg?t=1782246689" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> It’s bad for all the startups that raised money to build an AI assistant for Slack. Anthropic just gave Claude its own Slack account, and anyone can now delegate tasks or ask questions directly in Slack without opening their browsers. <a href="https://x.com/bcherny/status/2069474681749754272">See how.</a></p>
+<p><strong>Also:</strong> Snowflake’s CEO shares how GLM-5.2 compares against Opus-4.7, a tool to refine your agent loop before it drains your token, and how an Amazon senior engineer 10x'd her pay.</p>
+<hr />
+<p><a id="todays-insights"></a></p>
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>Codex-maxxing for long-running work</p>
+</li>
+</ul>
+<p><a id="how-to-run-glm-52-in-claude-code"></a>
+* How to run GLM-5.2 in Claude Code</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://x.com/claudeai/status/2069468693017268244"><img alt="Click here to watch Anthropic’s Claude tag in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4b924b59-3a47-47d9-85a5-d416b4bfee79/Thumbnail__25_.jpg?t=1782291111" /></a>
+<em>Click here to watch Anthropic’s Claude tag in action.</em></p>
+<hr />
+<p><strong>Anthropic unveils an AI coworker you can tag in Slack:</strong> The AI lab just dropped <a href="https://www.anthropic.com/news/introducing-claude-tag"><strong>Claude Tag</strong></a>, bringing the model into Slack as a multiplayer teammate. Once tagged, the entire channel can watch it work, hand off threads, and let it tackle bugs or tickets. It builds context as it goes and can even run solo projects for days. Now available in beta for Enterprise and Team customers. <a href="https://www.youtube.com/watch?v=VojDzHaciKQ"><strong>Watch how it works.</strong></a></p>
+<p><strong>Mistral's new model turns documents into structured data:</strong> The French AI lab just released <a href="https://mistral.ai/news/ocr-4/"><strong>OCR 4</strong></a>. It returns not just clean text but bounding boxes, typed blocks, and confidence scores for every region. That data feeds directly into RAG and agent pipelines. It gives teams citation-ready chunks instead of raw dumps. The model runs self-hosted in a single container and supports 170 languages. API access starts at $4 per 1,000 pages. More details on <a href="https://docs.mistral.ai/models/model-cards/ocr-4-0">the API.</a></p>
+<p><strong>Krea drops open image models that render in seconds:</strong> The creative tools startup just opened the weights to two new <a href="https://www.krea.ai/krea-2-open-source"><strong>image generators</strong></a> on Hugging Face. Developers can train custom styles and LoRAs using Krea 2 Raw, an unaligned base checkpoint that adopts any aesthetic without clashing with built-in defaults. You can then port that tuning directly to Krea 2 Turbo, which renders native 2k visuals in about two seconds on consumer hardware. You can download it <a href="https://huggingface.co/krea/Krea-2-Raw"><strong>here</strong></a>.</p>
+<hr />
+<h5><strong>PRESENTED BY IBM</strong></h5>
+<h2><a href="https://www.ibm.com/think/insights/standardize-ai-code-generation-across-your-development-team?utm_content=PVLWW&amp;p1=Display&amp;p2=447887783&amp;p3=247627917&amp;utm_term=30A06">Scaling AI code with shared standards</a></h2>
+<p><a href="https://www.ibm.com/think/insights/standardize-ai-code-generation-across-your-development-team?utm_content=PVLWW&amp;p1=Display&amp;p2=447887783&amp;p3=247627917&amp;utm_term=30A06"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/601ba9d4-e878-4e36-8806-f2a034e7cee7/The_Code_Primary_6.24_Image__1_.png?t=1782247126" /></a></p>
+<hr />
+<p>AI agents now reportedly generate an average of <a href="https://www.ibm.com/think/insights/standardize-ai-code-generation-across-your-development-team?utm_content=PVLWW&amp;p1=Display&amp;p2=447887783&amp;p3=247627917&amp;utm_term=30A06">48% of code for surveyed</a>
+<a href="https://www.ibm.com/think/insights/standardize-ai-code-generation-across-your-development-team?utm_content=PVLWW&amp;p1=Display&amp;p2=447887783&amp;p3=247627917&amp;utm_term=30A06">organizations</a>, but alignment is falling behind. 55% of engineering leaders surveyed are concerned about <a href="https://www.ibm.com/think/insights/standardize-ai-code-generation-across-your-development-team?utm_content=PVLWW&amp;p1=Display&amp;p2=447887783&amp;p3=247627917&amp;utm_term=30A06">losing shared understanding of their codebase</a>, and 39% are worried about shipping with confidence.</p>
+<p>The challenge shows up in inconsistent frameworks, patterns and practices. Without project-specific guidance, each AI interaction produces different results. Project-level rules help teams encode standards and help keep output aligned.</p>
+<p><a href="https://www.ibm.com/think/insights/standardize-ai-code-generation-across-your-development-team?utm_content=PVLWW&amp;p1=Display&amp;p2=447887783&amp;p3=247627917&amp;utm_term=30A06"><strong>Dive deeper</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="how-to-run-24-hour-codex-agents-without-torching-your-budget"></a></p>
+<h2><strong>How to run 24-hour Codex agents without torching your budget</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9dfaa83a-7563-45a3-a61c-8cd6eff98fd0/superhumanteam_a_software_engineering_team_working_on_steerin_6fbabd4e-eeff-40cc-a5f1-680adfbe6ced_0.jpg?t=1782293865" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>How it crept up.</strong> Last year, AI spending was barely a blip on the radar. But as coding agents started running solo for hours, the costs exploded. One developer kicked off a refactor on Friday and returned to a <a href="https://leanopstech.com/blog/agentic-ai-cost-runaway-token-budget-2026/">$4,200 API bill</a>. Since every turn resends the full context, long runs quietly snowball. Now, teams say AI costs are becoming the second-biggest <a href="https://www.axios.com/2026/04/26/ai-cost-human-workers">expense</a> after salaries.</p>
+<p><strong>Nobody pays the bill.</strong> Engineers picking models rarely see the bill. To play it safe, they default to top-tier models and max settings every time. But at scale, those costs increase exponentially. A 25-person team can <a href="https://www.vantage.sh/blog/agentic-coding-costs">easily burn</a> $72,000 a year on tasks that would've cost $7,200 (or less) on a cheaper model. Most of that extra spend is just paying a top model to double-check work it already finished correctly on the first attempt.</p>
+<p><strong>Point it, don't kill it.</strong> Expensive runs are where you see the real payoff, so the move is to guide them rather than to shut them down. OpenAI once let Codex run for <a href="https://developers.openai.com/blog/run-long-horizon-tasks-with-codex">25 hours</a> on one task, and it actually shipped working code. What kept it on track was a clear "definition of done" it could test against. If you give an agent a vague goal like "build the feature," it'll drift for hours. But if you tell it to "port this library, keep the API compatible, and finish once the original tests pass," it has a specific target to check its work against.</p>
+<p><strong>Keep it on a leash.</strong> Even on long runs, you need to stay on top of the checkpoints. Steer the model mid-task rather than letting it run blind, and always review diffs before merging. Avoid leaving expensive automation unattended; set medium reasoning as your default and require an opt-in for heavy-duty tasks. Ultimately, measure success by code shipped and PRs closed, not tokens burned. OpenAI's Codex-maxxing guide is the <a href="https://openai.com/index/codex-maxxing-long-running-work/"><strong>blueprint here.</strong></a></p>
+<hr />
+<h5><strong>PRESENTED BY UNBLOCKED</strong></h5>
+<h2><a href="https://srv.buysellads.com/ads/long/x/THZW62ZPTTTTTT6SF6OCWTTTTTTKOWJO2VTTTTTTN4VIPBETTTTTTJBCGVBWENZM5RAHT7BBCQKC4KZNKJR66IQIQ2ST?cid=383782">Unblocked: The context engine to save you time and tokens</a></h2>
+<p><a href="https://srv.buysellads.com/ads/long/x/THZW62ZPTTTTTT6SF6OCWTTTTTTKOWJO2VTTTTTTN4VIPBETTTTTTJBCGVBWENZM5RAHT7BBCQKC4KZNKJR66IQIQ2ST?cid=383782"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/13185a9a-6f76-43d5-bd33-97dbd92238f3/TV_Screensaver_Quote_-_4__1___1_.jpg?t=1782283533" /></a></p>
+<hr />
+<p>AI is in your engineering workflow. While the token spend shows it, the throughput doesn't. The human is very much still in the loop, and that's a context problem.<a href="https://srv.buysellads.com/ads/long/x/THZW62ZPTTTTTT6SF6OCWTTTTTTKOWJO2VTTTTTTN4VIPBETTTTTTJBCGVBWENZM5RAHT7BBCQKC4KZNKJR66IQIQ2ST?cid=383782"> Unblocked</a> turns code, docs, tickets, and conversations into actionable context, so your agent stays on track without the babysitting.</p>
+<p><a href="https://srv.buysellads.com/ads/long/x/THZW62ZPTTTTTT6SF6OCWTTTTTTKOWJO2VTTTTTTN4VIPBETTTTTTJBCGVBWENZM5RAHT7BBCQKC4KZNKJR66IQIQ2ST?cid=383782"><strong>Register for free.</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<p><a id="whats-trending-on-socials-and-headlines"></a></p>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/38f654f1-3c7e-4c2d-8c81-a75faa7b319f/CleanShot_2026-06-24_at_17.44.36_2x.jpg?t=1782303324" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Double-Checker:</strong> Snowflake's CEO posted a <a href="https://x.com/RamaswmySridhar/status/2069460464371954171">benchmark</a> on how much more GLM-5.2 double-checks its work compared to Opus-4.7. The results aren’t what you'd expect.</p>
+</li>
+<li>
+<p><strong>One-Word Fix:</strong> A single-word swap in your GitHub Actions scripts shaves 200 to 400ms off <a href="https://x.com/jiahan_c/status/2069421399765311626">every call.</a> Most developers still run the slower default.</p>
+</li>
+<li>
+<p><strong>Loop Design:</strong> A poorly designed agent loop burns tokens and hands you slop fast. This <a href="https://x.com/KSimback/status/2067874418232119347"><strong>open-source tool</strong></a> sharpens your loop before Claude Code ever runs.</p>
+</li>
+<li>
+<p><strong>Income 10x:</strong> A Senior Applied Scientist at Amazon went from $60K to over $600K in eight years. The first move? <a href="https://www.youtube.com/watch?v=N5GSp8Fg80w">A pay cut</a> she took on purpose.</p>
+</li>
+<li>
+<p><strong>AI Vocab:</strong> Most people who say they know AI freeze on the basics. A Microsoft AI director <a href="https://x.com/pvergadia/status/2069170426551627966">broke down</a> 10 core terms with hand-drawn visuals.</p>
+</li>
+<li>
+<p><strong>Fired for Shipping:</strong> A Google engineer built a viral Workspace CLI that hit #1 on HN. Google rolled out its own version, then <a href="https://x.com/JPoehnelt/status/2069482265953087602">fired him</a> two days later.</p>
+</li>
+<li>
+<p><strong>Status Bar:</strong> A developer built a tiny macOS <a href="https://x.com/mickces/status/2068774236194300210">menu bar app</a> that shows Claude Code's live status. You see when it's thinking, running a tool, or waiting on you (1.4K likes).</p>
+</li>
+<li>
+<p><strong>Learn Anything:</strong> Hermes Agent's new command reads any source you throw at it, code, API docs, manuals, PDFs, and distills a <a href="https://x.com/nousresearch/status/2069526242236182697"><strong>reusable skill</strong></a> you can run again.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to run GLM-5.2 in Claude Code</strong></h2>
+<p>Running Opus 4.8 in Claude Code can get pretty pricey during long sessions, since those per-token costs really start to stack up. Alex Ker, who handles engineering and GTM at Baseten, shared a <a href="https://x.com/thealexker/status/2069163621469335757">workaround</a> that points Claude Code toward GLM-5.2 instead. This lets you keep the same interface while running on a much cheaper model.</p>
+<p><strong>Step 1.</strong> Install the latest Claude Code.</p>
+<pre><code>npm install -g @anthropic-ai/claude-code
+</code></pre>
+<p><strong>Step 2.</strong> Create an account at <a href="https://baseten.co">baseten.co</a> and grab an API key from “app.baseten.co/settings/api_keys”. Save it for the next step.</p>
+<p><strong>Step 3.</strong> Open “~/.claude/settings.json” and paste this block, swapping in your key. The auth token is the only value you fill in.</p>
+<pre><code>&quot;env&quot;: {
+&quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;your_baseten_api_key&quot;,
+&quot;ANTHROPIC_BASE_URL&quot;: &quot;https://inference.baseten.co&quot;,
+&quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;zai-org/GLM-5.2&quot;,
+&quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;zai-org/GLM-5.2&quot;,
+&quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;zai-org/GLM-5.2&quot;
+}
+</code></pre>
+<p>Make sure to keep the "https://" in the base URL, as Claude Code requires the full scheme. Once you launch Claude Code, every model slot will route to GLM-5.2.</p>
+<p>You'll have the same terminal, tool usage, and multi-turn sessions, but at about 5x cheaper per token compared to Opus 4.8.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=SWGFVNQNLm4"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4cfffb76-23f6-4075-b4b9-a1e31389fa4b/Thumbnail__26_.jpg?t=1782291395" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=SWGFVNQNLm4"><strong>How to ship production‑grade Notion Workers:</strong> </a> You’ll learn how to level up your Notion setup by building custom Workers. This tutorial walks you through setting up the CLI and deploying three key automations: event-driven webhooks, scheduled data syncs, and custom AI agent tools. You'll master complex workflows natively without needing third-party no-code apps.</p>
+<hr />
+<p><a id="top-tool"></a></p>
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://conduit.southforgeai.com"><strong>Conduit:</strong> </a> Slash AI token usage by 90% using a local gateway. It replaces bloated tool lists with an on-demand search, making your agents faster and way more efficient.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/mikeroyal/Self-Hosting-Guide"><strong>Self Hosting Guide</strong></a>** (21.6K** ⭐<strong>):</strong> Master self-hosting with this end-to-end guide covering everything from Docker and LLMs to VPNs, backups, and home lab hardware. It's built for devs who want to own their stack, cut SaaS costs, and ship reliable infrastructure like pros.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://developers.openai.com/blog/mastering-codex-remote-for-engineering"><strong>Mastering Codex Remote for engineering (by OpenAI):</strong> </a> A lot of devs write off Codex Remote as nothing more than a status checker for their phones. In reality, it's a real breakthrough. It serves as a full command center, giving you the power to direct, review, and manage complex projects from anywhere.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Check out this 8-hour tutorial to master building <a href="https://www.youtube.com/watch?v=rQE3w8Qjx98">secure, scalable agents</a> with guardrails and evaluation tools.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>⚡ Anthropic adds visuals to Claude — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="⚡ Anthropic adds visuals to Claude — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>⚡ Anthropic adds visuals to Claude</h1>
+<p class="meta">2026-03-13 · received 2026-03-13 23:05 +0900
+ · <a href="https://codenewsletter.ai/p/claude-generates-interactive-visuals-nvidia-ships-a-new-open-model" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>⚡ Anthropic adds visuals to Claude</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/32c8c971-340a-4f62-a6b8-f362e57e5397/image__83_.jpg?t=1770628392" /></p>
+<hr />
+<p><strong>Welcome back.</strong> Anthropic is having a moment, and it's not slowing down. Starting today, Claude no longer defaults to text. It now picks the best format for any response — whether it's a chart, diagram, or flowchart — all built and fully editable right within the chat.</p>
+<p><strong>Also:</strong> How to access 1,000+ public APIs for your next project, 8 Claude Code settings most devs miss, and a single prompt to audit your codebase for security loopholes.</p>
+<hr />
+<p><a id="todays-insights"></a></p>
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>Why your roadmap needs an agent-first rewrite</p>
+</li>
+</ul>
+<p><a id="how-to-ask-claude-code-a-question-mid-task"></a>
+* How to ask Claude Code a question mid-task</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://x.com/claudeai/status/2032124273587077133"><img alt="Click here to see Claude’s interactive visuals in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/21f89f87-d2bc-4f15-9fb0-aa7915182d0c/Untitled_design__14_.jpg?t=1773395893" /></a>
+<em>Click here to see Claude’s interactive visuals in action.</em></p>
+<hr />
+<p><strong>Claude now generates charts and diagrams in chat:</strong> Anthropic has just shipped a beta update enabling Claude to create <a href="https://x.com/claudeai/status/2032124273587077133"><strong>interactive visuals</strong></a>, including flowcharts, bar graphs, maps, and decision trees, right inside the conversation window. Claude automatically selects the best format for a query and lets users refine the output using follow-up prompts. The feature is available across all free and paid plans. Watch it break down RSA encryption <a href="https://x.com/adocomplete/status/2032133653455913117"><strong>here</strong></a>.</p>
+<p><strong>Google reimagines Maps with its biggest AI update:</strong> The search giant is rolling out <a href="https://blog.google/products-and-platforms/products/maps/ask-maps-immersive-navigation/"><strong>two major</strong></a> Gemini-powered features to Google Maps. First, a new "Ask Maps" feature lets users type questions and receive personalized, conversational responses. They also launched Immersive Navigation, which provides a 3D driving experience using Street View and aerial imagery to highlight lanes, turns, and road details in real time. See it in <a href="https://x.com/cgtwts/status/2032206760120107292">action</a>.</p>
+<p><strong>Nvidia ships new open model for agentic workloads:</strong> The chipmaker just released** <a href="https://developer.nvidia.com/blog/introducing-nemotron-3-super-an-open-hybrid-mamba-transformer-moe-for-agentic-reasoning/">Nemotron 3 Super</a>**, a hybrid Mamba-Transformer model built for multi-agent systems. While it features 120B total parameters, only 12B are active, allowing it to deliver five times the throughput of previous versions. With a native 1M-token context window, it’s built to handle complex, long-form tasks like software development and cybersecurity triaging.</p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Why your roadmap needs an agent-first rewrite</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e5417026-1619-438e-a8eb-bb060cc36dfb/dfsdfsdg_59863_one_software_developer_working_with_multiple_b_9e52b5e8-0830-464c-b6a8-ee96a434a6d0_1.jpg?t=1765272430" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>Forget the chatbot era.</strong> Box CEO Aaron Levie just <a href="https://x.com/levie/status/2030714592238956960">dropped</a> an essay this week on how agents have moved well past chatbots. Tools like Claude Code and Devin can execute code, manage files, and call APIs within sandboxed environments. They're already being deployed for complex knowledge work, ranging from financial audits to customer support and beyond.</p>
+<p><strong>Agents don't scale like headcount.</strong> This trajectory explains why Levie believes enterprises will eventually deploy 100x to 1,000x more agents than humans, and why any software that isn't API-first is already falling behind.</p>
+<p><strong>Legacy UI is the new tech debt.</strong> OpenAI cofounder Andrej Karpathy put it simply in his <a href="https://x.com/karpathy/status/2030722108322717778">response</a>. Most businesses still expect people to navigate web pages, click buttons, and follow complex instructions just to enter data. He called this approach "rude" when an API could handle the whole thing. Perplexity is taking the same logic a step further. CTO Denis Yarats recently <a href="https://x.com/morganlinton/status/2031795683897077965">revealed</a> the company is ditching MCP internally for raw APIs and CLIs.</p>
+<p><strong>Make something agents want.</strong> Investor Paul Graham's classic advice to "make something people want" has evolved: if a feature lacks an API, it practically doesn't exist. Box is already auditing its entire API surface with the same rigor companies once applied to UX — checking every endpoint to see how it performs when an agent, rather than a person, makes the call.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3cd5f110-5327-4dd3-a9ce-4925377dca59/CleanShot_2026-03-13_at_14.36.37_2x.jpg?t=1773392876" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>API Vault:</strong> This viral** <a href="https://x.com/qwerty_ytrevvq/status/2031374592673972225">GitHub repo</a>** has 1,000+ public APIs for finance, news, weather, and ML. If you're still paying for data, you don't have to anymore (1.8M views).</p>
+</li>
+<li>
+<p><strong>Power User Mode:</strong> Default Claude Code and a fully useful customized setup are** <a href="https://x.com/codevolutionweb/status/2032120093526630854">8 settings</a>** apart. Auto-compaction, sound alerts, and a few tweaks most devs haven't found yet.</p>
+</li>
+<li>
+<p><strong>Who Decides:</strong> Anthropic's standoff with the Pentagon is raising a bigger question: who gets to decide what AI will and won't do? Podcaster Dwarkesh Patel** <a href="https://x.com/dwarkesh_sp/status/2031807585377014081">breaks it all down</a>**.</p>
+</li>
+<li>
+<p><strong>Agent Grid:</strong> One developer is** <a href="https://x.com/nicbstme/status/2031130229348118611">running</a>** four Claude Code agents in a tmux grid, each handling a different job. The entire environment is launched by a single bash script.</p>
+</li>
+<li>
+<p><strong>Chess Mode:</strong> A user asked Claude's visual mode about the strongest chess openings. It built a <a href="https://x.com/EricBuess/status/2032181548443992571"><strong>fully interactive board</strong></a> with move-by-move walkthroughs on the spot.</p>
+</li>
+<li>
+<p><strong>Blind Spots:</strong> A developer posted the <a href="https://x.com/prasann_pandya/status/2032101698424934504"><strong>tool choices</strong></a> Claude Code won't suggest on its own. They are better and cheaper alternatives you'd only find from actually scaling products.</p>
+</li>
+<li>
+<p><strong>Ship Safe:</strong> This <a href="https://x.com/hartdrawss/status/2032116908988784786"><strong>single Cursor prompt</strong></a> audits your entire codebase for exposed API keys, missing auth checks, and unsanitized inputs. All in under 10 minutes before you push to prod.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to ask Claude Code a question mid-task</strong></h2>
+<p><a href="https://x.com/trq212/status/2031506296697131352"><img alt="Source: X//trq212" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/283fb8d3-70d7-4890-9f18-ed1e63ce40dd/CleanShot_2026-03-13_at_10.28.21_2x.jpg?t=1773377960" /></a>
+<em>Source: X//trq212</em></p>
+<hr />
+<p>Imagine you're in the middle of a refactor in Claude Code and need to verify something quickly. Maybe you're wondering which config file Claude is reading, or what a specific function in another file actually does. Previously, you'd have to cancel the current response or wait for it to finish.</p>
+<p>Anthropic just <a href="https://code.claude.com/docs/en/interactive-mode#side-questions-with-/btw">shipped</a> a fix for this: “/btw”. Now, you can simply type /btw followed by your question, and Claude will provide an answer in a side panel without interrupting your primary task.</p>
+<pre><code>/btw what was the name of that config file?
+</code></pre>
+<p>It pulls context from your current session, but it won't execute any tools or read additional files. When you're finished, you can dismiss the response by pressing Space or Escape.</p>
+<p>These responses aren’t added to your conversation history, so they won’t clutter your context window.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=oSjAbx67f0k"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b59446c1-963a-4ca4-87c6-6c3306d318af/Untitled_design__13_.jpg?t=1773394280" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=oSjAbx67f0k"><strong>How to ship reliable AI agents (by LangChain):</strong> </a> This tutorial shows developers how to debug, test, and launch reliable AI agents using LangSmith. You'll learn how to track agent behavior, set up automated tests, and fix errors using real data.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/obra/superpowers"><strong>Superpowers:</strong> </a> This coding agent framework implements a disciplined, junior-engineer-style workflow. Incorporating structured phases like brainstorming, explicit design, TDD, and planning enables agents to ship reliable code autonomously.</p>
+<hr />
+<h3><strong>Trending Paper</strong></h3>
+<p><a href="https://x.com/cursor_ai/status/2032148125448610145"><strong>How Cursor compares model quality:</strong> </a> Public AI benchmarks often fail to capture how developers actually use coding agents for complex tasks. When testing with real-world developer data, Cursor's new CursorBench tool has proven to be far more accurate at measuring and comparing true model performance in practice.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 200K+ engineers and 100K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you’re ready to take the next step</strong></h3>
+<ul>
+<li>
+<p><strong><a href="https://learn-ai-tiles.lovable.app/">10 Projects to Master AI Agents</a></strong></p>
+</li>
+<li>
+<p><a href="https://claude-code-hacks.lovable.app/">100 Pro-Hacks for using Claude Code in 2026</a></p>
+</li>
+<li>
+<p><strong><a href="https://claude-code-spotlight.lovable.app/">Top Resources to learn Claude Code in 2026</a></strong></p>
+</li>
+<li>
+<p><strong><a href="https://ai-guidebook-nexus.lovable.app/">Zero to Production Guide for Building AI Agents</a></strong></p>
+</li>
+<li>
+<p><strong><a href="https://thecode-200-resources.lovable.app/?utm_source=codenewsletter.ai&amp;utm_medium=newsletter&amp;utm_campaign=your-200-engineering-resources-ultimate-claude-code-guide">200+ Resources to Become a Great Engineering Leader in 2026</a></strong></p>
+</li>
+</ul>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

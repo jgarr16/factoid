@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>How to Set Up Codex as a PM and Run It Next to Claude — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="How to Set Up Codex as a PM and Run It Next to Claude — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>How to Set Up Codex as a PM and Run It Next to Claude</h1>
+<p class="meta">2026-05-26 · received 2026-05-26 21:56 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/codex-setup-for-pms" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>How to Set Up Codex as a PM and Run It Next to Claude</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRmNvZGV4LXNldHVwLWZvci1wbXMiLCJwIjoxOTkxOTU2NzIsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzk4MDA0MTAsImV4cCI6MjA5NTM3NjQxMCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.89aoGY9wZ8uJKUF3fW2FY55rGjZEJkFYTLOSdkbyVJY?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=199195672&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5OTE5NTY3MiwiaWF0IjoxNzc5ODAwNDEwLCJleHAiOjE3ODIzOTI0MTAsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.D7DUXEHtmgrW5OV9_Z4MfNinV9zEmxCzdRJ89S_t6pQ">How to Set Up Codex as a PM and Run It Next to Claude</a></h1>
+<h3>A way into your repo without the IDE. Runs next to Claude Code, shares skills and MCPs, doubles as a peer reviewer.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>May 26</p>
+<p>∙</p>
+<p>Preview</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!C2pO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fcfcfec-32a1-4970-aee1-8a1ab05a76c0_750x750.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/codex-setup-for-pms?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>Hey, <a href="https://substack.com/redirect/059ab59b-4e5a-4781-8d8a-edb115cbae53?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Paweł</a> here. Most PMs I talk to are heads-down on Claude (Cowork or Claude Code) and haven't tried Codex properly. The numbers say they probably should.</p>
+<p><a href="https://substack.com/redirect/05c15830-7b95-4b7c-ba47-33b163bb4894?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="ARK Invest chart, &quot;Codex User Growth&quot; (0.2M to 4.0M weekly active users, Jan to Apr 2026)" src="https://substackcdn.com/image/fetch/$s_!EHOd!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9d582f4c-8044-4f86-ad80-2972aad1ccf5_1200x775.jpeg" /></a></p>
+<p>Source: <a href="https://substack.com/redirect/e60e88bc-912e-4f9f-9b31-08936a4d2bce?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">ARK Invest, via @downingARK on X</a></p>
+<p>Codex grew from about 200K to roughly <strong>4M weekly active users</strong> in four months. Claude Code crossed 2M in early March. If you opened this post, you're probably one of those 2M. The other 4M are on a tool you haven't tried.</p>
+<p>And it's <strong>not just a developer tool anymore</strong>. If VS Code has felt like a wall, the Codex app is a chat window with a file tree, visual diffs, and long-running sessions. PMs who've avoided code repos no longer have to.</p>
+<p>ChatGPT Plus is $20/month and includes Codex. The setup takes about five minutes. This guide is the walkthrough.</p>
+<p>By the end of this guide, you’ll have:</p>
+<ul>
+<li>Codex app installed and pointed at your repo</li>
+<li><em>AGENTS.md</em> bridged to <em>CLAUDE.md</em> so both runtimes share one source of truth</li>
+<li>Plugins installed for the apps you use, with project skills mirrored if you build with AI</li>
+<li>MCPs running in both runtimes, with a one-shot prompt to do the import</li>
+<li>Claude Code able to call Codex as a peer for review</li>
+<li>A plan for working from your phone (cloud tasks vs. remote control)</li>
+</ul>
+<p>Full Cowork / Claude Code / Codex comparison is at the bottom. First, the setup.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjb2RleC1zZXR1cC1mb3ItcG1zJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNPVGd3TURReE1Dd2laWGh3SWpveE56Z3lNemt5TkRFd0xDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmtncjl4aVdpdmVWME16ei1RNmo5MU03ZHhUOEFJM29Gd1BHTWNVaXhuVm8iLCJwIjoxOTkxOTU2NzIsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzk4MDA0MTAsImV4cCI6MjA5NTM3NjQxMCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.L_m9qIAO5sYt4zwHZ4SZHGjjRFFxZ9nENgFIdVG4OII?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=199195672">Upgrade to paid</a></p>
+<hr />
+<h2><strong>1. Why Add Codex as a PM</strong></h2>
+<p><a href="https://substack.com/redirect/0a91baed-02b5-4a4f-9a52-8009bfc0a2a0?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="How to Set Up Codex as a PM and Run It Next to Claude" src="https://substackcdn.com/image/fetch/$s_!q4pm!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6d734719-d42f-4a70-969c-0387595a63ab_1672x941.png" /></a></p>
+<p>Five reasons I added Codex, in order of how often they show up in my work:</p>
+<ul>
+<li><strong>A way into a repo without VS Code.</strong> If the IDE has felt like a wall, the Codex app (desktop) is a chat window with a file tree, visual diffs, and long-running chat sessions. No commands to learn, no extensions to wire. You can even edit files by leaving comments for Codex. Cowork is chat-first; no tree, no diffs.</li>
+<li><strong>Manual Compact.</strong> You decide when to compress the session instead of waiting for the model to hit the wall. In Codex, type <em>c</em>, then <em>/com</em>, and choose <em>Compact</em> when it appears. Claude Code has <em>/compact</em> in the CLI. Cowork does not have an equivalent manual reset. This matters for your budget: <a href="https://substack.com/redirect/c33bfe91-de29-415c-94e9-fd4a32ac3a94?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code’s Limits Are Generous. The Problem Is Your Setup.</a></li>
+<li><strong>An extra perspective.</strong> When I want a second pair of eyes on a prompt, or a piece of code, I hand it to the runtime that didn’t write it. Different model, different misses.</li>
+<li><strong>Image generation in the bundle.</strong> The ChatGPT subscription that Codex ships with includes image generation. Claude doesn’t cover that workflow.</li>
+<li><strong>Runs next to Claude Code on the same repo.</strong> Same files, same skills, same MCPs. Switch runtimes without rebuilding your setup.</li>
+</ul>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjb2RleC1zZXR1cC1mb3ItcG1zJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNPVGd3TURReE1Dd2laWGh3SWpveE56Z3lNemt5TkRFd0xDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmtncjl4aVdpdmVWME16ei1RNmo5MU03ZHhUOEFJM29Gd1BHTWNVaXhuVm8iLCJwIjoxOTkxOTU2NzIsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzk4MDA0MTAsImV4cCI6MjA5NTM3NjQxMCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.L_m9qIAO5sYt4zwHZ4SZHGjjRFFxZ9nENgFIdVG4OII?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=199195672">Upgrade to paid</a></p>
+<hr />
+<h2><strong>2. Install Codex (Desktop App and VS Code Extension)</strong></h2>
+<p>You'll install two things. <strong>Codex app (desktop)</strong> is the chat workspace where long sessions and Compact live. <strong>Codex for VS Code</strong> is the editor extension that lets you call Codex in the same window as Claude Code.</p>
+<p>Both share one OpenAI login, both work on the same repo, and you'll use both for different jobs.</p>
+<h3>Codex app (desktop)</h3>
+<p>Download <a href="https://substack.com/redirect/1448f91c-9d5e-47ef-89a2-cf15ad9ed912?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Codex app from OpenAI</a>. Sign in with the ChatGPT account that has Plus, Pro, or Business. Codex is bundled with all three.</p>
+<p>The first prompt asks you to migrate your VS Code settings. I skip it. Not because it’s hard. Because you should know what’s being imported before you click yes. You can always migrate later from Settings or by asking Codex for help.</p>
+<p><a href="https://substack.com/redirect/bef91b64-1665-4eb2-99b1-3de4b0b5aa89?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Codex app (desktop) - import settings from Claude" src="https://substackcdn.com/image/fetch/$s_!o8Bg!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F859ee88b-24d7-4e17-ac39-edc73e04dc0c_2214x1575.png" /></a></p>
+<p>Open the same project folder you already use with Claude. The file tree loads on the right. Visual diffs appear in the same panel.</p>
+<p><a href="https://substack.com/redirect/fcfd8f17-0aea-4704-b5ee-e8f771af816e?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Codex app file preview, file edits, diffs" src="https://substackcdn.com/image/fetch/$s_!W8qE!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8de4fb28-5fcb-4bd0-a451-a203caef62a3_3840x2280.png" /></a></p>
+<h3>Codex for VS Code</h3>
+<p>Install the <strong><a href="https://substack.com/redirect/ce81ef6f-3c1d-41da-be2b-f8b290b79bc7?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Codex extension</a></strong> from the VS Code marketplace and sign in with the same OpenAI account.</p>
+<p>If you already use the <strong>Claude Code</strong> extension in VS Code, both extensions will show up in the activity bar. You can switch between them by tab.</p>
+<p>Why both surfaces? The Codex app is for long chat sessions and Compact. Codex for VS Code is for editing the repo, including dot folders (<em>.agents, .codex</em>) that the app’s file picker hides.</p>
+<p><a href="https://substack.com/redirect/21389ca8-f675-462c-bf5c-c047a9fc019a?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Codex for VS Code, Install the Codex extension from the VS Code marketplace" src="https://substackcdn.com/image/fetch/$s_!Frnr!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3f1bcb4-c50e-4e79-a007-ea8ba92e9ab4_2713x1620.png" /></a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjb2RleC1zZXR1cC1mb3ItcG1zJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNPVGd3TURReE1Dd2laWGh3SWpveE56Z3lNemt5TkRFd0xDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmtncjl4aVdpdmVWME16ei1RNmo5MU03ZHhUOEFJM29Gd1BHTWNVaXhuVm8iLCJwIjoxOTkxOTU2NzIsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzk4MDA0MTAsImV4cCI6MjA5NTM3NjQxMCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.L_m9qIAO5sYt4zwHZ4SZHGjjRFFxZ9nENgFIdVG4OII?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=199195672">Upgrade to paid</a></p>
+<hr />
+<p><a id="3-teach-codex-your-repoagentsmdtoclaudemd"></a></p>
+<h2><strong>3. Teach Codex Your Repo:</strong><strong><em>AGENTS.md</em></strong><strong>to</strong><strong><em>CLAUDE.md</em></strong></h2>
+<p>Codex looks for <em>AGENTS.md</em> at the repo root. Claude Code looks for <em>CLAUDE.md</em>. If you maintain both as separate sources of truth, they drift.</p>
+<p>The fix is a one-file bridge. <em>AGENTS.md</em> is a short pointer. <em>CLAUDE.md</em> stays the canonical document. Codex reads <em>AGENTS.md</em>, sees the pointer, follows it.</p>
+<p>Drop this at the repo root as <em>AGENTS.md</em>:</p>
+<pre><code># AGENTS.mdThis repository keeps its canonical agent instructions in [CLAUDE.md](./CLAUDE.md).When operating in this repo:1. Read and follow `CLAUDE.md` as the source of truth.2. Treat references to &quot;Claude Code&quot; as applying to Codex when you are the acting agent.3. Do not duplicate `CLAUDE.md` content here. Update `CLAUDE.md` instead.
+</code></pre>
+<p>One file. One source of truth. Both runtimes follow it.</p>
+<p><a href="https://substack.com/redirect/eb2105b4-996c-404c-946b-cf73c22506b4?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Teach Codex Your Repo: AGENTS.md to CLAUDE.md" src="https://substackcdn.com/image/fetch/$s_!WbUE!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8590ba5-e76f-4706-afcd-3e69271a6446_2498x1785.png" /></a></p>
+<p><em>AGENTS.md</em> is the bridge. <em>CLAUDE.md</em> is the long part. The structure I use:</p>
+<ol>
+<li><strong>Communication:</strong> How the agent should talk, what content it should produce.</li>
+<li><strong>[For personal work] About me:</strong> Role, audience, social media handles</li>
+<li><strong>[For product work] Strategy:</strong> Market segments, value propositions, tradeoffs.</li>
+<li><strong>Project structure:</strong> Where things live, architecture, conventions.</li>
+<li><strong>Workflow:</strong>How we do things (reviewing, shipping). Not a procedure manual. The rules of engagement.</li>
+<li><strong>Progressive disclosure:</strong>Links to deeper files (<em>strategy.md</em>, <em>knowledge/INDEX.md</em>, whatever you’ve built) that load on-demand, not on every session.</li>
+</ol>
+<p>Each section earns its place when something would otherwise have to be re-explained per session. <em>CLAUDE.md</em> isn’t documentation. It’s the agent’s memory of how you work.</p>
+<p>Progressive disclosure matters because context isn’t free. Don’t dump 500 lines of text into <em>CLAUDE.md</em> if 100 of it only matters for one workflow. Keep the core file lean. Link out to the rest.</p>
+<hr />
+<h2><strong>4. Configure and Share Skills</strong></h2>
+<p>If you haven’t used skills before, think of them as reusable instruction bundles. A <em>SKILL.md</em> file tells the runtime when to fire and what to do.</p>
+<p>Two ways to configure them in Codex.</p>
+<p>Start with user skills. The Codex app ships with a <strong>Plugins</strong> panel. One click installs Gmail, Linear, Jira, Slack, and others. You get the <strong>app’s connection and its skills</strong> together.</p>
+<p><a href="https://substack.com/redirect/7e9ef27b-dbda-46d8-86c5-f7529080212f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="The Codex app ships with a Plugins panel. One click installs Gmail, Linear, Jira, Slack, and others. You get the app’s connection and its skills together." src="https://substackcdn.com/image/fetch/$s_!eGF2!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F250bedd1-cd3a-48ad-9833-9664d2237241_2490x1605.png" /></a></p>
+<p>With Plugins installed, Codex reads your <em>CLAUDE.md</em> and talks to the apps you use daily.</p>
+<p>That’s the minimum viable Codex setup for a PM.</p>
+<p>The next step is making Codex and Claude Code behave like one operating system: curated skills, project skills synced between runtimes, mirrored MCPs, and a repeatable review loop...</p>
+<h2>Keep reading with a 7-day free trial</h2>
+<p>Subscribe to The Product Compass to keep reading this post and get 7 days of free access to the full post archives.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjb2RleC1zZXR1cC1mb3ItcG1zJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNPVGd3TURReE1Dd2laWGh3SWpveE56Z3lNemt5TkRFd0xDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmtncjl4aVdpdmVWME16ei1RNmo5MU03ZHhUOEFJM29Gd1BHTWNVaXhuVm8iLCJwIjoxOTkxOTU2NzIsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzk4MDA0MTAsImV4cCI6MjA5NTM3NjQxMCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.L_m9qIAO5sYt4zwHZ4SZHGjjRFFxZ9nENgFIdVG4OII?simple=true&amp;utm_source=paywall&amp;utm_medium=email&amp;utm_content=199195672&amp;next=https://www.productcompass.pm/p/codex-setup-for-pms&amp;coupon=34546817">Start trial</a></p>
+<h3>A subscription gets you:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>𝗔𝗰𝗰𝗲𝘀𝘀 𝗲𝘃𝗲𝗿𝘆 𝗶𝘀𝘀𝘂𝗲 → 200+ actionable AI PM strategies and advice. Full archive.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>𝗝𝗼𝗶𝗻 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗦𝗹𝗮𝗰𝗸 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 → A 1,850+ AI PM community to grow together.</td>
+</tr>
+<tr>
+<td></td>
+<td>𝗕𝗼𝗼𝘀𝘁 𝘆𝗼𝘂𝗿 𝗣𝗠 𝗰𝗮𝗿𝗲𝗲𝗿 → Enroll in the AI PM Learning Program ($700 value) and 4 video courses ($546 value).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=199195672&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5OTE5NTY3MiwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3Nzk4MDA0MTAsImV4cCI6MTc4MjM5MjQxMCwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.TV7DpA1MJ3xkq6q0StgY63QCjBcowEd446U3zcoQJAM&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=199195672&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5OTE5NTY3MiwiaWF0IjoxNzc5ODAwNDEwLCJleHAiOjE3ODIzOTI0MTAsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.D7DUXEHtmgrW5OV9_Z4MfNinV9zEmxCzdRJ89S_t6pQ&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9jb2RleC1zZXR1cC1mb3ItcG1zP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtcmVzdGFjay1jb21tZW50JmFjdGlvbj1yZXN0YWNrLWNvbW1lbnQmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVPVEU1TlRZM01pd2lhV0YwSWpveE56YzVPREF3TkRFd0xDSmxlSEFpT2pFM09ESXpPVEkwTVRBc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKd2IzTjBMWEpsWVdOMGFXOXVJbjAuRDdEVVhFSHRtZ3JXNU9WOV9aNE1mTmluVjl6RW14Q3pkUko4OVNfdDZwUSIsInAiOjE5OTE5NTY3MiwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3OTgwMDQxMCwiZXhwIjoyMDk1Mzc2NDEwLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.CG7bTMhwLS3Cvmf2OUdhwKRtyfkngEnn4H2Jb8bkefU?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVPVEU1TlRZM01pd2lhV0YwSWpveE56YzVPREF3TkRFd0xDSmxlSEFpT2pFNE1URXpNelkwTVRBc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAuNmhhMUEwdFVWYW5nZ2F0eVplVHZHWDFpZHplLWpnMDd6eVE2NHlkYWE1byIsInAiOjE5OTE5NTY3MiwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3OTgwMDQxMCwiZXhwIjoyMDk1Mzc2NDEwLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.T57EVeN0L15OkfskfCi7Y7p0JbtMJEqHyiLjzs5euTU?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/e86a4426-5efa-4f03-a32a-9cb5e04776d9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoxOTkxOTU2NzIsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzk4MDA0MTAsImV4cCI6MjA5NTM3NjQxMCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.l-G-gFT5r1jd06cfQE9ngM6V3gnXxaOqdYXRQl98yKE?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

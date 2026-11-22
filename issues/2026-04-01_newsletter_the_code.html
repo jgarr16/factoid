@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>⚡ Anthropic leaks Claude Code by accident — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="⚡ Anthropic leaks Claude Code by accident — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>⚡ Anthropic leaks Claude Code by accident</h1>
+<p class="meta">2026-04-01 · received 2026-04-01 23:04 +0900
+ · <a href="https://codenewsletter.ai/p/anthropic-exposes-claude-code-source-code-google-drops-veo-3-1-lite" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>⚡ Anthropic leaks Claude Code by accident</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/32c8c971-340a-4f62-a6b8-f362e57e5397/image__83_.jpg?t=1770628392" /></p>
+<hr />
+<p><strong>Welcome back.</strong> Anthropic just accidentally exposed Claude Code's source code. What was meant to be a routine update triggered an unexpected leak, and developers are already pulling apart what they found. It doesn’t get any bigger than this.</p>
+<p><strong>Also:</strong> How a veteran engineer reviews AI-generated code, an OpenAI engineer's guide to mapping the real agent stack, and Jack Dorsey's plan to cut middle management.</p>
+<hr />
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>Inference engineering: the next big thing</p>
+</li>
+</ul>
+<p><a id="how-to-make-claude-code-grill-you-before-building"></a>
+* How to make Claude Code grill you before building</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><img alt="Made with Midjourney." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/16227005-9f59-49cd-ae1b-434a2d72f448/superhumanteam_generate_a_portrait_image_of_the_person_in_omn_c503defe-afbe-402a-b70a-335a4095e58a_0.jpg?t=1775026384" />
+<em>Made with Midjourney.</em></p>
+<hr />
+<p><strong>Anthropic exposes Claude Code’s source code by accident:</strong> The AI lab accidentally leaked portions of its coding tool's internal <a href="https://x.com/i/trending/2038638312190316690"><strong>source code</strong></a> by including a map file in its latest npm release. They confirmed that no customer data or credentials were compromised, describing the incident as a developer error rather than a security breach. Claude Code creator Boris Cherny <a href="https://x.com/bcherny/status/2039210700657307889"><strong>attributed</strong></a> the leak to a manual deployment error and confirmed that the team is now automating the process to prevent future slip-ups.</p>
+<p><strong>Developer rewrites leaked Claude Code from scratch overnight:</strong> Following Anthropic's accidental source code leak, the lab rushed to issue DMCA takedowns across GitHub. That's when Korean developer Sigrid Jin** <a href="https://tech.yahoo.com/ai/claude/articles/anthropic-accidentally-leaked-claude-codes-180256954.html">stepped in</a><strong>. Waking up at 4 AM, Jin rewrote the entire codebase in Python before sunrise and launched it as</strong> <a href="https://github.com/instructkr/claw-code">claw-code</a>**, making it the fastest repo ever to cross 50K stars. Since it's a clean-room rewrite, it remains protected from Anthropic's legal reach.</p>
+<p><strong>Google drops its most affordable AI video model yet:</strong> The search giant just released <a href="https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/"><strong>Veo 3.1 Lite</strong></a>, a new video generation model available through the Gemini API and Google AI Studio. It matches the speed of Veo 3.1 Fast but costs less than half as much. The model handles both text-to-video and image-to-video prompts and features native audio, synced sound effects, and dialogue in either landscape or portrait at up to 1080p.</p>
+<hr />
+<h5><strong>PRESENTED BY AGENTFIELD</strong></h5>
+<h2><a href="https://agentfield.ai/github/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=thecode_060401&amp;utm_id=thecode-1-github-cta&amp;utm_content=github-cta">Open-Source Harness Orchestration Is Here</a></h2>
+<p><a href="https://agentfield.ai/github/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=thecode_060401&amp;utm_id=thecode-1-github-cta&amp;utm_content=github-cta"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a83a3c3c-4b73-4ff4-88bb-571720cbf4c0/Github_thecode.jpg?t=1774944569" /></a></p>
+<hr />
+<p>You run one Claude/Open Code instance at a time. These Open-Source repos coordinate 175 at once.</p>
+<p><a href="https://agentfield.ai/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=thecode_060401&amp;utm_id=thecode-1-home-cta&amp;utm_content=home-cta">AgentField</a> is open-source harness orchestration. One .harness() call spins up hundreds of Claude Code, Codex, or Gemini instances, they discover each other, split work, and converge on a verified result.</p>
+<ul>
+<li>
+<p>175+ Harness SWE team</p>
+</li>
+<li>
+<p>250+ deep agentic security scanner</p>
+</li>
+<li>
+<p>50+ adversarial deep code reviewers</p>
+</li>
+<li>
+<p>Or build your own</p>
+</li>
+</ul>
+<p><a href="https://agentfield.ai/blog/posts/beyond-vibe-coding/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=thecode_060401&amp;utm_id=thecode-1-bvc-cta&amp;utm_content=bvc-cta">We wrote up</a> how it actually works, the failures, the fixes, the real costs.</p>
+<p><strong><a href="https://agentfield.ai/github/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=thecode_060401&amp;utm_id=thecode-1-github-cta&amp;utm_content=github-cta">Clone a Recipe</a></strong></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="why-inference-engineering-is-becoming-the-next-big-discipline-in-engin"></a></p>
+<h2><strong>Why inference engineering is becoming the next big discipline in engineering</strong></h2>
+<p><img alt="Source: X/philipkiely" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/893a96ec-ea1e-4628-bd83-447dc0f4e8ce/HB8bPCbaMAMQh-7__1_.jpg?t=1775015278" />
+<em>Source: X/philipkiely</em></p>
+<hr />
+<p><strong>Open models closed the gap.</strong> When Cursor <a href="https://techcrunch.com/2026/03/22/cursor-admits-its-new-coding-model-was-built-on-top-of-moonshot-ais-kimi/"><strong>shipped Composer 2</strong></a> last week, developers discovered it ran on Kimi K2.5, an open model from Beijing-based Moonshot AI. Cursor layered its own training on top and matched Claude Opus 4.6 on coding benchmarks at roughly one-tenth the token cost. That performance edge comes from inference engineering, the practice of optimizing how models actually run in production.</p>
+<p><strong>A new field.</strong> Three years ago, this field barely existed. Now, open models match proprietary ones within weeks. Philip Kiely, a developer advocate at Baseten, just published a <a href="https://www.baseten.co/inference-engineering/">book</a> on the craft. Companies running their own stacks are seeing 80% cost savings while boosting uptime from 99% to 99.99%.</p>
+<p><strong>Most teams aren't ready for it.</strong> Owning your stack means managing GPU clusters, tuning quantization, and building efficient autoscaling. That requires a kind of engineer most companies haven't hired, because the role didn't exist at scale until recently.</p>
+<p><strong>The talent pool is catching up.</strong> Open models keep improving every few weeks, which means more companies are hitting the scale where self-hosting makes sense. And if you're spending six figures a month on closed model <a href="https://newsletter.pragmaticengineer.com/p/what-is-inference-engineering">APIs</a> but still struggling with reliability, inference engineering is worth evaluating.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c588948e-7aff-4b32-9619-c2502a5dd730/CleanShot_2026-04-01_at_14.22.25_2x.jpg?t=1775033586" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Under The Hood:</strong> A developer went through Claude Code's entire source code. Turns out most people are only using <a href="https://x.com/mal_shaik/status/2038918662489510273"><strong>about 10% of it</strong></a> (1.1M views).</p>
+</li>
+<li>
+<p><strong>No More Managers:</strong> Twitter founder Jack Dorsey just <a href="https://x.com/jack/status/2039003879841362278"><strong>shared</strong></a> Block's plan to replace middle management entirely with AI (2.2M views).</p>
+</li>
+<li>
+<p><strong>Dev Toolkit:</strong> Most developers waste time on problems these 10 underrated** <a href="https://x.com/ennycodes/status/2038655225913913578">websites</a>** already solve.</p>
+</li>
+<li>
+<p><strong>Code Patrol:</strong> A senior engineer with 20+ years of experience <a href="https://www.youtube.com/watch?v=As2xy_cSx00"><strong>breaks down</strong></a> his 4-layer system for reviewing AI-generated code.</p>
+</li>
+<li>
+<p><strong>Build Here:</strong> Sequoia revealed a map of every service industry ripe for <a href="https://x.com/gregisenberg/status/2039125157134905517"><strong>AI agent takeover</strong></a>, totaling over $1T in opportunity.</p>
+</li>
+<li>
+<p><strong>Stack Map:</strong> Everyone calls everything an "agent," but the systems behind that word are wildly different. An OpenAI engineer <a href="https://www.linkedin.com/posts/vinothgovindarajan_the-agent-stack-part-1-a-systems-map-of-share-7444241370829017088-GP_F/"><strong>mapped</strong></a> the actual stack.</p>
+</li>
+<li>
+<p><strong>Crypto Warning:</strong> Google published a paper showing blockchain encryption is far more vulnerable to <a href="https://x.com/projecteleven/status/2038807049262264502"><strong>quantum computers</strong></a> than anyone thought.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to make Claude Code grill you before building</strong></h2>
+<p><a href="https://www.aihero.dev/my-grill-me-skill-has-gone-viral"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/05684f3a-688d-457d-9659-ee96f3040f34/CleanShot_2026-04-01_at_10.12.25_2x.jpg?t=1775018601" /></a></p>
+<hr />
+<p>By default, Claude Code jumps straight into building. You describe a feature, it drafts a plan, and 20 minutes later, you're stuck with code that misses half your requirements. Ex-Vercel engineer Matt Pocock shared a three-line Claude Code skill called <a href="https://www.aihero.dev/my-grill-me-skill-has-gone-viral">/grill-me</a> that solves this. Install it with one command:</p>
+<pre><code>npx skills@latest add mattpocock/skills/grill-me
+</code></pre>
+<p>Or create the file yourself at <code>.claude/skills/grill-me/SKILL.md</code>:</p>
+<pre><code>Interview me relentlessly about every aspect of this plan until we reach a shared understanding. Walk down each branch of the design tree resolving dependencies between decisions one by one.
+
+If a question can be answered by exploring the codebase, explore the codebase instead.
+
+For each question, provide your recommended answer.
+</code></pre>
+<p>Run <code>/grill-me</code> before you dive into a new feature. Claude Code will walk you through it one question at a time, suggesting answers where things are obvious and drilling down into the tough calls until your entire plan is airtight.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=2hoNAr-id-E"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/15337bb1-af3d-4123-b93c-2577dc031267/Untitled_design__35_.jpg?t=1775025321" /></a></p>
+<hr />
+<p><a id="top-tutorial"></a></p>
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=2hoNAr-id-E"><strong>How to fine-tune an LLM for structured data extraction:</strong> </a> You'll learn how to fine-tune a small language model (Gemma 3) locally using Hugging Face. This end-to-end tutorial teaches how to format custom datasets, train a model to extract structured data, and deploy the final result as a live, interactive web demo.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/buger/jsonparser"><strong>JSON parser:</strong> </a> This Go library lets you cut through messy JSON payloads in microseconds. It helps devs ship faster by turning dynamic APIs into simple byte-level lookups, making heavy optimization feel like a quick win.</p>
+<hr />
+<h3><strong>Trending Paper</strong></h3>
+<p><a href="https://x.com/yoonholeee/status/2038640635482456118"><strong>Meta-Harness:</strong> </a> AI performance depends heavily on its surrounding code, or "harness," which is usually built manually because existing automated tools fall short. By letting an AI agent analyze past code and logs, researchers automatically generated harnesses that beat human-designed ones.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 200K+ engineers and 100K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Chain models for complex tasks — Openrouter</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Chain models for complex tasks — Openrouter" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Openrouter</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Chain models for complex tasks</h1>
+<p class="meta">2026-06-24 · received 2026-06-24 23:12 +0900
+</p>
+</div><div class="issue-body"><h1>Chain models for complex tasks</h1>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo3NS1ZcWtzTXVfMHRGOFBuSDI1dz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS8_dXRtX2NhbXBhaWduPU9uYm9hcmRpbmcrRmxvdystK3Y0K0FwcmlsKzIwMjZcdTAwMjZ1dG1fY29udGVudD1BNytNb2RlbCtDaGFpbmluZ1x1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiODRmZDBhYWUwMmRmY2QwMTgwY2JhYTA0IiwibGlua19pZCI6MTA3fQ/7c0e08edfcc493a27d46156ad30e67187da3c2380f64c2186215a65bba2d6d97"><img alt="OpenRouter" src="https://userimg-assets.customeriomail.com/images/client-env-179844/t7-big1_01K8NWZF15VM5RY9E6024YVBN2.png" /></a></p>
+<p>Hi John,</p>
+<p><strong>Use a fast model for classification, a strong model for generation.</strong> Same endpoint, same auth, different model parameter. That is the point of having 300+ models on one API: you mix them per step instead of committing to one for the whole workload.</p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo3NS1ZcWtzTXVfMHRGOFBuSDI1dz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9tb2RlbHM_dXRtX3NvdXJjZT1lbWFpbFx1MDAyNnV0bV9tZWRpdW09bGlmZWN5Y2xlXHUwMDI2dXRtX2NhbXBhaWduPW9uYm9hcmRpbmdfdjJcdTAwMjZ1dG1fY29udGVudD1hMTFfbXVsdGlfbW9kZWxcdTAwMjZ1dG1fY2FtcGFpZ249T25ib2FyZGluZytGbG93Ky0rdjQrQXByaWwrMjAyNlx1MDAyNnV0bV9jb250ZW50PUE3K01vZGVsK0NoYWluaW5nXHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiI4NGZkMGFhZTAyZGZjZDAxODBjYmFhMDQiLCJsaW5rX2lkIjoxNjkxfQ/4823ac2fecaf73681da5a79eb3de68d01134d1adfee4ae50adc5a6d60cb19caf">Browse models</a></p>
+<p>PATTERN 1: CLASSIFY, THEN GENERATE</p>
+<h1>Step 1: classify with a fast, cheap model</h1>
+<p>classify = client.chat.completions.create(
+  model="openai/gpt-4o-mini",
+  messages=[{"role": "user", "content": f"Classify: {query}"}],
+)</p>
+<h1>Step 2: generate with a strong model</h1>
+<p>result = client.chat.completions.create(
+  model="anthropic/claude-sonnet-4.6",
+  messages=[{"role": "user", "content": f"{classify.choices[0].message.content}: {query}"}],
+)</p>
+<p>GPT-4o-mini runs around $0.15 per million input tokens. Claude Sonnet 4.6 runs around $3 per million. Using the cheap model for routing and the expensive one only where it earns its cost can cut total spend 5 to 10x on mixed workloads.</p>
+<p>PATTERN 2: EXTRACT, THEN WRITE</p>
+<h1>Step 1: structured extraction</h1>
+<p>extracted = client.chat.completions.create(
+  model="openai/gpt-4o-mini",
+  response_format={"type": "json_object"},
+  messages=[{"role": "user", "content": f"Extract fields as JSON: {doc}"}],
+)</p>
+<h1>Step 2: long-form writing from the structured fields</h1>
+<p>draft = client.chat.completions.create(
+  model="anthropic/claude-sonnet-4.6",
+  messages=[{"role": "user", "content": f"Write a report from: {extracted.choices[0].message.content}"}],
+)</p>
+<p>Structured outputs are cheap and fast on small models. Long-form generation is where the frontier models actually earn their per-token rate. Splitting the work keeps the expensive calls short.</p>
+<p><strong>Why this works on OpenRouter specifically.</strong> One endpoint means no separate SDK per provider, no second billing account, no new authentication. The model parameter is the only thing that changes between steps, and the activity dashboard shows both calls side by side so you can see exactly where the cost went.</p>
+<hr />
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo3NS1ZcWtzTXVfMHRGOFBuSDI1dz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haT91dG1fY2FtcGFpZ249T25ib2FyZGluZytGbG93Ky0rdjQrQXByaWwrMjAyNlx1MDAyNnV0bV9jb250ZW50PUE3K01vZGVsK0NoYWluaW5nXHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiI4NGZkMGFhZTAyZGZjZDAxODBjYmFhMDQiLCJsaW5rX2lkIjoxfQ/98af7c47743bc0c36627c0fa59bed09bcb5cd075ee24e5c74c5b26500e05dd8e">openrouter.ai</a>  ·  <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo3NS1ZcWtzTXVfMHRGOFBuSDI1dz09IiwiaHJlZiI6Imh0dHBzOi8vZGlzY29yZC5jb20vaW52aXRlLzhUcHV6TlhRWXI_dXRtX2NhbXBhaWduPU9uYm9hcmRpbmcrRmxvdystK3Y0K0FwcmlsKzIwMjZcdTAwMjZ1dG1fY29udGVudD1BNytNb2RlbCtDaGFpbmluZ1x1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiODRmZDBhYWUwMmRmY2QwMTgwY2JhYTA0IiwibGlua19pZCI6MTAwMn0/d49e1d413a8661283631ebf5d993ebedd972e0891aefe8fa3d89b34536cd383e">Discord</a>  ·  <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo3NS1ZcWtzTXVfMHRGOFBuSDI1dz09IiwiaHJlZiI6Imh0dHBzOi8veC5jb20vb3BlbnJvdXRlcj91dG1fY2FtcGFpZ249T25ib2FyZGluZytGbG93Ky0rdjQrQXByaWwrMjAyNlx1MDAyNnV0bV9jb250ZW50PUE3K01vZGVsK0NoYWluaW5nXHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiI4NGZkMGFhZTAyZGZjZDAxODBjYmFhMDQiLCJsaW5rX2lkIjoxMDM0fQ/35803d7c92330f0faaa4f5180c4bbaec152f32f1a6dd02dec073f87fb549ea50">X</a>  ·  <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo3NS1ZcWtzTXVfMHRGOFBuSDI1dz09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9kb2NzP3V0bV9jYW1wYWlnbj1PbmJvYXJkaW5nK0Zsb3crLSt2NCtBcHJpbCsyMDI2XHUwMDI2dXRtX2NvbnRlbnQ9QTcrTW9kZWwrQ2hhaW5pbmdcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYWFlMDJkZmNkMDE4MGNiYWEwNCIsImxpbmtfaWQiOjV9/361ef5d1b0c6eca3b17c292386c4865f4ed5bf8aa4322b03a2d46d19b27cfea1">Docs</a></p>
+<p><a href="https://email-v3.openrouter.ai/manage_subscription_preferences/dgSE_QoBAIDLqgT_yqoEAZ75-YqksMu_0tF8PnH25w==">Manage preferences</a>   |   <a href="https://email-v3.openrouter.ai/unsubscribe/dgSE_QoBAIDLqgT_yqoEAZ75-YqksMu_0tF8PnH25w==">Unsubscribe</a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

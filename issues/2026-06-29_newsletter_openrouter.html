@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>How provider data policies work on OpenRouter — Openrouter</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="How provider data policies work on OpenRouter — Openrouter" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Openrouter</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>How provider data policies work on OpenRouter</h1>
+<p class="meta">2026-06-29 · received 2026-06-29 23:02 +0900
+</p>
+</div><div class="issue-body"><h1>How provider data policies work on OpenRouter</h1>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo4VHJ6VllHbkIxY2NyQ01yTjVaQT09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS8_dXRtX2NhbXBhaWduPU9uYm9hcmRpbmcrRmxvdystK3Y0K0FwcmlsKzIwMjZcdTAwMjZ1dG1fY29udGVudD1BLUZpbmFsK1ByaXZhY3krVHJ1c3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYWFlMDJkZmNkMDE4MGNiYWEwNCIsImxpbmtfaWQiOjEwN30/b0a3e2039949372a36197a5d8b89c97f8ec6a8742bbdf75e4d70b008dab72964"><img alt="OpenRouter" src="https://userimg-assets.customeriomail.com/images/client-env-179844/t7-big1_01K8NWZF15VM5RY9E6024YVBN2.png" /></a></p>
+<p>Hi John,</p>
+<p>Every provider behind OpenRouter has its own retention and training policy. OpenRouter reflects those policies as structured data on each endpoint, publishes the full table in the docs, and gives you controls to filter routing on them.</p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo4VHJ6VllHbkIxY2NyQ01yTjVaQT09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9kb2NzL2ZlYXR1cmVzL3ByaXZhY3ktYW5kLWxvZ2dpbmc_dXRtX3NvdXJjZT1lbWFpbFx1MDAyNnV0bV9tZWRpdW09bGlmZWN5Y2xlXHUwMDI2dXRtX2NhbXBhaWduPWNhbXBhaWduMjlcdTAwMjZ1dG1fY29udGVudD1wcml2YWN5LXRydXN0XHUwMDI2dXRtX2NhbXBhaWduPU9uYm9hcmRpbmcrRmxvdystK3Y0K0FwcmlsKzIwMjZcdTAwMjZ1dG1fY29udGVudD1BLUZpbmFsK1ByaXZhY3krVHJ1c3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYWFlMDJkZmNkMDE4MGNiYWEwNCIsImxpbmtfaWQiOjE3Mzh9/4f0004525f211f4bda083d59a41660172bcea68ed8cb2c47714178bdfff8f770">View the provider policy table</a></p>
+<p>WHAT YOU CONTROL</p>
+<p><strong>1. Block routing to providers that train.</strong> Your <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo4VHJ6VllHbkIxY2NyQ01yTjVaQT09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9zZXR0aW5ncy9wcml2YWN5P3V0bV9jYW1wYWlnbj1PbmJvYXJkaW5nK0Zsb3crLSt2NCtBcHJpbCsyMDI2XHUwMDI2dXRtX2NvbnRlbnQ9QS1GaW5hbCtQcml2YWN5K1RydXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiI4NGZkMGFhZTAyZGZjZDAxODBjYmFhMDQiLCJsaW5rX2lkIjo3NjJ9/5c5f74f0a4490028b6304ab4840fcde1b78cdafcbc592cfd25fc9404ceb4a96f">privacy settings</a> have an account-wide toggle for whether routing may use providers that train on prompts, with separate switches for paid and free models. If you opt out, OpenRouter will not route to training providers.</p>
+<p><strong>2. Require a specific data policy per request.</strong> You can override your account default on any single call. See <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo4VHJ6VllHbkIxY2NyQ01yTjVaQT09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9kb2NzL2ZlYXR1cmVzL3Byb3ZpZGVyLXJvdXRpbmc_dXRtX2NhbXBhaWduPU9uYm9hcmRpbmcrRmxvdystK3Y0K0FwcmlsKzIwMjZcdTAwMjZ1dG1fY29udGVudD1BLUZpbmFsK1ByaXZhY3krVHJ1c3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8jcmVxdWlyaW5nLXByb3ZpZGVycy10by1jb21wbHktd2l0aC1kYXRhLXBvbGljaWVzIiwiaW50ZXJuYWwiOiI4NGZkMGFhZTAyZGZjZDAxODBjYmFhMDQiLCJsaW5rX2lkIjoxNzM5fQ/f2f169cdec664370f5935d7e3caf2cea1c6230e6f2e5b97a910001faafdd6691">data policy filtering</a> in the provider routing docs.</p>
+<p><strong>3. Pick only zero-retention providers.</strong> Many providers on OpenRouter are zero retention (Amazon Bedrock, Azure, Cerebras, DeepInfra, Google Vertex, Groq, NVIDIA, SambaNova, Together, and others in the table). Filter to them the same way as training policy.</p>
+<p>IF YOU NEED STRICTER GUARANTEES</p>
+<p>OpenRouter supports EU in-region routing for enterprise accounts. When enabled, prompts and completions are processed inside the European Union via the <code>https://eu.openrouter.ai</code> base URL. Contact <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo4VHJ6VllHbkIxY2NyQ01yTjVaQT09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9lbnRlcnByaXNlL2Zvcm0_dXRtX2NhbXBhaWduPU9uYm9hcmRpbmcrRmxvdystK3Y0K0FwcmlsKzIwMjZcdTAwMjZ1dG1fY29udGVudD1BLUZpbmFsK1ByaXZhY3krVHJ1c3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYWFlMDJkZmNkMDE4MGNiYWEwNCIsImxpbmtfaWQiOjY3fQ/59fa97381106762ab6354d127237a4d06dfdcfa2cfdf73676efb9c73aeac6039">the enterprise team</a> to enable it.</p>
+<p>One API key, the same privacy controls across 300+ models.</p>
+<p><a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo4VHJ6VllHbkIxY2NyQ01yTjVaQT09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haT91dG1fY2FtcGFpZ249T25ib2FyZGluZytGbG93Ky0rdjQrQXByaWwrMjAyNlx1MDAyNnV0bV9jb250ZW50PUEtRmluYWwrUHJpdmFjeStUcnVzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiODRmZDBhYWUwMmRmY2QwMTgwY2JhYTA0IiwibGlua19pZCI6MX0/ed26eeeb115262318ad02e52f1b692bdb4d7d8e13b351c05788ba904babd774f">openrouter.ai</a>  ·  <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo4VHJ6VllHbkIxY2NyQ01yTjVaQT09IiwiaHJlZiI6Imh0dHBzOi8vZGlzY29yZC5jb20vaW52aXRlLzhUcHV6TlhRWXI_dXRtX2NhbXBhaWduPU9uYm9hcmRpbmcrRmxvdystK3Y0K0FwcmlsKzIwMjZcdTAwMjZ1dG1fY29udGVudD1BLUZpbmFsK1ByaXZhY3krVHJ1c3RcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsX2FjdGlvblx1MDAyNnV0bV9zb3VyY2U9Y3VzdG9tZXIuaW8iLCJpbnRlcm5hbCI6Ijg0ZmQwYWFlMDJkZmNkMDE4MGNiYWEwNCIsImxpbmtfaWQiOjEwMDJ9/29a067949318eefca5b3085d8e8b7ecba11e2d552976934bee9eeeec08e9d7bb">Discord</a>  ·  <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo4VHJ6VllHbkIxY2NyQ01yTjVaQT09IiwiaHJlZiI6Imh0dHBzOi8veC5jb20vb3BlbnJvdXRlcj91dG1fY2FtcGFpZ249T25ib2FyZGluZytGbG93Ky0rdjQrQXByaWwrMjAyNlx1MDAyNnV0bV9jb250ZW50PUEtRmluYWwrUHJpdmFjeStUcnVzdFx1MDAyNnV0bV9tZWRpdW09ZW1haWxfYWN0aW9uXHUwMDI2dXRtX3NvdXJjZT1jdXN0b21lci5pbyIsImludGVybmFsIjoiODRmZDBhYWUwMmRmY2QwMTgwY2JhYTA0IiwibGlua19pZCI6MTAzNH0/3055e296f3d01c3a7879c11cf1167aa966a274ada1eeb74b644974507e8153ba">X</a>  ·  <a href="https://email-v3.openrouter.ai/e/c/eyJlbWFpbF9pZCI6ImRnU0VfUW9CQUlETHFnVF95cW9FQVo4VHJ6VllHbkIxY2NyQ01yTjVaQT09IiwiaHJlZiI6Imh0dHBzOi8vb3BlbnJvdXRlci5haS9kb2NzP3V0bV9jYW1wYWlnbj1PbmJvYXJkaW5nK0Zsb3crLSt2NCtBcHJpbCsyMDI2XHUwMDI2dXRtX2NvbnRlbnQ9QS1GaW5hbCtQcml2YWN5K1RydXN0XHUwMDI2dXRtX21lZGl1bT1lbWFpbF9hY3Rpb25cdTAwMjZ1dG1fc291cmNlPWN1c3RvbWVyLmlvIiwiaW50ZXJuYWwiOiI4NGZkMGFhZTAyZGZjZDAxODBjYmFhMDQiLCJsaW5rX2lkIjo1fQ/5f6b54f99c1c88efd5fd6550120e4d1e1c60a2b9a924632d5b038593183972e0">Docs</a></p>
+<p><a href="https://email-v3.openrouter.ai/manage_subscription_preferences/dgSE_QoBAIDLqgT_yqoEAZ8TrzVYGnB1ccrCMrN5ZA==">Manage preferences</a>   |   <a href="https://email-v3.openrouter.ai/unsubscribe/dgSE_QoBAIDLqgT_yqoEAZ8TrzVYGnB1ccrCMrN5ZA==">Unsubscribe</a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>What I learned running an adversarial test on an AI text detector — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="What I learned running an adversarial test on an AI text detector — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>What I learned running an adversarial test on an AI text detector</h1>
+<p class="meta">2026-06-11 · received 2026-06-11 20:48 +0900
+ · <a href="https://indicator.media/p/what-i-learned-running-an-adversarial-test-on-an-ai-text-detector" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>What I learned running an adversarial test on an AI text detector</h1>
+<p>As AI-generated text seeps into every field of human writing, synthetic text detectors are having a moment.</p>
+<p>Few appear to be as buzzy as <a href="https://www.pangram.com/">Pangram</a>, which <a href="https://pitchbook.com/profiles/company/626236-93#overview">reportedly</a> raised $10 million in seed funding in March. Pangram says it can “detect AI-generated content with 99.98% accuracy.” In the past couple of months, it has been cited as evidence that AI wrote <a href="https://www.france24.com/en/culture/20260526-could-controversial-award-winning-short-story-signal-new-era-ai-literary-slop-commonwealth-prize">award-winning fiction</a>, <a href="https://www.theatlantic.com/culture/2026/03/how-ai-creeping-new-york-times/686528/">New York Times relationship columns</a>, <a href="https://www.nature.com/articles/d41586-025-03506-6">innumerable academic articles</a>, and even the <a href="https://www.wired.com/story/pope-tweets-ai-generated-pangram-chrome-extension/">Pope’s tweets</a>.</p>
+<p>AI text detection was once essentially useless. A highly-cited <a href="https://link.springer.com/article/10.1007/s40979-023-00146-z/tables/7">2023 paper</a> tested 14 tools (Pangram was not one of them) and concluded that “available detection tools are neither accurate nor reliable.”</p>
+<p>A more recent <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5407424">working paper</a> found that Pangram and other commercial tools perform far better, but they remain divisive.</p>
+<p>A common criticism is that Pangram is a probabilistic tool being used deterministically. The detector picks up relatively opaque and unknowable patterns in a piece of text that <em>suggest</em> but cannot definitively <em>prove</em> AI use.</p>
+<p>As the reputational cost of getting called out for publishing AI-generated text without disclosure increases, so do the incentives to find workarounds that deceive AI text detectors. (Just search for “AI text humanizer” and see how many companies are trying to sell you something.) At a recent security and privacy conference, <a href="https://news.ufl.edu/2026/05/traynor-ai-detector-study/">researchers warned</a> that relatively simple adversarial attacks can consistently trip up detectors.</p>
+<p>To test this proposition, I ran my own adversarial audit of Pangram over the past few days. In preliminary testing, I found that the tool misidentified AI-generated text as human if the content rhymed or repeated. Taking advantage of this weakness, I was able to get Pangram to falsely label AI text as human 86% of the time in an adversarial set of 588 text samples. I also found that slightly altering the order of words in short passages could cause Pangram to reverse its initial verdict on a piece of text.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/59991003-f313-4668-9467-dab95f558396/image.png?t=1781132882" /></p>
+<p>Despite these results, I came out from my audit relatively impressed at the Pangram’s solidity in the face of adversarial attacks. But I also walked away with renewed concern that AI text detectors are being treated as an oracular determination of a text’s origin when they should really only serve as one element of a broader investigation.</p>
+<p>Here’s how I ran the test and what I found out.</p>
+<p>First, a premise: AI tools (and really any algorithmic product) are typically assessed through both representative and adversarial testing. The first kind evaluates the accuracy and safety of a tool across “typical” use cases, which in the case of Pangram might be some mix of student essays, opinion articles, and literary submissions. An adversarial test focuses on lower probability behaviors and is actively trying to maximize the chances of getting an inaccurate or unsafe result.</p>
+<p>I started my adversarial test by running a lot of different types of text – both human and AI-generated – through Pangram’s detector to see what might get mislabeled. I ultimately decided to test only synthetic content because I assumed that a lot of human-generated content that’s available online had probably already been used by Pangram to train its detector.</p>
+<p>I used Claude to generate several text samples that emulated different formats: news articles, student essays, press releases, LinkedIn thinkfluencer posts, sermons, children’s books, and so on. I uploaded them to Pangram to see how many would get caught as synthetic. That’s when I noticed that AI text was routinely misclassified when it rhymed. This happened, for example, to text that looked like something a Dr. Seuss fan might have written:</p>
+<p>“The day that Old Grizmo went out for a swim
+Was the day that the puddle decided on him.
+"You can't be in here!" said the puddle to Griz,
+""For a puddle is what I most certainly is!""
+But Grizmo just shrugged and he stepped right inside,
+And the puddle, well, the puddle just sighed.“ —</p>
+<p>Pangram also thought religious content like this was human-generated:</p>
+<p>“O Father of mercies, O Lord of the day,
+Be present to guide us along on our way,
+The path is uncertain, the night will be long,
+But thy steady arm, Lord, shall keep us yet strong.“ —</p>
+<p>Armed with this knowledge, I generated and tested dozens of rhyming samples across different topics. (Every single test I ran and its Pangram classification is <a href="https://docs.google.com/spreadsheets/d/1xd7CObNN-aagmaH6EBFTz6rkjf9BUw1zLuFe1uxQ12s/edit?usp=sharing">available here</a>.)</p>
+<p>After getting the results from almost 1,200 tests, I used Claude Code to predict which samples were more likely to be misclassified by Pangram. Rhyming, inverted text, archaic language, and repetition were the strongest predictors that synthetic text would be branded as human-written.</p>
+<p>I generated 6,000 additional samples across two possible adversarial use cases: social media content farms (covering politics and religion) and spammy digital publishers (in the children's and romantasy niches). The idea was to generate content that was at least somewhat likely to exist online, rather than focus solely on text that scrambled Pangram’s detection mechanisms.</p>
+<p>With a very basic classifier built with Claude Code from my earlier tests, I scored the 6,000 samples to pick the ones that were most likely to get mislabeled by Pangram. I wasted 12 Pangram credits on a test and was left with 588 samples for my final round. When I ran these AI-generated samples through the text detector, Pangram determined that 504 were human-written and 13 were “mixed” contributions between a human and AI. It correctly identified only 71 samples as synthetic, or 12% of the total.</p>
+<p>You can see the final adversarial set <a href="https://docs.google.com/spreadsheets/d/1KoOyIXVQWZaHTbGTUgJaPmywlVH6wfu36qQMeBFf6nU/edit?gid=266198921#gid=266198921">here</a> or explore the data below:</p>
+<p>I asked <a href="https://people.f4.htw-berlin.de/~weberwu/">Debora Weber-Wulff</a>, a former professor at HTW Berlin and co-author of the 2023 audit of text detectors, what might have tripped Pangram up.</p>
+<p>“Many “detection” systems measure burstiness and perplexity,” Weber-Wulff told me, which means that “they try and re-guess what the next collection of words would be and if there is a match, they up the score.” Because the formats I settled on “would not fit within the stochastic nature of how LLMs work normally,” they got labeled as human.</p>
+<p>Max Spero, Pangram’s CEO, told me over a video call that “in the absence of strong signals that something is AI-generated, we are OK with predicting it as human-written,” because it is a less harmful mistake. This is more likely to happen in “low-signal, formulaic domains where the text is more constrained – like recipes, to-do lists, or text that rhymes.”</p>
+<p>This doesn’t mean that any rhyming, AI-generated text will get past Pangram. My adversarial set was composed of relatively short samples (the median was 88 words), for example. When I tried to extend this to longer samples of at least 200 words, the false negative rate fell below 10%. That’s still sizable, but significantly better than on short texts.</p>
+<p>Inspired by pushback from Cornell Tech professor and AI-human interaction expert <a href="https://tech.cornell.edu/people/mor-naaman/">Mor Naaman </a>– he amicably told me that my conclusion “sounds a bit fringe and a bit like '<a href="https://en.wikipedia.org/wiki/Data_dredging">p-hacking</a>’” – I also looked for ways to generalize my findings.</p>
+<p>To do so, I tried to understand how much rhyming and text inversion is enough to make Pangram label an AI-generated text as human.</p>
+<p>Eventually I found that for some short texts, it didn’t take very much to trip up the classifier. Just inverting one clause in a way that is relatively natural (or at minimum grammatically correct) changed the label around 4% of the time. Here are some examples:</p>
+<p>To some extent, this is still a gimmick. The text rated as “human” by Pangram may read as robotic or synthetic to an actual human. But the challenge is that “the so-called detection technology is a black box,” according to Weber-Wulff.</p>
+<p>“A system that just spits out a number without proof is useless,” she told Indicator, noting that plagiarism reviews in universities require any accusations to be substantiated with proof, not just a score. She also worries that students who grow up with LLMs and use their outputs may start to write more like them.</p>
+<p>Spero told Indicator that while Pangram “doesn’t share the exact words and tokens that clue us off” – in part to prevent adversarial actors from reverse-engineering the minimal edits required to get a human label – the company is “fairly open about our general training process and evaluation suite.” (He pointed me to Pangram’s <a href="https://www.pangram.com/research/model-card/pangram-3-3">model card </a>as evidence.)</p>
+<p>Weber-Wulff thinks we need continuous adversarial testing of AI text detection because the whole field is a “moving target.”</p>
+<p>She and others have also called for abandoning the use of these tools to assess student assignments. In a <a href="https://www.tandfonline.com/doi/full/10.1080/1360080X.2026.2622146#abstract">paper</a> in the Journal of Higher Education Policy and Management, several scholars and practitioners argue that “AI detection in education is not merely flawed; it is conceptually unsound,” because it “cannot meet the evidentiary threshold required for academic integrity investigations.”</p>
+<p>Spero told Indicator that “the tools and algorithms of the future are all probabilistic,” pointing to ChatGPT and Waymo as examples.</p>
+<p>“The world is getting better at understanding and using probabilistic methods because they’re so much better than just going off of pure intuition,” Spero added. “As long as we’re extremely transparent about Pangram’s results, I think we can set up people who are using Pangram for success.”</p>
+<p>For my part, I came out thinking that Pangram can be a helpful instrument to probe for possible AI use. But its clients are not using it to determine whether something is “likely;” they are looking for a definitive answer that can often seriously affect people’s academic progress, careers, and livelihoods. And for those use cases, the burden of proof should surely be higher.</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Indicator Lab Notes 01: Going Sovereign — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Indicator Lab Notes 01: Going Sovereign — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Indicator Lab Notes 01: Going Sovereign</h1>
+<p class="meta">2026-09-02 · received 2026-09-02 20:01 +0900
+ · <a href="https://indicator.media/p/lab-notes-going-sovereign" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>Indicator Lab Notes 01: Going Sovereign</h1>
+<p>Hello, and welcome to the first issue of Indicator Lab Notes.</p>
+<p>Every month following our live session, I'll share key takeaways: a summary of what we discussed, one important thing I discovered, and a few useful tools you can use in your work.</p>
+<p>Depending on the subject, a Lab Notes issue might unpack an investigation, stay with one method or workflow, or explain an experiment.</p>
+<p><a id="from-the-session"></a></p>
+<h2>From the session</h2>
+<p>Here's what we talked about this week: <a href="https://lab.buriedsignals.com/sessions/01-going-sovereign/">Going Sovereign</a>.</p>
+<p>I believe more investigators, researchers, and organizations will own their LLMs and workflows rather than rely on third party tools and models like ChatGPT and Claude. That’s what I mean by going sovereign. This capability exists today: sensitive data, reporting methodology, and models can run entirely on infrastructure that you control, even if you’re not technically inclined. As local models and harnesses improve, owned workflows will become accessible to more teams.</p>
+<p>Here’s a breakdown of how a harness fits into a sovereign system.</p>
+<p>View image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/276a45f9-c0c6-4958-a74a-0176a025a03c/lab-notes-harness.png) [Diagram showing a harness connecting context, tools, durable state and a human gate around the model.]</p>
+<ul>
+<li>
+<p><strong>What the harness does.</strong> A model turns text into text; the harness adds the method, tools, saved state, and human gates that enable it to contribute to an investigation. Pi and Flue are open-source harness-engineering SDKs you can use to build these layers around models.</p>
+</li>
+<li>
+<p><strong>What my tests with Spotlight showed.</strong> I built spotlight to be your control panel for highly skilled investigative agents.** **I <a href="https://spotlight.buriedsignals.com/going-sovereign/">tested how to run it on a local, smaller model</a>. It worked. This shows how teams can encode their own method, tools, and review process into a sovereign workflow. It’s something I can help you do as a Lab member.</p>
+</li>
+<li>
+<p><strong>When fine-tuning helps.</strong> If a very small model needs to follow a procedure rigorously, you can tune it on human-reviewed examples of the steps and reviews you require. This is useful when hardware constraints make a smaller model the practical choice.</p>
+</li>
+<li>
+<p><strong>A Recursive Language Model</strong> is an AI that handles <strong>massive documents</strong> by writing its own computer programs to break down the text into tiny, manageable pieces.** **It can then hand the main model a compact, source-linked checkpoint. This helps the smaller model stay on task while the untouched source remains the evidence.</p>
+</li>
+</ul>
+<h2>Field Notes</h2>
+<p>The <a href="https://reutersinstitute.politics.ox.ac.uk/news/how-will-ai-reshape-news-2026-forecasts-17-experts-around-world">Reuters Institute for the Study of Journalism asked 17 media experts how AI will impact news in 2026</a>. Florent Daudens said that publishers will need to be discoverable inside chatbot conversations because people will increasingly consume information by asking a model a question. Conversation rather than clicks will become the measure.</p>
+<p>Spotlight prepares for this by giving your agent plenty of context around each claim it has stored as a finding. Theoretically once the claims have been verified, team members can use them to compound deeper investigations, or trace back to entities and individuals across stories.</p>
+<p>I borrowed the shape from <a href="https://www.linkedin.com/in/sannuta/">Sannuta Raghu</a>'s <a href="https://newsatom.xyz/">News Atom</a>: a story with EXIF, where you click a sentence and see the claim underneath it.</p>
+<p><strong>The shape:</strong></p>
+<p>Each finding stays attached to its source passage; I approve the claim, attach it to an event and let events build the story arc. Spotlight stores that chain in a local database, then projects it into Open Knowledge as an investigation summary and a page per arc, replacing Obsidian. It keeps the case traceable for the team now and makes sourced conversational access possible later.</p>
+<h2>Toolbox</h2>
+<p><strong><a href="https://arxiv.org/abs/2608.28302">FUSED</a></strong> is an <a href="https://github.com/AntonNuzhdin/FUSED">open-source model</a> that detects and localizes AI edits within a photograph. It can show which region may have been regenerated, giving you a lead to examine rather than a verdict. We'll integrate it into Mycroft, the Lab’s desktop app that you can use to run your investigations.</p>
+<p><strong><a href="https://arxiv.org/abs/2608.28572">PULSAR</a></strong> searches a document page as an image instead of relying only on OCR. It can take a leaked deck or procurement PDF and surface a figure contained in a chart or element that text extraction might miss.</p>
+<p><strong><a href="https://huggingface.co/thomsonreuters/Thomson-1.0-Small">Thomson-1.0-Small</a></strong> is a small model trained by Thomson Reuters on legal, tax and journalism material. Point it at a filing from your beat and test whether the sources it cites are ones you'd use.</p>
+<p><strong><a href="https://github.com/7onez/cti-expert">CTI Expert</a></strong> is a cyber threat intelligence and OSINT skill integrated into Spotlight. If you're tracking an actor through infrastructure or pulling threads on a leak, it gives the investigation a structured way to collect, pivot, and assess what you find.</p>
+<p><strong><a href="https://tailscale.com/kb/1151/what-is-tailscale">Tailscale</a></strong> creates encrypted point-to-point connections between devices on a private network. Craig Silverman and I are using it to access data securely in an investigation and let agents work through it without exposing the source machine publicly. More on that in a couple months.</p>
+<h2>Next</h2>
+<p>I’m holding office hours on Thursday, September 3 at 10 am ET. Come if you want to work through anything from the session or to get help with installing or testing the tools we’re offering in the Lab. <a href="https://luma.com/buried-xvjl">Register here</a>.</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

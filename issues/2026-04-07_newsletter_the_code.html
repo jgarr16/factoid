@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 Strange things happening in AI — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 Strange things happening in AI — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 Strange things happening in AI</h1>
+<p class="meta">2026-04-07 · received 2026-04-07 23:01 +0900
+ · <a href="https://codenewsletter.ai/p/openai-anthropic-google-fight-model-copying-meta-goes-open-source" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 Strange things happening in AI</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/32c8c971-340a-4f62-a6b8-f362e57e5397/image__83_.jpg?t=1770628392" /></p>
+<hr />
+<p><strong>Welcome back.</strong> The number of strange things happening in AI is ridiculous. Yesterday, someone built an actual Indiana Jones-style <a href="https://x.com/blended_jpeg/status/2041108141266653325">whip</a> for Claude Code (github repo <a href="https://github.com/GitFrog1111/badclaude">here</a>). And today, Milla Jovovich — yes, actress from the Resident Evil movies — announced that she has built an agentic memory tool that scored 100% on LongMemEval (see <a href="https://x.com/bensig/status/2041229266432733356">video</a>). Wild times.</p>
+<p><strong>Also:</strong> How to make RAG 32x more memory efficient, building self-improving LLM knowledge bases, and a look at how OpenAI’s Codex team actually ships.</p>
+<hr />
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>Why Claude Code's real edge was never the model</p>
+</li>
+</ul>
+<p><a id="how-to-feed-claude-code-skills-real-time-data"></a>
+* How to feed Claude Code skills real-time data</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><img alt="Made with Midjourney." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/33aedce4-80ba-41c3-8364-93a160ef6c10/superhumanteam_Create_an_potrait_of_the_person_--ar_169_--sre_9f5e4055-19d5-4dc9-8b4c-c3f705e36def_1.jpg?t=1775559828" />
+<em>Made with Midjourney.</em></p>
+<hr />
+<p><strong>OpenAI, Anthropic, and Google team up to fight model copying:</strong> These three AI rivals are <a href="https://www.businesstimes.com.sg/international/global/openai-anthropic-google-unite-combat-model-copying-china"><strong>teaming up</strong></a> through the Frontier Model Forum to combat “adversarial distillation”, a process where unauthorized users harvest responses from US models to build cheaper knockoffs. OpenAI has accused DeepSeek of piggybacking on its tech, while Anthropic has already cut off access for Chinese-controlled firms after catching three labs doing just that. US officials estimate this practice drains billions of dollars from Silicon Valley labs every year.</p>
+<p><strong>Anthropic secures massive compute expansion with Google and Broadcom:</strong> The AI lab recently <a href="https://www.anthropic.com/news/google-broadcom-partnership-compute"><strong>landed</strong></a> a multi-gigawatt deal for next-gen TPU capacity, set to go live in 2027. This marks the company’s largest compute commitment to date, fueled by explosive growth: run-rate revenue has tripled since late 2025 to $30B, while the number of enterprise customers spending over $1M annually has doubled to more than 1,000 in just two months.</p>
+<p><strong>Meta plans open-source versions of its next frontier models:</strong> The social media giant is working on open-source versions of its next two <a href="https://siliconangle.com/2026/04/06/report-meta-developing-open-source-versions-upcoming-ai-models/"><strong>proprietary models</strong></a>, codenamed Avocado (an LLM) and Mango (an image and video generator). While Bloomberg reported last December that the company was pivoting to a fully closed-source approach, those plans have changed. These open-source editions will likely be lighter versions with fewer features or parameters, partly due to AI safety concerns. There's no word yet on a release date.</p>
+<hr />
+<h5><strong>PRESENTED BY WISPR</strong></h5>
+<h2><a href="https://ref.wisprflow.ai/thecode">Cursor for code. Claude for thinking. What about input?</a></h2>
+<p><a href="https://ref.wisprflow.ai/thecode"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ac7f2e9a-99a7-49b1-94f8-8a13a058e859/Newsletters_Image_1920x1080__5_.png?t=1775494389" /></a></p>
+<hr />
+<p>Your dev stack got an AI upgrade everywhere except the input layer. You're still typing every prompt, every ticket, every review comment by hand.</p>
+<p><a href="https://ref.wisprflow.ai/thecode">Wispr Flow</a> closes that gap. Dictate into Cursor, VS Code, Slack, Linear, or anywhere else you work. It's syntax-aware: camelCase, snake_case, acronyms, and file names all come through clean. Mention a file in Cursor or Windsurf, and it auto-tags.</p>
+<p><a href="https://ref.wisprflow.ai/thecode">It's the voice layer for an AI-native workflow</a>. Speak your intent. Your tools do the rest.</p>
+<p>Available on Mac, Windows, iPhone, and Android. Used by millions of developers, including teams at OpenAI and Mercury.</p>
+<p><a href="https://ref.wisprflow.ai/thecode"><strong>Try free</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="the-claude-code-leak-proves-harnesses-are-the-next-big-thing-not-model"></a></p>
+<h2><strong>The Claude Code leak proves harnesses are the next big thing — not models</strong></h2>
+<p><a href="https://x.com/rasbt/status/2038980345316413862"><img alt="Source: X/rasbt" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/99af0531-09c0-4cb0-b12d-e6010c8441ab/HEvpqRWbQAA6JKt.jpg?t=1775538340" /></a>
+<em>Source: X/rasbt</em></p>
+<hr />
+<p><strong>The $2.5B code dump.</strong> Last week, Anthropic accidentally leaked Claude Code's <a href="https://fortune.com/2026/03/31/anthropic-source-code-claude-code-data-leak-second-security-lapse-days-after-accidentally-revealing-mythos/"><strong>entire source code</strong></a> via an npm update, exposing half a million lines of TypeScript. But the leak revealed a bigger truth: the model isn't the secret sauce.</p>
+<p><strong>Plumbing beats parameters.</strong> ML researchers like Sebastian Raschka <a href="https://x.com/rasbt/status/2038980345316413862"><strong>found</strong></a> that Claude Code's performance comes from its engineering, not just the underlying model. It relies on smart features like file history tracking to save context, specialized navigation tools, and parallel agents for background tasks. You'd likely get similar results using DeepSeek or Kimi with the same setup.</p>
+<p><strong>The wrapper is the new winner.</strong> Others have already proven this. LangChain <a href="https://blog.langchain.com/the-anatomy-of-an-agent-harness/"><strong>climbed</strong></a> to the top five on benchmarks just by improving its harness, while Vercel saw better results by simplifying its agent's tools. The real competition has shifted from model quality to the quality of the surrounding infrastructure.</p>
+<p><strong>Blueprints aren't buildings.</strong> While every competitor now has the map to a multi-billion dollar product, execution remains the hurdle. Knowing how the architecture works and actually scaling it for production are two completely different challenges.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/34c4ed6b-2a7c-4fda-844d-3081519db519/CleanShot_2026-04-07_at_13.14.51_2x.jpg?t=1775547922" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Faster RAG:</strong> How Perplexity, Azure, and HubSpot use a** <a href="https://x.com/_avichawla/status/2040326889928356122">simple technique</a>** to make RAG 32x more memory efficient (explained with code).</p>
+</li>
+<li>
+<p><strong>External Brain:</strong> Inspired by Andrej Karpathy, this thread** <a href="https://x.com/hooeem/status/2041196025906418094">walks you</a>** through building your own LLM knowledge base that compounds over time.</p>
+</li>
+<li>
+<p><strong>Inside Codex:</strong> OpenAI's Head of DevRel and Codex product lead go <a href="https://www.youtube.com/watch?v=9qXc-THAvc0"><strong>behind the scenes</strong></a> on how the team actually ships products.</p>
+</li>
+<li>
+<p><strong>Agent Anatomy:</strong> When your AI agent fails, the problem is rarely the model. This <a href="https://x.com/akshay_pachaar/status/2041146899319971922">deep dive</a> shows how to turn a stateless LLM into a production agent.</p>
+</li>
+<li>
+<p><strong>Leaked Playbook:</strong> Claude Code's source code was accidentally leaked, and here's a <a href="https://www.dbreunig.com/2026/04/04/how-claude-code-builds-a-system-prompt.html"><strong>breakdown</strong></a> of how it constructs system prompts</p>
+</li>
+<li>
+<p><strong>Docs as Files:</strong> Most AI code fails when docs change. This tool turns live documentation into an accessible <a href="https://x.com/arlanr/status/2041215978957389908">filesystem</a> that agents can browse.</p>
+</li>
+<li>
+<p><strong>Perfect Timing:</strong> OpenAI announced a new Safety Fellowship, hours after a New Yorker investigation revealed it had <a href="https://x.com/RonanFarrow/status/2041224604878864514"><strong>dissolved</strong></a> its safety teams.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to feed Claude Code skills real-time data</strong></h2>
+<p><a href="https://x.com/lydiahallie/status/2034337963820327017"><img alt="Souce: X/lydiahallie" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d50e9190-e66a-4921-b364-1169aec80c8e/CleanShot_2026-04-07_at_10.50.40_2x.jpg?t=1775539271" /></a>
+<em>Souce: X/lydiahallie</em></p>
+<hr />
+<p>Claude Code skills are normally static, which usually means tedious manual copy-pasting for PR diffs or logs. Lydia Hallie, an engineer on the Claude Code team, recently <a href="https://x.com/lydiahallie/status/2034337963820327017">shared</a> a much better way: use the <code>!</code> backtick syntax to embed shell commands directly into your <code>SKILL.md</code>.</p>
+<p>Claude Code will execute the commands and swap in the live output automatically before processing. To get started, create this file at <code>.claude/skills/pr-summary/SKILL.md</code>:</p>
+<pre><code>---
+name: pr-summary
+description: Summarize changes in a pull request
+---
+
+- PR diff: !`gh pr diff`
+- PR comments: !`gh pr view --comments`
+- Changed files: !`gh pr diff --name-only`
+
+Summarize this pull request...
+</code></pre>
+<p>This syntax works with any shell command, allowing you to pull in test results, grep for TODOs, or fetch API responses automatically. To prevent accidental state changes, stick to read-only commands like <code>cat</code>, <code>grep</code>, and <code>gh pr view</code>.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=pbAqx8B6NVc&amp;t=876s"><img alt="Click here to watch this tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ffb42898-1219-4127-a81d-ceaa835e8021/Untitled_design__41_.jpg?t=1775556039" /></a>
+<em>Click here to watch this tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=pbAqx8B6NVc&amp;t=876s"><strong>How to build your own AI agent from scratch:</strong> </a> In this tutorial, you'll learn how to build a custom AI meeting assistant with the Mastra TypeScript framework. You'll see how to bridge core agent concepts like tools, memory, and event triggers by integrating Slack, Exa AI, and Cal.com into one seamless, automated workflow.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/safishamsi/graphify"><strong>Graphify:</strong> </a> This AI coding agent skill turns any folder of code, docs, papers, or images into a queryable knowledge graph. It gives you a full system context so your agent can answer complex architecture questions with precision.</p>
+<hr />
+<p><a id="trending-paper"></a></p>
+<h3><strong>Trending Paper</strong></h3>
+<p><a href="https://cursor.com/blog/warp-decode"><strong>Cursor doubles AI coding speed on Blackwell GPUs:</strong> </a> Traditional MoE models waste processing time managing data around individual experts during single-token generation. By assigning computing power directly to outputs instead, warp decode skips these extra steps, making inference 1.8x faster and more accurate.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 200K+ engineers and 100K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

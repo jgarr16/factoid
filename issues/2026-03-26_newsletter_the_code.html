@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>⚡ Anthropic&#x27;s third big drop this week — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="⚡ Anthropic&#x27;s third big drop this week — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>⚡ Anthropic&#x27;s third big drop this week</h1>
+<p class="meta">2026-03-26 · received 2026-03-26 23:02 +0900
+ · <a href="https://codenewsletter.ai/p/anthropic-brings-work-tools-to-mobile-cursor-drops-self-hosted-cloud-agents" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>⚡ Anthropic's third big drop this week</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/32c8c971-340a-4f62-a6b8-f362e57e5397/image__83_.jpg?t=1770628392" /></p>
+<hr />
+<p><strong>Welcome back.</strong> Anthropic is on a roll. First, Claude took over your Mac (Computer Use). Then, Claude Code started managing its own permissions (Auto Mode). Now, they're coming for your phone.</p>
+<p><strong>Also:</strong> Anthropic engineer explains how Claude takes control of your computer, how to build CLIs for AI agents, and why engineering roles are up 400% since last year.</p>
+<hr />
+<p><a id="todays-insights"></a></p>
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>How Uber uses AI for development</p>
+</li>
+</ul>
+<p><a id="how-to-auto-generate-your-claudemd"></a>
+* How to auto-generate your CLAUDE.md</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=NAwvkrxompk"><img alt="Click here to see it in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/098df902-ce0b-49a0-86c2-27dc7c5235e3/Untitled_design__27_.jpg?t=1774510258" /></a>
+<em>Click here to see it in action.</em></p>
+<hr />
+<p><strong>Claude now lets you access work tools from your phone:</strong> The AI lab just brought popular workplace tools like Figma, Slack, and Amplitude directly into the <a href="https://x.com/claudeai/status/2036850783526719610"><strong>Claude mobile app</strong></a>. Now, you can now review designs, debug analytics, and manage tasks straight from your phone. This marks Anthropic’s third big release this week, following the launch of Computer Use for Mac and <a href="https://x.com/claudeai/status/2036503582166393240"><strong>Auto Mode</strong></a> for Claude Code (a new feature that allows the coding assistant to manage its own permissions instead of stopping to ask for approval on every single task).</p>
+<p><strong>Cursor's cloud agents can now run entirely in your own network:</strong> The AI coding startup just made <a href="https://cursor.com/blog/self-hosted-cloud-agents"><strong>self-hosted</strong></a> cloud agents generally available. Each agent runs in an isolated VM with full access to internal caches, dependencies, and network endpoints, ensuring that code, secrets, and build artifacts never leave the team's environment. While Cursor handles the orchestration and model access, teams maintain their existing security setup. Companies like Brex, Notion, and Money Forward are already using them to delegate end-to-end software builds.</p>
+<p><strong>Cloudflare launches 100x faster sandboxing for AI agents:</strong> Cloudflare just dropped its <a href="https://blog.cloudflare.com/dynamic-workers/"><strong>Dynamic Worker Loader API</strong></a> as an open beta, offering a fresh approach for teams to securely run AI-generated code at scale. Rather than spinning up heavy containers that take hundreds of milliseconds to boot, this system uses V8 isolates that start in under ten milliseconds and use significantly less memory. Additionally, agents can now interact with tools using typed TypeScript APIs, which helps keep token counts low and efficiency high.</p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>How Uber uses AI for development</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b0c2da17-5422-418c-9a85-3d8c7237411e/superhumanteam_An_astronaut_driving_an_Uber_car_with_Uber_wri_62345265-37a1-40a6-ae99-045b3152419d_0.jpg?t=1774520070" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>Uber pulls back the curtain.</strong> At the <a href="https://www.pragmaticsummit.com/"><strong>Pragmatic Summit</strong></a> in San Francisco, Ty Smith and Anshu Chadha from the Dev Platform team gave a rare look at how the company is rolling out AI agents across its 3,000-person engineering team. While many companies claim to be AI-powered, Uber actually showed what it takes to get there.</p>
+<p><strong>Engineers have changed how they work.</strong> About** <a href="https://www.linkedin.com/posts/pneppalli_agentic-software-engineering-adoption-is-activity-7439402236541157376-6PwV/">84% of Uber's developers</a>** now use agentic coding workflows, which look nothing like simple tab completion. Engineers now kick off multiple agents in parallel on different tasks, then review and redirect the output. Their role has shifted from writing code to orchestrating the systems that write it. In fact, Claude Code adoption nearly doubled in three months while traditional IDE tools plateaued.</p>
+<p><strong>This shift requires serious infrastructure.</strong> Uber built a central MCP Gateway to turn internal endpoints into MCP servers, an AIFX CLI for provisioning tools, and Minion, a platform for running background agents with monorepo access. All of this** <a href="https://newsletter.pragmaticengineer.com/i/190542498/2-internal-tooling-mcp-gateway-uber-agent-builder-and-the-aifx-cli">drove</a>** AI costs up 6x since 2024. The team also noted that top-down mandates didn't work. Instead, peer-driven adoption, where engineers shared their wins, was what really moved the needle.</p>
+<p><strong>The cost of AI is the part everyone skips.</strong> Most rollout stories focus only on adoption numbers. Uber’s story is different because it covers the infrastructure decisions, the tooling mistakes, and what happens when agents start opening 11% of pull requests. If your team is working through its own AI strategy, the** <a href="https://www.youtube.com/watch?v=i1tZN41VKcE">full talk</a>** is well worth your time.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c998f173-5343-4318-8334-0f403df4c36d/CleanShot_2026-03-26_at_14.25.18_2x.jpg?t=1774515349" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Screen Takeover:</strong> An Anthropic engineer <a href="https://x.com/felixrieseberg/status/2036476512250241420"><strong>shared</strong></a> exactly how Claude takes control of your computer.</p>
+</li>
+<li>
+<p><strong>Caught by a Bug:</strong> A supply chain attack hit LiteLLM (one of the most popular AI packages) and <a href="https://x.com/karpathy/status/2036487306585268612"><strong>stole credentials</strong></a> from anyone who installed the package. Andrej Karpathy breaks it down (61.7M views).</p>
+</li>
+<li>
+<p><strong>Cognitive Debt:</strong> AI-heavy codebases are creating a new problem: code that nobody on the team can keep in their head. An ex-Vercel engineer just shared a <a href="https://x.com/mattpocockuk/status/2036768796065640554"><strong>simple rule</strong></a> to fix it.</p>
+</li>
+<li>
+<p><strong>Plot Twist:</strong> Engineering roles are up over 400% since last year's slump. Ex-Airbnb product lead Lenny Rachitsky's <a href="https://x.com/lennysan/status/2036535460726767793"><strong>viral post</strong></a> on why the job market is defying the doom narrative (1.2M views).</p>
+</li>
+<li>
+<p><strong>CLI Blind Spot:</strong> Agents choke on interactive prompts, missing examples, and unpredictable command structures. A Cursor engineer posted a <a href="https://x.com/ericzakariasson/status/2036762680401223946"><strong>guide</strong></a> to building CLIs that agents can actually use.</p>
+</li>
+<li>
+<p><strong>Prompt Vault:</strong> 300 copy-paste Claude prompts just <a href="https://x.com/cyrilXBT/status/2036280031782060364"><strong>dropped</strong></a>, built for real dev work, from code reviews to AI agent design.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to auto-generate your CLAUDE.md</strong></h2>
+<p><a href="https://x.com/dani_avila7/status/2036103229327790560"><img alt="Source: X/daniavila7" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2864fb12-9168-4c03-8ad9-29b488ae8964/HEGxKumbEAA2LRE.jpg?t=1774499841" /></a>
+<em>Source: X/dani_avila7</em></p>
+<hr />
+<p>Most Claude Code users still write their CLAUDE.md files by hand, even though Claude can already infer most of that information directly from the source code. To automate this, developer Daniel San <a href="https://x.com/dani_avila7/status/2036103229327790560"><strong>discovered</strong></a> an experimental flag from the Claude Code team that handles the heavy lifting for you.</p>
+<p>To enable it, just add this snippet to your “.claude/settings.local.json”:</p>
+<pre><code>{
+{
+&quot;env&quot;: {
+&quot;CLAUDE_CODE_NEW_INIT&quot;: &quot;1&quot;
+}
+}
+</code></pre>
+<p>Just run “/init”. The latest version automatically scans your codebase to pick up on your tech stack, linters, and CI configs. You'll even get a chance to review and approve the proposal before anything actually gets written.</p>
+<p>San's repo went from a 458-line CLAUDE.md to 68 lines. The new “/init” command focuses purely on the context Claude might miss if it weren't explicitly briefed. It's still an experimental flag, though, so keep in mind that things are likely to change.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=JCN2RLlXKG0"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5a892238-6bc1-48b4-91be-6d81cdfee4bf/Untitled_design__28_.jpg?t=1774517325" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=JCN2RLlXKG0"><strong>How to build software using multi-agent AI workflows:</strong> </a> This tutorial shows developers how to quickly build apps using multi-agent AI workflows in Claude Code. You will learn hands-on techniques for structuring prompts, enforcing software design principles, and managing project architecture - effectively leading AI agents the same way you would a team of human engineers.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/google-gemini/gemini-skills/"><strong>Gemini API skills:</strong> </a> Skills are a lightweight technique for adding relevant context to your agents. This repo contains a library of skills for the Gemini API, SDK and model interactions.</p>
+<hr />
+<h3><strong>Trending Paper</strong></h3>
+<p><a href="https://www.anthropic.com/engineering/claude-code-auto-mode"><strong>A safer way to skip permissions (by Anthropic):</strong> </a> Being bombarded with permission requests eventually leads to approval fatigue, which often pushes users to bypass security checks altogether. Anthropic's "auto mode" fixes this by using AI classifiers to handle routine approvals automatically while still blocking anything potentially dangerous.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 200K+ engineers and 100K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

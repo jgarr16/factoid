@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>Get your machine set up for OSINT — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="Get your machine set up for OSINT — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>Get your machine set up for OSINT</h1>
+<p class="meta">2026-06-15 · received 2026-06-15 20:02 +0900
+ · <a href="https://indicator.media/p/get-your-machine-set-up-for-osint-tools-programs-opsec" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>Get your machine set up for OSINT</h1>
+<p>I recently bought a new laptop and it prompted me to consider the tools I use and how I’d set up my machine. I decided to use it as an opportunity for a bit of spring cleaning, and to ask people how they get set up for OSINT. I put out a public call to the community to share their suggestions, and reached out to some investigators I know.</p>
+<p>Not surprisingly, there are a variety of approaches to setting a machine up for investigations. Some investigators wipe everything from their machine and install a minimum number of applications, aside from essentials like a virtual machine and VPN. They prefer to access tools as needed from a dedicated browser. Others run most of their tools from the command line.</p>
+<p>There isn't one perfect setup. As such, this guide doesn’t cover every use case, and there are other options that might work better for some people. It’s also geared towards investigators who don’t write or run their own code or tools. Maybe it confirms that you already know most of the popular tools. Or it helps you set up or tweak your setup.</p>
+<p>For each category, I suggest free tools and highlight open-source options. There are often multiple options for the same thing in a category, so it comes down to personal preference. But in some cases you may want to install multiple tools that perform the same function, as some may return unique results. I also cite a few paid options when relevant. (None of them are paid placements.)</p>
+<p>This guide strictly focuses on local installations and browser extensions. Web-based tools that don't require local setup were excluded. Think of this as a starter pack for an OSINT machine/browser. If you’re looking for specific tools, you can always run a search in <a href="https://navigator.indicator.media/">OSINT Navigator</a>, our free app to help you find the right tool for the job.</p>
+<p>A final, important note: tools don’t make you an investigator or OSINTer. One of the questions I asked people was if there are tools they can’t live without. I got a great response from Justin Seitz, the cofounder of <a href="https://hunch.ly/">Hunchly</a> and <a href="https://www.permanentrecordresearch.com/what-we-do">Permanent Record Research</a>:</p>
+<p>““None really, I truly could have all of the aforementioned tools vanish tomorrow and I would not feel lost moving to a parallel tool or reverting back to a more primitive form of research.”“ —</p>
+<p>Another person, who asked to remain nameless, said the one tool they can’t live without was “A physical library card.”</p>
+<p>_I’m grateful to everyone who took time to share information about their setup, including: <em><a href="https://www.linkedin.com/in/rickberdos/"><em>Rick Berdos</em></a></em>, <em><a href="https://www.linkedin.com/in/aryama-b-8b71031b7/"><em>Aryama Bhattacharjee</em></a></em>, <em><a href="https://www.linkedin.com/in/bowlerderek/"><em>Derek Bowler</em></a></em>, <em><a href="https://theosintvault.io/"><em>Nicole Hurey</em></a></em>, <em><a href="https://www.linkedin.com/in/gisela-perez-de-acha/"><em>Gisela Pérez de Acha</em></a></em>, <em><a href="https://www.linkedin.com/in/ga%C3%ABtan-g-09b79782/"><em>Gaëtan Gras</em></a></em>, <em><a href="https://juralabs.org/"><em>Paul Griffiths</em></a></em>, <em><a href="https://www.linkedin.com/in/jan-k-5851872b5/"><em>Jan Kock</em></a></em>, <em><a href="https://osintpraxis.com/"><em>Joshua Richards</em></a></em>, <em><a href="https://www.linkedin.com/in/saadsarraj/"><em>Saad Sarraj</em></a></em>, <em><a href="https://www.bullshithunting.com/"><em>Justin Seitz</em></a></em>, <em><a href="https://www.linkedin.com/in/dean-sterling-jones-9b9252281/"><em>Dean Sterling Jones</em></a></em>, <em><a href="https://benjaminstrick.com/"><em>Benjamin Strick</em></a></em>.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#opsec">OPSEC</a></li>
+</ul>
+<p><a id="virtual-machine"></a>
+* <a href="#virtual-machine">Virtual Machine</a></p>
+<ul>
+<li>
+<p><a href="#ad-blocker">Ad blocker</a></p>
+</li>
+<li>
+<p><a href="#burner-account">Burner account</a></p>
+</li>
+<li>
+<p><a href="#setup">Setup</a></p>
+</li>
+<li>
+<p><a href="#core-appsinstalls">Core apps/installs</a></p>
+</li>
+<li>
+<p><a href="#browser">Browser</a></p>
+</li>
+<li>
+<p><a href="#web-capture-archiving">Web Capture/Archiving</a></p>
+</li>
+<li>
+<p><a href="#extensions">Extensions</a></p>
+</li>
+</ul>
+<p><a id="video-downloading"></a>
+* <a href="#video-downloading">Video downloading</a></p>
+<ul>
+<li>
+<p><a href="#identity-account-analysis">Identity/Account Analysis</a></p>
+</li>
+<li>
+<p><a href="#software">Software</a></p>
+</li>
+<li>
+<p><a href="#extensions">Extensions</a></p>
+</li>
+<li>
+<p><a href="#visuals">Visuals</a></p>
+</li>
+<li>
+<p><a href="#software">Software</a></p>
+</li>
+<li>
+<p><a href="#extensions">Extensions</a></p>
+</li>
+<li>
+<p><a href="#websites">Websites</a></p>
+</li>
+<li>
+<p><a href="#software">Software</a></p>
+</li>
+<li>
+<p><a href="#extensions">Extensions</a></p>
+</li>
+</ul>
+<p><a id="bookmarklets"></a>
+* <a href="#bookmarklets">Bookmarklets</a></p>
+<ul>
+<li>
+<p><a href="#my-stack">My stack</a></p>
+</li>
+<li>
+<p><a href="#opsec-setup">OPSEC/Setup</a></p>
+</li>
+<li>
+<p><a href="#browser-extensions">Browser extensions</a></p>
+</li>
+</ul>
+<p><a id="installed-programs"></a>
+* <a href="#installed-programs">Installed programs</a></p>
+<ul>
+<li><a href="#what-i-pay-for">What I pay for </a></li>
+</ul>
+<h2>OPSEC</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/631ac6a6-d7b8-4909-abde-591a149c1888/opsec.png?t=1781316675" /></p>
+<p><em>Tools to help you stay safe and private</em></p>
+<p>There are certain non-negotiables, and a good VPN is at the top of the list for digital investigative work. It ensures a basic level of privacy while browsing the web. A password manager is also of course essential for everyday life, let alone OSINT work.</p>
+<p>Aside from those, many people use a virtual machine to segment their investigative work from the rest of their machine. Others use a dedicated machine for investigations.</p>
+<p>“The first thing I honestly do when I get a new device is uninstall everything that they come preloaded with,” said Nicole Hurey, founder of <a href="https://theosintvault.io/">The OSINT Vault</a> and <a href="https://paradoxindex.com/">Paradox Index</a>. “I personally like to start off with a clean and controlled environment before I add anything.”</p>
+<p><a href="https://www.linkedin.com/in/bowlerderek/">Derek Bowler</a>, who led Eurovision’s verification unit and is working on a new OSINT project, said you need “A disciplined operational layer before you open a single tool.”</p>
+<p>He added:</p>
+<p>“That means a dedicated browser profile (or hardened browser like Mullvad Browser or Firefox with uBlock Origin and Canvas Blocker) running through a reputable VPN for any collection session. I use Mullvad and Proton VPN depending on context. A virtual machine, ideally via VirtualBox or VMware, for anything touching hostile infrastructure or high-risk subjects. Separate burner accounts for each platform you monitor — never linked to your real identity, built on throwaway email addresses (SimpleLogin or similar), and accessed only through your VM/VPN stack. A password manager (Proton Pass is free and integrates cleanly with the rest of the Proton stack).”“ —</p>
+<h3>Virtual Machine</h3>
+<p>If you don’t use a dedicated machine for investigations, virtual machine software can help segment and protect your investigative work.</p>
+<ul>
+<li>
+<p><a href="https://www.virtualbox.org/">VirtualBox</a>: free, open-source virtual machine.</p>
+</li>
+<li>
+<p><a href="https://github.com/tracelabs/tlosint-vm/tree/main">VMware</a>: free virtual machine.</p>
+</li>
+<li>
+<p><a href="https://www.tracelabs.org/initiatives/osint-vm">Trace Labs OSINT VM</a>: a pre-built VM image for OSINT that you can import into VirtualBox or VMware. One nice element is that it comes with Obsidian pre-installed and you can load a tools script that installs a set of open-source OSINT tools, many of which are suggested below (Sherlock, SpiderFoot, exiftool). It also comes with a “hardened” version of Firefox for browsing, as well as Tor.</p>
+</li>
+<li>
+<p><a href="https://www.oo-software.com/en/shutup10">OOSU10</a>: a free Windows-only tool recommended by Joshua Richards from <a href="https://osintpraxis.com/">OSINT Praxis</a>. He uses it “to remove telematics from Windows and generally improve OPSEC.”</p>
+</li>
+</ul>
+<h3>Ad blocker</h3>
+<ul>
+<li>
+<p><a href="https://adblockplus.org/">Adblock Plus</a>: free blocker that works on a variety of browsers.</p>
+</li>
+<li>
+<p><a href="https://www.ghostery.com/">Ghostery</a>: the free version offers a solid ad blocker. It also gives a nice visual report of the trackers on a given page.</p>
+</li>
+<li>
+<p><a href="https://ublockorigin.com/">uBlock Origin</a>: another solid option, though the full version doesn't work in Chrome. For that, use <a href="https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh?hl=en">uBlock Origin Lite</a>.</p>
+</li>
+</ul>
+<h3>Burner account</h3>
+<p>Many people said they have burner accounts on different social platforms. In many cases, they use a dedicated phone number, SIM card, and email address to create them.</p>
+<p>“I've created dedicated research accounts on platforms with strong recommendation algorithms,” said Benjamin Strick, who writes the <a href="https://osintfieldnotes.substack.com/">OSINT Field Notes</a> newsletter, publishes videos <a href="https://www.youtube.com/c/Bendobrown">on YouTube</a>, and leads investigations for the <a href="https://www.info-res.org/">Centre of Information Resilience</a>. “I do this partly for privacy and research purposes, but also for my own wellbeing. I don’t want war crimes footage appearing on my personal Instagram feed on a Sunday morning … I'd suggest to anyone else who is going to focus on a specific geography or subject matter, to think about how they're going to approach social media platforms, over and above keyword searches.”</p>
+<p>Joshua Richards from OSINT Praxis also suggested <a href="https://10minutemail.com/">10 Minute Mail</a>, which he uses to create “temporary email for accounts I might only access one time.”</p>
+<p><strong>Paid upgrades:</strong> <a href="https://kasm.com/">Kasm Workspaces</a>, <a href="https://authentic8.com/products/silo-workspace/">Silo Workspace</a>, <a href="https://www.parallels.com/products/desktop/?srsltid=AfmBOorbQmcFkrqlWHAroo8BPB8PR1gUka8bzlUudHpnmKX2vPgT9zVL">Parallels Desktop</a>, <a href="https://www.sockpuppet.io/">SockPuppet</a>.</p>
+<h2>Setup</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d37788d6-260a-43f3-8792-d0a34ee81688/setup.png?t=1781316763" /></p>
+<p><em>Tools that help you run/install other tools, and provide access to the web.</em></p>
+<h3>Core apps/installs</h3>
+<ul>
+<li>
+<p><a href="https://obsidian.md/">Obsidian</a><strong>:</strong> I was an Evernote user for well over a decade. I regret not switching to Obsidian earlier. It’s free and a perfect fit for OSINT. Privacy, graph visualization, entity creation and linking, integration with outside tools and LLMs (if you like), and the ability to pay $5 a month to sync a vault across devices.</p>
+</li>
+<li>
+<p><a href="https://notepad-plus-plus.org/">Notepad++</a>: another free notetaking option. “Much better features than basic Notepad, helps to speed up basic workflows for quick notes, maybe before choosing to dedicate everything into an Obsidian vault,” Richards said.</p>
+</li>
+<li>
+<p><a href="https://www.python.org/">Python</a>:** **many of the best open-source OSINT tools are written in Python. That used to be a barrier for some. But now LLMs have made it so easy for non-technical people to install and run programs in this language. I suggest several in the sections below. Note that some Python tools are available in web-based versions, but they may not be as powerful.</p>
+</li>
+<li>
+<p><a href="https://www.docker.com/">Docker</a>:** **a way to run open-source tools in a containerized environment — an option for people who prefer not to run tools through Python in the terminal.</p>
+</li>
+<li>
+<p><a href="https://www.maltego.com/blog/beginners-guide-to-maltego-setting-up-maltego-community-edition-ce/">Maltego CE</a>: the community version enables you to easily create network graphs. It was recommended by several people. (There are also free web-based visualization options like <a href="https://www.osintracker.com/">OSINT Tracker</a>.)</p>
+</li>
+</ul>
+<h3>Browser</h3>
+<p>This is a personal choice. Some people understandably avoid using Chrome due to its data collection practices. The tradeoff is that it has the most appealing extensions. Chrome can also run skills, which I <a href="https://indicator.media/p/the-indicator-guide-to-using-skills-in-chrome-for-osint">detailed here</a>. One approach is to segment your activity across different browsers and to use a privacy-enhanced app whenever possible.</p>
+<ul>
+<li>
+<p><a href="https://brave.com/">Brave</a>: privacy-enhanced browser that also has a built-in VPN. (However, running a dedicated, independent VPN is still highly recommended.)</p>
+</li>
+<li>
+<p><a href="https://www.google.com/intl/en_ca/chrome/">Chrome</a>: included because of the many extensions it supports, the Gemini integration, and skills.</p>
+</li>
+<li>
+<p><a href="https://www.firefox.com/en-CA/">Firefox</a>: offers lots of plugins/extensions, including <a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/">one</a> that allows you to segment cookies/identity. Preferred by some to Google due to privacy concerns.</p>
+</li>
+<li>
+<p><a href="https://www.microsoft.com/en-us/edge/download">Edge</a>: built by Microsoft.</p>
+</li>
+<li>
+<p><a href="https://mullvad.net/en/browser">Mullvad Browser</a>: a privacy-enhanced browser built by the makers of the popular VPN.</p>
+</li>
+<li>
+<p><a href="https://orionbrowser.com/">Orion</a>: recommended by Hurey, who said it’s her primary browser. Built by the people behind the paid Kagi search engine, it positions itself as offering “absolute privacy.” It also can run some Chrome/Firefox extensions. Review the list of guaranteed-to-work extensions <a href="https://orionbrowser.com/extensions">here</a>. It only works for macOS for now, but Linux and Windows are in development.</p>
+</li>
+<li>
+<p><a href="https://www.torproject.org/download/">Tor</a>: great for browsing the dark web.</p>
+</li>
+</ul>
+<h2>Web Capture/Archiving</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4626a837-d61d-431e-aa90-01986ae88bc0/caputre.png?t=1781316792" /></p>
+<p>I <a href="https://indicator.media/p/web-capture-tools-hunchly-forensic-osint-ubikron">published a detailed look</a> at web capture tools. Some of the features have evolved since then, but it’s still the best read if you want a detailed look at apps and extensions.</p>
+<h3>Extensions</h3>
+<ul>
+<li>
+<p><a href="https://ubikron.com/">Ubikron</a>: a full-featured, free continuous capture tool. Content is saved on their servers, or you can pay and get your own private server.</p>
+</li>
+<li>
+<p><a href="https://www.forensicosint.com/">Forensic OSINT</a>: offers a limited free version.</p>
+</li>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?hl=en">GoFullPage</a>: useful for capturing long webpages thanks to its auto-scroll ability.</p>
+</li>
+<li>
+<p><a href="https://github.com/internetarchive/wayback-machine-webextension">Wayback Machine</a>: the OG web archiving tool. Its extension has a lot of great features. You can read my guide to it <a href="https://indicator.media/p/getting-the-most-out-of-the-wayback">here</a>. Available in many browsers.</p>
+</li>
+</ul>
+<h3>Video downloading</h3>
+<ul>
+<li>
+<p><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>: open-source Python tool that can download the video from social platforms and online sites. Mentioned by several people I spoke to. Web version available <a href="https://ytdlp.online/">here</a>.</p>
+</li>
+<li>
+<p><a href="https://stacher.io/">Stacher 7</a>: a nice desktop app built on top of yt-dlp. Easier to use.</p>
+</li>
+<li>
+<p><a href="https://jdownloader.org/jdownloader2">JDownloader2</a>: free tool mentioned by one reporter who uses it “to scrape some hard-to-get videos.”</p>
+</li>
+</ul>
+<p><strong>Paid upgrades:</strong> <a href="https://hunch.ly/">Hunchly</a>, <a href="https://www.forensicosint.com/">Forensic OSINT</a>, <a href="https://www.ubikron.com/">Ubikron</a>, <a href="https://www.techsmith.com/snagit/">SnagIt</a>.</p>
+<h2>Identity/Account Analysis</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9fce9027-43ef-4ca5-bb14-79f5c62a8343/identity.png?t=1781316806" /></p>
+<p><em>There are tons of tools and techniques for investigating people, entities, accounts etc. Many of the best are available on the web, so the below list is by no means comprehensive. But these are some you can consider installing.</em></p>
+<h3>Software</h3>
+<ul>
+<li>
+<p><a href="https://github.com/p1ngul1n0/blackbird">Blackbird</a>: enumeration tool that checks if a username is present across many online services.</p>
+</li>
+<li>
+<p><a href="https://ghunt.org/">GHunt</a>: extract data about a Google account, including profile photo and public reviews.</p>
+</li>
+<li>
+<p><a href="https://github.com/megadose/holehe">Holehe</a>: enter an email and see if it’s connected to an account across more than 120 online services, including social media sites.</p>
+</li>
+<li>
+<p><a href="https://github.com/soxoj/maigret">Maigret</a>: username enumeration tool that checks for matches across thousands of services.</p>
+</li>
+<li>
+<p><a href="https://github.com/sherlock-project/sherlock">Sherlock</a>: username enumeration tool.</p>
+</li>
+<li>
+<p><a href="https://github.com/qeeqbox/social-analyzer">Social Analyzer</a>: “PI, CLI, and Web App for analyzing &amp; finding a person's profile across +1000 social media \ websites.” (Thanks to OSINT analyst Jan Kock for suggesting this.)</p>
+</li>
+<li>
+<p><a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>: multipurpose free and popular OSINT tool that can search by username, email, phone number, name, Bitcoin address, etc.</p>
+</li>
+</ul>
+<h3>Extensions</h3>
+<ul>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/signalhire-find-email-or/aeidadjdhppdffggfgjpanbafaedankd">SignalHire</a>: offers free credits that can help extract emails and phone numbers from LinkedIn profiles.</p>
+</li>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/lusha-easily-find-b2b-con/mcebeofpilippmndlpcghpmghcljajna">Lusha</a>: same.</p>
+</li>
+</ul>
+<p><strong>Paid upgrades:</strong> <a href="https://epieos.com/">Epieos</a>, <a href="https://www.osint.industries/">OSINT Industries</a>, <a href="https://www.skopenow.com/">SkopeNow</a>, <a href="https://www.usersearch.org/">Usersearch</a>, .</p>
+<h2>Visuals</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e9a1ca08-af56-43c2-a388-445a138302ee/visuals.png?t=1781316824" /></p>
+<p><em>Tools for analyzing images and/or video, including metadata and satellite/spatial imagery. As noted in other categories, this does not include web-based tools and products, of which there are many.</em></p>
+<h3>Software</h3>
+<ul>
+<li>
+<p><a href="http://exiftool.com">ExifTool</a>: free application that can read metadata from a wide variety of files.</p>
+</li>
+<li>
+<p><a href="https://gephi.org/">Gephi</a>: open-source graphing software. Great for network maps.</p>
+</li>
+<li>
+<p><a href="https://www.google.com/earth/about/versions/#earth-pro">Google Earth Pro</a>: free desktop app that provides access to historical satellite imagery, and more. (It also has a web version if you prefer not to download it.)</p>
+</li>
+<li>
+<p><a href="https://www.qgis.org/">QGIS</a>: free spatial visualization tool that Bowler said is essential “for any mapping or geolocation-heavy investigation.” Also cited by Strick and Perez de Acha.</p>
+</li>
+<li>
+<p><a href="https://www.videolan.org/">VLC Media Player</a>: cross-platform media player that’s useful for frame-by-frame breakdowns of videos.</p>
+</li>
+</ul>
+<h3>Extensions</h3>
+<ul>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/image-witness-by-signal-s/egccpoagmdckllofokcpafmgkfdcjkin">Image Witness</a>: Bowler built this extension. As with InVID and Search by Image (listed below), it enables you to search an image across multiple reverse search engines. One added benefit is that it hashes each image for proof/preservation: “Every action is captured in a local activity log: timestamp, session ID, image URL, image-URL hash, source URL, service used, target URL.”</p>
+</li>
+<li>
+<p><a href="https://www.invid-project.eu/">InVID</a>: the Swiss Army knife of image/video extensions. It offers an array of image and video tools for reverse image search, thumbnail extraction, YouTube video analysis, metadata analysis, and more.</p>
+</li>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/search-by-image/cnojnbdhbhnkbcieeekonklommdnndci">Search by Image</a>: a simple, free reverse image tool that quickly connects you to the major search engines. It also has a ton of customization options.</p>
+</li>
+</ul>
+<p><strong>Paid upgrades:</strong> <a href="https://www.planet.com/">Planet Labs</a>, <a href="https://vantor.com/">Vantor</a>, and other satellite imagery providers.</p>
+<h2>Websites</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c1c1ac8f-0901-4c95-ad90-e9182a7ca644/websites.png?t=1781316836" /></p>
+<p><em>Many excellent tools for investigating websites are web-based, so this is a list of useful open-source tools and browser extensions.</em></p>
+<h3>Software</h3>
+<ul>
+<li>
+<p><a href="https://github.com/s0md3v/photon">Photon</a>: useful free tool for crawling a website.</p>
+</li>
+<li>
+<p><a href="https://github.com/lanmaster53/recon-ng">Recon-ng</a>: feature-rich web reconnaissance tool. Subdomain enumeration, certificate analysis, and much more. It also integrates with APIs from services like Shodan, etc.</p>
+</li>
+<li>
+<p><a href="https://github.com/smicallef/spiderfoot">SpiderFoot</a>: as previously noted, can search by domain, as well as IP address, ASN etc.</p>
+</li>
+<li>
+<p><a href="https://github.com/laramies/theharvester">theHarvester</a>: popular free tool that “gathers names, emails, IPs, subdomains, and URLs” from a website. You can also add a wide range of API keys.</p>
+</li>
+</ul>
+<h3>Extensions</h3>
+<ul>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/similarweb-website-traffi/hoklmmgfnpapgjgcpechhaamimifchmp">SimilarWeb</a>: one of the best tools for analyzing web traffic. The Chrome extension gives three months of data for free, as opposed to one month in the web version.</p>
+</li>
+<li>
+<p><a href="https://builtwith.com/toolbar">BuiltWith</a>: get a snapshot of the technology used by the webpage you’re on. Worth it for the "Relationship" tab data alone.</p>
+</li>
+<li>
+<p><a href="https://www.wappalyzer.com/">Wappalyzer</a>: similar to BuiltWith, but offers a much easier to read quick snapshot of tech on the page.</p>
+</li>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/html-inspector/fpaahdcndgfpbbddmgckaifkfljkfkhd">HTML Inspector</a>: I outline more detail about this tool <a href="https://indicator.media/p/i-watched-8-hours-of-osint-videos-and-here-are-the-best-tips-and-insights">here</a>. It’s a really easy way to check a webpage for interesting file names, Javascript or HTML comments, and more.</p>
+</li>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/brandsearch-ecommerce-dro/fjoigefjdlinileegfbkkbfjjfeldbgb">BrandSearch</a>: read more on it <a href="https://indicator.media/p/the-indicator-guide-to-investigating-ecommerce-sites-shopify-woocommerce-osint">here</a>. Essential if you’re looking into an ecommerce site.</p>
+</li>
+<li>
+<p><a href="https://github.com/internetarchive/wayback-machine-webextension">Wayback Machine</a>: mentioned above, but including it again.</p>
+</li>
+</ul>
+<p><strong>Paid upgrades:</strong> As noted above, there are tons of great passive DNS and web recon tools; too many to mention here.</p>
+<h3>Bookmarklets</h3>
+<p>I’m making an exception to my no-bookmarks rule for this guide in order to include the <a href="https://tools.myosint.training/">free bookmarklets offered by My OSINT Training</a>. I previously wrote a <a href="https://tools.myosint.training/">post</a> about their value and why you should use them.</p>
+<p>I’ll just reiterate that MOT offers more than <em>50</em> free, safe-to-run bookmarklets that are useful for any investigator. No need to install them all. Just add and remove them as needed, depending on your investigation.</p>
+<h2>My stack</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a13ff330-9845-4411-846a-a6522e612a57/stack.png?t=1781316848" /></p>
+<p>So, after all that, here’s what’s going on my new machine. My setup may be bloated compared to others, as testing/using tools is kind of part of my job…</p>
+<h3>OPSEC/Setup</h3>
+<ul>
+<li>
+<p><a href="https://www.google.com/intl/en_ca/chrome/">Chrome</a> (for specific extensions)</p>
+</li>
+<li>
+<p><a href="https://claude.ai/">Claude Code</a></p>
+</li>
+<li>
+<p><a href="https://www.dashlane.com/">Dashlane</a></p>
+</li>
+<li>
+<p><a href="https://exiftool.org/">ExifTool</a></p>
+</li>
+<li>
+<p><a href="https://www.ghostery.com/">Ghostery</a></p>
+</li>
+<li>
+<p><a href="https://obsidian.md/">Obsidian</a></p>
+</li>
+<li>
+<p><a href="https://orionbrowser.com/">Orion</a></p>
+</li>
+<li>
+<p><a href="https://protonvpn.com/?srsltid=AfmBOorGRxW0jbbPAzheFMiBpBgD-XFmAxFpcYaHeIqGfzRn-7fvz4T3">Proton VPN</a></p>
+</li>
+<li>
+<p><a href="https://www.python.org/">Python</a></p>
+</li>
+<li>
+<p><a href="https://ubikron.com/">Ubikron</a></p>
+</li>
+<li>
+<p><a href="https://www.virtualbox.org/">VirtualBox</a></p>
+</li>
+</ul>
+<h3>Browser extensions</h3>
+<p>(As noted , I’m still using Chrome for some things but am moving to Orion as much as I can)</p>
+<ul>
+<li>
+<p><a href="https://brandsearch.co/">BrandSearch</a></p>
+</li>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn">BuiltWith</a></p>
+</li>
+<li>
+<p><a href="https://www.invid-project.eu/">InVID</a></p>
+</li>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?hl=en">GoFullPage</a></p>
+</li>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/html-inspector/fpaahdcndgfpbbddmgckaifkfljkfkhd">HTML Inspector</a></p>
+</li>
+<li>
+<p><a href="https://obsidian.md/clipper">Obsidian Web Clipper</a></p>
+</li>
+<li>
+<p><a href="https://www.signalhire.com/">SignalHire</a></p>
+</li>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/similarweb-website-traffi/hoklmmgfnpapgjgcpechhaamimifchmp?hl=en">SimilarWeb</a></p>
+</li>
+<li>
+<p><a href="https://www.wappalyzer.com/">Wappalyzer</a></p>
+</li>
+<li>
+<p><a href="http://web.archive.org/">Wayback Machine</a></p>
+</li>
+</ul>
+<h3>Installed programs</h3>
+<ul>
+<li>
+<p><a href="http://exiftool.com">ExifTool</a></p>
+</li>
+<li>
+<p><a href="https://altic.dev/fluid">FluidVoice</a> (open-source voice transcription)</p>
+</li>
+<li>
+<p><a href="https://www.google.com/earth/about/versions/">Google Earth Pro</a></p>
+</li>
+<li>
+<p><a href="https://spotlight.buriedsignals.com/">Spotlight</a> (an agentic framework for using AI in investigations)</p>
+</li>
+<li>
+<p><a href="https://maigret.dev/docs/installation">Maigret</a></p>
+</li>
+<li>
+<p><a href="https://screenforgeai.com/">Screenforge</a></p>
+</li>
+<li>
+<p><a href="https://spiderrfoot.com/">SpiderFoot</a></p>
+</li>
+<li>
+<p><a href="https://stacher.io/">Stacher 7</a></p>
+</li>
+<li>
+<p><a href="https://github.com/laramies/theharvester">theHarvester</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Malfrats/xeuledoc">Xeuledoc</a> (open-source tool to extract metadata from Google Workspace docs)</p>
+</li>
+</ul>
+<h3>What I pay for</h3>
+<ul>
+<li>
+<p><a href="https://claude.ai/">Claude</a></p>
+</li>
+<li>
+<p><a href="https://www.dashlane.com/">Dashlane</a></p>
+</li>
+<li>
+<p><a href="https://www.firecrawl.dev/">Firecrawl</a></p>
+</li>
+<li>
+<p><a href="https://workspace.google.com/intl/en_ca/">Google Workspace</a></p>
+</li>
+<li>
+<p><a href="https://protonvpn.com/?srsltid=AfmBOorXjrvuetUBTPhjWplmjlWVtoRK-5bIBzxK4M5drt2MZn70QdvV">Proton VPN</a></p>
+</li>
+</ul>
+<p>If you're wondering about how I’m using Claude and how it fits with Obsidian, Firecrawl, and OSINT Navigator, keep your eye out for an upcoming workshop. Our partnership with <a href="https://buriedsignals.com/">Tom Vaillant of Buried Signals</a> (the creator of Spotlight) has helped me supercharge my setup and workflow. I’m excited to share more in the coming weeks and months.</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

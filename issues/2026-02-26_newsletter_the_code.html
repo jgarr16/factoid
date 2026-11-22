@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🛠️ Vercel open sources Chat SDK — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🛠️ Vercel open sources Chat SDK — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🛠️ Vercel open sources Chat SDK</h1>
+<p class="meta">2026-02-26 · received 2026-02-26 23:06 +0900
+ · <a href="https://codenewsletter.ai/p/cursor-gives-its-agents-their-own-computers-vercel-open-sources-chat-sdk" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🛠️ Vercel open sources Chat SDK</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/32c8c971-340a-4f62-a6b8-f362e57e5397/image__83_.jpg?t=1770628392" /></p>
+<hr />
+<p><strong>Welcome back.</strong> Coding agents have been writing PRs for a while now, but can you actually trust the code to work? Cursor thinks so — they just gave their agents their own computers. Now, these agents can click through UIs, debug in browsers, and ship PRs with video proof to show everything works.</p>
+<p><strong>Also:</strong> How to set up AI agents that code 24/7, fix a critical AGENTS .md mistake flagged by a DeepMind engineer, and see how Stripe ships a thousand PRs every week.</p>
+<hr />
+<p><a id="todays-insights"></a></p>
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>Karpathy asks engineering teams to focus on CLIs</p>
+</li>
+<li>
+<p>How to stop AI agents from writing useless tests</p>
+</li>
+<li>
+<p>Trending social posts, top repos, and more</p>
+</li>
+</ul>
+<hr />
+<p><strong>Welcome to The Code.</strong> This is a 4x weekly email that cuts through the noise to help devs, engineers, and technical leaders find high-signal news, releases, and resources in 5 minutes or less. You can sign up or share this email <a href="https://superhumancode.beehiiv.com/subscribe">here</a>.</p>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=6Nru5OQq9O4"><img alt="Click here to watch Cursor cloud agents in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/61e2c18f-588c-4f36-aacd-a857d0e89ae2/Untitled_design__8_.jpg?t=1772087654" /></a>
+<em>Click here to watch Cursor cloud agents in action.</em></p>
+<hr />
+<p><strong>Cursor gives agents their own computers:</strong> The AI code editor's cloud agents now run in isolated <a href="https://cursor.com/blog/agent-computer-use"><strong>virtual machines</strong></a> where they can click through UIs, debug in browsers, and host servers on their own. Every agent delivers merge ready PRs complete with video demos, screenshots, and logs for a smooth review process. CEO Michael Truell <a href="https://x.com/mntruell/status/2026736314272591924">shared</a> that over a third of Cursor's merged PRs now come from these cloud agents, predicting developers will soon manage entire fleets of AI teammates for major projects.</p>
+<p><strong>Anthropic now lets you code from your phone:</strong> The AI lab shipped <a href="https://x.com/claudeai/status/2026418433911603668"><strong>Remote Control</strong></a> for Claude Code, which lets developers start a session in their terminal and pick it up from a phone, tablet, or any browser. Claude keeps running locally on your machine the whole time, so your filesystem, MCP servers, and project config are always available. It’s perfect for reviewing diffs on the go, approving PRs from the couch, or keeping a task moving between meetings.</p>
+<p><strong>Vercel open sources Chat SDK for cross-platform bots:</strong> The frontend cloud platform just dropped <a href="https://vercel.com/changelog/chat-sdk"><strong>Chat SDK</strong></a>, a unified TypeScript library that lets devs write bot logic once and ship it across Slack, Microsoft Teams, Discord, Google Chat, and more. This open source toolkit comes with JSX-based UI cards, real time AI streaming, and built in state management with Redis. It’s a huge time saver for engineering teams who are tired of dealing with separate codebases for different chat platforms.</p>
+<hr />
+<h5><strong>PRESENTED BY DELVE</strong></h5>
+<h2><a href="https://delve.co/book-demo?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=thecode-primary-feb26-26">Migrate to Delve and get a $2,000 VISA card in your inbox</a></h2>
+<p><a href="https://delve.co/book-demo?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=thecode-primary-feb26-26"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a750ef99-1e81-4e47-87e1-6d25ef90c404/delve_100kb_-_Zahabiyah_Badri__1_.jpg?t=1772035740" /></a></p>
+<hr />
+<p>Delve is the <a href="https://delve.co/book-demo?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=thecode-primary-feb26-26">AI-native compliance platform</a> that actually does the work for you, auto-collecting evidence from AWS, GitHub, and your stack so you’re not chasing screenshots or babysitting integrations. Use AI security questionnaires and an AI copilot to make compliance less dreadful.</p>
+<p>The proof is in the pudding:</p>
+<ul>
+<li>
+<p><strong>Bland</strong> unlocked $500k ARR in 7 days.</p>
+</li>
+<li>
+<p><strong>11x</strong> streamlined audits and moved faster on enterprise deals.</p>
+</li>
+<li>
+<p><strong>micro1</strong> scaled compliance without adding headcount.</p>
+</li>
+</ul>
+<p>Free migration. Zero disruption. No starting over.</p>
+<p><a href="https://delve.co/book-demo?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=thecode-primary-feb26-26">Book a demo, trigger your migration</a>, and get $2,000 when you’re onboarded.</p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Karpathy asks engineering teams to focus on CLIs</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b17d67ef-78f1-41f1-b424-7cded3123c6a/superhumanteam_a_software_engineering_team_working_on_a_massi_25305647-f587-4fd0-9c69-ad0dd86117cb_2.jpg?t=1772087602" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>It started with a single CLI release.</strong> Polymarket (a predictions market company) just <a href="https://x.com/SuhailKakar/status/2026305257257775524">shipped</a> a Rust-based CLI that gives AI agents a direct line to prediction markets. It lets them trade and pull data straight from the terminal without a browser.</p>
+<p><strong>Andrej Karpathy turned it into a manifesto.</strong> In a viral post, he <a href="https://x.com/karpathy/status/2026360908398862478"><strong>argued</strong></a> CLIs are the perfect setup for agents since they already speak the language of stdin, stdout, and JSON. To show how it's done, he had Claude install Polymarket’s CLI and pull up a live prediction market dashboard in under three minutes.</p>
+<p><strong>It's riding in the same boat as MCP.</strong> With 97 million monthly downloads and backing from OpenAI and Google, MCP became the industry standard and <a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation">moved</a> to the Linux Foundation by late 2025. Without a CLI, MCP server, or machine readable docs, your software is invisible to agents.</p>
+<p><strong>But some people aren't ready to get on board.</strong> OpenCode engineer Rhys Sullivan <a href="https://x.com/RhysSullivan/status/2026406072274337943"><strong>thinks</strong></a> CLIs are a dead end because they're hard to find and aren't secure enough. Sullivan’s bet is REST APIs that register clients on the fly. But no matter which side wins, software is splitting in two: the old path through websites and logins, and a new one where agents find and use tools on their own.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3604b50b-3a71-453c-8ff9-98d76c1893b3/CleanShot_2026-02-26_at_17.45.39_2x.jpg?t=1772108196" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Ghost Team:</strong> This developer's git history looks like he hired an entire engineering team. It's just him and a fleet of** <a href="https://x.com/d4m1n/status/2026032801322356903">AI agents</a>** (4.4M views).</p>
+</li>
+<li>
+<p><strong>Bad Instructions:</strong> A Google DeepMind developer found that a bad AGENTS .md file actively hurts your AI agent's performance. <a href="https://x.com/_philschmid/status/2026354033418547444">Here's</a> what to fix.</p>
+</li>
+<li>
+<p><strong>Autopilot Mode:</strong> This open source setup lets you run <a href="https://x.com/d4m1n/status/2026032801322356903"><strong>AI coding agents</strong></a> for hours without touching them. The dev behind it completed 250 tasks in a single session.</p>
+</li>
+<li>
+<p><strong>Spec and Ship:</strong> An Anthropic engineer's workflow for <a href="https://x.com/rvivek/status/2026385957596111044"><strong>shipping</strong></a> full features without writing a single line of code is going viral (1M views).</p>
+</li>
+<li>
+<p><strong>PR Factory:</strong> Stripe's AI agents now ship over a thousand PRs per week. An OpenAI developer <a href="https://x.com/charlierguo/status/2026009225663750512"><strong>broke down</strong></a> the emerging playbook behind it.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>Alibaba drops</strong> <a href="https://x.com/Alibaba_Qwen/status/2026339351530188939"><strong>Qwen 3.5</strong></a> with smaller models that outperform their larger predecessors.</p>
+</li>
+<li>
+<p><strong>Perplexity unveils</strong> <a href="https://www.perplexity.ai/hub/blog/introducing-perplexity-computer"><strong>Computer</strong></a><strong>,</strong> a digital worker that orchestrates top AI models.</p>
+</li>
+<li>
+<p><strong>Notion ships</strong> <a href="https://www.notion.com/blog/introducing-custom-agents"><strong>Custom Agents</strong></a> that run autonomously on a schedule across your tools.</p>
+</li>
+<li>
+<p><strong>MiniMax launches</strong> <a href="https://x.com/MiniMaxAgent/status/2026493668417482923"><strong>MaxClaw</strong></a><strong>,</strong> a free 24/7 AI agent across major messaging apps.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to stop AI agents from writing useless tests</strong></h2>
+<p><a href="https://x.com/mattpocockuk/status/2023712176729715184"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/befb8d69-f0d0-4cde-9928-193ec88e58d3/superhumanteam_A_lone_software_engineer_sitting_at_a_desk_typ_8f387375-d051-4cc2-8e9f-91ee4b4d1ee8_0.jpg?t=1772043119" /></a></p>
+<hr />
+<p>If you've ever used Claude Code or Cursor to write tests for a TypeScript project, you’ve probably run into a ton of redundant assertions. They often check for things the type system already handles, making these tests essentially dead weight. Matt Pocock, an ex-Vercel engineer, <a href="https://x.com/mattpocockuk/status/2023712176729715184"><strong>shared</strong></a> a simple fix for this.</p>
+<p>Just add this to your CLAUDE .md (or .cursorrules for Cursor):</p>
+<pre><code>Never write tests that verify what the TypeScript type system already guarantees.
+</code></pre>
+<p>Both tools will pick up the change during your next session. Pocock also put together a full <a href="https://www.aihero.dev/skill-test-driven-development-claude-code">TDD skill</a> for Claude Code if you want to dive deeper into getting agents to write meaningful tests.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=Ae0W5M6We84"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/51cc41b7-fe2f-41be-82ad-12c5aa786a38/Untitled_design__9_.jpg?t=1772095603" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=Ae0W5M6We84"><strong>How to build custom dev tools with agent teams:</strong> </a> You'll learn to build custom software with a team of AI agents. This tutorial walks you through building a complete project from just a single spec file, using autonomous agents to handle all the coding, testing, and debugging for you.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/NevaMind-AI/memU"><strong>memU:</strong> </a> A memory framework that gives AI agents persistent, structured memory so they can run 24/7 without wasting tokens on old context. It automatically extracts preferences and patterns from background conversations, feeding that context back to the agent instantly.</p>
+<hr />
+<p><a id="trending-paper"></a></p>
+<h3><strong>Trending Paper</strong></h3>
+<p><a href="https://arxiv.org/abs/2602.20502"><strong>ActionEngine (by Microsoft Research):</strong> </a>** **Traditional AI web agents are often slow and pricey because they have to analyze screens step by step. ActionEngine changes that by mapping websites offline first, letting the AI generate a single, reliable script that gets the job done faster and for less money.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 200K+ engineers and 100K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<h3><strong>Whenever you’re ready to take the next step</strong></h3>
+<ul>
+<li>
+<p><strong><a href="https://learn-ai-tiles.lovable.app/">10 Projects to Master AI Agents</a></strong></p>
+</li>
+<li>
+<p><a href="https://claude-code-hacks.lovable.app/">100 Pro-Hacks for using Claude Code in 2026</a></p>
+</li>
+<li>
+<p><strong><a href="https://claude-code-spotlight.lovable.app/">Top Resources to learn Claude Code in 2026</a></strong></p>
+</li>
+<li>
+<p><strong><a href="https://ai-guidebook-nexus.lovable.app/">Zero to Production Guide for Building AI Agents</a></strong></p>
+</li>
+<li>
+<p><strong><a href="https://thecode-200-resources.lovable.app/?utm_source=codenewsletter.ai&amp;utm_medium=newsletter&amp;utm_campaign=your-200-engineering-resources-ultimate-claude-code-guide">200+ Resources to Become a Great Engineering Leader in 2026</a></strong></p>
+</li>
+</ul>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

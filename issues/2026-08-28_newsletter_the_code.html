@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 Devs got a new robot pet — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 Devs got a new robot pet — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 Devs got a new robot pet</h1>
+<p class="meta">2026-08-28 · received 2026-08-28 23:07 +0900
+ · <a href="https://codenewsletter.ai/p/hugging-face-drops-a-399-open-source-robot-duck" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 Devs got a new robot pet</h1>
+<p><a href="https://www.mongodb.com/lp/cloud/atlas/vector/database?utm_source=fnf&amp;utm_campaign=mongodb-august&amp;utm_term=thecode&amp;utm_medium=newsletter&amp;utm_ad=p&amp;utm_ad_campaign_id=21100816499&amp;adgroup=160844905635&amp;cq_cmp=21100816499&amp;gad_source=1&amp;gad_campaignid=21100816499&amp;gbraid=0AAAAADQ1403pm0alZwXMScj5qHHdx20LP&amp;gclid=Cj0KCQjwnbrUBhDOARIsAKKhPpeyvCB67VG5nYWenccykRriRJC2WZA-vy5H_nE_himZ7E4fQnqWxKQaAinKEALw_wcB&amp;utm_content=atlas"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/46039dba-8d24-4ed1-9fa2-41c7644d6eea/Group_MongoDB__1_.jpg?t=1787857032" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> “Hardware is hard” is the reason most software engineers stay away from physical products. But Hugging Face is proving that excuse is officially over. They just dropped a $399 open-source robot designed for you to start training immediately. You have to see this thing to believe it.</p>
+<p><strong>Also:</strong> How to run a full AI team with Grok Bot, why one engineer rejected Anthropic, Google, &amp; Microsoft, and what interviewers now test instead of LeetCode.</p>
+<p><strong>P.S.</strong> We compiled over <a href="https://agentic-coding-prompts.netlify.app/">100 prompts</a> that we use for AI-assisted engineering. If you are just starting out, this is the perfect resource to help you dive in.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>How staff engineers find which problems to solve</p>
+</li>
+<li>
+<p>New coding agent plugin to save tokens (top tool)</p>
+</li>
+<li>
+<p>3 Claude Code skills from a veteran dev (tutorial)</p>
+</li>
+<li>
+<p>How a senior dev uses Pi to cut coding costs (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=RAtzEyGBGFU"><img alt="Click here to watch Hugging Face’s Microduck in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3887a55a-6219-4aec-a3fb-0acd38a2c089/Thumbnail__1_.jpg?t=1787901685" /></a>
+<em>Click here to watch Hugging Face’s Microduck in action.</em></p>
+<hr />
+<p><strong>Hugging Face drops a $399 open-source robot duck:</strong> The model hosting platform just unveiled <a href="https://pollen-robotics.com/microduck/"><strong>Microduck</strong></a>, a robot you can train using reinforcement learning. It’s capable of walking, picking up objects, recovering from falls, and even roller skating. You can train its behavior in a simulation before deploying them directly, with the flexibility to fine tune and redeploy as needed. This came right after the reports that Nvidia is planning to acquire the startup for $13B, and the duck has already crossed $1M in sales.</p>
+<p><strong>Over 100 tech companies sign an open letter on AI cyber threats:</strong> OpenAI, Anthropic, AWS, and several other companies have <a href="https://www.axios.com/2026/08/27/openai-anthropic-issue-dire-cyber-threat-warning">teamed up</a> to warn that organizations only have a few months to get ready for AI-enabled cyberattacks. Now that AI is making high-end hacking way cheaper, they're urging every company to patch their biggest vulnerabilities and strengthen security across the board, particularly for AI-generated code.</p>
+<p><strong>OpenAI's rogue agents rewrite the enterprise security playbook:</strong> Back in July, OpenAI's agents managed to hack into Hugging Face. Shortly after the lab unveiled a detailed report on the incident, the lead researcher jokingly dubbed the investigation a "<a href="https://archive.codenewsletter.ai/2092692685224325542">slop-vestigation</a>." His team had to sift through thousands of multi-day transcripts that were impossible to parse without AI, yet the analysis agents were frequently inaccurate or overconfident. His main takeaway was that we still lack effective ways to oversee AI swarms. Check out the <a href="https://huggingface.co/blog/agent-intrusion-technical-timeline">animated replay here.</a></p>
+<hr />
+<h5><strong>PRESENTED BY MONGODB</strong></h5>
+<h2><a href="https://www.mongodb.com/lp/cloud/atlas/vector/database?utm_source=fnf&amp;utm_campaign=mongodb-august&amp;utm_term=thecode&amp;utm_medium=newsletter&amp;utm_ad=p&amp;utm_ad_campaign_id=21100816499&amp;adgroup=160844905635&amp;cq_cmp=21100816499&amp;gad_source=1&amp;gad_campaignid=21100816499&amp;gbraid=0AAAAADQ1403pm0alZwXMScj5qHHdx20LP&amp;gclid=Cj0KCQjwnbrUBhDOARIsAKKhPpeyvCB67VG5nYWenccykRriRJC2WZA-vy5H_nE_himZ7E4fQnqWxKQaAinKEALw_wcB&amp;utm_content=atlas"><strong>MongoDB Connects Live, Operational Data to the AI Tools Builders Use.</strong></a></h2>
+<p><a href="https://www.mongodb.com/lp/cloud/atlas/vector/database?utm_source=fnf&amp;utm_campaign=mongodb-august&amp;utm_term=thecode&amp;utm_medium=newsletter&amp;utm_ad=p&amp;utm_ad_campaign_id=21100816499&amp;adgroup=160844905635&amp;cq_cmp=21100816499&amp;gad_source=1&amp;gad_campaignid=21100816499&amp;gbraid=0AAAAADQ1403pm0alZwXMScj5qHHdx20LP&amp;gclid=Cj0KCQjwnbrUBhDOARIsAKKhPpeyvCB67VG5nYWenccykRriRJC2WZA-vy5H_nE_himZ7E4fQnqWxKQaAinKEALw_wcB&amp;utm_content=atlas"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5cf35a52-161d-478a-b39b-48bb3b12e720/image_-_Mackenzie_Allen__2_.png?t=1787857120" /></a></p>
+<hr />
+<p>A new Managed MCP Server connects Claude Code, Codex, Grok Build, and Devin to MongoDB Atlas, giving coding agents direct access to live operational data.</p>
+<p><a href="https://www.mongodb.com/lp/cloud/atlas/vector/database?utm_source=fnf&amp;utm_campaign=mongodb-august&amp;utm_term=thecode&amp;utm_medium=newsletter&amp;utm_ad=p&amp;utm_ad_campaign_id=21100816499&amp;adgroup=160844905635&amp;cq_cmp=21100816499&amp;gad_source=1&amp;gad_campaignid=21100816499&amp;gbraid=0AAAAADQ1403pm0alZwXMScj5qHHdx20LP&amp;gclid=Cj0KCQjwnbrUBhDOARIsAKKhPpeyvCB67VG5nYWenccykRriRJC2WZA-vy5H_nE_himZ7E4fQnqWxKQaAinKEALw_wcB&amp;utm_content=atlas"><strong>Explore new MongoDB capabilities for the Agentic Era.</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Staff engineers are paid to find problems. Here's how a Googler does it:</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/845d3af5-6600-46c1-a694-264a896e5156/superhumanteam_An_overhead_flat-lay_of_a_developers_desk_crow_e0631dde-50c3-4d2f-b3a2-b5a3e042abc2_3__6_.jpg?t=1787892906" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>Tickets don't buy titles.</strong> A senior engineer asked his mentor how to find problems worth solving. He'd tried blocking calendar time to think strategically. Nothing clicked. Then the advice he got in return landed on Hacker News's <a href="https://news.ycombinator.com/item?id=49411643">front page</a> this month. That mentor is Google senior staff engineer Lalit Maganti. His answer comes down to one skill you can actually learn. And there are five habits that help you get there:</p>
+<ul>
+<li>
+<p><strong>Absorb problems, not requests.</strong> Treat daily meetings, chat threads and even conversations with colleagues as raw material. When a complaint overlaps something you own, ask what would actually solve it. Sometimes that means building something new, sometimes just pointing them to a feature they didn't know existed.</p>
+</li>
+<li>
+<p><strong>Let problems accumulate.</strong> That doesn't mean building the second someone asks. Jumping on every loud request is how you ship features nobody uses. Wait until the same need shows up across teams, then act.</p>
+</li>
+<li>
+<p><strong>Find the common shape.</strong> Don't just collect requests. Look for the problem hiding underneath. On his team, groups kept asking for pinned tracks, custom views, and zoom settings. Eventually it was clear they all wanted one thing: to personalize the UI around their workflow.</p>
+</li>
+<li>
+<p><strong>Pressure-test before building.</strong> How far you commit should depend on how sure you are. Safe bets ship now, risky ones get a throwaway prototype to expose the flaws, and big bets earn RFCs and talks before any real work starts.</p>
+</li>
+</ul>
+<p><strong>Solving one problem finds the next.</strong> That is Maganti’s fifth habit, and it’s the ownership gap between senior and staff levels. Each problem you solve pulls you into earlier conversations, which then surface new ones. His <a href="https://lalitm.com/post/find-problems-staff-engineer/">full write up</a> breaks down how that loop works.</p>
+<p><strong>P.S.</strong> Engineers mapping their own path to the role can use this alongside the <a href="https://staffeng.com/guides/"><strong>StaffEng guides</strong></a>, which offer a more comprehensive look at Staff-plus positions.</p>
+<hr />
+<h5><strong>PRESENTED BY DATADOG</strong></h5>
+<h2><a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026">Engineers: Do you know the new security protocols for GenAI?</a></h2>
+<p><a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e99d7cdb-8881-48bf-8481-c95564e1450d/image1.jpg?t=1787857269" /></a></p>
+<hr />
+<p>GenAI is evolving by the minute, and security engineers need to know the <a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026">latest threats</a> to infrastructure.</p>
+<p><a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026">Datadog’s latest guide on GenAI security</a> will teach you about real-world attacks on how to secure against them, focusing on…</p>
+<ul>
+<li>
+<p>Containers, databases, cloud storage buckets, and Model Context Protocol (MCP) servers</p>
+</li>
+<li>
+<p>Software and data such as training datasets, pre-trained large language models (LLMs), and third-party AI libraries</p>
+</li>
+<li>
+<p>AI interfaces, chat interfaces, and API endpoints for supporting services</p>
+</li>
+</ul>
+<p><a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026"><strong>Download the guide and master GenAI security.</strong></a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/25f45eb7-9860-41a6-a57c-c1c9b50902b2/CleanShot_2026-08-28_at_14.21.16_2x.jpg?t=1787913826" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>AI Teams:</strong> This engineer organizes his Grok Bots like a real team, complete with channels, task boards, and a bot PM. His thread shares the <a href="https://archive.codenewsletter.ai/2092982710465970425">whole setup</a> (2.8K bookmarks).</p>
+</li>
+<li>
+<p><strong>Going Solo:</strong> Anthropic, OpenAI, Google, and Microsoft all tried to hire this ex-Meta engineer. He turned them all down, and <a href="https://archive.codenewsletter.ai/2092699326384640448">his reasoning</a> explains why now is different (1K likes).</p>
+</li>
+<li>
+<p><strong>Interview Prep</strong>: If you're interviewing for backend/founding engineer roles, LeetCode grinding may be wasted effort now. An interviewer at an AI startup** <a href="https://archive.codenewsletter.ai/2092966591495573717">laid out</a>** what he actually tests for (1.3K bookmarks)</p>
+</li>
+<li>
+<p><strong>Lab Life:</strong> An engineer just quit OpenAI, and** <a href="https://archive.codenewsletter.ai/2092376614239609094">his reason</a>** reveals something uncomfortable about coding in 2026. Meanwhile, Anthropic reportedly still can't hire** <a href="https://archive.codenewsletter.ai/2093042350427881973">fast enough</a>** (1.8M views).</p>
+</li>
+<li>
+<p><strong>Building Apps:</strong> One dev built an entire mobile game studio using Grok Bots. He just shared how <a href="https://x.ai/bot/guides/grok-bot-for-mobile-app-development">6 agents build</a>, ship, and improve his game.</p>
+</li>
+<li>
+<p><strong>Agent Island:</strong> Turns out you can watch your agents live on a tiny island, working and napping in little houses. This dev shared <a href="https://archive.codenewsletter.ai/2093023531642863686"><strong>the prompt</strong></a> to build it (3K interactions).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=tqi4cTZZWzQ"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8f0ef463-678e-43da-8c73-d8cb4a104c83/Thumbnail.jpg?t=1787855890" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=tqi4cTZZWzQ"><strong>A senior dev packaged 20 years of dev experience in 3 Claude skills:</strong> </a> You will learn how to build a production ready full stack Next.js apps from the ground up. This tutorial covers everything from routing and server components to API creation, database integration, and authentication, giving developers the skills they need to master modern web standards and ship scalable web apps efficiently.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/DietrichGebert/ponytail"><strong>Ponytail</strong></a>** (113.8k ⭐):** Coding agents often over-engineer simple tasks. You might ask for a basic date field, and they'll end up installing an entire library along with a theme file. This plugin forces agents to operate like a pragmatic senior developer. It runs every request through a decision ladder before writing anything, favoring reuse over new code. <a href="https://flaviocopes.com/ponytail/">See how it works.</a></p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://scott-fryxell.github.io/blog/the-harness-is-the-thing/"><strong>How a senior dev uses Pi to cut coding costs by routing workloads:</strong> </a> Lead Engineer Scott Fryxell used Pi, an AI agent harness, to route the bulk of his client coding tasks to low-cost commodity models like DeepSeek, saving premium frontier models like Fable for critical phases. He shared his structured workflow for orchestrating these agents effectively.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-slash-your-claude-api-bill"></a></p>
+<h2><strong>How to slash your Claude API bill</strong></h2>
+<p>Claude API costs have a way of creeping up on you. Between half-baked caching, prompts filled with dead weight, and using top-tier models for basic tasks... it adds up fast. The worst part is nobody really knows which fix will make a difference. Anthropic just dropped a <a href="https://code.claude.com/docs/en/changelog"><strong>new command</strong></a> that changes that. It profiles your project’s actual spend, then walks you through the fixes, one measured step at a time.</p>
+<ul>
+<li><strong>Step 1.</strong> Update Claude Code. The command needs version 2.1.247 or newer.</li>
+</ul>
+<pre><code>claude update
+</code></pre>
+<ul>
+<li><strong>Step 2.</strong> Open Claude Code inside the project that calls the Claude API and run:</li>
+</ul>
+<pre><code>/claude-api cost-optimize
+</code></pre>
+<p>This audits the code making API calls, not your Claude Code subscription usage.</p>
+<ul>
+<li><strong>Step 3.</strong> Claude maps exactly where your tokens are going, then suggests cost-cutting levers ranked by their impact: prompt caching, token hygiene, batch processing, effort levels, and model choice. You apply one change, measure the results, and move on to the next.</li>
+</ul>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>An ex-Meta staff engineer grinded as a junior but never got promoted. He now says leveling up comes down to <strong><a href="https://www.linkedin.com/posts/yangshun_as-a-junior-engineer-i-worked-very-hard-share-7495764539716554752-YWEP/">just one sentence</a></strong>, and it's not about hard work.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

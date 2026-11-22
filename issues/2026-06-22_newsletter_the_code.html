@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 Anthropic&#x27;s new model may stay hidden — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 Anthropic&#x27;s new model may stay hidden — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 Anthropic&#x27;s new model may stay hidden</h1>
+<p class="meta">2026-06-22 · received 2026-06-22 23:05 +0900
+ · <a href="https://codenewsletter.ai/p/sakana-drops-fugu-hermes-agent-ships-a-locked-down-setup-mode" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 Anthropic's new model may stay hidden</h1>
+<p><a href="https://srv.buysellads.com/ads/long/x/TFZVVZDPTTTTTTDNOTLNWTTTTTTGHBQF2VTTTTTTC3ZLYBETTTTTTIL5PMD6PYLKVAAN5KP5KMS6WMBVPVACV74NPJQE?cid=382569"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/eeb7d8e9-261f-45e0-9451-aa318da718be/Group_Unblocked.jpg?t=1782086267" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Going forward, it may be safe to assume that the best models will not be available to you. After holding back Mythos, Anthropic has reportedly <a href="https://x.com/AndrewCurran_/status/2068748019030483365">trained</a> an even more capable Mythos successor — which it will hold back from the public again. Open-source AI is more vital than ever.</p>
+<p><strong>Also:</strong> A final-year PhD turned OpenAI researcher's guide to landing an ML role, 8 prompts to fine-tune your designs, and a Codex workflow that tests every feature in your app.</p>
+<hr />
+<p><a id="todays-insights"></a></p>
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>The new software lifecycle in the agentic era</p>
+</li>
+</ul>
+<p><a id="how-to-run-glm-52-in-your-terminal"></a>
+* How to run GLM 5.2 in your terminal</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://x.com/SakanaAILabs/status/2068861630327443966"><img alt="Click here to see Sakana Fugu’s full benchmarks." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/92a2d452-8e7e-4730-8c1d-55ece7157e50/Frame_1000003544.jpg?t=1782120040" /></a>
+<em>Click here to see Sakana Fugu’s full benchmarks.</em></p>
+<hr />
+<p><strong>Sakana drops a model that routes around export bans:</strong> The Tokyo-based AI lab just unveiled <a href="https://sakana.ai/fugu-release/"><strong>Fugu</strong></a>, a model that orchestrates a pool of rivals rather than competing with them. It selects the best system for each request and puts together a team of experts for more complex tasks. The main selling point is resilience; if a vendor cuts off access, Fugu simply reroutes to another agent to keep things moving. Sakana claims its Ultra tier can rival Anthropic's export-restricted Fable 5 and Mythos Preview.</p>
+<p><strong>Open-weight GLM-5.2 is gaining major traction with devs:</strong> The Chinese AI lab's latest release has devs and tech leaders <a href="https://x.com/i/trending/2068378911365304705">buzzing</a>. Z.ai claims GLM-5.2 outpaces every open-weight competitor in long-horizon coding. It sits just a point behind Claude Opus 4.8 on the FrontierSWE benchmark. Developers have already started integrating it into tools like Claude Code and Cline. With its MIT license and massive 1M-token context window, there is zero vendor lock-in. See how you can run it in your terminal in today's AI coding hack section below.</p>
+<p><strong>Hermes Agent ships a locked-down setup mode:</strong> The open-source AI lab just rolled out <a href="https://x.com/NousResearch/status/2068405008685539514"><strong>Blank Slate</strong></a>, which flips the script on how agents start. Instead of a bloated setup, a new one boots with almost nothing active, just the model, file operations, and a terminal. Everything else, from the browser to MCP servers, stays off unless a developer manually enables them. These settings are written to disk. This allows teams to lock in a single config across different machines, ensuring updates won't cause any configuration drift.</p>
+<hr />
+<h5><strong>PRESENTED BY UNBLOCKED</strong></h5>
+<h2><a href="https://srv.buysellads.com/ads/long/x/TFZVVZDPTTTTTTDNOTLNWTTTTTTGHBQF2VTTTTTTC3ZLYBETTTTTTIL5PMD6PYLKVAAN5KP5KMS6WMBVPVACV74NPJQE?cid=382569">[Webinar] 8 levels of context maturity in AI-native engineering</a></h2>
+<p><a href="https://srv.buysellads.com/ads/long/x/TFZVVZDPTTTTTTDNOTLNWTTTTTTGHBQF2VTTTTTTC3ZLYBETTTTTTIL5PMD6PYLKVAAN5KP5KMS6WMBVPVACV74NPJQE?cid=382569"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/76bbf1ff-70d8-4e8c-a1b5-2301a18edab0/1280_x_720_-_Jun_24_webinar.jpg?t=1782086333" /></a></p>
+<hr />
+<p>AI shows up in 60% of engineering work. But only about a fifth of it can be handed off without someone babysitting the output. That’s because agents are missing context.</p>
+<p>This <a href="https://srv.buysellads.com/ads/long/x/TFZVVZDPTTTTTTDNOTLNWTTTTTTGHBQF2VTTTTTTC3ZLYBETTTTTTIL5PMD6PYLKVAAN5KP5KMS6WMBVPVACV74NPJQE?cid=382569">8-stage context maturity model</a> gives a real answer on why you haven't seen meaningful productivity gains for all the tokens burned.</p>
+<p><a href="https://srv.buysellads.com/ads/long/x/TFZVVZDPTTTTTTDNOTLNWTTTTTTGHBQF2VTTTTTTC3ZLYBETTTTTTIL5PMD6PYLKVAAN5KP5KMS6WMBVPVACV74NPJQE?cid=382569">Join Unblocked live June 24 (FREE) to learn</a>:</p>
+<ul>
+<li>
+<p>Why more MCPs provides agents access but not understanding</p>
+</li>
+<li>
+<p>What it takes to deploy agents you can trust without supervision</p>
+</li>
+<li>
+<p>How a context layer solves for quality, efficiency and cost</p>
+</li>
+</ul>
+<p><a href="https://srv.buysellads.com/ads/long/x/TFZVVZDPTTTTTTDNOTLNWTTTTTTGHBQF2VTTTTTTC3ZLYBETTTTTTIL5PMD6PYLKVAAN5KP5KMS6WMBVPVACV74NPJQE?cid=382569">Register now</a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Letting AI write more of your code won't free up your engineers. Here's why:</strong></h2>
+<p><img alt="A comparison of the software lifecycle, before and after agents." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9eee7615-0e48-4adb-8344-b1d586c42f2f/Thumbnail__19_.jpg?t=1782105748" />
+<em>A comparison of the software lifecycle, before and after agents.</em></p>
+<hr />
+<p><strong>An uneven speedup.</strong> Addy Osmani (ex-Google Cloud Director) co-authored a Google <a href="https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding">whitepaper</a> on how AI is reshaping the software lifecycle, and his read on it is worth every engineering leader's time. His argument: while some parts of the development lifecycle have accelerated, the process as a whole remains stalled.</p>
+<p><strong>Same phases, new proportions.</strong> The two lifecycles above run the same steps (see above image): requirements, design, implementation, testing, review, and maintenance. AI hasn't removed any steps, but it has completely transformed implementation. What used to take weeks now happens in minutes, leaving the rest of the cycle to adapt to this rapid shift.</p>
+<p><strong>The slow parts didn't move.</strong> Gathering requirements, designing architecture, and handling verification all require human judgment. Those are things an agent just can’t fully replace (yet). Deciding what to build, weighing trade-offs, and confirming the final result is correct still falls on people. As a result, the bottleneck moved towards the initial specs and the review process.</p>
+<p><strong>This changes what the leader should optimize.</strong> Osmani's key advice is to set the bar at the evaluation stage. Do not just set it at the demo. A demo shows that an agent can work once. An eval proves it works every single time. This is a clear sign that the real work has shifted. It moved from writing code to specifying and verifying it. To dive deeper, check out Osmani's <a href="https://addyosmani.com/blog/new-sdlc-vibe-coding/">full post.</a></p>
+<hr />
+<h5><strong>PRESENTED BY BITDRIFT</strong></h5>
+<h2><a href="https://bitdrift.io/signup?utm_campaign=sp&amp;utm_medium=newsletter&amp;utm_source=the-code">Mobile observability shouldn't suck</a></h2>
+<p><a href="https://bitdrift.io/signup?utm_campaign=sp&amp;utm_medium=newsletter&amp;utm_source=the-code"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/51be7d3d-b55b-492d-a0a2-223634b453aa/LinkedIn_Option_3_Copy_2_-_Karina_Babcock.jpg?t=1782086530" /></a></p>
+<hr />
+<p>Mobile reflects reality, and it’s messy: Intermittent connections, mid-onboarding drop-offs, force quits, and more. bitdrift captures <a href="https://bitdrift.io/signup?utm_campaign=sp&amp;utm_medium=newsletter&amp;utm_source=the-code">100% of real-time data, unsampled across 1B+ installs,</a> so you and your agents can query reality.</p>
+<p><a href="https://bitdrift.io/signup?utm_campaign=sp&amp;utm_medium=newsletter&amp;utm_source=the-code"><strong>Try bitdrift:</strong> </a>** mobile observability for the real world.**</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/137f62f4-c9e7-4e8d-b52d-70386e9ee240/CleanShot_2026-06-22_at_14.32.05_2x.jpg?t=1782118978" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Interview Gauntlet:</strong> A PhD heading to OpenAI sat 57 interviews across 11 companies before landing an ML role. Here's what every round <a href="https://x.com/alisawuffles/status/2068765723569324462"><strong>taught her</strong></a> (1M views).</p>
+</li>
+<li>
+<p><strong>Retry Tax:</strong> In an agent loop, retries cost you more than tokens do. This <a href="https://x.com/omarsar0/status/2068008743153832264">guide</a> rethinks what's worth optimizing once the agent is writing its own code.</p>
+</li>
+<li>
+<p><strong>Spacing's Off:</strong> Keep telling Claude Code the spacing looks wrong. The model isn't the problem. These <a href="https://x.com/Voxyz_ai/status/2068011987200786733"><strong>8 prompts</strong></a> hand your agent the design system it was missing.</p>
+</li>
+<li>
+<p><strong>Test Everything:</strong> A developer shares the <a href="https://x.com/tomosman/status/2068692611334893582">agentic workflow</a> he used to point Codex to turn every feature into a tested, fixed, and verified user story (4.1K likes).</p>
+</li>
+<li>
+<p><strong>Data Black Hole:</strong> Podcaster Dwarkesh Patel <a href="https://www.youtube.com/watch?v=4pG3SJQPAwk">argues</a> AI gains come from more data. He argues models need roughly a million times more examples than humans to match a skill.</p>
+</li>
+<li>
+<p><strong>Four Boxes:</strong> Before you build an agent loop, four things have to be true, or you're just burning tokens. This <a href="https://x.com/AnatoliKopadze/status/2068328135611822149">post explains</a> exactly when one pays off and when it's a trap (6.4M views).</p>
+</li>
+<li>
+<p><strong>Feels Right:</strong> A design engineer <a href="https://x.com/jakubkrehel/status/2068715109065613564">packaged</a> the tiny details that make interfaces feel natural into one skill your agent reads before every build.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to run GLM 5.2 in your terminal</strong></h2>
+<p>Claude Code and Codex are tied to their own models, but LangChain CEO Harrison Chase has <a href="https://www.linkedin.com/posts/harrison-chase-961287118_it-is-indeed-quite-good-dont-try-it-in-activity-7473841062986416128-vcp0">highlighted</a> a way to break that lock. By using dcode, a model-agnostic harness, you can run GLM 5.2 instead. fast.ai co-founder Jeremy Howard ranks its performance right up there with Opus 4.8, but at a much lower cost.</p>
+<p><strong>Step 1:</strong> Install dcode with Fireworks bundled in.</p>
+<pre><code>DEEPAGENTS_EXTRAS=&quot;fireworks&quot; curl -LsSf https://langch.in/dcode | bash
+</code></pre>
+<p><strong>Step 2:</strong> Add your Fireworks key (grab one <a href="https://app.fireworks.ai/api-keys">here</a>).</p>
+<pre><code>echo 'FIREWORKS_API_KEY=your-key-here' &gt;&gt; ~/.deepagents/.env
+</code></pre>
+<p><strong>Step 3:</strong> Launch it on GLM 5.2.</p>
+<pre><code>dcode --model fireworks:accounts/fireworks/models/glm-5p2
+</code></pre>
+<p>That gives you a complete coding agent powered by GLM 5.2's 1-million-token context. You can find the <a href="https://docs.langchain.com/oss/python/deepagents/code/providers">docs right here</a>.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=iQyg-KypKAA"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/191afac3-5002-42f3-b172-d5a40310ba06/Thumbnail__20_.jpg?t=1782119082" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=iQyg-KypKAA"><strong>L8 Engineer's agentic engineering workflow:</strong> </a> You’ll learn how a former L8 engineer at Meta built a high-performance, terminal-based AI coding workflow. This tutorial covers everything from workspace setup to training custom AI agents and managing multiple automated tasks simultaneously to supercharge your daily productivity.</p>
+<hr />
+<p><a id="top-tool"></a></p>
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://pumadb.ai/"><strong>PumaBD:</strong> </a> This tool provides AI agents with simple, persistent memory for notes and context without the hassle of setting up complex databases, vector stores, or infrastructure.</p>
+<hr />
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/bytedance/deer-flow"><strong>DeerFlow</strong></a>** (72.9K ⭐):** An open-source SuperAgent harness that uses sandboxes and tools to research, code, and complete complex multi-hour tasks autonomously.</p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more"><strong>How to use CLAUDE.md + scoped rules (by Anthropic):</strong> </a> Overloading CLAUDE.md with unstructured instructions wastes context and makes Claude less effective. To fix this, developers can use seven specific customization methods, like skills and rules, to manage exactly when and how instructions load.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from Friday</strong></h3>
+<p>Anthropic's <a href="https://claude.com/blog/artifacts-in-claude-code">new feature</a> turns Claude Code sessions into private, real-time shareable web pages for teams to track progress, PR walkthroughs, and dashboards without manual status updates.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🔥 Building future websites for agents — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🔥 Building future websites for agents — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🔥 Building future websites for agents</h1>
+<p class="meta">2026-08-24 · received 2026-08-24 23:06 +0900
+ · <a href="https://codenewsletter.ai/p/vercel-ships-tool-that-grades-sites-for-ai-agents" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🔥 Building future websites for agents</h1>
+<p><a href="https://coderabbit.link/the-code-003"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/307273bf-0742-49c9-9997-ccd2fe79e65f/Group_CodeRabbit.jpg?t=1787544979" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> A few months back, Cloudflare research revealed that agents now drive over half of all web traffic. Your next wave of customers won't be human. They're agents. If your site isn't optimized for them, you might already be falling behind. Vercel just dropped a tool to check how agent-ready your frontend is. Read details below.</p>
+<p><strong>Also:</strong> How an engineer’s side hustle banked $45K in two months, a one-shot project to build your AI engineering skills, and how to cut AI costs with token engineering.</p>
+<hr />
+<p><a id="todays-brief"></a></p>
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Delegating coding tasks across multiple agents</p>
+</li>
+<li>
+<p>Hosting your code independently of a GitHub outage</p>
+</li>
+<li>
+<p>A Meta engineer's guide to writing Claude.md files</p>
+</li>
+<li>
+<p>How Anthropic engineers learn fast</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://is-agentic.com/"><img alt="Click here to see how ready your site is for agents." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/11ae0562-191e-443c-b733-e1fb5130305f/Thumbnail__10_.jpg?t=1787573116" /></a>
+<em>Click here to see how ready your site is for agents.</em></p>
+<hr />
+<p><strong>Vercel’s new tool grades websites for agents:</strong> The cloud hosting platform just dropped <a href="https://archive.codenewsletter.ai/2090857388924661915">Is Agentic</a>, a new tool that scores how easily AI agents can navigate and use a website. Every scan is run by <a href="https://ora.ai/methodology">Ora</a>, an agent-experience research firm. It runs over 100 checks to see how agents navigate your site. You get a score, one-click fixes, and a CLI for agents to run scripts directly. It's free, with no API key or billing. You can run it <a href="https://is-agentic.com/">here</a>.</p>
+<p><strong>Shopify CEO builds an open-source Git server:</strong> The e-commerce platform's founder just launched <a href="https://archive.codenewsletter.ai/2091678506992222258">Walgit</a>, a single-binary Rust server that turns cheap cloud storage into a code host with no database behind it. He built it over a weekend after reading Cursor's write-up on scaling Git. It clones giant repos fast by serving them as plain static files. It's MIT-licensed with a JSON API, so you can self-host cheaply and build your own tooling on top. <a href="https://github.com/tobi/omasnap">You can try it here</a>.</p>
+<p><strong>Anthropic expands access to Mythos for hunting vulnerabilities:</strong> The AI lab just put <a href="https://archive.codenewsletter.ai/2090852314319880425">Mythos 5</a>, once limited to a chosen few, inside a security scan that enterprise teams can turn on themselves. You can simply point it at your GitHub repo to surface flaws tagged by type, confidence, and severity. You maintain full control by manually approving every fix, while it scans the bill as standard token usage on your existing plan. When you open a patch in Claude Code, it uses the models your enterprise team already uses. See <a href="https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders">how it works</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY CODERABBIT</strong></h5>
+<h2><a href="https://coderabbit.link/the-code-003">Once you PR review like this, you’ll never go back (free tool)</a></h2>
+<p><a href="https://coderabbit.link/the-code-003"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2c04e07c-75bc-4824-a49e-f1dd07f02a01/final_version_coderabbit_V2__1_.jpg?t=1787545054" /></a></p>
+<hr />
+<p>AI is writing more and more code than ever before in history.</p>
+<p>So <a href="https://coderabbit.link/the-code-003">why are you still reviewing PRs like it’s 2010</a>— alphabetical order, zero context, no high-level summary of _why _changes were made?</p>
+<p><a href="https://coderabbit.link/the-code-003">CodeRabbit’s Change Stack restructures PR reviews into layered walkthroughs</a>, giving you…</p>
+<ul>
+<li>
+<p>Approachable PR overviews with one-click fixes</p>
+</li>
+<li>
+<p>Timeline View to <strong>see how the PR evolved over time</strong> (and why)</p>
+</li>
+<li>
+<p>Semantic Diff to understand real logic changes</p>
+</li>
+</ul>
+<p>And if you need help? Just ask the Agent Chat for context directly where you’re working.</p>
+<p><a href="https://coderabbit.link/the-code-003">Try it here</a> (<strong>early access costs nothing</strong>).</p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="how-to-delegate-coding-tasks-across-multiple-agents"></a></p>
+<h2><strong>How to delegate coding tasks across multiple agents</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5764538f-4e03-47df-9dc5-56574e110cdb/superhumanteam_engineer_working_with_multiple_AI_agents_in_an_18465892-c130-4261-ad07-e3d7248b5809_3.jpg?t=1787566739" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>Agent burnout</strong>. A single coding agent can only do so much. If you give it too many tasks at once, it starts breaking one thing while trying to fix another. Even experienced engineers like Bob Martin (also known as Uncle Bob on the internet) have run into this problem: finding that agents struggle with messy code and technical debt just as much as humans do.</p>
+<p><strong>Change the numbers.</strong> During a <a href="https://www.youtube.com/watch?v=zcLPGC-tvgk&amp;time_continue=0&amp;themeRefresh=1">podcast </a>with Matt Pocock, Martin explained that he moved away from using a single agent for everything. Instead, he now routes each user story through a five-agent assembly line where every agent is responsible for a single step. Here’s his setup:</p>
+<ul>
+<li>
+<p><strong>Specifier:</strong> It takes the plain-English story and turns it into a precise spec: the rules the feature must follow, plus a step-by-step checklist for testing it by hand.</p>
+</li>
+<li>
+<p><strong>Coder:</strong> Builds the feature and writes the unit tests to go with it.</p>
+</li>
+<li>
+<p><strong>Cleaner:</strong> Goes back over that code and simplifies the tangled, hard-to-follow parts.</p>
+</li>
+<li>
+<p><strong>Hardener:</strong> It tries to break the tests on purpose, tweaking the code to confirm the tests would actually catch a real bug.</p>
+</li>
+<li>
+<p><strong>QA:</strong> This turns the checklist into a script that drives the real app and confirms it behaves the way the story asked.</p>
+</li>
+</ul>
+<p><strong>The power of context.</strong> Splitting tasks keeps the prompt short so the agent actually follows the rules. Each agent does its job and then resets. This keeps them laser-focused on one thing from start to finish.</p>
+<p><strong>The math checks out.</strong> One agent might finish in five minutes, but you can't trust the output. The full hour-long pipeline produces battle-tested code that would've taken a human half a day. While Martin still handles the high-level architecture and module design, the grunt work is now fully automated.</p>
+<p><strong>PS:</strong> Want to see it in action? He’s got two-, four-, and six-agent versions ready to go <a href="https://github.com/unclebob/swarm-forge">here.</a></p>
+<hr />
+<h5><strong>PRESENTED BY SONAR</strong></h5>
+<h2><a href="https://fandf.co/4qkHbbE">Cut AI Coding Token Costs by up to 36% with Sonar Vortex</a></h2>
+<p><a href="https://fandf.co/4qkHbbE"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/46f730cc-0eb5-447e-afac-23929ef0c173/SonarVortex_1920x1080.jpg?t=1787545315" /></a></p>
+<hr />
+<p><a href="https://fandf.co/4qkHbbE">Sonar Vortex</a> operates inside your AI coding agent’s inner reasoning loop, supplying architectural context before code is written, then verifying the output in real time. In testing, software defects dropped 92% and token consumption declined 30+%.</p>
+<p><a href="https://fandf.co/4qkHbbE">Build safer code while spending less on LLM calls</a>.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6fc8ca00-cdea-457a-be10-5d117df55db8/Screenshot_2026-08-24_at_12.13.49_PM.jpg?t=1787559289" /></p>
+<hr />
+<ul>
+<li>
+<p><strong>Fast Learners:</strong> An Anthropic engineer shared the <a href="https://archive.codenewsletter.ai/2090884854590382515">explainer skill</a> his team uses to get up to speed on anything fast. Install it in Claude Code with just 2 commands (1.8M views).</p>
+</li>
+<li>
+<p><strong>Side Hustle</strong>: An engineer claims he made a quick $45K in two months working for AI labs. <a href="https://archive.codenewsletter.ai/2091357126409281957">This post</a> breaks down exactly how to get started (2.9K bookmarks).</p>
+</li>
+<li>
+<p><strong>Project Builders</strong>: If you’re trying to break into AI engineering, you should learn by building active AI systems. This <a href="https://archive.codenewsletter.ai/2091130779636285890">AI engineer's project</a> teaches you more than any other tutorial (3.7K bookmarks).</p>
+</li>
+<li>
+<p><strong>GitHub Outage</strong>: This video blows up every single time GitHub goes down. Watch a popular streamer <a href="https://archive.codenewsletter.ai/1983417259294109724">host his own Git repos</a>, no Microsoft required (2.6K likes).</p>
+</li>
+<li>
+<p><strong>Context Engineering</strong>: Most CLAUDE.md files end up empty, bloated, or stale. This ex-Meta engineer's guide shows a completely <a href="https://archive.codenewsletter.ai/2091380569716433349">different way</a> to maintain them (2.7K bookmarks).</p>
+</li>
+<li>
+<p><strong>Black Box:</strong> A dev's viral post argues AI coding has a <a href="https://archive.codenewsletter.ai/2091182260427145527">hidden cost</a> nobody talks about. It's not the code itself but what happens when something breaks down (113K views).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://youtu.be/eecUhBpTz_g?si=cwfyLGs-VKGyaxO3"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/91ca2883-c47c-45b9-ba72-63221ea04281/Thumbnail__9_.jpg?t=1787562135" /></a>
+<strong>Click here to watch the tutorial.</strong></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://youtu.be/eecUhBpTz_g?si=cwfyLGs-VKGyaxO3">How to build an autonomous AI coding system:</a> This tutorial is all about agentic AI software engineering. You'll learn how to build a 5-component automated pipeline that handles everything from planning and testing to shipping software straight from your PRD specs.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/dmmulroy/anti-slop">Anti-slop for AI-written code</a> <strong>(3.5K ⭐️):</strong> This plugin catches low-signal TypeScript and JavaScript patterns before they land in your codebase. You can vendor the rules into your repo, customize them to your standards, and even have your coding agent install and configure everything for you.</p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://archive.codenewsletter.ai/2090892404509601819"><strong>How to cut AI costs with token engineering (by Google):</strong> </a> Building cheaper AI systems takes more than trimming prompts. This guide shows you how to prune and cache agent context, batch offline work, cap reasoning tokens, and route simple tasks to smaller models, so AI workloads stay fast, reliable, and cheaper to run at scale.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to spend leftover Codex quota before it resets</strong></h2>
+<p>Codex quota resets weekly and unused credits vanish. A dev <a href="https://archive.codenewsletter.ai/2091603024817062192">shared</a> a /goal prompt that turns leftovers into a full UI/UX audit.</p>
+<p>If /goal is missing, enable it:</p>
+<pre><code>codex features enable goals
+</code></pre>
+<p>Restart Codex, then paste:</p>
+<pre><code>/goal Launch this project's site and audit it like a real user. Find anything confusing or broken. Fix visual hierarchy, spacing, and mobile issues, add transitions where state changes need feedback, then re-test the core flows. Finish with before/after screenshots and the 5 biggest improvements.
+</code></pre>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Check out how one dev tried simulating a whole company using SpaceXAI’s new Grok Bot. It only took a few minutes, but <a href="https://composio.dev/content/guide-to-frok-bot">a single catch</a> brought everything to a halt mid-task.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

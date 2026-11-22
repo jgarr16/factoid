@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>RIP OpenClaw: How I Built a Secure Autonomous AI Agent with Claude and n8n — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="RIP OpenClaw: How I Built a Secure Autonomous AI Agent with Claude and n8n — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>RIP OpenClaw: How I Built a Secure Autonomous AI Agent with Claude and n8n</h1>
+<p class="meta">2026-02-10 · received 2026-02-10 12:52 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/secure-ai-agent-n8n-openclaw-alternative" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>RIP OpenClaw: How I Built a Secure Autonomous AI Agent with Claude and n8n</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRnNlY3VyZS1haS1hZ2VudC1uOG4tb3BlbmNsYXctYWx0ZXJuYXRpdmUiLCJwIjoxODc0NTAzMTEsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzA2OTU2NjIsImV4cCI6MjA4NjI3MTY2MiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.hLyWZ8PP_qUuSCkEaiA7BV_44Pba0-NYWLfm5Vxm98w?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=187450311&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NzQ1MDMxMSwiaWF0IjoxNzcwNjk1NjYyLCJleHAiOjE3NzMyODc2NjIsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.PXqXGSh7E-iMwg0tqVUPfi9vF4hodChU-I8mwAIGj1E">RIP OpenClaw: How I Built a Secure Autonomous AI Agent with Claude and n8n</a></h1>
+<h3>Architecture, templates, the Ralph Wiggum loop, and 10 lessons that apply to any multi-agent system</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Feb 10</p>
+<p>∙</p>
+<p>Preview</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!e9EM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c7398f1-2f07-4de3-b7c3-abdc6a982ad0_1350x1350.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/secure-ai-agent-n8n-openclaw-alternative?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>At the end of January, OpenClaw went viral — 140K+ GitHub stars for an <a href="https://substack.com/redirect/501eff00-6573-4d5d-9d8a-171e8dd28fdc?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">open-source personal AI agent</a> that runs 24/7, talks to you through WhatsApp or Telegram, has memory, and executes tasks on your machine.</p>
+<p>I wanted that. But I didn't want OpenClaw</p>
+<p>As I <a href="https://substack.com/redirect/501eff00-6573-4d5d-9d8a-171e8dd28fdc?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">warned last week</a>, OpenClaw gives an AI agent full access to your environment. Your files, your terminal, your API keys — everything. The "guardrails" are prompt instructions. Any injected prompt can override them.</p>
+<p>The results:</p>
+<ul>
+<li><a href="https://substack.com/redirect/0b594be8-a647-4ab8-98e0-727a09238d7b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">35,000 emails and 1.5M API keys exposed</a>.</li>
+<li><a href="https://substack.com/redirect/bdd4038a-98f7-4c3c-8c24-410cb1d8588b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">The top-downloaded community skill? Malware</a>.</li>
+</ul>
+<p>So I built <strong>Agent One</strong> — autonomous capabilities, hard security boundaries, no code required.</p>
+<p><a href="https://substack.com/redirect/5b2ceec3-0c06-41fb-875b-4f0741611180?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!y5wm!,w_1100,h_630,c_pad,f_auto,q_auto:good,fl_progressive:steep/l_play_button_usfui2,w_144,e_colorize:0/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F187450311%2F302724a0-2a9b-4f8f-ac77-c67911885f44%2Ftranscoded-00679.png" /></a></p>
+<p>Building as a PM is essential. You don't need to code. But you need to develop AI intuition and AI product sense. It's not about mastering specific tools — most will be obsolete in months. It's about building mental models and transferable skills.</p>
+<p>In this post:</p>
+<ol>
+<li>What Agent One Actually Does</li>
+<li>The Architecture in Plain English
+<a id="3-the-ralph-wiggum-loop"></a></li>
+<li>The “Ralph Wiggum” Loop</li>
+<li>10 Lessons From Building My OpenClaw Alternative</li>
+<li>Complete Setup Guide with Templates</li>
+</ol>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZzZWN1cmUtYWktYWdlbnQtbjhuLW9wZW5jbGF3LWFsdGVybmF0aXZlJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNNRFk1TlRZMk1pd2laWGh3SWpveE56Y3pNamczTmpZeUxDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLm16Q2hTVlRsNVB1Vkl0MVJ5bHM5VG1zeHdNaDY3YjBJOFJPaFJISDkxeE0iLCJwIjoxODc0NTAzMTEsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzA2OTU2NjIsImV4cCI6MjA4NjI3MTY2MiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.C3yaxjqZIDCEnZO88Q9wBbImsGo4UEAE1S2s-ORMTQ4?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=187450311">Upgrade to paid</a></p>
+<hr />
+<h2>1. What Agent One Actually Does</h2>
+<p>Agent One is a personal AI assistant that runs on a $4.99/month VPS. You talk to it through Telegram. It already can:</p>
+<ul>
+<li>Research topics and generate PDF reports</li>
+<li>Draft and send emails on your behalf</li>
+<li>Create and update Google Sheets, Docs</li>
+<li>Read and process files from your laptop</li>
+<li>Install tools it needs, remember what it learned, and get better over time</li>
+</ul>
+<p>But unlike OpenClaw, Agent One can’t:</p>
+<ul>
+<li>Access your API keys (they live in n8n, not in the agent’s environment)</li>
+<li>Modify its own environment or guardrails</li>
+<li>Access folders you haven’t explicitly shared</li>
+<li>Use tools you haven’t approved</li>
+<li>Send emails without your confirmation</li>
+</ul>
+<p>These aren’t prompt instructions. They’re hard architectural boundaries — Docker isolation, mounted folder permissions, n8n’s tool approval system.</p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=187450311&amp;utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;utm_campaign=email-share&amp;action=share&amp;triggerShare=true&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NzQ1MDMxMSwiaWF0IjoxNzcwNjk1NjYyLCJleHAiOjE3NzMyODc2NjIsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.PXqXGSh7E-iMwg0tqVUPfi9vF4hodChU-I8mwAIGj1E">Share</a></p>
+<hr />
+<h2>2. The Architecture in Plain English</h2>
+<p>Here’s the architecture:</p>
+<p><a href="https://substack.com/redirect/6c729d9b-e341-4b43-b2de-766b5575b191?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="AI orchestration architecture" src="https://substackcdn.com/image/fetch/$s_!3ze_!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F54f24e30-1db9-4389-b020-cec1fa1b4a9b_1280x1280.png" /></a></p>
+<p>The <strong>Manager</strong> is the brain. It plans, decides, delegates, and talks to the user. It never touches files. It never runs scripts. It works entirely from executor summaries.</p>
+<p><a href="https://substack.com/redirect/2c7aafc7-5a80-4bed-9a82-47020e985b94?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Manager agent n8n - OpenClaw alternative" src="https://substackcdn.com/image/fetch/$s_!VBDT!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F04a8368c-5174-423e-8481-ed336be7f65d_3018x1510.png" /></a></p>
+<p>The <strong>Executors</strong> are the hands. Each receives a task (what to do + why it matters), decides how to execute it, and reports back. They're autonomous — the Manager doesn't prescribe steps. Two types:</p>
+<ul>
+<li><strong>VPS Executor</strong> has access to a sandbox via Desktop Commander MCP (files + shell)</li>
+<li><strong>(Optional) Laptop Executor</strong>connects via a secure Cloudflare Tunnel — no public IP or static address needed. It can have different tools.</li>
+</ul>
+<p><a href="https://substack.com/redirect/6ff359c5-0b0a-4a80-8939-b17f7380800d?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Executor agent n8n - OpenClaw alternative" src="https://substackcdn.com/image/fetch/$s_!Jowz!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbcd9df7b-9d88-4211-aa3c-ea66e3e82f69_2223x1539.png" /></a></p>
+<p><strong>Data Tables</strong> in n8n store both memories and sessions — no external database, no vector store, no infrastructure. Just rows in a table.</p>
+<p><strong>Memory</strong> is the long-term knowledge. Two types:</p>
+<ul>
+<li>Manager memory: user preferences, facts, corrections, project context</li>
+<li>Executor environment memory: what tools are installed, what’s broken, workarounds discovered</li>
+</ul>
+<p><a href="https://substack.com/redirect/0236c182-c726-405d-8a9f-ff4b5b0465d1?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Manager memory: user preferences, facts, corrections, project context" src="https://substackcdn.com/image/fetch/$s_!ME63!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff52e4a31-af53-4a83-872e-3559aab4e134_1997x897.png" /></a></p>
+<p>Sessions are short-term state for multi-step tasks. Original request, plan, assumptions, and a log. When the Manager loops with fresh context, the session is all it gets. This is my implementation of the <a href="https://substack.com/redirect/437001b7-5074-4c23-967c-c4a4e0be18ce?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Ralph Wiggum loop</a>.</p>
+<p><a href="https://substack.com/redirect/325e207f-7c66-4d04-8653-a6a5990eaf24?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="AI agents: sessions are short-term state for multi-step tasks. Original request, plan, assumptions, and a log." src="https://substackcdn.com/image/fetch/$s_!QSBO!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F36cca2b7-4fee-4d62-84d0-5a99309f9512_2689x824.png" /></a></p>
+<hr />
+<h2>3. The “Ralph Wiggum” Loop</h2>
+<p>For complex multi-step tasks, Agent One uses what I call the Ralph Wiggum loop.</p>
+<p>When the Manager outputs <em>Continue,</em>the orchestrator resets its context completely. The next iteration has no memory of what just happened — except the session.</p>
+<p>The session is everything. Original request, goal, plan with statuses, assumptions, log. The orchestrator loads it and injects it as the Manager’s context.</p>
+<p>This is deliberate. Long conversations accumulate noise — large executor outputs, tool call artifacts, outdated reasoning. A clean session beats a cluttered full history.</p>
+<p>Simple tasks don’t need this — the Manager calls one executor, gets the result, responds <em>Done.</em> Complex tasks (research → generate report → upload → email) use sessions with <em>Continue</em> to keep each phase clean.</p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=187450311&amp;utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;utm_campaign=email-share&amp;action=share&amp;triggerShare=true&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NzQ1MDMxMSwiaWF0IjoxNzcwNjk1NjYyLCJleHAiOjE3NzMyODc2NjIsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.PXqXGSh7E-iMwg0tqVUPfi9vF4hodChU-I8mwAIGj1E">Share</a></p>
+<hr />
+<h2>4. 10 Lessons From Building My OpenClaw Alternative</h2>
+<p>These apply to any multi-agent system, not just n8n.</p>
+<h4>4.1 Manage through context, not scripts</h4>
+<p>Initially, I had the Manager telling Executors exactly what to do: “Step 1: install pandoc. Step 2: create markdown file. Step 3: convert to PDF. Step 4: upload to Drive.”</p>
+<p>This fails. The moment something unexpected happens (pandoc isn’t available, the conversion produces bad output), the Executor has no idea what to do — it was following a script, not understanding a goal.</p>
+<p>The fix: give the Executor three things — <em>context</em> (why this matters), <em>goal</em> (what must be true), and <em>constraints</em> (what must not happen). Let it figure out the how.</p>
+<p>The Executor went from a script runner that broke on every edge case to an autonomous agent that adapts and recovers.</p>
+<p>From the System Prompt:</p>
+<p><em>“The executor is an autonomous agent, not a script runner. Give it enough context to make smart decisions (…) Do not prescribe steps, enumerate specific tools, or decompose into sub-phases. The executor decides how.”</em></p>
+<p>We discussed that approach also in <a href="https://substack.com/redirect/075b041d-f19e-4f02-9ca5-3ceb5d56ceff?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">The Intent Engineering Framework for AI Agents</a>.</p>
+<p><a id="42-implement-hard-guardrails-vs-soft-suggestions"></a></p>
+<h4>4.2 Implement hard guardrails vs. soft suggestions</h4>
+<p>‘Ask me before sending an email’ as a prompt instruction = a suggestion. The model ignores it under pressure.</p>
+<p>Wrapping it in an orchestrated gateway = a hard guardrail. The model can’t skip it.</p>
+<p>This is exactly what went wrong with OpenClaw. Its security model was prompt instructions ("don't access sensitive files"), not architectural boundaries. A prompt injection overrides them anytime.</p>
+<p>Autonomy without hard boundaries is a liability.</p>
+<p><a id="43-minimal-contract-for-multi-agent-coordination"></a></p>
+<h4>4.3 Minimal contract for multi-agent coordination</h4>
+<p>The Manager– Executor interface is 3 fields: context, goal, constraints.</p>
+<p>I tried adding more: executor_tasks (array of sub-tasks), internal_notes (reasoning for next iteration), env_context (what tools are installed). Each addition made the system worse. The model spent more tokens managing the contract than doing the work.</p>
+<p>Keep contracts minimal.</p>
+<h4>4.4 Separation of concerns</h4>
+<p>The Manager cannot write files. Cannot run scripts. Cannot read file contents. It works from executor summaries only.</p>
+<p>This felt like an artificial limitation until I removed it. The moment the Manager could touch files, it started doing executor work — running shell commands, creating documents mid-conversation, bypassing the executor entirely. The clean separation broke down, and with it, the session state, the memory system, and the error handling.</p>
+<p>Same principle: executors own their environment memory. The Manager doesn't know exactly what's installed on the VPS — and shouldn't. Each layer manages its own knowledge.</p>
+<h4>4.5 Best frontier models still need human judgment</h4>
+<p>I used Claude Opus 4.6 (with extended thinking) and GPT-5.3 to help design this system. Both are impressive. Both failed to catch inconsistencies between tool descriptions and prompt instructions. Both wrote prompts that contradicted their own earlier decisions. Both needed me to spot the bugs.</p>
+<p>AI accelerates architecture work enormously. But if you hand off system design entirely — even to the best models — you get subtle cracks that only show up at runtime.</p>
+<h4>4.6 The prompt is version-controlled code</h4>
+<p>In the early version, my prompts lived in GitHub. Every change was a commit. This isn't optional for production systems.</p>
+<p><a href="https://substack.com/redirect/e81676dd-69ca-4a99-b294-d79da4163de2?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!CPVY!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbe25ec94-9b9f-44cf-a8b0-b2dc2fdcd6ff_2040x1222.png" /></a></p>
+<p>In the current version, I imported stable prompts back into the agents to make them easier to share — you don’t have to clone GitHub repos.</p>
+<p><a id="47-memory-start-simple-upgrade-when-you-need-to"></a></p>
+<h4>4.7 Memory: start simple, upgrade when you need to</h4>
+<p>My memory system is a Data Table with 5 columns: id, category, content, active, timestamps. No vector database. No embeddings. No RAG pipeline. No <a href="https://substack.com/redirect/38512c66-9390-460c-9c38-6f9cd2b4ee22?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Supermemory</a>(yet).</p>
+<p>This is enough for a personal agent. The Manager stores user preferences and project context. Executors store what tools they installed and what workarounds they discovered.</p>
+<p>When you need semantic search over thousands of memories, upgrade. Not before.</p>
+<h4>4.8 You probably don't need laptop access</h4>
+<p>I built the laptop executor. It works. Cloudflare Tunnel + Desktop Commander MCP + Docker = remote control of your Windows machine from a VPS.</p>
+<p>But for 90% of tasks, the VPS executor + Google Drive is enough. Files sync via Drive. The user gets a link. The laptop connection adds complexity — tunnel setup, persistent connection, timeout management — that most tasks don't justify.</p>
+<p>Build the VPS executor first. Add laptop only when you have a concrete task that requires it.</p>
+<p><a id="49-observability-matters"></a></p>
+<h4>4.9 Observability matters</h4>
+<p>I <a href="https://substack.com/redirect/b92134ce-37c9-4edf-a5fa-0ec48e5773d1?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">broadcast logs</a> from OpenRouter to LangSmith.</p>
+<p>This was critical — n8n's execution log doesn't show tool call input parameters when things fail. LangSmith showed me exactly what the model was sending: wrong parameter names, malformed JSON, calls to non-existent tools.</p>
+<p>Without this, I'd still be guessing why the executor was looping.</p>
+<p><a href="https://substack.com/redirect/c9db2a87-1a3e-48ba-a546-94050f3b7376?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Broadcast logs from OpenRouter to LangSmith." src="https://substackcdn.com/image/fetch/$s_!kGZ_!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5ec30f1a-1356-427f-8706-ce1cba2ae178_3213x2034.png" /></a></p>
+<hr />
+<p>Below: the complete setup guide with n8n workflows to import, prompt files, Docker configuration, and a troubleshooting guide. Everything you need to deploy Agent One yourself in under an hour 👇</p>
+<p>P.S. Premium members also get my full support on Slack. You <em>will</em> set this up.</p>
+<hr />
+<h2>5. Complete Setup Guide with Templates...</h2>
+<h2>Keep reading with a 7-day free trial</h2>
+<p>Subscribe to The Product Compass to keep reading this post and get 7 days of free access to the full post archives.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZzZWN1cmUtYWktYWdlbnQtbjhuLW9wZW5jbGF3LWFsdGVybmF0aXZlJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNNRFk1TlRZMk1pd2laWGh3SWpveE56Y3pNamczTmpZeUxDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLm16Q2hTVlRsNVB1Vkl0MVJ5bHM5VG1zeHdNaDY3YjBJOFJPaFJISDkxeE0iLCJwIjoxODc0NTAzMTEsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzA2OTU2NjIsImV4cCI6MjA4NjI3MTY2MiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.C3yaxjqZIDCEnZO88Q9wBbImsGo4UEAE1S2s-ORMTQ4?simple=true&amp;utm_source=paywall&amp;utm_medium=email&amp;utm_content=187450311&amp;next=https://www.productcompass.pm/p/secure-ai-agent-n8n-openclaw-alternative&amp;coupon=34546817">Start trial</a></p>
+<h3>A subscription gets you:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>𝗔𝗰𝗰𝗲𝘀𝘀 𝗲𝘃𝗲𝗿𝘆 𝗶𝘀𝘀𝘂𝗲 → Stay ahead with 180+ actionable AI PM strategies and advice. Full archive.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>𝗝𝗼𝗶𝗻 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗦𝗹𝗮𝗰𝗸 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 → Get exclusive access to Paweł (DM) and 1,850+ AI PM community to grow together.</td>
+</tr>
+<tr>
+<td></td>
+<td>𝗕𝗼𝗼𝘀𝘁 𝘆𝗼𝘂𝗿 𝗣𝗠 𝗰𝗮𝗿𝗲𝗲𝗿 → Enroll in the AI PM Learning Program ($700 value) and 4 video courses ($546 value).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=187450311&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NzQ1MDMxMSwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3NzA2OTU2NjIsImV4cCI6MTc3MzI4NzY2MiwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.R6GBkuHgwvn_Mie41Mtv1DaIZ3vKRXlshWMkWC2dRkQ&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=187450311&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE4NzQ1MDMxMSwiaWF0IjoxNzcwNjk1NjYyLCJleHAiOjE3NzMyODc2NjIsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.PXqXGSh7E-iMwg0tqVUPfi9vF4hodChU-I8mwAIGj1E&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9zZWN1cmUtYWktYWdlbnQtbjhuLW9wZW5jbGF3LWFsdGVybmF0aXZlP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtcmVzdGFjay1jb21tZW50JmFjdGlvbj1yZXN0YWNrLWNvbW1lbnQmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTROelExTURNeE1Td2lhV0YwSWpveE56Y3dOamsxTmpZeUxDSmxlSEFpT2pFM056TXlPRGMyTmpJc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKd2IzTjBMWEpsWVdOMGFXOXVJbjAuUFhxWEdTaDdFLWlNd2cwdHFWVVBmaTl2RjRob2RDaFUtSThtd0FJR2oxRSIsInAiOjE4NzQ1MDMxMSwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3MDY5NTY2MiwiZXhwIjoyMDg2MjcxNjYyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.0jqIZh_NemYxKdZA0iL80TZusIOiteyr2BmlvlnKU9M?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTROelExTURNeE1Td2lhV0YwSWpveE56Y3dOamsxTmpZeUxDSmxlSEFpT2pFNE1ESXlNekUyTmpJc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAubzdYc1BLcWZpU0hWQm1vclM1T2JwVW9jSkpLVUR1NjBkTFB4aW51QU1BbyIsInAiOjE4NzQ1MDMxMSwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3MDY5NTY2MiwiZXhwIjoyMDg2MjcxNjYyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.cx7gGsjfK3gvRB3hJMB1oJ6J4rFXYu3l3kc1pvHgzsg?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/cfa083a6-6642-4a66-8205-8447a895217b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoxODc0NTAzMTEsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzA2OTU2NjIsImV4cCI6MjA4NjI3MTY2MiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.2YVEvmtcqZ46Xk3FhdQcsipiTF4ODtvVcI3dLDzD4Bw?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

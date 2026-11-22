@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>32 OSINT tools and tips I discovered at the Investigative Reporters and Editors Conference — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="32 OSINT tools and tips I discovered at the Investigative Reporters and Editors Conference — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>32 OSINT tools and tips I discovered at the Investigative Reporters and Editors Conference</h1>
+<p class="meta">2026-06-22 · received 2026-06-22 19:30 +0900
+ · <a href="https://indicator.media/p/32-osint-tools-and-tips-i-discovered-at-the-investigative-reporters-and-editors-conference" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>32 OSINT tools and tips I discovered at the Investigative Reporters and Editors Conference</h1>
+<p>I go to investigative conferences mostly to learn new tools and techniques, and I just got back from one of the best for it: the 2026 Investigative Reporters and Editors conference.</p>
+<p>Just as I <a href="https://indicator.media/p/29-osint-tools-and-tips-i-discovered-at-the-global-investigative-journalism-conference">did</a> for the Global Investigative Journalism Conference last November, I’ve collected 32 digital investigative tips, tools, and techniques that can help you in your work. They include a brand-new free tool from a New York Times developer that can supercharge document analysis; super smart strategies from Seamus Hughes of <a href="https://www.courtwatch.news/">Court Watch</a> for finding sealed federal cases; tools and tips for online search and research; why Florida's court records are a goldmine of crypto wallets; and concrete approaches for figuring out who owns an anonymous company.</p>
+<p>Read on for the tips and for links to tipsheets and slides.</p>
+<h2>Records &amp; Research</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3478e78c-3c9a-4623-aae0-26e4889d11bd/Screenshot_2026-06-21_at_1.10.08_PM.png?t=1782061829" /></p>
+<ol>
+<li>
+<p>Seamus Hughes of <a href="https://www.courtwatch.news/">Court Watch</a> is the PACER whisperer. I don’t think anyone has more tips and tricks for how to wring information and scoops out of the online service that allows you to search for all US federal cases. (I’m a paid subscriber; he does great work.) His first tip is to learn the names of prosecutors who handle a specific topic or region that relates to your beat or area of focus. Go to “Find Parties (Advanced)” in the PACER Case Locator and enter the name. A simple name search could pull up a new sealed case that hasn’t been announced or reported on.</p>
+</li>
+<li>
+<p>He shared great tips for using the “<em>” wildcard operator in searches. If you insert * in a query, it acts as a placeholder for any characters or words. Hughes said he regularly runs a search for U</em>.com in PACER. Federal cases are titled “US v.” or “United States v.” U* works to capture those. A case involving a warrant for an email address will often include .com. You can use the same format to pull up other types of federal cases. For example: u<em>[bitcoin address], u</em>$ for money seizures.</p>
+</li>
+<li>
+<p><a href="http://judyrecords.com">Judyrecords</a> is a free tool to search more than 760 million US court records, including state cases.</p>
+</li>
+<li>
+<p>Hughes also shared this really useful GitHub repo, <a href="http://tyler-mcbrien.github.io/state-court-records">“How to Access Court Records, by State.” </a></p>
+</li>
+<li>
+<p>I attended a <a href="https://2026-ire-conference.sessionize.com/session/1199903">session</a> called “Don't outsource your instincts: traditional research skills in the AI era.” It was led by two fantastic news researchers, Barbara Gray of CUNY, and Margot Williams, an independent research editor. I’ll start by pointing you to their exhaustive tipsheet, which has gold on every page.</p>
+</li>
+<li>
+<p>Gray shared a Chrome extension called <a href="https://chromewebstore.google.com/detail/beyondten-show-100-google/dbkkfpfndpelicmjdpfacabhjffgoacl?utm_source=item-share-cb">BeyondTen</a> that shows 100 Google search results per page instead of 10. (She said you should turn it off for image or shopping searches.)</p>
+</li>
+<li>
+<p>Continuing with the theme of how to get around Google’s increasing tendency to truncate results and serve up AI Overviews, check out <a href="https://chromewebstore.google.com/detail/slop-evader/mlofdhcgaaimlpbjlhpfnpjfpebjpdpp">Slop Evader</a>, a Chrome extension that searches only for content posted before ChatGPT's launch (Nov 30, 2022).</p>
+</li>
+<li>
+<p><a href="https://www.gnod.com/search/">Gnod</a> is a simple search page that allows you to enter a query and run it across engines/sites from one page (Google, Bing, Baidu, Perplexity, PubMed, Mistral, Marginalia, etc.).</p>
+</li>
+<li>
+<p><a href="http://libkey.io">LibKey</a> is great for people without a university login. You can find open-access versions of scholarly articles if you have the DOI or PMID. It also flags retractions.</p>
+</li>
+<li>
+<p>Another option for academic material: <a href="http://searchsmart.org">Search Smart</a>. It suggests which academic databases are best for your query.</p>
+</li>
+<li>
+<p>Gray shared a workflow tip that combines two tools: <a href="https://notebooklm.google.com/">NotebookLM</a>, Google's free AI-powered research tool, and <a href="https://www.one-tab.com/">OneTab</a>. The latter is a Chrome and Firefox browser extension that takes your open tabs and converts them into a list of links. This allows you to close the tabs, saving memory and reducing clutter. Gray suggested that you open the sources you want to load into a NotebookLM notebook in your browser. Then use OneTab to quickly copy them to your clipboard so you can load them into NotebookLM in one shot. You can access the copy links feature by going to the "More” menu and selecting “Copy links to clipboard."</p>
+</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f26f7590-098a-45af-b884-bc89a94530f0/image.png?t=1782060791" /></p>
+<ol start="12">
+<li>
+<p>One more from Gray: <a href="https://www.superyachtfan.com/">SuperYachtFan</a>. It contains information about people/entities that own yachts and private jets.</p>
+</li>
+<li>
+<p>Margot Williams shared how she thinks through a research task: “Before searching, picture the answer — who would hold this document? What format? Will it even be online? Does it exist?”</p>
+</li>
+<li>
+<p>She also said it's a good idea to read a document backward: Start at the footnotes or last page of a report or ruling to find the sources and reasoning.</p>
+</li>
+<li>
+<p>Williams listed some excellent resources in the main tipsheet I linked above. But it’s really long, so I also want to highlight this standalone doc: <a href="https://docs.google.com/document/d/10tEzyy4kbThRmOmp1YPIk3D3-_sgsmJW/edit">Tools and Resources for Investigative Research and Factchecking</a>.</p>
+</li>
+<li>
+<p>She also emphasized that LLMs typically can’t access data and information that’s stored in a private database, behind a login screen, or blocked by a paywall. LLMs often don't have up-to-date information, either. She created <a href="https://docs.google.com/document/d/15evH1C1h8g_w3URXIm9JbEXWonsVClvi/edit">a document </a>that lists research sources and compares what a human versus an LLM (in this case Claude) can or can’t do with them. The doc is also an excellent, US-focused list of sites and databases that you should know about.</p>
+</li>
+</ol>
+<h2>AI</h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ed3451a3-abad-4001-b0e3-70db6661f82a/Screenshot_2026-06-21_at_1.03.17_PM.png?t=1782061413" /></p>
+<ol start="17">
+<li>
+<p>Williams’ point about what LLMs can't access was the subject of a session by Jennifer Burns from Bright Data, “AI that actually knows what's happening: live web research.” (<a href="https://brightdata.com/">Bright Data</a> provides proxies and web scraping tools.) First tip: go <a href="https://brightdata.com/products">here</a> and sign up for a free trial. You get 5,000 credits per month for its web search scraper. Burns also works with newsrooms and gives additional access to its Pro level, which can scrape social media like LinkedIn.</p>
+</li>
+<li>
+<p>Her session was a demo of how to connect BrightData via MCP to an LLM like Claude or ChatGPT. She showed that the free web search credits can enable an LLM to search the web for more recent information, rather than rely on its training data. This is one way to get past the limitation Williams highlighted. Just remember that an MCP/scraper still can't ethically bypass robots.txt or paywalls, and proxied data is a step removed from observing the page yourself.</p>
+</li>
+<li>
+<p>Charles Minshew, the senior editor of data journalism at The Atlanta Journal-Constitution, did a session about using an LLM like Claude or ChatGPT to extract data from webpages, PDFs, and other sources. If you haven’t experimented with getting a chatbot to help with this type of work, <a href="https://charlesminshew.github.io/ire26/02-ai-research-assistant/slides/index.html">his slides</a> offer a few simple, useful exercises. It’s a good starting point and uses government data, so no worries about violating terms of service.</p>
+</li>
+<li>
+<p>I have a tip for how to improve the data extraction prompts he provided. I suggest reframing them so that you start by asking the LLM to review the data and to suggest a detailed prompt for the task. For example, this is one of his prompts: “Here's a web page of monthly airport passenger numbers: [paste URL or page text]. Extract every row into a table with columns: month, enplanements, deplanements, monthly total, % change vs. prior year. One row per month. If a value is missing, leave it blank; don't guess. Return as CSV.” It’s fine, but I would reframe it as:</p>
+</li>
+<li>
+<p>“I’m a journalist and I want you to help me extract data from this government webpage [paste URL or page text] and put every row into a table with columns: month, enplanements, deplanements, monthly total, % change vs. prior year. One row per month. If a value is missing, leave it blank. I want it as a CSV and I need you to not guess or do anything that changes the data. Ask me questions so that you understand the task and then I want you to generate a prompt I can run to get this done.”</p>
+</li>
+<li>
+<p>Minshew said to always check the resulting data and to be sure that you’re scraping from the correct source. He said there are sites that masquerade as official data sources in order to trick LLMs into grabbing potentially malicious code/data. “There are bad actors out there who are building webpages to optimize them for these AI engines… it can be a back door to inject bad commands into your code,” he said. “So always, always, always have it confirmed that you are going to, like, a census.gov site or something that you know."</p>
+</li>
+<li>
+<p>Minshew also did a session called “Coaching AI Tools for Investigative Reporting” that showed “how to write prompts that get specific, useful outputs for investigative work: FOIA letters, data dictionaries, spreadsheet formulas, and debugging code.” The tipsheet with the sample prompts is <a href="https://charlesminshew.github.io/ire26/01-coaching-ai/prompts.html">here</a>.</p>
+</li>
+<li>
+<p>Another session, “AI tools you can use,” had a deceptively simple title. The presenters shared a handful of genuinely interesting and useful AI-powered tools. The first was <a href="https://datatalk.biglocalnews.org/">DataTalk</a>. Enter a question about US campaign finance in plain language, and it generates an answer drawn from official Federal Election Commission (FEC) data. “Ask in plain English, and it writes the database query, runs it against the data and shows its work next to every number so you can check it,” read the tool’s description.</p>
+</li>
+<li>
+<p><a href="https://seegov.org/">SeeGov</a> is a tool that “uses AI to help civic creators and journalists select and share video highlights from local government meetings.” It has free and paid <a href="https://seegov.org/newsroom-plans">plans</a>.</p>
+</li>
+<li>
+<p><a href="http://agendawatch.org">Agendawatch.org</a> is another tool for uncovering local government information in the US. “It collects public meeting documents from official government and agency websites and makes them searchable.”</p>
+</li>
+<li>
+<p>Dylan Freedman, the AI projects editor for The New York Times, gave one of the coolest presentations I saw at IRE. He demoed a new open-source tool called <a href="https://github.com/freedmand/semantra">Semantra</a>. Install it on your machine to run semantic searches on a set of documents. (The tool is very new, so you can expect him to continue refining it and shipping versions and documentation.) It’s useful because you can surface information without having to search for exact keywords and phrases. As an example, he uploaded an annual report from an oil company and searched for “greenwashing.” The semantic search engine located and highlighted passages related to the topic even though the word “greenwashing” didn’t appear once in the document:</p>
+</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c00ff64d-0cf8-491d-adcf-1f0713958875/image.png?t=1782060792" /></p>
+<ol start="27">
+<li>He also showed an internal Times tool called Cheatsheet. It ingests audio and video, analyzes the content, and allows a journalist to run a variety of processes, including translation and summarization. Freedman said he hopes it will be open-sourced at some point.</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/da9f94b3-8a9e-481f-9669-18d2ac0792e0/image.png?t=1782060792" /></p>
+<h2>Follow the Money</h2>
+<ol start="28">
+<li>
+<p>Spencer Woodman, a reporter at the International Consortium of Investigative Journalists, offered some tips for investigating crypto in the session, “Following the money: crypto tracing for business &amp; crime reporting.” There are lots of free tools for tracking crypto transactions, but he cited <a href="http://arkm.com">Arkham</a>. One helpful feature lets users tag wallets with ownership information. You can’t treat the info as 100% accurate, but it may provide a lead. “We think Arkham is a great source for leads and a great place to start, but we never take Arkham's word for the ownership of a cryptocurrency address,” he said. “We want to back check that ourselves.”</p>
+</li>
+<li>
+<p>Woodman said that crypto addresses are unredacted in some government records, which could provide investigative leads. “This is just a little tip that the state of Florida does not redact cryptocurrency addresses in police reports or [complaints to the] attorney general, which is helpful because Florida is kind of like a Mecca for cryptocurrency scams,” he said.</p>
+</li>
+<li>
+<p>Douglas Gillison of Reuters and freelancer John Dell'Osso ran a session on investigating anonymously owned companies. Their core message: no single method works every time. But they outlined six "Achilles heels" that could pierce the veil: the company's real-world activity (property, contracts, joint ventures); its administrative paperwork and timing; the service providers used to set it up; the regulatory filings of related companies; debts (UCC filings, liens, mortgaged shares); and court files. I put the relevant slides for you <a href="https://drive.google.com/drive/folders/13GALwZnekjD2RQ_aHt7s8rnWtC3rR57D?usp=sharing">here</a>.</p>
+</li>
+<li>
+<p>They said you should exploit jurisdictional arbitrage, meaning that what's secret in one place could be disclosed by law in another. They learned Peter Thiel owned 90% of a Delaware LLC by pulling the operating agreement it had filed in New Zealand.</p>
+</li>
+<li>
+<p>Another lesson: hunt for patterns. They said that the people who set up anonymously registered companies are "creatures of habit." In one case study, they noticed that an LLC used to buy real estate in the Atlanta area used a combination of corporate service providers — a real-estate management firm and a law firm — that was unique in Georgia's corporate registry. They searched for that same combo and found other companies that ultimately helped them link ~$37 million in Atlanta real estate to a sanctioned Russian banker. They said to look for details (agent, lawyer, address, incorporation date) that are distinctive enough to search on.</p>
+</li>
+</ol>
+<p>If you want access to all of the tipsheets from the conference, plus videos of some sessions, you can <a href="https://www.ire.org/">join IRE</a> and support a great organization.</p>
+<h3>Indicator (AI) Info box</h3>
+<p>Here’s a bit about how I used AI to help with this post.</p>
+<ul>
+<li>
+<p>I recorded audio of most of the sessions I attended and also took photos of slides. I fed the transcripts, images, and my notes into Claude. I shared the <a href="https://indicator.media/p/29-osint-tools-and-tips-i-discovered-at-the-global-investigative-journalism-conference">post</a> I wrote about GIJC and told Claude that I’d be writing something similar about IRE.</p>
+</li>
+<li>
+<p>I asked Claude to list bullet points of tips that I might want to include and to supply URLs for the tools cited.</p>
+</li>
+<li>
+<p>I also asked it to go through the more than 100 photos I took of presenters' slides and to pick out the ones that I might want to include. It generated a contact sheet of interesting photos as an HTML page that loaded in my browser.</p>
+</li>
+<li>
+<p>I ultimately wrote the post and chose what to include, but Claude’s suggested bullet points were helpful in extracting specific tips and tools/websites.</p>
+</li>
+<li>
+<p>I went through all of my images manually but ended up using some of the images Claude had picked out. It was a nice reminder that LLMs have gotten really good at computer vision and can help review images for you.</p>
+</li>
+</ul></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

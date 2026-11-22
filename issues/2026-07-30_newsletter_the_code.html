@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🔥 Anthropic vs OpenAI picks up heat — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🔥 Anthropic vs OpenAI picks up heat — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🔥 Anthropic vs OpenAI picks up heat</h1>
+<p class="meta">2026-07-30 · received 2026-07-30 23:06 +0900
+ · <a href="https://codenewsletter.ai/p/openai-claims-gpt-5-6-sol-beats-opus-5-on-arc-agi-3" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🔥 Anthropic vs OpenAI picks up heat</h1>
+<p><a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/88f61295-3e0a-44de-8ce9-d007a205147a/Group_Datadog__1_.jpg?t=1785379862" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> After Claude Opus 5 set a new record on the ARC-AGI-3 benchmark last week (considered to be the holy grail of difficult benchmarks), OpenAI managed to triple their score this week with a couple of minor tweaks. Sometimes the model matters less than the configuration.</p>
+<hr />
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>A roadmap to AI Native Engineering</p>
+</li>
+<li>
+<p>How to run Kimi K3 on a Mac Studio</p>
+</li>
+<li>
+<p>Pro hack to cut your API bill in half</p>
+</li>
+<li>
+<p>How to use Buzz (Slack alternative for agents)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/#:~:text=First%2C%20we%20noticed,past%20actions%20too."><img alt="Click here to see the two API settings that tripled OpenAI’s scores on the ARC-AGI-3 benchmark." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ad5ed2c8-52b2-43d9-a124-db9a53d1440d/Thumbnail__79_.jpg?t=1785406597" /></a>
+<em>Click here to see the two API settings that tripled OpenAI’s scores on the ARC-AGI-3 benchmark.</em></p>
+<hr />
+<p><strong>GPT-5.6 Sol beats Opus 5 on ARC-AGI-3:</strong> The ChatGPT maker is fighting back after Anthropic's Opus 5 set a record score of 30.2 percent on ARC-AGI-3. While GPT-5.6 Sol initially trailed at just 7.8 percent, OpenAI argues the gap was due to configuration rather than model capability. By enabling two specific Responses API settings, they <a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/">boosted</a> Sol's score to 38.3 percent. ARC Prize founder <a href="https://x.com/fchollet/status/2082732210436575669">notes</a> that such adjustments are fair, provided that both cost and configuration details are clearly reported.</p>
+<p><strong>SpaceXAI debuts a faster voice model for agents:</strong> The Musk-led company just dropped <a href="https://x.ai/news/grok-voice-think-fast-2"><strong>Grok Voice Think Fast 2.0</strong></a>, a speech-to-speech model for voice agents that beats out OpenAI's GPT-Realtime-2.1 and Google's Gemini 3.1 Flash. With a response time of just 0.70 seconds, the model actually reasons while it speaks, allowing tool calls to trigger before the agent even finishes a sentence. Developers can now access the API for $0.08 per audio minute. More details on the API <a href="https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech"><strong>here.</strong></a></p>
+<p><strong>AI coding is coming for the big IT outsourcers:</strong> For years, enterprise software was outsourced and billed by the hour. That era is (slowly) ending. Early Facebook executive Chamath Palihapitiya <a href="https://x.com/chamath/status/2082481943258529873"><strong>points</strong></a> to Infosys cutting its revenue forecast as proof clients now prioritize AI they can control. To meet that demand, his startup 8090 gives regulated teams a software factory to rewrite legacy code in weeks. <a href="https://www.8090.ai/"><strong>Try it here.</strong></a></p>
+<hr />
+<h5><strong>PRESENTED BY DATADOG</strong></h5>
+<h2><a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026">Engineers: Do you know the new security protocols for GenAI?</a></h2>
+<p><a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b6006f57-d288-4ca0-9fa2-ca7d61324187/Datadog_X_The_Code_Ad_2_Feb_26__2___1_.jpg?t=1785379919" /></a></p>
+<hr />
+<p>GenAI is evolving by the minute, and security engineers need to know the <a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026">latest threats</a> to infrastructure.</p>
+<p><a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026">Datadog’s latest guide on GenAI security</a> will teach you about real-world attacks on how to secure against them, focusing on…</p>
+<ul>
+<li>
+<p>Containers, databases, cloud storage buckets, and Model Context Protocol (MCP) servers</p>
+</li>
+<li>
+<p>Software and data such as training datasets, pre-trained large language models (LLMs), and third-party AI libraries</p>
+</li>
+<li>
+<p>AI interfaces, chat interfaces, and API endpoints for supporting services</p>
+</li>
+</ul>
+<p><a href="https://r2trck.com/the-code-datadog-9?utm_medium=newsletter&amp;utm_source=the-code-r&amp;utm_campaign=dg-content-ebook-AISecurityBestPractices-security-app-ww-en-701VY00000V709WYAR&amp;utm_content=paid&amp;utm_term=1-1-2026">Download the guide and master GenAI security.</a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="so-you-want-an-ai-native-engineering-team-but-dont-know-which-tasks-to"></a></p>
+<h2><strong>So you want an AI-native engineering team but don’t know which tasks to automate? Here’s your guide:</strong></h2>
+<p><a href="https://x.com/posthog/status/2081819814495195393"><img alt="Decision framework for task delegation to agents. Source: PostHog." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7f884823-1846-4d7c-8545-c74617dcaaf2/image__90_.jpg?t=1785409483" /></a>
+<em>Decision framework for task delegation to agents. Source: PostHog.</em></p>
+<hr />
+<p><strong>Ditch the seatbelt?</strong> As your team hands off more work to AI agents, it's totally normal to start questioning how much you can actually trust them. Most people assume that trust just builds naturally as the models get smarter, but trusting an agent just because of a model upgrade is like ditching your seatbelt because you bought a faster car. One of PostHog's engineers actually just shared a solid framework to help you figure out exactly which tasks you should be automating.</p>
+<p><strong>Decision Framework.</strong> You need to judge every task on these two questions:</p>
+<ol>
+<li>
+<p>How easy is it to verify the work?</p>
+</li>
+<li>
+<p>How cheap is it to fix a mistake?</p>
+</li>
+</ol>
+<p>By mapping a task against these two axes, you land in one of four modes that tell you exactly how much autonomy is safe to grant before you even write a line of code:</p>
+<ul>
+<li>
+<p><strong>Level 0 (Assistant):</strong> Hard to check and hard to undo. Keep the agent limited to advice and autocomplete for sensitive code.</p>
+</li>
+<li>
+<p><strong>Level 1 (Human-in-the-loop):</strong> Hard to check but easy to undo. Let the agent draft, but a reviewer needs to sign off before anything merges.</p>
+</li>
+<li>
+<p><strong>Level 2 (Delegation):</strong> Easy to check but hard to undo. The agent writes, and a final gate handles the merge. This is where most dev work lives today.</p>
+</li>
+<li>
+<p><strong>Level 3 (Self-driving):</strong> Easy to check and easy to undo. Think dependency bumps, lint fixes, or adding test coverage.</p>
+</li>
+</ul>
+<p><strong>Next Steps.</strong> You can use <a href="https://x.com/posthog/status/2081819814495195393">PostHog’s guide </a>to start bumping each task to the next stage until you hit that ultimate self-driving mode. Also, definitely check out OpenAI’s <a href="https://cdn.openai.com/business-guides-and-resources/building-an-ai-native-engineering-team.pdf">guide to AI-native engineering</a>. It’s a great deep dive into how coding agents are actually speeding up the whole development lifecycle.</p>
+<hr />
+<h5><strong>PRESENTED BY NYLAS</strong></h5>
+<h2><a href="https://www.nylas.com/products/agent-accounts/?utm_source=&amp;utm_medium=sponsoredemail&amp;utm_campaign=Superhuman-nylas-jul-26&amp;utm_content="><strong>Why 250k+ developers choose the most reliable communication platform for AI agents</strong> </a>** **</h2>
+<p><a href="https://www.nylas.com/products/agent-accounts/?utm_source=&amp;utm_medium=sponsoredemail&amp;utm_campaign=Superhuman-nylas-jul-26&amp;utm_content="><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/64e15bbd-269f-449f-b89d-b18982a21624/Nylas_26__1_.jpg?t=1785381152" /></a></p>
+<hr />
+<p>Most agents borrow a human’s inbox (which breaks when that person leaves).</p>
+<p><a href="https://www.nylas.com/products/agent-accounts/?utm_source=&amp;utm_medium=sponsoredemail&amp;utm_campaign=Superhuman-nylas-jul-26&amp;utm_content=">Nylas gives your agents their own inbox</a> and calendar identity, so you can email your agent like a real person to get work done instantly:</p>
+<ul>
+<li>
+<p><a href="https://www.nylas.com/products/agent-accounts/?utm_source=&amp;utm_medium=sponsoredemail&amp;utm_campaign=Superhuman-nylas-jul-26&amp;utm_content=">Agents can reply, book meetings, and follow up from one identity</a></p>
+</li>
+<li>
+<p>99.99% API success rate, SOC2 and HIPAA compliant</p>
+</li>
+<li>
+<p>No OAuth flows tied to a human account, no shared inbox to work around</p>
+</li>
+</ul>
+<p><strong>Use case:</strong> Wealthie built one for their financial firm, and now advisors CC their agent on client emails for seamless productivity.</p>
+<p><a href="https://www.nylas.com/products/agent-accounts/?utm_source=&amp;utm_medium=sponsoredemail&amp;utm_campaign=Superhuman-nylas-jul-26&amp;utm_content=">Build your account here.</a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<p><a id="whats-trending-on-socials-and-headlines"></a></p>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ea702ac0-1665-42e0-9e2c-2444dfb47ae6/CleanShot_2026-07-30_at_13.53.13_2x.jpg?t=1785399836" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Most-Recruited Role:</strong> One AI job now pays senior engineers $785K, even without any experience training models. Here's the** <a href="https://x.com/0xcodez/status/2082468167935308098">10-step roadmap</a>** to get there.</p>
+</li>
+<li>
+<p><strong>Open Season:</strong> Three paid AI apps got cloned into open-source versions this week. The newest is a fully local <a href="https://x.com/dremnik/status/2081879207509217473"><strong>Granola alternative</strong></a> that records and transcribes meetings.</p>
+</li>
+<li>
+<p><strong>Run It Local:</strong> Kimi K3's 2.8T parameters make it near-impossible to run locally, so Unsloth compressed it from 1.56TB to 594GB. <a href="https://x.com/unslothai/status/2082463988953367031"><strong>Run it on your Mac Studio</strong></a> (1.7M views).</p>
+</li>
+<li>
+<p><strong>It Confessed:</strong> Claude Opus 5 wiped a developer's production database, then caught the damage mid-run and <a href="https://x.com/IntCyberDigest/status/2082479318567895195"><strong>reported itself</strong></a> before anyone noticed (6.1K likes).</p>
+</li>
+<li>
+<p><strong>Cache Trap:</strong> An ex-Google engineer found 84% of his API spend was going to cache reads and writes. One <a href="https://x.com/galdawave/status/2082227590182629722"><strong>workflow change</strong></a> cut his bill in half (1.4K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=P1KpxzLVg7c"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8a15953c-a6ec-4be3-84d3-92aed8fb14f2/Thumbnail__78_.jpg?t=1785399476" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=P1KpxzLVg7c"><strong>How to build an agent team on Buzz:</strong> </a> In this tutorial, you'll learn how to set up Buzz, a Slack-like app that allows multiple AI agents (Claude Code, Codex, Grok, and others) to work together as a team. It’ll show you how to create agents, select their models, build custom workflows, share compute, and manage everything right from your phone.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://getcodexbar.xyz"><strong>CodexBar:</strong> </a> This tool is an open-source macOS menu bar app that displays your OpenAI Codex usage at a glance using your existing CLI session without needing browser cookies or API keys.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://cdn.openai.com/pdf/8a9f00cf-d379-4e20-b06f-dd7ba5196a11/OAI_WhitePaper_Codex-maxxing26.pdf"><strong>Codex-maxxing for long-running work (by OpenAI):</strong> </a> Standard AI workflows often struggle with long-running tasks, as users are forced to constantly restart prompts and lose valuable context. This guide explores how Codex uses persistent threads, external memory vaults, and automated loops to create a continuous workspace capable of managing complex, ongoing projects.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<p><a id="how-to-turn-any-codex-prompt-into-a-repeatable-script"></a></p>
+<h2><strong>How to turn any Codex prompt into a repeatable script</strong></h2>
+<p>Since Codex runs in a TUI (Terminal User Interface), any prompt you want to repeat, schedule, or integrate into CI usually has to be retyped manually. But the “codex exec” CLI command allows you to run those same prompts headlessly.</p>
+<p>OpenAI engineer recently <a href="https://x.com/reach_vb/status/2082609245011198432">shared</a> the specific set of flags he uses to streamline this process.</p>
+<ul>
+<li><strong>Step 1:</strong> Run the prompt from the terminal with a pinned model and nothing else attached.</li>
+</ul>
+<pre><code>codex exec --ephemeral --ignore-user-config --model gpt-5.6-sol \
+-c 'mcp_servers={}' -c 'web_search=&quot;disabled&quot;' \
+'Remove the duplicated validation logic in src/api/handler.ts.'
+</code></pre>
+<ul>
+<li><strong>Step 2:</strong> Add that line to a script, cron job, or CI step. When comparing models, include "--cd runs/gpt-5.6-sol" to ensure every run has its own dedicated directory.</li>
+</ul>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Check out this thread, which breaks down <a href="https://x.com/suraj_sharma14/status/2082073591135584703"><strong>10 AI projects</strong></a> that can help you land a job.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

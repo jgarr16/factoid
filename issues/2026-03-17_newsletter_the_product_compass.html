@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>What I Learned Building a Self-Improving Agentic System with Claude — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="What I Learned Building a Self-Improving Agentic System with Claude — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>What I Learned Building a Self-Improving Agentic System with Claude</h1>
+<p class="meta">2026-03-17 · received 2026-03-17 01:29 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/self-improving-claude-system" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>What I Learned Building a Self-Improving Agentic System with Claude</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRnNlbGYtaW1wcm92aW5nLWNsYXVkZS1zeXN0ZW0iLCJwIjoxOTExMTk3NTksInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzM2Nzg2NzUsImV4cCI6MjA4OTI1NDY3NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.xB-zJN-cYR9CfeAc0QRtpKqFYZUiisj5Xxqp_fnuzIo?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=191119759&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MTExOTc1OSwiaWF0IjoxNzczNjc4Njc1LCJleHAiOjE3NzYyNzA2NzUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.7zhLrvZ0gV3kLtZQeQsogf-SdE5QFysXaf6rQpwm5sk">What I Learned Building a Self-Improving Agentic System with Claude</a></h1>
+<h3>From 4 hours to 30 minutes a day. 5M+ impressions in 3 months. A case study in systems that compound — for any knowledge-intensive domain.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Mar 16</p>
+<p>∙</p>
+<p>Preview</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!qMwR!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fba18ea7b-0b42-4881-96ff-8e7a8d555f86_1024x1024.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/self-improving-claude-system?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p><em><strong>How to use this post:</strong> Drop it into your Claude Code or Cowork chat and ask it to build the same system for your domain — customer interviews, competitive research, market intelligence, whatever you do repeatedly. The post is the instruction set with all the building locks.</em></p>
+<hr />
+<p><a href="https://substack.com/redirect/99adf178-37a9-4045-8493-1d3d4c1ca685?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="X Analytics dashboard, 3-month view" src="https://substackcdn.com/image/fetch/$s_!99wl!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0d37eb86-599a-4b26-ab7e-e2e60faa6f11_1956x1586.png" /></a></p>
+<p>My X analytics dashboard. The last 3 months.</p>
+<p>5.2 million impressions. 35,000 likes. 43,000 bookmarks. 7.2% engagement rate. In three months. Most of that growth happened within <strong>the last 6 weeks.</strong></p>
+<p>Not from writing more. Not from better prompts. From building a system that compounds.</p>
+<p>I'm going to show you what that system looks like, how it evolved, and why the architecture matters more than the content it produces. You can drop the whole structure into Claude and use it directly, or treat it as inspiration to build your own.</p>
+<p>I'll use content creation as the case study — but the pattern works for customer research, competitive intelligence, market analysis — <strong>any domain where knowledge compounds.</strong></p>
+<p><em>This is Part 3 of my Claude for PMs series. New to the tools? Start with <a href="https://substack.com/redirect/60ffb38e-6747-40c5-8486-7c148119d685?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Part 1: Cowork</a> and <a href="https://substack.com/redirect/d54e989a-1106-47a6-b100-0dedb21b2169?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Part 2: Claude Code</a>.</em></p>
+<p>In this post, we discuss:</p>
+<ol>
+<li>How Agentic Systems Learn from Real-World Data</li>
+<li>How a Claude Knowledge System Compounds Over Time
+<a id="3-architecture-file-based-knowledge-graph"></a></li>
+<li>Architecture: File-Based Knowledge Graph</li>
+<li>2x Usage: The Best Time to Start with Claude</li>
+<li>What We’ll Learn Next</li>
+<li>How This AI System Evolved in 3 Phases</li>
+<li>Building Custom AI Tools with Claude Code</li>
+<li>Cross-Surface Workflow: Claude Code, Cowork, and Web</li>
+<li>Hypothesis Tracking: How the System Stays Honest</li>
+<li>How to Build Your Own Claude Knowledge System</li>
+<li>Why Self-Improving AI Systems Win</li>
+</ol>
+<hr />
+<h2>1. How Agentic Systems Learn from Real-World Data</h2>
+<p><strong>Pull data → organize knowledge → let the system learn → compound over time.</strong></p>
+<p>Content is where I tested it. But the same architecture works for:</p>
+<ul>
+<li><strong>Customer interviews</strong> — After 50 interviews, the system knows your product’s pain points better than your Confluence page.</li>
+<li><strong>Competitive monitoring</strong> — Competitor moves instead of tweets. Pricing changes instead of LinkedIn posts. Patterns across weeks you’d miss manually.</li>
+<li><strong>Market intelligence</strong> — Pull from APIs, browser scraping, manual input. Let the system self-correct as the market shifts.</li>
+</ul>
+<p>AI handles the repetitive work — the research, the drafting, the data pulling. What it can't do is decide what matters. That's your job. This system doesn't replace your judgment. It gives your judgment better inputs, faster, and those inputs compound over time.</p>
+<hr />
+<h2>2. How a Claude Knowledge System Compounds Over Time</h2>
+<p>The more you use Claude, the more it compounds. Structure emerges. Knowledge files build up. It starts feeling less like using a tool and more like building a system that gets better every time you touch it.</p>
+<p>I didn’t start with a master plan. I started by pasting screenshots into Cowork, asking “what makes this post work?” Raw, unstructured. Just curiosity.</p>
+<p>But Claude started noticing patterns I missed. It flagged that negation hooks outperform positive hooks on LinkedIn. It noticed that data experiments get 3x more bookmarks than opinion posts. It spotted that my builder-teacher posts consistently outperform my analyst takes.</p>
+<p>Over weeks, the system grew. Claude suggested reorganizing the files into a knowledge hierarchy. Then it suggested building a Python script to fetch tweet data cheaper. Then it started proposing edits to its own knowledge base.</p>
+<p>Now the system has 26 content templates, 13 active hypotheses being tested with real data, 50+ catalogued false beliefs (things conventional wisdom says hurt but data shows don’t), and 7 topic lanes with energy tracking — all maintained by Claude, all improving with each use.</p>
+<p>But "maintained by Claude" doesn't mean I stepped back. Here's what the collaboration actually looks like — I asked Claude to summarize who contributed what during a real session:</p>
+<p><a href="https://substack.com/redirect/38e24636-59e9-4e1b-a68e-7fac20ab6c7a?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Cowork conversation showing the human/AI contribution split" src="https://substackcdn.com/image/fetch/$s_!kkAp!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F04ae59bb-32d5-43b8-8564-46b438c3a47b_2022x979.png" /></a></p>
+<p><em>A real Cowork session. I asked Claude to summarize who contributed what.</em></p>
+<p>I decide every editorial call — what to post, what to kill, what angle to take, which facts need checking twice. Claude handles research, verification, structural options, and pattern-matching against the knowledge base.</p>
+<p>AI compresses execution. The writing, the code, the analysis. <strong>What it can’t compress: knowing what to build. Knowing what to cut. Taste. Judgment. Intent.</strong></p>
+<p>The dev who writes code all day gets compressed. The dev who decides what code should exist becomes more valuable than ever. Same split applies to PMs. Same split applies to content. This is 10+ iterations per post. Not “write me a post about X.”</p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=191119759&amp;utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;utm_campaign=email-share&amp;action=share&amp;triggerShare=true&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MTExOTc1OSwiaWF0IjoxNzczNjc4Njc1LCJleHAiOjE3NzYyNzA2NzUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.7zhLrvZ0gV3kLtZQeQsogf-SdE5QFysXaf6rQpwm5sk">Share</a></p>
+<hr />
+<h2>3. Architecture: File-Based Knowledge Graph</h2>
+<p>It is, in fact, a file-based knowledge graph with progressive disclosure. Without unnecessary complexity.</p>
+<p>This is where I ended up after months. Not where I started. You can drop this structure into Claude and use it as-is, or treat it as inspiration — ask Claude to organize your own domain the same way. The repo structure is already readable on its own. Paste it into Claude’s clipboard and it understands immediately what goes where.</p>
+<p>Here’s what my repo looks like today:</p>
+<pre><code>Editor/
+├── CLAUDE.md              ← The brain. Rules, voice, workflow.
+├── .env                   ← API credentials (not shared)
+├── tools/
+│   ├── x_api.py           ← X/Twitter data fetching (Claude built this)
+│   ├── linkedin_api.py    ← LinkedIn data via OAuth
+│   └── linkedin_chrome_scraper.md  ← Chrome MCP scraping instructions
+└── knowledge/
+    ├── INDEX.md            ← Master router — read this first
+    ├── craft/              ← Writing techniques, soundbites, word choice
+    ├── voice/              ← 9 voice archetypes (when to use which)
+    ├── platforms/
+    │   ├── x/
+    │   │   ├── rules.md        ← Hard rules + formatting + benchmarks
+    │   │   ├── templates.md    ← 26 templates with engagement data
+    │   │   ├── hooks.md        ← Opening + closing line patterns
+    │   │   └── false_beliefs.md ← What &quot;shouldn't work&quot; but does
+    │   └── linkedin/       ← Same structure: rules, 16 templates, 50+ false beliefs
+    ├── posts/              ← 82 analyzed posts + performance data
+    ├── hypotheses/         ← 13 active experiments + evidence
+    └── topics/             ← 7 topic lanes with energy levels
+</code></pre>
+<p>And here's how it flows:</p>
+<pre><code>┌─────────────────────────────────────────────────┐
+│                   CLAUDE.md                     │
+│        (the brain — rules, voice, workflow)     │
+└──────────────────────┬──────────────────────────┘
+                       │ routes to
+┌──────────────────────▼──────────────────────────┐
+│              knowledge/INDEX.md                 │
+│        (master routing — read this first)       │
+└───┬────────┬────────┬────────┬────────┬─────────┘
+    │        │        │        │        │
+    ▼        ▼        ▼        ▼        ▼
+ craft/   voice/  platforms/ posts/  hypotheses/
+ (how to  (which  (X rules,  (what   (what to
+  write)   tone)  LI rules)  worked)  test next)
+</code></pre>
+<p><a href="https://substack.com/redirect/a9e9097f-8087-4a67-aa03-1c7e7b03126b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">CLAUDE.md</a> is the brain. It defines the rules, the voice, the workflow. Everything Claude needs to know about how to operate.</p>
+<p>knowledge/INDEX.md is the router. It reads this first, then drills into only the folder that’s relevant to the current task.</p>
+<p>Each subfolder is a knowledge domain. craft/ holds writing techniques. voice/ holds 9 archetypes for matching tone to content. platforms/ holds platform-specific rules, templates, and hooks. posts/ holds performance data from analyzed content. hypotheses/ holds what I’m testing next.</p>
+<p>Progressive disclosure means Claude doesn’t load everything. Context windows are finite — even at 1 million tokens, loading everything wastes attention. The system only loads what’s relevant to this specific task.</p>
+<p><strong>How to adjust this as a PM:</strong>Replace craft/ with discovery/. Replace voice/ with stakeholders/. Replace platforms/ with channels/. Same architecture, different labels.</p>
+<hr />
+<h2>4. 2x Usage: The Best Time to Start with Claude</h2>
+<p>Claude is offering <strong>double usage limits</strong> through March 27. Weekdays outside peak hours, all day on weekends. Automatic across Web, Code, Cowork, and mobile.</p>
+<p><a href="https://substack.com/redirect/cb80f15c-44e3-426b-831f-fba7deb4c445?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!lxWx!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff717ca2a-3a45-4637-a518-3c1b21231235_3000x3150.png" /></a></p>
+<p>2x usage limits through March 27 — across all Claude surfaces.</p>
+<p>It’s the best time to learn Claude and automate your execution layer.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZzZWxmLWltcHJvdmluZy1jbGF1ZGUtc3lzdGVtJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNNelkzT0RZM05Td2laWGh3SWpveE56YzJNamN3TmpjMUxDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLnY1QkFOYndJNzUwY1g3VHRGZDEwT2VZRXRFQnlsazYxX3VWa3pPOC1WeFkiLCJwIjoxOTExMTk3NTksInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzM2Nzg2NzUsImV4cCI6MjA4OTI1NDY3NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.HlH0IGvQZFjR9D1xgbSyt2mcQgjjHyTeSJwPMNpAfO0?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=191119759">Upgrade to paid</a></p>
+<hr />
+<h2>5. What We’ll Learn Next</h2>
+<p>Here’s what’s behind the paywall — and why each piece matters:</p>
+<ul>
+<li><strong>How Claude builds tools for you</strong> — Claude Code can call any API and wrap it into a reusable script. No MCP needed. I’ll show you how it works and when to say yes. (If you’ve ever wanted to pull data from an API but didn’t want to write code — this is how.)</li>
+<li><strong>Automating Chrome without the 30-second waits</strong> — Claude Code controls your real browser through MCP. Direct DOM access, not screenshots. Setup takes 2 minutes. (If you’ve tried AI browser tools and hated the speed — this is different.)</li>
+<li><strong>From generic prompts to a PM knowledge system</strong>— How to structure CLAUDE.md so it actually compounds: learning mode, hypothesis tracking, false beliefs. The principles and key snippets — not my full file, but everything you need to build your own. (If your Claude sessions start from scratch every time — this fixes it.)</li>
+<li><strong>How the system stays honest</strong> — Hypothesis tracking that kills bad ideas with data. False beliefs that fight conventional wisdom. And one CLAUDE.md instruction that makes Claude propose improvements on its own. (If you want a system that challenges its own assumptions — this is how.)</li>
+<li><strong>The three phases</strong> — How this evolved from pasting screenshots into Cowork to a system that learns. Where to start, what to expect at each stage. (If you’re starting from zero — this is your roadmap.)</li>
+<li><strong>The cross-surface workflow</strong>— Same system from Claude Code, Cowork, and web. The tool doesn't matter — the shared context does. (If you've tried Claude in one surface and wondered how to connect them — this is it.)...</li>
+</ul>
+<h2>Keep reading with a 7-day free trial</h2>
+<p>Subscribe to The Product Compass to keep reading this post and get 7 days of free access to the full post archives.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZzZWxmLWltcHJvdmluZy1jbGF1ZGUtc3lzdGVtJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNNelkzT0RZM05Td2laWGh3SWpveE56YzJNamN3TmpjMUxDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLnY1QkFOYndJNzUwY1g3VHRGZDEwT2VZRXRFQnlsazYxX3VWa3pPOC1WeFkiLCJwIjoxOTExMTk3NTksInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzM2Nzg2NzUsImV4cCI6MjA4OTI1NDY3NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.HlH0IGvQZFjR9D1xgbSyt2mcQgjjHyTeSJwPMNpAfO0?simple=true&amp;utm_source=paywall&amp;utm_medium=email&amp;utm_content=191119759&amp;next=https://www.productcompass.pm/p/self-improving-claude-system&amp;coupon=34546817">Start trial</a></p>
+<h3>A subscription gets you:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>𝗔𝗰𝗰𝗲𝘀𝘀 𝗲𝘃𝗲𝗿𝘆 𝗶𝘀𝘀𝘂𝗲 → Stay ahead with 180+ actionable AI PM strategies and advice. Full archive.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>𝗝𝗼𝗶𝗻 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗦𝗹𝗮𝗰𝗸 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 → Get exclusive access to Paweł (DM) and 1,850+ AI PM community to grow together.</td>
+</tr>
+<tr>
+<td></td>
+<td>𝗕𝗼𝗼𝘀𝘁 𝘆𝗼𝘂𝗿 𝗣𝗠 𝗰𝗮𝗿𝗲𝗲𝗿 → Enroll in the AI PM Learning Program ($700 value) and 4 video courses ($546 value).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=191119759&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MTExOTc1OSwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3NzM2Nzg2NzUsImV4cCI6MTc3NjI3MDY3NSwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.bBQ6mAeBURFrmWRqH9aSnpPe-cMbJUwIcLEtIf5VrZc&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=191119759&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MTExOTc1OSwiaWF0IjoxNzczNjc4Njc1LCJleHAiOjE3NzYyNzA2NzUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.7zhLrvZ0gV3kLtZQeQsogf-SdE5QFysXaf6rQpwm5sk&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9zZWxmLWltcHJvdmluZy1jbGF1ZGUtc3lzdGVtP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtcmVzdGFjay1jb21tZW50JmFjdGlvbj1yZXN0YWNrLWNvbW1lbnQmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVNVEV4T1RjMU9Td2lhV0YwSWpveE56Y3pOamM0TmpjMUxDSmxlSEFpT2pFM056WXlOekEyTnpVc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKd2IzTjBMWEpsWVdOMGFXOXVJbjAuN3poTHJ2WjBnVjNrTHRaUWVRc29nZi1TZEU1UUZ5c1hhZjZyUXB3bTVzayIsInAiOjE5MTExOTc1OSwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3MzY3ODY3NSwiZXhwIjoyMDg5MjU0Njc1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.EJdkHiBHDVjYdF-Q8wJwyg97t4-H8DE9U6MgdH4X_cA?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVNVEV4T1RjMU9Td2lhV0YwSWpveE56Y3pOamM0TmpjMUxDSmxlSEFpT2pFNE1EVXlNVFEyTnpVc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAudzB3VjFOb3VicVF4a2kwT21fUU5TNndmcXpNejNFYnFYUmRjaDhtbTBxUSIsInAiOjE5MTExOTc1OSwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3MzY3ODY3NSwiZXhwIjoyMDg5MjU0Njc1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.ZKKWqpeSZm0z1HBqSQCLwynFsV3nbOObrgJGPf_N9H0?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/672dd509-841f-47eb-98b4-36c3c1aed2fd?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoxOTExMTk3NTksInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzM2Nzg2NzUsImV4cCI6MjA4OTI1NDY3NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.3OxiqOnjNG5QHcv_5GUrx2BvhWP_iG1_oaIQdEn2VC8?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

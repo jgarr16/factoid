@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🚨 GPT-5.6 is raising concerns — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🚨 GPT-5.6 is raising concerns — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🚨 GPT-5.6 is raising concerns</h1>
+<p class="meta">2026-07-15 · received 2026-07-15 22:03 +0900
+ · <a href="https://codenewsletter.ai/p/gpt-5-6-sol-deletes-user-files-unprompted-prismml-ships-bonsai-27b" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🚨 GPT-5.6 is raising concerns</h1>
+<p><a href="https://cube.dev/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=cube-general-promotion&amp;utm_content=v4-brex"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/15ce5d17-c4a8-42a3-8ba1-ba8488836954/Group_CUBE__4_.jpg?t=1784069631" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> For two years, devs have been hitting “Allow” every time their agent has asked for access. This almost became a default but not anymore. Reports say OpenAI's GPT-5.6 Sol wiped an entire production database mid-task, without warning. And this might not be the only case.</p>
+<p><strong>Also:</strong> Former Google’s AI Director launches an Agentic Engineering course, how to use Fable 5 in Codex, and choosing the right model for agentic coding.</p>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><img alt="Made with Midjourney." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6b6b7778-393c-42c9-8f9f-eaf993110eed/superhumanteam_generate_a_portrait_image_of_the_person_in_omn_9833339d-8eff-407f-9491-0f17fe9ef088_2__1_.jpg?t=1784100118" />
+<em>Made with Midjourney.</em></p>
+<hr />
+<p><strong>OpenAI's new coding model reportedly deletes files without permission:</strong> The ChatGPT maker's GPT-5.6 Sol is facing <a href="https://x.com/mattshumer_/status/2075657271401390161">backlash</a> from developers who claim it wiped production databases and entire Mac filesystems on its own. The company’s system card <a href="https://deploymentsafety.openai.com/gpt-5-6-preview/gpt-5-6-preview.pdf"><strong>flagged</strong></a> the risk, noting Sol is more likely than GPT-5.5 to exceed user intent and may even misreport its actions afterward. For now, strict permission scoping and regular backups are the only real safeguards.</p>
+<p><strong>PrismML ships the first 27B-class model that runs on a phone:</strong> The California-based startup just dropped <a href="https://prismml.com/news/bonsai-27b">Bonsai 27B</a>, a compressed version of Alibaba's Qwen 3.6 27B. By storing each weight as a single bit, PrismML cut the model from 54GB to just 3.9GB. The company says it’s small enough to fit on an iPhone 17 Pro while keeping 90% of its performance. A developer preview API is <a href="https://www.together.ai/models/prism-ml-ternary-bonsai-27b">available now</a>.</p>
+<p><strong>AI agents are making developers rethink client SDKs:</strong> An article by a senior engineer at Factory AI is forcing developers to <a href="https://x.com/i/trending/2077206578701205747">rethink</a> client SDKs. After his team dropped packages from Stripe, WorkOS, and Slack, they now use a single in-house wrapper for direct REST calls. The reason is simple: SDKs hide raw headers that are vital for debugging, and they also bloat your code. For example, Stripe's SDK is 6.5MB. Linear's is 34MB. The Google APIs package is a massive 198MB.</p>
+<hr />
+<h5><strong>PRESENTED BY CUBE. DEV</strong></h5>
+<h2><a href="https://cube.dev/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=cube-general-promotion&amp;utm_content=v4-brex">Can you actually trust your company's AI?</a></h2>
+<p><a href="https://cube.dev/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=cube-general-promotion&amp;utm_content=v4-brex"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0762e2dd-4eeb-42c5-9f7a-bb30dccca569/ChatGPT_Image_Jul_15__2026__04_04_56_AM.jpg?t=1784070359" /></a></p>
+<hr />
+<p>Most teams don't. AI pulls the wrong data, mixes up metrics, and answers with confidence anyway.</p>
+<p>Cube grounds AI in <a href="https://cube.dev/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=cube-general-promotion&amp;utm_content=v4-brex">one trusted set of business definitions</a>, so every answer comes back correct. That's how Brex built an <a href="https://cube.dev/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=cube-general-promotion&amp;utm_content=v4-brex">AI analyst for 35,000+ customers</a>, lifting accuracy from 55% to nearly 90%.</p>
+<ul>
+<li>
+<p>Trusted by 400+ enterprises like Wix and Patagonia</p>
+</li>
+<li>
+<p>One source of truth for every AI answer</p>
+</li>
+<li>
+<p>Dashboards built by AI or drag-and-drop</p>
+</li>
+</ul>
+<p>Try** **<a href="https://cube.dev/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=cube-general-promotion&amp;utm_content=v4-brex"><strong>Cube here</strong></a><a href="https://cube.dev/?utm_source=thecode&amp;utm_medium=newsletter&amp;utm_campaign=cube-general-promotion&amp;utm_content=v4-brex">.</a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<p><a id="how-do-you-write-good-agent-skills-now-theres-real-data"></a></p>
+<h2><strong>How do you write good agent skills? Now there's real data</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/10aadd8e-d28b-4066-9925-bbb88f588018/superhumanteam_a_software_engineering_team_working_on_writing_ed7cf3b3-30cd-4ebb-9d58-e6c812e78655_1.jpg?t=1784099044" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>Guesswork gets graded.</strong> Skills are folders of instructions that teach a coding agent how your team works. Anthropic and GitHub both ship official libraries, and most teams are writing their own. Until recently, there was no way to measure whether these skills worked. Now, according to Arize AI co-founder Aparna Dhinakaran, three recent <a href="https://x.com/aparnadhinak/status/2074569427346174039">papers</a> have finally quantified their impact by benchmarking identical tasks with and without these skills.</p>
+<p><strong>Handwritten beats generated.</strong> The lead paper, <a href="https://arxiv.org/abs/2602.12670">SkillsBench</a>, tested the shortcut that every team tries first. It asked the model to write its skills. Three findings stood out:</p>
+<ol>
+<li>
+<p>Self-written skills scored lower on average than using no skills at all. So the knowledge has to come from a human.</p>
+</li>
+<li>
+<p>Short skills beat detailed ones. Two or three focused modules outperformed exhaustive documentation, which sank below the baseline.</p>
+</li>
+<li>
+<p>Loading every skill you have makes things worse too. A <a href="https://arxiv.org/abs/2606.32025">second paper</a> found a few relevant skills beat the full library and cost fewer tokens.</p>
+</li>
+</ol>
+<p><strong>Polish hides the damage.</strong> You won't spot any of these issues by looking at the results. Responses with skills enabled look more professional, even when they fail more often. 16 out of 84 SkillsBench tasks performed worse with skills turned on. The only way to catch the drop is a direct head-to-head comparison.</p>
+<p><strong>Run the comparison yourself.</strong> That head-to-head test is now public. The SkillsBench <a href="https://github.com/benchflow-ai/skillsbench">harness</a> is open source, so you can run those same scores on your skills. Anthropic's guide walks you through the entire <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices">skill authoring process</a>, from writing effective trigger descriptions to setting up the evaluation loop that validates every update.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/574927f5-a990-4a88-a441-399ae3853c51/CleanShot_2026-07-15_at_12.46.18_2x.jpg?t=1784099840" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>AI-Native Engineering:</strong> Former Google’s AI Director dropped a course on** <a href="https://www.linkedin.com/learning/instructors/addy-osmani">agentic engineering</a>** on LinkedIn.</p>
+</li>
+<li>
+<p><strong>Codex-Orchestration:</strong> This senior engineer shared an <a href="https://x.com/cjzafir/status/2076347110417678502">open-source plugin</a> that lets you bring models like Claude Fable 5 into Codex and let it coordinate the work.</p>
+</li>
+<li>
+<p><strong>The Fifth Principle:</strong> A former Google senior engineer shares <a href="https://www.youtube.com/watch?v=wQ46lax_ya0">5 principles</a> that separate engineers who level up with AI from those who stay stuck at the same level.</p>
+</li>
+<li>
+<p><strong>Model Math:</strong> An AI research engineer charted which GPT-5.6 tiers are worth the cost for <a href="https://x.com/rasbt/status/2075573860796436626">agentic coding</a> (1M views).</p>
+</li>
+<li>
+<p><strong>Outer Loop:</strong> Trying to ship fast with AI agents? This senior engineer says you're losing something in <a href="https://www.linkedin.com/posts/addyosmani_ai-programming-softwareengineering-share-7481188577452638208-HsQh/">the trade-off</a>, and you won't notice until a bug forces you to.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=0xKE1UHpSfk"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f5c1365a-5222-4966-9d6e-86dc35c4b48c/Thumbnail__53_.jpg?t=1784084588" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=0xKE1UHpSfk"><strong>How to use OpenCode (by an ex-Microsoft engineer):</strong> </a> OpenCode is an open-source alternative to Claude Code. It’s a flexible AI coding agent that runs in your terminal. In this tutorial, you’ll learn to connect different language models, scaffold apps, install custom skills, and write system prompts in OpenCode.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://bug-shot.com"><strong>BugShot:</strong> </a> A Chrome extension that lets you pick elements, tweak styles, and report bugs to Jira or GitHub. It bundles screenshots, video, and logs into one quick report.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/Houseofmvps/codesight"><strong>Codesight</strong></a>** (1.2K ⭐):** This repo generates a compact context map of your project in one command. It helps AI assistants understand your entire codebase instantly without wasting tokens on file exploration.</p>
+<hr />
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://agent-cookbook.com/tutorial/claude-code-40-best-practices"><strong>40 tips for using Claude Code efficiently:</strong> </a> Most engineers treat Claude Code like basic autocomplete rather than optimizing its environment. With the right setup and automation, you can turn it into an operating system that runs your entire workflow.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to ship a PR from Claude Code in one command</strong></h2>
+<p>Shipping changes with Claude Code used to be a stop-and-go process. You had to stop for every commit, push, PR, and approval.</p>
+<p>The latest release finally fixes this issue. The new “/commit-push-pr” <a href="https://x.com/dani_avila7/status/2076089527655915538">command</a> now auto-allows pushes beyond origin.</p>
+<pre><code># inside Claude Code
+/plugin install commit-commands@claude-code-plugins
+/reload-plugins
+
+# when your change is ready
+/commit-push-pr
+</code></pre>
+<p>This command handles everything for you: it stages your changes, writes a commit message based on the diff, pushes the branch, and opens a PR complete with a summary and test plan.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>Installing every Claude Code plugin actually backfires. Once you go past 50 tools, Claude starts picking the wrong ones. Here are <a href="https://www.youtube.com/watch?v=uuUo7gWuH9w">7 plugins</a> worth keeping.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

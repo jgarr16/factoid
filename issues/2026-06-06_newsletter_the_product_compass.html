@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>PM Skills 2.0: Red-Team Your Roadmap, Then Check the Code Before You Ship — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="PM Skills 2.0: Red-Team Your Roadmap, Then Check the Code Before You Ship — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>PM Skills 2.0: Red-Team Your Roadmap, Then Check the Code Before You Ship</h1>
+<p class="meta">2026-06-06 · received 2026-06-06 02:55 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/pm-skills-2-red-team-ship" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>PM Skills 2.0: Red-Team Your Roadmap, Then Check the Code Before You Ship</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRnBtLXNraWxscy0yLXJlZC10ZWFtLXNoaXAiLCJwIjoyMDA3NzQ5MDAsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3ODA2ODI0MDQsImV4cCI6MjA5NjI1ODQwNCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.__HN8RT-capkNB-0eLhnhjUEcuE_Ud_o2EqNkQxn-EQ?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=200774900&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIwMDc3NDkwMCwiaWF0IjoxNzgwNjgyNDA0LCJleHAiOjE3ODMyNzQ0MDQsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.acNR3Nzlw9a-7PVZ8vEB7Gqu24tw_Ytq76yQrPMJ3I8">PM Skills 2.0: Red-Team Your Roadmap, Then Check the Code Before You Ship</a></h1>
+<h3>68 free Claude skills, 42 commands, 9 plugins. This release adds a new /red-team-prd command and the AI Shipping Kit: a way to document, audit, and ship AI-built apps with human sign-off.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Jun 5</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!C2pO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fcfcfec-32a1-4970-aee1-8a1ab05a76c0_750x750.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/pm-skills-2-red-team-ship?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>Most PRDs only survive polite feedback.</p>
+<p>You write the plan, you share it, people nod. The assumption that sinks it never gets named until launch.</p>
+<p>So I built a command that names it first.</p>
+<p>Paste a roadmap, a PRD, or a one-line bet into Claude. You get back the riskiest assumptions, ranked by what would hurt most, what is most likely to be wrong, and what is cheapest to test this week.</p>
+<p>The impolite questions, before the market asks them.</p>
+<p>It shipped today in <a href="https://substack.com/redirect/1b34c102-d1ee-4024-919e-be29af04af8b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">PM Skills 2.0</a>, the free, MIT-licensed marketplace 12,000 of you have starred on GitHub.</p>
+<p><a href="https://substack.com/redirect/8b2261fc-43b5-45dc-9370-f9052a0e443f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="PM Skills 2.0: Red-Team Your Roadmap, Then Check the Code Before You Ship" src="https://substackcdn.com/image/fetch/$s_!7dnu!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9e471330-6a43-40b8-bfc7-f015929b91be_2555x840.png" /></a></p>
+<p>This is the biggest update since the <a href="https://substack.com/redirect/a94e9620-0b5b-4842-8916-c06f209f86ce?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">March launch</a>:</p>
+<ul>
+<li>68 skills</li>
+<li>42 commands</li>
+<li>9 plugins</li>
+<li>one new AI Shipping Kit</li>
+<li>one new red-team command for PRDs, roadmaps, and strategy</li>
+</ul>
+<p><a href="https://substack.com/redirect/09958c6f-3c76-4452-b9d2-7e0209e01f33?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="PM Skills 2.0 now covers the full PM workflow, from discovery and strategy to execution and AI-built code review." src="https://substackcdn.com/image/fetch/$s_!6qsb!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F903b947b-e203-461d-b96b-015bb472703e_2600x2539.png" /></a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZwbS1za2lsbHMtMi1yZWQtdGVhbS1zaGlwJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzRNRFk0TWpRd05Dd2laWGh3SWpveE56Z3pNamMwTkRBMExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmxzMzdCS1pRQm90NE9CV2RuMV9tNC1LQ1VycjAtZHp0S1R1RG1VbEJucUUiLCJwIjoyMDA3NzQ5MDAsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3ODA2ODI0MDQsImV4cCI6MjA5NjI1ODQwNCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.Tzz6vax8g3sXFZP0Az-1w9BwNYA-ftXIf_ItBaxS2fQ?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=200774900">Upgrade to paid</a></p>
+<hr />
+<h2><strong>1. What PM Skills Actually Is</strong></h2>
+<p>Generic Claude gives you text. PM Skills gives you structure.</p>
+<p>Ask a raw model to “prioritize this backlog” and you get a confident paragraph. Ask it with the prioritization-frameworks skill loaded and it runs the actual framework, with the trade-offs named and the math shown.</p>
+<p>The difference is not the model. It is the judgment encoded in the skill.</p>
+<p>Each skill turns a proven PM method into a reusable workflow: discovery, assumption mapping, prioritization, strategy, pricing, GTM, execution, analytics, and now AI shipping.</p>
+<p>There are three pieces:</p>
+<ul>
+<li><strong>Skills</strong> give Claude a method or framework. They load automatically when the work matches.</li>
+<li><strong>Commands</strong> are slash workflows you trigger directly. <code>/discover</code> chains four skills: brainstorm ideas, identify assumptions, prioritize assumptions, and design experiments.</li>
+<li><strong>Plugins</strong> group related skills and commands by PM domain. Installing the marketplace gives you all 9 at once in Cowork.</li>
+</ul>
+<p>The full catalog lives in the <a href="https://substack.com/redirect/1b34c102-d1ee-4024-919e-be29af04af8b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">GitHub README</a>. For this release, two plugins changed.</p>
+<ul>
+<li><strong>pm-execution</strong> was updated with one new skill, strategy-red-team, and one new command, /red-team-prd.</li>
+<li><strong>pm-ai-shipping</strong> is new: two skills, five commands, and a workflow for turning an AI-built repo into something a human can review.</li>
+</ul>
+<p><strong>For PMs:</strong> you do not have to learn the catalog. Install it once, then work normally. The right skills surface when the task matches.</p>
+<hr />
+<h2><strong>2. The New Command: /red-team-prd</strong></h2>
+<p>This is the one to try first, because you can feel it in thirty seconds.</p>
+<p>/pre-mortem imagines the plan already failed and narrates why. /red-team-prd does the opposite: it attacks the live assumptions now, while you can still change them, and hands you the cheapest test for each.</p>
+<p>Here is what that looks like on a one-line bet:</p>
+<p><strong>You type:</strong> /red-team-prd Prioritize AI onboarding, activation is our bottleneck</p>
+<p><strong>You get back:</strong></p>
+<ul>
+<li><strong>Claim:</strong> Activation is the constraint on growth.<strong>Fails if:</strong> retention, not activation, is where users actually drop off.<strong>Evidence to get this week:</strong> the activation-to-retention funnel for the last 3 cohorts.<strong>Cheapest test:</strong> pull the funnel. One afternoon, no engineering.</li>
+<li><strong>Fails if:</strong> retention, not activation, is where users actually drop off.</li>
+<li><strong>Evidence to get this week:</strong> the activation-to-retention funnel for the last 3 cohorts.</li>
+<li><strong>Cheapest test:</strong> pull the funnel. One afternoon, no engineering.</li>
+<li><strong>Claim:</strong> AI onboarding raises activation.<strong>Fails if:</strong> AI onboarding adds setup anxiety for first-time users.<strong>Cheapest test:</strong> a 5-user moderated walkthrough of a clickable prototype.</li>
+<li><strong>Fails if:</strong> AI onboarding adds setup anxiety for first-time users.</li>
+<li><strong>Cheapest test:</strong> a 5-user moderated walkthrough of a clickable prototype.</li>
+</ul>
+<p>It also tells you what is already well-reasoned and what it could not assess. A useful red team does not manufacture doubt to look smart. If the plan is strong, it should say so.</p>
+<p>Five real kill-assumptions with tests beat twenty generic risks.</p>
+<p><strong>For PMs:</strong> run it on your own roadmap before the review, not after. The point is to kill a bad bet on a Tuesday instead of defending it in front of leadership a quarter later.</p>
+<hr />
+<p><a id="3-the-new-plugin-the-ai-shipping-kit"></a></p>
+<h2><strong>3. The New Plugin: The AI Shipping Kit</strong></h2>
+<p>The other half of the job changed this year. PMs and founders are now accountable for code an AI wrote.</p>
+<p>AI writes fast, but it leaves no written record of intent:</p>
+<ul>
+<li>what the system should do,</li>
+<li>who may do what,</li>
+<li>where the secrets live,</li>
+<li>which permissions are actually enforced,</li>
+<li>which rules are verified by tests.</li>
+</ul>
+<p>The AI Shipping Kit restores that record.</p>
+<p>The umbrella command, /ship-check, answers the question you actually have:</p>
+<p><strong><em>Is this safe to ship?</em></strong></p>
+<p>It:</p>
+<ul>
+<li>documents the system,</li>
+<li>audits the code against that documented intent,</li>
+<li>maps test coverage,</li>
+<li>and compiles a shipping packet a human can sign off on.</li>
+</ul>
+<p>The gate is intended vs. implemented.</p>
+<p>/ship-check looks for the places where the product promise and the repo disagree: the permission that is documented but never enforced, the scheduled-job endpoint anyone can call, the test that proves nothing about the workflow it claims to cover.</p>
+<p>You do not need to be technical to run it.</p>
+<p>You need to know what the system was supposed to do.</p>
+<p>The kit has two skills:</p>
+<ul>
+<li>shipping-artifacts defines the docs that make an AI-built app reviewable: architecture, flows, permissions, variables, tests, and conditional docs for email, scheduled jobs, SEO, or automation.</li>
+<li>intended-vs-implemented audits the gap between documented intent and actual code, with evidence on both sides.</li>
+</ul>
+<p>And five commands:</p>
+<ul>
+<li>/document-app creates the system documentation.</li>
+<li>/security-audit-static checks security against the documented intent.</li>
+<li>/performance-audit-static checks over-fetching, missing indexes, and caching.</li>
+<li>/derive-tests maps what is tested, what is proposed, and what is unverified.</li>
+<li>/ship-check runs the full sequence and compiles the shipping packet.</li>
+</ul>
+<p><strong>For PMs:</strong> “the AI wrote it” is not a sign-off. /ship-check turns a <a href="https://substack.com/redirect/e73b41f5-b5db-413b-a553-b30082e4b366?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">agent-engineered</a> repo into something a human can put their name on.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZwbS1za2lsbHMtMi1yZWQtdGVhbS1zaGlwJnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzRNRFk0TWpRd05Dd2laWGh3SWpveE56Z3pNamMwTkRBMExDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmxzMzdCS1pRQm90NE9CV2RuMV9tNC1LQ1VycjAtZHp0S1R1RG1VbEJucUUiLCJwIjoyMDA3NzQ5MDAsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3ODA2ODI0MDQsImV4cCI6MjA5NjI1ODQwNCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.Tzz6vax8g3sXFZP0Az-1w9BwNYA-ftXIf_ItBaxS2fQ?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=200774900">Upgrade to paid</a></p>
+<hr />
+<p><a id="4-how-to-install-it"></a></p>
+<h2><strong>4. How to Install It</strong></h2>
+<p>The repo is the source of truth: <a href="https://substack.com/redirect/1b34c102-d1ee-4024-919e-be29af04af8b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">https://github.com/phuryn/pm-skills</a></p>
+<p>If you use <strong>Claude Cowork</strong>, install the whole marketplace:</p>
+<ol>
+<li>Open <strong>Customize</strong> in the bottom-left corner.</li>
+<li>Go to <strong>Browse plugins</strong> -&gt; <strong>Personal</strong> -&gt; <strong>+</strong>.</li>
+<li>Select <strong>Add marketplace from GitHub</strong>.</li>
+<li>Enter <em>https://github.com/phuryn/pm-skills</em></li>
+</ol>
+<p>All 9 plugins install at once. Enable those you need:</p>
+<p><a href="https://substack.com/redirect/a730e5a8-4ead-486c-916d-cea00728d323?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!VX-s!,w_1100,h_740,c_pad,f_auto,q_auto:good,fl_progressive:steep/l_play_button_usfui2,w_144,e_colorize:0/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F200774900%2Fbf32abb7-dfdf-4c54-8160-79addefefaad%2Ftranscoded-04855.png" /></a></p>
+<p>If you use <strong>Claude Code</strong>, add the marketplace:</p>
+<pre><code>claude plugin marketplace add phuryn/pm-skills
+</code></pre>
+<p>Then install the plugins you want. To install the full marketplace:</p>
+<pre><code>claude plugin install pm-product-discovery@pm-skillsclaude plugin install pm-product-strategy@pm-skillsclaude plugin install pm-execution@pm-skillsclaude plugin install pm-market-research@pm-skillsclaude plugin install pm-data-analytics@pm-skillsclaude plugin install pm-go-to-market@pm-skillsclaude plugin install pm-marketing-growth@pm-skillsclaude plugin install pm-toolkit@pm-skillsclaude plugin install pm-ai-shipping@pm-skills
+</code></pre>
+<p>If you only want the new and updated pieces from this release:</p>
+<pre><code>claude plugin install pm-execution@pm-skillsclaude plugin install pm-ai-shipping@pm-skills
+</code></pre>
+<p>New to Claude Code? Start with the <a href="https://substack.com/redirect/a1ede0e2-68e8-4dfb-a86e-9b43d7469f7f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">beginner’s guide</a>, then the <a href="https://substack.com/redirect/7f161045-bd1a-45fe-90cc-3b24ed23e0d9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">advanced guide</a> when you want the power-user setup.</p>
+<p>The commands flow into each other. A real week looks less like a feature list and more like one continuous thread:</p>
+<ul>
+<li>/discover a new idea,</li>
+<li>/write-prd the winner,</li>
+<li>/red-team-prd the PRD before the review,</li>
+<li>/ship-check once the code exists.</li>
+</ul>
+<p>After any command finishes, it suggests the natural next one.</p>
+<p>One more note: the skills are portable. The slash commands are Claude-specific, but the <code>SKILL.md</code> files follow the universal skill format and can be copied into tools like Codex CLI, Cursor, Gemini CLI, OpenCode, or Kiro.</p>
+<p>The <a href="https://substack.com/redirect/83833ec7-c187-4062-9aeb-544720be2039?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">README</a> has the exact copy instructions.</p>
+<hr />
+<h2><strong>5. How It Composes With PM Brain</strong></h2>
+<p>PM Skills gives Claude the method. <a href="https://substack.com/redirect/cdab4574-3124-486b-bfa8-ecc205246ccf?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">PM Brain</a> gives Claude your product context.</p>
+<p><a href="https://substack.com/redirect/426ada09-cdcf-43a9-b8ed-2a8739655112?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="PM Skills gives Claude the method. PM Brain gives Claude your product context." src="https://substackcdn.com/image/fetch/$s_!-DDV!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3b81e93-646d-40c1-abaa-04b85f5ea56c_1456x486.png" /></a></p>
+<p>PM Brain is a markdown second brain for product managers: strategy, users, decisions, hypotheses, stakeholders, and recurring knowledge in plain files on your laptop.</p>
+<p>Run them together and the frameworks stop being generic.</p>
+<p>/red-team-prd can attack your plan using what PM Brain knows about your real constraints. /strategy can build on your actual positioning. /ship-check can review a repo against documented product intent instead of a blank canvas.</p>
+<p>One supplies the rigor. The other supplies the context.</p>
+<hr />
+<h2><strong>6. Start Here</strong></h2>
+<p>If you have a plan you are not sure about, run:</p>
+<pre><code>/red-team-prd [your PRD, roadmap, or strategy]
+</code></pre>
+<p>If you have an AI-built app you are close to shipping, run:</p>
+<pre><code>/ship-check [repo or folder]
+</code></pre>
+<p>If you are starting from zero, run:</p>
+<pre><code>/discover [your product idea]
+</code></pre>
+<p>Everything is free and MIT-licensed. If it helps, <a href="https://substack.com/redirect/1b34c102-d1ee-4024-919e-be29af04af8b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">star the repo</a> so the next PM finds it.</p>
+<p>AI does not fix weak product judgment.</p>
+<p>It scales it.</p>
+<p>PM Skills is where the judgment lives.</p>
+<hr />
+<h2><strong>Thanks for Reading The Product Compass</strong></h2>
+<p>It’s amazing to learn and grow together.</p>
+<p>Have a great rest of the week,
+Paweł</p>
+<hr />
+<h2><strong>Resources</strong></h2>
+<p><strong>Get the marketplace (free):</strong></p>
+<ul>
+<li><a href="https://substack.com/redirect/1b34c102-d1ee-4024-919e-be29af04af8b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">PM Skills on GitHub</a> - 9 plugins, 68 skills, 42 commands, MIT-licensed.</li>
+<li><a href="https://substack.com/redirect/02d1ade7-cf09-438e-a17d-f6d95f88db11?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">PM Brain</a> - the markdown second brain that composes with it. MIT.</li>
+</ul>
+<p><strong>Go deeper (The Product Compass):</strong></p>
+<ul>
+<li><a href="https://substack.com/redirect/1419776e-441e-4be0-9d5f-fddacc818780?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Cowork for PMs</a> - agents without IDE, start here.</li>
+<li><a href="https://substack.com/redirect/a1ede0e2-68e8-4dfb-a86e-9b43d7469f7f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code: the beginner’s guide</a> - start here if you are new to IDE.</li>
+<li><a href="https://substack.com/redirect/7f161045-bd1a-45fe-90cc-3b24ed23e0d9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code: the advanced guide</a> - the power-user setup after you get the basics.</li>
+<li><a href="https://substack.com/redirect/e42e322a-e308-4dca-8ab9-10f27361051c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Codex setup for PMs</a> - wiring a second model alongside Claude. I've found it catches ~80% of my errors.</li>
+<li><a href="https://substack.com/redirect/9e46417f-ef24-4cc0-94bf-8d36cfd5a5ac?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Intent engineering for AI agents</a> - lead with context, not instructions.</li>
+<li><a href="https://substack.com/redirect/f3050a32-43fa-4396-828f-4065aea3e0ea?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">I don’t review the code, I review the artifacts</a> - the review method behind the AI Shipping Kit, plus the downloadable artifact prompt pack.</li>
+<li><a href="https://substack.com/redirect/0454bb7e-2f4a-4aeb-ac4a-690c5e00b8b1?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Security and performance testing prompts</a> - the worked teardowns the kit automates.</li>
+<li><a href="https://substack.com/redirect/09e65848-4618-4eed-ae67-225b3d1d6c15?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Claude Code's Limits Are Generous. The Problem Is Your Setup</a> - how I cut my Claude costs over 5.5x.</li>
+<li><a href="https://substack.com/redirect/8da9f028-01d0-4212-ada0-5c3132370928?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Three CLAUDE.md Blocks That Make Claude Get Smarter Every Session</a> - critical concepts for building self-improving agentic systems.</li>
+<li><a href="https://substack.com/redirect/e73b41f5-b5db-413b-a553-b30082e4b366?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Vibe Coding vs. Vibe Engineering</a> published in Sep, 2025 (in 2026, labeled “agentic engineering” by Andrej Karpathy)</li>
+</ul>
+<p><strong><em>If you are curious, a few things I’m shipping:</em></strong></p>
+<ul>
+<li><em><a href="https://substack.com/redirect/36cff8e2-a994-4285-bcf4-a2b999c9ca93?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">claude-usage</a> - Embed your Claude Code usage dashboard (token counts, costs, sessions, projects) directly inside VS Code.</em></li>
+<li><em><a href="https://substack.com/redirect/89748110-dede-4e3d-b70b-a26c6018a720?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">agentlift</a> - Deploy agents to Claude Managed Agents, AWS Bedrock AgentCore, and Google. One folder, one definition, one command.</em></li>
+<li><em><a href="https://substack.com/redirect/53f7ed9e-1ae4-48d4-85e9-a2cedebc201a?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Grok Build for VS Code</a> - The only visual UI for Grok Build (non-CLI), 1,400 active installations. A bet in case Grok surprises us.</em></li>
+</ul>
+<p><em>You’re currently a free subscriber to The Product Compass Newsletter.</em></p>
+<p><em>My goal for the next 12 months is to help you become a 10X PM with agents. A full subscription gives you the full archive (all posts), premium community (2,000+ PMs), live office hours, and all my materials and video courses. Time limited:</em></p>
+<p><a href="https://substack.com/redirect/1df2a11a-4198-407e-9972-83795e117eae?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Subscribe with 35% off lifetime</a></p>
+<p><em>No hassle. 30-day money-back guarantee. Many expense it through their learning budgets.</em></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=200774900&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIwMDc3NDkwMCwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3ODA2ODI0MDQsImV4cCI6MTc4MzI3NDQwNCwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.snkGswKW6jHDpxLXlaFPFjjOvcB_9TIpCZzvG-mJA_o&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=200774900&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjIwMDc3NDkwMCwiaWF0IjoxNzgwNjgyNDA0LCJleHAiOjE3ODMyNzQ0MDQsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.acNR3Nzlw9a-7PVZ8vEB7Gqu24tw_Ytq76yQrPMJ3I8&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9wbS1za2lsbHMtMi1yZWQtdGVhbS1zaGlwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtcmVzdGFjay1jb21tZW50JmFjdGlvbj1yZXN0YWNrLWNvbW1lbnQmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qSXdNRGMzTkRrd01Dd2lhV0YwSWpveE56Z3dOamd5TkRBMExDSmxlSEFpT2pFM09ETXlOelEwTURRc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKd2IzTjBMWEpsWVdOMGFXOXVJbjAuYWNOUjNOemx3OWEtN1BWWjh2RUI3R3F1MjR0d19ZdHE3NnlRclBNSjNJOCIsInAiOjIwMDc3NDkwMCwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc4MDY4MjQwNCwiZXhwIjoyMDk2MjU4NDA0LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.eqwyj295OZZiHY8GzkfL4vJ-O1L1Egkux_1qeFT4FOo?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qSXdNRGMzTkRrd01Dd2lhV0YwSWpveE56Z3dOamd5TkRBMExDSmxlSEFpT2pFNE1USXlNVGcwTURRc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAueXZVWFBwNF9FREV6TDMtYTN4Z0lIWmNaa3hac3U2VEZCRmc2YmVpT1B3NCIsInAiOjIwMDc3NDkwMCwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc4MDY4MjQwNCwiZXhwIjoyMDk2MjU4NDA0LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.kYNkNK93s_3AcvWVkYOz5ZOrguU5qpi8F-2e_dnbkV4?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/3f49f44f-d5cb-487f-98d5-4e8e914a91d8?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoyMDA3NzQ5MDAsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3ODA2ODI0MDQsImV4cCI6MjA5NjI1ODQwNCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.FSXmMTmgwGh17hcLNlWa9HubQ8bNBH3-PHrdi8ZUHQs?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

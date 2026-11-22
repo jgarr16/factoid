@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>25 tips and tools I learned at the Summer School on Investigative Reporting — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="25 tips and tools I learned at the Summer School on Investigative Reporting — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>25 tips and tools I learned at the Summer School on Investigative Reporting</h1>
+<p class="meta">2026-08-17 · received 2026-08-17 20:39 +0900
+ · <a href="https://indicator.media/p/25-tips-and-osint-tools-i-learned-at-the-summer-school-for-investigative-reporting" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>25 tips and tools I learned at the Summer School on Investigative Reporting</h1>
+<p>I'm back from Riga, Latvia, the longtime home of the <a href="https://mediacentre.sseriga.edu/events/summer-school-on-investigative-reporting/">Summer School on Investigative Reporting</a>. Each year, journalists from around Europe and elsewhere gather for workshops and talks about how to be a better investigator. I delivered four workshops and took in sessions about OSINT, investigative interviewing, getting strangers to talk to you, and dealing with massive leaks like the Panama Papers.</p>
+<p>Among the 25 tips and tools I came home with: a bot that profiles a Telegram user's message history and every name they've ever used, a free database of more than 1,000 government registries I somehow didn't know existed, and the phrases a seasoned investigator uses to get a stranger to talk to you.</p>
+<p>This post follows similar roundups I published after attending the <a href="https://indicator.media/p/29-osint-tools-and-tips-i-discovered-at-the-global-investigative-journalism-conference">Global Investigative Journalism Conference</a> and <a href="https://indicator.media/p/32-osint-tools-and-tips-i-discovered-at-the-investigative-reporters-and-editors-conference">Investigative Reporters and Editors Conference</a>, which together offer 61 OSINT tools and tips worth reading.</p>
+<ol>
+<li>The conference kicked off with a look back at the <a href="https://www.icij.org/investigations/panama-papers/">Panama Papers,</a> the massive leak of documents from a Panamanian law firm that specialized in setting up shell companies for wealthy and powerful clients.</li>
+</ol>
+<p>The presenters were Johannes Kristjansson, the reporter who uncovered information that led to the resignation of the Icelandic prime minister, and Sven Bergman, a Swedish TV journalist who worked with him. They explained that in the initial stages the data arrived in stages. I imagined them and others having to rerun the same searches with each new tranche — a reminder of how important it can be to generate and organize lists of keywords and search queries for an investigation. One slide tickled my search-nerd brain:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3661f849-62be-4490-b73d-31fcb0624125/panama-sweden-search-string-2.jpg?t=1786891254" /></p>
+<p>This was a list of search terms Swedish reporters used to query the leak database. It reinforced that leak-based insights and stories are only as good as your ability to extract information from the mass of data. That relies on thinking about what to look for, which requires keywords: names of people and companies, places, identifiers, phrases, and more.</p>
+<p>AI can certainly help identify interesting information and patterns. But you still need to brainstorm keywords and test them. I'm lately obsessed with that process. I’m more convinced than ever that investigators who are strategic about generating keywords and finding creative ways to combine them in searches will always have an advantage. (During the talk, I asked for more detail about the above search terms, but they didn't have additional information to share.)</p>
+<ol start="2">
+<li>
+<p>They were asked if they’d have used AI to process the documents if the leak happened today. Kristjansson, who struck me as a very old school investigative reporter (I mean that in the best way), said yes. But he noted it could only be done with a setup running local models on air-gapped machines. "I think we would have even more names and more stories," he said. Bergman agreed, saying AI would have helped them "win a lot of time" by identifying interesting information and patterns.</p>
+</li>
+<li>
+<p>Shaya Laughlin is the director of research for the Organized Crime and Corruption Reporting Project. She led a session about OSINT that surfaced a few new-to-me tools and reinforced some fundamental approaches. OCCRP pays for several tools (as I'll detail below) and also builds its own. But Laughlin began by reminding us that OSINT isn't just about tools. "It's not like a circus where we can just pull tricks out," she said.</p>
+</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cf9af861-892a-4058-b016-f835f25ed3b1/OSINT-not-just-google.jpg?t=1786891402" /></p>
+<ol start="4">
+<li>
+<p>Another point worth noting: OCCRP treats information gathered from third-party databases "as a lead, not as evidence of what you're trying to prove." She cited the example of a company record from OpenCorporates. OCCRP's fact-checking process requires the reporter to gather the registration record directly from the relevant country registry.</p>
+</li>
+<li>
+<p>Laughlin shared a slide with a list of "Personal Identifiers" used to "uniquely identify an individual." She said journalists often can't collect direct identifiers like passport numbers and biometrics. What you work with instead are the indirect ones: dates of birth, emails, phone numbers, usernames, family members, employment history. The craft is matching a person across databases on those. Laughlin was blunt that "you can never be 100% sure."</p>
+</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e8195e84-72cc-48ed-9d2f-d80b5b37cb3c/OSINT-personal-identifiers.jpg?t=1786891498" /></p>
+<ol start="6">
+<li>
+<p>Another solid reminder from her: you have to be cautious with the names that are associated with accounts in breach data. She gave the example of meeting someone at a costume party and saving their number in your contacts as "cat person." If your contacts are breached by an infostealer, a tool that aggregates such data could display "cat person" as the name attached to that number. That would be an easy lead to discard. But the takeaway stands: sometimes the name in breach data isn't entered by the person themselves — it reflects how someone else saved their number. So you need to triangulate that entry with other information. "It's never proof" on its own, according to Laughlin.</p>
+</li>
+<li>
+<p>A tool/database I can't believe I didn't already know about: OCCRP's <a href="https://id.occrp.org/databases/">Catalogue of Research Databases</a>. It's "a collection of public data sources compiled by our researchers that are the most useful for investigative reporting." As of this writing it had 1,030 entries across 188 countries. You can filter by region or country and view a list of government and other notable public databases. As an example, a search for Latvia returns the state revenue service public database, the Latvian patent office, and the EU e-justice page for the business register. Laughlin said the OCCRP research team is in the process of updating the database, so expect additions/removals. It's great to know that they keep it fresh.</p>
+</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/96579054-b0fc-4c2e-bfd1-d59400dd2470/Screenshot_2026-08-16_at_8.57.22_AM.png?t=1786891542" /></p>
+<ol start="8">
+<li>Laughlin shared a slide that lists the current stack of people search tools they're using, either by paying for or getting free access to. Given budget constraints, it gives you a sense of what they think is worth paying for. There are multiple people search tools below. She said it's about "knowing which databases to use depending on the context you're working with."</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/69ce75f0-0773-41fc-8266-6417117aa584/OSINT-people-search-engines.jpg?t=1786891620" /></p>
+<ol start="9">
+<li>Laughlin also shared a list of the types of open sources they work with regularly:</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e2a96126-b94b-4719-8ef1-4fdfcb2a360c/OSINT-types-of-open-sources.jpg?t=1786891671" /></p>
+<ol start="10">
+<li>And her view of the strengths and weaknesses of some of the big reverse image search tools:</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/bfd44084-7642-438e-aa67-63cfecbd7f2b/OSINT-reverse-image-tools-compared.jpg?t=1786891721" /></p>
+<ol start="11">
+<li>
+<p>Laughlin covered ship and plane tracking and cited many of the tools you may already be familiar with (and that I cited in my GIJC <a href="https://indicator.media/p/29-osint-tools-and-tips-i-discovered-at-the-global-investigative-journalism-conference">roundup</a>) such as: <a href="https://globalfishingwatch.org/">Global Fishing Watch</a>, <a href="https://www.equasis.org/">Equasis</a>, <a href="https://www.flightradar24.com/">Flightradar24</a>, <a href="https://globe.adsbexchange.com/">ADS-B Exchange</a>, <a href="https://www.planespotters.net/">PlaneSpotters</a>, <a href="https://www.jetphotos.com/">JetPhotos</a>, etc. She said that for any vessel or aircraft you're typically doing one or both of two things: finding <em>who owns it</em> and/or finding <em>where it went</em>. Each requires a different identifier. For planes, the tail number tells you ownership; the ICAO hex is what you track flights with. For ships, the IMO number tells you ownership; the MMSI is what you track voyages with.</p>
+</li>
+<li>
+<p>During the session, a reporter with BBC Russia shared a Telegram tool I wasn't previously aware of: <a href="https://funstat.net/">Funstat.net</a>. It's a bot that can profile a Telegram user. It pulls their messages posted in public Telegram chats/channels, identifies the groups they belong to, grabs their username and avatar change history, and can compare common groups between two users. It runs inside Telegram and is a paid tool (crypto or credit card). It seems powerful, but it comes with two caveats: the tool itself could collect data about the accounts you're watching, and it's unclear who owns it (though the site is in Russian so it’s presumably based there).</p>
+</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d2cbf0ad-687c-4710-8245-960eaedbd261/Screenshot_2026-08-16_at_8.38.18_AM.png?t=1786891824" /></p>
+<h3>Investigative interviewing and getting strangers to talk to you</h3>
+<p>The final sessions I attended were about investigative interviewing and getting strangers to talk to you. They were led by Stefanie Dodt, a reporter for German public media ARD and Jim Mintz, a former private investigator and private intelligence company owner who’s also a professor of journalism at Columbia University. The duo dropped a ton of nuggets that are useful to journalists and to other investigators, too, given Mintz's background. This is less of an OSINT section, but I encourage everyone who works with sources (or who's curious about how journalists and others do so) to read it.</p>
+<p>Human sources are the best path to documents and insights you can't find in open sources. The best investigations combine human sources, digital investigative methods, and data and documents. Mintz warned against reporting that relies on OSINT but where the reporters "have called literally almost no one."</p>
+<ol start="13">
+<li>
+<p>Mintz advocated for contacting the target of your investigation early on, rather than staying hidden while you gather information from open sources and try to get people to talk to you. He advocated for a reach out along these lines: "I'm a reporter. I have become fascinated with [your compnay/product/you etc.]. I'm doing some reporting on you. You might hear I'm out there. Here's my phone number. If I feel we're really going somewhere, I'd like to come back and interview you." It's not meant to be used word for word — though he does love the word "fascinated." As in: I'm fascinated by your work, I'm fascinated by your company. The goal is to signal that you're looking into them, but framed as genuine curiosity rather than aggression or suspicion.</p>
+</li>
+<li>
+<p>Don't start with the company/gov/entity source you are most eager to talk to. Dodt typically uses LinkedIn to identify former employees and other people connected to the target, and begins with those on the periphery. Such sources can help you learn the internal vocabulary and potentially introduce or point you to other people. It gets you situated and can ground you in the internal culture and background before you move to those closer to what you're investigating.</p>
+</li>
+<li>
+<p>They shared a great slide with a maze graphic to illustrate how you might progress from one source to the next, getting further inside your target. It's an exercise Mintz runs with students at Columbia:</p>
+</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7038c20c-02d0-44ef-98d5-3e5988adf04c/interviewing-source-maze-exercise-4.jpg?t=1786923073" /></p>
+<p>He asks them to label where in the maze they think each of the source types might go. Number one is someone on the periphery, and number 10 is all the way in. I often think of this as concentric circles with the key people at the center and sources like experts and advocates at the very outer edge. But the maze is a better metaphor. It communicates the fact that it's not a straight path to the inside and you hit complications and dead ends.</p>
+<ol start="16">
+<li>The entire source-journalist relationship is about trust. When you contact someone out of the blue they have no reason to trust or talk to you. If you get someone on the phone and are trying to convince them to talk, Mintz suggested saying something along the lines of, "I'm working hard, but I need your help." Other suggestions: "I can give you examples of what I'm finding that interests me"; "I've been gathering information but I can give you examples of what I don't get"; "Could I walk you through a timeline I've been making?" Don't make it all about what you need. Pique their curiosity, appeal to their knowledge and expertise, and share what you can. Dodt shared a slide with some examples of things to say instead of "can I interview you" and the like:</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ef41d127-9269-4ed1-9727-92ce0af25c29/interviewing-magic-lines-2.jpg?t=1786892649" /></p>
+<p>The above sentences are also good to drop during an interview.</p>
+<ol start="17">
+<li>They shared an example of a bad email approach to a potential source:</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5a5d1c83-5d01-42b4-a4af-30a067c1ad6f/emails-typical-cold-approach.jpg?t=1786892731" /></p>
+<p>The subject line "request for interview" signals that it's about you wanting something. Lines like "I hope this email finds you well" make you sound like a robot and often come across as formulaic and insincere. A sentence like "I understand you used to work at Acme" simply states the obvious; and "I would like to interview you about your experiences at Acme. Your perspective would be really valuable to me" is all about what the reporter wants. Nothing piques the interest of the recipient; nothing comes across as personal or human. "We live in an age of robots, and it is incredibly powerful in an age of robots to be three-dimensionally human," Mintz said.</p>
+<ol start="18">
+<li>
+<p>The core of their advice for cold approaches is: "Rather than focusing on being nice, focus on being interesting." Mintz said that getting ghosted means the source might have thought, "I get it, you find me interesting; I don't find you interesting."</p>
+</li>
+<li>
+<p>Dodt shared a slide with some of her "favorite ingredients" to include in a cold approach:</p>
+</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a5716270-9570-4142-94e0-3bb586ba1a19/emails-stefanies-ingredients-2.jpg?t=1786923240" /></p>
+<ol start="20">
+<li>She also shared an example of an approach email that she sent while working on a story:</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1c210adf-cbb1-4d01-95e0-5c8f81a3ab4d/emails-gorillas-former-manager-3.jpg?t=1786923284" /></p>
+<p>Here's another example, which was sent to someone she wasn't yet connected to on LinkedIn:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1696b915-71b9-448c-a9fd-f57b5d0b9fd0/emails-heidelberg-connection.jpg?t=1786923320" /></p>
+<ol start="21">
+<li>Dodt and Mintz created a web-based app to help people craft better approach messages. It's not publicly released but they let us play with it at the end of the workshop. Here's a pic that they said I could share, which shows Mintz pointing to elements of the app's interface:</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8b465c41-764c-4f52-b84a-643d6bdcbebf/emails-not-ghosted-app.jpg?t=1786923382" /></p>
+<p>The app starts by displaying the example of the weak approach email that begins "I hope this email finds you well." Then you choose options from four categories of content to remove the lackluster lines and replace them with something more effective.</p>
+<p>Keeping with their theme of being interesting to sources, the top left category is "How this person may be interesting to you." One option is "expertise." In the above image, Mintz clicked on that option. It removed the line: "I understand you used to work at Acme" and replaced it with, "I am aware of your expertise in some aspects of what interests me. I can explain where I think we overlap."</p>
+<p>It's a fun exercise to click different options from each of the four menus and see the lines that can be added. You can also start with a blank email and add lines, customizing them to your pitch. Here’s a couple other setnences that the app may suggest:</p>
+<ul>
+<li>
+<p>"I'm not interested in trade secrets, or anything personal to you. I simply hope you can help me sort out some things about the company."</p>
+</li>
+<li>
+<p>"I'm beginning to understand the pressures that the company was under, and I'm working hard to talk to many people and get the story right."</p>
+</li>
+</ul>
+<p>You don't need to stick with the app's suggestions, but it can help you come up with messages that entice someone to engage. They don't have a release date for the app, but hopefully the above examples inspire you. I’ll share it when it goes live.</p>
+<ol start="22">
+<li>
+<p>When you land an interview, treat it like a conversation. Don't rapid fire the questions you prepared. Establish a rapport, give them time to get comfortable. Don't be in a hurry to extract things. "As trust goes up, the ask goes up," Mintz said. Meaning: the more you build trust over time, the more willing people are to open up and share information and potentially documents. Don't start asking for documents and sensitive information right away.</p>
+</li>
+<li>
+<p>Mintz said that "Give me an example" is the single highest-leverage phrase in interviewing. It shifts a source from a 30,000-foot story to names, dates and amounts.</p>
+</li>
+<li>
+<p>They shared a slide with a scale that starts at the bottom with what you get in an OK interview. At the top is what happens in a great interview:</p>
+</li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/95541889-70e1-4838-9f76-2c62ee2e4475/interviewing-defining-success-4.jpg?t=1786923472" /></p>
+<ol start="25">
+<li>Mintz shared a better way to end an interview instead of asking the common question, "Is there anything I should have asked that we didn't talk about? He suggested something along the lines of: "You can tell I'm working at this. I've got documents coming in, more people to interview. Would you mind if I called you in a couple of weeks? I want to bring you up to date on what I'm discovering, and I want to hear your reaction — you can set me straight if people are bullshitting me."</li>
+</ol>
+<p><a id="indicator-info-box"></a></p>
+<h3>Indicator Info Box</h3>
+<ul>
+<li>
+<p>I recorded the sessions (with the exception of the Panama Papers one) using Apple Voice Memos and took notes and photos.</p>
+</li>
+<li>
+<p>I loaded the transcripts generated from Voice Memos into notes in Obsidian and downloaded the audio files to my computer. I also moved all of my photos and screenshots into a folder with the recordings. (The Apple-generated transcripts often garbled proper nouns, websites, and tools names. I verified them against slides and my knowledge.)</p>
+</li>
+<li>
+<p>I pointed Claude to my previous posts about IRE and GIJC and said I was doing something similar for the Riga event. I asked it to review my notes, transcripts, and images and suggest potential tips for this post.</p>
+</li>
+<li>
+<p>I also used Claude to rename the images and screenshots based on which session they were from and what they showed.</p>
+</li>
+<li>
+<p>I reviewed Claude’s suggestions and wrote the post myself. Claude assisted with copy editing and flagging quotes and items I might want to add, and double-checking facts. Claude also used the beehiiv MCP to fix some image formatting errors.</p>
+</li>
+</ul></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>A Guide to Claude Code for PMs: From Cowork to Code — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="A Guide to Claude Code for PMs: From Cowork to Code — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>A Guide to Claude Code for PMs: From Cowork to Code</h1>
+<p class="meta">2026-03-08 · received 2026-03-08 19:28 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/claude-code-guide" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>A Guide to Claude Code for PMs: From Cowork to Code</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRmNsYXVkZS1jb2RlLWd1aWRlIiwicCI6MTkwMjE1NzYxLCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzcyOTY1ODI0LCJleHAiOjIwODg1NDE4MjQsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.qvgofJfyOxJ4AHfP6V3yUnD5LW_ma1m3l5hXwYXpwsQ?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=190215761&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MDIxNTc2MSwiaWF0IjoxNzcyOTY1ODI0LCJleHAiOjE3NzU1NTc4MjQsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.FGVw53lykpA4-HtvuCYQaUFkDfFN4LcG1DDAcVcrZho">A Guide to Claude Code for PMs: From Cowork to Code</a></h1>
+<h3>Claude Code looks intimidating. But if you've used Cowork, you're already 70% there.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>Mar 8</p>
+<p>∙</p>
+<p>Preview</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!e9EM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c7398f1-2f07-4de3-b7c3-abdc6a982ad0_1350x1350.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/claude-code-guide?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>Same model. Same CLAUDE.md. Same web connectors. Same skills and plugins. If you've been using Claude Cowork, you're closer to Claude Code than you think.</p>
+<p>The difference?</p>
+<p>Code gives you an IDE — file explorer, terminal, git integration — optimized for working with codebases. It remembers what you told it yesterday. And it does things Cowork alone can't — like running terminal commands, managing git branches, and working from your phone.</p>
+<p><em>(Haven't tried Cowork yet? Start with my <a href="https://substack.com/redirect/77cbad42-06ac-4a38-a898-ebc6c1426791?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Cowork guide for PMs</a>. It'll make the transition smoother.)</em></p>
+<p>This is how to get from Cowork to Code without feeling like you need an engineering degree.</p>
+<hr />
+<h3>What Is Claude Code?</h3>
+<p>Cowork and Claude Code share the same brain. The difference is where they live and what they can touch.</p>
+<p>Cowork runs inside Claude Desktop — in a sandboxed VM. It works with files in your selected folder, connects to your apps, and handles knowledge work safely. Optimized for knowledge work — documents, research, and deliverables.</p>
+<p>Code runs in VS Code (or the terminal). Same file access, but no sandbox — it runs bash commands directly, manages git, and gives you an Explorer sidebar to navigate your project visually. Optimized for codebases, prototyping, and engineering workflows.</p>
+<p>The name is misleading. “Claude Code” sounds like it’s only for developers. It’s not. At Anthropic’s latest hackathon, an attorney, a cardiologist, and a roads worker won the Claude Code hackathon:</p>
+<p><a href="https://substack.com/redirect/492a6c41-2ea9-4d2a-80b0-530c08668e4d?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!Msqj!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F34f5e0c9-6865-42cd-a07d-04e9d480fbc2_2165x936.png" /></a></p>
+<p>Source: <a href="https://substack.com/redirect/2ba386b6-d045-4cc9-bbf6-12bf4937ab19?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">Reddit</a></p>
+<p>They won because they understood their problems deeply — and Code removed the friction between the idea and the build.</p>
+<hr />
+<h3>Why Bother with Claude Code?</h3>
+<p>Cowork is fantastic for knowledge work — email drafts, file creation, research, presentations. But you'll hit moments where it's not enough.</p>
+<ul>
+<li><strong>You want to prototype, not just describe.</strong> Cowork creates documents. Code creates working software. PRD to working demo in a single session. That’s what Anthropic PMs already do — they prototype in Claude Code instead of writing specs and waiting for engineering. Plan Mode lets you review before Claude changes anything.</li>
+<li><strong>You want context that compounds.</strong> Cowork sessions start fresh. Code has Auto Memory — it saves your patterns, preferences, and decisions across sessions. No more re-explaining your project every morning. Chat has memory in Projects. We set it up manually in Cowork. Code just does it.</li>
+<li><strong>You’re working with engineers — or replacing a ticket.</strong> Code speaks git natively. Prototype a feature, push to a branch, create a PR. Instead of writing a Jira ticket that says “move the button,” you move the button and show them.</li>
+</ul>
+<p>If you only need email drafts and presentations, stay in Cowork. But if you’ve ever thought “I wish I could just build this myself” — Code is the bridge.</p>
+<p>In this post, we discuss:</p>
+<ol>
+<li>The Transition to Claude Code: Step by Step</li>
+<li>What Genuinely Changes</li>
+<li>Claude Code - Three Extra Tips</li>
+<li>PM Power Moves</li>
+<li>Honest Caveats — Where Cowork Is Still Better</li>
+<li>Going Further — When You’re Ready</li>
+<li>What’s Next</li>
+</ol>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtY29kZS1ndWlkZSZyPTZ5NWltayZ0b2tlbj1leUoxYzJWeVgybGtJam8wTWpBeE5qRTBNakFzSW1saGRDSTZNVGMzTWprMk5UZ3lOQ3dpWlhod0lqb3hOemMxTlRVM09ESTBMQ0pwYzNNaU9pSndkV0l0T1RRek1UVTNJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5LeUV6aENJOG1PTDZ5S0hTT2NlYTdHWlBlMFY3Q1RPd2JoWUZGcDYwUmEwIiwicCI6MTkwMjE1NzYxLCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzcyOTY1ODI0LCJleHAiOjIwODg1NDE4MjQsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.HYoE_SPKMyGVZb83E-ALGwIDLyLXD--axVtYdYaZFes?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=190215761">Upgrade to paid</a></p>
+<hr />
+<h2>1. The Transition to Claude Code: Step by Step</h2>
+<h3>Step 1: Install VS Code</h3>
+<p>Download <a href="https://substack.com/redirect/618f5ad5-e7e2-4010-9836-3f42560d5960?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">VS Code</a> and install it. That’s it — no terminal commands, no configuration files. It’s a free editor that works on Windows, Mac, and Linux.</p>
+<h3>Step 2: Install the Claude Code Extension</h3>
+<p>Open VS Code, go to Extensions (Ctrl+Shift+X), search for “Claude Code” and install it.</p>
+<p><a href="https://substack.com/redirect/fa957aa9-3eeb-4f8f-a1f3-fc26d4e891f5?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="How to Install the Claude Code extension for VS Code" src="https://substackcdn.com/image/fetch/$s_!P9v-!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa0c633f9-08c5-4fb9-87c3-e1228cfe770f_1485x852.png" /></a></p>
+<p>How to Install the Claude Code extension for VS Code</p>
+<p><strong>Important:</strong> If you have GitHub Copilot Chat extension enabled, disable it. Having both active may create confusion when you start — two AI assistants competing for the same sidebar. Claude Code is the one you want.</p>
+<h3>Step 3: Connect Your Anthropic Account</h3>
+<p>You have two options:</p>
+<ul>
+<li><strong>Subscription (most likely):</strong> You probably already have Claude Pro or Max. Claude Code will prompt you to sign in on first use — it opens a browser window, you log in with your claude.ai account, approve the connection, and you’re done. Your subscription usage applies.</li>
+<li><strong>API key (pay-per-use):</strong> Go to <a href="https://substack.com/redirect/a10eb540-5712-4aad-b966-199dac31cf58?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">console.anthropic.com</a> → API Keys → Create Key. Then in VS Code: Command Palette (Ctrl+Shift+P) → “Claude Code: Set API Key” → paste it. You’re billed per token instead of a flat subscription.</li>
+</ul>
+<p>Your web connectors (Gmail, Slack, Notion, etc.) carry over automatically from Cowork — they’re tied to your account, not to a specific app.</p>
+<h3>Step 4: Open Your Cowork Folder</h3>
+<p>File &gt; Open Folder &gt; navigate to the folder you’ve been using with Cowork.</p>
+<p>Your CLAUDE.md is already there. The same instructions you wrote for Cowork work in Code. Claude reads them at the start of every session, just like before.</p>
+<h3>Step 5: Orient Yourself: What You’re Looking At</h3>
+<p>For comparison, this is <a href="https://substack.com/redirect/f4af0dad-4b80-4278-8839-62f207d6480d?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">what we saw in Cowork</a>:</p>
+<p><a href="https://substack.com/redirect/47d0ae75-9d65-4672-bc45-209521f07150?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Cowork interface" src="https://substackcdn.com/image/fetch/$s_!7ozC!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faaabd45b-15c2-472f-a0e6-b25313ad79f0_3168x2117.png" /></a></p>
+<p>Cowork interface</p>
+<p>Here's what you see in VS Code:</p>
+<p><a href="https://substack.com/redirect/3aecdb17-f8f1-4d05-99b8-6cf79614c281?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="VS Code after installing Claude Code extension" src="https://substackcdn.com/image/fetch/$s_!Sdyv!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb4f47c2c-809c-48a5-9912-b6aef4058c27_3020x2010.png" /></a></p>
+<p>VS Code after installing Claude Code extension</p>
+<p>Here’s what you see:</p>
+<ul>
+<li><strong>Left panel: Explorer.</strong>Your files and folders — always visible, always navigable. This is what makes Code feel different from Cowork.</li>
+<li><strong>Right panel:</strong>Claude Code extension. This is where you talk to Claude.</li>
+<li><strong>Middle panel:</strong>A dedicated Claude Code CLI window. It's there when you want more control, e.g., configure local MCP servers. Don't start with it — the extension UI is easier.</li>
+<li><strong>Bottom panel: System Terminal.</strong> System Terminal. You can close it for now.</li>
+</ul>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=190215761&amp;utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;utm_campaign=email-share&amp;action=share&amp;triggerShare=true&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MDIxNTc2MSwiaWF0IjoxNzcyOTY1ODI0LCJleHAiOjE3NzU1NTc4MjQsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.FGVw53lykpA4-HtvuCYQaUFkDfFN4LcG1DDAcVcrZho">Share</a></p>
+<hr />
+<h2>2. What Genuinely Changes</h2>
+<p>Once you're set up, most things feel familiar. Here's what actually surprised me.</p>
+<h3>Your Connectors Just Work</h3>
+<p>Whatever you connected in Cowork — Gmail, Slack, Notion — works here too. No reconfiguration. They're tied to your Anthropic account, not to the app. To see them, use the "/" menu:</p>
+<p><a href="https://substack.com/redirect/b4c6b379-d56f-4093-8db0-09f043d8e8d4?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Code extension → “/” → MCP → Manage MCP Servers" src="https://substackcdn.com/image/fetch/$s_!VGoE!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa42d06c0-88c4-459b-b248-c19fe56d7f4e_1760x842.png" /></a></p>
+<p>Claude Code extension → “/” → MCP → Manage MCP Servers</p>
+<p><a href="https://substack.com/redirect/2701a495-abe7-4fab-bb92-1310d4a2afb2?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Web connectors from Cowork visible in Claude Code extension for VS Code" src="https://substackcdn.com/image/fetch/$s_!sEQr!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe8a1f9c2-e650-41a9-9fdc-4905219c8cc8_2277x1315.png" /></a></p>
+<p>Web connectors from Cowork visible in Claude Code extension</p>
+<p><a id="auto-memory-replaces-our-workaround"></a></p>
+<h3>Auto Memory Replaces Our Workaround</h3>
+<p>Remember how we <a href="https://substack.com/redirect/115c90a0-55c4-476d-a541-613ab545eb87?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">set up cross-session memory in Cowork</a> with Desktop Commander? That was a workaround.</p>
+<p>Code has Auto Memory built in (it was just releases). Claude automatically saves patterns, preferences, and decisions to a MEMORY.md file per workspace. It persists across sessions — no setup needed.</p>
+<p>You can manage it with /memory and ask Claude to remember or forget specific things.</p>
+<p><a href="https://substack.com/redirect/bd365752-f075-44f2-8930-091117d228b6?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Managing memory in Claude Code CLI" src="https://substackcdn.com/image/fetch/$s_!5U88!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2cdba4e8-98d0-44d3-9b8d-ebacda71c8b5_1619x877.png" /></a></p>
+<p>Managing memory in Claude Code CLI</p>
+<p>The progression:</p>
+<ul>
+<li>Chat has memory per Projects</li>
+<li>we set it up manually in Cowork</li>
+<li>Code has the easiest version.</li>
+</ul>
+<p><a id="plan-mode-think-before-you-act"></a></p>
+<h3>Plan Mode — Think Before You Act</h3>
+<p>Hit Shift+Tab and Claude switches to Plan Mode. It analyzes your request, proposes an approach, and waits for approval before touching anything.</p>
+<p><a href="https://substack.com/redirect/b7bd7d27-ef5d-4952-8d79-421e3227f71d?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Plan Mode in Claude Code extension" src="https://substackcdn.com/image/fetch/$s_!Vjrk!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6f8e1f6b-193c-4ed5-a196-88056fa3aba7_1597x465.png" /></a></p>
+<p>Plan Mode in Claude Code extension</p>
+<p>For PMs, this is how you explore a codebase safely. This is similar to what you may know from Lovable.</p>
+<h3>Message Queuing — Stack Requests</h3>
+<p>You can type your next request while Claude is still working on the current one. It queues them and works through them in order.</p>
+<p><a href="https://substack.com/redirect/d5e30e8d-be24-4ae7-a25a-4a355616275a?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Message Queuing in Claude Code" src="https://substackcdn.com/image/fetch/$s_!OTTL!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11f00bd1-e727-44eb-9d05-bb0bdddd7383_1588x1798.png" /></a></p>
+<p>Message Queuing in Claude Code</p>
+<p>Sounds small. In practice, it means you can dump a sequence of tasks — “fix the header, then update the copy on the pricing page, then run the tests” — and walk away (Lovable has it, too).</p>
+<p><a id="context-window-you-can-see-it-now"></a></p>
+<h3>Context Window — You Can See It Now</h3>
+<p>Claude Code extension shows your context usage when you’re above 50%:</p>
+<p><a href="https://substack.com/redirect/7621fe40-1901-480a-9600-6dd051a765cf?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Context window exceeding 50%, Claude Code VS Code extension" src="https://substackcdn.com/image/fetch/$s_!ko7w!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F53e6853b-2ff5-48a7-b066-9bcf5b966615_1268x288.png" /></a></p>
+<p>Context window exceeding 50%, Claude Code extension</p>
+<p>Type /context to visualize it:</p>
+<p><a href="https://substack.com/redirect/069da851-aadf-4472-a190-2fe89da24dad?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Context window visualization in Claude Code extension for vs code" src="https://substackcdn.com/image/fetch/$s_!eU9e!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F098a80d1-d61b-4480-86a6-54cce9fda85c_1376x1052.png" /></a></p>
+<p>Context window visualization in Claude Code extension</p>
+<p>The same method works in Claude Code CLI:</p>
+<p><a href="https://substack.com/redirect/02357247-f0d8-4492-ba19-1c3b557eeb64?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Context window visualization in Claude Code CLI" src="https://substackcdn.com/image/fetch/$s_!iRhy!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff16e5c3a-fc8b-4c71-965e-a521d29dbea8_1505x803.png" /></a></p>
+<p>Context window visualization in Claude Code CLI</p>
+<p>This matters because Claude's thinking quality degrades as the context fills up. When it climbs past 50%, use /compact to compress the conversation. In Cowork, you're flying blind on this.</p>
+<h3>Effort Control</h3>
+<p>In Chat, you toggle extended thinking on and off. In Cowork, it's adaptive. In Code, it's adaptive by default — but you get direct control via /effort. Higher for complex analysis, lower for quick edits:</p>
+<p><a href="https://substack.com/redirect/e6ed780f-abfa-46b9-90c8-478a7d20558c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!_Ymy!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd759144e-a3ba-41a5-a495-930d491b63bc_1286x1271.png" /></a></p>
+<p>Effort and thinking settings in Claude Code extension</p>
+<h3>File References with @</h3>
+<p>Type @ to reference any file from your workspace. Genuinely better than in Cowork for engineering workflows — you get autocomplete across the entire project:</p>
+<p><a href="https://substack.com/redirect/2218429a-ebbf-45ed-8ee8-47ac3eb2e6a7?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Referencing any file from the workspace in Claude Code extension — genuinely better than in Cowork" src="https://substackcdn.com/image/fetch/$s_!ApnO!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2935e63-e522-479f-bd1a-e0f5daeaa25c_1319x385.png" /></a></p>
+<p>Referencing any file from the workspace in Claude Code extension — genuinely better than in Cowork</p>
+<hr />
+<h2>3. Claude Code - Three Extra Tips</h2>
+<h3>Explorer View — Your Project Structure, Always Visible</h3>
+<p>Cowork can also work with files in a folder (especially with Desktop Commander). But in Code, the project structure is always visible in the sidebar — and Claude can efficiently search across it with built-in tools:</p>
+<p><a href="https://substack.com/redirect/d572d381-f5d3-4ee5-b99a-ab0cf601bb88?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Code extension working on a large codebase" src="https://substackcdn.com/image/fetch/$s_!N-OL!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6cd5226e-a16e-4449-b2a8-53bea4166d10_1965x1393.png" /></a></p>
+<p>Claude Code extension working on a large codebase (accredia.io)</p>
+<p>The difference isn’t “can it read files” — both can. It’s that Code makes your project structure a first-class citizen. This is especially useful when working with large code repositories for people who need to open those files often.</p>
+<p>At the same time, I’m not gonna lie. When working with coding agents, Lovable included, I virtually never look at my projects’ code. Also, I find in-context files from Cowork optimized for knowledge work. When needed, Cowork lets you easily open folders those files are in:</p>
+<p><a href="https://substack.com/redirect/8c8c3383-bf1a-453d-a20d-6b9ec3502a79?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Cowork presents and can focus on selected files in its right panel" src="https://substackcdn.com/image/fetch/$s_!fDKS!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F05f9a249-5b17-49a2-9bd6-20cdc6d19920_2495x1545.png" /></a></p>
+<p>Cowork presents and can focus on selected files in its right panel</p>
+<h3>How to Visualize and Edit .md Files</h3>
+<p>I recommend you install "Markdown Preview Enhanced" extension. After clicking <code>Cmd + Shift + V</code> or <code>Ctrl + Shift + V</code> you're able to use the WYSIWYG editor:</p>
+<p><a href="https://substack.com/redirect/aa6529ca-18e8-49ae-8ef6-75fa7310e6f3?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="WYSIWYG editor for .md files (Markdown Preview Enhanced)" src="https://substackcdn.com/image/fetch/$s_!xSgI!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6c539dad-f537-461f-b7ec-23fe054d34f0_2613x1264.png" /></a></p>
+<p>WYSIWYG editor for .md files (Markdown Preview Enhanced)</p>
+<p>If you right click an .md file → Open With…, you can make this a default behavior:</p>
+<p><a href="https://substack.com/redirect/9c396cfa-6406-45ee-86fb-35790c394ba5?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="WYSIWYG editor for .md files by default" src="https://substackcdn.com/image/fetch/$s_!9yvT!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F13dbbfc1-0e7f-4022-aec5-55674046c1d1_2205x655.png" /></a></p>
+<p>WYSIWYG editor for .md files by default</p>
+<p><a id="how-to-connect-to-more-apps-without-local-mcps"></a></p>
+<h3>How to Connect to More Apps without Local MCPs</h3>
+<p>Claude Desktop offers built-in MCP Servers ("web connectors") for many popular apps (Gmail, Notion, Figma, Slack, etc.). Once configured, they are available in Claude Code, too.</p>
+<p>To add more, you can use Pipedream MCP (a free platform) to connect to 1,000s of APIs and apps with a single MCP server:</p>
+<ul>
+<li>Step 1: Go to <a href="https://substack.com/redirect/bd48df9f-7206-470e-9935-ecec35ed8a9c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">https://mcp.pipedream.com/</a></li>
+<li>Step 2: Connect your apps.</li>
+<li>Step 3: In Claude Desktop, add a single custom web connector and follow the instructions: https://mcp.pipedream.net/v2</li>
+</ul>
+<p><a href="https://substack.com/redirect/cedae4ae-4630-4cc9-b823-eb53dbf134db?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Using Pipedream MCP to connect Claude to 1,000s of APIs and apps" src="https://substackcdn.com/image/fetch/$s_!ZwJ2!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F04518700-ad10-4bf1-8fdd-4523e95a3be4_2545x1801.png" /></a></p>
+<p>Using Pipedream MCP to connect Claude to 1,000s of APIs and apps</p>
+<p>It works across the entire Claude ecosystem — Chat, Cowork, Code Tab, Claude Code (CLI and VS Code extension).</p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=190215761&amp;utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;utm_campaign=email-share&amp;action=share&amp;triggerShare=true&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MDIxNTc2MSwiaWF0IjoxNzcyOTY1ODI0LCJleHAiOjE3NzU1NTc4MjQsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.FGVw53lykpA4-HtvuCYQaUFkDfFN4LcG1DDAcVcrZho">Share</a></p>
+<hr />
+<p><em>Next, we continue with:</em></p>
+<ul>
+<li><em>PM Power Moves</em></li>
+<li><em>Honest Caveats — Where Cowork Is Still Better</em></li>
+<li><em>Going Further — When You're Ready</em></li>
+<li><em>What’s Next</em></li>
+</ul>
+<hr />
+<h2>4. PM Power Moves...</h2>
+<h2>Keep reading with a 7-day free trial</h2>
+<p>Subscribe to The Product Compass to keep reading this post and get 7 days of free access to the full post archives.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtY29kZS1ndWlkZSZyPTZ5NWltayZ0b2tlbj1leUoxYzJWeVgybGtJam8wTWpBeE5qRTBNakFzSW1saGRDSTZNVGMzTWprMk5UZ3lOQ3dpWlhod0lqb3hOemMxTlRVM09ESTBMQ0pwYzNNaU9pSndkV0l0T1RRek1UVTNJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5LeUV6aENJOG1PTDZ5S0hTT2NlYTdHWlBlMFY3Q1RPd2JoWUZGcDYwUmEwIiwicCI6MTkwMjE1NzYxLCJzIjo5NDMxNTcsImYiOnRydWUsInUiOjQyMDE2MTQyMCwiaWF0IjoxNzcyOTY1ODI0LCJleHAiOjIwODg1NDE4MjQsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.HYoE_SPKMyGVZb83E-ALGwIDLyLXD--axVtYdYaZFes?simple=true&amp;utm_source=paywall&amp;utm_medium=email&amp;utm_content=190215761&amp;next=https://www.productcompass.pm/p/claude-code-guide&amp;coupon=34546817">Start trial</a></p>
+<h3>A subscription gets you:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>𝗔𝗰𝗰𝗲𝘀𝘀 𝗲𝘃𝗲𝗿𝘆 𝗶𝘀𝘀𝘂𝗲 → Stay ahead with 180+ actionable AI PM strategies and advice. Full archive.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>𝗝𝗼𝗶𝗻 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗦𝗹𝗮𝗰𝗸 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 → Get exclusive access to Paweł (DM) and 1,850+ AI PM community to grow together.</td>
+</tr>
+<tr>
+<td></td>
+<td>𝗕𝗼𝗼𝘀𝘁 𝘆𝗼𝘂𝗿 𝗣𝗠 𝗰𝗮𝗿𝗲𝗲𝗿 → Enroll in the AI PM Learning Program ($700 value) and 4 video courses ($546 value).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=190215761&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MDIxNTc2MSwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3NzI5NjU4MjQsImV4cCI6MTc3NTU1NzgyNCwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.4p-KMFP5zD4zQNEAO5kC1v17fK81h2JHJ1xMjcPEHVA&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=190215761&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5MDIxNTc2MSwiaWF0IjoxNzcyOTY1ODI0LCJleHAiOjE3NzU1NTc4MjQsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.FGVw53lykpA4-HtvuCYQaUFkDfFN4LcG1DDAcVcrZho&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9jbGF1ZGUtY29kZS1ndWlkZT91dG1fc291cmNlPXN1YnN0YWNrJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXJlc3RhY2stY29tbWVudCZhY3Rpb249cmVzdGFjay1jb21tZW50JnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbkJ2YzNSZmFXUWlPakU1TURJeE5UYzJNU3dpYVdGMElqb3hOemN5T1RZMU9ESTBMQ0psZUhBaU9qRTNOelUxTlRjNE1qUXNJbWx6Y3lJNkluQjFZaTA1TkRNeE5UY2lMQ0p6ZFdJaU9pSndiM04wTFhKbFlXTjBhVzl1SW4wLkZHVnc1M2x5a3BBNC1IdHZ1Q1lRYVVGa0RmRk40TGNHMUREQWNWY3JaaG8iLCJwIjoxOTAyMTU3NjEsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzI5NjU4MjQsImV4cCI6MjA4ODU0MTgyNCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.nBjLBureL2X_nTkeunXUgOyYs-2rO5kqs1ratm7ll5k?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVNREl4TlRjMk1Td2lhV0YwSWpveE56Y3lPVFkxT0RJMExDSmxlSEFpT2pFNE1EUTFNREU0TWpRc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAuaWMxaVNfaXpwYnBwcF9RR0xnVG5vbjBqRkF0cV92TTVmZXVTRC1VczdlbyIsInAiOjE5MDIxNTc2MSwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3Mjk2NTgyNCwiZXhwIjoyMDg4NTQxODI0LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.xtzqCtjZMXOUQ8cuoZl5XN1l8uuyurlxc34VPcvU03g?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/2e256f0a-21a6-4688-8ece-7d70b4eb2c85?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoxOTAyMTU3NjEsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3NzI5NjU4MjQsImV4cCI6MjA4ODU0MTgyNCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.pv2ZNEjWI0y6XQIMrUevTpILcW1vFX8gPLCr0fr69XY?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

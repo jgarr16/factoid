@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>The Indicator guide to vibecoding for OSINT — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="The Indicator guide to vibecoding for OSINT — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>The Indicator guide to vibecoding for OSINT</h1>
+<p class="meta">2026-08-24 · received 2026-08-24 20:02 +0900
+ · <a href="https://indicator.media/p/the-indicator-guide-to-vibecoding-for-osint" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>The Indicator guide to vibecoding for OSINT</h1>
+<hr />
+<p>_Hey! Vibecoding for OSINT is the focus of the next members-only workshop, held this Thursday at 11 am ET. Investigative reporter Omer Benjakob will join us and show the more than a dozen tools he built. Reply to this email for an invite, or fill out <em><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_eoQ8UeIev-WrYbuOSCDLFDqCTB7GvIDVUhYta4YRcLTvsg/viewform?usp=header"><em>this quick form</em></a></em> to ensure I send you an invite for this and future workshops.</p>
+<p>----------For 20 years, Eitan Livne amassed a collection of regional Arabic dialects, including Egyptian, Moroccan, and Iraqi.</p>
+<p>His dream was to start a company that could train on the corpus of writing to build an Arabic dialect detector.</p>
+<p>"I wanted that to be my first startup, my first company: searching by Arabic dialect," he said. "We call them dialects but the difference between let's say Moroccan and Iraqi is bigger than English and German or Dutch and German.”</p>
+<p>He eventually decided the VC-funded startup life wasn’t for him. Instead, he started a <a href="https://www.elconsulting.us/">company</a> that trains people on OSINT techniques and provides intelligence and digital exposure analysis. But Livne kept collecting Arabic texts. Over the years, he licensed the material to companies that wanted to train on the data. He one day hoped to use the corpus for himself.</p>
+<p>Thanks to vibecoding, that day arrived last year. Livne loaded the linguistic examples into <a href="https://base44.com/">Base44</a>, a vibecoding app, and told the product what he wanted to create. Soon he had a working prototype. After a bit of tweaking he released his tool, the <a href="https://detectdialect.base44.app/">Arabic Dialect Identifier</a>.</p>
+<p>Twenty years of collecting and planning came to life in a matter of days — no coding knowledge required.</p>
+<p>"It's amazing, really," Livne told me.</p>
+<p>Vibecoding is a cliché, but it describes a real phenomenon with remarkable potential for investigators. Using a dedicated platform like Base44 or Lovable, or a chatbot like Claude or ChatGPT (or their dedicated coding variants), someone with no coding, design, or product expertise can build a tool that speeds up their workflow, gathers useful information, visualizes data, performs OSINT tasks, or more.</p>
+<p>"If you can describe it, you can make it,” said <a href="https://www.digitaldigging.org/">Henk van Ess</a>, a longtime OSINT trainer who has vibecoded several useful tools and leads multi-day workshops for newsrooms on how to use AI.</p>
+<p>In the OSINT community, vibecoding has led to a flowering of new tools. I looked at one slice of the output in<a href="https://indicator.media/p/analyzed-38-situation-monitoring-dashboards-he-ones-worth-using-and-what-they-get-wrong"> my recent guide</a> to 38 "situation monitoring” dashboards, many of which were created by people with no coding skills or knowledge.</p>
+<p>Building tools for public release is just one use case, and it comes with risk and expectations. Most investigators will get more out of building something that lives on their own computer (or in their AI account) and handles specific tasks and workflows. I'd also argue you're vibecoding when you create a custom GPT or even the Skills for Chrome I <a href="https://indicator.media/p/the-indicator-guide-to-using-skills-in-chrome-for-osint">outlined</a> a couple of months ago.</p>
+<p>To help investigators experiment with vibecoding, I spoke to five people in the OSINT and journalism community who have vibecoded their own tools. None of them are software engineers. Two describe themselves as having zero technical background. Some, like Livne and van Ess, built public facing tools. Others, like <a href="https://www.omerbenjakob.com/">Omer Benjakob</a>, an investigative reporter with Haaretz, built more than a dozen tools that never leave his laptop.</p>
+<p>I think anyone could benefit from using AI to create personalized tools and processes. This guide offers advice on the easiest ways to get started, how to scale up, cautions about security and privacy, and firsthand accounts of how people are building. I’m grateful to Benjakob, <a href="https://wondertools.substack.com/">Jeremy Caplan</a>, Livne, van Ess, and <a href="https://plessas.net/sarah-womer">Sarah Womer</a> for taking the time to talk.</p>
+<ul>
+<li><a href="#where-to-start">Where to start</a></li>
+</ul>
+<p><a id="elements-of-a-vibecoding-prompt"></a>
+* <a href="#elements-of-a-vibecoding-prompt">Elements of a vibecoding prompt</a></p>
+<ul>
+<li>
+<p><a href="#the-vibecoding-ladder">The vibecoding ladder</a></p>
+</li>
+<li>
+<p><a href="#security-privacy">Security/Privacy</a></p>
+</li>
+<li>
+<p><a href="#the-tool-isnt-the-thing">The tool isn’t the thing</a></p>
+</li>
+</ul>
+<h2><strong>Where to start</strong></h2>
+<p>Van Ess recently taught an AI workshop to a group of reporters in Berlin. One participant was unsure of what to do with the technology. Instead of talking about AI, van Ess asked about her day.</p>
+<p>She told him she was frustrated because she’d taken her kids to the playground that day and found it fenced off, he said.</p>
+<p>Van Ess saw an opportunity: "Maybe there's a story hidden here."</p>
+<p>They opened Claude and told the model that they're a reporter in Berlin who wants to understand why the playgrounds are closed and if there's data and a story about them. Soon they had a dataset of park closures in her Berlin neighborhood, courtesy of a government site Claude had found. They took the data and created a <a href="https://searchwhisperer.ai/cc/live/group1/spielplatzsperren/">standalone app</a> that shows which playgrounds are open or closed in a specific Berlin neighborhood.</p>
+<p><img alt="https://searchwhisperer.ai/cc/live/group1/spielplatzsperren/" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2c3f41fc-e0b2-4bf1-80f9-9a8bc8f53053/image.png?t=1787275725" />
+<em><a href="https://searchwhisperer.ai/cc/live/group1/spielplatzsperren/">https://searchwhisperer.ai/cc/live/group1/spielplatzsperren/</a></em></p>
+<p>Van Ess said his preferred way to teach vibecoding is to begin with data.</p>
+<p>"Instead of starting making actual products, phase one is collecting little gems: data [that] nobody looked at,” he said. “I need a minimum of 1,000 sources."</p>
+<p>It works because the empty chatbot or terminal window "is scaring people like hell,” as van Ess put it. They don't know what to ask or how to start. Instead, bring data or documents — something you can use to "feed the monster with meat.”</p>
+<p>The second step is asking the model to write the prompt for you. For instance: “Give me a prompt to analyze this dataset.” Van Ess suggests including context about your role, like “I'm a reporter for a local daily newsroom.”</p>
+<p>Handing a model some data is one way to start a vibecoding session. But not the only one.</p>
+<h3><strong>Start with a need or problem</strong></h3>
+<p>"Everything that I do, I'm super practical. It comes from work," Livne told me. "I don't invent tools that I might need or that are theoretically good. If I don't use it for work, I don't develop it."</p>
+<p>Livne had spent two decades thinking about an Arabic dialect tool. Maybe you've got an idea already, too. But sometimes the best vibecoding doesn't start with thinking about a tool or product. Jeremy Caplan, who teaches entrepreneurial journalism at the Craig Newmark Graduate School of Journalism and runs the <a href="https://wondertools.substack.com/">Wonder Tools</a> newsletter, said you can start is by identifying a routine, a pain point, or a problem that you have.</p>
+<p>"I almost always start with a problem or an opportunity,” Caplan said.</p>
+<p>He added: “Sometimes what's most helpful for people is having a resource that's easy to use, that looks good, that is adaptable or customizable based on their interests or their needs and that conforms to them specifically and is not generic like a piece of content might be."</p>
+<p>For example, he recently wrote a Wonder Tools <a href="https://wondertools.substack.com/p/create-your-ai-headquarters">explainer</a> about Model Context Protocol. In addition to the written newsletter, he built a <a href="https://mcp-tool-linking-guide.silverboat.chatgpt.site/">page</a> in ChatGPT Sites to accompany the post.</p>
+<p>Describe your need or problem to the model and ask how it might be able to help. LLMs are good at churning out options and possibilities. But, as van Ess said, you need to begin by feeding them something.</p>
+<p>Another good place to start: give it context about who you are, what you do, and the problem you're facing. Livne needed a way to quickly detect an Arabic dialect. The German reporter didn't realize it at first, but she wanted an easy way to find which local playgrounds were closed and why.</p>
+<h3><strong>Start with a workflow/routine</strong></h3>
+<p>Caplan said that you shouldn’t try to "build an app for everything." The problem has to clear a minimum threshold.</p>
+<p>"If it's just — I need to query something, I need to do a search — that doesn't require a vibecoded app of any kind, because it's something I can sit down and do right now," he said. "But if it's something that has multiple parts to it, that's where vibe coding comes in handy."</p>
+<p>Again, describe the workflow and ask for ways to help make it more efficient or effective. What do you do on a regular basis? What process has to run several times a week or month? One example from my work is that we publish the <a href="https://indicator.media/briefings">Indicator Briefing</a> each Friday. As I detail below, I used Claude to build a daily digest that pulls from newsletters, web searches, and other sources to surface potential items for the Briefing.</p>
+<p>Vibecoding doesn't need to result in a standalone tool. Building can take many forms.</p>
+<h3><strong>Start by simplifying/customizing a tool to your needs</strong></h3>
+<p>Ironically, the sheer volume of OSINT tools available today means many are overkill for basic tasks. Maybe there's a high-priced platform offering detailed passive DNS data, but all you need is a quick infrastructure check on a few specific things. Build <em>that</em>.</p>
+<p>Livne offered an example. He built <a href="https://profile-scout.base44.app/">Profile Scout</a>, a username checker that covers about 20 platforms. There are lots of great, free options that go much farther: <a href="https://whatsmyname.app/">WhatsMyName</a> covers more than 600, <a href="https://sherlockproject.xyz/">Sherlock</a> can search hundreds as well. But Livne’s is better for him because it’s focused. It takes a username and builds URLs for it across a much smaller set of platforms — the ones most useful to him.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/973cb396-021a-4e41-bd43-3d0cdf07f162/image.png?t=1787275725" /></p>
+<p>It just builds URLs and opens tabs. That's what he wanted, so he built it.</p>
+<p>"I know which platforms are relevant for my work," he said. "And I know that it's faster and easier for me to click through 20 tabs and see if a username exists than waiting for a combined [tool]. Twenty tabs open in one second, go through them in 20 seconds."</p>
+<h3><strong>Start with an experiment</strong></h3>
+<p>I can't overstate how important it is to just <em>try something</em>. The easier the better. Ask an AI to build you a one-page website to summarize data. Ask it to think of ways to help you learn about X on an ongoing basis. Ask it to help you achieve a goal. Any of these could lead you down a path to building something.</p>
+<p>It’s the vibecoding equivalent of the classic cure for writer’s block: just start writing.</p>
+<p>One option: tell a chatbot what you do and who you are and ask it to suggest something it could build or create to help you in your work. You'll be surprised what you might be able to come up with together.</p>
+<p>If you have an idea, you can also try using <a href="https://gemini.google.com/share/a55d359810b6">VibeCoder Pro</a>, Caplan’s tool to generate a prompt for vibecoding. He created it with <a href="https://gemini.google/overview/canvas/">Gemini Canvas</a>, a Google tool for building apps, games, and infographics. VibeCoder Pro asks you to describe your idea, identify the target audience, and name the model you plan to use. He compared it to a stepladder — something that turns a plain-language idea into a more effective prompt.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5f1cd210-8a0d-4888-b7dc-de47fa9b3341/image.png?t=1787275725" /></p>
+<p>"This kind of tool should be super easy. It shouldn't require figuring out complicated menus or reading lengthy instructions. Just: what do you want to do? Just dive in,” he said.</p>
+<p>Caplan said it’s important to play around and iterate.</p>
+<p>"People need to know it's an iterative process. It's not a one-shot process," he said. "People sometimes think you're going to vibecode something, type in your instruction, and get out — like you put the frozen pizza in, open the oven, it's ready to go."</p>
+<p>This is where a tip from van Ess comes in handy, even if it's skipping ahead. He said that once you get to the place you wanted to be, where you've built the tool or page or app, ask the model: what should I have asked in the first place to get us here? That helps you learn how to work with the system, be it a model or vibecoding platform. The more you try things, the better you get.</p>
+<h2>Elements of a vibecoding prompt</h2>
+<p>As van Ess said, one way to create a vibecoding prompt is to tell a model a bit about who you are, what you want to do, and to ask it to generate a prompt for you. The more specific, the better. So here are some elements you should include in your initial request/prompt to get started with a vibecoding session:</p>
+<ul>
+<li>
+<p>A summary of your idea, including information about how it should work, what the input/output will be, who it’s for, whether it lives on your system or in a publicly accessible format, any third party APIs or keys you can provide, etc.</p>
+</li>
+<li>
+<p>Any context you can upload, including documents, data, screenshots, and links to examples of similar apps.</p>
+</li>
+<li>
+<p>Design guidance, including a mood board of websites, colors, and apps to emulate. Van Ess also points his model to Apple's <a href="https://developer.apple.com/design/human-interface-guidelines">Human Interface Guidelines</a>.</p>
+</li>
+<li>
+<p>Reminders to incorporate security and privacy best practices and to minimize token use wherever possible.</p>
+</li>
+<li>
+<p>A request that the model produce a plan for you to review and approve before it builds anything. Feel free to request wireframes and other visual mockups as part of the plan.</p>
+</li>
+</ul>
+<h2><strong>The vibecoding ladder</strong></h2>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8f0b5882-6c96-4d8c-a532-5e1c728ca252/image.png?t=1787275724" /></p>
+<p>As you can see from the above examples, vibecoding isn't just one thing. It could be an automated workflow, a one-page HTML file, a bookmarklet, an app that runs on your machine, or a product that you release and ask people to pay for.</p>
+<p>"Some people think vibecoding means I have to work on the terminal and do complicated stuff, and it doesn't,” Caplan said. “It means you can go to Claude and say, 'make me a one-page overview of something.'"</p>
+<p>Many of the frontier models offer built-in tools to help you create something and make it available at a public link.</p>
+<p>"Baby steps are things like <a href="https://gemini.google/overview/canvas/">Gemini Canvas</a> and <a href="https://madewithclaude.com/">Claude Artifacts</a>, where you can use your existing AI chatbot," he said. "Then you have more advanced tools, which include <a href="https://lovable.dev/">Lovable</a> and <a href="https://bolt.new/">Bolt</a>. And then you have the power coding tools like <a href="https://claude.com/product/claude-code">Claude Code</a> and <a href="https://replit.com/">Replit</a>."</p>
+<p>I created the Vibecoding Ladder to show the different rungs you can climb, starting with the easiest and lowest-effort options and moving up to shipping a public-facing tool. Most of us have no desire or need to go there. And that's a good thing, because you can achieve a lot with much less.</p>
+<p>Releasing something publicly raises the stakes and your responsibility. You can manage that (and we'll talk a bit about how), but most investigators can get tremendous value from building something just for yourself or your team.</p>
+<p><strong>Rung</strong></p>
+<p><strong>Example</strong></p>
+<p><strong>Cost</strong></p>
+<ol>
+<li>Saved prompt or skill file</li>
+</ol>
+<p>Indicator’s Entity Extractor</p>
+<p>~0</p>
+<ol start="2">
+<li>Custom GPT, Gemini Gem, etc.</li>
+</ol>
+<p>Friend Overlap Tool</p>
+<p>~0</p>
+<ol start="3">
+<li>Scheduled routine</li>
+</ol>
+<p>A daily digest that runs itself</p>
+<p>low</p>
+<ol start="4">
+<li>Internal tool or dashboard</li>
+</ol>
+<p>Benjakob’s screenshot search</p>
+<p>low</p>
+<ol start="5">
+<li>Public tool on a platform</li>
+</ol>
+<p>Livne’s Arabic Dialect Identifier</p>
+<p>$$</p>
+<ol start="6">
+<li>Public, self-hosted infrastructure</li>
+</ol>
+<p>Van Ess’s Playground tool or a “situation monitoring” dashboard</p>
+<p>$$$</p>
+<p><a id="rung-1-saved-prompt-or-skill-file"></a></p>
+<h3><strong>Rung 1: Saved prompt or skill file</strong></h3>
+<p>Not everything needs to be a product. The starting point is often a document with a set of instructions for a chatbot. This could take the form of a reusable prompt that you save and run whenever you need it. For example, I recently wrote a <a href="https://indicator.media/p/the-indicator-guide-to-using-skills-in-chrome-for-osint">guide</a> to Skills in Chrome, which is a way to create reusable prompts that can run in the browser.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e3db363a-b9b9-4470-8e63-bf5af5fa2121/image.png?t=1787486137" /></p>
+<p>I created three skills that provide a quick and useful analysis or assessment of content on a webpage. The Entity Extractor pulls named people, organizations, contact details, and social links from a webpage and presents them as labeled lists you can reformat as a spreadsheet. It's a simple tool that serves my needs.</p>
+<p>Another example is a <a href="https://support.claude.com/en/articles/12512176-what-are-skills">skill file</a>. This is a set of instructions that tells a model how to execute a type of task. If you run through the same steps when reviewing a document or preparing data for analysis, you can write down the steps in a clear format and save that in your chosen model as a skill file. When you need to run the task, just summon the skill and have your chatbot run it.</p>
+<h4>Tips</h4>
+<ul>
+<li>
+<p>A skill file is your process, in order, in plain language. Strip the adjectives. "Make it great" tells a model nothing. Van Ess: "I don't use any adjectives anymore. I'm only typing neutral stuff."</p>
+</li>
+<li>
+<p>Save it where you'll reach for it. A Chrome skill, a saved prompt, a text file you paste. Retrieval matters.</p>
+</li>
+<li>
+<p>When you're done, ask the model to show you every prompt you typed and to advise you on how you could have gotten there more efficiently.</p>
+</li>
+</ul>
+<h3><strong>Rung 2: Custom GPT, Gemini Gem</strong></h3>
+<p>The major models offer a way to create a self-contained product or routine. Gemini has Gems, ChatGPT has custom GPTs, etc. Load in instructions, documents, and other source material to ground the system in what you want it to know. Then write a detailed prompt describing what you want it to do each time you run it. (or ask the model to write a prompt for you!) This is the easiest way to create something that feels like a tool and that you can use again and again.</p>
+<p>Kirby Plessas, who runs the <a href="https://plessas.net/">Plessas Experts Network</a> OSINT training service, <a href="https://plessas.net/ai-tools">built</a> several custom GPTs. <a href="https://chatgpt.com/g/g-68f8d17a2e3481919995629da9dffdaf-friend-overlap-tool">One</a> enables you to load in the friends lists of two social media accounts and identify overlaps.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2bff36e5-36c2-45ee-aec8-82219585e6df/image.png?t=1787275724" /></p>
+<p>I created a Gemini Gem to help with illustrations for Indicator. I often need to create a header image for OSINT guides (like this one!). I have zero graphic design skills. But I wanted to create a house style that would create a consistent look for guides. I wanted to eschew tech and investigative stereotypes like streams of binary code and magnifying glasses.</p>
+<p>I created a Gem, loaded in several examples of our guides and iterated with Gemini to craft a prompt that enabled it to use the Nano Banana image generation engine to generate an image in our style. Now I can paste in a draft and it gives me three concepts. I choose one and it generates the image. It's a mini app that saves me time I'd rather spend on the content itself. I described the Gem and my Skills in Chrome in this recent Indicator workshop:</p>
+<p>Youtube: Indicator May workshop: AI skills for investigators (https://youtu.be/WIzq5o6KruA)</p>
+<h4>Tips</h4>
+<ul>
+<li>
+<p>Ground it in your own work. Samples of your past output beat any description.</p>
+</li>
+<li>
+<p>Give it one job. A Gem that makes header images. A GPT that compares two follower lists. Not a general assistant, not a multi-phase process.</p>
+</li>
+<li>
+<p>Work on revising the core prompt until the output matches what you want. I like to paste a prompt from one model into another and ask it to help me improve on it.</p>
+</li>
+</ul>
+<p><a id="rung-3-scheduled-routine"></a></p>
+<h3><strong>Rung 3: Scheduled routine</strong></h3>
+<p>So much of what we do as investigators involves workflow and routines. That’s tradecraft. If we collect a username, there's a clear set of steps to analyze it. Or we need to monitor a specific topic area for news, updates, programs, or content. Vibecoding is a great way to automate a routine task.</p>
+<p>There are several tools built to automate a workflow, such as <a href="https://n8n.io/">n8n</a> and <a href="https://www.mindstudio.ai/">MindStudio</a>. You can connect apps together — such as Gmail and Slack — and automate processes that you do as part of your work. A good first step is the scheduled-task feature built into <a href="https://code.claude.com/docs/en/desktop-scheduled-tasks">Claude</a>, <a href="https://blog.google/products-and-platforms/products/gemini/scheduled-actions-gemini-app/">Gemini</a>, and <a href="https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt">ChatGPT</a>.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/72f3898e-6c6d-4a8b-8e3d-e333e1ae01ff/image.png?t=1787275725" /></p>
+<p>I created a scaled-up version of a scheduled task. For each week’s Indicator Briefing, I need to keep up with the latest news, tools, and tips in the world of digital investigations. To assist with this, I use Google Alerts and Talkwalker to get notifications of web hits for my keywords, subscribe to many newsletters, follow people on LinkedIn, and scan X and other platforms. I need to review everything before I consider putting it in a Briefing. But I wanted to speed up the process.</p>
+<p>I routed all of my newsletter subscriptions and alerts to a new Gmail account, which I connected to Claude. I also use the <a href="https://www.firecrawl.dev/">Firecrawl</a> scraping service to run targeted online checks of websites (Reddit, <a href="http://gijn.org">GIJN.org</a> and others) to see if they published anything of relevance.</p>
+<p><img alt="The top of one of my daily newsletter digests" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f991fead-0b66-4487-91da-1f69bd578b3a/image.png?t=1787275725" />
+<em>The top of one of my daily newsletter digests</em></p>
+<p>I used Claude to create a daily scan that checks the content of all emails in the Gmail inbox and that runs a Firecrawl search. It collects items of potential interest in a single email that waits for me in the draft folder every morning. I review it, visit the links that interest me, and see if anything is worth considering for the Briefing.</p>
+<p>I still need to do my manual scans of LinkedIn and other platforms, but my automated routine saves me time and put my monitoring in one inbox. I simply described my routine and sources to Claude and asked it to draft a plan for centralizing it.</p>
+<h4>Tips</h4>
+<ul>
+<li>
+<p>Describe the workflow honestly and in detail. Include the boring parts and the steps you skip. Include any tools you use, document types, etc.</p>
+</li>
+<li>
+<p>Name the input and the output. Van Ess automated a media buyer's budget deck without understanding media buying because he had the person explain the process. Once he understood that it started with a spreadsheet and ended with a deck, he could work with it.</p>
+</li>
+<li>
+<p>Try a native scheduler first. Claude, Gemini, and ChatGPT all enable you to run scheduled tasks. No new subscription, no new tool needed. Similarly, n8n and MindStudio have lots of templates.</p>
+</li>
+<li>
+<p>Deliver it where you already look. This is about optimizing workflow. Integrate it into what you do and what you already use.</p>
+</li>
+</ul>
+<h3><strong>Rung 4: Internal tool or dashboard</strong></h3>
+<p>Omer Benjakob covers technology and cybersecurity for the Israeli newspaper Haaretz. He doesn't consider himself to be a technical person. He can't code and he studied philosophy at university. But that didn’t stop him from building a custom dashboard of more than a dozen tools that help him in his reporting.</p>
+<p>One non-negotiable: everything, from data to the code, had to live on his computer. "All my tools run in my browser but they sit locally ... like none of this will ever be online in a real way, because it's just tools for me," he told me. (Though he has started sharing some tools with select colleagues.)</p>
+<p>In our recent <a href="https://youtu.be/f6ODZiA1UEc">interview</a> for Indicator's Show &amp; Tell Podcast, he showed us his internal dashboard, which includes a tool that scans and categorizes his screenshots automatically. (I almost immediately told Claude to build the same thing for me.) He also has a tool that assists him with pulling and organizing company ownership data and other records.</p>
+<p>Here’s a screenshot of Benjakob’s internal OSINT dashboard:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3d4343cc-0700-4140-8a32-cc8b0d42d64e/image.png?t=1787275725" /></p>
+<p>The left-hand menu lists the tools he’s built using Claude and ChatGPT. They include:</p>
+<ul>
+<li>
+<p>Bookmarks</p>
+</li>
+<li>
+<p>Leaks Toolkit</p>
+</li>
+<li>
+<p>Contacts/sources</p>
+</li>
+<li>
+<p>Corporate Registry</p>
+</li>
+<li>
+<p>Transcriber</p>
+</li>
+<li>
+<p>Expenses</p>
+</li>
+</ul>
+<p>The names are largely self-explanatory. In some cases they replace third-party tools he once used, like Toby and OneTab for collecting tabs and bookmarks. Others, like his Leaks Toolkit, are custom-built for his own needs.</p>
+<p>Benjakob thought about his workflow and regular needs and created tools that mapped directly to them. Now, instead of paying for and installing tools from a half-dozen vendors, he has a single toolkit that loads from one interface and does what he needs.</p>
+<p>"My centerpiece tool is my leaks tool, which is the one I love the most. It's this almost completely analytical, methodological pipeline — how do you deal with a leak?" he said. "It could be four hours of screen-capture videos, or 20 gigs of emails, or 15 gigabytes of WhatsApp text. I managed to create a pretty abstract pipeline that is completely agnostic to what your actual leak is.”</p>
+<p>The tool enables him to sift through leak data and use an LLM to identify its contents, media and file types, entities etc. It does not, however, produce analysis or conclusions for him.</p>
+<p>Benjakob used Claude and ChatGPT to create his tools, but he told me his goal is to keep AI out of the reporting and analysis process as much as possible.</p>
+<p>"I'm trying to use as little AI as possible in my actual tools. Like really as little as possible. I want them to be as data driven and databased and as least LLM based as possible — even if the code building and development was 100% AI,” he said.</p>
+<p>He builds tools to help him organize, categorize, and examine data. The goal is to stay rooted in the data he's collected, and to use models for nothing beyond organizing and processing it so he can review it and make his own calls.</p>
+<p>Matthias Wilson, the head of intelligence for ICEYE, took a similar approach to building an image analysis and search tool that runs on his computer. “You point it at a folder of images, and it indexes them locally. Using Apple’s Vision framework, the app automatically generates labels for each image — objects, scenes, and visual concepts — which then become searchable,” he wrote <a href="https://www.linkedin.com/pulse/osint-ai-macos-app-i-didnt-expect-build-matthias-wilson-pagxf/">on LinkedIn</a>.</p>
+<p>Wilson said that fundamental OSINT approaches translate well into vibecoding:</p>
+<p>“I approached development the same way I approach investigations: step by step, verifying each assumption. I started with the most minimal version possible. When that worked, I added the next piece. And only when that worked, I moved on again.</p>
+<p>Every time I tried to be clever — add Vision-based labeling, OCR, metadata parsing, UI logic, and storage all at once — the app responded by breaking in creative and educational ways.</p>
+<p>This will sound very familiar to anyone who has ever chased an OSINT lead too fast.“ — Matthias Wilson</p>
+<p>Benjakob said the coding process was relatively easy. He told the model what he does, which tools he uses, and what he wants to build, with the constraint that it has to live on his machine and maximize privacy and security. He iterated from there.</p>
+<p>For example, his screenshot tool began as a simple script Claude wrote to rename and organize the screenshots piling up on his desktop. Once it worked, he scaled up to create a tool that does it automatically.</p>
+<p>But Benjakob warned that this is where you will start to burn tokens and have to spend more money.</p>
+<p>"It's going to take numerous iterations, and it does chomp up credits and tokens, and that is a limiting factor for people," he said. "Especially as you get into more complicated projects with multiple layers or databases — for the kind of stuff like OSINT tools, it's going to require not just a little more time but possibly even a little more money."</p>
+<p>Benjakob pays for some third-party services, such as DNS lookups for website analysis, so that he can plug them into his internal tools. He also warned about model <a href="https://en.wikipedia.org/wiki/Enshittification">enshittification</a> — whereby AI tools attracted users with permissive token limits only to increase prices.</p>
+<p>"I think we're already seeing the enshittification of Claude at many levels. And the more beholden you are to the actual models, the more in trouble you are when they do that bait and switch where the models have changed behind your back,” he said. “Things that used to be 'wow, I can't believe Opus 4.5 can do this in 5 hours' — now my usage is burnt out in three hours and he hasn't done 30% of what we said."</p>
+<p>Factor that into what you build. I find it helps to ask the model to estimate how many tokens a task will take and to outline more efficient options. Ask it to factor this into not only how the tools are built but their ongoing operation. You can also install a free model locally to handle simple, repetitive processes. Benjakob uses Google’s free <a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/">Gemma model</a> on his computer to index the screenshots. “I don’t need the cloud for that,” he said.</p>
+<h4>Tips</h4>
+<ul>
+<li>
+<p>Remember to say up front that you’re building something to run locally on your machine.</p>
+</li>
+<li>
+<p>Can you replace a paid tool with something you build? Can you take a pain point (screenshots littered across your desktop) and create a process?</p>
+</li>
+<li>
+<p>Make every process leave a document behind: what it did, where the data came from. "Nothing is non-attributed," Benjakob said. Build the tool, but also build the audit trail. That includes crash and activity logs.</p>
+</li>
+<li>
+<p>Write a README with your own rules — what counts as a new version, when to archive.</p>
+</li>
+<li>
+<p>Ask the model to estimate what it will cost in tokens to build something. Ask it to minimize spend in the build and ongoing operation.</p>
+</li>
+</ul>
+<h3><strong>Rung 5: Public tool on a platform</strong></h3>
+<p>Livne started building with Base44 because he'd seen people recommend it on LinkedIn. His starting point was wanting to build tools for himself, not necessarily for other people. But the process was quick and easy and by using Base44, a self-contained vibecoding platform, his tools were already hosted and ready for public release.</p>
+<p>A platform like Base44 or Lovable is an appealing option for anyone who wants to start building with a few prompts and doesn’t want to worry about paying for a separate tool like Claude, or figuring out where to host what they build. You can just start. They're self-contained, and they cover the basic needs of an app.</p>
+<p>Just tell it what you want to build and load in additional context from documents, images, or other materials.</p>
+<p>For his Arabic dialect tool, Livne didn't need to load in his full corpus of texts to get it working. “I put way way less,” he said, adding that the tool delivered 80% accuracy in how own testing.</p>
+<p>He said he tried other ideas, but not everything panned out — and that’s ok.</p>
+<p>“It's just so easy and fast to build it and see if it works, see if it's useful for you and others,” he said. “I have like two tools that I tried and I wasn't happy with them. They didn't really work because of vibecoding limitations or because it was not important enough to me to work hard on it. So I just let them go.”</p>
+<p>He currently <a href="https://www.elconsulting.us/services">offers</a> four free tools:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/859315e1-9929-4530-adb8-9f7d8146536a/image.png?t=1787275724" /></p>
+<p>Van Ess said he tried many of the vibecoding platforms and they work. But the downside is that they remove you from the process. He likes working in the terminal with Claude Code and creating something from scratch, rather than using a product that might reuse prompts and templates.</p>
+<p>"It's very template based and I think ... each story should be unique otherwise it's not news," he said. "So each story needs a different approach and I like that with AI you can use the data to make an analysis of that data and that leads to completely new prompts for each different research."</p>
+<p>The appeal of the vibecoding platforms is that they can create something quickly. One downside is that you're less involved than you'd be with a coding tool like Codex or Claude Code, and you may not learn as much or build your skills as quickly.</p>
+<p>A hybrid option is to create something like a Claude Artifact. You do the vibecoding in Claude and it creates a publicly accessible tool, document, or visualization that's hosted by Claude. For example, <a href="https://graph.tips/">Graph.tips</a> is an old-school OSINT search tool that enables you to search for people, posts, photos, pages and other content using Facebook's native graph search parameters.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/57ee2cc3-32a5-465f-b2de-d5f8b5c78e54/image.png?t=1787275724" /></p>
+<p>Kirby Plessas vibecoded a <a href="https://claude.ai/public/artifacts/b1725020-0989-4738-8906-43cb80467e31">Claude Artifact</a> that uses the same graph search techniques but with an updated interface:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d61cc853-c0ac-4390-96b2-f46569374ef9/image.png?t=1787275724" /></p>
+<p>It’s a good test case: is there an existing tool that you could refashion to better fit your needs?</p>
+<p>If you go the puboic tool route, make sure you have proper documentation, according to <a href="https://plessas.net/sarah-womer">Sarah Womer</a>, a longtime OSINT professional with a background in government and intelligence who works for Plessas Experts Network.</p>
+<p>Womer, who has some coding ability, has <a href="https://www.linkedin.com/pulse/open-source-intelligence-tool-vetting-sarah-womer/">written</a> about how to evaluate open source intelligence tools and has been experimenting with vibecoding. She said a common weakness of vibecoded tools (and many OSINT tools in general) is that they lack proper documentation. That’s essential if the tool is meant to be open source. But it’s also important if you’re building something for the community to use.</p>
+<p>“If I'm doing something for myself, that's fine — I can self-govern myself,” she said. “But if you're doing something that's going out to others, you need to have governance. That governance needs to be transparent. It should have the community standards in it. It should have the legal requirements in it."</p>
+<p>She said she recently reviewed multiple OSINT projects on GitHub and found that many lacked proper documentation.</p>
+<p>"I did not see any — okay, maybe one — that had appropriate documentation from an open source software perspective,” Womer said.</p>
+<h4>Tips</h4>
+<ul>
+<li>
+<p>Describe what you want and point to examples to help the tool understand the functionality, design, etc. A lot of vibecoding tools are great mimics.</p>
+</li>
+<li>
+<p>Don't be discouraged if your first idea doesn't work. Livne killed two tools that didn't work out and has no regrets.</p>
+</li>
+<li>
+<p>Keep the interface simple. Livne: "one search bar, the least amount of buttons that are necessary."</p>
+</li>
+<li>
+<p>Ship before it's finished and invite people to try it and tell you what’s broken or missing.</p>
+</li>
+<li>
+<p>Watch for the ceiling. If you find yourself constantly making changes and updating the tool, you might be ready to move off a dedicated platform and work directly with a model and self-hosting.</p>
+</li>
+</ul>
+<h3><strong>Rung 6: Self-Hosted Infrastructure</strong></h3>
+<p>This is the most complicated level of vibecoding. You’ve built something, you want it to be public, and you want to host it outside of a vibecoding or AI platform. The cost and level of responsibility (and risk) increase. But so does your ability to control and customize what you’ve built.</p>
+<p>Van Ess said the average person can rent their own virtual private server for about $15 a month. This is a server where you can host your tools (as well as models and agents if you want). He uses a VPS to host the ones he's built as well as to provide a playground for his students to use during workshops. For example he runs <a href="https://imagewhisperer.org/">ImageWhisperer</a>, an AI image detection product, from his VPS. It's part of his business, so it makes sense for him. But he also recommends it for anyone who is serious about building and experimenting with AI.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/54883041-0b0c-4689-9bfe-e09fa543b815/image.png?t=1787275725" /></p>
+<p>A simple starting point is to ask your preferred model to evaluate your tool(s) and to produce an overview of the amount of space and processing power you need. You can also ask it to evaluate potential VPS options. Treat this as a starting point but take time to compare different providers.</p>
+<p>Once you’ve chosen a provider, a model like Claude, Gemini or ChatGPT can walk you through the setup and help you manage it. But be aware that they will miss things, and you will run into problems. Expect it to take time before it works properly. And if you want to charge people for your tool, you’ll need to integrate a payment processor like Stripe, and potentially other services.</p>
+<p>"If you've released it and monetized it, at that point you most absolutely do have some liability," Womer said. (I dive into this more in the following section on security and privacy.)</p>
+<p>That creates an even bigger commitment on your part to deliver a tool that works and that handles personal information and sensitive data properly.</p>
+<h4>Tips</h4>
+<ul>
+<li>
+<p>When it comes to the technical setup, ask a model what you need. "It suddenly says, hey Henk, you need Tailwind. Hey Henk, you need Playwright,” van Ess said.</p>
+</li>
+<li>
+<p>Run sensitive material through a local model whenever possible. Van Ess keeps a local Gemma on an office server and drives it from his VPS.</p>
+</li>
+<li>
+<p>Scan the code before you deploy. (More on this below.)</p>
+</li>
+<li>
+<p>If you charge for it, you've taken on liability. The payment processor is the easy part.</p>
+</li>
+</ul>
+<h2>Security/Privacy</h2>
+<p>This August, Katie Parrott, a columnist at Every, published <a href="https://every.to/working-overtime/i-vibe-coded-a-security-risk">an account</a> of shipping a vibecoded app. She built an app called <a href="https://tastemaker.bot/">Tastemaker</a> that lets you load in samples of writing that you like and build a style guide based on your “taste.”</p>
+<p>Parrott bought a domain, put it online and picked up a handful of users. Then she added a connector so people's AI agents could pull their data directly.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f9ded8c2-e6cc-43e7-9dff-53fa35a4774d/image.png?t=1787275724" /></p>
+<p>Parrott knew that she needed to think about security, but she's not an engineer. She asked an engineer friend for some advice and relayed it to Claude, the model she used to build her tool. She asked it to make sure that Tastemaker conformed to the guidance. Claude ran checks and everything seemed fine.</p>
+<p>Weeks later, she pointed a newer model at her code and it flagged a major vulnerability. As she put it: "The app worked. Nobody, including me, had checked whether it was safe."</p>
+<p>"I fell into a ... dangerous trap: overestimating my own ability to understand. After all, <em>I</em> wasn't building the feature — Claude was," she wrote. "I was supervising. I could see Claude's chain of thought and since the words made sense, I <em>thought</em> that I understood the work it was doing."</p>
+<p>But she didn’t know what she didn’t know: "I didn't test whether somebody who was not supposed to connect could do it anyway. I didn't know that was the question."</p>
+<p>This is a serious challenge when you build something and open it to the public. But it’s also a risk even if you build a tool for yourself. If it connects to outside networks and data, or uses your private keys, it can still create vulnerabilities.</p>
+<p>Nico Dekens, a longtime OSINT practitioner who works at ShadowDragon, <a href="https://www.dutchosintguy.com/post/vibe-coding-is-becoming-an-osint-risk">outlined</a> a different form of risk:</p>
+<p>“If a hobby project breaks, that is annoying. If an OSINT tool breaks, the damage can be much harder to spot. A parser fails and relevant posts stop being collected. A monitor silently misses updates. A matching workflow links the wrong identities. A summarisation layer smooths over uncertainty and makes weak information sound stronger than it is. A translation step strips tone or context. A dashboard buries contradiction and surfaces what looks neat instead. None of that has to look dramatic. That is what makes it dangerous.“ — Nico Dekens</p>
+<p>Another risk for investigators is that you build something that inadvertently exposes your work and process. Van Ess said that people fall in love with the fact that they built something and forget to think about what it might expose about their process and data.</p>
+<p>"Most of the reporters are so excited that it works and that they can come up with something that in the excitement they don't look at it. And even — you can leak your own questions," he said.</p>
+<p>A leaky tool exposes not just your data but what you were investigating. There's of course a more fundamental concern for anyone working with sensitive material: you shouldn't be uploading it to a third-party system like Claude or ChatGPT at all.</p>
+<p>The safest option is to run a local model. Another is <a href="https://github.com/voelspriet/aiwhisperer">a free tool</a> from van Ess, AIWhisperer, that takes a large PDF, splits it into smaller chunks, and replaces identifying details like names and phone numbers with placeholders (for example, “John Smith” becomes “PERSON_001”). That doesn't address every concern, but it can work in some cases.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/68eb3811-6cd2-4edc-8e08-7605bf2b358c/image.png?t=1787275724" /></p>
+<p>Van Ess encountered security issues with his early vibecoding experiments. So now he runs checks on everything he builds. It's a series of prompts in which he tells the model to take on the persona of different experts, review his code, and flag what needs fixing. The four personas are:</p>
+<ul>
+<li>
+<p>Data retention expert</p>
+</li>
+<li>
+<p>Privacy expert</p>
+</li>
+<li>
+<p>Cybersecurity expert</p>
+</li>
+<li>
+<p>GDPR expert</p>
+</li>
+</ul>
+<p>"Every new tool I make which is substantial, I do the four role-playing games," he told me.</p>
+<p>Combine that tip with another critical piece of advice: run your security and privacy checks with a different model or tool to evaluate what you built. If you created something in Claude, take the code and drop it into Codex or Gemini and ask it to evaluate it for security vulnerabilities, privacy risk, etc. Or build with one model and then switch to the most advanced one available for the security check.</p>
+<p>"If AI built the thing, don't let the same system's reassurance be the only evidence that it's ready,” Parrott wrote.</p>
+<p>It's a fundamental rule for Womer.</p>
+<p>“I never rely on one model," she told me. "Each one has its own kind of thing that it's good at and that it's not good at."</p>
+<p>Her multi-model process also factors in privacy. Her stack includes:</p>
+<ul>
+<li>
+<p><a href="https://lumo.proton.me/"><strong>Lumo</strong></a> — For concept development. Made by Proton, it’s encrypted and doesn't retain queries. "It’s not that good for coding, but it can most certainly assist with concept development,” she said. The key is that "I don't [feel] like there's an intrusive collection on me."</p>
+</li>
+<li>
+<p><strong>Claude via</strong> <a href="https://abacus.ai/"><strong>Abacus</strong></a> — Womer uses this for generating code. Abacus offers "a buffer between Claude,” which she says provides “an added level of protection for my personal privacy." She says Abacus prevents Claude from training on her queries.</p>
+</li>
+<li>
+<p><strong>X/Grok</strong> — For when she needs something the other models refuse. "X will give you information that is a little bit more racy... some of the others are a little bit more conservative." But she notes that Grok “tracks you a whole bunch.” So it’s not her daily model.</p>
+</li>
+<li>
+<p><a href="https://snyk.io/"><strong>Snyk</strong></a> — For scanning code before deploying. “You just take the code, pop it in there, and it tells you what's wrong with the code," Womer said.</p>
+</li>
+</ul>
+<h2>The tool isn’t the thing</h2>
+<p>Above all, remember that building tools for their own sake isn’t helpful. It is about using AI to help you do your job better and/or faster, to find new information, to solve a problem. Vibecoding should result in something that enhances your work or provides value to you and to a broader community. You still need to do the thinking and analysis for an investigation.</p>
+<p>"The question is more interesting than how it's solved, always,” Benjakob said. “What's interesting is the notes in my transcriber, not how I built the transcriber. It's my sources."</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

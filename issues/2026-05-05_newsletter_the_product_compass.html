@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>From Weeks to Hours: How Claude Design Compresses Product Discovery — The Product Compass</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="From Weeks to Hours: How Claude Design Compresses Product Discovery — The Product Compass" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Product Compass</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>From Weeks to Hours: How Claude Design Compresses Product Discovery</h1>
+<p class="meta">2026-05-05 · received 2026-05-05 05:15 +0900
+ · <a href="https://open.substack.com/pub/huryn/p/claude-design-product-discovery" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>From Weeks to Hours: How Claude Design Compresses Product Discovery</h1>
+<p>Forwarded this email? <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTZ5NWltayZuZXh0PWh0dHBzJTNBJTJGJTJGd3d3LnByb2R1Y3Rjb21wYXNzLnBtJTJGcCUyRmNsYXVkZS1kZXNpZ24tcHJvZHVjdC1kaXNjb3ZlcnkiLCJwIjoxOTY0MTE3NjUsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzc5MjU4ODUsImV4cCI6MjA5MzUwMTg4NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.X0PfjLUqGbwaDq4k_L2T649AY0G0EHW0KbAIBab-EXE?">Subscribe here</a> for more</p>
+<h1><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=196411765&amp;utm_source=post-email-title&amp;utm_campaign=email-post-title&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5NjQxMTc2NSwiaWF0IjoxNzc3OTI1ODg1LCJleHAiOjE3ODA1MTc4ODUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.ECGaEhOotXF2bCQfPGWxfPTgVcVsr5vfL7SF5s0yUek">From Weeks to Hours: How Claude Design Compresses Product Discovery</a></h1>
+<h3>Idea to prototype in hours. Design to shipped code in days. Five gaps still bite. Tested on real production code, not a demo.</h3>
+<p><a href="https://substack.com/@huryn">Paweł Huryn</a></p>
+<p>May 4</p>
+<p>∙</p>
+<p>Preview</p>
+<p><a href="https://substack.com/@huryn"><img alt="" src="https://substackcdn.com/image/fetch/$s_!C2pO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fcfcfec-32a1-4970-aee1-8a1ab05a76c0_750x750.png" /></a></p>
+<p><a href="https://open.substack.com/pub/huryn/p/claude-design-product-discovery?utm_source=email&amp;redirect=app-store&amp;utm_campaign=email-read-in-app">READ IN APP</a></p>
+<p>I pointed Claude Design at accredia.io’s GitHub repo and asked it to build admin onboarding for a new organization.</p>
+<p>10 minutes later I had a fully interactive prototype I could iterate on.</p>
+<p>Not a mockup. Not a screenshot. A clickable flow built on top of my real design system, ready to share, comment, refine, and implement. Two examples:</p>
+<p><a href="https://substack.com/redirect/b081daf9-644f-4a4c-8409-b183e6d9147c?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Example: accredia.io prototype tweak in original style, Claude Design" src="https://substackcdn.com/image/fetch/$s_!AxbA!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fec08d117-a2c0-47b9-b4fb-6d063827b988_2524x1517.png" /></a></p>
+<p>Example: accredia.io prototype with Claude Design</p>
+<p><a href="https://substack.com/redirect/4eb019ef-c3a5-4e6c-9bc3-b06127226342?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Example: accredia.io prototype tweak in Anthropic style, Claude Design" src="https://substackcdn.com/image/fetch/$s_!DYpp!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1f0daab6-a168-40f2-b796-ebc9ef9cc6ae_2964x1814.png" /></a></p>
+<p>Example: accredia.io prototype tweak in Anthropic style</p>
+<p>Some compare Claude Design to Figma speed when iterating on the canvas. That framing misses the point.</p>
+<p>What matters for a product team is <strong><em>Time to Learn</em></strong> - the time from “<em>we should try X</em>” to <em>“we have evidence it works or fails.”</em> And Claude Design can radically reduce it.</p>
+<p>What you’ll learn:</p>
+<ul>
+<li>How to import or reverse-engineer your design system</li>
+<li>The PM context Claude Design needs to ship a usable first cut</li>
+<li>How to modify an existing production feature</li>
+<li>How to run the workflow with the product team and stakeholders</li>
+<li>What this means for product discovery, hiring, and the shape of senior roles</li>
+</ul>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtZGVzaWduLXByb2R1Y3QtZGlzY292ZXJ5JnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNOemt5TlRnNE5Td2laWGh3SWpveE56Z3dOVEUzT0RnMUxDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmhScGpod1F2NGU1a2JhMkQ2Und5RmZ5SjVsdlY0Vzh1UEp6QnpKckh5VnciLCJwIjoxOTY0MTE3NjUsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzc5MjU4ODUsImV4cCI6MjA5MzUwMTg4NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.VpFyUB8qzjROKIicc7n0fsxkmr_1xUXnaJarQMUDdoY?&amp;utm_medium=email&amp;utm_source=subscribe-widget&amp;utm_content=196411765">Upgrade to paid</a></p>
+<hr />
+<h2><strong>1. What Changes for Your Team</strong></h2>
+<p>I loved working with my designers. Ideating, challenging usability, sharing clickable prototypes with the business, running experiments. But sometimes I wished I had more of their time.</p>
+<p>I didn’t enjoy Jira handoffs. In particular, keeping everything in sync as decisions changed and waiting for designers to verify the implementation is aligned with Figma.</p>
+<p>Claude Design compresses two parts of the workflow:</p>
+<p><strong>Idea → prototype:</strong></p>
+<ul>
+<li>Old: several days with a dedicated designer. Weeks if you don’t have capacity.</li>
+<li>New: same afternoon. Iterate in hours via chat, comments, or sketch.</li>
+</ul>
+<p><strong>Approved design → code in production:</strong></p>
+<ul>
+<li>Old: weeks. Designer hands the Figma file to engineering. Engineer rebuilds in code. Implementation drifts. Back-and-forth on what the design “really” meant.</li>
+<li>New: days. Engineering continues from the prototype and design system through Claude Code. No rebuild.</li>
+</ul>
+<p>Some argue that Figma is faster for experienced designers. That might be true, but the difference is smaller than these two compressions. And can be radically reduced by selecting the right model - Sonnet for small fixes.</p>
+<p>Designers should adopt this too. Cleaner handoff to engineering. More time on the work that needs design judgment instead of checking pixels.</p>
+<p>The same design system also generates slide decks, motion videos, and custom templates. Marketing, sales, and support reuse the brand without rebuilding it.</p>
+<hr />
+<h2><strong>2. How to Define Your Design System</strong></h2>
+<p>Most product teams I’ve worked at had a design system in some form. A Figma library, a Storybook, a brand doc. Start by importing what you have.</p>
+<h3>Step 1: Open Claude Design &gt; Design systems &gt; Create</h3>
+<p>Go to <a href="https://substack.com/redirect/1df26c1c-210e-4b62-9dbf-1eeeb53dad9f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">https://claude.ai/design</a>:</p>
+<p><a href="https://substack.com/redirect/dce8f963-a8da-456f-a11b-ade1a27fdf2f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="New Design System in Claude Design" src="https://substackcdn.com/image/fetch/$s_!X1kh!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb41b40f-90fb-416d-be3d-e0f9ca167d0a_2583x1412.png" /></a></p>
+<h3>Step 2: Provide company name, examples, and sources</h3>
+<p><a href="https://substack.com/redirect/379ec429-29c3-4126-a819-33c197f88dfd?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Design: provide examples and sources for the design system" src="https://substackcdn.com/image/fetch/$s_!1bW5!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe0ffb26c-d0d3-4e6c-b639-6607cf463144_2579x1465.png" /></a></p>
+<p>You can mix multiple sources and also drop in sketches, screenshots, photos, fonts, logos, and a text description of voice and brand. Claude Design can also pull context from the open web.</p>
+<p>I tested reverse-engineering my existing codebase. According to multiple user reports, code wins when both code and Figma exist.</p>
+<p><a href="https://substack.com/redirect/b0c2dcea-4330-4d18-b4cf-179e5831d587?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Design: sources to import, code, Figma file" src="https://substackcdn.com/image/fetch/$s_!EvzN!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa664ee67-c117-4e63-b091-85dd6f89a55c_1200x801.png" /></a></p>
+<p><strong>Note:</strong><a href="https://substack.com/redirect/34521761-342a-4dad-9f9d-9fe7d1ff4f26?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">DESIGN.md, introduced by Google</a> is the lowest-fidelity option in the table because it’s rules-only - no assets, no components, no motion, and not all layout patterns. It’s a fast seed when you have nothing. Move to a codebase or .fig file as soon as you have one.</p>
+<p><strong>Tip:</strong> For a new product without a system yet, you can clone an existing brand you admire (Ferrari, Apple, Linear) and iterate from there 🙂 Faster than starting from a moodboard, and you keep refining until it’s yours.</p>
+<p>You can also run multiple design systems in parallel. Useful if you ship across product lines, or if you’re testing a brand refresh without breaking the production look.</p>
+<h3>Step 3: Click “Continue to generation”</h3>
+<p>Three artifacts:</p>
+<ul>
+<li><strong>Design System.</strong> UI kit, type, colors, spacing, components, brand. Every prototype anchors on this.</li>
+<li><strong>Design Files.</strong> Assets, HTML, images, stylesheets. The exported source you hand to engineering.</li>
+<li><strong>Skill.md.</strong> A skill Claude Design generates as a representation of the design system. The agent uses it to keep every new design consistent with your brand.</li>
+</ul>
+<p><a href="https://substack.com/redirect/bf684e86-2778-439a-8858-2e93f45c86ab?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!QHrU!,w_1100,h_592,c_fill,f_auto,q_auto:good,fl_progressive:steep/l_play_button_usfui2,w_144,e_colorize:0/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F196411765%2F24eb4827-a45f-4ff4-b458-1e586b1851b2%2Ftranscoded-01806.png" /></a></p>
+<p>You can review your design system, iterate via chat, set permissions, and share with the team. Comments work the same way they do in Figma.</p>
+<p><a id="step-4-optional-export-your-design-system-as-a-skill"></a></p>
+<h3>Step 4: (Optional) Export your design system as a skill</h3>
+<p>When you export your design system as a .zip archive, it becomes a skill you can give to any agent (Claude Code, Cowork, Codex, etc.). The skill is a complete representation of the system and contains all design files.</p>
+<p><a href="https://substack.com/redirect/bbf200d8-0668-4952-bda0-5c8fd09ef321?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Design: Export your design system as a skill" src="https://substackcdn.com/image/fetch/$s_!PW3N!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5b22d5b5-190e-4acf-a27f-6a659032559c_2759x1511.png" /></a></p>
+<p>That’s the theory. In my tests, I faced errors. Waiting for a fix.</p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=196411765&amp;utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;utm_campaign=email-share&amp;action=share&amp;triggerShare=true&amp;isFreemail=true&amp;r=6y5imk&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5NjQxMTc2NSwiaWF0IjoxNzc3OTI1ODg1LCJleHAiOjE3ODA1MTc4ODUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.ECGaEhOotXF2bCQfPGWxfPTgVcVsr5vfL7SF5s0yUek">Share</a></p>
+<hr />
+<h2><strong>3. How to Prototype a Product or Feature</strong></h2>
+<p>Same flow whether you're prototyping something new or modifying what already ships. The difference is what you point Claude Design at on the way in.</p>
+<h3>Step 1: Open Claude Design &gt; New prototype &gt; Create</h3>
+<p>Pick the design system you generated in §2 and name your prototype.</p>
+<p><a href="https://substack.com/redirect/4eb14253-554c-456f-a38f-8762442a18e9?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Design: How to Prototype a Product or Feature, New prototype" src="https://substackcdn.com/image/fetch/$s_!kbkK!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3d011660-8387-4859-9481-77ee7d79a137_2898x1774.png" /></a></p>
+<h3>Step 2: Provide Context</h3>
+<p>Depending on what you’re prototyping:</p>
+<ul>
+<li><strong>New feature.</strong> Brief Claude Design from scratch - Step 2.</li>
+<li><strong>Existing feature.</strong> Point at the codebase, or branch from a previous Claude Design version.</li>
+</ul>
+<p>You can also include screenshots, Figma files, web elements, or reference Claude Design projects (via “Import”).</p>
+<p><a href="https://substack.com/redirect/630cde24-6078-4e44-8e71-d33a36634e25?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Design: How to provide context" src="https://substackcdn.com/image/fetch/$s_!_10o!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09c8b01a-2df3-447e-a28a-fad374fffdc6_2885x1775.png" /></a></p>
+<p>What to brief it on:</p>
+<ul>
+<li><strong>Objective.</strong> Should explain why it’s important and how the success will be measured. Often implicit, especially when you have a well-documented system.</li>
+<li><strong>Persona.</strong> Who’s actually using this. Not the buyer. The person inside the screen.</li>
+<li><strong>Value proposition.</strong> What this screen is supposed to deliver to that person.</li>
+<li><strong>Job to be done.</strong> The underlying task they’re trying to complete.</li>
+<li><strong>Common actions.</strong> What they’ll do most often. If you have product analytics, lead with those numbers. If not, your best assumptions.</li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li>There is no GitHub repo selector, but after connecting GitHub you can provide Claude Design with a GitHub URL.</li>
+<li>I specified a GitHub repo for a new feature because my agents maintain a full strategic context in the repo.</li>
+</ul>
+<p>This isn’t just prompt engineering. It’s instrumenting business context for the agent beyond the current objective. For more, see <a href="https://substack.com/redirect/afdd784d-0095-4ce6-b86f-cdedd2e10cc7?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">the Intent Engineering Framework for AI Agents</a> and <a href="https://substack.com/redirect/04e2f764-bccc-402d-95a7-4d8769bbab32?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4">my Opus 4.7 guide</a>.</p>
+<h3>Step 3: Answer the Questions &gt; Continue</h3>
+<p>If you forgot about the context, don’t worry. Claude Design interviews you before taking action:</p>
+<p><a href="https://substack.com/redirect/491cf580-c85d-4815-8fb0-e7d0d52f91fb?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Design: Questions asked by the agent" src="https://substackcdn.com/image/fetch/$s_!e7um!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5f367a8d-e2a0-4fd6-9616-eeecb3a0bea1_2883x1907.png" /></a></p>
+<h3>Step 4: Review and refine in the canvas</h3>
+<p>5– 10 minutes for the first generation. Once the prototype exists, switch to a faster model in chat. Iteration drops to seconds. An example result:</p>
+<p><a href="https://substack.com/redirect/27f8f2c7-8b40-455f-94c1-f534cc7ef110?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="" src="https://substackcdn.com/image/fetch/$s_!edbf!,w_1100,h_592,c_fill,f_auto,q_auto:good,fl_progressive:steep/l_play_button_usfui2,w_144,e_colorize:0/https%3A%2F%2Fsubstack-video.s3.amazonaws.com%2Fvideo_upload%2Fpost%2F196411765%2Fccfeeacf-c505-4d25-87df-f26703a7e620%2Ftranscoded-04438.png" /></a></p>
+<p>Once the prototype exists, PMs can run small fixes like copy edits, button placement, or empty-state polish without pulling in a designer for every adjustment.</p>
+<p>Four refinement tools:</p>
+<ul>
+<li><strong>Chat.</strong> Refine via natural language (”<em>make the empty state more inviting</em>”).</li>
+<li><strong>Comments.</strong> Figma-style threaded notes. Anyone you share it with can drop them.</li>
+<li><strong>Sketch.</strong> Draw directly on the prototype. Useful when “<em>move that there</em>” is faster than typing.</li>
+<li><strong>Edit.</strong> Applying changes directly in the system. I would use it primarily for text adjustments:<a href="https://substack.com/redirect/de763f0f-c149-4010-bee6-54fb08d48300?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Design: Applying changes directly in the system, visual edits" src="https://substackcdn.com/image/fetch/$s_!v0Qu!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd4cd2955-3e90-4906-a8ff-540d7802421a_2818x1680.png" /></a></li>
+</ul>
+<p>Each prototype can have <strong>multiple variants on the same canvas</strong>. They are called <strong>tweaks</strong>. Just ask in the Chat. Claude Design adds them to the Tweaks panel. For example, here I asked for an Anthropic variant:</p>
+<p><a href="https://substack.com/redirect/019a8898-505f-49f5-889d-e77686729e3f?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Design tweaks: multiple variants on the same canvas" src="https://substackcdn.com/image/fetch/$s_!6gND!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F84f0fcc2-d66b-400b-963d-343df2370ba7_2955x1696.png" /></a></p>
+<h3>Step 5: Export and handoff</h3>
+<p><a href="https://substack.com/redirect/4dae5f58-a83d-47b8-86ac-3bc5e2461d13?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Claude Design: Export and hand off" src="https://substackcdn.com/image/fetch/$s_!batc!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F41ef4086-871e-4c1b-b081-473c43b36a8c_1200x893.png" /></a></p>
+<p>The Claude Code handoff is what changes the workflow the most. Your prototype isn’t a deliverable engineers re-implement. It’s a starting point they continue from.</p>
+<p>I’ll come back to working with the trio and the deeper context inputs for modifying existing features in the paid section.</p>
+<hr />
+<p><em>I built and shipped products for 10+ years. I talk to PMs every week. Next, a set of suggested workflows for your team based on my work in accredia.io:</em></p>
+<ul>
+<li><em>How to collaborate in the Product Trio.</em></li>
+<li><em>How to test assumptions and when you can just ship.</em></li>
+<li><em>What to do about Jira/Linear tickets.</em></li>
+<li><em>What this means for the future or product jobs. 👇...</em></li>
+</ul>
+<h2>Keep reading with a 7-day free trial</h2>
+<p>Subscribe to The Product Compass to keep reading this post and get 7 days of free access to the full post archives.</p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5wcm9kdWN0Y29tcGFzcy5wbSUyRnAlMkZjbGF1ZGUtZGVzaWduLXByb2R1Y3QtZGlzY292ZXJ5JnI9Nnk1aW1rJnRva2VuPWV5SjFjMlZ5WDJsa0lqbzBNakF4TmpFME1qQXNJbWxoZENJNk1UYzNOemt5TlRnNE5Td2laWGh3SWpveE56Z3dOVEUzT0RnMUxDSnBjM01pT2lKd2RXSXRPVFF6TVRVM0lpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmhScGpod1F2NGU1a2JhMkQ2Und5RmZ5SjVsdlY0Vzh1UEp6QnpKckh5VnciLCJwIjoxOTY0MTE3NjUsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzc5MjU4ODUsImV4cCI6MjA5MzUwMTg4NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.VpFyUB8qzjROKIicc7n0fsxkmr_1xUXnaJarQMUDdoY?simple=true&amp;utm_source=paywall&amp;utm_medium=email&amp;utm_content=196411765&amp;next=https://www.productcompass.pm/p/claude-design-product-discovery&amp;coupon=34546817">Start trial</a></p>
+<h3>A subscription gets you:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>𝗔𝗰𝗰𝗲𝘀𝘀 𝗲𝘃𝗲𝗿𝘆 𝗶𝘀𝘀𝘂𝗲 → Stay ahead with 180+ actionable AI PM strategies and advice. Full archive.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>𝗝𝗼𝗶𝗻 𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗦𝗹𝗮𝗰𝗸 𝗰𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 → Get exclusive access to Paweł (DM) and 1,850+ AI PM community to grow together.</td>
+</tr>
+<tr>
+<td></td>
+<td>𝗕𝗼𝗼𝘀𝘁 𝘆𝗼𝘂𝗿 𝗣𝗠 𝗰𝗮𝗿𝗲𝗲𝗿 → Enroll in the AI PM Learning Program ($700 value) and 4 video courses ($546 value).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=196411765&amp;utm_source=substack&amp;isFreemail=true&amp;submitLike=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5NjQxMTc2NSwicmVhY3Rpb24iOiLinaQiLCJpYXQiOjE3Nzc5MjU4ODUsImV4cCI6MTc4MDUxNzg4NSwiaXNzIjoicHViLTk0MzE1NyIsInN1YiI6InJlYWN0aW9uIn0.3IDV4XYJRGvSvGmJokg5E5FRnFW8Jt6yDQprHbzJcjo&amp;utm_medium=email&amp;utm_campaign=email-reaction&amp;r=6y5imk">Like</a></p>
+<p><a href="https://substack.com/app-link/post?publication_id=943157&amp;post_id=196411765&amp;utm_source=substack&amp;utm_medium=email&amp;isFreemail=true&amp;comments=true&amp;token=eyJ1c2VyX2lkIjo0MjAxNjE0MjAsInBvc3RfaWQiOjE5NjQxMTc2NSwiaWF0IjoxNzc3OTI1ODg1LCJleHAiOjE3ODA1MTc4ODUsImlzcyI6InB1Yi05NDMxNTciLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.ECGaEhOotXF2bCQfPGWxfPTgVcVsr5vfL7SF5s0yUek&amp;r=6y5imk&amp;utm_campaign=email-half-magic-comments&amp;action=post-comment&amp;utm_source=substack&amp;utm_medium=email">Comment</a></p>
+<p><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvaHVyeW4vcC9jbGF1ZGUtZGVzaWduLXByb2R1Y3QtZGlzY292ZXJ5P3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtcmVzdGFjay1jb21tZW50JmFjdGlvbj1yZXN0YWNrLWNvbW1lbnQmcj02eTVpbWsmdG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVOalF4TVRjMk5Td2lhV0YwSWpveE56YzNPVEkxT0RnMUxDSmxlSEFpT2pFM09EQTFNVGM0T0RVc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKd2IzTjBMWEpsWVdOMGFXOXVJbjAuRUNHYUVoT290WEYyYkNRZlBHV3hmUFRnVmNWc3I1dmZMN1NGNXMweVVlayIsInAiOjE5NjQxMTc2NSwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3NzkyNTg4NSwiZXhwIjoyMDkzNTAxODg1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.9PTYeYzd_c3NWcOSKUMzLHgBSHhB_1Ls_wrMq9xk2Hg?&amp;utm_source=substack&amp;utm_medium=email">Restack</a></p>
+<p>© 2026 Paweł Huryn
+HURYN Sp. z o.o., Hoża 29, 00-521 Warsaw, Poland
+Tax ID (NIP): PL7011027727 | National Court Register (KRS): 0000893173
+<a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cucHJvZHVjdGNvbXBhc3MucG0vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpvME1qQXhOakUwTWpBc0luQnZjM1JmYVdRaU9qRTVOalF4TVRjMk5Td2lhV0YwSWpveE56YzNPVEkxT0RnMUxDSmxlSEFpT2pFNE1EazBOakU0T0RVc0ltbHpjeUk2SW5CMVlpMDVORE14TlRjaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAuSE9oN0FOMXY1ai1lUEhCYUdkUmhuS1JXdjE2ZWN3WDVZaVZMbXAzYnJzQSIsInAiOjE5NjQxMTc2NSwicyI6OTQzMTU3LCJmIjp0cnVlLCJ1Ijo0MjAxNjE0MjAsImlhdCI6MTc3NzkyNTg4NSwiZXhwIjoyMDkzNTAxODg1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.7n5d2uLNlHQbZssvLh4C5Y33szXpxKWtB0DiJIdpEQs?">Unsubscribe</a></p>
+<p><a href="https://substack.com/redirect/69379026-7d9e-47ce-89f5-6e0ced7fda7b?j=eyJ1IjoiNnk1aW1rIn0.ToYsNlgSU4zN2XTXMb0kMM4M8D0ga4W_43Y3Ipz12e4"><img alt="Get the app" src="https://substackcdn.com/image/fetch/$s_!IzGP!,w_262,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fgeneric-app-button%402x.png" /></a><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1wcm9kdWN0Y29tcGFzc0BnYXJyaWdhaS5jb20mcj02eTVpbWsiLCJwIjoxOTY0MTE3NjUsInMiOjk0MzE1NywiZiI6dHJ1ZSwidSI6NDIwMTYxNDIwLCJpYXQiOjE3Nzc5MjU4ODUsImV4cCI6MjA5MzUwMTg4NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.eSrba8d7GQCRu4tRjFsid_bJ-Jy71v18rLasxXIhmuA?"><img alt="Start writing" src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" /></a></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

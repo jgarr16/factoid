@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>⚡ Rent your old &amp; idle MacBook for AI — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="⚡ Rent your old &amp; idle MacBook for AI — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>⚡ Rent your old &amp; idle MacBook for AI</h1>
+<p class="meta">2026-08-25 · received 2026-08-25 23:17 +0900
+ · <a href="https://codenewsletter.ai/p/agentsky-ships-one-api-for-every-coding-agent" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>⚡ Rent your old &amp; idle MacBook for AI</h1>
+<p><a href="https://ref.wisprflow.ai/thecode"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1e27cb98-9d56-4319-a504-11cac7784259/Group_Wispr__4_.jpg?t=1787602431" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> We're writing this email with extra excitement today because there are two new releases our team is excited to use internally. First, a stealth startup just dropped the equivalent of OpenRouter for coding agents that lets you run your codebase with multiple coding harnesses. And a new startup is actually paying people to rent out their old MacBooks for AI compute.</p>
+<p><strong>Also:</strong> How to build LLMs from scratch, Uncle Bob shares a tool for coordinating multiple coding agents, and how to change coding agents without losing context.</p>
+<hr />
+<p><a id="todays-brief"></a></p>
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>Why CTOs and VPs are quitting</p>
+</li>
+<li>
+<p>Andrew Ng’s 6 skills to build AI apps</p>
+</li>
+<li>
+<p>How to build your coding harness (tutorial)</p>
+</li>
+<li>
+<p>Using open harness to cut agent tokens (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2091906740409553036"><img alt="Watch how AgentSky works here." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3c0e9a17-dcdf-4099-bce7-7c3922ca5548/Thumbnail__11_.jpg?t=1787646255" /></a>
+<em>Watch how AgentSky works here.</em></p>
+<hr />
+<p><strong>AgentSky ships one API for every coding agent:</strong> A Silicon Valley-based startup just unveiled the “OpenRouter for coding agents.” Devs can pick a harness and a model, and the platform handles the rest. You can swap agents with a config change without losing history or rebuilding integrations. Dev teams can use its <a href="https://archive.codenewsletter.ai/2091906740409553036">Agent Playground</a> to run tasks across different agents with GitHub-connected tools, then compare cost and results side-by-side to find the best workflow. Check out the API <a href="https://agentsky.dev/">here</a>.</p>
+<p><strong>You can put your old idle MacBook to work and earn money:</strong> The AI startup Eigen Labs just launched a <a href="https://archive.codenewsletter.ai/2090932243309170873">marketplace that routes AI requests</a> to idle Macs for about half the cost of typical providers. It serves open-weight models like Qwen 3.6, Gemma 4, and GPT-OSS through an OpenAI-compatible endpoint. Mac owners never see your data because the system encrypts all prompts and responses. The company claims Mac owners can earn between $120 and $200 a month. <a href="https://www.darkbloom.dev/">Find more details here</a>.</p>
+<p><strong>ElevenLabs brings voice agents to your terminal:</strong> The voice AI lab’s <a href="https://archive.codenewsletter.ai/2091915556907532577">CLI v1</a> has brought its entire API to the terminal. You can now use CLI commands for text-to-speech, music, dubbing, and voice agents with clean, structured output. It even has built-in skills to teach coding agents how to use it, and it works with the company's MCP for Claude. This means teams can now script updates across entire fleets of voice agents from one place. <a href="https://elevenlabs.io/blog/elevenlabs-cli-v1">Try it here</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY WISPR</strong></h5>
+<h2><a href="https://ref.wisprflow.ai/thecode">Your agent is only as good as your prompt.</a></h2>
+<p><a href="https://ref.wisprflow.ai/thecode"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f8dbeeac-e19b-485c-ba9e-72d387dbe85d/Stats_Graphic_V1__1___1_.png?t=1787602977" /></a></p>
+<hr />
+<p>Claude Code, Cursor, Codex. The output ceiling is insane. But "fix the bug" gets you slop. Detailed context gets you shipping code.</p>
+<p>The problem: typing out file references, edge cases, and architecture context 40 times a day is exhausting. So you cut corners. Your agent gets lazy input.</p>
+<p><a href="https://ref.wisprflow.ai/thecode"><strong>Wispr Flow</strong></a> lets you speak full prompts with syntax-aware dictation. camelCase, snake_case, file names all preserved. Auto-tags files in Cursor and Windsurf.</p>
+<p><a href="https://ref.wisprflow.ai/thecode"><strong>Used by engineers at OpenAI, Vercel, and Clay</strong></a>. Works on Mac, Windows, iPhone, and Android.</p>
+<p>Better prompts in. Better code out. <a href="https://ref.wisprflow.ai/thecode"><strong>Try Free</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>Why the CTO chair keeps emptying</strong></h2>
+<p><img alt="Made with Midjourney. Source: The Code." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/248f7957-8ebd-4eb4-a12c-f020c9cabd07/superhumanteam_engineering_leaders_quitting_and_walking_away__b233d85d-bb5a-49f5-b375-91feccbbd62d_2.jpg?t=1787640877" />
+<em>Made with Midjourney. Source: The Code.</em></p>
+<hr />
+<p><strong>An exodus across Silicon Valley.</strong> Something is spooking the people who run engineering. Across startups and Big Tech, CTOs, VPEs, and heads of engineering are quitting high-status roles with nothing lined up. Veteran engineer Gergely Orosz says he's never seen this many top-tier leaders walk. In his latest <a href="https://newsletter.pragmaticengineer.com/p/the-great-engineering-leader-career-break?publication_id=458709&amp;post_id=211732492&amp;triggerShare=true&amp;isFreemail=true&amp;r=1ilbr9&amp;triedRedirect=true">deep dive</a>, he spoke to nearly 20 on career breaks. Six in ten were already on their way out.</p>
+<p><strong>A range of reasons.</strong> From rapid AI adoption (or the lack of it) to long hours and burnout. Then there’s what Orosz calls “founder mode.” In smaller companies, founders are micromanaging engineering, turning VP and CTO roles into low-ROI gigs. Some leaders left to build their own startups; others were pushed out.</p>
+<p><strong>Across the board, these were the most consistent reasons</strong><strong>:</strong></p>
+<ul>
+<li>
+<p><strong>The job got worse.</strong> Picture a founder celebrating a massive AI-generated PR while the CTO stares at the technical debt underneath. Flag the mess, and you become the office killjoy.</p>
+</li>
+<li>
+<p><strong>Equity looks like smoke.</strong> Leaders are trading salary for equity that feels like a gamble. Many CTOs now realize their options might never pay out due to VC payouts.</p>
+</li>
+<li>
+<p><strong>AI-native or bust.</strong> The best roles now want leaders who’ve actually led an AI transformation. If their current job can’t offer that, some are stepping back into IC roles rather than letting their skills go stale.</p>
+</li>
+<li>
+<p><strong>Teams are shrinking.</strong> Agents now handle work that once required entire teams, meaning fewer engineers and fewer layers of management.</p>
+</li>
+</ul>
+<p><strong>It doesn’t stop at the top.</strong> When leaders walk, the ripple effect hits the entire team. If you're taking a leadership role, interview the company too: do founders want engineering to change, or just get cheaper? And if your job isn't giving you hands-on AI experience, get it elsewhere.</p>
+<p><strong>P.S.</strong> Our engineering team put together over <a href="https://learn-code-tiles.lovable.app/">10 practical guides</a> to help you kick-start your journey toward becoming an AI-native engineer. Pass this along to your colleagues today.</p>
+<hr />
+<h5><strong>PRESENTED BY MAJOR</strong></h5>
+<h2><a href="https://major.build/?utm_source=superhuman&amp;utm_medium=sponsored_content&amp;utm_campaign=the_code">Everyone can build now. Almost nothing ships.</a></h2>
+<p><a href="https://major.build/?utm_source=superhuman&amp;utm_medium=sponsored_content&amp;utm_campaign=the_code"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f4dfe935-25b5-48db-a61a-7a56bfa73419/major-code-ad-SHIP_-_Ritvij_Gautam.jpg?t=1787589008" /></a></p>
+<hr />
+<p>Your non-technical teams are using Claude Cowork all day. Their workflows and agents run locally, making them hard to govern and unusable by the rest of the org.</p>
+<p><a href="https://major.build/?utm_source=superhuman&amp;utm_medium=sponsored_content&amp;utm_campaign=the_code">Major</a> let’s technical and non-technical teams build and share production-ready apps and agents, with guardrails, SSO, RBAC, and audit logs built in.</p>
+<p><a href="https://major.build/?utm_source=superhuman&amp;utm_medium=sponsored_content&amp;utm_campaign=the_code">Book a demo. Clear the queue at major.build.</a></p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5e885b35-4062-4384-a87d-321921d538c7/Screenshot_2026-08-25_at_2.20.06_PM.jpg?t=1787653239" />
+<em>Meme of the day</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>AI Engineer 101:</strong> Andrew Ng shared the 6 skills you need to build and deploy AI apps. He highlights <a href="https://archive.codenewsletter.ai/2090840747738374568">one skill</a> that separates top-tier AI engineers from the rest (1.9M views).</p>
+</li>
+<li>
+<p><strong>LLM Builders:</strong> Y Combinator co-founder <a href="https://archive.codenewsletter.ai/2091544343589060625">Paul Graham</a> says if he were 17 today, he'd learn to build LLMs from scratch. A senior AI engineer just explained <a href="https://archive.codenewsletter.ai/2091921787978445119">how to get started</a> (6.1K bookmarks).</p>
+</li>
+<li>
+<p><strong>Agent Swarm:</strong> Uncle Bob Martin is running teams of coding agents with a <a href="https://archive.codenewsletter.ai/2091960659667812382">tool</a> he open-sourced. His <a href="https://archive.codenewsletter.ai/2091890518942679110">current dev loop</a> fits in five lines (1.1K likes).</p>
+</li>
+<li>
+<p><strong>Codebase Map:</strong> Leaving coding agents to run for hours usually means coming back to a total mess of unknown repo edits. <a href="https://archive.codenewsletter.ai/2091704867211329752">This agent map</a> finally gives you a clear visual of exactly what they're touching (1K bookmarks).</p>
+</li>
+<li>
+<p><strong>OpenAI’s One App:</strong> In this <a href="https://archive.codenewsletter.ai/2091959711423996249">viral interview</a>, lead Codex engineer explains why Codex and ChatGPT are merging and how it changes the way we code (1.1M views).</p>
+</li>
+<li>
+<p><strong>Stealth Mode:</strong> Cline finally compared the mystery model called Ox Alpha against Claude Fable 5 on a real code bug. Both fixed it, but the former used <a href="https://archive.codenewsletter.ai/2091995642201842015">3x fewer tokens</a> (1.1K likes).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=rqZHR-hRllI"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4d7f235c-df76-494e-a4f9-c0ee07dca525/Thumbnail__12_.jpg?t=1787651851" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=rqZHR-hRllI">Harness Engineering with Pi Agent, Deepseek, and Gemini:</a> This tutorial teaches harness engineering using Pi Agent, DeepSeek, and Gemini. You’ll learn how to design structured agentic environments, overcoming LLM performance bottlenecks to create reliable, autonomous coding workflows capable of executing complex, multi-step software development tasks.</p>
+<hr />
+<p><a id="top-tool"></a></p>
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://github.com/xhluca/session-migrate">Move coding sessions between AI agents:</a> Hit a usage limit halfway through a task? This tool lets you carry the session into another coding agent without starting over. It currently works across Claude Code, Codex, Pi, OpenCode, Copilot CLI, Cursor, and more.</p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://archive.codenewsletter.ai/2091804330118861239">Cut Agent Tokens by 2.7x (using an open harness):</a> Agent costs rising despite fixed model pricing? This walkthrough shows how you can use an open harness to keep context lean using offloading, subagents, code mode, and compaction. Learn exactly where your agent tokens go and how to slash them without hurting performance.</p>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to steer Claude Code from your phone</strong></h2>
+<p>You kick off a long refactor in Claude Code, then sit watching the terminal. Anthropic's <a href="https://code.claude.com/docs/en/remote-control">Remote Control</a> fixes that. The session keeps running on your machine, and your phone or browser becomes a window into it.</p>
+<ol>
+<li>Sign in with a <a href="https://claude.ai">claude.ai</a> account (API keys don't work):</li>
+</ol>
+<pre><code>claude auth login
+</code></pre>
+<ol start="2">
+<li>From your project directory, start the session:</li>
+</ol>
+<pre><code>claude remote-control
+</code></pre>
+<ol start="3">
+<li>Press spacebar for a QR code, scan it with the Claude app, and keep working from the couch.</li>
+</ol>
+<p>Your files, MCP servers, and tools stay local. Works on Pro and Max. Team and Enterprise admins must turn it on first.</p>
+<p>P.S. Get 50+ AI coding hacks for Claude Code, Cursor, and Codex <a href="https://hackbook-chi.vercel.app/">here</a>.</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>An Anthropic engineer shared <a href="https://archive.codenewsletter.ai/2090884854590382515">the exact skill</a> his team uses to get up to speed on anything fast, and it's easier than you think.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 300K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

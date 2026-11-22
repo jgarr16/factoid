@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🖥️ Claude now controls your computer — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🖥️ Claude now controls your computer — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🖥️ Claude now controls your computer</h1>
+<p class="meta">2026-03-24 · received 2026-03-24 23:05 +0900
+ · <a href="https://codenewsletter.ai/p/anthropic-s-claude-gains-mac-control-cursor-makes-ai-agents-1-000x-faster" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🖥️ Claude now controls your computer</h1>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/32c8c971-340a-4f62-a6b8-f362e57e5397/image__83_.jpg?t=1770628392" /></p>
+<hr />
+<p><strong>Welcome back.</strong> Anthropic is on a hot run. They just dropped what's likely their biggest update of the year, with the launch video already reaching 37M views. Claude can now take over your entire Mac. It can open apps, browse the web, fill out spreadsheets, and click through workflows even when you are not at your desk.</p>
+<p><strong>Also:</strong> How to review PRs like OpenClaw's creator, get GPT-5.4 to build frontends that look well designed, and find out why Jensen Huang says we don't have AGI yet.</p>
+<hr />
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>How teams should adopt coding agents</p>
+</li>
+</ul>
+<p><a id="how-to-schedule-cloud-jobs-in-claude-code"></a>
+* How to schedule cloud jobs in Claude Code</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://x.com/claudeai/status/2036195789601374705"><img alt="Click here to see Claude remote computer use in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6b5b933c-4d84-4ec9-837a-016ee1f37ffb/Untitled_design__25_.jpg?t=1774337025" /></a>
+<em>Click here to see Claude remote computer use in action.</em></p>
+<hr />
+<p><strong>Anthropic gives Claude direct control of your Mac:</strong> The AI lab recently released a research preview that allows Claude to <a href="https://x.com/claudeai/status/2036195789601374705"><strong>take over</strong></a> your desktop and complete tasks from start to finish. It can click, type, open apps, navigate browsers, and edit files. Before using screen control, it checks for secure integrations with apps like Slack and Calendar. This new feature works alongside Dispatch, letting users assign tasks from their phones and return later to find the work already completed.</p>
+<p><strong>ChatGPT now saves your files across conversations:</strong> The ChatGPT Maker just revealed <a href="https://x.com/OpenAI/status/2036183180219392103"><strong>Library</strong></a>, a new built-in storage feature that automatically saves any documents, spreadsheets, or images you upload or create during a chat. You can find these files in a dedicated sidebar tab on the web version, making it easy to pull them into future conversations without having to re-upload anything. Even if you delete a chat, the associated files will remain saved until you manually remove them.</p>
+<p><strong>Cursor makes AI agents 1,000x faster at searching code:</strong> The coding startup recently launched <a href="https://cursor.com/blog/fast-regex-search"><strong>Instant Grep</strong></a>, a client-side indexing system capable of searching millions of files in just 13 milliseconds. It works by creating a local index tied to Git commits, utilizing n-grams and Bloom filters to narrow down matches before scanning files directly. This represents a significant improvement over ripgrep, which takes nearly 17 seconds for the same query. These speed gains are especially helpful in large monorepos, where slow searches have been a major bottleneck for AI coding agents.</p>
+<hr />
+<h5><strong>PRESENTED BY WISPR</strong></h5>
+<h2><a href="https://ref.wisprflow.ai/thecode">Bad prompts = AI slop.</a></h2>
+<p><a href="https://ref.wisprflow.ai/thecode"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b3269ffa-03b4-4cce-9010-9e92960811f9/Newsletters_Image_1920x1080__4_.png?t=1774344622" /></a></p>
+<hr />
+<p>The bottleneck isn't the model. It's typing detailed context 50x a day.</p>
+<p>Wispr Flow lets you <a href="https://ref.wisprflow.ai/thecode">speak full prompts</a> into Cursor, Windsurf, or ChatGPT with syntax-aware dictation that respects camelCase, snake_case, and file names.</p>
+<ul>
+<li>
+<p>Dictate specs, get better first-try output</p>
+</li>
+<li>
+<p>Auto-tags files when you mention them</p>
+</li>
+<li>
+<p>Works in VS Code, Linear, Slack, and anywhere you type</p>
+</li>
+</ul>
+<p>Fewer reprompts. More shipping.</p>
+<p><a href="https://ref.wisprflow.ai/thecode"><strong>Try Wispr Flow Free</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>How engineering teams should adopt coding agents</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/aefe23ec-a7c0-475a-a964-fc197a075941/superhumanteam_a_software_engineering_team_working_on_a_white_d6a71fd5-4e0c-46dd-9af4-55a7f6fcfaa2_1.jpg?t=1774343437" />
+<em>Source: The Code, Superhuman</em></p>
+<hr />
+<p><strong>The line is getting clearer.</strong> When Andrej Karpathy coined the term "vibe coding" in February 2025, it captured something real: prompting an LLM and simply accepting the output without much thought. But engineers building production software with AI didn't see themselves as vibe coders.</p>
+<p>Simon Willison, the co-creator of Django, recently published a <a href="https://simonwillison.net/guides/agentic-engineering-patterns/">guide</a> that draws the distinction clearly. The moment you begin reviewing and auditing agent-generated code, you've crossed into what he calls agentic engineering.</p>
+<p><strong>Pull requests are the first things to break.</strong> Willison’s sharpest warning targets a growing <a href="https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/"><strong>anti-pattern</strong></a> where engineers submit PRs full of agent-generated code they never actually checked. This shifts the burden of proof to reviewers. To make matters worse, agent-written descriptions often read well on the surface but fail to match what the code is actually doing.</p>
+<p><strong>Experience still compounds if you capture it.</strong> The guide argues that every working snippet, proof of concept, and old repository serves as high-quality fuel for agents. Instead of describing a solution from scratch, engineers can give an agent two existing examples and tell it to merge them. This <a href="https://simonwillison.net/guides/agentic-engineering-patterns/hoard-things-you-know-how-to-do/"><strong>process</strong></a> compounds years of knowledge into a single prompt in a way a beginner simply cannot replicate.</p>
+<p><strong>It is cheaper to produce, but not cheaper to maintain.</strong> Willison’s core point ties the whole guide together. Agents lower the cost of writing code, but they do not lower the cost of maintaining bad code. Without updated review processes, technical debt grows with every commit.</p>
+<p>Ultimately, the cost shifts from the person who wrote the prompt to the team that inherits the repository. If your team is shipping agent-generated code without a clear workflow, Willison’s <strong><a href="https://simonwillison.net/guides/agentic-engineering-patterns/what-is-agentic-engineering/">guide</a></strong> is the place to start.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/18a90080-a5c3-45b1-87b2-5e210cc46b8b/CleanShot_2026-03-24_at_11.28.36_2x__1_.jpg?t=1774331979" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Second Opinion:</strong> OpenClaw's creator reviews every PR with AI. His** <a href="https://x.com/steipete/status/2036252448399171717">workflow</a>** shows why most first fixes actually make your codebase worse, and what to do instead.</p>
+</li>
+<li>
+<p><strong>Card Grid Trap:</strong> GPT-5.4 can build polished frontends, but most devs keep getting generic layouts because they're** <a href="https://x.com/emanueledpt/status/2035402224260550921">missing</a>** three prompt constraints.</p>
+</li>
+<li>
+<p><strong>Loop Effect:</strong> Karpathy's autoresearch loop has been live for two weeks. Devs are already applying it to <a href="https://x.com/zhengyaojiang/status/2035385189719765261"><strong>everything</strong></a> — one team hit 53% faster on Shopify's template engine.</p>
+</li>
+<li>
+<p><strong>Jensen Unplugged:</strong> Lex Fridman just <a href="https://x.com/lexfridman/status/2036123301140111406"><strong>dropped</strong></a> a 2.5-hour sit-down with NVIDIA's Jensen Huang on what he thinks is actually blocking AGI right now.</p>
+</li>
+<li>
+<p><strong>Vibe to Deploy:</strong> A Google engineer broke down how to go from a single prompt to a <a href="https://x.com/_philschmid/status/2036089128899510568"><strong>deployed app</strong></a> with a database entirely inside AI Studio.</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to schedule cloud jobs in Claude Code</strong></h2>
+<p><a href="https://x.com/noahzweben/status/2036129220959805859"><img alt="Source: X/noahzweben" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4166c74b-b739-4d4c-af3a-ad0ea8493a61/CleanShot_2026-03-24_at_10.39.48_2x.jpg?t=1774329023" /></a>
+<em>Source: X/noahzweben</em></p>
+<hr />
+<p>Claude Code's scheduled tasks used to have a frustrating catch: they only worked if your computer stayed awake. If you closed your laptop, the job would just fail to run.</p>
+<p>Anthropic's Claude Code PM, Noah Zweben, <a href="https://x.com/noahzweben/status/2036129220959805859">shared</a> a newly released fix for this. The “/schedule” command now lets you set up cloud-based recurring tasks directly from your terminal.</p>
+<p>Just type “/schedule” followed by what you need:</p>
+<pre><code>/schedule a daily job that looks at all PRs shipped since yesterday and update our docs based on the changes. Use the Slack MCP to message #docs-update with the changes
+</code></pre>
+<p>Claude sets the frequency and gives you a trigger URL. Since the job runs in the cloud, it stays on schedule even if your laptop is closed. Any connected MCP servers like Slack or GitHub work seamlessly within the scheduled prompt.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=diy3kmUl8mY"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e835426e-a55d-4de9-ade4-8bd85da6d273/Untitled_design__26_.jpg?t=1774346450" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=diy3kmUl8mY"><strong>How Microsoft's AI VP automates everything:</strong> </a>** **This tutorial shows devs how Microsoft’s AI VP uses the AI terminal Warp to automate tedious daily tasks using ad-hoc micro-agents. You'll learn to manage Azure cloud resources via the command line, process files with FFmpeg, and use custom rules and conversational prompts to streamline your workflow.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://x.com/MiniMax_AI/status/2035609361826111780"><strong>MiniMax Skills:</strong> </a> This repo contains development skills for AI coding agents. By installing them, you provide structured guidance to tools like Cursor, Claude Code, Codex, and OpenCode, allowing them to stop guessing and start delivering production-quality results.</p>
+<hr />
+<h3><strong>Trending Paper</strong></h3>
+<p><a href="https://x.com/jennyzhangzt/status/2036099935083618487"><strong>Hyperagents:</strong> </a> Current AI stalls because its self-improvement rules are permanently fixed by humans. "Hyperagents" solve this by merging task-solving and self-editing, allowing the AI to continuously upgrade how it learns across any task.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 200K+ engineers and 100K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

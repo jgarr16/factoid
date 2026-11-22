@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>👀 OpenAI drops a privacy focused model — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="👀 OpenAI drops a privacy focused model — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>👀 OpenAI drops a privacy focused model</h1>
+<p class="meta">2026-04-23 · received 2026-04-23 23:02 +0900
+ · <a href="https://codenewsletter.ai/p/openai-ships-a-new-open-source-model-alibaba-drops-qwen3-6-27b" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>👀 OpenAI drops a privacy focused model</h1>
+<p><a href="https://fandf.co/4dQRPTm"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/92805d3c-0c91-487e-ae58-c3097ba7b872/Group_MongoDB__7_.jpg?t=1776846413" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Your private data should stay exactly where it belongs: on your device. OpenAI just dropped a new open-weight model that lets developers redact sensitive info locally before it ever hits the cloud. And it wasn't the only thing they shipped yesterday.</p>
+<p><strong>Also:</strong> Plug 80 Nvidia-hosted models into your coding agent at no cost, 5 design patterns for long-running agents, and why Karpathy says a 1,800x smaller model can match a 1.8T giant.</p>
+<hr />
+<p><a id="todays-insights"></a></p>
+<h3><strong>Today’s Insights</strong></h3>
+<ul>
+<li>
+<p>Powerful new updates and hacks for devs</p>
+</li>
+<li>
+<p>How AI is rewriting engineering interviews</p>
+</li>
+</ul>
+<p><a id="how-to-stop-restarting-gemini-cli-on-long-tasks"></a>
+* How to stop restarting Gemini CLI on long tasks</p>
+<ul>
+<li>Trending social posts, top repos, and more</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=yyvVUEPSCu0"><img alt="Click here to see OpenAI’s workspace agents in action." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c5d75c05-885e-480f-b615-c5283a6e1e59/Thumbnail__2_.jpg?t=1776935726" /></a>
+<em>Click here to see OpenAI’s workspace agents in action.</em></p>
+<hr />
+<p><strong>OpenAI ships open-weight model for redacting private data:</strong> The ChatGPT maker just dropped <a href="https://openai.com/index/introducing-openai-privacy-filter/"><strong>Privacy Filter</strong></a>, a new 1.5B-parameter open-weight model that automatically hides personal info like emails and API keys on your own device. The lab also introduced <a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/"><strong>workspace agents</strong></a> for Business and Enterprise users. These Codex-powered agents can handle complex workflows in Slack and ChatGPT and are currently free to try through May 6. Try the new privacy model on <a href="https://huggingface.co/openai/privacy-filter"><strong>Hugging Face</strong></a> now.</p>
+<p><strong>Alibaba unveils a smaller model that tops coding benchmarks:</strong> The Chinese tech giant just open-sourced <a href="https://qwen.ai/blog?id=qwen3.6-27b"><strong>Qwen3.6-27B</strong></a>, a multimodal model that beats their previous 397B-parameter flagship across all major coding benchmarks. Its dense architecture makes it much easier to deploy than complex MoE models, bringing top-tier coding performance to a more practical scale. <a href="https://unsloth.ai/docs/models/qwen3.6">Run the model locally.</a></p>
+<p><strong>Google evolves Vertex AI into an agent platform:</strong> The search giant just unveiled the <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform"><strong>Gemini Enterprise Agent Platform</strong></a> at Cloud Next '26, effectively replacing its flagship AI development suite. Moving forward, all Vertex AI updates will live on this new platform, which features a low-code Agent Studio and a graph-based kit for building sub-agent networks. The new runtime now powers autonomous workflows that can run for days, all while Google’s models handle a staggering 16 billion tokens per minute via API.</p>
+<hr />
+<h5><strong>PRESENTED BY MONGODB</strong></h5>
+<h2><a href="https://fandf.co/4dQRPTm">Join the builders shaping what’s next.</a></h2>
+<p><a href="https://fandf.co/4dQRPTm"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e4eb5e53-1216-4d4f-876e-1ea53ad45a78/mongo_db_23rd_april.jpg?t=1776930074" /></a></p>
+<hr />
+<p><a href="https://fandf.co/4dQRPTm">MongoDB.local London 2026</a> brings together developers, founders, and AI leaders for a full day of real-world talks, hands-on sessions, and networking.</p>
+<p>Learn how teams are taking AI from prototype to production, explore modern data architectures, and connect with experts solving today’s toughest engineering challenges.</p>
+<p><strong><a href="https://fandf.co/4dQRPTm">London | May 7— Save your spot.</a></strong></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>How AI is rewriting engineering interviews</strong></h2>
+<p><img alt="Source: Augment Code" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c0e86954-86d3-47ac-a507-4819a17350b3/CleanShot_2026-04-23_at_18.05.26_2x.jpg?t=1776947805" />
+<em>Source: Augment Code</em></p>
+<hr />
+<p><strong>Code stopped being the test.</strong> Coding interviews became obsolete the second Claude Code and Codex started passing them on autopilot. Sierra, the AI agent startup founded by former Salesforce co-CEO Bret Taylor, just <a href="https://sierra.ai/blog/the-ai-native-interview">published</a> the most in-depth look yet at what's taking their place.</p>
+<p><strong>The signal cratered first.</strong> Traditional interviews mostly measured syntax and framework recall, things LLMs now handle in seconds. Karat, an interview-as-a-service firm, which has run <a href="https://www.businesswire.com/news/home/20251210685922/en/Karat-Launches-NextGen-Interviews-The-First-Human-Led-AI-Enabled-Talent-Evaluation-Solution">over 600,000</a> interviews for companies like Atlassian and PayPal, sees this shift as well. Stick to pre-LLM rubrics today, and you’re basically just testing if a candidate remembered to use AI.</p>
+<p><strong>Live builds replaced live coding.</strong> A consistent pattern is emerging. Give candidates two hours, their AI of choice, and a real product to build, then grade their output and decision-making. This is the core of Sierra’s onsite interview. Augment Code <a href="https://www.augmentcode.com/blog/how-we-hire-ai-native-engineers-now">shipped</a> a similar model in March, evaluating engineers on dimensions like product taste and architectural judgment.</p>
+<p><strong>Calibration is the new headache.</strong> Open-ended interviews are harder to grade and often spark debate during debriefs. But the payoff is worth it. It’s better to hire for standout strengths like strong product taste and sharp architectural instincts instead of just checking for a lack of weaknesses. The real question has shifted from whether someone can code to what they build and why.</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>What’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c6b348f3-4eb3-49cd-9695-07e3c7df3ad1/CleanShot_2026-04-23_at_15.17.54_2x.jpg?t=1776937713" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Free Inference:</strong> Nvidia is quietly <a href="https://x.com/dhruvtwt_/status/2047006444701274380"><strong>hosting</strong></a> nearly 80 frontier models you can plug straight into your coding agent (21K bookmarks).</p>
+</li>
+<li>
+<p><strong>Pixel Stream:</strong> Shopify's CEO is hyping a prototype that <a href="https://x.com/tobi/status/2047133338150842676"><strong>streams entire UIs</strong></a> directly from an AI model, skipping the frontend stack entirely (2.6M views).</p>
+</li>
+<li>
+<p><strong>Agent Blueprint:</strong> Google Cloud AI Director Addy Osmani <a href="https://x.com/GoogleCloudTech/status/2046989964077146490"><strong>mapped out</strong></a> the 5 design patterns behind production-grade AI agents (1.7K bookmarks).</p>
+</li>
+<li>
+<p><strong>Code Guard:</strong> This new Claude Code** <a href="https://x.com/ClaudeDevs/status/2046999435239133246">command</a>** runs a fleet of cloud bug-hunters before you merge (1.8M views).</p>
+</li>
+<li>
+<p><strong>Data Over Size:</strong> OpenAI co-founder Andrej Karpathy claims today's 1.8T parameter frontier could be matched by a model <a href="https://x.com/aakashgupta/status/2046860622160371869"><strong>1,800x smaller</strong></a> (465K views).</p>
+</li>
+<li>
+<p><strong>Agent Fluency:</strong> Google open-sourced a spec that gives AI agents a <a href="https://x.com/stitchbygoogle/status/2046624729403142320"><strong>shared language</strong></a> across projects (3.8M views).</p>
+</li>
+<li>
+<p><strong>Buy the Future:</strong> AngelList's Naval Ravikant just launched a fund that lets you <a href="https://x.com/naval/status/2046991137022648800"><strong>own a slice</strong></a> of OpenAI, Anthropic, and xAI for $500 (3.9M views).</p>
+</li>
+</ul>
+<hr />
+<h5><strong>AI CODING HACK</strong></h5>
+<h2><strong>How to stop restarting Gemini CLI on long tasks</strong></h2>
+<p><a href="https://x.com/EvanOtero/status/2016507012633255941"><img alt="Source: X/EvanOtero" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8feeffc6-c5a8-47ce-92cb-1ce696c8c08c/CleanShot_2026-04-23_at_10.48.26_2x.jpg?t=1776921622" /></a>
+<em>Source: X/EvanOtero</em></p>
+<hr />
+<p>Long agentic runs often stall when context windows max out, forcing a restart that wipes your state. Evan Otero from the Gemini CLI team <a href="https://github.com/gemini-cli-extensions/ralph"><strong>solved this</strong></a> by porting Geoffrey Huntley's Ralph loop technique into a new extension. It fixes the issue in a single command. You'll need Gemini CLI v0.26.0 or newer to use the hooks required for the setup:</p>
+<pre><code>gemini extensions install https://github.com/gemini-cli-extensions/ralph
+</code></pre>
+<p>Then run a loop with an iteration cap and a completion phrase:</p>
+<pre><code>/ralph:loop &quot;Build a REST API for todos with CRUD and full test coverage. Output 'DONE' when all tests pass.&quot; --completion-promise &quot;DONE&quot; --max-iterations 20
+</code></pre>
+<p>An AfterAgent hook clears session memory and restarts the agent with the original prompt after every turn, keeping the context stable until it finishes or hits the limit. Use the “-y” flag in sandbox mode to keep the loop running without pausing for tool calls.</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=rFGlJ4oIlhw"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a736fa30-c28c-4e09-aab5-62b342c32132/Thumbnail__3_.jpg?t=1776940036" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><strong><a href="https://www.youtube.com/watch?v=rFGlJ4oIlhw">How to run Parallel agents in Claude Code:</a></strong> This tutorial shows developers how to scale their AI coding output. You'll learn how to safely run multiple AI sessions simultaneously using Git worktrees, isolate databases to prevent conflicts, and automate your workflow from GitHub issues all the way to fully validated pull requests.</p>
+<hr />
+<h3><strong>Top Tool</strong></h3>
+<p><a href="https://www.coderabbit.ai/"><strong>Code Rabbit:</strong> </a> An AI-powered code review assistant that integrates with GitHub, GitLab, and Bitbucket to provide automated, line-by-line feedback on code quality, security vulnerabilities, and bugs.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/zilliztech/claude-context"><strong>Claude Context</strong></a>** (8k ⭐):** This repo contains an MCP plugin that enables semantic code search for Claude Code and other AI coding assistants, providing them with deep context from your entire codebase.</p>
+<hr />
+<h3><strong>Trending Paper</strong></h3>
+<p><a href="https://x.com/ClaudeDevs/status/2047086372666921217"><strong>When should agents use direct APIs vs CLIs vs MCP? (by Anthropic):</strong> </a> Linking AI agents to external systems through APIs or CLIs often leads to massive integration headaches at scale. MCP fixes this by providing a standardized, portable layer that seamlessly connects cloud-based agents to remote tools and data.</p>
+<hr />
+<p><strong>Grow customers &amp; revenue:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 240K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code">Get in touch.</a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>No code, no budget: 7 web scrapers put to the test — Indicator</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="No code, no budget: 7 web scrapers put to the test — Indicator" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>Indicator</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>No code, no budget: 7 web scrapers put to the test</h1>
+<p class="meta">2026-07-07 · received 2026-07-07 20:01 +0900
+ · <a href="https://indicator.media/p/no-code-no-budget-7-web-scrapers-put-to-the-test" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>No code, no budget: 7 web scrapers put to the test</h1>
+<p>For me, web scraping has always carried an illicit thrill. It's a combination of a jewel heist, jigsaw puzzle, and lockpicking.</p>
+<p>I began web-scraping 13 years ago, when I was starting out as a data journalist. I understood scraping but had never coded a functioning scraper; learning Python was daunting.</p>
+<p>In 2013, Duke University's Reporters' Lab asked if I could <a href="https://web.archive.org/web/20140414171755/http://www.reporterslab.org/scraping-roundup/">test and review</a> enterprise scraping software. I jumped at the chance to learn how to crawl, parse and extract unstructured data from websites. It enabled me to land scoops that helped me gain a foothold in the industry. At the time, you needed at least basic coding skills to be able to use the tools I reviewed. And as much as I loved web scraping, it was a pain in the ass, even with coding skills and premium tools.</p>
+<p>That’s no longer the case. Today, you can scrape webpages, including those with features like dropdown menus and infinite scroll, or protections like Cloudflare, without technical expertise or a big budget. There are browser extensions, AI-assisted tools, and other options that put scraping in the hands of any investigator. To help you decide which scraper is the right fit for your needs, I put seven options to the test.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li>
+<p><a href="#methodology">Methodology</a></p>
+</li>
+<li>
+<p><a href="#tool-selection">Tool Selection </a></p>
+</li>
+<li>
+<p><a href="#types-of-scrapers">Types of Scrapers</a></p>
+</li>
+<li>
+<p><a href="#the-seven-tools-i-tested">The seven tools I tested:</a></p>
+</li>
+<li>
+<p><a href="#test-websites-and-scoring-system">Test Websites and Scoring System</a></p>
+</li>
+<li>
+<p><a href="#scoring-system">Scoring System</a></p>
+</li>
+<li>
+<p><a href="#use-of-ai">Use of AI</a></p>
+</li>
+<li>
+<p><a href="#findings">Findings</a></p>
+</li>
+<li>
+<p><a href="#results">Results</a></p>
+</li>
+<li>
+<p><a href="#scraping-platforms">Scraping Platforms</a></p>
+</li>
+<li>
+<p><a href="#browser-extensions">Browser Extensions</a></p>
+</li>
+<li>
+<p><a href="#repos">Repos</a></p>
+</li>
+</ul>
+<h2>Methodology</h2>
+<h3>Tool Selection</h3>
+<p>Indicator selected seven web scraping applications/packages that offer some form of free access. Most of the scrapers have additional premium features, which I did not use. I wanted to see how far I could get with the free tier. When tools allowed for different ways to run them — such as a desktop app or a command-line interface — I’ve noted which implementation was used in my testing.</p>
+<h4>Types of Scrapers</h4>
+<p>The scrapers tested generally fell into three categories, though there was a certain amount of feature overlap:</p>
+<ul>
+<li>
+<p><strong>Platforms:</strong> These scrapers often include a graphical user interface to select website elements and build scrapers. They typically offer numerous other features, including AI integration, ready-made templates, and the ability to monitor specific webpages.</p>
+</li>
+<li>
+<p><strong>Browser Extensions:</strong> These scrapers were installed via the Chrome Web Store (I used the Brave Browser). They are typically no-code, incorporating point-and-click and conversational-AI element selectors.</p>
+</li>
+<li>
+<p><strong>Repos:</strong> These scrapers had GitHub repos that could be installed and run via command line or a Python IDE.</p>
+</li>
+</ul>
+<h4>The seven tools I tested:</h4>
+<ol>
+<li>
+<p><a href="https://apify.com/">Apify</a></p>
+</li>
+<li>
+<p><a href="https://www.browse.ai/">Browse AI</a></p>
+</li>
+<li>
+<p><a href="https://github.com/apify/crawlee">Crawlee</a></p>
+</li>
+<li>
+<p><a href="https://www.firecrawl.dev/">Firecrawl</a></p>
+</li>
+<li>
+<p><a href="https://www.octoparse.com/">Octoparse</a></p>
+</li>
+<li>
+<p><a href="https://thunderbit.com/">Thunderbit</a></p>
+</li>
+<li>
+<p><a href="https://Webscraper.io">Webscraper.io</a></p>
+</li>
+</ol>
+<h3>Test Websites and Scoring System</h3>
+<p>I chose websites for testing that permitted automated data extraction. This meant I did not scrape any of the major social media platforms, which explicitly prohibit scraping in their robots.txt. (Some tools, such as Apify, say they can scrape social sites.) The three websites/tasks were:</p>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Lists_of_legendary_creatures"><strong>Wikipedia - List of Legendary Creatures (Novice)</strong> </a></li>
+</ol>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/20d47b7e-d466-497c-80e3-af6bee528a8f/image.png?t=1782741754" /></p>
+<p><strong>Why it was chosen:</strong></p>
+<p>I like mythical creatures, okay? Plus it allowed me to see if scrapers could:</p>
+<ul>
+<li>
+<p>Navigate to the List of legendary creatures webpage and collect all of the alphabetically listed URLs</p>
+</li>
+<li>
+<p>Take the list of URLs, navigate to each legendary creature subpage and extract information from the page</p>
+</li>
+</ul>
+<p><strong>The challenge:</strong></p>
+<ul>
+<li>Each legendary creature entry isn't in a clean, structured format. The pages contain a mix of URLs and free-floating in-line HTML without dedicated fields or CSS classes to target.</li>
+</ul>
+<p><strong>Deliverable(s):</strong></p>
+<ul>
+<li>Extract data on all 1605 Legendary Creatures</li>
+</ul>
+<p><strong>Test 2:</strong> <a href="https://www.sec.gov/edgar/search/#/q=%2522Elon%2520Musk%2522&amp;dateRange=all">SEC EDGAR Text Search for all documents responsive to "Elon Musk" (Moderate)</a></p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ba859b83-dd91-4a14-87b8-7f49a318c3ab/Screenshot_2026-06-29_at_10.25.13_AM.png?t=1782743139" /></p>
+<p><strong>Why it was chosen:</strong></p>
+<p>To see how scrapers handle a website with clickable elements. In this case, the EDGAR Text Search has clickable toggles for displaying additional columns. It’s further complicated by the fact that two of the columns are pre-selected.</p>
+<p><strong>The challenge:</strong></p>
+<ul>
+<li>EDGAR Text Search doesn’t allow you to navigate past page 10 via browser navigation. Batch scraping is required to retrieve every result.</li>
+</ul>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/112c7ffb-4572-499d-886d-ea3ff3cd00b2/image.png?t=1782741750" /></p>
+<p><strong>Deliverable(s):</strong></p>
+<ul>
+<li>Batch scrape responsive records with all columns selected</li>
+</ul>
+<p><strong>Test 3:</strong> <a href="https://www.documentcloud.org/documents/?q=%22Justin+Trudeau%22">DocumentCloud Search for all publicly available documents that include "Justin Trudeau" (Hard)</a></p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/6f9dd897-1578-46bd-8967-6cfa237dd7a8/image.png?t=1782741754" /></p>
+<p><strong>Why it was chosen:</strong></p>
+<p>DocumentCloud is built with Svelte, a JavaScript framework that poses numerous scraping challenges. Also, I'm Canadian.</p>
+<p><strong>The challenge:</strong></p>
+<ul>
+<li>DocumentCloud uses an "infinite scroll" to load more records. Each infinite scroll triggers an async API call for the next batch of results, which is complicated by inconsistent timing in terms of how the DOM renders each new batch of results. This is what pain is.</li>
+</ul>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ae9ebf52-20f6-4e2d-94fd-fc5cab5424ef/image.png?t=1782741753" /></p>
+<p><strong>Deliverable(s):</strong></p>
+<ul>
+<li>
+<p>Capture the document title and document URL</p>
+</li>
+<li>
+<p>Navigate to individual documents using the document URLs and extract the "Last Updated On" text field</p>
+</li>
+<li>
+<p>Successfully trigger DocumentCloud's infinite scroll to load additional batches of documents and repeat data extraction</p>
+</li>
+</ul>
+<h4>Scoring System</h4>
+<p>The amount of tooling required to capture 100% of the desired data can become an exercise in diminishing returns. In some cases, the juice ain't worth the squeeze. I came up with three scores (success, partial success, and fail) to judge the effectiveness of each task:</p>
+<p><strong>Test Result</strong></p>
+<p><strong>Explanation</strong></p>
+<p>Success</p>
+<p>The scraper either achieved or was extremely close to hitting the deliverable, with minor manual input or revisions needed</p>
+<p>Partial Success</p>
+<p>The scraper fell short of satisfying the deliverable, but additional troubleshooting could reasonably be expected to improve results.</p>
+<p>Fail</p>
+<p>The scraper failed to achieve the deliverable.</p>
+<h4>Use of AI</h4>
+<p>A paid Claude Pro AI subscription was used to analyze test websites and troubleshoot most, if not all, of the scrapers tested, to varying degrees.</p>
+<h2>Findings</h2>
+<p>I'm blown away by the progress scrapers have made over the past decade, particularly the Chrome extensions and AI tools.</p>
+<p>The ability to use conversational language to craft complex scrapers truly lowers the skill floor for the average investigator. Back in 2013, the tools that I tested involved painstaking trial and error, and required you to have a decent grasp of HTML and CSS; I still think investigators will fare better with this knowledge, but it’s no longer a prerequisite. Those same tools also cost hundreds of dollars per license and required a standalone program. Current premium scraping platforms like Webscraper.io offer tools with similar functionality for free, as is the case with their browser extension. Yesterday’s premium scraper is today’s loss leader.</p>
+<p>However, unless you have a background in computer engineering, you are going to have to spend money somewhere to ensure you are able to scrape websites with any sense of consistency. Many of the tools require you to spend credits to unlock advanced functions, such as batch-scraping URLs, or maintaining multiple projects at once.</p>
+<p>The tools that don't gatekeep such functions require you to know your way around object-oriented programming languages such as Python. They provide an excellent scraping framework, but you're more or less left to your own devices. While my Python skills have increased since 2013, I'm still very much a novice. I found myself using Claude frequently.</p>
+<p>Being able to "say" what you want to scrape feels almost too easy — but it'll cost you.</p>
+<p>Tool</p>
+<p>Test 1</p>
+<p>Test 2</p>
+<p>Test 3</p>
+<p>Comment</p>
+<p>Apify</p>
+<p>Success</p>
+<p>Partial success</p>
+<p>Success</p>
+<p>Plethora of options and a generous free tier</p>
+<p>Browse AI</p>
+<p>Partial success</p>
+<p>Partial success</p>
+<p>Fail</p>
+<p>Unique approach to no-code scraping, was foiled by bot detection</p>
+<p>Cawleee</p>
+<p>Success</p>
+<p>Success</p>
+<p>Partial success</p>
+<p>The best option if you know how to code or already make use of an LLM</p>
+<p><a id="firecrawl"></a>
+Firecrawl</p>
+<p>Success</p>
+<p>Partial success</p>
+<p>Success</p>
+<p>Highly capable with lots of options, but be prepared to spend credits unless you self-host</p>
+<p>Octoparse (Desktop)</p>
+<p>Success</p>
+<p>Partial success</p>
+<p>Fail</p>
+<p>Capable, no-code desktop app that struggles with harder websites</p>
+<p>Thunderbit</p>
+<p>Partial success</p>
+<p>Fail</p>
+<p>Fail</p>
+<p>Impressive AI scraper that’s aggressively paywalled</p>
+<p><a id="webscraperio"></a>
+Webscraper.io</p>
+<p>Partial success</p>
+<p>Success</p>
+<p>Fail</p>
+<p>A completely free browser extension that lives in your DevTools. A no-brainer install</p>
+<h2>Results</h2>
+<h3>Scraping Platforms</h3>
+<h4><a href="https://apify.com/">Apify</a></h4>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7fcd2686-eb57-47c8-8b57-f57f420fc872/Screenshot_2026-06-29_at_1.40.09_PM.png?t=1782754834" /></p>
+<p>Apify bills itself as "the largest marketplace of trusted tools for AI." But even if you eschew AI integration completely, its online marketplace offers a plethora of web scrapers that can be run in-browser using Apify's GUI. The free tier gives you $5 of free credits, which actually stretches incredibly far depending on the scraper you select. Some scrapers are free, or charge per result (such as this <em>Instagram Scraper</em> which charges $1.50 per 1,000 results), which is great for tinkering.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ca3c20a8-e99c-46de-a841-70246fe4b83a/image.png?t=1782742073" /></p>
+<p>Apify scrapers can be managed from the Console using your browser of choice. Each scraper is different. For example, here's a comparison of the web scraper I used for the first test, which actually required me to write the Page Function script:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/36d4e723-2678-487a-9c39-2dc837903431/image.png?t=1782742073" /></p>
+<p>And here is the <a href="https://apify.com/constructive_calm/sec-edgar-scraper">SEC EDGAR Scraper</a> I used to grab the information:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5d413285-bc57-4cdb-bf8a-bc196a052a42/image.png?t=1782742073" /></p>
+<p><strong>Verdict</strong></p>
+<p>I've just scratched the surface of what Apify has to offer. Your mileage will vary depending on the scraper you select and your own proficiency. However, for exceedingly complex scrapes, you're essentially building scrapers from scratch.</p>
+<p><strong>Test</strong></p>
+<p><strong>Result</strong></p>
+<p><strong>Summary</strong></p>
+<ol>
+<li>Wikipedia</li>
+</ol>
+<p>Success</p>
+<p>I was able to use Apify's web scraper to conduct a multi-level scrape of Legendary Creatures. However, it required some troubleshooting with Claude.</p>
+<ol start="2">
+<li>EDGAR</li>
+</ol>
+<p>Partial success</p>
+<p>This was probably one of the easier scrapes I was able to conduct for EDGAR, though I wasn't able to capture every field I wanted. The scraper was mostly pre-configured and didn't allow for further customization. That being said, the majority of the data was there.</p>
+<ol start="3">
+<li>DocumentCloud</li>
+</ol>
+<p>Partial success</p>
+<p>After significant troubleshooting with Claude, Apify's web scraper was somewhat functional using DocumentCloud's API. But more troubleshooting would be required to grab every document.</p>
+<h4><a href="https://www.browse.ai/">Browse AI</a></h4>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b574e84a-a4e9-479f-8357-27b715a3b752/image.png?t=1782742073" /></p>
+<p>Browse AI is a scraping platform offering everything from web scraping and website monitoring to full managed services.</p>
+<p>Its approach to AI scraping is unique among the tools I tested: to build a web scraper, you train individual AI "robots" that you can chain together into a scraping workflow.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/467f6e61-0bba-4d17-93f5-6181544d6e87/image.png?t=1782742074" /></p>
+<p>The robots "watch" you navigate your preferred workflow in your browser during a toggled "Recording" session.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/220ef893-c6ea-4b71-9247-ecbfa6e029d0/image.png?t=1782742073" /></p>
+<p><strong>Verdict</strong></p>
+<p>Browse AI's AI Scraper is a capable no-code solution for easy-to-moderate scraping tasks, provided you have the credits.</p>
+<p><strong>Test</strong></p>
+<p><strong>Result</strong></p>
+<p><strong>Summary</strong></p>
+<ol>
+<li>Wikipedia</li>
+</ol>
+<p>Partial Success</p>
+<p>Browse AI was able to grab the alphabetical lists of URLs and easily scraped all of the information from the legendary creatures list. However, the amount of credits required to fully batch scrape all 1600+ legendary creatures would exceed my credits, so I was unable to actually execute it.</p>
+<ol start="2">
+<li>EDGAR</li>
+</ol>
+<p>Partial Success</p>
+<p>It toggled every visible column prior to the scrape, and extracted the relevant data from the table. However, similar to the first test, I could not batch-scrape all 47 URLs on the free tier.</p>
+<ol start="3">
+<li>DocumentCloud</li>
+</ol>
+<p>Fail</p>
+<p>After some initial tinkering, DocumentCloud's bot detection kicked in and stopped Browse AI in its tracks.</p>
+<h4><a href="https://Firecrawl.Dev">Firecrawl</a></h4>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a02edb69-2ac9-471a-91b4-5a37154b394e/Screenshot_2026-06-29_at_1.44.45_PM.png?t=1782755116" /></p>
+<p><a href="https://www.firecrawl.dev/">Firecrawl</a> is hard to categorize. It's a web-scraping platform with full AI integration, as well as an "Interact Playground" that allows you to scrape and extract data using AI prompts (similar to Thunderbit). It can also be initialized using Python from the command line. And there’s an open-source <a href="https://github.com/firecrawl/firecrawl">version</a>.</p>
+<p>You need an API key to use the cloud scraping services, which consumes credits. You get 1,000 credits with the free tier. However, if you have the technical know-how and resources, the platform is fully open-sourced under an AGPL license, allowing you to self-host it for free.</p>
+<p>For my testing, I used the free cloud service from both the command line and Interact Playground just for fun.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/120286ce-49ab-4f4c-a246-a1ac8af66232/image.png?t=1782742074" /></p>
+<p><strong>Verdict</strong>
+Much like Crawlee, Firecrawl was able to handle nearly everything I threw at it. Unless you're willing/able to set it up on your own server, you’ll eventually need to purchase credits.</p>
+<p><strong>Test</strong></p>
+<p><strong>Result</strong></p>
+<p><strong>Summary</strong></p>
+<ol>
+<li>Wikipedia</li>
+</ol>
+<p>Success</p>
+<p>Using the command line, I was able to scrape all of the Legendary Creatures, though there were a few extra rows.</p>
+<ol start="2">
+<li>EDGAR</li>
+</ol>
+<p>Partial success</p>
+<p>I was able to create a proof of concept scraper using the Interact Playground AI assistant. I ran into credit limit issues when attempting to extract all responsive records.</p>
+<ol start="3">
+<li>DocumentCloud</li>
+</ol>
+<p>Success</p>
+<p>With Claude and the command line, I was able to successfully gather the first 100 records from DocumentCloud, including the metadata from subpages.</p>
+<h4><a href="https://www.octoparse.com/">Octoparse</a> (desktop app)</h4>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1394258b-c16a-4a18-a4be-d0bc4f05cd15/Screenshot_2026-06-29_at_1.37.22_PM.png?t=1782754673" /></p>
+<p>Octoparse is a "no code" platform that utilizes "AI-powered autodetect" and a point-and-click interface to build web scrapers. It's one of the two tools I tested that offers a library of ready-made templates for scraping, as well as robust AI and agent integration. For the test, I used Octoparse's desktop app to create custom scrapers.</p>
+<p>Octoparse loads a target website with its native browser. Users have the option of using AI auto-detection as well as user-guided element selection to create a custom scraper. A data preview at the bottom of the screen helps optimize the scraper before deployment. Upon execution, Octoparse loads the page and begins scraping.</p>
+<p><img alt="The Octoparse Dashboard" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5332630d-4daf-4fe3-b1dc-4c6db9b94953/image.png?t=1782742074" />
+<em>The Octoparse Dashboard</em></p>
+<p><strong>Verdict</strong></p>
+<p>Octoparse's desktop app is a great entry point for OSINT investigators with little to no scraping experience. Its free tier offers plenty of options for experimentation. However, the in-browser rendering can pose a challenge for more difficult webpages.</p>
+<p><strong>Test</strong></p>
+<p><strong>Result</strong></p>
+<p><strong>Summary</strong></p>
+<ol>
+<li>Wikipedia</li>
+</ol>
+<p>Success</p>
+<p>Octoparse was able to wrangle virtually all of the Legendary Creature data through a multi-level scrape (scraping a list of URLs and then iterating through them in one pass).</p>
+<ol start="2">
+<li>EDGAR</li>
+</ol>
+<p>Partial Success</p>
+<p>It batch-scraped a list of 47 URLs through its Custom Task function, and was able to toggle every visible column prior to the scrape. However, the scrape only managed to capture about 75% of the records</p>
+<ol start="3">
+<li>DocumentCloud</li>
+</ol>
+<p>Fail</p>
+<p>Octoparse was unable to successfully navigate DocumentCloud's load-on-scroll functionality. Claude suggested I try accessing the DocumentCloud API as a workaround, but I into Cloudflare bot detection issues due to Octoparse's native browser. After much troubleshooting, Claude suggested that I give DocumentCloud's Python library a try instead.</p>
+<h3>Browser Extensions</h3>
+<h4><a href="https://thunderbit.com/">Thunderbit</a></h4>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/9812d2e3-23c9-4662-b803-25295f0b353c/Screenshot_2026-06-29_at_1.49.30_PM.png?t=1782755392" /></p>
+<p>Thunderbit is another web-scraping platform with its own browser extension, similar to <a href="https://Webscraper.io">Webscraper.io</a>. What sets it apart is the ability to select elements from a web page by writing an AI prompt. The browser extension offers a limited free tier.</p>
+<p>It offers all the standard WYSIWYG web-scraping functionality, but the real star of the show is the Field AI Prompt feature, which allows you to tell Thunderbit what you'd like to scrape in plain language.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7dbb7a65-0a38-4d6b-b4ce-be719505b75c/image.png?t=1782742072" /></p>
+<p><strong>Verdict</strong></p>
+<p>I was genuinely impressed by its AI functionality. I wish I had more time to put it through its paces.</p>
+<p><strong>Test</strong></p>
+<p><strong>Result</strong></p>
+<p><strong>Summary</strong></p>
+<ol>
+<li>Wikipedia</li>
+</ol>
+<p>Partial success</p>
+<p>I was able to grab the creature data after entering an AI prompt, which was so easy it felt like cheating. Unfortunately, sub-page scraping was locked behind the Pro Tier 1 subscription.</p>
+<ol start="2">
+<li>EDGAR</li>
+</ol>
+<p>Fail</p>
+<p>Batch scraping was locked behind the Pro Tier 1 subscription. I was in the process of troubleshooting the element click for the checkboxes when I ran out of free credits.</p>
+<ol start="3">
+<li>DocumentCloud</li>
+</ol>
+<p>Fail</p>
+<p>Guess I should have sprung for the Pro Tier 1 Subscription...</p>
+<h4><a href="https://webscraper.io/">Webscraper.io</a></h4>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d16b16bf-3eb7-448c-ac98-3203376455f3/Screenshot_2026-06-29_at_1.48.23_PM.png?t=1782755319" /></p>
+<p>Although <a href="https://Webscraper.io">Webscraper.io</a>'s core service is automated cloud scraping, it offers a free browser extension for local use.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/de25fe81-a69b-4095-89c2-74eef3187f95/image.png?t=1782742074" /></p>
+<p>Opening the extension from your browser gives you functionality similar to some of the other scrapers I tested, including auto-detection of data elements, pagination and scroll selections, and export options.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8348466e-5d4a-487c-a48a-68ba12669b23/image.png?t=1782742074" /></p>
+<p>However, the real magic happens when you turn on Advanced Scraping via DevTools:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/10e67fb5-f69a-4a15-ae02-6a6da24f8177/image.png?t=1782742074" /></p>
+<p>This allows you to fine-tune a scraper based on a page/site’s sitemap. You can select specific elements and direct scrapers across parent and child URLs for multi-level scrapes. It's a surprisingly robust tool for the price, though it does have some limitations.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/77f6dc5a-d144-4245-903e-5d8bc16a1eff/image.png?t=1782742073" /></p>
+<p><strong>Verdict</strong></p>
+<p>Though you'll have to make some compromises, <a href="https://WebScraper.io">Webscraper.io</a> is easy to recommend for the price. I also love that it's just sitting in my DevTools, ready to go when needed.</p>
+<p><strong>Test</strong></p>
+<p><strong>Result</strong></p>
+<p><strong>Summary</strong></p>
+<ol>
+<li>Wikipedia</li>
+</ol>
+<p>Partial success</p>
+<p>I was surprised that <a href="https://Webscraper.io">Webscraper.io</a> was unable to visit a page, scrape a list and then extract each list item as a separate row (at least according to Claude). It meant that when navigating to each alphabetical list URL, I could either a) cram every creature into a single cell or b) split every creature across multiple columns, then transpose the data in Excel. Not a fail, but not exactly ideal, either.</p>
+<ol start="2">
+<li>EDGAR</li>
+</ol>
+<p>Success</p>
+<p><a href="https://Webscraper.io">Webscraper.io</a> supports batch scraping by passing a range within the Start URL. It also supports element click and table extraction. This was probably the simplest execution of any EDGAR scrape I performed.</p>
+<ol start="3">
+<li>DocumentCloud</li>
+</ol>
+<p>Fail</p>
+<p>While <a href="https://Webscraper.io">Webscraper.io</a> was unable to handle DocumentCloud's 'infinite scroll,' so it couldn't load past the initial 25 records.</p>
+<h3>Repos</h3>
+<h4><a href="https://github.com/apify/crawlee-python">Crawlee</a></h4>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4de74708-3fdb-43a3-8e8f-98241ca0f70a/image.png?t=1782742073" /></p>
+<p>Crawlee is a free, popular web scraping and browser library developed by Apify. I tested its Python implementation from the command line.</p>
+<p>Once installed on your local machine, you can call Crawlee from the command line, where you will be prompted to select the type of scraper (or "Crawler") you'd like to build:</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/08868d1b-ed49-4d83-89e8-effb275e9081/image.png?t=1782742073" /></p>
+<p>Crawlee sets up a local folder in your location of choice with the requisite files to get started:</p>
+<p><img alt="The parent folder for my DocumentCloud scraper" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8427e450-d22c-4189-930a-6f5474684223/image.png?t=1782742073" />
+<em>The parent folder for my DocumentCloud scraper</em></p>
+<p>From there, it was full Claude speed ahead. Though there was ample documentation to get me started, there was no way I was going to be able to build a functional scraper from a GitHub repo without substantial assistance.</p>
+<p><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/06e1746e-c8e3-480a-b2cb-fa29802afd27/image.png?t=1782742073" /></p>
+<p><strong>Verdict</strong></p>
+<p>A solid, free GitHub repository — provided you know how to code or have an AI tool like Claude or something similar to help you out.</p>
+<p><strong>Test</strong></p>
+<p><strong>Result</strong></p>
+<p><strong>Summary</strong></p>
+<ol>
+<li>Wikipedia</li>
+</ol>
+<p>Success</p>
+<p>I was able to perform a multi-level scrape of virtually all Legendary Creatures.</p>
+<ol start="2">
+<li>EDGAR</li>
+</ol>
+<p>Success</p>
+<p>I was able to scrape virtually all of the responsive documents.</p>
+<ol start="3">
+<li>DocumentCloud</li>
+</ol>
+<p>Partial success</p>
+<p>This required a significant amount of troubleshooting with Claude. At one point I accidentally triggered a temporary IP block from scraping too aggressively. I eventually was able to figure out how to extract the data I needed via the API. With additional tweaking, I could get it to production-grade.</p>
+<p><em>Header image generated with Claude Design</em></p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
