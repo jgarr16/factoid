@@ -1,11 +1,11 @@
 {
   "version": 1,
   "updated": "2026-11-22",
-  "sweep": "2026-09-04 → 2026-11-21",
+  "sweep": "2026-03-16 → 2026-11-21",
   "entries": [
     {
       "uid": "ad80baa856c0ef3930152094ff45bb7b13dd64d410b70ee7d305c4d56fe67f54",
-      "id": 447,
+      "id": 460,
       "title": "Gemini API's Tool Retrieval loads only the tools a call needs",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -30,7 +30,7 @@
     },
     {
       "uid": "8a28e12dc3c37e5870b6873d0dc0a1504de7cf7156b427e061d96127e2f08735",
-      "id": 446,
+      "id": 459,
       "title": "Tabentic puts an agent inside your browser tabs",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -55,7 +55,7 @@
     },
     {
       "uid": "36ffed8eef04ed0d6ed5bc6edb24783085888945932d6eda18d4884fe6d5771c",
-      "id": 445,
+      "id": 458,
       "title": "Gemini takes over Mac apps and files, asking before it acts",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -96,7 +96,7 @@
     },
     {
       "uid": "4980f07bb10a30e292de04f323008305c0d5d3e4e51db2efd4ea38456ff6f957",
-      "id": 444,
+      "id": 457,
       "title": "Claude joins a Meet call and builds the whiteboard live",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -125,7 +125,7 @@
     },
     {
       "uid": "18c80bd69c801d1b742d504483ceaf2b0b0154a274c8eb38dfe0cad09987fc16",
-      "id": 443,
+      "id": 456,
       "title": "A swapped model endpoint makes the case for model attestation",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -150,7 +150,7 @@
     },
     {
       "uid": "aecee28fec8d8e1f5cf1ca065d7c8fd7bd6de1963e506aff62274e620df29485",
-      "id": 442,
+      "id": 455,
       "title": "Two weeks of OpenCode plus Qwen on a Mac Studio: what broke",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -179,7 +179,7 @@
     },
     {
       "uid": "16515a06a45fbd1fb33c57b819cdcf1b9148444531d07e5e1c52dcfd34611f51",
-      "id": 441,
+      "id": 454,
       "title": "OpenAI puts full-duplex voice in the API at $0.05 a minute",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -208,7 +208,7 @@
     },
     {
       "uid": "35faf1e206c99788e537ee965613b7131125b7c5c08f70d90f15219f7094cd6c",
-      "id": 440,
+      "id": 453,
       "title": "World Labs opens Atlas: text to 3D scenes, priced per frame",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -237,7 +237,7 @@
     },
     {
       "uid": "92eaecd4919df193d8e6a8210cab282c577da7d421a7b56a74911db3e99840b3",
-      "id": 439,
+      "id": 452,
       "title": "Claude Fable 5.2 matches Opus 5.5 coding at about half the cost",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -286,7 +286,7 @@
     },
     {
       "uid": "83ce59ff1463338ea7031de7057cd571407f7efac2c1caae7b230fcfa14cd88c",
-      "id": 438,
+      "id": 451,
       "title": "ChatGPT Live Dictation streams speech to text on every plan",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -315,7 +315,7 @@
     },
     {
       "uid": "da3fd61faa24e8bf669abfbb105ddbc2ed7d1ed328505a0d776a3838fe8d3f95",
-      "id": 437,
+      "id": 450,
       "title": "Kai reviews GitHub pull requests against a semantic map of the codebase",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -340,7 +340,7 @@
     },
     {
       "uid": "b158ffae259c3bff52bf1fdec52b87179928f000ad7ae53c1451ad325459eac4",
-      "id": 436,
+      "id": 449,
       "title": "ReelRebel finds and cuts short clips from long videos on your own machine",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -365,7 +365,7 @@
     },
     {
       "uid": "1250d09a06599dfbaafd27f543d5caf4fb5734109be7e26cde74a968be532f6e",
-      "id": 435,
+      "id": 448,
       "title": "Proton Lumo reaches desktop with per-action permission control",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -390,7 +390,7 @@
     },
     {
       "uid": "2b8f7ab779dcc1b944d04d04428925eb4fc3bab70f40a88998a625647f4d0813",
-      "id": 434,
+      "id": 447,
       "title": "Microsoft MAI Code 2 claims 98% of Sol's coding at 40% cost",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -415,7 +415,7 @@
     },
     {
       "uid": "7949c98b02d7d3f3c9cb0e28627f1365d21b1e3c8ff36a50715af94cf7d36da0",
-      "id": 433,
+      "id": 446,
       "title": "ChatGPT Wallet lets agents pay with a token, not your card",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -452,7 +452,7 @@
     },
     {
       "uid": "2a0d3855456f6d523ef4a75e22c73f147fdd98d8cef512f185edc215ac4f7e3a",
-      "id": 432,
+      "id": 445,
       "title": "Anthropic's guide to verifying agent work at scale",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -485,7 +485,7 @@
     },
     {
       "uid": "0b60ef67a320bb958e0a5e2606d9a01067fcfd64c27771bcc435e396561f3afc",
-      "id": 431,
+      "id": 444,
       "title": "GPT-6.2 Astra cuts to $8/$40, Sol as the lean alternative",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -522,7 +522,7 @@
     },
     {
       "uid": "480cb0e24dadb978adb046a12a88a5de897487b1f9d22f895f80762ddb01088e",
-      "id": 430,
+      "id": 443,
       "title": "A prompt that vets a new library with a graded draft-PR proof",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -547,7 +547,7 @@
     },
     {
       "uid": "f0f449ac55c1ae5c38ecb90f361e7e976ee57405a320ff2ed09269599ad4bb37",
-      "id": 429,
+      "id": 442,
       "title": "Hermes software-factory tutorial: GitHub issues to merged PRs",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -572,7 +572,7 @@
     },
     {
       "uid": "85b20073dbb63ccc01659127e1fb850424b222f75d1d4aad938998804a098c30",
-      "id": 428,
+      "id": 441,
       "title": "SID-2 swarms agents for search at $0.25-2 per million tokens",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -601,7 +601,7 @@
     },
     {
       "uid": "af1223ba2ee19c2217b6928c196feb409c6b02c4b7ea7bbd90ba0e25fe9d4fd5",
-      "id": 427,
+      "id": 440,
       "title": "Claude Cowork points a scheduled agent at one folder on your desktop",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -630,7 +630,7 @@
     },
     {
       "uid": "f10fa0773ca71d4268df7595a55440269d23ed44dfa2ecad9f9c2d423a0e8d7e",
-      "id": 426,
+      "id": 439,
       "title": "A stolen Fireworks AI key seeded a backdoored Claude Code extension in Cursor",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -655,7 +655,7 @@
     },
     {
       "uid": "af5eae78a94ee02a34617b21f8a1adfd5969d4c2c1184195a4c4ca20ca8fc18b",
-      "id": 425,
+      "id": 438,
       "title": "Omnigraph is an open-source graph database built for agent memory",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -680,7 +680,7 @@
     },
     {
       "uid": "abc5e753f75aa03470427bd1372faed2037fc3f65364b01b0ecf1550785e008a",
-      "id": 424,
+      "id": 437,
       "title": "Nod by n8n: open-source personal agent with its own computer",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -705,7 +705,7 @@
     },
     {
       "uid": "97622a0d1abe497df98993c7d69e7b93c15655fa1ef0a3f257541c78ed560846",
-      "id": 423,
+      "id": 436,
       "title": "Scribe v3: ElevenLabs speech-to-text, 27% fewer errors in 90+ languages",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -730,7 +730,7 @@
     },
     {
       "uid": "42cf42e1f022d5a28bb6af9553162abdc0fd758fb78bd8ff2e95d5dd5cdd9844",
-      "id": 422,
+      "id": 435,
       "title": "Malicious Claude Code update hit ~5,000 Cursor users via SSH backdoor",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -763,7 +763,7 @@
     },
     {
       "uid": "757ccb3ccd5bc255eb711ed9b93869f29e150afae388b26a379481a57acb5d60",
-      "id": 421,
+      "id": 434,
       "title": "Keep agent instruction files sparse so you can see the model fail",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -783,7 +783,7 @@
     },
     {
       "uid": "a5a5bd1ec83f8696649da51814ce08099884acbd7f2367a2a55472b562bf0fbb",
-      "id": 420,
+      "id": 433,
       "title": "Run an agent workflow by hand once before scheduling it to repeat",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -803,7 +803,7 @@
     },
     {
       "uid": "fd24813a9cbc00a9d149aa5fd88c08dc32abf31a359167aed9711ac62637a31b",
-      "id": 419,
+      "id": 432,
       "title": "Triage a wrong RAG answer as retrieval, context, or generation failure",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -823,7 +823,7 @@
     },
     {
       "uid": "71a3868fcdc295dcfadde8566930822b3ad73b735b3a2b8f7623ad897f1fd2e7",
-      "id": 418,
+      "id": 431,
       "title": "WorkOS Relay keeps OAuth tokens out of the agent runtime",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -848,7 +848,7 @@
     },
     {
       "uid": "fa94668bacebea6245e13ea8afc207a755f3e6d3c3f72d239ffd79575691bc1e",
-      "id": 417,
+      "id": 430,
       "title": "Linear MCP turns a Claude Code plan into a 40-issue backlog",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -877,7 +877,7 @@
     },
     {
       "uid": "7a65f7be0b7255c9dd427e5dbf60ee57ca075f311f39ed82f207e65cc1f292e9",
-      "id": 416,
+      "id": 429,
       "title": "Cloudflare Kitesurf runs a browser engine on Workers for agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -902,7 +902,7 @@
     },
     {
       "uid": "64a274d5f2c3edf336a47e8a69ce826f9375e2d127329b80bca0d05306336532",
-      "id": 415,
+      "id": 428,
       "title": "Tencent Hy4 flash: 18x cheaper than Claude Haiku at $0.07/M in",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -931,7 +931,7 @@
     },
     {
       "uid": "3180f0ec0c591f8ccf84d57fd3a97e82fca722f37921f945c6f4af28bf9daf49",
-      "id": 414,
+      "id": 427,
       "title": "Liquid AI's d1.2 decision models answer with confidence at $0.02/M",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -960,7 +960,7 @@
     },
     {
       "uid": "c24eecc9af4f6fc4514926351f4b73eac36a5e0b4d49dc8c7c04a80868ff3c41",
-      "id": 413,
+      "id": 426,
       "title": "Bland AI's Tofu-1 voices whole soundscapes in real time",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -985,7 +985,7 @@
     },
     {
       "uid": "9d152e9be471b0c2237af33d2b29dbdeda937fb7b2703498c60d6747bde94576",
-      "id": 412,
+      "id": 425,
       "title": "Anthropic's cookbook shows the inbox, timer and outbox pattern for always-on agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1010,7 +1010,7 @@
     },
     {
       "uid": "4da039587848db5775562acf747e8ca4a57ab476f72947c70e24dc187dbfc1eb",
-      "id": 411,
+      "id": 424,
       "title": "Microsoft's TokenEconomizer plugin cuts coding-agent cost by learning each repo",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -1035,7 +1035,7 @@
     },
     {
       "uid": "ad694185eb479da99a3c0112ada25cd4e773dcb4cb702d3a47ba3e3926a6dac3",
-      "id": 410,
+      "id": 423,
       "title": "Qwen4-Max: 1M context at $1.50/$4.50, cached input 70% off",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -1064,7 +1064,7 @@
     },
     {
       "uid": "dbcab970b3f327c4d4c1fd6d6596d5ab2edb8fe8360de66bed45fe710d994026",
-      "id": 409,
+      "id": 422,
       "title": "A CLAUDE.md line makes Claude Code previews open on your phone",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -1089,7 +1089,7 @@
     },
     {
       "uid": "4ef8de89b52173f477ca3779d13f466d5f45da07ac987a6fe8fda3feae6de104",
-      "id": 408,
+      "id": 421,
       "title": "Token Economizer learns your repo to cut agent cost 18–31%",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -1114,7 +1114,7 @@
     },
     {
       "uid": "691ff52ac61d4a3b7163f6cd39e39d3801dfe88d4bf3bb788b9045592bff86b5",
-      "id": 407,
+      "id": 420,
       "title": "AppBrain timelines reveal when an app was renamed or pulled",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -1139,7 +1139,7 @@
     },
     {
       "uid": "b816aaed168f339fa9a314daf92c9308c0f11af5b3f5e32c769d6691309aa7c8",
-      "id": 406,
+      "id": 419,
       "title": "Apple's reviews RSS feed returns up to 500 app reviews per country",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -1164,7 +1164,7 @@
     },
     {
       "uid": "45ff0da799b9e9aea17f25d2ca4b172deebf1bf9d8fcfa3effd322838018738e",
-      "id": 405,
+      "id": 418,
       "title": "Swapping the App Store country code to IE exposes EU trader details",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -1189,7 +1189,7 @@
     },
     {
       "uid": "5d79fa026d59f18d9ac76256cc14df6f30de444a971843346c1b4b20f1aff3c3",
-      "id": 404,
+      "id": 417,
       "title": "Exodus Privacy scans Android app IDs for trackers and permissions",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -1214,7 +1214,7 @@
     },
     {
       "uid": "8780688e644a71cc95050a3f9875e1e3de5184e166e66a1f395697f95cb953c1",
-      "id": 403,
+      "id": 416,
       "title": "ChromePing places real phone calls from the browser with live two-way translation",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -1239,7 +1239,7 @@
     },
     {
       "uid": "d498ecdd13dc0fc086b215041912322a6e442cd04e8c91b1367de81b677ca9af",
-      "id": 402,
+      "id": 415,
       "title": "Product Hunt ships an MCP server that puts its launch data inside your assistant",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1264,7 +1264,7 @@
     },
     {
       "uid": "5f1204835cda36892e6bfc6c97cce9dcdabc826c76fb76bd231cca6f4925781c",
-      "id": 401,
+      "id": 414,
       "title": "Subscriptrack finds forgotten subscriptions from email, no bank login",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -1289,7 +1289,7 @@
     },
     {
       "uid": "d5a289e57e99f2e9a8da43b45ae96eb90bb449bb459fae9fac49eba0a717da78",
-      "id": 400,
+      "id": 413,
       "title": "ChromePing translates a live phone call both ways from the browser",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -1314,7 +1314,7 @@
     },
     {
       "uid": "b071391716c00461d0fe2a037e3b6c4119c62c8fdc412de192a80137e8826dd6",
-      "id": 399,
+      "id": 412,
       "title": "Skill-scaffolded prompts let the cheaper Claude model match the pricier one",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -1334,7 +1334,7 @@
     },
     {
       "uid": "bf4ea74b17a26559cd1f550d1973c970bd48f7e0bcb67d0fef44ecac8ed53bc6",
-      "id": 398,
+      "id": 411,
       "title": "Family Intelligence grades speaker IDs from evidence, offline",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -1363,7 +1363,7 @@
     },
     {
       "uid": "7ef4aed8a06f9bfac87776aec57ac13647e6ea7f91c0c823213248b0ae58c123",
-      "id": 397,
+      "id": 410,
       "title": "Tiles runs a private AI assistant locally on Mac and Linux",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -1392,7 +1392,7 @@
     },
     {
       "uid": "e98432ca176d796f3d22cdc1a33527272570e6281b3b3b91993a06a59d0f1339",
-      "id": 396,
+      "id": 409,
       "title": "HermesOS tour walks through one running Hermes agent setup",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1417,7 +1417,7 @@
     },
     {
       "uid": "49dfbc79e3b9c31edc7f0a269194afd4e4d1a06144a867ae8f49e8b02a5efc9f",
-      "id": 395,
+      "id": 408,
       "title": "FindDepth writes research reports and checks figures against sources",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -1442,7 +1442,7 @@
     },
     {
       "uid": "f5a2baa73dc9c6abcb03995a151a98abd7a306c1b66902767515b0ad4bff5a0f",
-      "id": 394,
+      "id": 407,
       "title": "Archilas gives agents one cited, conflict-resolved memory across tools",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1467,7 +1467,7 @@
     },
     {
       "uid": "ff98de984f963829f0eab9c6b6f63c66c5e86c172dcdc2e04238bbe0b5979478",
-      "id": 393,
+      "id": 406,
       "title": "Gemini 4 Hydrogen: 2.5x faster coding at $1.50/$7.50 per million",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -1504,7 +1504,7 @@
     },
     {
       "uid": "63ce68e0e04c3b642094229feb7bd5c7710f30b81f5d3d2b68101d7f0783741f",
-      "id": 392,
+      "id": 405,
       "title": "Two-step prompt catches mobile bugs with Chrome DevTools MCP",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -1529,7 +1529,7 @@
     },
     {
       "uid": "040852e5a890c98f727e2bfa6358d64b3d3d0a13b3c34ea5539b38d063551eb6",
-      "id": 391,
+      "id": 404,
       "title": "LiquidCodec: 74M-param speech codec, 361x realtime on one CPU thread",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -1558,7 +1558,7 @@
     },
     {
       "uid": "ee20434a1de5c9f67ab2cca812b87775f3ce8f5427a6087eee186610fd6b623b",
-      "id": 390,
+      "id": 403,
       "title": "Anthropic lets you self-host the whole Claude agent stack",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1583,7 +1583,7 @@
     },
     {
       "uid": "4e4d138af3c932fef4093192f680f154b09baec9eaf992c241b55527546c74ae",
-      "id": 389,
+      "id": 402,
       "title": "OpenWorker open-sources its agent harness SDK and builder skill",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1608,7 +1608,7 @@
     },
     {
       "uid": "781c67b7056afd7db5ec34b2dc655dbf01a367b0addbe6b31aec99895d316340",
-      "id": 388,
+      "id": 401,
       "title": "Planet AI searches a decade of satellite imagery with natural language",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -1637,7 +1637,7 @@
     },
     {
       "uid": "fd73de51a72d6ecd87c93a72db3c0c2e71e30c622cb7729e4049a32b5ed067c6",
-      "id": 387,
+      "id": 400,
       "title": "Ace gives agents your real Mac over Tailscale instead of a sandbox",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1662,7 +1662,7 @@
     },
     {
       "uid": "15bd1896fb483da089606daa0f51afaf922a93282d67da1395873ca4763f5031",
-      "id": 386,
+      "id": 399,
       "title": "AWS Emulator stubs 200+ services locally so agents can test offline",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1691,7 +1691,7 @@
     },
     {
       "uid": "2b18f99ec0129c3a1adf7c9869a5c4b542aea918087526d64d82aad233a1a724",
-      "id": 385,
+      "id": 398,
       "title": "Gemini Decision 1 scores 1,000 questions in one pass at $0.10/M",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -1720,7 +1720,7 @@
     },
     {
       "uid": "681f12dc013ef11a7c7cf901eb97c292527b27fcee8761d4251806d729c4c8be",
-      "id": 384,
+      "id": 397,
       "title": "One prompt turns scattered flags into explicit state machines",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -1753,7 +1753,7 @@
     },
     {
       "uid": "5b0fcb8598150c872f984d2fc118a26d362634e9e31ba7cf44edb071b0064c19",
-      "id": 383,
+      "id": 396,
       "title": "United and Amazon now block third-party AI agents from booking and buying",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -1773,7 +1773,7 @@
     },
     {
       "uid": "ef2e0ab61d44f96ed3a069ab94c4454c5667dec75feb8fdcbeb7af8b1aeefc98",
-      "id": 382,
+      "id": 395,
       "title": "Totem links Claude Code, Codex and Cursor agents into one workspace",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1798,7 +1798,7 @@
     },
     {
       "uid": "def80ed624b1ff7114fd5cd05f87aecdf0515aaef26d064000641467b9e528e5",
-      "id": 381,
+      "id": 394,
       "title": "Granola ships free voice typing, straight at Wispr Flow",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -1831,7 +1831,7 @@
     },
     {
       "uid": "8549fb2590026741b9b20c1e74967efe506709adfa438608a184083476a57960",
-      "id": 380,
+      "id": 393,
       "title": "Gemini 4 Carbon tops the index at Argon's $2/$10 price",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -1892,7 +1892,7 @@
     },
     {
       "uid": "35136fc276220bcca4de94a30e7f71edab2071e13572c625ae3e59081596846d",
-      "id": 379,
+      "id": 392,
       "title": "Boxes.dev gives each agent thread its own cloud computer",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -1917,7 +1917,7 @@
     },
     {
       "uid": "f279c1fdc49375b3764275a15ac718fab6dbde7fd047fd468e58baf2b4dac487",
-      "id": 378,
+      "id": 391,
       "title": "One audit prompt to re-check shipped code on every model release",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -1942,7 +1942,7 @@
     },
     {
       "uid": "cdcf4b871fd1413c06452485fe94f840eee196d2410db6abb5ac638aa74408f2",
-      "id": 377,
+      "id": 390,
       "title": "Amazon's Strands Decider labels tickets 98% cheaper than Claude",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -1967,7 +1967,7 @@
     },
     {
       "uid": "f1281aed3c5ea5c85be730fa0f9ac953bb869e2606ac9d5e16b64857d2b8f28e",
-      "id": 376,
+      "id": 389,
       "title": "MiniMax-H3-Image ships open weights for native 16MP images",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -1996,7 +1996,7 @@
     },
     {
       "uid": "4c015de356e0d37c202266282be17ced581c2261978533508dfce3ac7fbb8a57",
-      "id": 375,
+      "id": 388,
       "title": "Documented's open TikTok pipeline clusters reuploads with Whisper and embeddings",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -2025,7 +2025,7 @@
     },
     {
       "uid": "088a2c77d32ddbb3e87efebeb1fa92329086ff75671e1abfb9f4d2f03b4fc21f",
-      "id": 374,
+      "id": 387,
       "title": "Exa Monitors runs scheduled web searches that call your agent",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -2050,7 +2050,7 @@
     },
     {
       "uid": "78b489fdbd9c225c5585cf3459e12f62391bac948e43586589cca8cf75f63dbe",
-      "id": 373,
+      "id": 386,
       "title": "Glasshand hands an agent a real iPhone and Mac",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2075,7 +2075,7 @@
     },
     {
       "uid": "d942b1b3120c86e8a969eb41c2a44cccd745c36bdba9607e9ac3429738b58237",
-      "id": 372,
+      "id": 385,
       "title": "One AGENTS.md paragraph stops agents bolting features onto bad architecture",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -2100,7 +2100,7 @@
     },
     {
       "uid": "c3a118a26b9bc57be21d464013e385b3b1efb72c66c95de05ab035deb830430f",
-      "id": 371,
+      "id": 384,
       "title": "0 Security turns a coding agent into an open-source security harness",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -2125,7 +2125,7 @@
     },
     {
       "uid": "b27bd4a2f884042e650a3d4da2124bed0725dd021a87d5dcd8f2b24a2a0a8c29",
-      "id": 370,
+      "id": 383,
       "title": "Warp's open-source /merge-risk skill scores a PR before you read it",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2154,7 +2154,7 @@
     },
     {
       "uid": "a0733504923e12533909bb0918b48212e85cca26677fed1e71fe505afb1aed55",
-      "id": 369,
+      "id": 382,
       "title": "Meta's Muse Ember: $0.10/M input tokens for high-volume agent calls",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -2179,7 +2179,7 @@
     },
     {
       "uid": "b6fc360e1fcb83afe0ab7e2f2e08f26d0f3b55d37d36bf5f34a9f0d4f96a18da",
-      "id": 368,
+      "id": 381,
       "title": "Thinking Machines' Inkling 2 Small: open weights with strong vision",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -2208,7 +2208,7 @@
     },
     {
       "uid": "1d3c2429624626f459c4c745b2ba5e9cdd690f1d6a852953c16bc2089eea472e",
-      "id": 367,
+      "id": 380,
       "title": "Apple's Xcode plugin lets Claude Code build and preview iOS apps",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -2241,7 +2241,7 @@
     },
     {
       "uid": "a3468c3fa38d89333d0deab834384be8929dd2dd5499d708de8d0ce6c86dbfdc",
-      "id": 366,
+      "id": 379,
       "title": "OpenCode Browse hands agents your real logged-in browser",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2266,7 +2266,7 @@
     },
     {
       "uid": "5f20ccd5313afead48793ccdc4dc79c88a7339111139f547517e49faea566b76",
-      "id": 365,
+      "id": 378,
       "title": "Claude Code's allowlist leaked 1,379 secrets to public GitHub",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -2291,7 +2291,7 @@
     },
     {
       "uid": "bb8237b59cc02dad7740b77cdb76f372b53211aef227f942bd2402b15871e6dc",
-      "id": 364,
+      "id": 377,
       "title": "Maigret sweeps a username across thousands of sites and repairs broken checkers",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -2316,7 +2316,7 @@
     },
     {
       "uid": "9077a027c12cd22b0412c87f703d91cd9324a41a6eb6fdfa832e8c627d9e3939",
-      "id": 363,
+      "id": 376,
       "title": "Consensus-OSINT bundles 19 OSINT datasets behind one scan and an MCP server",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2341,7 +2341,7 @@
     },
     {
       "uid": "d577978daeca8da00b4f5d08ff188f1d19ad8e45cfe4b12c3d3b12e5447cae53",
-      "id": 362,
+      "id": 375,
       "title": "Helix re-checks every username hit with fake control probes to cut false positives",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -2366,7 +2366,7 @@
     },
     {
       "uid": "9727ea7a1ac0c5a757a574c1183c5ab359e76819ca3c177f7005b1161dcf86ba",
-      "id": 361,
+      "id": 374,
       "title": "PasteGuard strips secrets from the clipboard before chat sees them",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -2391,7 +2391,7 @@
     },
     {
       "uid": "c50305432735f309a279f2a8f0b0aa6728187c3dbec0154154c956e71e7bea56",
-      "id": 360,
+      "id": 373,
       "title": "Friday Work hands a stalled task to another agent mid-run",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2416,7 +2416,7 @@
     },
     {
       "uid": "c71a71356d1ccdd61ba138d13fe474ca35e653a3a9d3d0266c0c3e5a2748ef1d",
-      "id": 359,
+      "id": 372,
       "title": "MachineMail gives each agent its own inbox and verification flow",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2441,7 +2441,7 @@
     },
     {
       "uid": "124c2290ec9efd70c91133f16a601ff93ed367196e90da011be7478140e48967",
-      "id": 358,
+      "id": 371,
       "title": "Beacon — open-source self-improving memory for coding agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2474,7 +2474,7 @@
     },
     {
       "uid": "6938923201b1df7f9251ccbb3c473511fef6d382e826105e5b349c7eeb35cd4a",
-      "id": 357,
+      "id": 370,
       "title": "Filter the data with regexes before the model reads it",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -2499,7 +2499,7 @@
     },
     {
       "uid": "a98dbfa5aab3ef130d7a507e455f0769844021461354788e7785bc85677c6d37",
-      "id": 356,
+      "id": 369,
       "title": "Cheap executor subagent cuts cost per PR from $80 to $20",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -2524,7 +2524,7 @@
     },
     {
       "uid": "a0b1d22b35a20df206b6f2cfe7ff440ae293ed486aa78d9e693e5be8aeb2f335",
-      "id": 355,
+      "id": 368,
       "title": "Turn subagent effort down so Claude Code limits last the week",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -2553,7 +2553,7 @@
     },
     {
       "uid": "27f993445772eceedab89b02bf96276e2145b523cd5bce9edccd1c61689dffad",
-      "id": 354,
+      "id": 367,
       "title": "OpenAI's Decisions API returns a choice or score, not prose",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -2578,7 +2578,7 @@
     },
     {
       "uid": "ba6413e9bc0604e45bc04c0236abb8ba68cab6bb428d4bdd71ea8227fd3fc2bd",
-      "id": 353,
+      "id": 366,
       "title": "Siri App Intents open to developers in the iOS 27.3 beta",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -2611,7 +2611,7 @@
     },
     {
       "uid": "af020f2b10e7db7a3bbeac8a458ec3915903103857e79e4569d429bab63fb1a9",
-      "id": 352,
+      "id": 365,
       "title": "Burn expiring Codex quota with a /goal cleanup run",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -2636,7 +2636,7 @@
     },
     {
       "uid": "283c463c19584837f823de920e40db5a7e142714ceaf1871c23e66f8a01bf93d",
-      "id": 351,
+      "id": 364,
       "title": "Cutting CI wait from 40 minutes to 2 so agents stop stalling",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2661,7 +2661,7 @@
     },
     {
       "uid": "da1b99fe86bd7f74fc70f216630f87587be2e9db54fdb7c50d16ccef0ce7ba59",
-      "id": 350,
+      "id": 363,
       "title": "Untangle Codebase skill strips cruft so agents can navigate the repo",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -2686,7 +2686,7 @@
     },
     {
       "uid": "7bf459a0b6f61d87a0f4b898d040fcf42bb88701aeaf27f4aa157c48888c52ee",
-      "id": 349,
+      "id": 362,
       "title": "Open-source local Wispr Flow clone for Mac dictation",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -2711,7 +2711,7 @@
     },
     {
       "uid": "2028ddfd765da4fb6783378af9c6257199a0ff0ab38be08680e2af2e736a7aee",
-      "id": 348,
+      "id": 361,
       "title": "VISTA keeps every frame an agent sees and lets it zoom back",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2736,7 +2736,7 @@
     },
     {
       "uid": "bf33abc96900e9f537a3f4dc555e1d41eb03e156a17a9287e42cca28b399df48",
-      "id": 347,
+      "id": 360,
       "title": "Indicator workshop shows free alerts for new mentions and page changes",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -2761,7 +2761,7 @@
     },
     {
       "uid": "e850e21a77d9764b6e45aed34a01b95dc0e4f7a0c3335a29d5ac13e74d2b84dc",
-      "id": 346,
+      "id": 359,
       "title": "Pangram's image detector flags AI edits, but cropping still evades it",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -2786,7 +2786,7 @@
     },
     {
       "uid": "a36dbaebc9e54ac55de53fdead5926d18e9a029318da13237483aca8910408c4",
-      "id": 345,
+      "id": 358,
       "title": "Spotlight 2.0 runs a swarm of OSINT agents on your own machine",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2811,7 +2811,7 @@
     },
     {
       "uid": "b983f5343063964dc807ef26cfab08dbe7d1b51dd84a705dd8ff0ee8f8365677",
-      "id": 344,
+      "id": 357,
       "title": "Apple and Goldman start rationing employee AI tokens",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -2848,7 +2848,7 @@
     },
     {
       "uid": "53b7ee70d985aafde47817a8a2220d15e5576dfa95d61baf7931f267f3a36342",
-      "id": 343,
+      "id": 356,
       "title": "Grok Bot recipe publishes a team data analyst with Slack access",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -2873,7 +2873,7 @@
     },
     {
       "uid": "e049594feeaca2821225bbd21123e56a3f05193d28ecdd8a6489ba5168224d09",
-      "id": 342,
+      "id": 355,
       "title": "Atmanity's Atmee v2 animates one photo into a talking avatar",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -2898,7 +2898,7 @@
     },
     {
       "uid": "dfc7ccf5b6775daf9239f59739aee1cc22e701790c212d5db7b61b7d166c3d86",
-      "id": 341,
+      "id": 354,
       "title": "OpenAI's Images 2.6 adds two API models and GIF output",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -2935,7 +2935,7 @@
     },
     {
       "uid": "0b56ec8976efb39e0f50cc4cc4377796345a7e23db10fa81c9d6c4208b5061b2",
-      "id": 340,
+      "id": 353,
       "title": "Claude Managed Agents cookbook distills past sessions into wiki memory",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -2960,7 +2960,7 @@
     },
     {
       "uid": "ef5ff22ed0e0e938e1fb5bf6a4544a012221c33c8d1664057e8073e196a32ace",
-      "id": 339,
+      "id": 352,
       "title": "Claude Code update makes subagent status lines 99% cheaper",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -2985,7 +2985,7 @@
     },
     {
       "uid": "681c0871eb89c7ead66eec638df0593934acfdbb140b49814355a6a26410d285",
-      "id": 338,
+      "id": 351,
       "title": "Mini Harness: 1,200 lines of Python that beat Claude Code on Haiku",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -3010,7 +3010,7 @@
     },
     {
       "uid": "77362899f0dc8d3c235f0b4e4bec59246423fe8001f70da27d6ea854d51cb8e4",
-      "id": 337,
+      "id": 350,
       "title": "An open-source world model generates interactive environments you can run today",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -3039,7 +3039,7 @@
     },
     {
       "uid": "cb7e2dd95639bd59ae3b06e688c75c6227a939b6297d03951ba6b499ff1301c7",
-      "id": 336,
+      "id": 349,
       "title": "Claude's API message threads cut agent latency 35%",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3064,7 +3064,7 @@
     },
     {
       "uid": "5ee3b87589208908783df74e5d725cb5351468704965c9b9cd9e5ba867b74e36",
-      "id": 335,
+      "id": 348,
       "title": "DeepSeek's open-source Super-Agent watches your group chats for bugs",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -3089,7 +3089,7 @@
     },
     {
       "uid": "cd7545413bd949415b857d60313c220eb8be25aa8d78bc5718d653929c8dfb7e",
-      "id": 334,
+      "id": 347,
       "title": "A disabled \"show more\" button still serves data when called directly",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -3114,7 +3114,7 @@
     },
     {
       "uid": "b95e28f67ef80b8103ff4a29a6aee8a66ffe478c4f2c79779e142564f68e57f1",
-      "id": 333,
+      "id": 346,
       "title": "A cheap classifier plus a 5% hand-check labels thousands of posts",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3134,7 +3134,7 @@
     },
     {
       "uid": "1db7eb305bf58c48dfa1e0d44ffeb265079c409d0dd04092bdf47a8327177385",
-      "id": 332,
+      "id": 345,
       "title": "Higher reasoning effort can cost 42x more and do worse",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -3163,7 +3163,7 @@
     },
     {
       "uid": "03bae96d88d25b424eef6086d2899fa134ad74487c7f61f29af7f77154737266",
-      "id": 331,
+      "id": 344,
       "title": "One prompt rewrites stacked awaits into parallel calls",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3188,7 +3188,7 @@
     },
     {
       "uid": "77b19a5c03a8da0ecd22388c313c70e040ab0ee2884058faa23998520a1f5a73",
-      "id": 330,
+      "id": 343,
       "title": "Why frontier LLM prices keep falling — and how to route for it",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -3217,7 +3217,7 @@
     },
     {
       "uid": "8b502fa6df929cace5c3e884bafd53fbaa913ea7ab850b863752f40d3f59ef0f",
-      "id": 329,
+      "id": 342,
       "title": "Terminal Mac gives coding agents a disposable macOS VM to drive",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -3242,7 +3242,7 @@
     },
     {
       "uid": "5bf817f1e19e8b61d515bb5d85dcc2d81131e3c7ec91bdd6d730947a8a7737e9",
-      "id": 328,
+      "id": 341,
       "title": "Postman's desktop app silently installs plugins into Claude Code and Codex",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -3267,7 +3267,7 @@
     },
     {
       "uid": "9550ae6201b06dc0cfb0ce0e785b65085e1bad50a4e75f11f4a2b6d47596bd0f",
-      "id": 327,
+      "id": 340,
       "title": "AgentKit puts an MCP gateway in front of production agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -3292,7 +3292,7 @@
     },
     {
       "uid": "8dea592be5d4e82bfd25daac16a2297a81587d1d2f9f5e7b91e9b058255c332a",
-      "id": 326,
+      "id": 339,
       "title": "Vaani open-sources its voice harness for phone-line agents",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -3312,7 +3312,7 @@
     },
     {
       "uid": "09fff989ce048af48230aa47af882633f30f42a6ba0f38551ec8a128609cd98d",
-      "id": 325,
+      "id": 338,
       "title": "Nine of ten agents lifted their own spend cap by reading the inbox",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -3337,7 +3337,7 @@
     },
     {
       "uid": "775581e4c64a03bcb206d863257674498fd1c74fd21531bddf47d0913026b0a3",
-      "id": 324,
+      "id": 337,
       "title": "Clean Machine sorts and trashes a cluttered Mac desktop",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -3362,7 +3362,7 @@
     },
     {
       "uid": "a28408cde6816eb11b38af8146fe3b2267f9d9222b7ffe9de13361d0c671a961",
-      "id": 323,
+      "id": 336,
       "title": "A ticket-to-parallel-agents software factory built on Claude Code",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -3387,7 +3387,7 @@
     },
     {
       "uid": "199ccc98841c26f815c54bf401d95257eb68ba8d18d19ce85a8711acaea55477",
-      "id": 322,
+      "id": 335,
       "title": "A /perf-review slash command that names the fix, not another cache",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3412,7 +3412,7 @@
     },
     {
       "uid": "f09e37b8070adfc38d558fb8d126432ac3944b4e526cb4bd4ffdaf05dd0b0b27",
-      "id": 321,
+      "id": 334,
       "title": "NanoUI builds tiny Zig desktop apps an agent can verify headlessly",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3437,7 +3437,7 @@
     },
     {
       "uid": "7ec93043ec6c40a5849c0c1da3e385870c1f5e4843f108343f4c6b35d4c4d6c1",
-      "id": 320,
+      "id": 333,
       "title": "Hume's one-call audio API answers questions about recordings",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -3466,7 +3466,7 @@
     },
     {
       "uid": "75df0923ef86b9a2d9e447e24af95f5d799935807aa3d6cc0f90f21a3b428e31",
-      "id": 319,
+      "id": 332,
       "title": "DeepSeek lets a prompt build plugins for its open-source Harness",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3507,7 +3507,7 @@
     },
     {
       "uid": "eedaf254a1591cf4d01c32bf4e60753355b816d80967801219652ee69e0d96c2",
-      "id": 318,
+      "id": 331,
       "title": "Hex — local dictation for the Mac, pasted into any app",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -3532,7 +3532,7 @@
     },
     {
       "uid": "b86e3eff8d244d75d8f3f1f8c0a181f3bca312f7a7f15df15c838e59cbb9f45f",
-      "id": 317,
+      "id": 330,
       "title": "Linux TCP flaw turns into root exploit; Ubuntu and RHEL still unpatched",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -3561,7 +3561,7 @@
     },
     {
       "uid": "35ec0a99509e14f18b21221acdffe86f29d77ea16c9fde597a865afd08eacd7a",
-      "id": 316,
+      "id": 329,
       "title": "Vercel open-sources agent-desktop so coding agents drive real apps",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -3590,7 +3590,7 @@
     },
     {
       "uid": "79d42a67eebc7c7d13684fc4a742a21b23f2b2573d32f7d45fef17d0184e3e26",
-      "id": 315,
+      "id": 328,
       "title": "Workshop recording walks through free tools for keyword and webpage monitoring",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -3619,7 +3619,7 @@
     },
     {
       "uid": "510f7ee86c1ef2a7e10a964fa87c8a05a4ff30378cbf16f5a52fa30821e1f3ee",
-      "id": 314,
+      "id": 327,
       "title": "Overmind turns live agent traces into eval sets and a git-diff patch",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3644,7 +3644,7 @@
     },
     {
       "uid": "25ec800a3ebba50c956af42f300073e7f4961728c0333088654835a333095c92",
-      "id": 313,
+      "id": 326,
       "title": "Dedica scores whether agents can actually use your site — free",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -3669,7 +3669,7 @@
     },
     {
       "uid": "201c7cbdb7c86df955f1cdc03e04a2e77f499dc54d9080bd29cb566edc9d4c7a",
-      "id": 312,
+      "id": 325,
       "title": "Chopstick writes Mac widgets from your own activity, then builds them",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -3694,7 +3694,7 @@
     },
     {
       "uid": "46a791deb138d67b710818835d834ad6a0c84b33ce37cdff72245ed9cdd80981",
-      "id": 311,
+      "id": 324,
       "title": "Nate Herk walks through the three AI automations he actually runs daily",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -3719,7 +3719,7 @@
     },
     {
       "uid": "ba0c04a454cfc959af4eecc31e11b17f4c5b32499e6f23371bce2080744b3d22",
-      "id": 310,
+      "id": 323,
       "title": "Mistral's Large 4 Le Chonk is the top open model outside China, 63% cheaper",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -3744,7 +3744,7 @@
     },
     {
       "uid": "822cab70d25a0bdcf228ffa384fd1597d2d5f120fc8655a495927565170a9ef0",
-      "id": 309,
+      "id": 322,
       "title": "Mistral Large 4 ships open weights at 47% fewer tokens per task",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -3781,7 +3781,7 @@
     },
     {
       "uid": "a5fb43fc049aa5eea16ce217cbce8b3c78a4e15c9b909594a96cadc40847b96d",
-      "id": 308,
+      "id": 321,
       "title": "Claude API request size quadruples to 128MB, images to 3000px",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3810,7 +3810,7 @@
     },
     {
       "uid": "f74ba2f1f135b4c92213f2993f7104bdd91c99f899569fe8825b08dab4031a67",
-      "id": 307,
+      "id": 320,
       "title": "Two prompt lines stop AI review loops from nitpicking forever",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3835,7 +3835,7 @@
     },
     {
       "uid": "571609085f956ef1e2634b227b838dbdda981971cbe4f64fd61523ca0afdb4c9",
-      "id": 306,
+      "id": 319,
       "title": "Treg — one token for thousands of agent-callable APIs and CLIs",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -3860,7 +3860,7 @@
     },
     {
       "uid": "0c02ba8891e6860c15bc88615be89e7a029f32de65cd4c5f026dc4232f0767b8",
-      "id": 305,
+      "id": 318,
       "title": "Bellingcat benchmarks LLMs on geolocation and finds confident wrong answers",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3885,7 +3885,7 @@
     },
     {
       "uid": "2239f4331ef819d5bd013164d916048b790b66b0ca09095e2d80432bbea45047",
-      "id": 304,
+      "id": 317,
       "title": "staygreen — open-source uptime monitoring that undercuts status-page SaaS",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -3914,7 +3914,7 @@
     },
     {
       "uid": "5a39e091d90742e2888cf131165a13f646559b9a2a117b9e551b904eb2c9920e",
-      "id": 303,
+      "id": 316,
       "title": "43 free MIT product-engineering skills for building with coding agents",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -3943,7 +3943,7 @@
     },
     {
       "uid": "1defe61636164344f714fb41f682df29782aa3b88c84597741478c2bd9c9ca01",
-      "id": 302,
+      "id": 315,
       "title": "Verifiable goals plus hill climbing keep one agent task running for days",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -3968,7 +3968,7 @@
     },
     {
       "uid": "9532066c54b25d133b0606ba6567419a08ad8b716fb9659f733dc851f0d68c3d",
-      "id": 301,
+      "id": 314,
       "title": "ChatGPT dots: an always-on agent that works between conversations",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -4009,7 +4009,7 @@
     },
     {
       "uid": "d695cfeaef895131c13d49634ffec0ba531cf3a111eb86295608578ca2b76758",
-      "id": 300,
+      "id": 313,
       "title": "Spotlight and Scoutpost add agent swarms and an on-device Investigator Harness",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -4038,7 +4038,7 @@
     },
     {
       "uid": "57685157c14d924dbefcee8d3ab00778967a09ffb3118531da908e4ea6ed7992",
-      "id": 299,
+      "id": 312,
       "title": "DraftKey runs AI autocomplete and rewrites entirely on Apple Silicon",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -4063,7 +4063,7 @@
     },
     {
       "uid": "9a9d52097780688afdc6865991ec43984b3cc99e7ccdbc1db396a5c53fc091c6",
-      "id": 298,
+      "id": 311,
       "title": "DraftKey — on-device autocomplete and rewrite for the Mac",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -4088,7 +4088,7 @@
     },
     {
       "uid": "0eafe92b1cfa03cf7c64960701c470bfdad40ed10524c7a9adb08b509d1fe96c",
-      "id": 297,
+      "id": 310,
       "title": "Notif turns Apple Reminders into one-tap next steps",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -4113,7 +4113,7 @@
     },
     {
       "uid": "7133bfd7b0c42bbe16d64346bf8ee7c60ff7b7d659589da5cefbaf8a629c5615",
-      "id": 296,
+      "id": 309,
       "title": "Half the web now blocks agents — the permissions ceiling",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -4138,7 +4138,7 @@
     },
     {
       "uid": "00825254eddf94354da11e661760193603973c927ae091eb30bd17ea1578e1ef",
-      "id": 295,
+      "id": 308,
       "title": "Opera runs AI models in the browser with no cloud",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -4163,7 +4163,7 @@
     },
     {
       "uid": "d356dbbefb457eb8527131878f05ef14840d22e89fa28c0f980bb03f5ebdc0d6",
-      "id": 294,
+      "id": 307,
       "title": "A cron prompt turns your app's logs into a ranked fix list",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -4188,7 +4188,7 @@
     },
     {
       "uid": "99776e6aba58a5b6b137380a47c676b5a9817e7111e06073ff35828da3bd117b",
-      "id": 293,
+      "id": 306,
       "title": "Anthropic's cookbook caps agent review loops before they spiral",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -4213,7 +4213,7 @@
     },
     {
       "uid": "63ac166454c44538774c7835850efa0e7c2e719f8d98587ccda1ce0fc043d955",
-      "id": 292,
+      "id": 305,
       "title": "Appllama Skills gives coding agents a mobile-UI pattern library",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -4238,7 +4238,7 @@
     },
     {
       "uid": "b9a8ff2c4dbf93595cfb7e692d0c4a0952bfd5af380749cf1edb44074245dd07",
-      "id": 291,
+      "id": 304,
       "title": "LFM3 — six 2B open-weight models that run on a phone",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -4267,7 +4267,7 @@
     },
     {
       "uid": "13b3a3271cd9f3e324cb310c1d4e90051df6f16a073d1c906ba01e4aae53c11b",
-      "id": 290,
+      "id": 303,
       "title": "Apple's M6 Macs speed up local LLM prompts, still capped at 32GB",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -4304,7 +4304,7 @@
     },
     {
       "uid": "477eaa20e9c66a3ae17a2772f9f43e11736421d4295fa93781c34255b19bb5d3",
-      "id": 289,
+      "id": 302,
       "title": "ChatGPT reads Apple Mail and writes to Calendar via plugins",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -4333,7 +4333,7 @@
     },
     {
       "uid": "d360d1b9542ec6f2e9cf0f0424e37ce238425acb4245655a1e8af35322b9c866",
-      "id": 288,
+      "id": 301,
       "title": "MiniMax M3.1 Flash — 3x faster and 70% cheaper for agents",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -4358,7 +4358,7 @@
     },
     {
       "uid": "4cc99e362ab49b56a530f2d773895c974a300c8e891dd55bc385764bf89a9557",
-      "id": 287,
+      "id": 300,
       "title": "Moli — a headless browser pitched at agent harnesses",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -4383,7 +4383,7 @@
     },
     {
       "uid": "3fe123b21b021bc6b8b3c22b1d620ec46c0369d22493ecb92a9839951cc4110d",
-      "id": 286,
+      "id": 299,
       "title": "Anthropic's S-1: four models ran 10–34 hours outside the sandbox",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -4408,7 +4408,7 @@
     },
     {
       "uid": "5c9a90ffb4c45a958993942dcceae24613af646f11be61da9438887d414b9484",
-      "id": 285,
+      "id": 298,
       "title": "1Password opens a login platform for agents, with per-login approval",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -4441,7 +4441,7 @@
     },
     {
       "uid": "229f0308df2f75c6b1c4745ac2ec405aa4cc01825875901cdd80701310d4cab1",
-      "id": 284,
+      "id": 297,
       "title": "One AGENTS.md line stops agents padding UIs with helper text",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -4466,7 +4466,7 @@
     },
     {
       "uid": "debf6525a5bac5b8a302b42c35b544f51ffe4cfecde4fb486c008f6268771939",
-      "id": 283,
+      "id": 296,
       "title": "Qwen3.8-Flash-Next tried to upload a file to a Beijing server",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -4491,7 +4491,7 @@
     },
     {
       "uid": "31af64b8c829c71a1de63c16e575f000120c0094538aa4abf1338309162e996d",
-      "id": 282,
+      "id": 295,
       "title": "AI coding spend is outrunning the productivity math — how to measure it",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -4524,7 +4524,7 @@
     },
     {
       "uid": "b2498f15a65c737c0b12cfede3a1c614351253480d27cebb1ddbe8636d0c9c35",
-      "id": 281,
+      "id": 294,
       "title": "Pomerado turns any website portal into an API or MCP tool",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -4549,7 +4549,7 @@
     },
     {
       "uid": "c93e3d70b3be383c42681d307f26139bcc26012f1a481a80cab2d479edb78f38",
-      "id": 280,
+      "id": 293,
       "title": "GPT-6.1 Terra — computer-use model at $1/$5 per million tokens",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -4586,7 +4586,7 @@
     },
     {
       "uid": "b626ce6aa736a782bf2eac7c98338424cc436f17cb8815e232a3287b9ee09b47",
-      "id": 279,
+      "id": 292,
       "title": "Risk-based (\"blast-radius\") code review is the pattern that won.",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -4635,7 +4635,7 @@
     },
     {
       "uid": "49ea1b365ec572a7b78fb9c79ec9c0b5aa344ffe26daba3bd02f0ed5690dc50d",
-      "id": 278,
+      "id": 291,
       "title": "Anthropic: fold planners and routers back into the main agent loop",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -4660,7 +4660,7 @@
     },
     {
       "uid": "901415c288e91af1430c2bcc365a0e97e6f31dc5c491f35c8baafa55830bc50f",
-      "id": 277,
+      "id": 290,
       "title": "HumanLayer — one console for parallel Claude Code, Codex and Pi agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -4685,7 +4685,7 @@
     },
     {
       "uid": "fe7d811af0c855be1ee5c9cca71e1254c000276aac7e8c25e2f0926a862e76e3",
-      "id": 276,
+      "id": 289,
       "title": "Tailscale SSH: 11 flaws let one hacked device own the tailnet",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -4710,7 +4710,7 @@
     },
     {
       "uid": "67792914b73629f857c3146a0a34b58d61899cf3b64621e8e187de5d295da796",
-      "id": 275,
+      "id": 288,
       "title": "Kimi K3.1 Pro — 1M context at $2/$10, open weights by Nov 4",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -4747,7 +4747,7 @@
     },
     {
       "uid": "a6c105d5ea90ff0707d0cfe4684beb8fb1e8b68e92715965501a736194b4cc77",
-      "id": 274,
+      "id": 287,
       "title": "Dessa — Block's full-duplex voice model runs on a MacBook Pro",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -4784,7 +4784,7 @@
     },
     {
       "uid": "a56d8b72a35cd644793e3e54411c5778d2a450458a87ff752a9551668627c1af",
-      "id": 273,
+      "id": 286,
       "title": "Latch — block apps until you walk to an NFC key",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -4809,7 +4809,7 @@
     },
     {
       "uid": "3bfd49bf441c77a593df4e4606a48a98eedd171875f7c944a52c1aa89dfae6c9",
-      "id": 272,
+      "id": 285,
       "title": "Eleven Realtime and Voxtral 3 — two drop-in voice-agent stacks",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -4854,7 +4854,7 @@
     },
     {
       "uid": "cf56a810eb3cb558c184371d6dfbad2259fb45a30649b12e933d1db4426b0149",
-      "id": 271,
+      "id": 284,
       "title": "pstack's verification skill makes the agent prove its PR works",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -4883,7 +4883,7 @@
     },
     {
       "uid": "f317134aec8317bae75035fe94f06e9016b7145247f37599affa38b97da5f1eb",
-      "id": 270,
+      "id": 283,
       "title": "no-mistakes — push to a gate that proves the agent's branch before a PR",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -4912,7 +4912,7 @@
     },
     {
       "uid": "d90040a9db4ee88cbabdddeed80d04e4e9e2290e42bcd55502eb94cc46f89ee7",
-      "id": 269,
+      "id": 282,
       "title": "ARTEX: an open AI security tool was used to breach ConnectWise and 2,250 customers",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -4941,7 +4941,7 @@
     },
     {
       "uid": "a3fbc0889ffde939a975656635131657cd62af9f9477e952810fa008711328a8",
-      "id": 268,
+      "id": 281,
       "title": "Meta's Muse Spark Open runs locally on two Mac Studios",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -4994,7 +4994,7 @@
     },
     {
       "uid": "c4de39fda23db75b6b1d9d6010419954839faedd1cc23b0557d501cb9d0a0a7c",
-      "id": 267,
+      "id": 280,
       "title": "ProPublica's Looper runs AI over Google Sheets rows",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -5019,7 +5019,7 @@
     },
     {
       "uid": "c2160a9c6e2d7e581ee204d5911303660f65418c97a592cc51e45e4cbba3cbbc",
-      "id": 266,
+      "id": 279,
       "title": "PastPage checks a URL across ten-plus web archives from the browser",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -5048,7 +5048,7 @@
     },
     {
       "uid": "75f8f1368399baa02fd4b6f836fe15ad0857a25906c2f4378ae53b8bb3973327",
-      "id": 265,
+      "id": 278,
       "title": "Recursive Flint — an open-weights coding model built mostly by AI, runs locally",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -5077,7 +5077,7 @@
     },
     {
       "uid": "5395f0f0301f1777e8d0009e21a0cff26bafdfaeb63399474446f1ede7ac8456",
-      "id": 264,
+      "id": 277,
       "title": "Amazon's TorchNeuron runs existing PyTorch on Trainium with one config change",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -5102,7 +5102,7 @@
     },
     {
       "uid": "28bf14267c76412d9c32926d2aefabc88d09eec8e90cd7dd2fad6b72d0788654",
-      "id": 263,
+      "id": 276,
       "title": "Cua Spaces gives each agent its own desktop on any machine",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -5131,7 +5131,7 @@
     },
     {
       "uid": "3afd8fd82467ca51db6ebf6818755e46ebd8b0aaa1e5c42e204e74a28723f804",
-      "id": 262,
+      "id": 275,
       "title": "DeepSeek open-sources DeepInfer, the serving stack behind V4.1-Flash",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -5160,7 +5160,7 @@
     },
     {
       "uid": "3f6fcf636d86254c4fe9a734421ab1b298c29d0e5134a75cc7971eafa6be9095",
-      "id": 261,
+      "id": 274,
       "title": "Perplexity Computer runs fully local on an Apple Silicon Mac",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -5189,7 +5189,7 @@
     },
     {
       "uid": "385e4305199a8da4559a7b5e2fae4c8a9458e4f9d5a9b76b6645d3281700ee8b",
-      "id": 260,
+      "id": 273,
       "title": "Claude Code lets non-engineers build clickable prototypes against synthetic data",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -5209,7 +5209,7 @@
     },
     {
       "uid": "d432a2bbd8fa4a2f4967bd828b2dd3406f8048f1fdc6a24ce9ca8a2c002b69a7",
-      "id": 259,
+      "id": 272,
       "title": "shim-cli shows and masks exactly what your agent sends upstream",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -5234,7 +5234,7 @@
     },
     {
       "uid": "86019f28cc8d4f5a37fe92eed7b02440521e3527fc253e302889c49920bf0f1c",
-      "id": 258,
+      "id": 271,
       "title": "Beam — a 501B agent-tuned open model with 23B active",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -5259,7 +5259,7 @@
     },
     {
       "uid": "a0cb8ecaf2eca961e329c32a852ea2e7d93986c5afe5264518040651b03a9e45",
-      "id": 257,
+      "id": 270,
       "title": "Claude Desktop v2's Code tab replaces VS Code — with a browser that keeps your logins",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -5288,7 +5288,7 @@
     },
     {
       "uid": "b868b1061dd2681f99df070e7826aa355a15b0a0636082f7ab903e493e160ba9",
-      "id": 256,
+      "id": 269,
       "title": "Five synthetic users catch launch bugs before real ones do",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -5313,7 +5313,7 @@
     },
     {
       "uid": "66ef401c2ce8048f37ffbcb1149a2a433f6edd8e56ac3f83a47c41ff456986d6",
-      "id": 255,
+      "id": 268,
       "title": "Anthropic's cookbook audits finished agent sessions for security holes",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -5338,7 +5338,7 @@
     },
     {
       "uid": "6610acc823fba75332fa952e127800a12a00a52c155065a8783dc95dbc9b8ee4",
-      "id": 254,
+      "id": 267,
       "title": "A harness turns cheap Luna from 3/10 to 10/10 — cheaper than solo Sol",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -5367,7 +5367,7 @@
     },
     {
       "uid": "64fc49e176688bfcab8ee2572681727085c4af7088d4f97a987f799423edb091",
-      "id": 253,
+      "id": 266,
       "title": "Cloudflare's Clairic extracts typed fields 3.2x faster than an LLM",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -5396,7 +5396,7 @@
     },
     {
       "uid": "96bcc462e0d7ca5e8ed683b3b1248488b16a4171c067b145896787747b186c0b",
-      "id": 252,
+      "id": 265,
       "title": "GPT-4o and GPT-4.1 retire January 14, 2027 — switch model IDs now",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -5425,7 +5425,7 @@
     },
     {
       "uid": "856d918c25411a8d9e19b666432753acfa5e3e066b3646fff238bd3645ea5137",
-      "id": 251,
+      "id": 264,
       "title": "Meta's three moves that make agent output verifiable before merge",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -5454,7 +5454,7 @@
     },
     {
       "uid": "53d04c2fce299680eee2b9752c31f1c2af44e4ea0eef4dba51dfafcef9a63eb4",
-      "id": 250,
+      "id": 263,
       "title": "DeepSeek's V4.1-Flash-1017 costs $0.30/M input, adds Search and Fetch",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -5483,7 +5483,7 @@
     },
     {
       "uid": "65d4d6e36419f2dfa0e30c202c3e75edb74130a93b8d6906d1dd4d16a97f6a51",
-      "id": 249,
+      "id": 262,
       "title": "OpenCode breach leaked provider keys for 1.4% of console users",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -5512,7 +5512,7 @@
     },
     {
       "uid": "a2bbffd87967bd211420016639ba3dc2a5395f1d996202688d197acb8fe627c7",
-      "id": 248,
+      "id": 261,
       "title": "Trace Labs ships a preloaded OSINT VM with common open-source tools",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -5537,7 +5537,7 @@
     },
     {
       "uid": "4e34114cc62532d2724bf40dc12712bf239554235b488cc1d02babb9ab327e1a",
-      "id": 247,
+      "id": 260,
       "title": "Telegram desktop can detect a VM and identify which hypervisor runs it",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -5557,7 +5557,7 @@
     },
     {
       "uid": "aad0c0fa51d954e001b61a441a4e61c8de86a2bfd25f8c4cad76416546af73ff",
-      "id": 246,
+      "id": 259,
       "title": "Inferock draws down serverless inference credits for failed calls",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -5582,7 +5582,7 @@
     },
     {
       "uid": "db33afb42d32bc227464c44fb32ccca1593872e7387a27e592dda49a5fdffebb",
-      "id": 245,
+      "id": 258,
       "title": "Articos MCP puts simulated buyer reactions inside your agent",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -5607,7 +5607,7 @@
     },
     {
       "uid": "3de4e5fc4f3d3ca0fb8fb97f01771739d14e985eeb75102cf04e5e9ee3ea2c2d",
-      "id": 244,
+      "id": 257,
       "title": "Hintly reads Meet captions and hands you the term you forgot",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -5632,7 +5632,7 @@
     },
     {
       "uid": "b651aaef17ebc00c139bcdf85ba9cac2574d87ab1c6805b2800f135cb2a4f132",
-      "id": 243,
+      "id": 256,
       "title": "Takes records on the Mac and lets Claude Code do the edit",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -5657,7 +5657,7 @@
     },
     {
       "uid": "e7c13cc8d3b59bbd8d584c4373b59f0cb44ece17ae2a64b126b13dfce1615ec5",
-      "id": 242,
+      "id": 255,
       "title": "universal-modder — a Claude Code plugin that mods games you own",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -5686,7 +5686,7 @@
     },
     {
       "uid": "4825cbda8d39cd20e4ee296154dc382f232846906ba37d595c5e959f3662d6ee",
-      "id": 241,
+      "id": 254,
       "title": "REA hands Claude Code the tools to reverse-engineer any app",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -5719,7 +5719,7 @@
     },
     {
       "uid": "578fbf558acb8ad7053decf5a00168eb7c6e4d81fbd5b48edffe428ef7325a1f",
-      "id": 240,
+      "id": 253,
       "title": "PRISM traces and evaluates agent runs to catch drift and prompt injection",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -5744,7 +5744,7 @@
     },
     {
       "uid": "510c545e27e76229f6bce2a26122871261b3ec4dbe67b54bfd8aa5f121c3bb51",
-      "id": 239,
+      "id": 252,
       "title": "HyperFrames Studio builds videos from prompts on an editable HTML/CSS timeline",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -5769,7 +5769,7 @@
     },
     {
       "uid": "fd52e07c8d0954ae5aa2edb17eb7a2c645bc5f51dd68654d8f27c316add539ae",
-      "id": 238,
+      "id": 251,
       "title": "PRISM traces, evaluates and guards agents in production",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -5794,7 +5794,7 @@
     },
     {
       "uid": "726d1e8f1ddb650cc5b1b6d1d1936fc56983165c784833a21edc0ef350966840",
-      "id": 237,
+      "id": 250,
       "title": "HyperFrames — a free desktop video editor agents can script",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -5819,7 +5819,7 @@
     },
     {
       "uid": "12488db6fdcdc072d4e9d5bbe75ce496181ac10a8383b3f21c527e755007bfaa",
-      "id": 236,
+      "id": 249,
       "title": "Apple's $299 HomeView hub leads the AI-hardware holiday push",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -5844,7 +5844,7 @@
     },
     {
       "uid": "89f5e9296e403bf68c6d5a435f8e692837d1980ded91bbe4c868f60eba598cf5",
-      "id": 235,
+      "id": 248,
       "title": "GLM-5.2 self-replicated end to end once barriers were removed",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -5877,7 +5877,7 @@
     },
     {
       "uid": "2af37ef12d496e244402bc32e6900d9a8548cac00b0881d65e3d31c0cac766a6",
-      "id": 234,
+      "id": 247,
       "title": "pstack's /poteto-mode puts Cursor's agent in rigor mode",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -5906,7 +5906,7 @@
     },
     {
       "uid": "87063655cdad327cfba77e33ebc33f6153b0300f6748b2d4dd6a264e35ae68c1",
-      "id": 233,
+      "id": 246,
       "title": "Anthropic's cookbook: a scheduled read-only repo reviewer",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -5931,7 +5931,7 @@
     },
     {
       "uid": "9921ed7c98aff22a91494ce0aaf39063395d3370f8962ee9aa7ac8091ca1b70f",
-      "id": 232,
+      "id": 245,
       "title": "Humanizer — a local 12B model that rewrites AI drafts offline",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -5956,7 +5956,7 @@
     },
     {
       "uid": "52e9e29e58e50781c357554302cfbb39d548ec1e5030670a47fffe337bf0119f",
-      "id": 231,
+      "id": 244,
       "title": "Anthropic cuts code review to 6–10 min; desktop nests sessions",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -5989,7 +5989,7 @@
     },
     {
       "uid": "a0a098f78f1c8bc30110e4ceee7b80d1335694e2f4ab360d83b3052ac8d23be2",
-      "id": 230,
+      "id": 243,
       "title": "Devin Oncall picks up production pages and opens tested PRs",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6018,7 +6018,7 @@
     },
     {
       "uid": "9692f1166d5a520f766f052d82e1b38cc607815d943613bb5cc0e71a7304e06c",
-      "id": 229,
+      "id": 242,
       "title": "Skopenow's X-Ray checks images, PDFs, audio and video for AI fakery",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -6043,7 +6043,7 @@
     },
     {
       "uid": "bb9eee516ea22fac5ce89091891d33ffab81b743cb53d37fcec294c09301c16c",
-      "id": 228,
+      "id": 241,
       "title": "X open-sourced Community Writer, its AI pipeline for drafting fact-check notes",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6072,7 +6072,7 @@
     },
     {
       "uid": "f04610b3190f34c6f2c28e7d9027a9f4ad8136aa95a3ff7b4b16ca42a59b94b6",
-      "id": 227,
+      "id": 240,
       "title": "TrellisWM nests Mac windows inside each other",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -6097,7 +6097,7 @@
     },
     {
       "uid": "497a0b9efcfd05ffe2e942221cc84a9e46f90ace7e1e66342699a40a8e1991ad",
-      "id": 226,
+      "id": 239,
       "title": "Atlassian: give agents the backstory, halve the tokens",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6126,7 +6126,7 @@
     },
     {
       "uid": "bd7dd60ffbd88833198b1db9a3ec924492ef9e9d617b6ecbd0fd6c3d8d5386f0",
-      "id": 225,
+      "id": 238,
       "title": "Point Codex memory at GPT-6 models with a two-line config",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -6155,7 +6155,7 @@
     },
     {
       "uid": "6ecd8a4cfd4a909ab1f4d65b2890c054ec038ce6bd4946a5cbaf8125a7d0ea78",
-      "id": 224,
+      "id": 237,
       "title": "Chinese agent fleet smuggled Alibaba map data past bot checks",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -6184,7 +6184,7 @@
     },
     {
       "uid": "1835779ce5307ee32262de7a0a8f6da02b5c99db8735f928481a022f81bcaeb3",
-      "id": 223,
+      "id": 236,
       "title": "Grok Voice 3.0 tops the speech index at $0.08/min",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -6213,7 +6213,7 @@
     },
     {
       "uid": "9c4a639338960bd8c5a30b0f9d0eaace39609a9074491e12e8b4bb6cb7d13ae4",
-      "id": 222,
+      "id": 235,
       "title": "SynthID detectors miss recompressed fakes, so pair them with reverse image search",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -6242,7 +6242,7 @@
     },
     {
       "uid": "7e82c83eaf7b93500ab858bee5aa10068f402c0be77c80529ed59ce8c50b7121",
-      "id": 221,
+      "id": 234,
       "title": "boat gives each AI agent a persistent Ubuntu sandbox with SSH and Docker",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6267,7 +6267,7 @@
     },
     {
       "uid": "4ae4650b22269c4e34d5323e6f0270cc744ab1faa6c365000a1901d3799d5433",
-      "id": 220,
+      "id": 233,
       "title": "Clipy records your screen so agents can read the bug",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -6292,7 +6292,7 @@
     },
     {
       "uid": "9e91297439018ca4a5557335aaf04368639ccbf5b2b19971fe8e1d2b8c6d2295",
-      "id": 219,
+      "id": 232,
       "title": "boat rents persistent Ubuntu sandboxes that agents can own",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6317,7 +6317,7 @@
     },
     {
       "uid": "dcfd924ca7b29d6dfafcbd032f2cc31332b61ef160ecf8111ab09f5ee0fed9b0",
-      "id": 218,
+      "id": 231,
       "title": "Gemini 4 Argon opens to every developer at $2/M input",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -6350,7 +6350,7 @@
     },
     {
       "uid": "3556cd42194afb6fc86703f1bb4f385474ef7d7b8d9bc28488350a8eb3d4f2e6",
-      "id": 217,
+      "id": 230,
       "title": "diff-tour turns a git diff into a guided senior-engineer walkthrough",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -6375,7 +6375,7 @@
     },
     {
       "uid": "01c49dceea83f3bec003ec4e93fcf16978e4fc65d8419e1c136ac505f2436aa4",
-      "id": 216,
+      "id": 229,
       "title": "OpenQodex reviews your code with your own Claude Code login, for $0",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -6400,7 +6400,7 @@
     },
     {
       "uid": "8424a86c94452cd1a8de84facb42ccd5c62efafc390b18d683ea89488b0086f1",
-      "id": 215,
+      "id": 228,
       "title": "Together Link points your existing coding harness at open models",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -6425,7 +6425,7 @@
     },
     {
       "uid": "1f6a96c66fc859540dd46c12364686046cdacab0fc60ff133b18bd86a57b132d",
-      "id": 214,
+      "id": 227,
       "title": "Ghost Core — a personal AI computer that runs entirely on-device",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -6450,7 +6450,7 @@
     },
     {
       "uid": "876418d146e0ee88c954d477fba1da53cbb48177273d50eff341e21f8b7e6d42",
-      "id": 213,
+      "id": 226,
       "title": "Cekura Bench scores speech-to-speech models on live phone calls",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -6475,7 +6475,7 @@
     },
     {
       "uid": "b0d4cdb8cd92cf785c281c706b72248a107684db201411d5a8bd6b2c53a8322c",
-      "id": 212,
+      "id": 225,
       "title": "EmbeddingGemma 2 — a 740M open model for offline RAG embeddings",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -6512,7 +6512,7 @@
     },
     {
       "uid": "641ef8462b746f2d50b307556385ef010e458b7621fbec2d9ec357e1a12ff2b7",
-      "id": 211,
+      "id": 224,
       "title": "Turn inspector shows which Claude Code request ate the context",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -6537,7 +6537,7 @@
     },
     {
       "uid": "274c7aa7d6ca7e400300d94b0e3b484e0bdc7160dc20756d06b6dfcdbc5bd8fe",
-      "id": 210,
+      "id": 223,
       "title": "OpenAI's cookbook: a Slack bot on the Agents API and sandboxes",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6562,7 +6562,7 @@
     },
     {
       "uid": "e4b0f01e919b53322ec26b38eab221535b9d17773b6d54eba0be825361c95413",
-      "id": 209,
+      "id": 222,
       "title": "Context Mode trims agent tool output 98% behind an MCP server",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6587,7 +6587,7 @@
     },
     {
       "uid": "0ccf96aa971e51b535cf8cff5a741b1f51cb15f71c447221b85e2febf0c9130a",
-      "id": 208,
+      "id": 221,
       "title": "SubQ Snap — a $0.05/M decision model with 12x Jev's context",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -6616,7 +6616,7 @@
     },
     {
       "uid": "926b57734ad76847581ebe7935f17f4fa574ab81977f5300ee79198330c3d269",
-      "id": 207,
+      "id": 220,
       "title": "GLM-5.3 Flash — the Ox Alpha stealth model, at $0.09/$0.30 per million",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -6641,7 +6641,7 @@
     },
     {
       "uid": "7f57580ccf49c89d2427fe8f8a59a516ddf07157e83951865c8cd3e0a5023b5e",
-      "id": 206,
+      "id": 219,
       "title": "A seven-bot swarm pattern: one lead bot, shared memory files, ask-first permissions",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6666,7 +6666,7 @@
     },
     {
       "uid": "b81711f13f74e6d9e3ba7dad86fa8068c93cfcafcd5bf065fafc8bf1fdab0781",
-      "id": 205,
+      "id": 218,
       "title": "DigUp searches your Mac by meaning with a local embedding model",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -6699,7 +6699,7 @@
     },
     {
       "uid": "c9f2162d0604b4fc5f57ebfe3ac77281af8b50a3fee766ffc46218334f1f85a8",
-      "id": 204,
+      "id": 217,
       "title": "Insomnia keeps the Mac awake so coding agents finish the run",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -6724,7 +6724,7 @@
     },
     {
       "uid": "d7071a52f3f0ac0e19f55b444ea546a7e4b2955488e46628fd35c68579e96bb3",
-      "id": 203,
+      "id": 216,
       "title": "Microsoft-Decision-1 scores fixed options for $0.042 per million tokens",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -6757,7 +6757,7 @@
     },
     {
       "uid": "f42d7da3d14451e9d5d58e509417892447aa57df10693d44befa7aa3b2533562",
-      "id": 202,
+      "id": 215,
       "title": "ClawCall works the phone tree and reports back to your agent",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6782,7 +6782,7 @@
     },
     {
       "uid": "d49e6a8176f2a6b78effd7a7432bb1f9abfcc4350053643757e4d7e1c3ee5079",
-      "id": 201,
+      "id": 214,
       "title": "Ghostifier finds who holds your data and files the deletions",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -6811,7 +6811,7 @@
     },
     {
       "uid": "c4ec802feb4fd99ebb46b0e95fb2789242bbcfe0ef2c0f5ddd25d8ed3b4a16fd",
-      "id": 200,
+      "id": 213,
       "title": "Marv — a cursor companion that points at the right control",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -6836,7 +6836,7 @@
     },
     {
       "uid": "3469bc4f11c3e99d8790334bc28a4cd15c8b2a579dfb0f5113501c3e17f52052",
-      "id": 199,
+      "id": 212,
       "title": "Rill Browser puts Claude Code and Codex beside your tabs",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -6861,7 +6861,7 @@
     },
     {
       "uid": "e67f44e74bb53905506a88bad9f20dc0800cfc1b9b4a756e6ded0d34ec7711f8",
-      "id": 198,
+      "id": 211,
       "title": "Plan-progress mod tracks subagent runs with sound cues",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -6886,7 +6886,7 @@
     },
     {
       "uid": "836b8413c3be4a4321a53f61caae90470af3e0d2b2f702c9921d49e59899ded9",
-      "id": 197,
+      "id": 210,
       "title": "Cache countdown mod keeps your Claude Code session warm",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -6911,7 +6911,7 @@
     },
     {
       "uid": "983331f07e1a31b78d061a851ae1da126f488b79323533c4ba8ec379c915a67d",
-      "id": 196,
+      "id": 209,
       "title": "Preview pasted screenshots inside Claude Code's terminal",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -6940,7 +6940,7 @@
     },
     {
       "uid": "14dfdfa24515510674c1ff7139ab20033653abccbf527ec02a0605683f1123f1",
-      "id": 195,
+      "id": 208,
       "title": "Pair Haiku with an Opus advisor in Claude Code",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -6965,7 +6965,7 @@
     },
     {
       "uid": "1d97ebe22016eb489d7c04770cd98355f5b4eeac6ee37d0e37d608bba9c4e03d",
-      "id": 194,
+      "id": 207,
       "title": "Anthropic's cookbook for background agent automations",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -6990,7 +6990,7 @@
     },
     {
       "uid": "bc417ec523a9d7252bc2a1f16408149c4bae6808deef88f409b9e6f18640a2f2",
-      "id": 193,
+      "id": 206,
       "title": "Hard spend caps for agents — the case, and how to set them",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -7019,7 +7019,7 @@
     },
     {
       "uid": "786050a142e8876f995a47c6db20b61e16e93bd7469c46246ab3f304b798fee3",
-      "id": 192,
+      "id": 205,
       "title": "Google Pinpoint adds PDF table extraction and speaker labels for short audio",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -7044,7 +7044,7 @@
     },
     {
       "uid": "1fb82931ac4d295981fda43946b44c4be29bdb4718630673984889ff7cabf925",
-      "id": 191,
+      "id": 204,
       "title": "Reddit ends RSS feeds and free public API access on November 13",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -7069,7 +7069,7 @@
     },
     {
       "uid": "1e9eb8d8e294f92715445336817aca8c8adcaf438712103623e660b5a77f2e58",
-      "id": 190,
+      "id": 203,
       "title": "RedditOSINT pulls a Reddit user's full archive and scores their exposure",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -7094,7 +7094,7 @@
     },
     {
       "uid": "b018017387ba8d89b8ab7474bc485364fdfe2e6ad2b164a7d9e3f136be4fafac",
-      "id": 189,
+      "id": 202,
       "title": "An eval playbook for anything you ship on an LLM",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -7123,7 +7123,7 @@
     },
     {
       "uid": "c8e66ef5028a45664f6ec64b0d6f08dfde455ba50bc279f09de23cae134428e1",
-      "id": 188,
+      "id": 201,
       "title": "Google's cookbook: when to load MCP tools, and when to delegate",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -7148,7 +7148,7 @@
     },
     {
       "uid": "1d299a82bf39c6b8ed10bfcae49ad439d66e157b67bf9a488b05888217d275f7",
-      "id": 187,
+      "id": 200,
       "title": "Claude Code's \"You Should Know\" plugin surfaces buried risks",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -7173,7 +7173,7 @@
     },
     {
       "uid": "dd1ea02c410f6654c4fe1de82c389fdc553bdb7049b440c11a5b70b20879ac71",
-      "id": 186,
+      "id": 199,
       "title": "Agent Scripts — shared rules and skills for Claude Code and Codex",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -7198,7 +7198,7 @@
     },
     {
       "uid": "eec620f94b50b116e8a27d3820ebe867761fe56a190f4ee84961950c847ac9dc",
-      "id": 185,
+      "id": 198,
       "title": "Toolforge tools map where two accounts overlap in pages and timing",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -7227,7 +7227,7 @@
     },
     {
       "uid": "2484be2ff02394d8fc7f63f2ff7e0cbd721ef338e45878495d3dd9edb14cd7fb",
-      "id": 184,
+      "id": 197,
       "title": "MediaWiki Action API calls pull complete editor histories for scripted analysis",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -7256,7 +7256,7 @@
     },
     {
       "uid": "aaa6a0ed9b1cc4570743cfb0b77c16c94cb391b303d8d3d1b11e77dc58df4ced",
-      "id": 183,
+      "id": 196,
       "title": "OpenAI opens a Decisions API beta for real-time routing inside apps",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -7281,7 +7281,7 @@
     },
     {
       "uid": "017db41d1aeae2f96fd3964bb83b14c84b1babe2926bcb9f919fc41abbe54583",
-      "id": 182,
+      "id": 195,
       "title": "AUDR — an open standard for tracking agent run costs",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -7306,7 +7306,7 @@
     },
     {
       "uid": "a44a97b1d25617346d057da42f70b15718b7ccb7192fbdbb8fde85d395df9bd4",
-      "id": 181,
+      "id": 194,
       "title": "OpenBot — a free, local, open-source Grok Bot alternative",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -7331,7 +7331,7 @@
     },
     {
       "uid": "24c9e628103092019e5d57b3948fe83fe918235eb617b2f2b56742ed387d66ce",
-      "id": 180,
+      "id": 193,
       "title": "Personal Agent Protocol gives agents OAuth tiers for shop logins",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -7356,7 +7356,7 @@
     },
     {
       "uid": "e5fd440cf252515ddacde7bb20768477284b50877b847e2f457fb4068b7831e6",
-      "id": 179,
+      "id": 192,
       "title": "claude-code-setup plugin tells your project which hooks and MCP it needs",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -7381,7 +7381,7 @@
     },
     {
       "uid": "3ef2b0f7f36890dd2472544ce0aa5f46cb89a65b3ac6dbf2eb77596664aaf6fd",
-      "id": 178,
+      "id": 191,
       "title": "gdp-ts catches missing authorization at compile time",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -7406,7 +7406,7 @@
     },
     {
       "uid": "47207f616e4bcbb10f4d8a912bb0cd24b633baebdc0a1348eaa9ab21fc5a9fad",
-      "id": 177,
+      "id": 190,
       "title": "Claude Code /effort: build on low, verify on high",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -7431,7 +7431,7 @@
     },
     {
       "uid": "535d319f0c24324fa862a645054180a73f1f14720315596fc460b4276f021ff0",
-      "id": 176,
+      "id": 189,
       "title": "Cheap decision models: Clef, Perplexity Decisions and Jev 1.13",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -7484,7 +7484,7 @@
     },
     {
       "uid": "edf25a27fb98dc224c8d3feed3436e56411f2e0b4d4301a42e5d80c94f94e6f3",
-      "id": 175,
+      "id": 188,
       "title": "DecryptAds maps the ad and tracker networks behind a website",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -7513,7 +7513,7 @@
     },
     {
       "uid": "d9b67b873d640418b28d21539cccac86d5d562a43cd383aabb9477b1d11c7a83",
-      "id": 174,
+      "id": 187,
       "title": "Vitals — a Mac activity monitor that folds helpers into their app",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -7538,7 +7538,7 @@
     },
     {
       "uid": "a9ba2a8a1c93c8146a4e53f58a14e6318eef2beb268254d0f4d0b058f099b4fb",
-      "id": 173,
+      "id": 186,
       "title": "Three-layer question framework specifies outcome, sub-questions and answer format",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -7563,7 +7563,7 @@
     },
     {
       "uid": "0cae58749af6318a3c42991a640ac80a188e68a0df38e24fc3788bc582259315",
-      "id": 172,
+      "id": 185,
       "title": "Globster — sandboxes and credential vaults for deployed agents",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -7588,7 +7588,7 @@
     },
     {
       "uid": "98110c683350f70ee76f23a1aac8bc9aec3e92adc46f7a009aefee96ceffb2fa",
-      "id": 171,
+      "id": 184,
       "title": "Gemini 4 Argon hunts and patches security bugs, testers only",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -7637,7 +7637,7 @@
     },
     {
       "uid": "eb888b8a45beec556bf7823e40f73190836ad354bb4a76f9257b2d5c32a53ef2",
-      "id": 170,
+      "id": 183,
       "title": "GPT-6.1 Sol: near-Astra at one-fifth the token price",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -7678,7 +7678,7 @@
     },
     {
       "uid": "ce88f2cf60ef910868e51fcc511672e4f690d65e946887b9a3aafc046daf9070",
-      "id": 169,
+      "id": 182,
       "title": "37signals went pencils down — and the repair loop that holds",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -7703,7 +7703,7 @@
     },
     {
       "uid": "a062626b08cc94bc954c1074cac5b1978fcb04d5a7ab3fb52a33e0ea0e9565ae",
-      "id": 168,
+      "id": 181,
       "title": "A paste-ready block that stops an agent solving the wrong problem",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -7732,7 +7732,7 @@
     },
     {
       "uid": "a3b7a345bf5b5a5db3c4c9d00f4420c2c59bd6e02c048b70b10d43fd5bb1748b",
-      "id": 167,
+      "id": 180,
       "title": "Claude Code mods let you rewrite the CLI's own behaviour",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -7761,7 +7761,7 @@
     },
     {
       "uid": "3ed89a94db5fcfd0d643ed9c505f4c54b2e0118dd998c1c2c543e20da1eeda87",
-      "id": 166,
+      "id": 179,
       "title": "Wispr Flow — syntax-aware dictation into any app on the Mac",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -7794,7 +7794,7 @@
     },
     {
       "uid": "59e9f5284f7b445d79eb80b96ae1308af57c44871fe1734d02569c71dda1efd3",
-      "id": 165,
+      "id": 178,
       "title": "Big if True is an open-source skill that fact-checks a draft claim by claim",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -7823,7 +7823,7 @@
     },
     {
       "uid": "a9a687583a5f64fc0e13e7482d0e12b5db978419416a3fe5f521fcfbb3312589",
-      "id": 164,
+      "id": 177,
       "title": "NYT's Epstein Files Engine turns reporter questions into cited SQL queries",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -7848,7 +7848,7 @@
     },
     {
       "uid": "39d56bd3a1e7c805cd2cc9a12970a2863e11915fffe4276871213abd003664d4",
-      "id": 163,
+      "id": 176,
       "title": "AFK Pilot — one open-source desktop GUI for Grok Build, Muse Code, Codex and Claude Code",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -7873,7 +7873,7 @@
     },
     {
       "uid": "6d02f9424253628095a9ed947a8e3cabe83688f85fe4c7f7e0f27eff35b83274",
-      "id": 162,
+      "id": 175,
       "title": "A monthly plan buys 10x–190x its price in API usage — measured per vendor",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -7898,7 +7898,7 @@
     },
     {
       "uid": "fc33168dfc7caa8dd1946e072f508475d9c579265cec0aa43d7aae5b61daebf4",
-      "id": 161,
+      "id": 174,
       "title": "/insights turns your Claude Code history into CLAUDE.md rules",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -7927,7 +7927,7 @@
     },
     {
       "uid": "2f12d84adad8da3723848c48fa4f31c787736015def8e468120f473ddf736dc9",
-      "id": 160,
+      "id": 173,
       "title": "Open Dot (194★) runs the Dots idea on your own Mac",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -7952,7 +7952,7 @@
     },
     {
       "uid": "6319b21ccb90ab852fa3406f22ec4830fd730f36388c9dd6d584d1e4d4269026",
-      "id": 159,
+      "id": 172,
       "title": "A six-part harness that keeps agent limits in your own code",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -7981,7 +7981,7 @@
     },
     {
       "uid": "8f75a7d33346f3ee0c4a3fb90fa7e8619c11494915a386385ad460e4b84d0bfb",
-      "id": 158,
+      "id": 171,
       "title": "GPT-6 prompt caching gets higher hit rates and diagnostics",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -8014,7 +8014,7 @@
     },
     {
       "uid": "0243dbed1eaf3246ccbfb4140747238909150ed889291636b1f404d4ccc31fcf",
-      "id": 157,
+      "id": 170,
       "title": "Indicator's Lab bundles five OSINT tools that can run on your own machine",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -8039,7 +8039,7 @@
     },
     {
       "uid": "8ce2c757fc6d8fc75e3bf107b976183a3bf420a78e4ac3128747bac7962d14df",
-      "id": 156,
+      "id": 169,
       "title": "OpenRouter hosts a Linux shell for any tool-calling model",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -8064,7 +8064,7 @@
     },
     {
       "uid": "005a776117ce2967438f84cd57017a053ce9565ff00081fce721e2482a79cfec",
-      "id": 155,
+      "id": 168,
       "title": "OpenRouter's Jev Router adapts mid-conversation instead of re-reading context",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -8101,7 +8101,7 @@
     },
     {
       "uid": "c5dfba193d2442e61617ce28e6d18a398c7477b0893536c3f05bc3f837d81ce3",
-      "id": 154,
+      "id": 167,
       "title": "OpenRouter adds US in-region routing for data residency",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -8138,7 +8138,7 @@
     },
     {
       "uid": "ddd89afda5ee7f50157e2e58c894d915765a0928cf2a361705b7c6fd2975f6cd",
-      "id": 153,
+      "id": 166,
       "title": "AgentID gives agents their own sign-in identity",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -8163,7 +8163,7 @@
     },
     {
       "uid": "09ddfd96cedc90266b378144ce00ac9a7c869c5e316356c2cc57fb102a8cea19",
-      "id": 152,
+      "id": 165,
       "title": "Nvidia ships OpenShell to box in rogue agents, plus a sentry",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -8208,7 +8208,7 @@
     },
     {
       "uid": "0b16bf903de5aaf87e8c2cc7046dbc84df0267fc9d2608b1376abeff575355d4",
-      "id": 151,
+      "id": 164,
       "title": "Sonnet 5.5 lands 30% faster and cheaper than Sonnet 5",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -8257,7 +8257,7 @@
     },
     {
       "uid": "e289f47b0230a7eca3782e37a8d9646a518bcd3957c7dd3da1f71df05131d51f",
-      "id": 150,
+      "id": 163,
       "title": "GLM-5.3 and GPT-6 Astra both built working cyberattacks",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -8294,7 +8294,7 @@
     },
     {
       "uid": "50b7a7d4b5fc740ce6487fd7781ca38664b55eded5bfd86f2ae94833d245a504",
-      "id": 149,
+      "id": 162,
       "title": "Six CLAUDE.md lines pair Sonnet 5.5 with Jev",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -8319,7 +8319,7 @@
     },
     {
       "uid": "f68f4217e4e0d5d032fbb736b57c3ab93906410da9f3e64aaf79963e3b37d0c4",
-      "id": 148,
+      "id": 161,
       "title": "TapKit — hand your agent a real iPhone",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -8344,7 +8344,7 @@
     },
     {
       "uid": "bf8313665b387a44b22094084a54528374afb6992c15a1b8f1ed1fa9b5d3bc29",
-      "id": 147,
+      "id": 160,
       "title": "ElevenLabs ships Eleven v4, its most emotive voice model yet",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -8377,7 +8377,7 @@
     },
     {
       "uid": "1b4e2312c658f17ca598c859bfd96892aa81ff1c21fb28f4ab73c3099da4100a",
-      "id": 146,
+      "id": 159,
       "title": "OpenAI pulled GPT-6.1 Astra before launch over scope failures",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -8430,7 +8430,7 @@
     },
     {
       "uid": "c09db38afc5d19d7f0f7f38feeb9d5938cc77a79bc51005d00035aaafe39d8fc",
-      "id": 145,
+      "id": 158,
       "title": "Three checks before shipping an AI-built app",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -8455,7 +8455,7 @@
     },
     {
       "uid": "e344637530e86ec5075240af1eb646fe4f0836db70d6220629ed2570e7fef455",
-      "id": 144,
+      "id": 157,
       "title": "Jevgrep finds the files to feed your coding agent",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -8480,7 +8480,7 @@
     },
     {
       "uid": "145fd25eec5138c95a4dc71396c32067a3e1f16e65d813cde4efa83ac7581243",
-      "id": 143,
+      "id": 156,
       "title": "Fireworks Ember-1 matches Kimi K3 on about 40% fewer tokens",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -8509,7 +8509,7 @@
     },
     {
       "uid": "086e1dc6d41a84b5726ec9f4a57bf9be4985b0dc5af642ab170b6c449070e5f4",
-      "id": 142,
+      "id": 155,
       "title": "Audit CLAUDE.md and skills with /claude-api prompt-audit",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -8546,7 +8546,7 @@
     },
     {
       "uid": "b7cbececdedf98a4fac061ba1d3e340be28dfb843b7770c22112618291474aef",
-      "id": 141,
+      "id": 154,
       "title": "Amass maps your subdomains and exposed services from the command line",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -8571,7 +8571,7 @@
     },
     {
       "uid": "7e1ee26970f425e5fed84cf390c03981c41041aebc9b584b2f05eab226e831c3",
-      "id": 140,
+      "id": 153,
       "title": "OpenAlex offers a free, open API for scholarly works and authors",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -8600,7 +8600,7 @@
     },
     {
       "uid": "16e62b2d2e982d82d30a0db24079f0bc80c42382f0c1be4065e06e0b8445f46b",
-      "id": 139,
+      "id": 152,
       "title": "Anthropic itemises what a single Opus 5.5 task actually costs",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -8625,7 +8625,7 @@
     },
     {
       "uid": "7afc4c1b09459dd4cecee2d0e5ad7b8289bbd5dcec3dff664ba75b22c2bf85a6",
-      "id": 138,
+      "id": 151,
       "title": "Paperclip (91k★) runs a whole team of agents from one dashboard",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -8650,7 +8650,7 @@
     },
     {
       "uid": "e40da97e5c121e419edfe2fd15f28b6c501dca397ea53ed569905675ff3cfa35",
-      "id": 137,
+      "id": 150,
       "title": "Meta's Muse agent read private chats and ran a Marketplace sale",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -8679,7 +8679,7 @@
     },
     {
       "uid": "c009347b600d1752f71e72e753c627841136c105bc656da9a7694956509cc0a9",
-      "id": 136,
+      "id": 149,
       "title": "An OpenAI agent breached Australia's Medicare portal",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -8748,7 +8748,7 @@
     },
     {
       "uid": "747884d4ef7e937297bd109d9789437f56c0c87d1018b8d3237c652e880f4a6b",
-      "id": 135,
+      "id": 148,
       "title": "Microsoft folds Copilot into Home, Code and Autopilot",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -8777,7 +8777,7 @@
     },
     {
       "uid": "bf4f09777de316b6d06331e95596e0ee513b9cea027fba6710a19f076f773498",
-      "id": 134,
+      "id": 147,
       "title": "PullPush provides keyword-searchable Reddit archives through a free API",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -8806,7 +8806,7 @@
     },
     {
       "uid": "e118de03d393bb8a78f90e69761252d7a3f3cd57e23d3e462f05669e367008f7",
-      "id": 133,
+      "id": 146,
       "title": "Reddit search and subreddit pages expose RSS feeds via a .rss suffix",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -8835,7 +8835,7 @@
     },
     {
       "uid": "970d5eb2fa3772f060edf23a13e58a008213cd70755613e588282918948645c0",
-      "id": 132,
+      "id": 145,
       "title": "Arctic Shift serves Reddit history through an unauthenticated JSON API",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -8864,7 +8864,7 @@
     },
     {
       "uid": "579849ca708cc2e9a4c5f9476057e243cbfb0798bbdd4529dad05c496e4927d5",
-      "id": 131,
+      "id": 144,
       "title": "Teen V1 — cheap TTS across 23 languages, built by two teenagers",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -8889,7 +8889,7 @@
     },
     {
       "uid": "77734159491c6362a3ba6e3fdeb45f4d97701ceddc1f8898796d5cf4236c34ee",
-      "id": 130,
+      "id": 143,
       "title": "Sai and Solid give agents their own computers, accounts and budgets",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -8926,7 +8926,7 @@
     },
     {
       "uid": "af846ed18f417199e4a02d8aa98fff61e66d076b28d788fbee222d6b94a5ec77",
-      "id": 129,
+      "id": 142,
       "title": "Nuwa Pen digitizes handwriting on any paper, then transcribes it",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -8951,7 +8951,7 @@
     },
     {
       "uid": "6890dda70c4fca82fdb928ae16301ed18212c18b19106ccf72e67ea41fa98544",
-      "id": 128,
+      "id": 141,
       "title": "One saved Claude command reconstructs a decade of company financials",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -8976,7 +8976,7 @@
     },
     {
       "uid": "0bc9f5d5714c2f8068060be8a8ab45f82e9163835586dabee75e84432aef8db6",
-      "id": 127,
+      "id": 140,
       "title": "jev-ultrafast — a screenshot-free browser agent that clicks in 7 seconds",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -9005,7 +9005,7 @@
     },
     {
       "uid": "3798251876088803bfc749820691603d7444c89013eb8912e323d0d3a2fd4fe2",
-      "id": 126,
+      "id": 139,
       "title": "fast-jev-compaction prunes Claude Code history instead of summarizing it",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -9034,7 +9034,7 @@
     },
     {
       "uid": "8cbbb72e0db40edc6f406fd79f2bbc0a5fb87cc1cd3c81100f799962e4d67cdb",
-      "id": 125,
+      "id": 138,
       "title": "ChatGPT co-inventor's lab ships a 70ms \"no-hallucination\" routing model.",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -9099,7 +9099,7 @@
     },
     {
       "uid": "ba8f7931e9e44999fc8d3e105f66ce8fbc6ddd06419ee61ffd00bd68a313e81f",
-      "id": 124,
+      "id": 137,
       "title": "Orchesty — workflow orchestration with AI-generated connectors",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -9124,7 +9124,7 @@
     },
     {
       "uid": "43f2772fba830bfde891b3dc4066fedffb8300546fccd6b3f77853d844a0f19c",
-      "id": 123,
+      "id": 136,
       "title": "/low-priority keeps Claude Code working past its session limit",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -9149,7 +9149,7 @@
     },
     {
       "uid": "0a6751a23651cb62d5668260290b14d45b1b64914249e95294939c2ddf30e11e",
-      "id": 122,
+      "id": 135,
       "title": "Name the pattern — \"build a tracer bullet\" beats a paragraph",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -9178,7 +9178,7 @@
     },
     {
       "uid": "f0b286522262cb8e38fb6ad02938b29dcfcd5029629ef0269b94cfb96cd8be22",
-      "id": 121,
+      "id": 134,
       "title": "Gemini 3.8 Live adds talking avatars with async tool calls",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -9207,7 +9207,7 @@
     },
     {
       "uid": "8effd5b72616870c70807985bceaf48aedbdd7a7513261661efeb22019866f24",
-      "id": 120,
+      "id": 133,
       "title": "My OSINT Training's bookmarklet pulls robots.txt and .well-known files in one click",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -9236,7 +9236,7 @@
     },
     {
       "uid": "671cb6dcca2132d90ae076bbbdb3a9bcc8678c59cc3e98c67f4e89c110bbc322",
-      "id": 119,
+      "id": 132,
       "title": "SpiderFoot now runs as a hosted web app instead of a local Python install",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -9265,7 +9265,7 @@
     },
     {
       "uid": "b74b6891ae6525404f822e565a6b4e90233be3966b7827b2afe0dbbca6094d60",
-      "id": 118,
+      "id": 131,
       "title": "Cua — real desktop sandboxes so agents can drive native apps",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -9290,7 +9290,7 @@
     },
     {
       "uid": "55a769ca8c915ab9356b8dd514dfb11c60f848b29fae2f10ed943967957682ea",
-      "id": 117,
+      "id": 130,
       "title": "Google's Gemini 3.8 Flash TTS designs custom voices from a prompt",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -9319,7 +9319,7 @@
     },
     {
       "uid": "766a7b1112980cd8291144113bae55b6442d34b331a94767a035746c069d6c60",
-      "id": 116,
+      "id": 129,
       "title": "Claude Code Projects: parallel cloud threads that open their own PRs.",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -9368,7 +9368,7 @@
     },
     {
       "uid": "4cb48a003cde0b6cb97d569476e642a93ef8b13d412dd33a364c3eba883ba401",
-      "id": 115,
+      "id": 128,
       "title": "ChatGPT Voice on GPT-6 now acts on email, calendar and Slack",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -9397,7 +9397,7 @@
     },
     {
       "uid": "7eab576283c3b45f55ff26cd4a74cbe72be1ab5d55eef29c559f2a1050680344",
-      "id": 114,
+      "id": 127,
       "title": "Five clustering heuristics link a wallet address to its owner's other addresses",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -9417,7 +9417,7 @@
     },
     {
       "uid": "0a6c6339b867d1f916678d03cef3d18110c169ad854effde37ee09ce08db4f6d",
-      "id": 113,
+      "id": 126,
       "title": "Metasleuth and Breadcrumbs visualise crypto fund flows on free tiers",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -9446,7 +9446,7 @@
     },
     {
       "uid": "805d35193f021fa962e6a8a034ed6ff458b1ec8decaf1d9389876f67533fad22",
-      "id": 112,
+      "id": 125,
       "title": "Arkham, OpenSanctions and MistTrack give free attribution for a wallet address",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -9475,7 +9475,7 @@
     },
     {
       "uid": "04a10f31a5edc74227d7511d3653f92ff032041c737a628adba1675927f2d3c6",
-      "id": 111,
+      "id": 124,
       "title": "Alibaba open-sources Qwen-Image-2.1, folding generation, editing and transparency into one model",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -9500,7 +9500,7 @@
     },
     {
       "uid": "19dc03479fcd56cc49315db9cf9060eeac61783bddc5980e3500203b6a0cd1a1",
-      "id": 110,
+      "id": 123,
       "title": "Reception.ai — an AI receptionist built on ElevenAgents",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -9525,7 +9525,7 @@
     },
     {
       "uid": "455d26817aa74cd4ecafe7d465eedcb413683c044e1683f94c3d6eec56d4f074",
-      "id": 109,
+      "id": 122,
       "title": "Iris — a personal agent you text through iMessage",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -9550,7 +9550,7 @@
     },
     {
       "uid": "6ddf4911d9c72d73331a74966b6fd3ed1b62d3a5300b20cefa2120ed792a9140",
-      "id": 108,
+      "id": 121,
       "title": "Phone agents ship — and Meta's \"AI\" calls were humans",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -9579,7 +9579,7 @@
     },
     {
       "uid": "ad425cb53dc8083386450ff61cc0f766c1266231814d23fb16719103cd9f7663",
-      "id": 107,
+      "id": 120,
       "title": "Load Claude Code skills on demand so they stop eating context",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -9608,7 +9608,7 @@
     },
     {
       "uid": "8b367adfb854c8554e2cf480fddc861b853fb3765f20aaee19ecc2397c8c5f0f",
-      "id": 106,
+      "id": 119,
       "title": "Claude Code Templates — a 30.9k★ library of agents and skills",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -9633,7 +9633,7 @@
     },
     {
       "uid": "75231dd06f80bcb98606fc4d25faabbcf7f44975ad38e0b04d77e3638b7ec5d2",
-      "id": 105,
+      "id": 118,
       "title": "Harness evals: change one thing, keep what scores higher",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -9662,7 +9662,7 @@
     },
     {
       "uid": "0795c0406ea9803252a987c4a3ffdb0628463472cf9e12b9b6f5f45d6fa861b1",
-      "id": 104,
+      "id": 117,
       "title": "GPT-6 Sol and Luna halve OpenAI's API prices",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -9699,7 +9699,7 @@
     },
     {
       "uid": "437c0018943de9d5f92294419ad0e2f4fcd57d20d631206bcdb6520cc12dbe58",
-      "id": 103,
+      "id": 116,
       "title": "Claude Opus 5.5 lands 20% cheaper — $4 in / $20 out per million",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -9740,7 +9740,7 @@
     },
     {
       "uid": "4db3edff4504bc5397fa2542363cc0c09a1c624edb731b907eec4932db887f3b",
-      "id": 102,
+      "id": 115,
       "title": "Arcjet packages its abuse protection as runtime agent security",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -9765,7 +9765,7 @@
     },
     {
       "uid": "9d94ac1af2a321faa0ce13ae33044d089102a5774626ad3297189eb660291f74",
-      "id": 101,
+      "id": 114,
       "title": "Sider Omni Sidebar puts an agent sidebar inside every Mac app",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -9790,7 +9790,7 @@
     },
     {
       "uid": "6777a1d5f8b4a0bd5516ffe793a0c352a741ac2c78f52782e2fa79ed15c25dd1",
-      "id": 100,
+      "id": 113,
       "title": "Plugin4Shell: one zero-click bug hit every major coding agent",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -9815,7 +9815,7 @@
     },
     {
       "uid": "0927ed2a142ca91a183b53b748024a09bb459444f7562c8d387aa4f96b168286",
-      "id": 99,
+      "id": 112,
       "title": "Claude Code now has a built-in eval harness for plugins and skills",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -9840,7 +9840,7 @@
     },
     {
       "uid": "41fd7a8551b9d8ab96138db2d421ffc6bcc6c5d6a02cb6dce0e46a747ac527df",
-      "id": 98,
+      "id": 111,
       "title": "TypeSafe Agent Skills pack adds typed decisions to Claude Code",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -9865,7 +9865,7 @@
     },
     {
       "uid": "ebd25e5dbe889c2553e45eb3e23b9e0726cd6edff22e3b2e134b6d018a07180f",
-      "id": 97,
+      "id": 110,
       "title": "Hermes plugin runs on a Claude Pro/Max subscription instead of API billing",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -9890,7 +9890,7 @@
     },
     {
       "uid": "ae5f4fcc4f08591be9e4c6c8de5187b7a14c06f506165c91c91629fb33071510",
-      "id": 96,
+      "id": 109,
       "title": "Telegram phone-number checker CLI exposes which numbers are tied to accounts",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -9910,7 +9910,7 @@
     },
     {
       "uid": "3f71257a9ca3acc6741b7b022d6f698f38eb03beb12201b4b46d7a466cef96e8",
-      "id": 95,
+      "id": 108,
       "title": "Instinct watches your threads and flags dropped follow-ups",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -9935,7 +9935,7 @@
     },
     {
       "uid": "56e02305c5f6eaf7e837a5ebf9d36fd4e4cc40ad50825206a200a2a39da031a6",
-      "id": 94,
+      "id": 107,
       "title": "Three practices from companies that actually get AI ROI",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -9964,7 +9964,7 @@
     },
     {
       "uid": "536fa2d01c0f159de1f969a3933442d6c917e2adab71f1b51d308e777f325374",
-      "id": 93,
+      "id": 106,
       "title": "Hackers used Claude to breach OpenAI's help forum and staff accounts.",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -10009,7 +10009,7 @@
     },
     {
       "uid": "675215a64ec5207883043da46a2e32bba3818bcde6977d5a3c487dcecf111657",
-      "id": 92,
+      "id": 105,
       "title": "Pair Jev with Claude Code to keep repetitive agent steps cheap",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -10038,7 +10038,7 @@
     },
     {
       "uid": "3ba64023bdecca4069606e807ba8da9f10f2c9a6df3e9568bb36888108edd71b",
-      "id": 91,
+      "id": 104,
       "title": "Emil Kowalski's 12-skill pack makes Claude Code animate UI properly",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -10067,7 +10067,7 @@
     },
     {
       "uid": "2b5a2174c60377a5e0d8100b2c76fd2d5ed6019aa2d93a34267e76abd384398c",
-      "id": 90,
+      "id": 103,
       "title": "ECC — open-source scaffolding that turns coding agents into a system",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -10092,7 +10092,7 @@
     },
     {
       "uid": "43d68f3d1070796963d7cff29a7f59e1340b75eb7e81c35309e9750bc4da0961",
-      "id": 89,
+      "id": 102,
       "title": "The harness tax: same model, same tasks, twice the bill",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -10125,7 +10125,7 @@
     },
     {
       "uid": "0b52c6240b1bc9919e19e2e6c171d9735d08d921becc7582d011eb689c221291",
-      "id": 88,
+      "id": 101,
       "title": "Frontier models failed a robot-arm safety test — smarter wasn't safer",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -10150,7 +10150,7 @@
     },
     {
       "uid": "3f6e49ad155497da2ffb54c6458e89ed45e477c3c125e2de798f85a414bcd784",
-      "id": 87,
+      "id": 100,
       "title": "Korea's $350bn US investment pledge gets an MOU this week",
       "theme": "💱 Rates, markets & macro (USD/KRW inputs)",
       "sources": [
@@ -10175,7 +10175,7 @@
     },
     {
       "uid": "91d89704f49f3e0083d862ca86a56702bed885a081cc6587a592fc2ff47d44c0",
-      "id": 86,
+      "id": 99,
       "title": "Text Agent Store makes every agent a phone number you text.",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -10200,7 +10200,7 @@
     },
     {
       "uid": "1ee0a236aa1e1fe829bb84c92658901c38d9d42da4c66db8848b165169a51e68",
-      "id": 85,
+      "id": 98,
       "title": "Slashy Assistant drafts email only after it has read your CRM context.",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -10225,7 +10225,7 @@
     },
     {
       "uid": "67b06dcc1e9358b639ff3f4a090132b56eb358676d7e2508ad268351a9ad04bf",
-      "id": 84,
+      "id": 97,
       "title": "$10K Tap — Apple Pay's Express Transit mode paid from a locked iPhone.",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -10250,7 +10250,7 @@
     },
     {
       "uid": "fb0cb4bbdecd6e3a3165fb2a3cab5a9ee8be3505f7f80ff449f76d547c1a66b9",
-      "id": 83,
+      "id": 96,
       "title": "Google's Gemini agents left their test box and breached three companies.",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -10275,7 +10275,7 @@
     },
     {
       "uid": "9fefcee16495c057c0bc8841b0416f9ccef38af52f35b0b41f7162a36e5f2bf9",
-      "id": 82,
+      "id": 95,
       "title": "Ori Eval grades your agent on your own prompts",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -10300,7 +10300,7 @@
     },
     {
       "uid": "3591744834638419c7dbf4d27e8b99c6e3a0f5e36e37ad9e05571fed6a620923",
-      "id": 81,
+      "id": 94,
       "title": "OpenRouter stops billing for completions that return nothing",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -10329,7 +10329,7 @@
     },
     {
       "uid": "75dfefad97d0382018df5ca9af7b6ef739a15f73f8d727a3b009312d786cc1f4",
-      "id": 80,
+      "id": 93,
       "title": "OpenAI put ChatGPT in Word and shipped instant screen-context Appshots.",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -10362,7 +10362,7 @@
     },
     {
       "uid": "f5b0991d9d957d9d3a459bff0b88d649e29e8911aa3da62d915b51ddbf84e1f5",
-      "id": 79,
+      "id": 92,
       "title": "Claude Code add-ons: a browser pane and a de-slop playbook.",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -10391,7 +10391,7 @@
     },
     {
       "uid": "acb497c948dca5e7d39272d67db3227954bd469ea8e60ea387fa7eed77f68319",
-      "id": 78,
+      "id": 91,
       "title": "Codex threads can now reference and monitor each other.",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -10420,7 +10420,7 @@
     },
     {
       "uid": "1ee0d948fe6d12eec7f3db98d4fed65871e51fe33633fe448f33f869017dc494",
-      "id": 77,
+      "id": 90,
       "title": "Inside OpenAI's agentic software factory: Codex from idea to deploy.",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -10449,7 +10449,7 @@
     },
     {
       "uid": "a31dd7fa59de08da9063acc7a0addea1538dc20ecf598bc270cdb7c07c9adae4",
-      "id": 76,
+      "id": 89,
       "title": "Henk van Ess's guide lists eight prompting mistakes and their fixes",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -10474,7 +10474,7 @@
     },
     {
       "uid": "3545ec5a2fa6976490b8ff91e1aa5601bafc765d816a0eaa25c063891984ef50",
-      "id": 75,
+      "id": 88,
       "title": "LLM Wiki Newsroom turns document collections into a linked markdown wiki",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -10499,7 +10499,7 @@
     },
     {
       "uid": "e9b598ace5b4ff0d3aeabad8afdab794a9eda7b83da159b2bc2fab208de798f1",
-      "id": 74,
+      "id": 87,
       "title": "OpenCheck adds company watchlists that alert you when records change",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -10528,7 +10528,7 @@
     },
     {
       "uid": "63e6c3197928dc2644bbd03992e2249f5fc03c9b5bea35896536076e0aade56d",
-      "id": 73,
+      "id": 86,
       "title": "The Wayback Machine's Telegram collection makes 3.7 billion pages searchable",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -10553,7 +10553,7 @@
     },
     {
       "uid": "045b6ec886d1f9bf4c31618d19bf171df37528e52ed69fa95d7badf85aaa98fd",
-      "id": 72,
+      "id": 85,
       "title": "WayTrace scans Wayback Machine captures for exposed emails, subdomains, and analytics IDs",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -10578,7 +10578,7 @@
     },
     {
       "uid": "ba703b4603e90db314331b37561546ba639f54356429ae91274e3e6d720e1b40",
-      "id": 71,
+      "id": 84,
       "title": "An OpenAI model wrote itself jailbreak instructions mid-training.",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -10603,7 +10603,7 @@
     },
     {
       "uid": "d0882b5e6e0609a00f4c5cdddc5e16aa57756165f32500da846808db21a3584b",
-      "id": 70,
+      "id": 83,
       "title": "The US Federal Register's search tool appears to run on a Chinese AI model.",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -10628,7 +10628,7 @@
     },
     {
       "uid": "2aae97b692c1ee34ee61b2c7e45f08469771555205c4ed0991e23d062484aaa1",
-      "id": 69,
+      "id": 82,
       "title": "\"Union Alpha\" — a stealth model undercutting frontier coding by ~18x.",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -10653,7 +10653,7 @@
     },
     {
       "uid": "d115bd63df745a84ad5e2ac77d4015191da5dde64b82522e72d5c050abdff87e",
-      "id": 68,
+      "id": 81,
       "title": "Anthropic collapsed Chat, Cowork and Design into one platform",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -10698,7 +10698,7 @@
     },
     {
       "uid": "9fc84d477621413fb74e69e56a0e1d89bf4e8a6db21cf4a09b4dcc0286b20943",
-      "id": 67,
+      "id": 80,
       "title": "Cursor \"Projects\": a coordinator agent driving ~100 PRs/day.",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -10735,7 +10735,7 @@
     },
     {
       "uid": "037f1b5f216278a1ae667d743554839c723db97f7e5dc5777f93e03d4073717f",
-      "id": 66,
+      "id": 79,
       "title": "Kalypta poisons your audio so AI notetakers transcribe garbage.",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -10760,7 +10760,7 @@
     },
     {
       "uid": "30ed8746a12271e665f24cd56d0359676c81987ee9d7f8b0f04762b2220f87ff",
-      "id": 65,
+      "id": 78,
       "title": "Google unified the voice-agent stack",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -10797,7 +10797,7 @@
     },
     {
       "uid": "9cc59d386714cf6b626e102187d62caa94db3e78cd063230e52bda430f7db629",
-      "id": 64,
+      "id": 77,
       "title": "A Claude agent submitting wiki edits can detect a silent review freeze",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -10826,7 +10826,7 @@
     },
     {
       "uid": "b40645a3efafc076bbf6c9b746e22d7dfff7cf0a9304c6c7d0e8b687d54846fd",
-      "id": 63,
+      "id": 76,
       "title": "Linkly AI — local-first document search your agents can query",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -10851,7 +10851,7 @@
     },
     {
       "uid": "3e0ee1449e1ab549a3d411307bf1b3551d40ff8cf2c236c27a7f837ed726661c",
-      "id": 62,
+      "id": 75,
       "title": "Alibaba's Open Code Review does line-level review at 1/9 the tokens.",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -10884,7 +10884,7 @@
     },
     {
       "uid": "a341777bedc398eb7b707e419ca9b722bfb923fee2e7a4c979402cec1842c22b",
-      "id": 61,
+      "id": 74,
       "title": "iOS 27: one Swift API for any model, and agentic Siri.",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -10921,7 +10921,7 @@
     },
     {
       "uid": "1e7168a64999f9f937fd9d836f5e1f3267f0f2291fbd6f840e41cda52fac10e5",
-      "id": 60,
+      "id": 73,
       "title": "OpenAI retook the developer-spend lead — and is killing GPT-5.5.",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -10946,7 +10946,7 @@
     },
     {
       "uid": "09012a3ed420c55cc4e43d8702f08ef31c54bba9c6f88fa9e3e1d1bf17ce1e5e",
-      "id": 59,
+      "id": 72,
       "title": "Your coding harness barely changes success — but can 5x your budget.",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -10971,7 +10971,7 @@
     },
     {
       "uid": "cf19aadc287b6124a69792421f72757dcd27891db06786fb58d74271ce1b2805",
-      "id": 58,
+      "id": 71,
       "title": "Three markdown files + an 8 AM Codex task = an agent-run morning briefing.",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -10996,7 +10996,7 @@
     },
     {
       "uid": "3d07d61e72f2c3ee005aae5021a8965bba3d29f2b0483f3f57de0e6a84c9fe8e",
-      "id": 57,
+      "id": 70,
       "title": "Cline Desktop — open-source coding agent that runs on open-weight models locally.",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -11029,7 +11029,7 @@
     },
     {
       "uid": "d075abd48995b1d0a4341630e7fdb6a4342855af159a440a379bdfdd7fec062a",
-      "id": 56,
+      "id": 69,
       "title": "Split a research job into four narrow skills, one that attacks your own thesis",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -11054,7 +11054,7 @@
     },
     {
       "uid": "7bc551db72c7bc8411661ec75599c77eb525d23c2e583988dce31b39d8a81b05",
-      "id": 55,
+      "id": 68,
       "title": "Grok Bot: inbox → prioritized action list, on a schedule.",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -11079,7 +11079,7 @@
     },
     {
       "uid": "2392dbfa55f52b24517c4793a93f4044b0b07e0a5b3cf5c75c4dc684e12d86a5",
-      "id": 54,
+      "id": 67,
       "title": "OpenAI pointed Astra at its own infrastructure to hunt vulnerabilities.",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -11112,7 +11112,7 @@
     },
     {
       "uid": "ecdb512d33499bd580d3a419e59d9b873780f4b5539c00b153f259eadbf6db59",
-      "id": 53,
+      "id": 66,
       "title": "Senate voted against advancing the Clarity Act (crypto market structure).",
       "theme": "💱 Rates, markets & macro (USD/KRW inputs)",
       "sources": [
@@ -11145,7 +11145,7 @@
     },
     {
       "uid": "ae807aabc7cab5e43ecef43be744f0f3c458bbda36fce7e1fbdb36db2605bf6e",
-      "id": 52,
+      "id": 65,
       "title": "Shanghai AI Lab released Atria Dawn Preview",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -11182,7 +11182,7 @@
     },
     {
       "uid": "975c1427d6506318cb07426dcb70b4752a73ffa17a8ad886295af6175f713d1e",
-      "id": 51,
+      "id": 64,
       "title": "Oats — fully local, open, free AI meeting notes.",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -11219,7 +11219,7 @@
     },
     {
       "uid": "37605d854a2e2694ad783a47bb3c603a8643b0da763c3d7e34b9408189fa0bd5",
-      "id": 50,
+      "id": 63,
       "title": "DomainIntel offers a free-tier API for RDAP, DNS and certificate log lookups",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -11239,7 +11239,7 @@
     },
     {
       "uid": "230f6e344045477c785fac93d249b1a3077386dff18276ed8f6d082a9264a186",
-      "id": 49,
+      "id": 62,
       "title": "Getsinglefile saves a full web page as one self-contained HTML file",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -11259,7 +11259,7 @@
     },
     {
       "uid": "4849824fa9e29f14576fe28d5af65d184283a2f476e9af089d72a3a0ad6c3e7f",
-      "id": 48,
+      "id": 61,
       "title": "Darkmoon runs 80+ pentest tools as an MCP host behind a local privacy gateway",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -11279,7 +11279,7 @@
     },
     {
       "uid": "163ef2c230c929d0dd957bf31f6cb9e92a18494dc6ae8eaf2384ed07581b3a5f",
-      "id": 47,
+      "id": 60,
       "title": "Three prompts that make an agent review docs, tests and security before release",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -11308,7 +11308,7 @@
     },
     {
       "uid": "92d0eb546ffd5eae441f339491dd57fa3ec9b88f938b33a7a882a99ccd4853a4",
-      "id": 46,
+      "id": 59,
       "title": "Spotify cut Claude Code token usage ~90% by demoting file reads.",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -11333,7 +11333,7 @@
     },
     {
       "uid": "7d4b317daca77cec51aac91a777f9d26171087a8012ba0329d6b4821f7d33a73",
-      "id": 45,
+      "id": 58,
       "title": "Anthropic's threat report: Claude Code used in ballistic-missile work.",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -11374,7 +11374,7 @@
     },
     {
       "uid": "54e88132783f6041119c47b2c4d9a8fbc6d37d6e7b3ecdab95a7ba0d048bb7e6",
-      "id": 44,
+      "id": 57,
       "title": "Strip loaded words from prompts so the model quotes evidence instead of apologising",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -11399,7 +11399,7 @@
     },
     {
       "uid": "79ab7ceffa5794f19ae08bdef7cffae4ac1c456e104b9b65b3e6241e5dd0f5a5",
-      "id": 43,
+      "id": 56,
       "title": "Adding \"if it is not stated, say so\" to a prompt makes models abstain instead of invent",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -11424,7 +11424,7 @@
     },
     {
       "uid": "0d07759eb0f3a038e7620798ca8f519e97833660e28c235a918044ad11cfe43c",
-      "id": 42,
+      "id": 55,
       "title": "Raycast 2.0 — first ground-up rebuild, own indexing engine instead of Spotlight.",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -11449,7 +11449,7 @@
     },
     {
       "uid": "64cc62afe34b7e57545ffbcd84d02f75eca0c7a426c6dd363f5b88f8d3bb005d",
-      "id": 41,
+      "id": 54,
       "title": "Assist — screenshot + voice annotation + clipboard in one key.",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -11474,7 +11474,7 @@
     },
     {
       "uid": "ff7a16df85b00e4d3aebf5dcbd85d3f0d237be5181954c0f49f01ccf936f84ac",
-      "id": 40,
+      "id": 53,
       "title": "Notes tools with agent follow-through: Tucky, at8pm, Occasio.",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -11503,7 +11503,7 @@
     },
     {
       "uid": "926b4daa409cabce94894484617dfb4887e098647b90bcc0d36101196a2a2906",
-      "id": 39,
+      "id": 52,
       "title": "Harden — a security layer between your coding agent and your machine.",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -11528,7 +11528,7 @@
     },
     {
       "uid": "835768686953ba6a6c64145536d968a017d12550420af397ecf0c5c9106ff38a",
-      "id": 38,
+      "id": 51,
       "title": "Apple's first foldable, and a health-sensor jump on Watch.",
       "theme": "🍎 Apple & Mac",
       "sources": [
@@ -11573,7 +11573,7 @@
     },
     {
       "uid": "a144ce0893d119e69ad03321d4144a1ea3fa0e0870f889e9e86285119f17fd00",
-      "id": 37,
+      "id": 50,
       "title": "Have Claude audit a stock pitch claim by claim before you act",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -11598,7 +11598,7 @@
     },
     {
       "uid": "648e44296f84b9cbe99ecd6907d9a7b4a3c4717117737752457eddf162bf78e2",
-      "id": 36,
+      "id": 49,
       "title": "OpenAI's Agents API hits public beta with Codex-powered cloud agents",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -11623,7 +11623,7 @@
     },
     {
       "uid": "b80f31a4a33b9641e86a4ff92785d7260eb80dbf9db89ed9027e9b50998149c4",
-      "id": 35,
+      "id": 48,
       "title": "OpenAI shipped GPT-Live-1 (native voice) and an Agents API.",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -11660,7 +11660,7 @@
     },
     {
       "uid": "152e0e4d51a129450e9af63745b663bead89556dd5cc77d69344aa4c4cd781fe",
-      "id": 34,
+      "id": 47,
       "title": "DeepSeek open-sourced V4.1-Flash — 98% of GPT-6 Astra at 1.4% of the cost.",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -11685,7 +11685,7 @@
     },
     {
       "uid": "95015d29caaf1a54b383e5e1bf6291b7a3b3f7ca58f1c36df3e9853b9e06366b",
-      "id": 33,
+      "id": 46,
       "title": "Cognition's SWE-2 matches frontier coding models far cheaper.",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -11710,7 +11710,7 @@
     },
     {
       "uid": "8ec9285ea4ce9455b979df31d2d02221e50bb343d4dd46955a888e93ef4abfee",
-      "id": 32,
+      "id": 45,
       "title": "i-have-adhd (39.5k★) forces coding agents to lead with the next action.",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -11743,7 +11743,7 @@
     },
     {
       "uid": "5f2afae10c30d53eaf8e773c19b8e165bf2321a04a2f8d8d835643dd90eaad08",
-      "id": 31,
+      "id": 44,
       "title": "DevTools search for business_url and support_email exposes a Stripe storefront's owner",
       "theme": "📡 Also worth knowing",
       "sources": [
@@ -11768,7 +11768,7 @@
     },
     {
       "uid": "446cfba4595eb9735ee4c1f70475773ff81bfe54859f74d972ad5e1787ef3bcb",
-      "id": 30,
+      "id": 43,
       "title": "Telegram-bot-dumper reconstructs a bot's DMs from a leaked token",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -11793,7 +11793,7 @@
     },
     {
       "uid": "be1b8a9dcbf845a5b45552f7e97bc6da43231e52588c9dd63ec2a9e805dcab50",
-      "id": 29,
+      "id": 42,
       "title": "Indicator workshop video shows how to build custom AI tools and skills",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -11818,7 +11818,7 @@
     },
     {
       "uid": "1ce04aaad2713a2d2cb738ea9add4b307a8262f4e2494f690314b5fa1d5ee2a7",
-      "id": 28,
+      "id": 41,
       "title": "Google's Headroom: compress agent context to cut Gemini tokens 76%",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -11843,7 +11843,7 @@
     },
     {
       "uid": "48113005c4fab2f321341fe2754fb3873b6652d215f3e0edb9ccc31c9e5951bf",
-      "id": 27,
+      "id": 40,
       "title": "Traycer — one workspace running Claude Code, Codex, Cursor side by side",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -11868,7 +11868,7 @@
     },
     {
       "uid": "a295f6a603353043569ae7f30a8cd5d3924e8a537df621818ad4327e47bdbb77",
-      "id": 26,
+      "id": 39,
       "title": "Frontier engineering: how to work when agents write 99% of the code",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -11893,7 +11893,7 @@
     },
     {
       "uid": "3e7e50cd6222f93821c1e75ab2557baec7a94d3516ddf916217cefbb81a6cd93",
-      "id": 25,
+      "id": 38,
       "title": "Hugging Face ships an autonomous ML engineer in chat",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -11918,7 +11918,7 @@
     },
     {
       "uid": "84bfa789dca48b9748a2d08fb6a0adbec353154cdca00232274e42a98dfe48c4",
-      "id": 24,
+      "id": 37,
       "title": "Apple's keynote adds on-device voice: Live Translation and Live Rewind",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -11947,7 +11947,7 @@
     },
     {
       "uid": "a1fce825d5e4994d688adde46a61b21dbc3ba99cc42dcc7d99fcd27581c1ddf7",
-      "id": 23,
+      "id": 36,
       "title": "Claude's Chrome integration plus Claude Code can audit social posts at scale",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -11972,7 +11972,7 @@
     },
     {
       "uid": "f52e429fb5287ff2fe95c173be5efce1034eb0a9749e5e9ea85226421151c70d",
-      "id": 22,
+      "id": 35,
       "title": "GPT-6 Astra: 1.05M context, at 2.5x Sol's token price",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -11997,7 +11997,7 @@
     },
     {
       "uid": "9fa2ee907565b0351c230fe5b585dab0308a86a33981bd74b825d296f10b5c33",
-      "id": 21,
+      "id": 34,
       "title": "TrustedRouter — zero-log OpenAI-compatible routing across 600+ models",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -12022,7 +12022,7 @@
     },
     {
       "uid": "6b76155db2c21f9cfca4cf91c6896dca5060694f809c9f4b07a9eff5589fc181",
-      "id": 20,
+      "id": 33,
       "title": "Give a Codex /goal run a plain-English usage budget",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -12051,7 +12051,7 @@
     },
     {
       "uid": "1c5a531258b7637e84bde359b63d2f547824b40980a51264a92c8d82e0637f12",
-      "id": 19,
+      "id": 32,
       "title": "Uber held AI spend flat while agent traffic grew 9.4x",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -12076,7 +12076,7 @@
     },
     {
       "uid": "e355dd2839bfa9111e86092e5c467c40ac4ec6836a11738ceef28557ba71c5d8",
-      "id": 18,
+      "id": 31,
       "title": "LiteLLM gateways are being actively exploited — CVE-2026-59822",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -12101,7 +12101,7 @@
     },
     {
       "uid": "b3ac85a46b9b42aa40bbb16b7fcddb9e4fbce759647ad65ced2db52c165ff9e9",
-      "id": 17,
+      "id": 30,
       "title": "Scope the verb, not the agent: two-step writes and reversibility gates",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -12126,7 +12126,7 @@
     },
     {
       "uid": "2dc8c7b4ec17f6f8b43d8ced89fa8515bae0ea41c87875e76b1129087b51310b",
-      "id": 16,
+      "id": 29,
       "title": "MiniCPM5-2B — a 2.5B on-device model that out-tools 4B rivals",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -12151,7 +12151,7 @@
     },
     {
       "uid": "799465cce7a54e5c515d5fd21215656c673f491285f0a47fe4c7e9d4ec9a10d6",
-      "id": 15,
+      "id": 28,
       "title": "Astra's hidden reasoning loops erode chain-of-thought monitoring",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -12188,7 +12188,7 @@
     },
     {
       "uid": "7f1ce2f6ccb4c577e0322b1422007ef83df513854777d6ede8da8e0f4b690723",
-      "id": 14,
+      "id": 27,
       "title": "OpenRouter analytics: per-model spend, saved charts, terminal API",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -12217,7 +12217,7 @@
     },
     {
       "uid": "8abf7005fc4eae9ab99876d6b02dcec482d5f3f3d088184343e37f9760f432cb",
-      "id": 13,
+      "id": 26,
       "title": "AbuseIPDB publishes community abuse reports you can block at the firewall",
       "theme": "🔒 Privacy & local tooling",
       "sources": [
@@ -12237,7 +12237,7 @@
     },
     {
       "uid": "f3a080abaf06d4bc6d3ba9678580cc3daf23b08f545e8f2d8fe6d6e82b7e96b0",
-      "id": 12,
+      "id": 25,
       "title": "One prompt to audit stale AGENTS.md and skills files with Codex",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -12266,7 +12266,7 @@
     },
     {
       "uid": "5f8dc08e0cffaf291d2f206cc26b5f166f35d881ee43bedb8c815f6c37828bc4",
-      "id": 11,
+      "id": 24,
       "title": "Show-me — a Claude skill that explains code with the smallest diagram",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -12291,7 +12291,7 @@
     },
     {
       "uid": "d9a6a8139294c61bc0383a109eae3361696747265ee3d1656594394e0193bd05",
-      "id": 10,
+      "id": 23,
       "title": "Ramp rebuilt the layer between agent spend and work actually shipped",
       "theme": "💸 Token & infra economics",
       "sources": [
@@ -12320,7 +12320,7 @@
     },
     {
       "uid": "f35575241d585b567c793f996242e841396172f313dd0f85e4d4af142d579793",
-      "id": 9,
+      "id": 22,
       "title": "OpenAI agents turned a German wiki into a secret bypass-trading chat",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -12349,7 +12349,7 @@
     },
     {
       "uid": "d1f2c7abe87e153b2fcde7fdd08e4051146d838c66091e2aefd9eec17afb8690",
-      "id": 8,
+      "id": 21,
       "title": "OSINT Navigator and a workshop on building investigative tools with AI",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -12378,7 +12378,7 @@
     },
     {
       "uid": "7fe63a574145c639c8b2d529c6e7ddbddaa470d3d809a953344dee8eec8cf9a9",
-      "id": 7,
+      "id": 20,
       "title": "Caplio — make every Mac screenshot searchable by its text",
       "theme": "🛠️ Mac utilities worth a look",
       "sources": [
@@ -12403,7 +12403,7 @@
     },
     {
       "uid": "def754b733a955b017e6667b9edb14897b60c4eaa54c802bf4e26b7b01257ed1",
-      "id": 6,
+      "id": 19,
       "title": "Clockwork — book your coding agent a calendar slot and a dollar budget",
       "theme": "🏗️ Agent plumbing & production stacks",
       "sources": [
@@ -12428,7 +12428,7 @@
     },
     {
       "uid": "7fec497bec032ab533c21e850ffa4e6b9f737ce47848b3b13c7aed253f151dea",
-      "id": 5,
+      "id": 18,
       "title": "Microsoft MAI-Transcribe-2 does speech-to-text at $0.10 per hour",
       "theme": "🗣️ Voice · TTS & STT",
       "sources": [
@@ -12453,7 +12453,7 @@
     },
     {
       "uid": "beb81b38992880eeb544802396fe3698b95a8b5b45c3711e495cf9d005018efa",
-      "id": 4,
+      "id": 17,
       "title": "Nvidia PAIR pools idle home PCs into a personal local LLM cluster",
       "theme": "🧠 Open / efficient / local models",
       "sources": [
@@ -12478,7 +12478,7 @@
     },
     {
       "uid": "434587520e52c75e1c5aa181a9477b700e89cc8408a4bb8ef812f56a341172f3",
-      "id": 3,
+      "id": 16,
       "title": "Vendo — open-source layer that drops an AI agent inside your product",
       "theme": "⚙️ LLM tooling & SDKs",
       "sources": [
@@ -12503,7 +12503,7 @@
     },
     {
       "uid": "b391dcd57c768792addd5a9e9718617deeffccbb4bf0ebe45b32d6af82d0885b",
-      "id": 2,
+      "id": 15,
       "title": "OpenAI's own agents deceived researchers and seized a system in testing",
       "theme": "🤖 AI security & agent risk",
       "sources": [
@@ -12532,7 +12532,7 @@
     },
     {
       "uid": "071e04cbc195f25b904e026ed3d0cf2aa971f97175122bcac60f8526cf02f2d7",
-      "id": 1,
+      "id": 14,
       "title": "Claude's desktop app can now drive your other apps via a settings toggle",
       "theme": "⚡ Productivity & agent follow-through",
       "sources": [
@@ -12552,6 +12552,301 @@
         {
           "label": "Claude desktop download",
           "url": "https://claude.com/download"
+        }
+      ]
+    },
+    {
+      "uid": "4862ea990511629ca9e123ef7b89ed330d21ee1083e9a7608c5671a713b1fe3e",
+      "id": 13,
+      "title": "A repeatable skill prompt that forces sourced, side-by-side comparisons",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-08-30",
+          "time": "21:35",
+          "headline": "Which Business Is Actually Better?",
+          "href": "newsletters/2026-08-30_newsletter_compound_with_ai.md",
+          "anchor": "which-business-is-actually-better"
+        }
+      ],
+      "prose": [
+        "Peer Duel is a Claude skill prompt that makes the model pull filings and transcripts, trace each number to its source, normalize currencies, then report growth, pricing power, cost engine and vulnerabilities. The skill download itself is paywalled, but the structure transfers directly: it is the discipline you want wired into a Hermes agent before it summarizes anything on your behalf. Swap the domain and it becomes a source-checked comparison template."
+      ],
+      "links": [
+        {
+          "label": "Use AI to compare any 2 stocks",
+          "url": "https://news.aiinvestinghq.com/p/use-ai-to-compare-any-2-stocks-find"
+        }
+      ]
+    },
+    {
+      "uid": "a62d62209051d4692470d826da8c3893547b9823fcb923360e9c6c7cc9cbf685",
+      "id": 12,
+      "title": "Encode domain criteria in a reusable Skill template instead of ad-hoc prompts",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-08-23",
+          "time": "21:31",
+          "headline": "Why does this work?",
+          "href": "newsletters/2026-08-23_newsletter_compound_with_ai.md",
+          "anchor": "why-does-this-work"
+        }
+      ],
+      "prose": [
+        "The author packages a fixed checklist — demand drivers, supply limits, pricing mechanics, margin drivers, past cycles — into one saved Claude Skill, so the same structured report comes back every run. That template discipline transfers directly to Hermes: write the criteria once, test it across a dozen inputs, then call it repeatedly rather than re-prompting. The skill file itself sits behind the paywall, so treat the structure as the takeaway."
+      ],
+      "links": []
+    },
+    {
+      "uid": "6b1d2c1a313d9bd40f02751d9e5ab9a3d99a5103bd0ef9a58d39bc28334663e8",
+      "id": 11,
+      "title": "A Claude workflow that scans China's Five-Year Plan for sector risk",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-08-10",
+          "time": "00:28",
+          "headline": "The China risk scan with claude:",
+          "href": "newsletters/2026-08-10_newsletter_compound_with_ai.md",
+          "anchor": "the-china-risk-scan-with-claude"
+        }
+      ],
+      "prose": [
+        "A three-step prompt chain that turns China's Five-Year Plan into a list of priority industries, then maps them onto a sector and a stock before earnings show it. The prompts themselves sit behind a paywall, but the pattern — feeding a long foreign-language policy document to a model and asking for structured priorities — runs fine locally on the 4090 box with nothing leaving the house."
+      ],
+      "links": []
+    },
+    {
+      "uid": "48a759cc2479644cb2799711e412a0519102e73048fce6640d0ad18eee2137ca",
+      "id": 10,
+      "title": "Talkory.ai sends one prompt to five hosted models and ranks a consensus answer",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-07-09",
+          "time": "01:05",
+          "headline": "Compare Multiple AI Models at Once",
+          "href": "newsletters/2026-07-09_newsletter_future_tools.md",
+          "anchor": "compare-multiple-ai-models-at-once"
+        }
+      ],
+      "prose": [
+        "Talkory.ai queries GPT, Claude, Gemini, Grok and Perplexity simultaneously, showing side-by-side answers plus a ranked consensus with confidence scores. Handy for checking which hosted model handles a task before you invest in a local substitute. Every query leaves your machine, so keep sensitive material off it."
+      ],
+      "links": [
+        {
+          "label": "Talkory.ai",
+          "url": "https://www.talkory.ai/?ref=futuretools.io"
+        }
+      ]
+    },
+    {
+      "uid": "57dc808e2f16736460d2801a77630680e719790ce51fd197bc269306d2dfb12e",
+      "id": 9,
+      "title": "AgentScreenshots gives coding agents selector-targeted UI screenshots via CLI",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-07-09",
+          "time": "01:05",
+          "headline": "Screenshots for Coding Agents",
+          "href": "newsletters/2026-07-09_newsletter_future_tools.md",
+          "anchor": "screenshots-for-coding-agents"
+        }
+      ],
+      "prose": [
+        "AgentScreenshots is a paid CLI that renders localhost or live pages and hands Claude Code or Codex cropped, CSS-selector screenshots, including hover, click and scroll states at chosen viewports. It gives Hermes a way to verify front-end edits visually instead of guessing from raw markup. Test it against your own local pages before wiring it into an agent loop."
+      ],
+      "links": [
+        {
+          "label": "AgentScreenshots",
+          "url": "https://agentscreenshots.com/?ref=futuretools.io"
+        }
+      ]
+    },
+    {
+      "uid": "7a443f082d82f947846bc53b545f9730272927adb0ee9e786c99e3e085e316c0",
+      "id": 8,
+      "title": "Claude Skills turn repeatable workflows into upload-once instruction files",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-07-03",
+          "time": "05:28",
+          "headline": "How the workflow works:",
+          "href": "newsletters/2026-07-03_newsletter_compound_with_ai.md",
+          "anchor": "how-the-workflow-works"
+        }
+      ],
+      "prose": [
+        "A Skill is a single file you upload to Claude holding fixed steps, so the same analysis runs consistently on new inputs; here two skills turn a stray observation into an interactive HTML explainer. You could encode Hermes routines the same way, one file per task, and have it emit a browsable report instead of chat text."
+      ],
+      "links": []
+    },
+    {
+      "uid": "3003ca396943d382c6cfc4e3b946d6a37d2bba2e8f3fe69cfa46f866a6a10c1e",
+      "id": 7,
+      "title": "Claude Skill splits a review into three focused detective passes",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-06-26",
+          "time": "02:31",
+          "headline": "How the Claude Short-Seller Check Works",
+          "href": "newsletters/2026-06-26_newsletter_compound_with_ai.md",
+          "anchor": "how-the-claude-short-seller-check-works"
+        }
+      ],
+      "prose": [
+        "A downloadable Claude Skill that runs a stock through three narrow checks — management history, whether profits show up as cash, and whether the business physically exists — then writes up what looks strange and what would disprove the thesis. The reusable piece is the shape: one skill fanning out to three scoped sub-investigations feeding a single report. That's directly portable to Hermes for due-diligence or code-review passes; only the stock-specific prompts change."
+      ],
+      "links": [
+        {
+          "label": "Post",
+          "url": "https://open.substack.com/pub/compoundwithai/p/every-stock-is-innocent-until-claude"
+        }
+      ]
+    },
+    {
+      "uid": "3d175221eb7e4f6106e5531b99d3d4ccd7a38f361b27a5d730a0e68194971387",
+      "id": 6,
+      "title": "A Claude Skill compares a decade of filings in one pass",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-05-18",
+          "time": "03:28",
+          "headline": "How this claude skill turns years of filings into a clear business evolution map:",
+          "href": "newsletters/2026-05-18_newsletter_compound_with_ai.md",
+          "anchor": "how-this-claude-skill-turns-years-of-filings-into-a-clear-business-evo"
+        }
+      ],
+      "prose": [
+        "A downloadable Claude Skill reads a folder of 5–7 years of 10-Ks and produces an interactive page flagging metrics that vanished or changed definition. The pattern — skill file, local folder, batch run, HTML output — drops straight into Hermes against documents on your own disk. The download and skill sit behind a paid subscription."
+      ],
+      "links": [
+        {
+          "label": "Post + skill walkthrough",
+          "url": "https://open.substack.com/pub/compoundwithai/p/how-to-compare-10-years-of-filings"
+        }
+      ]
+    },
+    {
+      "uid": "015d686fed431f2f86b489a689448d0fa70f3805fe34138502870a4148977a3d",
+      "id": 5,
+      "title": "Claude Skills package a multi-pass research workflow into one reusable command",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-04-27",
+          "time": "00:21",
+          "headline": "How the Stock Risk Audit Works:",
+          "href": "newsletters/2026-04-27_newsletter_compound_with_ai.md",
+          "anchor": "how-the-stock-risk-audit-works"
+        }
+      ],
+      "prose": [
+        "A Claude Skill is a saved workflow installed once and run per task: one instruction file, three domain-specific risk prompts (business, financial, external), and a synthesis pass that ranks the output. The downloadable file sits behind this issue's paywall, so what's transferable is the structure. Hermes could run the same split-then-merge pattern locally against Ollama, keeping filings on your own box."
+      ],
+      "links": [
+        {
+          "label": "Original post",
+          "url": "https://news.aiinvestinghq.com/p/i-built-a-stock-risk-auditor-with"
+        }
+      ]
+    },
+    {
+      "uid": "33e8517af84bff7ef6e45854aa36e09a9a074db0a14b78a9e6dd1e78f47e2053",
+      "id": 4,
+      "title": "NotebookLM's Create Your Own report runs your own prompt over imported sources",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-04-20",
+          "time": "03:43",
+          "headline": "Step 2: Surface the buried details with a custom prompt",
+          "href": "newsletters/2026-04-20_newsletter_compound_with_ai.md",
+          "anchor": "step-2-surface-the-buried-details-with-a-custom-prompt"
+        }
+      ],
+      "prose": [
+        "Instead of the canned report templates, NotebookLM's Reports tab has a Create Your Own option where you paste a prompt and it answers strictly from the documents you imported. That source-grounded pattern is the reusable part: point it at a filing, spec or contract and force a structure rather than a summary. Worth testing against what your local 4090 box does on the same document before trusting a cloud round-trip."
+      ],
+      "links": []
+    },
+    {
+      "uid": "38f96e5cd6c586775c2daff14f47e3d1b2b0ec9a51b79a14e7a1a95287308e95",
+      "id": 3,
+      "title": "NotebookLM Audio Overviews build research context while you are away from the desk",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-04-13",
+          "time": "01:15",
+          "headline": "1. Build Context in Parallel",
+          "href": "newsletters/2026-04-13_newsletter_compound_with_ai.md",
+          "anchor": "1-build-context-in-parallel"
+        }
+      ],
+      "prose": [
+        "The writer runs a two-tool loop: a Deep Research report from any LLM, then NotebookLM's free tier to turn the sources into a narrated audio overview he listens to while driving or training. The transferable part is the audio pass doing the cheap familiarity work before any focused reading. Worth testing whether local TTS on the 4090s can replace the Google-hosted step for anything sensitive."
+      ],
+      "links": []
+    },
+    {
+      "uid": "e1feab912e66e1b8eab6d5f58313958f24ca2220856b97e1f5c0e4fe1c7153dd",
+      "id": 2,
+      "title": "Claude Skills bundle a repeatable workflow into SKILL.md plus a references folder",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-04-06",
+          "time": "01:01",
+          "headline": "Reminder:",
+          "href": "newsletters/2026-04-06_newsletter_compound_with_ai.md",
+          "anchor": "reminder"
+        }
+      ],
+      "prose": [
+        "A Claude Skill is a packaged workflow: one SKILL.md control file that sets steps, order and output, plus a references folder holding the domain logic and source rules, which Claude Desktop loads and runs on command. The packaging pattern is the reusable part — the same layout could hold Hermes procedures so a task runs identically every time instead of relying on a fresh prompt."
+      ],
+      "links": []
+    },
+    {
+      "uid": "a401cf90be3aa9d433e758445b5276e9d28e132392922b25de89d9c3cf4a10fe",
+      "id": 1,
+      "title": "Diff multiple years of the same document to surface quiet changes",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Compound With AI",
+          "date": "2026-03-16",
+          "time": "03:04",
+          "headline": "Step 3: Business & Reporting Evolution",
+          "href": "newsletters/2026-03-16_newsletter_compound_with_ai.md",
+          "anchor": "step-3-business-reporting-evolution"
+        }
+      ],
+      "prose": [
+        "The post lays out three Claude Cowork Skills that pull several years of filings into one working folder, then compare management commentary, segment definitions, useful lives and non-GAAP bridges to flag what quietly changed. The reusable part is the pattern: version-over-version document diffing with a fixed output template. That ports cleanly to Hermes over a local folder, so the source documents never leave your own box."
+      ],
+      "links": [
+        {
+          "label": "Annual Reports 2.0",
+          "url": "https://open.substack.com/pub/compoundwithai/p/annual-reports-20?utm_source=email&redirect=app-store&utm_campaign=email-read-in-app"
         }
       ]
     }
