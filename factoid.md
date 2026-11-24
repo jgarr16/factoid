@@ -1,11 +1,25 @@
 ---
 title: "Interesting tidbits"
-sweep: "2025-09-08 → 2026-11-23"
-updated: "2026-11-23"
-sources: "Compound With AI, Product Hunt Weekly, Future Tools, The Code, Superhuman AI, The Batch, Indicator, Lonely Octopus, The Frontier, The Product Compass, The Economist, DeepLearning.AI, OpenRouter Team, Superhuman AI · Sunday Special"
+sweep: "2025-09-08 → 2026-11-24"
+updated: "2026-11-25"
+sources: "Indicator, Compound With AI, Product Hunt Weekly, Future Tools, The Code, Superhuman AI, The Batch, Lonely Octopus, The Frontier, The Product Compass, The Economist, DeepLearning.AI, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**1502. Workshop recording walks through a username-to-accounts investigation workflow**
+*📡 Also worth knowing*
+*🗞 [Indicator · 2026-11-24 21:02 KST](newsletters/2026-11-24_newsletter_indicator.md) — "Video"*
+
+Indicator's November workshop video lays out a repeatable process for turning a single username into linked accounts, based on hands-on testing of ten tools, including the free Omertà search tool. It is a practical hour if you ever need to trace an account or audit what your own handles expose across sites.
+
+- [Workshop video](https://youtu.be/WRJ5_o1S0yA)
+- [The username search playbook](https://indicator.media/p/the-username-search-playbook-what-i-learned-testing-10-tools)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **1501. A Claude prompt pattern that red-teams an investment thesis with simulated bad news**
 *⚡ Productivity & agent follow-through*

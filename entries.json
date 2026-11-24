@@ -1,8 +1,37 @@
 {
   "version": 1,
-  "updated": "2026-11-23",
-  "sweep": "2025-09-08 → 2026-11-23",
+  "updated": "2026-11-25",
+  "sweep": "2025-09-08 → 2026-11-24",
   "entries": [
+    {
+      "uid": "323b4e70fc123d61cc3d25125054ee65107100c866a7b2d009beee89342e86bd",
+      "id": 1502,
+      "title": "Workshop recording walks through a username-to-accounts investigation workflow",
+      "theme": "📡 Also worth knowing",
+      "sources": [
+        {
+          "pub": "Indicator",
+          "date": "2026-11-24",
+          "time": "21:02",
+          "headline": "Video",
+          "href": "newsletters/2026-11-24_newsletter_indicator.md",
+          "anchor": ""
+        }
+      ],
+      "prose": [
+        "Indicator's November workshop video lays out a repeatable process for turning a single username into linked accounts, based on hands-on testing of ten tools, including the free Omertà search tool. It is a practical hour if you ever need to trace an account or audit what your own handles expose across sites."
+      ],
+      "links": [
+        {
+          "label": "Workshop video",
+          "url": "https://youtu.be/WRJ5_o1S0yA"
+        },
+        {
+          "label": "The username search playbook",
+          "url": "https://indicator.media/p/the-username-search-playbook-what-i-learned-testing-10-tools"
+        }
+      ]
+    },
     {
       "uid": "4bd65307540d296fdef0b82e6a2b44f4eef9baf4029ec04b6f0de74bf57b4a22",
       "id": 1501,
