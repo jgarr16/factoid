@@ -1,8 +1,208 @@
 {
   "version": 1,
-  "updated": "2026-11-25",
-  "sweep": "2025-09-08 → 2026-11-24",
+  "updated": "2026-11-26",
+  "sweep": "2025-09-08 → 2026-11-26",
   "entries": [
+    {
+      "uid": "861eb07d89b44f93c895b8282a4268fe6e580df9db6235af37488c8dd7fe1d34",
+      "id": 1510,
+      "title": "A hands-on vLLM course covers batching, KV-cache tuning and benchmarking",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "DeepLearning.AI",
+          "date": "2026-11-26",
+          "time": "02:13",
+          "headline": "2. Fast & Efficient LLM Inference with vLLM",
+          "href": "newsletters/2026-11-26_newsletter_deeplearning_ai.md",
+          "anchor": "2-fast-efficient-llm-inference-with-vllm"
+        }
+      ],
+      "prose": [
+        "The course walks through continuous batching, paged attention and KV-cache tuning, then has you benchmark your own deployment against a naive baseline. Worth an evening on the two-4090 box: vLLM can serve Hermes' parallel agent calls far better than Ollama's single-stream default, and everything stays on your own hardware."
+      ],
+      "links": [
+        {
+          "label": "Fast & Efficient LLM Inference with vLLM",
+          "url": "https://info.deeplearning.ai/e3t/Ctc/LX+113/cJhC404/VVt-JC7LQlKBW1lpTpW7p5hKmW37H_hZ5XPK8sN52hRhR32hJ2W8wLKSR6lZ3kDW3ttm0H3Gr-bkW1ccC1d95DT9CW7824203ZB2gTW3JmWJB1v6Z6gW11N9x02B3jnGW8Ms2LM6wRSdwVmqSx-5hqN4JTXLDx56w9DnVWjmT92Fzzm_W20YmJw8H8H6_W1G_-4X7L73PkW5QF9c27BhTkYW93Qhxh5YZQhYVVD_DH45QdTcW2tB3wF8zrp8lW14wrQ13G9sJhN8vYphSL0N4tW27q_W_4-Gk3nW2p7-GX2fxhsKW83cLpr7LCBNCN2ytnDQNP-r3VLXrK28S6q1ZW91j5fm84Byx2W9lfBW46ySL7NN5P-Bh29sVTbW3GpHZn8WRdYgW2MLXRM3h2p1JW3gY-nB5N1cNsf5zxGPs04"
+        }
+      ]
+    },
+    {
+      "uid": "1ab4e5b1495f1a95b398da400bc059dc0d3ffac6d6bb6a2b0a96c2f51109f35f",
+      "id": 1509,
+      "title": "Shirudo is an open-source Linux runtime that blocks known exploits pre-patch",
+      "theme": "🤖 AI security & agent risk",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-26",
+          "time": "02:05",
+          "headline": "",
+          "href": "newsletters/2026-11-26_newsletter_future_tools.md",
+          "anchor": ""
+        }
+      ],
+      "prose": [
+        "OpenAI and Cisco released Shirudo, an open-source Linux runtime that shields live systems from known exploits while patches are still rolling out. That's directly testable on your self-hosted Ollama workstation, closing the gap between disclosure day and patch day without waiting on a distro or vendor schedule."
+      ],
+      "links": [
+        {
+          "label": "OpenAI: Introducing Shirudo",
+          "url": "https://openai.com/index/introducing-shirudo/"
+        }
+      ]
+    },
+    {
+      "uid": "d0609eb94c168881b417dc28b8bcf6773f9f0d08e68627ded6670b982634516d",
+      "id": 1508,
+      "title": "Claude can install artifacts as desktop apps on Mac and Windows",
+      "theme": "⚙️ LLM tooling & SDKs",
+      "sources": [
+        {
+          "pub": "Superhuman AI",
+          "date": "2026-11-25",
+          "time": "23:11",
+          "headline": "",
+          "href": "newsletters/2026-11-25_newsletter_superhuman_ai.md",
+          "anchor": ""
+        }
+      ],
+      "prose": [
+        "Anthropic now lets Claude desktop users turn artifacts into installable Mac or Windows apps, with privacy boundaries set before install. That gives you a quick way to wrap a local workflow or Hermes helper in a real UI without building a full app stack, though the build runs in Claude's cloud, so keep private data local."
+      ],
+      "links": [
+        {
+          "label": "Anthropic: install as app",
+          "url": "https://claude.com/resources/articles/install-as-app"
+        }
+      ]
+    },
+    {
+      "uid": "76a6967895ae93be56c3fbd97e389936fe14900287417f451f694043f88557e2",
+      "id": 1507,
+      "title": "Epochal's Time Portal serves the web as it existed on any past date",
+      "theme": "🏗️ Agent plumbing & production stacks",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-25",
+          "time": "23:07",
+          "headline": "**Today’s Brief**",
+          "href": "newsletters/2026-11-25_newsletter_the_code.md",
+          "anchor": "todays-brief"
+        }
+      ],
+      "prose": [
+        "A preview API set from three ex-xAI engineers: Search, Fetch and Sandbox return pages as of a chosen date, so agents can't see anything after it. That is the missing piece for leak-free backtests and forecasting evals of your Hermes runs without standing up your own archive."
+      ],
+      "links": [
+        {
+          "label": "Epochal Time Portal",
+          "url": "https://epochal.com"
+        }
+      ]
+    },
+    {
+      "uid": "1dfafe21fdfb4c72ce5b93526d39fa829eb94d97c15507b218ecdeee21769e65",
+      "id": 1506,
+      "title": "T3 Code ships usage telemetry on by default, and 0.1.12 keeps it",
+      "theme": "🔒 Privacy & local tooling",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-25",
+          "time": "23:07",
+          "headline": "**Today’s Brief**",
+          "href": "newsletters/2026-11-25_newsletter_the_code.md",
+          "anchor": "todays-brief"
+        }
+      ],
+      "prose": [
+        "A developer found the agent orchestration app has sent model choices, token counts and permission modes since March with no consent prompt; v0.1.12 stops hashing Claude and Codex login files but telemetry stays on. Worth auditing anything in your stack that shares credentials with it, and a reminder to watch egress on tools wrapping your agent logins."
+      ],
+      "links": [
+        {
+          "label": "T3 Code telemetry docs",
+          "url": "https://github.com/pingdotgg/t3code/blob/main/docs/user/telemetry.md"
+        }
+      ]
+    },
+    {
+      "uid": "0c70a77a6970ac4a33e375edfba19eefe5cecac657fe73b5a188da2cc803946e",
+      "id": 1505,
+      "title": "Anthropic's /ship cookbook automates PR follow-through in Clau...",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-25",
+          "time": "23:07",
+          "headline": "**Trending Cookbook**",
+          "href": "newsletters/2026-11-25_newsletter_the_code.md",
+          "anchor": "trending-cookbook"
+        }
+      ],
+      "prose": [
+        "Addy Osmani walks through the /ship command, automated CI fixes and review follow-ups, plus repo-specific rules so the agent keeps working after you walk away. The pattern — explicit repo rules plus a review loop — is the part worth porting into Hermes for unattended jobs; the Claude Code specifics matter less."
+      ],
+      "links": [
+        {
+          "label": "The work after you open a PR",
+          "url": "https://claude.dev/blog/the-work-after-you-open-a-pr/"
+        }
+      ]
+    },
+    {
+      "uid": "dce1c010ffe086996764c8500cff3784de6f48d3f156a823026e990f32430cb8",
+      "id": 1504,
+      "title": "Claude-BugHunter turns your coding agent into a security researcher",
+      "theme": "🤖 AI security & agent risk",
+      "sources": [
+        {
+          "pub": "The Code",
+          "date": "2026-11-25",
+          "time": "23:07",
+          "headline": "**Top Repo**",
+          "href": "newsletters/2026-11-25_newsletter_the_code.md",
+          "anchor": "top-repo"
+        }
+      ],
+      "prose": [
+        "An open skill pack with 22k stars that auto-loads the right security skill per task and plugs into Claude Code, Codex CLI, OpenCode, Hermes and AntiGravity. It already names Hermes, so you can drop it into your existing agent runs and point it at your own repos for local review passes without code leaving the 4090 box."
+      ],
+      "links": [
+        {
+          "label": "Claude-BugHunter repo",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter"
+        }
+      ]
+    },
+    {
+      "uid": "4a5a0fb2511939172ae50c9423c12f22fb77cefe760634c60f3264c699180da9",
+      "id": 1503,
+      "title": "Tabstack by Mozilla gives models web access without handing over your data",
+      "theme": "🔒 Privacy & local tooling",
+      "sources": [
+        {
+          "pub": "The Frontier",
+          "date": "2026-11-25",
+          "time": "07:29",
+          "headline": "The week in products",
+          "href": "newsletters/2026-11-25_newsletter_the_frontier.md",
+          "anchor": "the-week-in-products"
+        }
+      ],
+      "prose": [
+        "Mozilla's Tabstack is an API that hands a model cleaned web content while keeping the browsing side of the request private. Worth testing against your own scraper for Hermes web lookups, with the caveat that your queries still pass through a third party rather than your two-4090 box."
+      ],
+      "links": [
+        {
+          "label": "Tabstack by Mozilla",
+          "url": "https://www.producthunt.com/posts/tabstack-by-mozilla-2"
+        }
+      ]
+    },
     {
       "uid": "323b4e70fc123d61cc3d25125054ee65107100c866a7b2d009beee89342e86bd",
       "id": 1502,

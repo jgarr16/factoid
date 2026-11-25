@@ -1,11 +1,115 @@
 ---
 title: "Interesting tidbits"
-sweep: "2025-09-08 → 2026-11-24"
-updated: "2026-11-25"
-sources: "Indicator, Compound With AI, Product Hunt Weekly, Future Tools, The Code, Superhuman AI, The Batch, Lonely Octopus, The Frontier, The Product Compass, The Economist, DeepLearning.AI, OpenRouter Team, Superhuman AI · Sunday Special"
+sweep: "2025-09-08 → 2026-11-26"
+updated: "2026-11-26"
+sources: "DeepLearning.AI, Future Tools, Superhuman AI, The Code, The Frontier, Indicator, Compound With AI, Product Hunt Weekly, The Batch, Lonely Octopus, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**1510. A hands-on vLLM course covers batching, KV-cache tuning and benchmarking**
+*⚙️ LLM tooling & SDKs*
+*🗞 DeepLearning.AI · 2026-11-26 02:13 KST — ["2. Fast & Efficient LLM Inference with vLLM"](newsletters/2026-11-26_newsletter_deeplearning_ai.md#2-fast-efficient-llm-inference-with-vllm)*
+
+The course walks through continuous batching, paged attention and KV-cache tuning, then has you benchmark your own deployment against a naive baseline. Worth an evening on the two-4090 box: vLLM can serve Hermes' parallel agent calls far better than Ollama's single-stream default, and everything stays on your own hardware.
+
+- [Fast & Efficient LLM Inference with vLLM](https://info.deeplearning.ai/e3t/Ctc/LX+113/cJhC404/VVt-JC7LQlKBW1lpTpW7p5hKmW37H_hZ5XPK8sN52hRhR32hJ2W8wLKSR6lZ3kDW3ttm0H3Gr-bkW1ccC1d95DT9CW7824203ZB2gTW3JmWJB1v6Z6gW11N9x02B3jnGW8Ms2LM6wRSdwVmqSx-5hqN4JTXLDx56w9DnVWjmT92Fzzm_W20YmJw8H8H6_W1G_-4X7L73PkW5QF9c27BhTkYW93Qhxh5YZQhYVVD_DH45QdTcW2tB3wF8zrp8lW14wrQ13G9sJhN8vYphSL0N4tW27q_W_4-Gk3nW2p7-GX2fxhsKW83cLpr7LCBNCN2ytnDQNP-r3VLXrK28S6q1ZW91j5fm84Byx2W9lfBW46ySL7NN5P-Bh29sVTbW3GpHZn8WRdYgW2MLXRM3h2p1JW3gY-nB5N1cNsf5zxGPs04)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1509. Shirudo is an open-source Linux runtime that blocks known exploits pre-patch**
+*🤖 AI security & agent risk*
+*🗞 [Future Tools · 2026-11-26 02:05 KST](newsletters/2026-11-26_newsletter_future_tools.md)*
+
+OpenAI and Cisco released Shirudo, an open-source Linux runtime that shields live systems from known exploits while patches are still rolling out. That's directly testable on your self-hosted Ollama workstation, closing the gap between disclosure day and patch day without waiting on a distro or vendor schedule.
+
+- [OpenAI: Introducing Shirudo](https://openai.com/index/introducing-shirudo/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1508. Claude can install artifacts as desktop apps on Mac and Windows**
+*⚙️ LLM tooling & SDKs*
+*🗞 [Superhuman AI · 2026-11-25 23:11 KST](newsletters/2026-11-25_newsletter_superhuman_ai.md)*
+
+Anthropic now lets Claude desktop users turn artifacts into installable Mac or Windows apps, with privacy boundaries set before install. That gives you a quick way to wrap a local workflow or Hermes helper in a real UI without building a full app stack, though the build runs in Claude's cloud, so keep private data local.
+
+- [Anthropic: install as app](https://claude.com/resources/articles/install-as-app)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1507. Epochal's Time Portal serves the web as it existed on any past date**
+*🏗️ Agent plumbing & production stacks*
+*🗞 The Code · 2026-11-25 23:07 KST — ["**Today’s Brief**"](newsletters/2026-11-25_newsletter_the_code.md#todays-brief)*
+
+A preview API set from three ex-xAI engineers: Search, Fetch and Sandbox return pages as of a chosen date, so agents can't see anything after it. That is the missing piece for leak-free backtests and forecasting evals of your Hermes runs without standing up your own archive.
+
+- [Epochal Time Portal](https://epochal.com)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1506. T3 Code ships usage telemetry on by default, and 0.1.12 keeps it**
+*🔒 Privacy & local tooling*
+*🗞 The Code · 2026-11-25 23:07 KST — ["**Today’s Brief**"](newsletters/2026-11-25_newsletter_the_code.md#todays-brief)*
+
+A developer found the agent orchestration app has sent model choices, token counts and permission modes since March with no consent prompt; v0.1.12 stops hashing Claude and Codex login files but telemetry stays on. Worth auditing anything in your stack that shares credentials with it, and a reminder to watch egress on tools wrapping your agent logins.
+
+- [T3 Code telemetry docs](https://github.com/pingdotgg/t3code/blob/main/docs/user/telemetry.md)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1505. Anthropic's /ship cookbook automates PR follow-through in Clau...**
+*⚡ Productivity & agent follow-through*
+*🗞 The Code · 2026-11-25 23:07 KST — ["**Trending Cookbook**"](newsletters/2026-11-25_newsletter_the_code.md#trending-cookbook)*
+
+Addy Osmani walks through the /ship command, automated CI fixes and review follow-ups, plus repo-specific rules so the agent keeps working after you walk away. The pattern — explicit repo rules plus a review loop — is the part worth porting into Hermes for unattended jobs; the Claude Code specifics matter less.
+
+- [The work after you open a PR](https://claude.dev/blog/the-work-after-you-open-a-pr/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1504. Claude-BugHunter turns your coding agent into a security researcher**
+*🤖 AI security & agent risk*
+*🗞 The Code · 2026-11-25 23:07 KST — ["**Top Repo**"](newsletters/2026-11-25_newsletter_the_code.md#top-repo)*
+
+An open skill pack with 22k stars that auto-loads the right security skill per task and plugs into Claude Code, Codex CLI, OpenCode, Hermes and AntiGravity. It already names Hermes, so you can drop it into your existing agent runs and point it at your own repos for local review passes without code leaving the 4090 box.
+
+- [Claude-BugHunter repo](https://github.com/elementalsouls/Claude-BugHunter)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1503. Tabstack by Mozilla gives models web access without handing over your data**
+*🔒 Privacy & local tooling*
+*🗞 The Frontier · 2026-11-25 07:29 KST — ["The week in products"](newsletters/2026-11-25_newsletter_the_frontier.md#the-week-in-products)*
+
+Mozilla's Tabstack is an API that hands a model cleaned web content while keeping the browsing side of the request private. Worth testing against your own scraper for Hermes web lookups, with the caveat that your queries still pass through a third party rather than your two-4090 box.
+
+- [Tabstack by Mozilla](https://www.producthunt.com/posts/tabstack-by-mozilla-2)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **1502. Workshop recording walks through a username-to-accounts investigation workflow**
 *📡 Also worth knowing*

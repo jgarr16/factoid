@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)" />
+<title>🔥 AI agents can now travel back in time — The Code</title>
+
+<link rel="canonical" href="https://factoid.garrigai.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Factoid" />
+<meta property="og:title" content="🔥 AI agents can now travel back in time — The Code" />
+<meta property="og:url" content="https://factoid.garrigai.com/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<link rel="icon" href="../images/favicon.ico" sizes="any" />
+<link rel="icon" href="../images/favicon-48.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<meta property="og:image" content="https://factoid.garrigai.com/images/factoid_og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Factoid — memorable ideas, excerpts and takeaways" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script>
+  (function () { try {
+    var v = parseFloat(localStorage.getItem("factoidFontScale"), 10);
+    if (!isNaN(v)) { v = Math.round(Math.min(1.85, Math.max(0.85, v)) * 100) / 100;
+      document.documentElement.style.setProperty("--font-scale", String(v)); }
+  } catch (e) {} })();
+</script>
+
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>The Code</h1>
+<a class="back" href="../index.html">← tidbits</a></header>
+<div class="issue-head">
+<h1>🔥 AI agents can now travel back in time</h1>
+<p class="meta">2026-11-25 · received 2026-11-25 23:07 +0900
+ · <a href="https://codenewsletter.ai/p/former-xai-engineers-let-your-agents-travel-back-in-time" target="_blank" rel="noopener">original ↗</a></p>
+</div><div class="issue-body"><h1>🔥 AI agents can now travel back in time</h1>
+<p><a href="https://www.wiremock.io/sandboxes?utm_source=thecode&amp;utm_medium=sponsorships&amp;utm_content=primary&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b8b58f0f-9b34-4508-b434-956fdafd4976/Group_Wiremock__1_.jpg?t=1795537549" /></a></p>
+<hr />
+<p><strong>Welcome back.</strong> Former xAI engineers think AI agents should be able to predict the future by learning from the past, and their new startup makes that possible. Meanwhile, Cognition's new coding model made its biggest leap in cybersecurity, closing the gap with frontier models from OpenAI and Anthropic.</p>
+<p><strong>Also:</strong> Why OpenAI and Anthropic may stop releasing models publicly, an ex-Google dev on how to ace the five-round FDE interview, and why a coding veteran swears by Gemini Neon.</p>
+<hr />
+<p><a id="todays-brief"></a></p>
+<h3><strong>Today’s Brief</strong></h3>
+<ul>
+<li>
+<p>An engineer’s guide to stand out in the AI era</p>
+</li>
+<li>
+<p>Engineering podcasts you should watch today (new section)</p>
+</li>
+<li>
+<p>Code with AI without wrecking your codebase (tutorial)</p>
+</li>
+<li>
+<p>Ship PRs without babysitting them (cookbook)</p>
+</li>
+</ul>
+<hr />
+<h5><strong>TODAY IN PROGRAMMING</strong></h5>
+<p><a href="https://archive.codenewsletter.ai/2125270859715875210"><img alt="Click here to check out Epochal’s Time Portal environment." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/294ff376-b550-4d32-af4c-29b34e83709b/Thumbnail_-_2026-11-25T141343.238.jpg?t=1795601680" /></a>
+<em>Click here to check out Epochal’s Time Portal environment.</em></p>
+<hr />
+<p><strong>Former xAI engineers let your agents travel back in time:</strong> Three founding members of Elon Musk's AI startup just launched Epochal, which wants AI to predict the future by learning the past. Its first product, <a href="https://archive.codenewsletter.ai/2125270859715875210">Time Portal</a>, is a point-in-time environment with three APIs. Search browses the web as of any date, and Fetch retrieves past versions of specific pages. Sandbox runs time-gated agents. That means you can backtest strategies, run forecasting evals, and build RL environments without future data leaking in. Preview it <a href="https://epochal.com">here</a>.</p>
+<p><strong>Cognition closes the cyber gap on frontier labs:</strong> The team behind Devin just shipped <a href="https://archive.codenewsletter.ai/2125305349414523061">SWE-2.1</a>, bringing its biggest upgrades to cybersecurity. On ExploitBench, it scored 80, a major leap from its predecessor, though it still trails Claude Opus 5.5 at 91 and GPT-6.2 Sol's perfect 100. On CWE-Bench, however, it closes the gap to within two points of both frontier models. There's also an Ultrafast version that's 10x faster when you need a quick fix, plus SWE-2.1 Cyber for security teams. Pro, Max, and Teams users can try it at no cost until December 8. Check it out <a href="https://cognition.com/blog/swe-2-1">here</a>.</p>
+<p><strong>T3 Code has been quietly tracking your coding data:</strong> If you run Claude Code or Codex through the agent orchestration platform called T3 Code, you should take note. A <a href="https://x.com/realchendahuang/status/2125153472450527440">dev found that</a> since March, the app has sent your model choices, token counts, and permission modes by default, with no consent prompt. Older versions also hashed account IDs from your Claude and Codex login files. Founder Theo <a href="https://x.com/theo/status/2125332390239494211">says</a> this only helped count users, and no prompts or files were ever sent. Version 0.1.12 stops reading those files, but <a href="https://github.com/pingdotgg/t3code/blob/main/docs/user/telemetry.md">telemetry</a> stays on. If you handle sensitive code, here's <a href="https://pasqualepillitteri.it/en/news/36633/t3-code-telemetry-on-by-default-since-march#:~:text=How%20to%20turn%20off%20T3%20Code%20telemetry">what to do next</a>.</p>
+<hr />
+<h5><strong>PRESENTED BY WIREMOCK</strong></h5>
+<h2><a href="https://www.wiremock.io/sandboxes?utm_source=thecode&amp;utm_medium=sponsorships&amp;utm_content=primary&amp;tcad=1">Your agents need APIs. They don't (always) need API keys.</a></h2>
+<p><a href="https://www.wiremock.io/sandboxes?utm_source=thecode&amp;utm_medium=sponsorships&amp;utm_content=primary&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b4cd2dd6-bb57-4246-84d5-134095b31e88/wiremock_thecode_spotlight_2026-11-20_-_Eran_Levy__2_.jpg?t=1795538240" /></a></p>
+<hr />
+<p>Tired of your agent stopping every five minutes to ask you for an API key, or coming up with insane workarounds? There's a solution, and it's not signing up for ten different sandboxes.</p>
+<p><a href="https://www.wiremock.io/sandboxes?utm_source=thecode&amp;utm_medium=sponsorships&amp;utm_content=primary&amp;tcad=1">WireMock Sandboxes</a> are realistic environment simulations for agents - no key, no login:</p>
+<ul>
+<li>
+<p><a href="https://www.wiremock.io/sandboxes?utm_source=thecode&amp;utm_medium=sponsorships&amp;utm_content=primary&amp;tcad=1">140+ simulated APIs:</a> GitHub, Stripe, Jira, Anthropic</p>
+</li>
+<li>
+<p>Checked against each real API's recorded traffic, not just a spec</p>
+</li>
+<li>
+<p>Free with no account and nothing to install, any key works</p>
+</li>
+</ul>
+<p><a href="https://www.wiremock.io/sandboxes?utm_source=thecode&amp;utm_medium=sponsorships&amp;utm_content=primary&amp;tcad=1"><strong>Point your agent at a sandbox →</strong></a></p>
+<hr />
+<h5><strong>INSIGHT</strong></h5>
+<h2><strong>An engineer’s guide to stand out in the AI era</strong></h2>
+<p><img alt="Source: The Code, Superhuman" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d65a2d71-fe22-4cb2-b1f6-1f515081a92c/superhumanteam_a_young_man_sitting_on_a_chair_and_reading_a_b_ac4cb3d9-e46a-4754-9ab6-31987fcba961_2.jpg?t=1795602169" />
+<em><em>Source: The Code, Superhuman</em></em></p>
+<hr />
+<p><strong>Standing out.</strong> Software engineer Leila Clark gets hundreds of resumes a month, often accompanied by near-identical AI-generated emails. With everyone using the same tools to look good on paper, Clark argues in a <a href="https://www.approachwithalacrity.com/p/how-do-you-become-known-as-a-good">new essay</a> that you're better off doing interesting engineering work and making sure people know about it.</p>
+<p><strong>Build better.</strong> Before adding another project to your portfolio, here's what Clark says makes one worth it:</p>
+<ul>
+<li>
+<p><strong>Skip the filler.</strong> A fine-tuned YOLO model or a marginal NeurIPS paper won't necessarily impress someone who knows the field.</p>
+</li>
+<li>
+<p><strong>Think bigger.</strong> Pick something that takes weeks or months and teaches you things your peers haven't learned.</p>
+</li>
+<li>
+<p><strong>Follow your curiosity.</strong> If you think something is cool, it probably is.</p>
+</li>
+<li>
+<p><strong>Ask for harder projects.</strong> Your manager might not assign you ambitious work unless you express interest.</p>
+</li>
+</ul>
+<p><strong>Spread the word.</strong> You've spent weeks building something interesting. Now make sure it doesn't just sit on GitHub.</p>
+<ul>
+<li>
+<p><strong>Find your crowd.</strong> A niche meetup with 20 people can be more valuable than a room packed with 100.</p>
+</li>
+<li>
+<p><strong>Explain your thinking.</strong> A blog post can explain why you made the choices behind what you built.</p>
+</li>
+<li>
+<p><strong>Share it widely.</strong> Post on Hacker News, Reddit, or Lobsters, and send it to friends and mentors.</p>
+</li>
+</ul>
+<p><strong>It works.</strong> Clark's former colleague <a href="https://eieio.games/">Nolen</a> worked on fairly unglamorous internal infrastructure, yet almost everyone at the company knew him. He did great work and wrote about it. When he left to build silly web games, he kept blogging. His best game eventually made it into the New York Times!</p>
+<p><strong>The payoff.</strong> The well-known engineers Clark knows don't even apply for jobs, because people approach them with roles already in mind. Getting there leans heavily on writing, and veteran engineer Gergely Orosz's<a href="https://newsletter.pragmaticengineer.com/p/becoming-a-better-writer"> guide to becoming a better writer</a> is a good place to start.</p>
+<hr />
+<h5><strong>PRESENTED BY MOZILLA FOUNDATION</strong></h5>
+<h2><a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/fellowship/2027-call-for-applications/?utm_medium=paid&amp;utm_source=code-newsletter&amp;utm_campaign=27-fellowships&amp;utm_content=ad_call-for-applications&amp;utm_term=en&amp;tcad=1">Building something too ambitious for most funders?</a></h2>
+<p><a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/fellowship/2027-call-for-applications/?utm_medium=paid&amp;utm_source=code-newsletter&amp;utm_campaign=27-fellowships&amp;utm_content=ad_call-for-applications&amp;utm_term=en&amp;tcad=1"><img alt="" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d7140976-cc2a-4f9f-ab3c-1d7e38fa8337/2__2_.jpg?t=1795538575" /></a></p>
+<hr />
+<p><a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/fellowship/2027-call-for-applications/?utm_medium=paid&amp;utm_source=code-newsletter&amp;utm_campaign=27-fellowships&amp;utm_content=ad_call-for-applications&amp;utm_term=en&amp;tcad=1">Mozilla Fellows</a> build tech that's too early or too unexpected for anyone else to back. They're defiant about who technology should serve, and rigorous about making it real. Now we're looking for our next cohort, working on:</p>
+<ul>
+<li>
+<p>Neurotech, biotech, and physical AI</p>
+</li>
+<li>
+<p>Compute, energy, quantum, and the extremes</p>
+</li>
+<li>
+<p>Business models for the post-agentic web</p>
+</li>
+<li>
+<p>Sovereign AI and public infrastructure</p>
+</li>
+<li>
+<p>And more</p>
+</li>
+</ul>
+<p>Sound like something you're working on? <a href="https://www.mozillafoundation.org/en/what-we-do/grantmaking/fellowship/2027-call-for-applications/?utm_medium=paid&amp;utm_source=code-newsletter&amp;utm_campaign=27-fellowships&amp;utm_content=ad_call-for-applications&amp;utm_term=en&amp;tcad=1"><strong>Submit your letter of intent</strong></a> by Thursday, December 17, 2026, at 11:59 PM PST (UTC-8).</p>
+<hr />
+<h5><strong>IN THE KNOW</strong></h5>
+<h2><strong>W</strong><strong>hat’s trending on socials and headlines</strong></h2>
+<p><img alt="Meme of the day." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/998032f9-c1b4-4f1b-93f0-e9495921c996/Screenshot_2026-11-25_at_12.24.16_PM.jpg?t=1795602378" />
+<em>Meme of the day.</em></p>
+<hr />
+<ul>
+<li>
+<p><strong>Behind Closed Doors</strong>: An Axios scoop citing two dozen insiders reveals why OpenAI and Anthropic may soon <a href="https://archive.codenewsletter.ai/2125194635534369145">stop releasing models</a> publicly (1.1M views).</p>
+</li>
+<li>
+<p><strong>Dev Verdict</strong>: A 30-year coding veteran made Gemini Neon his model for everything after just one week. <a href="https://archive.codenewsletter.ai/2125235761460998584">What converted him</a> is something he says Claude and ChatGPT still get wrong (1K likes).</p>
+</li>
+<li>
+<p><strong>Speed Recipe</strong>: An engineer at Ramp <a href="https://archive.codenewsletter.ai/2125238513478296021">shared the full prompt</a> he'd use to build the fastest web app today. One renderer choice replaces React's default entirely (2.4K bookmarks).</p>
+</li>
+<li>
+<p><strong>FDE Decoded</strong>: Forward deployed engineer is AI's hottest role, and its interviews follow a 5-round loop. A former Google dev <a href="https://archive.codenewsletter.ai/2125343334793384208">explains each round</a>, with worked answers and a prep plan.</p>
+</li>
+<li>
+<p><strong>Closed Loop</strong>: Uber built a full software lifecycle around AI agent skills, 5,000 of them running a million times monthly. <a href="https://archive.codenewsletter.ai/2125208627460141093">One feedback trick</a> keeps them improving in production (1.4K likes).</p>
+</li>
+</ul>
+<hr />
+<h2><strong>Engineering podcasts you should watch</strong></h2>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=ZBTegd8DUZM"><strong>Writing AI code that doesn't suck:</strong> </a><strong> </strong>A candid breakdown of where coding agents shine and where they fail. A reality check for anyone handing real work to AI.</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=hRtmV1mCBSE">Why “everyone becoming a builder” isn't working:</a> AI hasn't made everyone a builder, since knowing what to ship is the new bottleneck. Sharp context on how dev and PM roles are shifting</p>
+</li>
+</ul>
+<p><strong>P.S.</strong> We'd love to know which stories you found most useful and what you'd like to see more of. Just hit reply and let us know!</p>
+<hr />
+<h5><strong>TOP &amp; TRENDING RESOURCES</strong></h5>
+<p><a href="https://www.youtube.com/watch?v=mU8WKII1gpk"><img alt="Click here to watch the tutorial." src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f9cad536-ca51-4645-874c-14a9da6c6e8e/Thumbnail_-_2026-11-25T141410.509.jpg?t=1795601774" /></a>
+<em>Click here to watch the tutorial.</em></p>
+<hr />
+<h3><strong>Top Tutorial</strong></h3>
+<p><a href="https://www.youtube.com/watch?v=mU8WKII1gpk">How to actually code with AI without wrecking your codebase: </a>Senior dev Matt Pocock walks through the workflow he uses with coding agents. You’ll learn how to spec work, use subagents, review by risk, and build the feedback loops that let agents ship without losing control.</p>
+<hr />
+<p><a id="top-repo"></a></p>
+<h3><strong>Top Repo</strong></h3>
+<p><a href="https://github.com/elementalsouls/Claude-BugHunter">Claude-BugHunter (22.1k ⭐):</a> Turn your coding agent into a security researcher. It auto-loads the right skill for each task and works across Claude Code, Codex CLI, OpenCode, Hermes, and AntiGravity.</p>
+<hr />
+<p><a id="trending-cookbook"></a></p>
+<h3><strong>Trending Cookbook</strong></h3>
+<p><a href="https://claude.dev/blog/the-work-after-you-open-a-pr/">How to ship PRs without babysitting them (by Anthropic):</a> Addy Osmani shows you how to use Claude Code’s “/ship” command, automate CI fixes and review follow-ups, and set repo-specific rules so you can move on to your next task.</p>
+<hr />
+<p><strong>P.S.</strong> We'd love to know which resources you found most useful and what you'd like to see more of. Just hit reply and let us know!</p>
+<hr />
+<h5><strong>IN CASE YOU MISSED IT</strong></h5>
+<h3><strong>Our most-clicked story from yesterday</strong></h3>
+<p>OpenAI wants to pay AI-savvy devs to help small businesses in their communities. Here’s how <a href="https://archive.codenewsletter.ai/2124916627485434127"><strong>you could be one of them</strong></a><strong>.</strong></p>
+<hr />
+<h3><strong>Whenever you're ready to dive deeper</strong></h3>
+<p>If you enjoyed this newsletter, you should definitely check out our IT and cybersecurity newsletters. Subscribe using the links below:</p>
+<ul>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/d2a465f5-6c1f-44f8-8380-5acad96cdaa7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Fthecode-cybersecurity.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The Code Cybersecurity</strong></a></p>
+</li>
+<li>
+<p><a href="https://magic.beehiiv.com/v1/c8e380c2-717a-4ce2-8531-bf4e67c35ad7?email=superhumanai@garrigai.com&amp;redirect_to=https%3A%2F%2Ftheitcode.beehiiv.com%2Fconfirmation&amp;utm_source=thecode&amp;utm_medium=newsletter"><strong>The IT Code</strong></a></p>
+</li>
+</ul>
+<p>We put together 20+ hands-on guides covering coding agents, agentic engineering, and leadership frameworks to help you level up your career. You can <a href="https://codenewsletter.ai/guides">get them here</a>.</p>
+<hr />
+<p><strong>Advertise with us:</strong> Join companies like Google, IBM, and Datadog. Showcase your product to our 350K+ engineers and 150K+ followers on socials. <a href="https://www.passionfroot.me/the-code?"><strong>Get in touch.</strong></a></p>
+<hr />
+<p>You can also reply directly to this email if you have suggestions, feedback, or questions.</p>
+<p>Until next time — The Code team</p></div><footer class="site">Archived copy of a newsletter issue.<br><a href="../index.html">← back to the tidbits log</a></footer>
+</div>
+</body>
+</html>
