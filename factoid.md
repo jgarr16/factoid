@@ -1,11 +1,63 @@
 ---
 title: "Interesting tidbits"
-sweep: "2025-09-08 → 2026-11-26"
-updated: "2026-11-26"
-sources: "DeepLearning.AI, Future Tools, Superhuman AI, The Code, The Frontier, Indicator, Compound With AI, Product Hunt Weekly, The Batch, Lonely Octopus, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
+sweep: "2025-09-08 → 2026-11-28"
+updated: "2026-11-28"
+sources: "Future Tools, Indicator, Lonely Octopus, DeepLearning.AI, Superhuman AI, The Code, The Frontier, Compound With AI, Product Hunt Weekly, The Batch, The Product Compass, The Economist, OpenRouter Team, Superhuman AI · Sunday Special"
 ---
 
 # Interesting tidbits
+
+**1514. Speakey runs Mac dictation and voice commands fully on-device**
+*🗣️ Voice · TTS & STT*
+*🗞 Future Tools · 2026-11-28 02:04 KST — ["**Control Your Mac With Your Voice**"](newsletters/2026-11-28_newsletter_future_tools.md#control-your-mac-with-your-voice)*
+
+Speakey is a Mac app that runs speech recognition locally on Apple's Neural Engine, so dictation never leaves the machine, and adds a voice agent that opens apps, arranges windows and runs multi-step browser tasks. That is a local STT front end you can test without audio crossing the network, and the agent half can attach to a subscription you already pay for.
+
+- [Speakey](https://getspeakey.com/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1513. A reporter found a WordPress plugin flaw in six hours with two LLMs**
+*⚡ Productivity & agent follow-through*
+*🗞 Indicator · 2026-11-27 21:33 KST — ["Reports & Research"](newsletters/2026-11-27_newsletter_indicator.md#reports-research)*
+
+CyberScoop's editor used two LLMs over six hours to find, test and report a vulnerability in a WordPress plugin with 40,000+ installs. The pattern — model proposes, human verifies — maps onto auditing your own self-hosted services, and the two 4090s cover it without shipping code anywhere.
+
+- [CyberScoop](https://cyberscoop.com/finding-software-vulnerability-with-ai-wordpress-patchstack/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1512. Signal plans to block screenshots so AI agents can't scrape messages**
+*🔒 Privacy & local tooling*
+*🗞 Indicator · 2026-11-27 21:33 KST — ["Deception in the News"](newsletters/2026-11-27_newsletter_indicator.md#deception-in-the-news)*
+
+Signal says it will restrict screenshots so AI agents running on phones cannot read encrypted messages. That closes a hole any agent framework leaves open: an assistant with screen access reads whatever the user can. Worth checking against Hermes' capture permissions on your own devices.
+
+- [Reuters](https://www.reuters.com/legal/litigation/signal-restricts-screenshots-block-ai-agents-reading-messages-2026-11-20/)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
+
+**1511. Obsidian keeps notes as plain text files any model can read**
+*🔒 Privacy & local tooling*
+*🗞 [Lonely Octopus · 2026-11-27 10:02 KST](newsletters/2026-11-27_newsletter_lonely_octopus.md)*
+
+Obsidian is a free note app whose vault is just a folder of plain-text files, so any model can read and query it directly. Consolidating scattered notes into one folder gives a local Ollama model or Hermes agent a single searchable corpus that never leaves your 4090 box.
+
+- [Obsidian In 24 Minutes (video)](https://www.youtube.com/watch?v=4Hvkv_I8QDE)
+
+- [ ] 📌 remind me
+- [ ] 🙈 hide me
+
+---
 
 **1510. A hands-on vLLM course covers batching, KV-cache tuning and benchmarking**
 *⚙️ LLM tooling & SDKs*

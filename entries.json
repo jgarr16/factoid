@@ -1,8 +1,108 @@
 {
   "version": 1,
-  "updated": "2026-11-26",
-  "sweep": "2025-09-08 → 2026-11-26",
+  "updated": "2026-11-28",
+  "sweep": "2025-09-08 → 2026-11-28",
   "entries": [
+    {
+      "uid": "a0c36de620f28a8d407fc1175e5b31ed26d739f9bec8e60daad97bf9e7fd68e1",
+      "id": 1514,
+      "title": "Speakey runs Mac dictation and voice commands fully on-device",
+      "theme": "🗣️ Voice · TTS & STT",
+      "sources": [
+        {
+          "pub": "Future Tools",
+          "date": "2026-11-28",
+          "time": "02:04",
+          "headline": "**Control Your Mac With Your Voice**",
+          "href": "newsletters/2026-11-28_newsletter_future_tools.md",
+          "anchor": "control-your-mac-with-your-voice"
+        }
+      ],
+      "prose": [
+        "Speakey is a Mac app that runs speech recognition locally on Apple's Neural Engine, so dictation never leaves the machine, and adds a voice agent that opens apps, arranges windows and runs multi-step browser tasks. That is a local STT front end you can test without audio crossing the network, and the agent half can attach to a subscription you already pay for."
+      ],
+      "links": [
+        {
+          "label": "Speakey",
+          "url": "https://getspeakey.com/"
+        }
+      ]
+    },
+    {
+      "uid": "f7f1dae95d18e8b56d4876c9759fd8594f28768f80e8dd8e96f2a64f2408a450",
+      "id": 1513,
+      "title": "A reporter found a WordPress plugin flaw in six hours with two LLMs",
+      "theme": "⚡ Productivity & agent follow-through",
+      "sources": [
+        {
+          "pub": "Indicator",
+          "date": "2026-11-27",
+          "time": "21:33",
+          "headline": "Reports & Research",
+          "href": "newsletters/2026-11-27_newsletter_indicator.md",
+          "anchor": "reports-research"
+        }
+      ],
+      "prose": [
+        "CyberScoop's editor used two LLMs over six hours to find, test and report a vulnerability in a WordPress plugin with 40,000+ installs. The pattern — model proposes, human verifies — maps onto auditing your own self-hosted services, and the two 4090s cover it without shipping code anywhere."
+      ],
+      "links": [
+        {
+          "label": "CyberScoop",
+          "url": "https://cyberscoop.com/finding-software-vulnerability-with-ai-wordpress-patchstack/"
+        }
+      ]
+    },
+    {
+      "uid": "72638c28a6503dc53f2cd6cd2aa48c9485daa43dc285f141e05c66420ba23b86",
+      "id": 1512,
+      "title": "Signal plans to block screenshots so AI agents can't scrape messages",
+      "theme": "🔒 Privacy & local tooling",
+      "sources": [
+        {
+          "pub": "Indicator",
+          "date": "2026-11-27",
+          "time": "21:33",
+          "headline": "Deception in the News",
+          "href": "newsletters/2026-11-27_newsletter_indicator.md",
+          "anchor": "deception-in-the-news"
+        }
+      ],
+      "prose": [
+        "Signal says it will restrict screenshots so AI agents running on phones cannot read encrypted messages. That closes a hole any agent framework leaves open: an assistant with screen access reads whatever the user can. Worth checking against Hermes' capture permissions on your own devices."
+      ],
+      "links": [
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/legal/litigation/signal-restricts-screenshots-block-ai-agents-reading-messages-2026-11-20/"
+        }
+      ]
+    },
+    {
+      "uid": "d26890acdf949c4548c51a0655230cc4e7b8c04ebf7277ca411125aaa030869a",
+      "id": 1511,
+      "title": "Obsidian keeps notes as plain text files any model can read",
+      "theme": "🔒 Privacy & local tooling",
+      "sources": [
+        {
+          "pub": "Lonely Octopus",
+          "date": "2026-11-27",
+          "time": "10:02",
+          "headline": "",
+          "href": "newsletters/2026-11-27_newsletter_lonely_octopus.md",
+          "anchor": ""
+        }
+      ],
+      "prose": [
+        "Obsidian is a free note app whose vault is just a folder of plain-text files, so any model can read and query it directly. Consolidating scattered notes into one folder gives a local Ollama model or Hermes agent a single searchable corpus that never leaves your 4090 box."
+      ],
+      "links": [
+        {
+          "label": "Obsidian In 24 Minutes (video)",
+          "url": "https://www.youtube.com/watch?v=4Hvkv_I8QDE"
+        }
+      ]
+    },
     {
       "uid": "861eb07d89b44f93c895b8282a4268fe6e580df9db6235af37488c8dd7fe1d34",
       "id": 1510,
